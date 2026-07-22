@@ -1,0 +1,10 @@
+seed,run_id,split,threshold_selected_on_val_for_seed,best_epoch,action_pnl,selected_action_count,causal_fill_pnl,oracle_capture_ratio,new3_used_for_selection,new4_used_for_selection,new5_used_for_selection
+0,phc_rank_head_lam0p3_seed0,val,0.9369753003120422,48,1987945.0,62220,174780.0,0.2566328783180528,False,False,False
+0,phc_rank_head_lam0p3_seed0,new3,0.9369753003120422,48,5153205.0,139116,494545.0,0.27369312482921415,False,False,False
+0,phc_rank_head_lam0p3_seed0,new4,0.9369753003120422,48,1815275.0,53037,125720.0,0.24614983033150614,False,False,False
+1,phc_rank_head_lam0p3_seed1,val,0.2589134126901626,50,1929145.0,62220,167380.0,0.24904211839003595,False,False,False
+1,phc_rank_head_lam0p3_seed1,new3,0.2589134126901626,50,4997520.0,139214,476585.0,0.2654452251521557,False,False,False
+1,phc_rank_head_lam0p3_seed1,new4,0.2589134126901626,50,1761565.0,53070,125030.0,0.23888283171823851,False,False,False
+2,phc_rank_head_lam0p3_seed2,val,0.3853551223874092,2,1904460.0,62220,167120.0,0.24585541926039148,False,False,False
+2,phc_rank_head_lam0p3_seed2,new3,0.3853551223874092,2,4927630.0,135861,468660.0,0.26103564982786137,False,False,False
+2,phc_rank_head_lam0p3_seed2,new4,0.3853551223874092,2,1700135.0,51993,114765.0,0.230048434881504,False,False,False

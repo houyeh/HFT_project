@@ -1,0 +1,20 @@
+split,session_id,row_count,feature,formula,max_abs_error,mean_abs_error,tolerance,recompute_pass,uses_future_data
+train,20260121Day,705812,volatility_past_50,"mid_price.diff().rolling(50, min_periods=3).std().fillna(0)",0.0,0.0,1e-12,True,False
+train,20260122Day,944608,volatility_past_50,"mid_price.diff().rolling(50, min_periods=3).std().fillna(0)",0.0,0.0,1e-12,True,False
+train,20260122Night,820409,volatility_past_50,"mid_price.diff().rolling(50, min_periods=3).std().fillna(0)",0.0,0.0,1e-12,True,False
+train,20260123Day,182203,volatility_past_50,"mid_price.diff().rolling(50, min_periods=3).std().fillna(0)",0.0,0.0,1e-12,True,False
+train,20260123Night,565974,volatility_past_50,"mid_price.diff().rolling(50, min_periods=3).std().fillna(0)",0.0,0.0,1e-12,True,False
+train,20260126Day,373758,volatility_past_50,"mid_price.diff().rolling(50, min_periods=3).std().fillna(0)",0.0,0.0,1e-12,True,False
+val,20260126Night,563477,volatility_past_50,"mid_price.diff().rolling(50, min_periods=3).std().fillna(0)",0.0,0.0,1e-12,True,False
+test,20260127Day,410586,volatility_past_50,"mid_price.diff().rolling(50, min_periods=3).std().fillna(0)",0.0,0.0,1e-12,True,False
+test,20260127Night,755735,volatility_past_50,"mid_price.diff().rolling(50, min_periods=3).std().fillna(0)",0.0,0.0,1e-12,True,False
+new4,20260102,502106,volatility_past_50,"mid_price.diff().rolling(50, min_periods=3).std().fillna(0)",0.0,0.0,1e-12,True,False
+new4,20260105,65520,volatility_past_50,"mid_price.diff().rolling(50, min_periods=3).std().fillna(0)",0.0,0.0,1e-12,True,False
+new4,20260109,644384,volatility_past_50,"mid_price.diff().rolling(50, min_periods=3).std().fillna(0)",0.0,0.0,1e-12,True,False
+new4,20260112,984630,volatility_past_50,"mid_price.diff().rolling(50, min_periods=3).std().fillna(0)",0.0,0.0,1e-12,True,False
+new3,20260113,1277836,volatility_past_50,"mid_price.diff().rolling(50, min_periods=3).std().fillna(0)",0.0,0.0,1e-12,True,False
+new3,20260114,910661,volatility_past_50,"mid_price.diff().rolling(50, min_periods=3).std().fillna(0)",0.0,0.0,1e-12,True,False
+new3,20260115,976150,volatility_past_50,"mid_price.diff().rolling(50, min_periods=3).std().fillna(0)",0.0,0.0,1e-12,True,False
+new3,20260116,976422,volatility_past_50,"mid_price.diff().rolling(50, min_periods=3).std().fillna(0)",0.0,0.0,1e-12,True,False
+new3,20260119Day,1365489,volatility_past_50,"mid_price.diff().rolling(50, min_periods=3).std().fillna(0)",0.0,0.0,1e-12,True,False
+new3,20260330,150804,volatility_past_50,"mid_price.diff().rolling(50, min_periods=3).std().fillna(0)",0.0,0.0,1e-12,True,False

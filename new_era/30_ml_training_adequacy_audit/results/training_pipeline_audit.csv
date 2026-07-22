@@ -1,0 +1,8 @@
+audit_item,value,status,notes
+phase_028_location,C:\Users\holbo\00VS_projjects\00_HFT_project\new_era\28_residual_quote_ev_veto,read_only_reference,Phase 030 does not overwrite Phase 028 artifacts.
+phase_028_feature_count,10,causal_tabular_features,"spread_ticks,queue_imbalance_calc,deep_imbalance_calc,top_depth,depth_ratio,volatility_past_50,abs_return_past_50,event_rate_past_50,queue_imbalance_change_past,normalized_spread_calc"
+phase_028_model_family,"logistic_l2_balanced,small_mlp_8",shallow_baseline,Logistic regression and one small MLP were trained in Phase 028.
+phase_028_validation_selection,validation_only,pass,Selected veto threshold came from validation and test_used_for_selection=false.
+phase_028_selected_veto_count,0,no_veto_selected,"Validation selected no veto, indicating no shallow incremental signal."
+torch_available_locally,True,available,GPU TCN pack is exported for external RTX training.
+phase_030_max_veto_rate,<=5%,locked,Expanded tabular models are evaluated under a low-veto constraint.

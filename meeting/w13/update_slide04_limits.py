@@ -1,0 +1,102 @@
+import pandas as pd
+from pathlib import Path
+import base64
+
+ROOT = Path(r"c:\Users\holbo\00VS_projjects\00_HFT_project\meeting\w13")
+DERRIK = ROOT / "___Derrik_results"
+OUT = ROOT / "slides"
+
+CSS = """
+<style>
+* {box-sizing:border-box;margin:0;padding:0}
+body {font-family:"Noto Sans TC",sans-serif;background:#0d1117;color:#e6edf3}
+.slide {width:1280px;min-height:720px;margin:30px auto;background:linear-gradient(135deg,#161b22 0%,#0d1117 100%);border:1px solid #30363d;border-radius:16px;padding:48px 56px;display:flex;flex-direction:column;gap:20px; overflow-y:auto;}
+h1 {font-size:2rem;font-weight:700;color:#58a6ff;border-bottom:2px solid #21262d;padding-bottom:14px; flex-shrink:0;}
+h2 {font-size:1.1rem;font-weight:600;color:#79c0ff;margin-bottom:10px}
+.tag {display:inline-block;padding:3px 10px;border-radius:20px;font-size:.75rem;font-weight:600}
+.tag-blue {background:#1f4e79;color:#79c0ff}
+.tag-red {background:#5c1a1a;color:#ff7b7b}
+.tag-green {background:#0d3d21;color:#56d364}
+.tag-orange {background:#794a15;color:#e3b341}
+.grid-2 {display:grid;grid-template-columns:1fr 1fr;gap:24px}
+.grid-3 {display:grid;grid-template-columns:1fr 1fr 1fr;gap:20px}
+.card {background:#161b22;border:1px solid #30363d;border-radius:12px;padding:20px; display:flex; flex-direction:column;}
+.img-wrap {text-align:center; flex-grow:1; display:flex; align-items:center; justify-content:center; background:#0d1117; border-radius:8px; padding:10px;}
+.img-wrap img {max-width:100%; max-height:260px; border-radius:4px;}
+table {width:100%;border-collapse:collapse;font-size:.85rem}
+th {background:#21262d;color:#8b949e;padding:8px 10px;text-align:left;font-weight:600}
+td {padding:8px 10px;border-bottom:1px solid #21262d}
+tr:last-child td {border-bottom:none}
+.hl {color:#f0c27f;font-weight:700}
+.red {color:#ff7b7b} .green {color:#56d364}
+.note {font-size:.78rem;color:#8b949e;margin-top:8px;padding:8px 12px;background:#161b22;border-left:3px solid #388bfd;border-radius:4px; line-height:1.5;}
+.badge-row {display:flex;gap:10px;flex-wrap:wrap;margin-top:6px; margin-bottom:10px;}
+ul {margin-left:20px;line-height:1.6}
+li {margin-bottom:8px}
+.flowchart {display:flex; align-items:center; justify-content:center; gap:10px; background:#0d1117; padding:15px; border-radius:8px; border:1px solid #30363d;}
+.flow-box {background:#21262d; border:1px solid #58a6ff; padding:10px 15px; border-radius:6px; font-weight:bold; color:#c9d1d9; text-align:center;}
+.flow-arrow {color:#8b949e; font-weight:bold; font-size:1.2rem;}
+.caveat-box {margin-top:12px; padding:10px; border-radius:6px; background:#2d1a1a; border:1px solid #5c1a1a;}
+.caveat-box h3 {color:#ff7b7b; font-size:0.9rem; margin-bottom:4px;}
+</style>
+"""
+
+df_07 = pd.read_csv(DERRIK / "07_regime_gate_sweep" / "regime_gate_best_by_dataset.csv")
+tr_07 = ""
+for _, r in df_07.iterrows():
+    pnl = f"{r['net_pnl']:,.0f}"
+    base = f"{r['baseline_net_pnl']:,.0f}"
+    imp = f"{r['improvement']:,.0f}"
+    act = f"{r['active_event_rate']*100:.1f}%"
+    color = "green" if r['improvement'] > 0 else "red"
+    tr_07 += f"<tr><td>{r['dataset']}</td><td>{r['best_gate_type']}</td><td>{r['best_gate_params']}</td><td>{act}</td><td>{base}</td><td class='hl'>{pnl}</td><td class='{color}'>+{imp}</td></tr>"
+
+html_04 = f"""<!DOCTYPE html><html lang="zh-TW"><head><meta charset="UTF-8"><title>Slide 04</title>{CSS}</head><body>
+<div class="slide">
+  <h1>Slide 04 — Regime Gate 的加入與成效</h1>
+  
+  <div class="grid-3" style="margin-bottom:0px;">
+    <div class="card" style="padding:15px;">
+      <h2 style="color:#56d364; font-size:1rem;">Rolling Trend</h2>
+      <p style="font-size:0.85rem;">偵測極端單向走勢。<br><code>Trend > 20.0 ticks</code><br>啟動防禦。</p>
+    </div>
+    <div class="card" style="padding:15px;">
+      <h2 style="color:#56d364; font-size:1rem;">Volatility Filter</h2>
+      <p style="font-size:0.85rem;">計算視窗內標準差。<br><code>Vol > 0.21</code><br>暫停雙向掛單。</p>
+    </div>
+    <div class="card" style="padding:15px;">
+      <h2 style="color:#56d364; font-size:1rem;">Spread Filter</h2>
+      <p style="font-size:0.85rem;">衡量流動性枯竭。<br><code>Spread ≥ 2.0 ticks</code><br>啟動防禦。</p>
+    </div>
+  </div>
+
+  <div class="grid-2" style="margin-bottom:0px;">
+    <div class="card" style="border-color:#e3b341;">
+      <h2 style="color:#e3b341">Combined Filter 綜合機制</h2>
+      <p style="font-size:0.85rem; line-height:1.5;">綜合濾網 (Combined Filter) 結合了趨勢風險規避、波動率風險規避，以及價差/流動性條件。任一異常即停機。</p>
+      <div class="caveat-box" style="margin-top:8px;">
+        <h3>⚠️ 狀態校準現狀</h3>
+        <p style="font-size:0.8rem; color:#ff7b7b">017 動態閾值 (Auto-gating) 實驗失敗，因此狀態校準仍是未解問題。<br>此處展示的僅是靜態基於規則的濾網對比，而非可用於上線的自動狀態選擇器。</p>
+      </div>
+    </div>
+    <div class="card">
+      <h2>對照組 <code>_no_gate_reference</code> 意義</h2>
+      <p style="font-size:0.85rem; line-height:1.5;">台指期 Spread 大多時間 ≥ 1，我們設定 <code>spread_ticks_min: 1.0</code> 作為基準對照組 (控制變因，代表幾乎永遠不防禦)。<br>
+      只有套用更嚴格的參數 (如 NEW3 的綜合濾網) 進行對比，才能實證「防禦濾網能有效減損」。</p>
+    </div>
+  </div>
+  
+  <div class="card">
+    <h2>防禦力提升證據 (Rule-based Static Check)</h2>
+    <table>
+      <tr><th>資料集</th><th>最佳 Gate 類型</th><th>嚴格防禦參數</th><th>模型活躍率</th><th>基準 PnL (對照組)</th><th>嚴格防禦後 PnL</th><th>提升 (Improvement)</th></tr>
+      {tr_07}
+    </table>
+    <p class="note" style="margin-top:8px">
+      目前的回測並未完全具備排隊感知 (Queue-aware)；僅用於一階訊號比較。
+    </p>
+  </div>
+</div></body></html>
+"""
+(OUT / "04_slides.html").write_text(html_04, encoding="utf-8")
+print("Slide 04 updated with explicit limit parameters.")

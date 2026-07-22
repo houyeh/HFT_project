@@ -1,0 +1,39 @@
+{
+  "side": "ask",
+  "sampling_mode": "weighted_bce",
+  "window_size": 100,
+  "train_stride": 5,
+  "eval_stride": 1,
+  "epochs": 8,
+  "batch_size": 1024,
+  "lr": 0.001,
+  "seed": 42,
+  "device": "cpu",
+  "features": [
+    "obi_z",
+    "queue_imbalance_z",
+    "weighted_mid_deviation_z",
+    "trade_intensity_short_z",
+    "deep_obi_z",
+    "queue_imbalance_change_z",
+    "normalized_spread_z",
+    "cancel_pressure_short_z",
+    "event_interarrival_z",
+    "event_rate_z"
+  ],
+  "best_epoch": 8,
+  "best_val_pr_auc": 0.02730424631764141,
+  "best_val_loss": 0.04119875525103116,
+  "pos_weight": 123.33973693319487,
+  "sample_audit": {
+    "sampling_mode": "weighted_bce",
+    "natural_train_examples": 718435,
+    "natural_train_positive_examples": 5778,
+    "natural_train_positive_rate": 0.008042481226554942,
+    "sampled_train_examples": 718435,
+    "sampled_positive_examples": 5778,
+    "sampled_negative_examples": 712657
+  },
+  "test_evaluated": false,
+  "test_policy": "Test split is intentionally not evaluated in Task 4/5."
+}

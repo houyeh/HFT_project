@@ -1,0 +1,3 @@
+sha256,source_group,session_id,physical_path,canonical_path,is_canonical
+b5c7081bef4dac7b6860c70c7e028783646cab846580504ed03abcec34590d48,NEW1,20260127Night,C:\Users\holbo\00VS_projjects\00_HFT_project\data\NEW1\20260127Night\my_orderbook_20260331_9002_2.csv,C:\Users\holbo\00VS_projjects\00_HFT_project\data\NEW1\20260127Night\my_orderbook_20260331_9002_2.csv,True
+b5c7081bef4dac7b6860c70c7e028783646cab846580504ed03abcec34590d48,NEW1,20260127Night,C:\Users\holbo\00VS_projjects\00_HFT_project\data\NEW1\20260127Night\my_orderbook_20260331_9004_2.csv,C:\Users\holbo\00VS_projjects\00_HFT_project\data\NEW1\20260127Night\my_orderbook_20260331_9002_2.csv,False

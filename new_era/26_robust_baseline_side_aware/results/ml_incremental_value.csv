@@ -1,0 +1,2 @@
+selection_split,test_used_for_selection,bid_veto_frac,ask_veto_frac,bid_threshold,ask_threshold,baseline_quote_count,veto_count,final_quote_count,baseline_pnl,ml_veto_pnl,ml_incremental_vs_baseline,vetoed_quote_pnl,random_veto_mean_pnl,random_veto_95p_pnl,random_veto_99p_pnl,ml_beats_random_95p
+validation,False,0.05,0.05,0.04393990226089949,,419,20,399,2312590.0,2288065.0,-24525.0,24525.0,2225057.405,2272117.25,2288574.0,True

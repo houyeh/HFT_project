@@ -1,0 +1,157 @@
+<ENTRY>
+{
+ "thisFile": "C:/Users\\holbo\\00VS_projjects\\00_HFT_project\\n2ew_era\\06a_hls_queue_rule_baseline\\hls_component\\hls_component\\hls_component.hlsrun_csim_summary",
+ "connectId": "",
+ "serverToken": "",
+ "timestamp": "0"
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_CmdStep",
+ "dateTimestamp": "06/08/26 16:39:34",
+ "timestampMillis": "1780907974111",
+ "buildStep": {
+  "cmdId": "59f42162-f25d-4b6c-a94e-3e3766a2dd25",
+  "name": "vitis-run",
+  "logFile": "C:/Users\\holbo\\00VS_projjects\\00_HFT_project\\n2ew_era\\06a_hls_queue_rule_baseline\\hls_component\\hls_component\\logs\\hls_component.steps.log",
+  "commandLine": "C:/AMDDesignTools/2025.2/Vitis/bin/unwrapped/win64.o/vitis-run.exe  --mode hls --csim --config C:\\Users\\holbo\\00VS_projjects\\00_HFT_project\\n2ew_era\\06a_hls_queue_rule_baseline\\hls_component\\hls_config.cfg --work_dir hls_component ",
+  "args": [
+   "--mode",
+   "hls",
+   "--csim",
+   "--config",
+   "C:\\Users\\holbo\\00VS_projjects\\00_HFT_project\\n2ew_era\\06a_hls_queue_rule_baseline\\hls_component\\hls_config.cfg",
+   "--work_dir",
+   "hls_component"
+  ],
+  "iniFiles": [],
+  "cwd": "C:\\Users\\holbo\\00VS_projjects\\00_HFT_project\\n2ew_era\\06a_hls_queue_rule_baseline\\hls_component"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Status",
+ "dateTimestamp": "06/08/26 16:39:34",
+ "timestampMillis": "1780907974112",
+ "status": {
+  "cmdId": "59f42162-f25d-4b6c-a94e-3e3766a2dd25",
+  "state": "CS_RUNNING"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_FlowMetaData",
+ "dateTimestamp": "06/08/26 16:39:39",
+ "timestampMillis": "1780907979410",
+ "buildSummary": {
+  "hardwarePlatform": "",
+  "hardwareDsa": "",
+  "platformDirectory": "",
+  "runtime": "",
+  "systemConfig": "",
+  "flow": "BF_RUN",
+  "target": "TT_HLS_C_SIM",
+  "kernels": [
+   {
+    "base": {
+     "type": "KERNEL",
+     "name": "queue_rule_action",
+     "file": "",
+     "reports": [],
+     "uuid": ""
+    },
+    "sources": [
+     "C:/Users\\holbo\\00VS_projjects\\00_HFT_project\\n2ew_era\\06a_hls_queue_rule_baseline\\queue_rule_hls.cpp",
+     "C:/Users\\holbo\\00VS_projjects\\00_HFT_project\\n2ew_era\\06a_hls_queue_rule_baseline\\queue_rule_hls.hpp"
+    ],
+    "psSources": [],
+    "cuNames": [],
+    "type": "HLS",
+    "frequency": 0,
+    "freqUnits": ""
+   }
+  ],
+  "toolVersion": "2025.2"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_SubCmdStep",
+ "dateTimestamp": "06/08/26 16:39:39",
+ "timestampMillis": "1780907979412",
+ "buildStep": {
+  "cmdId": "bb2f2170-c6f3-4be9-b5ae-cc1af1ad3ed4",
+  "name": "",
+  "logFile": "C:/Users\\holbo\\00VS_projjects\\00_HFT_project\\n2ew_era\\06a_hls_queue_rule_baseline\\hls_component\\hls_component\\hls\\hls.log",
+  "commandLine": "",
+  "args": [],
+  "iniFiles": [],
+  "cwd": "C:\\Users\\holbo\\00VS_projjects\\00_HFT_project\\n2ew_era\\06a_hls_queue_rule_baseline\\hls_component"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Status",
+ "dateTimestamp": "06/08/26 16:39:39",
+ "timestampMillis": "1780907979413",
+ "status": {
+  "cmdId": "bb2f2170-c6f3-4be9-b5ae-cc1af1ad3ed4",
+  "state": "CS_RUNNING"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Status",
+ "dateTimestamp": "06/08/26 16:39:42",
+ "timestampMillis": "1780907982777",
+ "status": {
+  "cmdId": "bb2f2170-c6f3-4be9-b5ae-cc1af1ad3ed4",
+  "state": "CS_PASSED"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Status",
+ "dateTimestamp": "06/08/26 16:39:42",
+ "timestampMillis": "1780907982888",
+ "status": {
+  "cmdId": "59f42162-f25d-4b6c-a94e-3e3766a2dd25",
+  "state": "CS_PASSED"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "06/08/26 16:39:42",
+ "timestampMillis": "1780907982888",
+ "report": {
+  "path": "",
+  "name": "",
+  "fileType": "HTML",
+  "reportType": "GLOBAL_RULECHECK_GUIDANCE",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "06/08/26 16:39:42",
+ "timestampMillis": "1780907982888",
+ "report": {
+  "path": "",
+  "name": "",
+  "fileType": "BINARY_PROTOBUF",
+  "reportType": "GLOBAL_RULECHECK_GUIDANCE",
+  "cmdId": ""
+ }
+}
+</ENTRY>

@@ -1,0 +1,4 @@
+﻿experiment_id,label_type,feature_count,selected_strategy,selected_prob_threshold,selected_edge_threshold,baseline_pnl_after_fees_flatten,model_pnl_after_fees_flatten,improvement_flatten,baseline_pnl_after_fees,model_pnl_after_fees,improvement,baseline_trades,model_trades,baseline_max_drawdown,model_max_drawdown,tick_size,device
+lt=smoothed_mid_move_3class__fc=8__w=100__H=10__thr=1,smoothed_mid_move_3class,8,tcn_skew,0.55,0.4,-256500.0,-17770.0,238730.0,-256000.0,-17270.0,238730.0,880,1218,530320.0,315330.0,1.0,cpu
+lt=mid_move_3class__fc=8__w=100__H=10__thr=1,mid_move_3class,8,tcn_skew,0.5,0.05,-256500.0,-26680.0,229820.0,-256000.0,-26180.0,229820.0,880,1372,530320.0,278155.0,1.0,cpu
+lt=mid_move_3class__fc=9__w=100__H=10__thr=1,mid_move_3class,9,tcn_skew,0.55,0.05,-256500.0,172270.0,428770.0,-256000.0,172770.0,428770.0,880,1242,530320.0,148690.0,1.0,cpu

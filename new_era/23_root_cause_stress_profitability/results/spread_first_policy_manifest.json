@@ -1,0 +1,9 @@
+{
+  "spread_first_threshold_source": "validation-selected raw spread gate",
+  "selected_quote_pnl": 218285.0,
+  "threshold": 2.0,
+  "higher_is_better": true,
+  "selection_split": "validation",
+  "score_definition": "raw spread_ticks fallback because the 022 sklearn pickle is version-incompatible in this runtime",
+  "test_used_for_selection": false
+}

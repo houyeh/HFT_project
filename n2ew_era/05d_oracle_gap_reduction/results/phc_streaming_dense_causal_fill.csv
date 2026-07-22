@@ -1,0 +1,4 @@
+split,policy_id,sequential_excess_pnl,fill_count,forced_no_quote_count,max_abs_inventory,max_drawdown,win_rate,loss_rate,fill_uses_future_pnl,new5_used
+val,phc_lite_v1_streaming_dense,2914705.0,121302,101374,1,17120.0,0.4552274488466802,0.5446983561689007,False,False
+new3,phc_lite_v1_streaming_dense,8697350.0,283977,270914,1,7115.0,0.48971571641365325,0.5102596337027294,False,False
+new4,phc_lite_v1_streaming_dense,3120980.0,108955,99747,1,6645.0,0.4813179753109082,0.5186177779817356,False,False

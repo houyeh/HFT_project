@@ -1,0 +1,158 @@
+<ENTRY>
+{
+ "thisFile": "C:/Users\\holbo\\00VS_projjects\\00_HFT_project\\n2ew_era\\06g_phc_diagonal_manual_hls\\hls_component\\hls_component\\hls_component.hlsrun_csim_summary",
+ "connectId": "",
+ "serverToken": "",
+ "timestamp": "0"
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_CmdStep",
+ "dateTimestamp": "06/22/26 03:26:26",
+ "timestampMillis": "1782069986322",
+ "buildStep": {
+  "cmdId": "731168f6-cbe9-44f1-a1dc-61afd07a3118",
+  "name": "vitis-run",
+  "logFile": "C:/Users\\holbo\\00VS_projjects\\00_HFT_project\\n2ew_era\\06g_phc_diagonal_manual_hls\\hls_component\\hls_component\\logs\\hls_component.steps.log",
+  "commandLine": "C:/AMDDesignTools/2025.2/Vitis/bin/unwrapped/win64.o/vitis-run.exe  --mode hls --csim --config hls_config.cfg --work_dir hls_component ",
+  "args": [
+   "--mode",
+   "hls",
+   "--csim",
+   "--config",
+   "hls_config.cfg",
+   "--work_dir",
+   "hls_component"
+  ],
+  "iniFiles": [],
+  "cwd": "C:\\Users\\holbo\\00VS_projjects\\00_HFT_project\\n2ew_era\\06g_phc_diagonal_manual_hls\\hls_component"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Status",
+ "dateTimestamp": "06/22/26 03:26:26",
+ "timestampMillis": "1782069986322",
+ "status": {
+  "cmdId": "731168f6-cbe9-44f1-a1dc-61afd07a3118",
+  "state": "CS_RUNNING"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_FlowMetaData",
+ "dateTimestamp": "06/22/26 03:26:30",
+ "timestampMillis": "1782069990908",
+ "buildSummary": {
+  "hardwarePlatform": "",
+  "hardwareDsa": "",
+  "platformDirectory": "",
+  "runtime": "",
+  "systemConfig": "",
+  "flow": "BF_RUN",
+  "target": "TT_HLS_C_SIM",
+  "kernels": [
+   {
+    "base": {
+     "type": "KERNEL",
+     "name": "phc_diag_step",
+     "file": "",
+     "reports": [],
+     "uuid": ""
+    },
+    "sources": [
+     "C:/Users\\holbo\\00VS_projjects\\00_HFT_project\\n2ew_era\\06g_phc_diagonal_manual_hls\\hls_src\\phc_diag_step_hls.cpp",
+     "C:/Users\\holbo\\00VS_projjects\\00_HFT_project\\n2ew_era\\06g_phc_diagonal_manual_hls\\hls_src\\phc_diag_step_hls.hpp",
+     "C:/Users\\holbo\\00VS_projjects\\00_HFT_project\\n2ew_era\\06g_phc_diagonal_manual_hls\\hls_src\\phc_diag_weights.hpp"
+    ],
+    "psSources": [],
+    "cuNames": [],
+    "type": "HLS",
+    "frequency": 0,
+    "freqUnits": ""
+   }
+  ],
+  "toolVersion": "2025.2"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_SubCmdStep",
+ "dateTimestamp": "06/22/26 03:26:30",
+ "timestampMillis": "1782069990909",
+ "buildStep": {
+  "cmdId": "17525696-8ea9-4836-ab12-b6edd05ed511",
+  "name": "",
+  "logFile": "C:/Users\\holbo\\00VS_projjects\\00_HFT_project\\n2ew_era\\06g_phc_diagonal_manual_hls\\hls_component\\hls_component\\hls\\hls.log",
+  "commandLine": "",
+  "args": [],
+  "iniFiles": [],
+  "cwd": "C:\\Users\\holbo\\00VS_projjects\\00_HFT_project\\n2ew_era\\06g_phc_diagonal_manual_hls\\hls_component"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Status",
+ "dateTimestamp": "06/22/26 03:26:30",
+ "timestampMillis": "1782069990910",
+ "status": {
+  "cmdId": "17525696-8ea9-4836-ab12-b6edd05ed511",
+  "state": "CS_RUNNING"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Status",
+ "dateTimestamp": "06/22/26 03:27:35",
+ "timestampMillis": "1782070055192",
+ "status": {
+  "cmdId": "17525696-8ea9-4836-ab12-b6edd05ed511",
+  "state": "CS_PASSED"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Status",
+ "dateTimestamp": "06/22/26 03:27:35",
+ "timestampMillis": "1782070055505",
+ "status": {
+  "cmdId": "731168f6-cbe9-44f1-a1dc-61afd07a3118",
+  "state": "CS_PASSED"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "06/22/26 03:27:35",
+ "timestampMillis": "1782070055505",
+ "report": {
+  "path": "",
+  "name": "",
+  "fileType": "HTML",
+  "reportType": "GLOBAL_RULECHECK_GUIDANCE",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "06/22/26 03:27:35",
+ "timestampMillis": "1782070055506",
+ "report": {
+  "path": "",
+  "name": "",
+  "fileType": "BINARY_PROTOBUF",
+  "reportType": "GLOBAL_RULECHECK_GUIDANCE",
+  "cmdId": ""
+ }
+}
+</ENTRY>

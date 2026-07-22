@@ -1,0 +1,159 @@
+<ENTRY>
+{
+ "thisFile": "C:/Users\\holbo\\00VS_projjects\\00_HFT_project\\n2ew_era\\07b_tcn_prepad_manual_hls\\hls_component_distilled\\hls_component\\hls_component.hlsrun_csim_summary",
+ "connectId": "",
+ "serverToken": "",
+ "timestamp": "0"
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_CmdStep",
+ "dateTimestamp": "06/24/26 11:28:48",
+ "timestampMillis": "1782271728789",
+ "buildStep": {
+  "cmdId": "d237ecbd-e6b7-49a3-93bb-e81da800be4d",
+  "name": "vitis-run",
+  "logFile": "C:/Users\\holbo\\00VS_projjects\\00_HFT_project\\n2ew_era\\07b_tcn_prepad_manual_hls\\hls_component_distilled\\hls_component\\logs\\hls_component.steps.log",
+  "commandLine": "C:/AMDDesignTools/2025.2/Vitis/bin/unwrapped/win64.o/vitis-run.exe  --mode hls --csim --config C:\\Users\\holbo\\00VS_projjects\\00_HFT_project\\n2ew_era\\07b_tcn_prepad_manual_hls\\hls_component_distilled\\hls_component\\..\\hls_config.cfg --work_dir . ",
+  "args": [
+   "--mode",
+   "hls",
+   "--csim",
+   "--config",
+   "C:\\Users\\holbo\\00VS_projjects\\00_HFT_project\\n2ew_era\\07b_tcn_prepad_manual_hls\\hls_component_distilled\\hls_component\\..\\hls_config.cfg",
+   "--work_dir",
+   "."
+  ],
+  "iniFiles": [],
+  "cwd": "C:\\Users\\holbo\\00VS_projjects\\00_HFT_project\\n2ew_era\\07b_tcn_prepad_manual_hls\\hls_component_distilled\\hls_component"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Status",
+ "dateTimestamp": "06/24/26 11:28:48",
+ "timestampMillis": "1782271728789",
+ "status": {
+  "cmdId": "d237ecbd-e6b7-49a3-93bb-e81da800be4d",
+  "state": "CS_RUNNING"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_FlowMetaData",
+ "dateTimestamp": "06/24/26 11:28:55",
+ "timestampMillis": "1782271735151",
+ "buildSummary": {
+  "hardwarePlatform": "",
+  "hardwareDsa": "",
+  "platformDirectory": "",
+  "runtime": "",
+  "systemConfig": "",
+  "flow": "BF_RUN",
+  "target": "TT_HLS_C_SIM",
+  "kernels": [
+   {
+    "base": {
+     "type": "KERNEL",
+     "name": "tcn_prepad_infer",
+     "file": "",
+     "reports": [],
+     "uuid": ""
+    },
+    "sources": [
+     "C:/Users\\holbo\\00VS_projjects\\00_HFT_project\\n2ew_era\\07b_tcn_prepad_manual_hls\\hls_src\\tcn_prepad_hls_distilled.cpp",
+     "C:/Users\\holbo\\00VS_projjects\\00_HFT_project\\n2ew_era\\07b_tcn_prepad_manual_hls\\hls_src\\tcn_prepad_hls.hpp",
+     "C:/Users\\holbo\\00VS_projjects\\00_HFT_project\\n2ew_era\\07b_tcn_prepad_manual_hls\\hls_src\\tcn_prepad_hls_impl.hpp",
+     "C:/Users\\holbo\\00VS_projjects\\00_HFT_project\\n2ew_era\\07b_tcn_prepad_manual_hls\\hls_src\\tcn_weights_distilled.hpp"
+    ],
+    "psSources": [],
+    "cuNames": [],
+    "type": "HLS",
+    "frequency": 0,
+    "freqUnits": ""
+   }
+  ],
+  "toolVersion": "2025.2"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_SubCmdStep",
+ "dateTimestamp": "06/24/26 11:28:55",
+ "timestampMillis": "1782271735153",
+ "buildStep": {
+  "cmdId": "1ad79107-e494-45da-872f-fb84e2f48027",
+  "name": "",
+  "logFile": "C:/Users\\holbo\\00VS_projjects\\00_HFT_project\\n2ew_era\\07b_tcn_prepad_manual_hls\\hls_component_distilled\\hls_component\\hls\\hls.log",
+  "commandLine": "",
+  "args": [],
+  "iniFiles": [],
+  "cwd": "C:\\Users\\holbo\\00VS_projjects\\00_HFT_project\\n2ew_era\\07b_tcn_prepad_manual_hls\\hls_component_distilled\\hls_component"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Status",
+ "dateTimestamp": "06/24/26 11:28:55",
+ "timestampMillis": "1782271735154",
+ "status": {
+  "cmdId": "1ad79107-e494-45da-872f-fb84e2f48027",
+  "state": "CS_RUNNING"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Status",
+ "dateTimestamp": "06/24/26 11:41:03",
+ "timestampMillis": "1782272463427",
+ "status": {
+  "cmdId": "1ad79107-e494-45da-872f-fb84e2f48027",
+  "state": "CS_PASSED"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Status",
+ "dateTimestamp": "06/24/26 11:41:03",
+ "timestampMillis": "1782272463730",
+ "status": {
+  "cmdId": "d237ecbd-e6b7-49a3-93bb-e81da800be4d",
+  "state": "CS_PASSED"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "06/24/26 11:41:03",
+ "timestampMillis": "1782272463731",
+ "report": {
+  "path": "",
+  "name": "",
+  "fileType": "HTML",
+  "reportType": "GLOBAL_RULECHECK_GUIDANCE",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "06/24/26 11:41:03",
+ "timestampMillis": "1782272463732",
+ "report": {
+  "path": "",
+  "name": "",
+  "fileType": "BINARY_PROTOBUF",
+  "reportType": "GLOBAL_RULECHECK_GUIDANCE",
+  "cmdId": ""
+ }
+}
+</ENTRY>

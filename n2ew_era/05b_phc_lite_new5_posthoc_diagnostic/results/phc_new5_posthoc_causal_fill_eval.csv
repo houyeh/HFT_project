@@ -1,0 +1,4 @@
+split,policy_id,horizon,fill_model,inventory_cap,sequential_excess_pnl,fill_count,forced_no_quote_count,max_abs_inventory,max_drawdown,win_rate,loss_rate,avg_trade_excess_pnl,fill_uses_future_pnl,post_hoc_diagnostic_only
+post_hoc_diagnostic_only_not_fresh_holdout,side_by_queue_imbalance_abs_0p1,20,conservative_l2_stress,1,40880.0,2248,0,1,2355.0,0.4332740213523132,0.5667259786476868,18.185053380782918,False,True
+post_hoc_diagnostic_only_not_fresh_holdout,ml_hgb_regressor_shallow_convergence_selected,20,conservative_l2_stress,1,59670.0,2222,0,1,1840.0,0.46444644464446444,0.5355535553555355,26.854185418541853,False,True
+post_hoc_diagnostic_only_not_fresh_holdout,phc_lite_posthoc_new5,20,conservative_l2_stress,1,68670.0,2422,0,1,2485.0,0.47853014037985137,0.5214698596201487,28.352601156069365,False,True

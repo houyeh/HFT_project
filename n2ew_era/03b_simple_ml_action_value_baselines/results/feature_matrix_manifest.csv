@@ -1,0 +1,3 @@
+matrix,path,rows,feature_count,target,positive_rate,target_mean,source
+train,C:\Users\holbo\00VS_projjects\00_HFT_project\n2ew_era\03b_simple_ml_action_value_baselines\data\ml_feature_matrix_train.parquet,900000,18,excess_pnl_H20,0.2359511111111111,-9.853327751159668,deterministic_train_only_sample
+val,C:\Users\holbo\00VS_projjects\00_HFT_project\n2ew_era\03b_simple_ml_action_value_baselines\data\ml_feature_matrix_val.parquet,1690431,18,excess_pnl_H20,0.2334315922980589,-9.999645233154297,full_validation_split

@@ -1,0 +1,113 @@
+=== torch_fx_manual_layernorm ===
+[error]
+Exception: Unsupported function mean
+Traceback (most recent call last):
+  File "C:\Users\holbo\00VS_projjects\00_HFT_project\n2ew_era\06g_phc_hls4ml_a3d3_retry\00_hls4ml_a3d3_retry.py", line 297, in run_torch_fx_manual
+    cfg = configure_hls4ml(hls4ml, manual_model, INPUT_SHAPE)
+  File "C:\Users\holbo\00VS_projjects\00_HFT_project\n2ew_era\06g_phc_hls4ml_a3d3_retry\00_hls4ml_a3d3_retry.py", line 197, in configure_hls4ml
+    cfg = hls4ml.utils.config_from_pytorch_model(
+        model,
+    ...<2 lines>...
+        granularity="name",
+    )
+  File "C:\Users\holbo\AppData\Local\Programs\Python\Python313\Lib\site-packages\hls4ml\utils\config.py", line 380, in config_from_pytorch_model
+    ) = parse_pytorch_model(config, verbose=False)
+        ~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\holbo\AppData\Local\Programs\Python\Python313\Lib\site-packages\hls4ml\converters\pytorch_to_hls.py", line 334, in parse_pytorch_model
+    raise Exception(f'Unsupported function {operation}')
+Exception: Unsupported function mean
+
+
+=== torch_fx_unrolled_layernorm ===
+[error]
+KeyError: 'getitem'
+Traceback (most recent call last):
+  File "C:\Users\holbo\00VS_projjects\00_HFT_project\n2ew_era\06g_phc_hls4ml_a3d3_retry\00_hls4ml_a3d3_retry.py", line 297, in run_torch_fx_manual
+    cfg = configure_hls4ml(hls4ml, manual_model, INPUT_SHAPE)
+  File "C:\Users\holbo\00VS_projjects\00_HFT_project\n2ew_era\06g_phc_hls4ml_a3d3_retry\00_hls4ml_a3d3_retry.py", line 197, in configure_hls4ml
+    cfg = hls4ml.utils.config_from_pytorch_model(
+        model,
+    ...<2 lines>...
+        granularity="name",
+    )
+  File "C:\Users\holbo\AppData\Local\Programs\Python\Python313\Lib\site-packages\hls4ml\utils\config.py", line 380, in config_from_pytorch_model
+    ) = parse_pytorch_model(config, verbose=False)
+        ~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\holbo\AppData\Local\Programs\Python\Python313\Lib\site-packages\hls4ml\converters\pytorch_to_hls.py", line 345, in parse_pytorch_model
+    input_shapes = [list(output_shapes[str(i)]) for i in input_names]
+                         ~~~~~~~~~~~~~^^^^^^^^
+KeyError: 'getitem'
+
+
+=== onnx_shape_inference_original_step ===
+[onnxsim_error]
+ModuleNotFoundError: No module named 'onnxsim'
+Traceback (most recent call last):
+  File "C:\Users\holbo\00VS_projjects\00_HFT_project\n2ew_era\06g_phc_hls4ml_a3d3_retry\00_hls4ml_a3d3_retry.py", line 361, in simplify_or_infer_onnx
+    import onnxsim  # type: ignore
+    ^^^^^^^^^^^^^^
+ModuleNotFoundError: No module named 'onnxsim'
+
+
+[config_from_onnx_error]
+AttributeError: 'str' object has no attribute 'graph'
+
+[error]
+Exception: ERROR: Unsupported operation type: Gemm
+Traceback (most recent call last):
+  File "C:\Users\holbo\00VS_projjects\00_HFT_project\n2ew_era\06g_phc_hls4ml_a3d3_retry\00_hls4ml_a3d3_retry.py", line 427, in run_onnx_shape_inference
+    hls_model = hls4ml.converters.convert_from_onnx_model(
+        onnx_model,
+    ...<3 lines>...
+        backend="Vivado",
+    )
+  File "C:\Users\holbo\AppData\Local\Programs\Python\Python313\Lib\site-packages\hls4ml\utils\dependency.py", line 46, in inner
+    return f(*args, **kwargs)
+  File "C:\Users\holbo\AppData\Local\Programs\Python\Python313\Lib\site-packages\hls4ml\converters\__init__.py", line 388, in convert_from_onnx_model
+    return onnx_to_hls(config)
+  File "C:\Users\holbo\AppData\Local\Programs\Python\Python313\Lib\site-packages\hls4ml\utils\dependency.py", line 46, in inner
+    return f(*args, **kwargs)
+  File "C:\Users\holbo\AppData\Local\Programs\Python\Python313\Lib\site-packages\hls4ml\converters\onnx_to_hls.py", line 288, in onnx_to_hls
+    layer_list, input_layers, output_layers = parse_onnx_model(onnx_model)
+                                              ~~~~~~~~~~~~~~~~^^^^^^^^^^^^
+  File "C:\Users\holbo\AppData\Local\Programs\Python\Python313\Lib\site-packages\hls4ml\converters\onnx_to_hls.py", line 239, in parse_onnx_model
+    raise Exception(f'ERROR: Unsupported operation type: {node.op_type}')
+Exception: ERROR: Unsupported operation type: Gemm
+
+
+=== onnx_shape_inference_manual_layernorm ===
+[onnxsim_error]
+ModuleNotFoundError: No module named 'onnxsim'
+Traceback (most recent call last):
+  File "C:\Users\holbo\00VS_projjects\00_HFT_project\n2ew_era\06g_phc_hls4ml_a3d3_retry\00_hls4ml_a3d3_retry.py", line 361, in simplify_or_infer_onnx
+    import onnxsim  # type: ignore
+    ^^^^^^^^^^^^^^
+ModuleNotFoundError: No module named 'onnxsim'
+
+
+[config_from_onnx_error]
+AttributeError: 'str' object has no attribute 'graph'
+
+[error]
+Exception: ERROR: Unsupported operation type: Gemm
+Traceback (most recent call last):
+  File "C:\Users\holbo\00VS_projjects\00_HFT_project\n2ew_era\06g_phc_hls4ml_a3d3_retry\00_hls4ml_a3d3_retry.py", line 427, in run_onnx_shape_inference
+    hls_model = hls4ml.converters.convert_from_onnx_model(
+        onnx_model,
+    ...<3 lines>...
+        backend="Vivado",
+    )
+  File "C:\Users\holbo\AppData\Local\Programs\Python\Python313\Lib\site-packages\hls4ml\utils\dependency.py", line 46, in inner
+    return f(*args, **kwargs)
+  File "C:\Users\holbo\AppData\Local\Programs\Python\Python313\Lib\site-packages\hls4ml\converters\__init__.py", line 388, in convert_from_onnx_model
+    return onnx_to_hls(config)
+  File "C:\Users\holbo\AppData\Local\Programs\Python\Python313\Lib\site-packages\hls4ml\utils\dependency.py", line 46, in inner
+    return f(*args, **kwargs)
+  File "C:\Users\holbo\AppData\Local\Programs\Python\Python313\Lib\site-packages\hls4ml\converters\onnx_to_hls.py", line 288, in onnx_to_hls
+    layer_list, input_layers, output_layers = parse_onnx_model(onnx_model)
+                                              ~~~~~~~~~~~~~~~~^^^^^^^^^^^^
+  File "C:\Users\holbo\AppData\Local\Programs\Python\Python313\Lib\site-packages\hls4ml\converters\onnx_to_hls.py", line 239, in parse_onnx_model
+    raise Exception(f'ERROR: Unsupported operation type: {node.op_type}')
+Exception: ERROR: Unsupported operation type: Gemm
+
+

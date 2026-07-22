@@ -1,0 +1,344 @@
+import os
+import sys
+from pathlib import Path
+
+import numpy as np
+import pandas as pd
+import torch
+import torch.nn as nn
+
+from sklearn.metrics import (
+    accuracy_score,
+    classification_report,
+    confusion_matrix,
+    ConfusionMatrixDisplay,
+)
+
+import matplotlib.pyplot as plt
+
+
+project_root = Path(r"c:\Users\holbo\00VS_projjects\00_HFT_project")
+sys.path.insert(0, str(project_root))
+
+from src.models.tcn import HLSFriendlyTCNClassifier
+from new_era.tcn_pipeline_utils import (
+    concatenate_records,
+    load_sequence_records,
+    split_records_by_session,
+)
+
+
+CLASS_NAMES = ["Down (0)", "Stationary (1)", "Up (2)"]
+CLASS_LABELS = [0, 1, 2]
+
+
+def safe_load_state_dict(weights_path: Path, device):
+    """
+    兼容不同 PyTorch 版本的權重讀取方式。
+    新版 PyTorch 支援 weights_only=True，
+    舊版可能不支援，所以用 try/except 保護。
+    """
+    try:
+        return torch.load(weights_path, map_location=device, weights_only=True)
+    except TypeError:
+        return torch.load(weights_path, map_location=device)
+
+
+def evaluate_split(model, X, y, criterion, device, batch_size=2048):
+    """
+    對一個 split，例如 validation 或 test，進行批次推論。
+    
+    回傳：
+    - avg_loss
+    - accuracy
+    - y_true
+    - y_pred
+    """
+    model.eval()
+
+    all_preds = []
+    total_loss = 0.0
+    total_samples = 0
+
+    y_true = np.asarray(y)
+
+    with torch.no_grad():
+        for start in range(0, len(X), batch_size):
+            end = start + batch_size
+
+            batch_X = torch.FloatTensor(X[start:end]).to(device)
+            batch_y = torch.LongTensor(y_true[start:end]).to(device)
+
+            outputs = model(batch_X)
+            loss = criterion(outputs, batch_y)
+
+            batch_size_actual = batch_y.size(0)
+            total_loss += loss.item() * batch_size_actual
+            total_samples += batch_size_actual
+
+            preds = outputs.argmax(dim=1)
+            all_preds.extend(preds.cpu().numpy())
+
+            if start % (batch_size * 20) == 0:
+                print(f"  Processed {start}/{len(X)} samples...")
+
+    y_pred = np.array(all_preds)
+    avg_loss = total_loss / max(total_samples, 1)
+    acc = accuracy_score(y_true, y_pred)
+
+    return avg_loss, acc, y_true, y_pred
+
+
+def save_confusion_matrix_plots(split_name, y_true, y_pred, output_dir):
+    """
+    儲存兩種混淆矩陣：
+    1. Count matrix：顯示實際樣本數
+    2. Normalized matrix：顯示每個 actual class 被分到各類的比例
+    """
+    output_dir.mkdir(parents=True, exist_ok=True)
+
+    # Count confusion matrix
+    cm_count = confusion_matrix(y_true, y_pred, labels=CLASS_LABELS)
+
+    fig, ax = plt.subplots(figsize=(8, 6))
+    disp = ConfusionMatrixDisplay(
+        confusion_matrix=cm_count,
+        display_labels=CLASS_NAMES,
+    )
+    disp.plot(ax=ax, values_format="d", colorbar=True)
+    ax.set_title(f"{split_name} Confusion Matrix (Counts)")
+    ax.set_xlabel("Predicted Label")
+    ax.set_ylabel("True Label")
+    plt.xticks(rotation=20, ha="right")
+    plt.tight_layout()
+
+    count_path = output_dir / f"{split_name.lower()}_confusion_matrix_count.png"
+    plt.savefig(count_path, dpi=200)
+    plt.close(fig)
+
+    # Normalized confusion matrix
+    cm_norm = confusion_matrix(
+        y_true,
+        y_pred,
+        labels=CLASS_LABELS,
+        normalize="true",
+    )
+
+    fig, ax = plt.subplots(figsize=(8, 6))
+    disp = ConfusionMatrixDisplay(
+        confusion_matrix=cm_norm,
+        display_labels=CLASS_NAMES,
+    )
+    disp.plot(ax=ax, values_format=".2f", colorbar=True)
+    ax.set_title(f"{split_name} Confusion Matrix (Normalized by True Class)")
+    ax.set_xlabel("Predicted Label")
+    ax.set_ylabel("True Label")
+    plt.xticks(rotation=20, ha="right")
+    plt.tight_layout()
+
+    norm_path = output_dir / f"{split_name.lower()}_confusion_matrix_normalized.png"
+    plt.savefig(norm_path, dpi=200)
+    plt.close(fig)
+
+    return count_path, norm_path
+
+
+def save_classification_report(split_name, y_true, y_pred, output_dir):
+    """
+    儲存 classification report 成 CSV，方便之後放進報告或畫圖。
+    """
+    report_dict = classification_report(
+        y_true,
+        y_pred,
+        labels=CLASS_LABELS,
+        target_names=CLASS_NAMES,
+        zero_division=0,
+        output_dict=True,
+    )
+
+    report_df = pd.DataFrame(report_dict).transpose()
+    report_path = output_dir / f"{split_name.lower()}_classification_report.csv"
+    report_df.to_csv(report_path)
+
+    return report_df, report_path
+
+
+def print_pretty_console_report(split_name, loss, acc, y_true, y_pred):
+    """
+    印出比較整齊的終端機報告。
+    """
+    cm = confusion_matrix(y_true, y_pred, labels=CLASS_LABELS)
+
+    print("\n" + "=" * 72)
+    print(f"{split_name} Evaluation Summary")
+    print("=" * 72)
+    print(f"Loss     : {loss:.6f}")
+    print(f"Accuracy : {acc * 100:.2f}%")
+    print("-" * 72)
+
+    print("\nConfusion Matrix (Counts)")
+    print("                 Pred Down | Pred Stat | Pred Up")
+    print(f"Actual Down      {cm[0][0]:10d} | {cm[0][1]:9d} | {cm[0][2]:7d}")
+    print(f"Actual Stat      {cm[1][0]:10d} | {cm[1][1]:9d} | {cm[1][2]:7d}")
+    print(f"Actual Up        {cm[2][0]:10d} | {cm[2][1]:9d} | {cm[2][2]:7d}")
+
+    print("\nClassification Report")
+    print(
+        classification_report(
+            y_true,
+            y_pred,
+            labels=CLASS_LABELS,
+            target_names=CLASS_NAMES,
+            zero_division=0,
+        )
+    )
+
+
+def evaluate_and_export(split_name, model, X, y, criterion, device, output_dir):
+    """
+    完整評估一個 split，並輸出：
+    - console report
+    - confusion matrix PNG
+    - normalized confusion matrix PNG
+    - classification report CSV
+    """
+    print(f"\nRunning {split_name} evaluation...")
+    loss, acc, y_true, y_pred = evaluate_split(
+        model=model,
+        X=X,
+        y=y,
+        criterion=criterion,
+        device=device,
+    )
+
+    print_pretty_console_report(split_name, loss, acc, y_true, y_pred)
+
+    count_path, norm_path = save_confusion_matrix_plots(
+        split_name=split_name,
+        y_true=y_true,
+        y_pred=y_pred,
+        output_dir=output_dir,
+    )
+
+    report_df, report_path = save_classification_report(
+        split_name=split_name,
+        y_true=y_true,
+        y_pred=y_pred,
+        output_dir=output_dir,
+    )
+
+    print(f"Saved count confusion matrix      : {count_path}")
+    print(f"Saved normalized confusion matrix : {norm_path}")
+    print(f"Saved classification report       : {report_path}")
+
+    return {
+        "split": split_name,
+        "loss": loss,
+        "accuracy": acc,
+        "num_samples": len(y_true),
+        "count_confusion_matrix": str(count_path),
+        "normalized_confusion_matrix": str(norm_path),
+        "classification_report": str(report_path),
+    }
+
+
+def main():
+    """
+    主程式：
+    1. 載入 002_zscore_dataset.npz
+    2. 載入 005_tcn_weights.pth
+    3. 對 validation / test set 做推論
+    4. 計算 loss / accuracy / confusion matrix / classification report
+    5. 輸出漂亮的 PNG 與 CSV
+    """
+    device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
+    print(f"Evaluating on device: {device}")
+
+    npz_path = project_root / "new_era" / "002_zscore_dataset.npz"
+    weights_path = project_root / "new_era" / "005_tcn_weights.pth"
+    output_dir = project_root / "new_era" / "eval_outputs"
+    output_dir.mkdir(parents=True, exist_ok=True)
+
+    if not npz_path.exists():
+        print(f"Error: dataset file not found: {npz_path}")
+        sys.exit(1)
+
+    if not weights_path.exists():
+        print(f"Error: weights file not found: {weights_path}")
+        sys.exit(1)
+
+    print(f"Loading Z-score sequence dataset from {npz_path}...")
+    records = load_sequence_records(npz_path)
+    train_records, val_records, test_records = split_records_by_session(records)
+
+    if not val_records:
+        print("Error: no validation sessions found. Re-run 02_feature_engineering.py with multiple sessions.")
+        sys.exit(1)
+
+    print("\nSession split:")
+    print(f"  Train sessions      : {len(train_records)}")
+    print(f"  Validation sessions : {len(val_records)}")
+    print(f"  Test sessions       : {len(test_records)}")
+
+    X_val, y_val = concatenate_records(val_records, channel_first=True)
+    print(f"\nValidation Data Shape: X {X_val.shape}, y {y_val.shape}")
+
+    # 模型架構必須和 05_train_tcn_pytorch.py 完全一致
+    model = HLSFriendlyTCNClassifier(
+        num_inputs=8,
+        num_classes=3,
+        channel_list=[16, 16, 16],
+        kernel_size=3,
+        dropout=0.1,
+    ).to(device)
+
+    print(f"\nLoading weights from {weights_path}...")
+    state_dict = safe_load_state_dict(weights_path, device)
+    model.load_state_dict(state_dict)
+    model.eval()
+
+    # Evaluation loss：這裡用一般 CrossEntropyLoss。
+    # 注意：這是評估 loss，不是訓練時完整的 epoch loss curve。
+    criterion = nn.CrossEntropyLoss()
+
+    summary_rows = []
+
+    val_summary = evaluate_and_export(
+        split_name="Validation",
+        model=model,
+        X=X_val,
+        y=y_val,
+        criterion=criterion,
+        device=device,
+        output_dir=output_dir,
+    )
+    summary_rows.append(val_summary)
+
+    if test_records:
+        X_test, y_test = concatenate_records(test_records, channel_first=True)
+        print(f"\nTest Data Shape: X {X_test.shape}, y {y_test.shape}")
+
+        test_summary = evaluate_and_export(
+            split_name="Test",
+            model=model,
+            X=X_test,
+            y=y_test,
+            criterion=criterion,
+            device=device,
+            output_dir=output_dir,
+        )
+        summary_rows.append(test_summary)
+
+    summary_df = pd.DataFrame(summary_rows)
+    summary_path = output_dir / "eval_loss_summary.csv"
+    summary_df.to_csv(summary_path, index=False)
+
+    print("\n" + "=" * 72)
+    print("Evaluation outputs saved")
+    print("=" * 72)
+    print(f"Summary CSV: {summary_path}")
+    print(f"Output dir : {output_dir}")
+
+
+if __name__ == "__main__":
+    main()

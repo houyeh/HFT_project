@@ -1,0 +1,19 @@
+{
+  "labels_path": "C:\\Users\\holbo\\00VS_projjects\\00_HFT_project\\new_era\\16_binary_label_v2\\results\\feature_ablation_runs\\binary_labels_v2_ablation_features.parquet",
+  "thresholds_path": "C:\\Users\\holbo\\00VS_projjects\\00_HFT_project\\new_era\\16_binary_label_v2\\results\\feature_ablation_runs\\F8_plus_causal_excite\\selected_thresholds.json",
+  "model_dir": "C:\\Users\\holbo\\00VS_projjects\\00_HFT_project\\new_era\\16_binary_label_v2\\results\\feature_ablation_runs\\F8_plus_causal_excite\\model_weighted_bce",
+  "thresholds": {
+    "bid": 0.009259999729692936,
+    "ask": 0.013228789903223515
+  },
+  "random_seeds": 20,
+  "test_evaluation_count": 1,
+  "test_policy": "Thresholds loaded from selected_thresholds.json and applied blindly to test.",
+  "outputs": {
+    "test_backtest_summary": "C:\\Users\\holbo\\00VS_projjects\\00_HFT_project\\new_era\\16_binary_label_v2\\results\\feature_ablation_runs\\F8_plus_causal_excite\\test_backtest_summary.csv",
+    "random_baseline_summary": "C:\\Users\\holbo\\00VS_projjects\\00_HFT_project\\new_era\\16_binary_label_v2\\results\\feature_ablation_runs\\F8_plus_causal_excite\\random_baseline_summary.csv",
+    "pnl_by_session": "C:\\Users\\holbo\\00VS_projjects\\00_HFT_project\\new_era\\16_binary_label_v2\\results\\feature_ablation_runs\\F8_plus_causal_excite\\pnl_by_session.csv",
+    "random_baseline_runs": "C:\\Users\\holbo\\00VS_projjects\\00_HFT_project\\new_era\\16_binary_label_v2\\results\\feature_ablation_runs\\F8_plus_causal_excite\\random_baseline_runs.csv",
+    "test_predictions": "C:\\Users\\holbo\\00VS_projjects\\00_HFT_project\\new_era\\16_binary_label_v2\\results\\feature_ablation_runs\\F8_plus_causal_excite\\test_predictions_binary_cancel.parquet"
+  }
+}

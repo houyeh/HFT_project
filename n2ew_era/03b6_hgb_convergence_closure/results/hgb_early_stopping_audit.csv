@@ -1,0 +1,4 @@
+model_id,max_iter,n_iter,terminated_before_cap,tol,n_iter_no_change,validation_fraction,train_rmse,val_rmse,train_pr_auc_positive_excess,val_pr_auc_positive_excess,val_spearman,selected_threshold,val_policy_total_excess_pnl,selection_split,test_new3_new4_used_for_selection
+hgb_regressor_early_stop_320,320,121,True,1e-07,10,0.1,147.39842901130257,239.65670434498594,0.38625396182577615,0.37489514038528904,0.2976606102194604,0.0,12360690.0,val,False
+hgb_regressor_early_stop_500,500,121,True,1e-07,10,0.1,147.39842901130257,239.65670434498594,0.38625396182577615,0.37489514038528904,0.2976606102194604,0.0,12360690.0,val,False
+hgb_regressor_early_stop_800,800,121,True,1e-07,10,0.1,147.39842901130257,239.65670434498594,0.38625396182577615,0.37489514038528904,0.2976606102194604,0.0,12360690.0,val,False

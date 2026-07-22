@@ -1,0 +1,4 @@
+model_variant,policy_id,seed,best_epoch,best_val_pnl,final_epoch,early_stop,max_epoch_hit,convergence_closed,strict_convergence_rule,lr_at_best_epoch,lr_at_final_epoch,grad_norm_at_best_epoch,grad_norm_at_final_epoch,phase
+18feat,tcn_5block_prepad_18feat,0,142,1635610.0,162,True,False,True,early_stop=True and best_epoch<185,0.0002077919884636,0.0001000158898746,0.3750610612332821,0.2586108181429536,06d
+18feat,tcn_5block_prepad_18feat,1,156,1645950.0,176,True,False,True,early_stop=True and best_epoch<185,0.0001285990470279,4.767963140691314e-05,0.2211722884523241,0.1629157365348778,06d
+18feat,tcn_5block_prepad_18feat,2,179,1718090.0,199,True,False,True,early_stop=True and best_epoch<185,3.926401936765838e-05,1.0244252618962858e-05,0.1885714874063667,0.0991421319348247,06d

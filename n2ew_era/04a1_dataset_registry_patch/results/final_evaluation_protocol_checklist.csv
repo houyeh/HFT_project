@@ -1,0 +1,8 @@
+check,status,enforcement
+selection_only_in_development_pool,PASS,NEW1/NEW2 only
+new3_new4_diagnostic_oos_only,PASS,"no tuning, thresholding, or model selection"
+new5_final_holdout_locked,PASS,metadata/schema only before final one-shot
+new5_no_pnl_evaluation_in_phase04a1,PASS,no future_mid/excess_pnl/model score columns computed
+raw_pnl_toxic_labels_diagnostic_only,PASS,label hierarchy contract
+main_signal_target_excess_pnl_h20,PASS,future label never feature
+strategy_metric_causal_fill_sequential_excess_pnl,PASS,"proxy evaluation only, not true exchange replay"

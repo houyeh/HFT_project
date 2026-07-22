@@ -1,0 +1,9 @@
+INFO: [SIM 2] *************** CSIM start ***************
+   Compiling ../../../../../../src/hls_testbench.cpp in debug mode
+   Compiling ../../../../../../src/fixed_tcn_top.cpp in debug mode
+   Compiling ../../../../../../src/fixed_tcn.cpp in debug mode
+   Compiling ../../../../../../src/fixed_tcn_modules.cpp in debug mode
+   Generating csim.exe
+[PASS] HLS testbench matched fixed golden logits/probabilities.
+INFO: [SIM 1] CSim done with 0 errors.
+INFO: [SIM 3] *************** CSIM finish ***************

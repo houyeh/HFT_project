@@ -1,0 +1,9 @@
+# NEW5 Label Decomposition Audit
+
+| side     |   rows_checked |   max_abs_reconstruction_error | formula                                                  | pass   |
+|:---------|---------------:|-------------------------------:|:---------------------------------------------------------|:-------|
+| bid      |         815892 |                              0 | raw_pnl_H20 = half_spread_component_H20 + excess_pnl_H20 | True   |
+| ask      |         815892 |                              0 | raw_pnl_H20 = half_spread_component_H20 + excess_pnl_H20 | True   |
+| no_quote |         815912 |                              0 | raw_pnl_H20 = half_spread_component_H20 + excess_pnl_H20 | True   |
+
+Overall pass: `True`.

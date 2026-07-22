@@ -1,0 +1,13 @@
+{
+  "input_path": "C:\\Users\\holbo\\00VS_projjects\\00_HFT_project\\new_era\\16_binary_label_v2\\outputs\\quote_eligible_events.parquet",
+  "data_dir": "C:\\Users\\holbo\\00VS_projjects\\00_HFT_project\\data\\NEW_ALL",
+  "symbol": "TXFB6",
+  "labels_path": "C:\\Users\\holbo\\00VS_projjects\\00_HFT_project\\new_era\\16_binary_label_v2\\outputs\\binary_labels_v2.parquet",
+  "summary_path": "C:\\Users\\holbo\\00VS_projjects\\00_HFT_project\\new_era\\16_binary_label_v2\\outputs\\toxic_rate_by_side.csv",
+  "definition_path": "C:\\Users\\holbo\\00VS_projjects\\00_HFT_project\\new_era\\16_binary_label_v2\\outputs\\label_definition.md",
+  "fill_proxy_window_ticks": 1,
+  "label_horizon_ticks": 10,
+  "adverse_threshold_ticks": 0.5,
+  "row_count": 5322562,
+  "label_valid_rows": 5322562
+}

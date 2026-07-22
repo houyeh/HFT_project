@@ -1,0 +1,3 @@
+session_id,rows,trade_count,ending_inventory,net_pnl,max_drawdown
+20260127Day,410586,143,-1,41355.0,69390.0
+20260127Night,755735,331,-3,91235.0,31900.0

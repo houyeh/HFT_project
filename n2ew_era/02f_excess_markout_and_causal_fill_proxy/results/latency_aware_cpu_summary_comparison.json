@@ -1,0 +1,33 @@
+{
+  "original_summary_path": "C:\\Users\\holbo\\00VS_projjects\\00_HFT_project\\n2ew_era\\06f_phc_lite_manual_hls\\results\\cpu_baseline_timing_libtorch.json",
+  "raw_summary_path": "C:\\Users\\holbo\\00VS_projjects\\00_HFT_project\\n2ew_era\\06f_phc_lite_manual_hls\\results\\cpu_baseline_timing_libtorch_raw.json",
+  "raw_csv_path": "C:\\Users\\holbo\\00VS_projjects\\00_HFT_project\\n2ew_era\\06f_phc_lite_manual_hls\\results\\cpu_baseline_timing_libtorch_raw.csv",
+  "relative_tolerance": 0.1,
+  "consistent_with_original": false,
+  "rows": [
+    {
+      "metric": "mean_us",
+      "original": 74.5444,
+      "raw_rerun": 63.9025,
+      "relative_delta": -0.1427592146425485
+    },
+    {
+      "metric": "median_us",
+      "original": 51.0,
+      "raw_rerun": 45.4,
+      "relative_delta": -0.10980392156862748
+    },
+    {
+      "metric": "p99_us",
+      "original": 636.7,
+      "raw_rerun": 386.4,
+      "relative_delta": -0.3931207790168055
+    },
+    {
+      "metric": "min_us",
+      "original": 43.8,
+      "raw_rerun": 37.3,
+      "relative_delta": -0.14840182648401828
+    }
+  ]
+}

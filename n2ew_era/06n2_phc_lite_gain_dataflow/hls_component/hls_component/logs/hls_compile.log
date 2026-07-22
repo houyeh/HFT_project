@@ -1,0 +1,437 @@
+  **** HLS Build v2025.2 6295257
+INFO: [HLS 200-2005] Using work_dir C:/Users/holbo/00VS_projjects/00_HFT_project/n2ew_era/06n2_phc_lite_gain_dataflow/hls_component/hls_component 
+INFO: [HLS 200-2176] Writing Vitis IDE component file C:/Users/holbo/00VS_projjects/00_HFT_project/n2ew_era/06n2_phc_lite_gain_dataflow/hls_component/hls_component/vitis-comp.json
+INFO: [HLS 200-10] Creating and opening component 'C:/Users/holbo/00VS_projjects/00_HFT_project/n2ew_era/06n2_phc_lite_gain_dataflow/hls_component/hls_component'.
+INFO: [HLS 200-1505] Using default flow_target 'vivado'
+Resolution: For help on HLS 200-1505 see docs.amd.com/access/sources/dita/topic?Doc_Version=2025.2%20English&url=ug1448-hls-guidance&resourceid=200-1505.html
+INFO: [HLS 200-2174] Applying component config ini file ../hls_config.cfg
+INFO: [HLS 200-1465] Applying config ini 'syn.file=../hls_src/phc_step_hls.cpp' from ../hls_config.cfg(8)
+INFO: [HLS 200-10] Adding design file 'C:/Users/holbo/00VS_projjects/00_HFT_project/n2ew_era/06n2_phc_lite_gain_dataflow/hls_src/phc_step_hls.cpp' to the project
+INFO: [HLS 200-1465] Applying config ini 'syn.file=../hls_src/phc_step_hls.hpp' from ../hls_config.cfg(9)
+INFO: [HLS 200-10] Adding design file 'C:/Users/holbo/00VS_projjects/00_HFT_project/n2ew_era/06n2_phc_lite_gain_dataflow/hls_src/phc_step_hls.hpp' to the project
+INFO: [HLS 200-1465] Applying config ini 'syn.file=../hls_src/phc_weights.hpp' from ../hls_config.cfg(10)
+INFO: [HLS 200-10] Adding design file 'C:/Users/holbo/00VS_projjects/00_HFT_project/n2ew_era/06n2_phc_lite_gain_dataflow/hls_src/phc_weights.hpp' to the project
+INFO: [HLS 200-1465] Applying config ini 'tb.file=../hls_src/phc_step_testbench.cpp' from ../hls_config.cfg(11)
+INFO: [HLS 200-10] Adding test bench file 'C:/Users/holbo/00VS_projjects/00_HFT_project/n2ew_era/06n2_phc_lite_gain_dataflow/hls_src/phc_step_testbench.cpp' to the project
+INFO: [HLS 200-1465] Applying config ini 'syn.top=phc_step' from ../hls_config.cfg(7)
+INFO: [HLS 200-1465] Applying config ini 'flow_target=vivado' from ../hls_config.cfg(4)
+INFO: [HLS 200-1505] Using flow_target 'vivado'
+Resolution: For help on HLS 200-1505 see docs.amd.com/access/sources/dita/topic?Doc_Version=2025.2%20English&url=ug1448-hls-guidance&resourceid=200-1505.html
+INFO: [HLS 200-1465] Applying config ini 'part=xc7z020clg400-1' from ../hls_config.cfg(1)
+INFO: [HLS 200-1611] Setting target device to 'xc7z020-clg400-1'
+INFO: [HLS 200-1465] Applying config ini 'clock=10ns' from ../hls_config.cfg(12)
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 10ns.
+INFO: [HLS 200-1465] Applying config ini 'cosim.argv=C:/Users/holbo/00VS_projjects/00_HFT_project/n2ew_era/06f_phc_lite_manual_hls/results/phc_step_test_vectors.csv C:/Users/holbo/00VS_projjects/00_HFT_project/n2ew_era/06n2_phc_lite_gain_dataflow/results/phc_step_cosim_out.csv' from ../hls_config.cfg(13)
+INFO: [HLS 200-1465] Applying config ini 'csim.argv=C:/Users/holbo/00VS_projjects/00_HFT_project/n2ew_era/06f_phc_lite_manual_hls/results/phc_step_test_vectors.csv C:/Users/holbo/00VS_projjects/00_HFT_project/n2ew_era/06n2_phc_lite_gain_dataflow/results/phc_step_csim_out.csv' from ../hls_config.cfg(14)
+INFO: [HLS 200-1465] Applying config ini 'package.output.format=ip_catalog' from ../hls_config.cfg(5)
+INFO: [HLS 200-2176] Writing Vitis IDE component file C:/Users/holbo/00VS_projjects/00_HFT_project/n2ew_era/06n2_phc_lite_gain_dataflow/hls_component/hls_component/vitis-comp.json
+INFO: [HLS 200-111] Finished File checks and directory preparation: CPU user time: 1 seconds. CPU system time: 1 seconds. Elapsed time: 19.65 seconds; current allocated memory: 134.852 MB.
+INFO: [HLS 200-2191] C-Synthesis will use clang-16 as the compiler
+INFO: [HLS 200-10] Analyzing design file 'C:/Users/holbo/00VS_projjects/00_HFT_project/n2ew_era/06n2_phc_lite_gain_dataflow/hls_src/phc_step_hls.cpp' ... 
+INFO: [HLS 200-111] Finished Source Code Analysis and Preprocessing: CPU user time: 1 seconds. CPU system time: 0 seconds. Elapsed time: 68.744 seconds; current allocated memory: 142.086 MB.
+INFO: [HLS 200-777] Using interface defaults for 'Vivado' flow target.
+WARNING: [HLS 200-1995] There were 174,992 instructions in the design after the 'Compile/Link' phase of compilation. See the Design Size Report for more details (C:/Users/holbo/00VS_projjects/00_HFT_project/n2ew_era/06n2_phc_lite_gain_dataflow/hls_component/hls_component/hls/syn/report/csynth_design_size.rpt:2)
+INFO: [HLS 200-1995] There were 16,061 instructions in the design after the 'Unroll/Inline (step 1)' phase of compilation. See the Design Size Report for more details (C:/Users/holbo/00VS_projjects/00_HFT_project/n2ew_era/06n2_phc_lite_gain_dataflow/hls_component/hls_component/hls/syn/report/csynth_design_size.rpt:2)
+INFO: [HLS 200-1995] There were 5,598 instructions in the design after the 'Unroll/Inline (step 2)' phase of compilation. See the Design Size Report for more details (C:/Users/holbo/00VS_projjects/00_HFT_project/n2ew_era/06n2_phc_lite_gain_dataflow/hls_component/hls_component/hls/syn/report/csynth_design_size.rpt:2)
+INFO: [HLS 200-1995] There were 5,132 instructions in the design after the 'Unroll/Inline (step 3)' phase of compilation. See the Design Size Report for more details (C:/Users/holbo/00VS_projjects/00_HFT_project/n2ew_era/06n2_phc_lite_gain_dataflow/hls_component/hls_component/hls/syn/report/csynth_design_size.rpt:2)
+INFO: [HLS 200-1995] There were 5,087 instructions in the design after the 'Unroll/Inline (step 4)' phase of compilation. See the Design Size Report for more details (C:/Users/holbo/00VS_projjects/00_HFT_project/n2ew_era/06n2_phc_lite_gain_dataflow/hls_component/hls_component/hls/syn/report/csynth_design_size.rpt:2)
+INFO: [HLS 200-1995] There were 5,929 instructions in the design after the 'Array/Struct (step 1)' phase of compilation. See the Design Size Report for more details (C:/Users/holbo/00VS_projjects/00_HFT_project/n2ew_era/06n2_phc_lite_gain_dataflow/hls_component/hls_component/hls/syn/report/csynth_design_size.rpt:2)
+INFO: [HLS 200-1995] There were 5,269 instructions in the design after the 'Array/Struct (step 2)' phase of compilation. See the Design Size Report for more details (C:/Users/holbo/00VS_projjects/00_HFT_project/n2ew_era/06n2_phc_lite_gain_dataflow/hls_component/hls_component/hls/syn/report/csynth_design_size.rpt:2)
+INFO: [HLS 200-1995] There were 5,269 instructions in the design after the 'Array/Struct (step 3)' phase of compilation. See the Design Size Report for more details (C:/Users/holbo/00VS_projjects/00_HFT_project/n2ew_era/06n2_phc_lite_gain_dataflow/hls_component/hls_component/hls/syn/report/csynth_design_size.rpt:2)
+INFO: [HLS 200-1995] There were 5,269 instructions in the design after the 'Array/Struct (step 4)' phase of compilation. See the Design Size Report for more details (C:/Users/holbo/00VS_projjects/00_HFT_project/n2ew_era/06n2_phc_lite_gain_dataflow/hls_component/hls_component/hls/syn/report/csynth_design_size.rpt:2)
+INFO: [HLS 200-1995] There were 5,298 instructions in the design after the 'Array/Struct (step 5)' phase of compilation. See the Design Size Report for more details (C:/Users/holbo/00VS_projjects/00_HFT_project/n2ew_era/06n2_phc_lite_gain_dataflow/hls_component/hls_component/hls/syn/report/csynth_design_size.rpt:2)
+INFO: [HLS 200-1995] There were 5,298 instructions in the design after the 'Performance (step 1)' phase of compilation. See the Design Size Report for more details (C:/Users/holbo/00VS_projjects/00_HFT_project/n2ew_era/06n2_phc_lite_gain_dataflow/hls_component/hls_component/hls/syn/report/csynth_design_size.rpt:2)
+INFO: [HLS 200-1995] There were 5,269 instructions in the design after the 'Performance (step 2)' phase of compilation. See the Design Size Report for more details (C:/Users/holbo/00VS_projjects/00_HFT_project/n2ew_era/06n2_phc_lite_gain_dataflow/hls_component/hls_component/hls/syn/report/csynth_design_size.rpt:2)
+INFO: [HLS 200-1995] There were 5,269 instructions in the design after the 'Performance (step 3)' phase of compilation. See the Design Size Report for more details (C:/Users/holbo/00VS_projjects/00_HFT_project/n2ew_era/06n2_phc_lite_gain_dataflow/hls_component/hls_component/hls/syn/report/csynth_design_size.rpt:2)
+INFO: [HLS 200-1995] There were 4,944 instructions in the design after the 'Performance (step 4)' phase of compilation. See the Design Size Report for more details (C:/Users/holbo/00VS_projjects/00_HFT_project/n2ew_era/06n2_phc_lite_gain_dataflow/hls_component/hls_component/hls/syn/report/csynth_design_size.rpt:2)
+INFO: [HLS 200-1995] There were 4,952 instructions in the design after the 'HW Transforms (step 1)' phase of compilation. See the Design Size Report for more details (C:/Users/holbo/00VS_projjects/00_HFT_project/n2ew_era/06n2_phc_lite_gain_dataflow/hls_component/hls_component/hls/syn/report/csynth_design_size.rpt:2)
+INFO: [HLS 200-1995] There were 5,112 instructions in the design after the 'HW Transforms (step 2)' phase of compilation. See the Design Size Report for more details (C:/Users/holbo/00VS_projjects/00_HFT_project/n2ew_era/06n2_phc_lite_gain_dataflow/hls_component/hls_component/hls/syn/report/csynth_design_size.rpt:2)
+INFO: [HLS 214-131] Inlining function '(anonymous namespace)::tanh_lut_scalar(ap_fixed<40, 16, (ap_q_mode)5, (ap_o_mode)3, 0>)' into '(anonymous namespace)::sigmoid_scalar(ap_fixed<40, 16, (ap_q_mode)5, (ap_o_mode)3, 0>)' (C:/Users/holbo/00VS_projjects/00_HFT_project/n2ew_era/06n2_phc_lite_gain_dataflow/hls_src/phc_step_hls.cpp:62:30)
+INFO: [HLS 214-131] Inlining function '(anonymous namespace)::sigmoid_scalar(ap_fixed<40, 16, (ap_q_mode)5, (ap_o_mode)3, 0>)' into '(anonymous namespace)::silu_16(ap_fixed<40, 16, (ap_q_mode)5, (ap_o_mode)3, 0> const*, ap_fixed<40, 16, (ap_q_mode)5, (ap_o_mode)3, 0>*)' (C:/Users/holbo/00VS_projjects/00_HFT_project/n2ew_era/06n2_phc_lite_gain_dataflow/hls_src/phc_step_hls.cpp:90:26)
+INFO: [HLS 214-131] Inlining function '(anonymous namespace)::sigmoid_scalar(ap_fixed<40, 16, (ap_q_mode)5, (ap_o_mode)3, 0>)' into '(anonymous namespace)::sigmoid_16(ap_fixed<40, 16, (ap_q_mode)5, (ap_o_mode)3, 0> const*, ap_fixed<40, 16, (ap_q_mode)5, (ap_o_mode)3, 0>*)' (C:/Users/holbo/00VS_projjects/00_HFT_project/n2ew_era/06n2_phc_lite_gain_dataflow/hls_src/phc_step_hls.cpp:74:18)
+INFO: [HLS 214-131] Inlining function '(anonymous namespace)::linear_16_16_acc(ap_fixed<40, 16, (ap_q_mode)5, (ap_o_mode)3, 0> const*, ap_fixed<24, 12, (ap_q_mode)5, (ap_o_mode)3, 0> const (*) [16], ap_fixed<24, 12, (ap_q_mode)5, (ap_o_mode)3, 0> const*, ap_fixed<40, 16, (ap_q_mode)5, (ap_o_mode)3, 0>*)' into '(anonymous namespace)::gate_branch(ap_fixed<40, 16, (ap_q_mode)5, (ap_o_mode)3, 0> const*, ap_fixed<40, 16, (ap_q_mode)5, (ap_o_mode)3, 0>*)' (C:/Users/holbo/00VS_projjects/00_HFT_project/n2ew_era/06n2_phc_lite_gain_dataflow/hls_src/phc_step_hls.cpp:197:5)
+INFO: [HLS 214-131] Inlining function '(anonymous namespace)::sigmoid_16(ap_fixed<40, 16, (ap_q_mode)5, (ap_o_mode)3, 0> const*, ap_fixed<40, 16, (ap_q_mode)5, (ap_o_mode)3, 0>*)' into '(anonymous namespace)::gate_branch(ap_fixed<40, 16, (ap_q_mode)5, (ap_o_mode)3, 0> const*, ap_fixed<40, 16, (ap_q_mode)5, (ap_o_mode)3, 0>*)' (C:/Users/holbo/00VS_projjects/00_HFT_project/n2ew_era/06n2_phc_lite_gain_dataflow/hls_src/phc_step_hls.cpp:198:5)
+INFO: [HLS 214-131] Inlining function '(anonymous namespace)::tanh_lut_scalar(ap_fixed<40, 16, (ap_q_mode)5, (ap_o_mode)3, 0>)' into '(anonymous namespace)::tanh_scalar(ap_fixed<40, 16, (ap_q_mode)5, (ap_o_mode)3, 0>)' (C:/Users/holbo/00VS_projjects/00_HFT_project/n2ew_era/06n2_phc_lite_gain_dataflow/hls_src/phc_step_hls.cpp:67:12)
+INFO: [HLS 214-131] Inlining function '(anonymous namespace)::tanh_scalar(ap_fixed<40, 16, (ap_q_mode)5, (ap_o_mode)3, 0>)' into '(anonymous namespace)::tanh_16(ap_fixed<40, 16, (ap_q_mode)5, (ap_o_mode)3, 0> const*, ap_fixed<40, 16, (ap_q_mode)5, (ap_o_mode)3, 0>*)' (C:/Users/holbo/00VS_projjects/00_HFT_project/n2ew_era/06n2_phc_lite_gain_dataflow/hls_src/phc_step_hls.cpp:82:18)
+INFO: [HLS 214-131] Inlining function '(anonymous namespace)::linear_16_16_acc(ap_fixed<40, 16, (ap_q_mode)5, (ap_o_mode)3, 0> const*, ap_fixed<24, 12, (ap_q_mode)5, (ap_o_mode)3, 0> const (*) [16], ap_fixed<24, 12, (ap_q_mode)5, (ap_o_mode)3, 0> const*, ap_fixed<40, 16, (ap_q_mode)5, (ap_o_mode)3, 0>*)' into '(anonymous namespace)::candidate_branch(ap_fixed<40, 16, (ap_q_mode)5, (ap_o_mode)3, 0> const*, ap_fixed<40, 16, (ap_q_mode)5, (ap_o_mode)3, 0>*)' (C:/Users/holbo/00VS_projjects/00_HFT_project/n2ew_era/06n2_phc_lite_gain_dataflow/hls_src/phc_step_hls.cpp:204:5)
+INFO: [HLS 214-131] Inlining function '(anonymous namespace)::tanh_16(ap_fixed<40, 16, (ap_q_mode)5, (ap_o_mode)3, 0> const*, ap_fixed<40, 16, (ap_q_mode)5, (ap_o_mode)3, 0>*)' into '(anonymous namespace)::candidate_branch(ap_fixed<40, 16, (ap_q_mode)5, (ap_o_mode)3, 0> const*, ap_fixed<40, 16, (ap_q_mode)5, (ap_o_mode)3, 0>*)' (C:/Users/holbo/00VS_projjects/00_HFT_project/n2ew_era/06n2_phc_lite_gain_dataflow/hls_src/phc_step_hls.cpp:205:5)
+INFO: [HLS 214-131] Inlining function '(anonymous namespace)::silu_16(ap_fixed<40, 16, (ap_q_mode)5, (ap_o_mode)3, 0> const*, ap_fixed<40, 16, (ap_q_mode)5, (ap_o_mode)3, 0>*)' into '(anonymous namespace)::main_chain_fn(ap_fixed<40, 16, (ap_q_mode)5, (ap_o_mode)3, 0> const*, ap_fixed<24, 12, (ap_q_mode)5, (ap_o_mode)3, 0> const*, ap_fixed<40, 16, (ap_q_mode)5, (ap_o_mode)3, 0>*, ap_fixed<40, 16, (ap_q_mode)5, (ap_o_mode)3, 0>*)' (C:/Users/holbo/00VS_projjects/00_HFT_project/n2ew_era/06n2_phc_lite_gain_dataflow/hls_src/phc_step_hls.cpp:274:5)
+INFO: [HLS 214-131] Inlining function '(anonymous namespace)::linear_16_16_acc(ap_fixed<40, 16, (ap_q_mode)5, (ap_o_mode)3, 0> const*, ap_fixed<24, 12, (ap_q_mode)5, (ap_o_mode)3, 0> const (*) [16], ap_fixed<24, 12, (ap_q_mode)5, (ap_o_mode)3, 0> const*, ap_fixed<40, 16, (ap_q_mode)5, (ap_o_mode)3, 0>*)' into '(anonymous namespace)::main_chain_fn(ap_fixed<40, 16, (ap_q_mode)5, (ap_o_mode)3, 0> const*, ap_fixed<24, 12, (ap_q_mode)5, (ap_o_mode)3, 0> const*, ap_fixed<40, 16, (ap_q_mode)5, (ap_o_mode)3, 0>*, ap_fixed<40, 16, (ap_q_mode)5, (ap_o_mode)3, 0>*)' (C:/Users/holbo/00VS_projjects/00_HFT_project/n2ew_era/06n2_phc_lite_gain_dataflow/hls_src/phc_step_hls.cpp:273:5)
+INFO: [HLS 214-131] Inlining function '(anonymous namespace)::linear_16_16_acc(ap_fixed<40, 16, (ap_q_mode)5, (ap_o_mode)3, 0> const*, ap_fixed<24, 12, (ap_q_mode)5, (ap_o_mode)3, 0> const (*) [16], ap_fixed<24, 12, (ap_q_mode)5, (ap_o_mode)3, 0> const*, ap_fixed<40, 16, (ap_q_mode)5, (ap_o_mode)3, 0>*)' into '(anonymous namespace)::gain_chain_fn(ap_fixed<40, 16, (ap_q_mode)5, (ap_o_mode)3, 0> const*, ap_fixed<24, 12, (ap_q_mode)5, (ap_o_mode)3, 0> const*, ap_fixed<40, 16, (ap_q_mode)5, (ap_o_mode)3, 0>*)' (C:/Users/holbo/00VS_projjects/00_HFT_project/n2ew_era/06n2_phc_lite_gain_dataflow/hls_src/phc_step_hls.cpp:287:5)
+INFO: [HLS 214-131] Inlining function '(anonymous namespace)::sigmoid_16(ap_fixed<40, 16, (ap_q_mode)5, (ap_o_mode)3, 0> const*, ap_fixed<40, 16, (ap_q_mode)5, (ap_o_mode)3, 0>*)' into '(anonymous namespace)::gain_chain_fn(ap_fixed<40, 16, (ap_q_mode)5, (ap_o_mode)3, 0> const*, ap_fixed<24, 12, (ap_q_mode)5, (ap_o_mode)3, 0> const*, ap_fixed<40, 16, (ap_q_mode)5, (ap_o_mode)3, 0>*)' (C:/Users/holbo/00VS_projjects/00_HFT_project/n2ew_era/06n2_phc_lite_gain_dataflow/hls_src/phc_step_hls.cpp:293:5)
+INFO: [HLS 214-131] Inlining function '(anonymous namespace)::linear_16_16_fixed_no_bias(ap_fixed<24, 12, (ap_q_mode)5, (ap_o_mode)3, 0> const*, ap_fixed<24, 12, (ap_q_mode)5, (ap_o_mode)3, 0> const (*) [16], ap_fixed<40, 16, (ap_q_mode)5, (ap_o_mode)3, 0>*)' into '(anonymous namespace)::gain_chain_fn(ap_fixed<40, 16, (ap_q_mode)5, (ap_o_mode)3, 0> const*, ap_fixed<24, 12, (ap_q_mode)5, (ap_o_mode)3, 0> const*, ap_fixed<40, 16, (ap_q_mode)5, (ap_o_mode)3, 0>*)' (C:/Users/holbo/00VS_projjects/00_HFT_project/n2ew_era/06n2_phc_lite_gain_dataflow/hls_src/phc_step_hls.cpp:288:5)
+INFO: [HLS 214-131] Inlining function '(anonymous namespace)::linear_16_16_fixed(ap_fixed<24, 12, (ap_q_mode)5, (ap_o_mode)3, 0> const*, ap_fixed<24, 12, (ap_q_mode)5, (ap_o_mode)3, 0> const (*) [16], ap_fixed<24, 12, (ap_q_mode)5, (ap_o_mode)3, 0> const*, ap_fixed<40, 16, (ap_q_mode)5, (ap_o_mode)3, 0>*)' into 'phc_step(ap_fixed<24, 12, (ap_q_mode)5, (ap_o_mode)3, 0> const*, ap_fixed<24, 12, (ap_q_mode)5, (ap_o_mode)3, 0> const*, ap_fixed<24, 12, (ap_q_mode)5, (ap_o_mode)3, 0>*, ap_fixed<24, 12, (ap_q_mode)5, (ap_o_mode)3, 0>*)' (C:/Users/holbo/00VS_projjects/00_HFT_project/n2ew_era/06n2_phc_lite_gain_dataflow/hls_src/phc_step_hls.cpp:343:5)
+INFO: [HLS 214-131] Inlining function '(anonymous namespace)::linear_16_2_acc(ap_fixed<40, 16, (ap_q_mode)5, (ap_o_mode)3, 0> const*, ap_fixed<24, 12, (ap_q_mode)5, (ap_o_mode)3, 0> const (*) [16], ap_fixed<24, 12, (ap_q_mode)5, (ap_o_mode)3, 0> const*, ap_fixed<40, 16, (ap_q_mode)5, (ap_o_mode)3, 0>*)' into 'phc_step(ap_fixed<24, 12, (ap_q_mode)5, (ap_o_mode)3, 0> const*, ap_fixed<24, 12, (ap_q_mode)5, (ap_o_mode)3, 0> const*, ap_fixed<24, 12, (ap_q_mode)5, (ap_o_mode)3, 0>*, ap_fixed<24, 12, (ap_q_mode)5, (ap_o_mode)3, 0>*)' (C:/Users/holbo/00VS_projjects/00_HFT_project/n2ew_era/06n2_phc_lite_gain_dataflow/hls_src/phc_step_hls.cpp:355:5)
+INFO: [HLS 214-131] Inlining function '(anonymous namespace)::layernorm_16(ap_fixed<40, 16, (ap_q_mode)5, (ap_o_mode)3, 0> const*, ap_fixed<24, 12, (ap_q_mode)5, (ap_o_mode)3, 0> const*, ap_fixed<24, 12, (ap_q_mode)5, (ap_o_mode)3, 0> const*, ap_fixed<40, 16, (ap_q_mode)5, (ap_o_mode)3, 0>*)' into 'phc_step(ap_fixed<24, 12, (ap_q_mode)5, (ap_o_mode)3, 0> const*, ap_fixed<24, 12, (ap_q_mode)5, (ap_o_mode)3, 0> const*, ap_fixed<24, 12, (ap_q_mode)5, (ap_o_mode)3, 0>*, ap_fixed<24, 12, (ap_q_mode)5, (ap_o_mode)3, 0>*)' (C:/Users/holbo/00VS_projjects/00_HFT_project/n2ew_era/06n2_phc_lite_gain_dataflow/hls_src/phc_step_hls.cpp:353:5)
+INFO: [HLS 214-131] Inlining function '(anonymous namespace)::silu_16(ap_fixed<40, 16, (ap_q_mode)5, (ap_o_mode)3, 0> const*, ap_fixed<40, 16, (ap_q_mode)5, (ap_o_mode)3, 0>*)' into 'phc_step(ap_fixed<24, 12, (ap_q_mode)5, (ap_o_mode)3, 0> const*, ap_fixed<24, 12, (ap_q_mode)5, (ap_o_mode)3, 0> const*, ap_fixed<24, 12, (ap_q_mode)5, (ap_o_mode)3, 0>*, ap_fixed<24, 12, (ap_q_mode)5, (ap_o_mode)3, 0>*)' (C:/Users/holbo/00VS_projjects/00_HFT_project/n2ew_era/06n2_phc_lite_gain_dataflow/hls_src/phc_step_hls.cpp:345:5)
+INFO: [HLS 214-291] Loop 'VITIS_LOOP_271_2' is marked as complete unroll implied by the pipeline pragma (C:/AMDDesignTools/2025.2/Vitis/common/technology/autopilot/etc/hls_sqrt_apfixed.h:271:27)
+INFO: [HLS 214-291] Loop 'VITIS_LOOP_243_1' is marked as complete unroll implied by the pipeline pragma (C:/AMDDesignTools/2025.2/Vitis/common/technology/autopilot/etc/hls_sqrt_apfixed.h:243:27)
+INFO: [HLS 214-186] Unrolling loop 'VITIS_LOOP_271_2' (C:/AMDDesignTools/2025.2/Vitis/common/technology/autopilot/etc/hls_sqrt_apfixed.h:271:27) in function 'sqrt_fixed<49, 25>' completely with a factor of 25 (C:/AMDDesignTools/2025.2/Vitis/common/technology/autopilot/etc/hls_sqrt_apfixed.h:20:0)
+INFO: [HLS 214-186] Unrolling loop 'VITIS_LOOP_243_1' (C:/AMDDesignTools/2025.2/Vitis/common/technology/autopilot/etc/hls_sqrt_apfixed.h:243:27) in function 'sqrt_fixed<49, 25>' completely with a factor of 13 (C:/AMDDesignTools/2025.2/Vitis/common/technology/autopilot/etc/hls_sqrt_apfixed.h:20:0)
+INFO: [HLS 214-178] Inlining function 'ap_fixed<49, 25, (ap_q_mode)5, (ap_o_mode)3, 0> hls::sqrt<49, 25>(ap_fixed<49, 25, (ap_q_mode)5, (ap_o_mode)3, 0>)' into 'phc_step(ap_fixed<24, 12, (ap_q_mode)5, (ap_o_mode)3, 0> const*, ap_fixed<24, 12, (ap_q_mode)5, (ap_o_mode)3, 0> const*, ap_fixed<24, 12, (ap_q_mode)5, (ap_o_mode)3, 0>*, ap_fixed<24, 12, (ap_q_mode)5, (ap_o_mode)3, 0>*)' (C:/Users/holbo/00VS_projjects/00_HFT_project/n2ew_era/06n2_phc_lite_gain_dataflow/hls_src/phc_step_hls.cpp:329:0)
+INFO: [HLS 214-248] Applying array_partition to '_ZZN12_GLOBAL__N_115tanh_lut_scalarE8ap_fixedILi40ELi16EL9ap_q_mode5EL9ap_o_mode3ELi0EEE8TANH_LUT': Complete partitioning on dimension 1. (C:/Users/holbo/00VS_projjects/00_HFT_project/n2ew_era/06n2_phc_lite_gain_dataflow/hls_src/phc_step_hls.cpp:18:0)
+INFO: [HLS 200-111] Finished Compiling Optimization and Transform: CPU user time: 1 seconds. CPU system time: 0 seconds. Elapsed time: 13.214 seconds; current allocated memory: 143.941 MB.
+INFO: [HLS 200-111] Finished Checking Pragmas: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.001 seconds; current allocated memory: 143.941 MB.
+INFO: [HLS 200-10] Starting code transformations ...
+INFO: [HLS 200-111] Finished Standard Transforms: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.271 seconds; current allocated memory: 152.832 MB.
+INFO: [HLS 200-10] Checking synthesizability ...
+WARNING: [SYNCHK 200-120] C:/Users/holbo/00VS_projjects/00_HFT_project/n2ew_era/06n2_phc_lite_gain_dataflow/hls_src/phc_step_hls.cpp:183: multiplication is assumed not to overflow by default, otherwise, please add option '-fwrapv'.
+INFO: [SYNCHK 200-10] 0 error(s), 1 warning(s).
+INFO: [HLS 200-111] Finished Checking Synthesizability: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.3 seconds; current allocated memory: 157.047 MB.
+INFO: [HLS 200-1947] Using 'stable' for argument 'encoded' of dataflow function '(anonymous namespace)::step_dataflow_fn' (C:/Users/holbo/00VS_projjects/00_HFT_project/n2ew_era/06n2_phc_lite_gain_dataflow/hls_src/phc_step_hls.cpp:303:1).
+INFO: [HLS 200-1947] Using 'stable' for argument 'state_prev' of dataflow function '(anonymous namespace)::step_dataflow_fn' (C:/Users/holbo/00VS_projjects/00_HFT_project/n2ew_era/06n2_phc_lite_gain_dataflow/hls_src/phc_step_hls.cpp:303:1).
+INFO: [HLS 200-1947] Using 'stable' for argument 'encoded' of dataflow function '(anonymous namespace)::gate_candidate_dataflow' (C:/Users/holbo/00VS_projjects/00_HFT_project/n2ew_era/06n2_phc_lite_gain_dataflow/hls_src/phc_step_hls.cpp:226:1).
+INFO: [XFORM 203-712] Applying dataflow to function '(anonymous namespace)::gate_candidate_dataflow' (C:/Users/holbo/00VS_projjects/00_HFT_project/n2ew_era/06n2_phc_lite_gain_dataflow/hls_src/phc_step_hls.cpp:226:1), detected/extracted 3 process function(s): 
+	 '(anonymous namespace)::fork_encoded_for_gate_candidate'
+	 '(anonymous namespace)::gate_branch'
+	 '(anonymous namespace)::candidate_branch'.
+INFO: [XFORM 203-712] Applying dataflow to function '(anonymous namespace)::step_dataflow_fn' (C:/Users/holbo/00VS_projjects/00_HFT_project/n2ew_era/06n2_phc_lite_gain_dataflow/hls_src/phc_step_hls.cpp:303:1), detected/extracted 3 process function(s): 
+	 '(anonymous namespace)::fork_inputs_for_main_gain'
+	 '(anonymous namespace)::main_chain_fn'
+	 '(anonymous namespace)::gain_chain_fn'.
+INFO: [XFORM 203-401] Performing if-conversion on hyperblock from (C:/AMDDesignTools/2025.2/Vitis/common/technology/autopilot/etc/hls_sqrt_apfixed.h:21:1) to (C:/AMDDesignTools/2025.2/Vitis/common/technology/autopilot/etc/hls_sqrt_apfixed.h:349:1) in function 'sqrt_fixed<49, 25>'... converting 100 basic blocks.
+INFO: [XFORM 203-401] Performing if-conversion on hyperblock from (C:/Users/holbo/00VS_projjects/00_HFT_project/n2ew_era/06n2_phc_lite_gain_dataflow/hls_src/phc_step_hls.cpp:89:1) to (C:/Users/holbo/00VS_projjects/00_HFT_project/n2ew_era/06n2_phc_lite_gain_dataflow/hls_src/phc_step_hls.cpp:88:22) in function 'phc_step'... converting 6 basic blocks.
+INFO: [XFORM 203-401] Performing if-conversion on hyperblock from (C:/Users/holbo/00VS_projjects/00_HFT_project/n2ew_era/06n2_phc_lite_gain_dataflow/hls_src/phc_step_hls.cpp:89:1) to (C:/Users/holbo/00VS_projjects/00_HFT_project/n2ew_era/06n2_phc_lite_gain_dataflow/hls_src/phc_step_hls.cpp:88:22) in function '(anonymous namespace)::main_chain_fn'... converting 6 basic blocks.
+INFO: [XFORM 203-401] Performing if-conversion on hyperblock from (C:/Users/holbo/00VS_projjects/00_HFT_project/n2ew_era/06n2_phc_lite_gain_dataflow/hls_src/phc_step_hls.cpp:73:1) to (C:/Users/holbo/00VS_projjects/00_HFT_project/n2ew_era/06n2_phc_lite_gain_dataflow/hls_src/phc_step_hls.cpp:72:22) in function '(anonymous namespace)::gate_branch'... converting 6 basic blocks.
+INFO: [XFORM 203-401] Performing if-conversion on hyperblock from (C:/Users/holbo/00VS_projjects/00_HFT_project/n2ew_era/06n2_phc_lite_gain_dataflow/hls_src/phc_step_hls.cpp:73:1) to (C:/Users/holbo/00VS_projjects/00_HFT_project/n2ew_era/06n2_phc_lite_gain_dataflow/hls_src/phc_step_hls.cpp:72:22) in function '(anonymous namespace)::gain_chain_fn'... converting 6 basic blocks.
+INFO: [XFORM 203-401] Performing if-conversion on hyperblock from (C:/Users/holbo/00VS_projjects/00_HFT_project/n2ew_era/06n2_phc_lite_gain_dataflow/hls_src/phc_step_hls.cpp:81:1) to (C:/Users/holbo/00VS_projjects/00_HFT_project/n2ew_era/06n2_phc_lite_gain_dataflow/hls_src/phc_step_hls.cpp:80:22) in function '(anonymous namespace)::candidate_branch'... converting 6 basic blocks.
+INFO: [HLS 200-111] Finished Loop, function and other optimizations: CPU user time: 1 seconds. CPU system time: 0 seconds. Elapsed time: 1.775 seconds; current allocated memory: 182.605 MB.
+WARNING: [HLS 200-1449] Process (anonymous namespace)main_chain_fn has both a predecessor and reads an input from its caller (see the GUI dataflow viewer). This may lead to lower throughput. Consider copying this input via a predecessor process.
+INFO: [HLS 200-111] Finished Architecture Synthesis: CPU user time: 1 seconds. CPU system time: 0 seconds. Elapsed time: 1.286 seconds; current allocated memory: 295.516 MB.
+INFO: [HLS 200-10] Starting hardware synthesis ...
+INFO: [HLS 200-10] Synthesizing 'phc_step' ...
+WARNING: [SYN 201-103] Legalizing function name 'sqrt_fixed<49, 25>' to 'sqrt_fixed_49_25_s'.
+WARNING: [SYN 201-103] Legalizing function name '(anonymous namespace)fork_inputs_for_main_gain' to 'p_anonymous_namespace_fork_inputs_for_main_gain'.
+WARNING: [SYN 201-103] Legalizing function name '(anonymous namespace)fork_encoded_for_gate_candidate' to 'p_anonymous_namespace_fork_encoded_for_gate_candidate'.
+WARNING: [SYN 201-103] Legalizing function name '(anonymous namespace)gate_branch' to 'p_anonymous_namespace_gate_branch'.
+WARNING: [SYN 201-103] Legalizing function name '(anonymous namespace)candidate_branch' to 'p_anonymous_namespace_candidate_branch'.
+WARNING: [SYN 201-103] Legalizing function name '(anonymous namespace)gate_candidate_dataflow' to 'p_anonymous_namespace_gate_candidate_dataflow'.
+WARNING: [SYN 201-103] Legalizing function name '(anonymous namespace)main_chain_fn' to 'p_anonymous_namespace_main_chain_fn'.
+WARNING: [SYN 201-103] Legalizing function name '(anonymous namespace)gain_chain_fn_Outline_VITIS_LOOP_119_1' to 'p_anonymous_namespace_gain_chain_fn_Outline_VITIS_LOOP_119_1'.
+WARNING: [SYN 201-103] Legalizing function name '(anonymous namespace)gain_chain_fn_Outline_VITIS_LOOP_136_1' to 'p_anonymous_namespace_gain_chain_fn_Outline_VITIS_LOOP_136_1'.
+WARNING: [SYN 201-103] Legalizing function name '(anonymous namespace)gain_chain_fn' to 'p_anonymous_namespace_gain_chain_fn'.
+WARNING: [SYN 201-103] Legalizing function name '(anonymous namespace)step_dataflow_fn' to 'p_anonymous_namespace_step_dataflow_fn'.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'sqrt_fixed_49_25_s' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining function 'sqrt_fixed<49, 25>'.
+INFO: [HLS 200-1470] Pipelining result : Target II = NA, Final II = 1, Depth = 29, function 'sqrt_fixed<49, 25>'
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 1 seconds. CPU system time: 1 seconds. Elapsed time: 1.229 seconds; current allocated memory: 326.898 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.198 seconds; current allocated memory: 326.898 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'p_anonymous_namespace_fork_inputs_for_main_gain' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.31 seconds; current allocated memory: 326.898 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.025 seconds; current allocated memory: 326.898 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'p_anonymous_namespace_fork_encoded_for_gate_candidate' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.037 seconds; current allocated memory: 326.898 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.025 seconds; current allocated memory: 326.898 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'p_anonymous_namespace_gate_branch' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.094 seconds; current allocated memory: 326.898 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.073 seconds; current allocated memory: 326.898 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'p_anonymous_namespace_candidate_branch' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.129 seconds; current allocated memory: 326.898 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.081 seconds; current allocated memory: 326.898 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'p_anonymous_namespace_gate_candidate_dataflow' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-11] Finished scheduling.
+WARNING: [HLS 200-1019] Consider increasing the depth of PIPO encoded_for_gate (from p_anonymous_namespace_fork_encoded_for_gate_candidate_U0 to p_anonymous_namespace_gate_branch_U0) to 2 to improve performance and/or avoid deadlocks.
+WARNING: [HLS 200-1019] Consider increasing the depth of PIPO encoded_for_candidate (from p_anonymous_namespace_fork_encoded_for_gate_candidate_U0 to p_anonymous_namespace_candidate_branch_U0) to 2 to improve performance and/or avoid deadlocks.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.099 seconds; current allocated memory: 326.898 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.039 seconds; current allocated memory: 326.898 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'p_anonymous_namespace_main_chain_fn' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.126 seconds; current allocated memory: 326.898 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.093 seconds; current allocated memory: 326.898 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'p_anonymous_namespace_gain_chain_fn_Outline_VITIS_LOOP_119_1' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.123 seconds; current allocated memory: 326.898 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.041 seconds; current allocated memory: 326.898 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'p_anonymous_namespace_gain_chain_fn_Outline_VITIS_LOOP_136_1' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 1 seconds. CPU system time: 0 seconds. Elapsed time: 0.058 seconds; current allocated memory: 326.898 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.032 seconds; current allocated memory: 326.898 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'p_anonymous_namespace_gain_chain_fn' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.078 seconds; current allocated memory: 326.898 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.062 seconds; current allocated memory: 326.898 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'p_anonymous_namespace_step_dataflow_fn' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-11] Finished scheduling.
+WARNING: [HLS 200-1019] Consider increasing the depth of PIPO encoded_for_main (from p_anonymous_namespace_fork_inputs_for_main_gain_U0 to p_anonymous_namespace_main_chain_fn_U0) to 2 to improve performance and/or avoid deadlocks.
+WARNING: [HLS 200-1019] Consider increasing the depth of PIPO encoded_for_gain (from p_anonymous_namespace_fork_inputs_for_main_gain_U0 to p_anonymous_namespace_gain_chain_fn_U0) to 2 to improve performance and/or avoid deadlocks.
+WARNING: [HLS 200-1019] Consider increasing the depth of PIPO state_prev_for_main (from p_anonymous_namespace_fork_inputs_for_main_gain_U0 to p_anonymous_namespace_main_chain_fn_U0) to 2 to improve performance and/or avoid deadlocks.
+WARNING: [HLS 200-1019] Consider increasing the depth of PIPO state_prev_for_gain (from p_anonymous_namespace_fork_inputs_for_main_gain_U0 to p_anonymous_namespace_gain_chain_fn_U0) to 2 to improve performance and/or avoid deadlocks.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.079 seconds; current allocated memory: 326.898 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.035 seconds; current allocated memory: 326.898 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'phc_step_Outline_VITIS_LOOP_357_2' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.057 seconds; current allocated memory: 326.898 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.04 seconds; current allocated memory: 326.898 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'phc_step_Outline_VITIS_LOOP_361_3' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.034 seconds; current allocated memory: 326.898 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.032 seconds; current allocated memory: 326.898 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'phc_step' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.276 seconds; current allocated memory: 326.898 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.322 seconds; current allocated memory: 326.898 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'sqrt_fixed_49_25_s' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [RTGEN 206-104] Estimated max fanout for 'sqrt_fixed_49_25_s' is 5551 from HDL expression: ((1'b1 == ap_ce_reg) & (1'b0 == ap_block_pp0_stage0_11001))
+INFO: [RTGEN 206-100] Finished creating RTL model for 'sqrt_fixed_49_25_s'.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 1 seconds. CPU system time: 0 seconds. Elapsed time: 0.942 seconds; current allocated memory: 329.469 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'p_anonymous_namespace_fork_inputs_for_main_gain' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [RTGEN 206-100] Finished creating RTL model for 'p_anonymous_namespace_fork_inputs_for_main_gain'.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.656 seconds; current allocated memory: 346.910 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'p_anonymous_namespace_fork_encoded_for_gate_candidate' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [RTGEN 206-100] Finished creating RTL model for 'p_anonymous_namespace_fork_encoded_for_gate_candidate'.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.12 seconds; current allocated memory: 346.910 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'p_anonymous_namespace_gate_branch' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [RTGEN 206-100] Generating core module 'mul_40s_25s_64_2_1': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'mul_40s_26s_64_2_1': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'sparsemux_129_6_25_1_1': 2 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'sparsemux_7_2_40_1_1': 1 instance(s).
+INFO: [RTGEN 206-100] Finished creating RTL model for 'p_anonymous_namespace_gate_branch'.
+INFO: [RTMG 210-279] Implementing memory 'phc_step_p_anonymous_namespace_gate_branch_phc_step_weights_GATE_B_ROM_AUTO_1R' using auto ROMs.
+INFO: [RTMG 210-279] Implementing memory 'phc_step_p_anonymous_namespace_gate_branch_phc_step_weights_GATE_W_ROM_AUTO_1R' using auto ROMs.
+INFO: [RTMG 210-278] Implementing memory 'phc_step_p_anonymous_namespace_gate_branch_gate_pre_RAM_AUTO_1R1W' using auto RAMs.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 1 seconds. CPU system time: 0 seconds. Elapsed time: 0.507 seconds; current allocated memory: 347.488 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'p_anonymous_namespace_candidate_branch' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [RTGEN 206-100] Generating core module 'mul_40s_24s_64_2_1': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'mul_40s_26s_64_2_1': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'sparsemux_129_6_25_1_1': 2 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'sparsemux_7_2_40_1_1': 1 instance(s).
+INFO: [RTGEN 206-100] Finished creating RTL model for 'p_anonymous_namespace_candidate_branch'.
+INFO: [RTMG 210-279] Implementing memory 'phc_step_p_anonymous_namespace_candidate_branch_phc_step_weights_CANDIDATE_B_ROM_AUTO_1R' using auto ROMs.
+INFO: [RTMG 210-279] Implementing memory 'phc_step_p_anonymous_namespace_candidate_branch_phc_step_weights_CANDIDATE_W_ROM_AUTO_1R' using auto ROMs.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.381 seconds; current allocated memory: 351.234 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'p_anonymous_namespace_gate_candidate_dataflow' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SYN 201-210] Renamed object name 'p_anonymous_namespace_gate_candidate_dataflow_encoded_for_candidate_RAM_AUTO_1R1W' to 'p_anonymous_namespace_gate_candidate_dataflow_encoded_for_candidate_RAM_AUTO_bkb' due to the length limit 80
+INFO: [RTGEN 206-100] Finished creating RTL model for 'p_anonymous_namespace_gate_candidate_dataflow'.
+INFO: [HLS 200-741] Implementing PIPO phc_step_p_anonymous_namespace_gate_candidate_dataflow_encoded_for_gate_RAM_AUTO_1R1W using a single memory for all blocks
+INFO: [RTMG 210-278] Implementing memory 'phc_step_p_anonymous_namespace_gate_candidate_dataflow_encoded_for_gate_RAM_AUTO_1R1W_memcore' using auto RAMs.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.755 seconds; current allocated memory: 355.914 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'p_anonymous_namespace_main_chain_fn' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [RTGEN 206-100] Generating core module 'mul_36s_24ns_60_2_1': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'mul_40s_24s_64_2_1': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'mul_40s_26s_64_2_1': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'mul_40s_40s_64_2_1': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'sparsemux_129_6_25_1_1': 2 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'sparsemux_7_2_40_1_1': 1 instance(s).
+INFO: [RTGEN 206-100] Finished creating RTL model for 'p_anonymous_namespace_main_chain_fn'.
+INFO: [RTMG 210-279] Implementing memory 'phc_step_p_anonymous_namespace_main_chain_fn_phc_step_weights_DECAY_ROM_AUTO_1R' using auto ROMs.
+INFO: [RTMG 210-279] Implementing memory 'phc_step_p_anonymous_namespace_main_chain_fn_phc_step_weights_SYNAPSE_B_ROM_AUTO_1R' using auto ROMs.
+INFO: [RTMG 210-279] Implementing memory 'phc_step_p_anonymous_namespace_main_chain_fn_phc_step_weights_SYNAPSE_W_ROM_AUTO_1R' using auto ROMs.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.206 seconds; current allocated memory: 357.207 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'p_anonymous_namespace_gain_chain_fn_Outline_VITIS_LOOP_119_1' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SYN 201-210] Renamed object name 'p_anonymous_namespace_gain_chain_fn_Outline_VITIS_LOOP_119_1_phc_step_weights_GAIN_FROM_ENCODED_B_ROM_AUTO_1R' to 'p_anonymous_namespace_gain_chain_fn_Outline_VITIS_LOOP_119_1_phc_step_weightscud' due to the length limit 80
+INFO: [SYN 201-210] Renamed object name 'p_anonymous_namespace_gain_chain_fn_Outline_VITIS_LOOP_119_1_phc_step_weights_GAIN_FROM_ENCODED_W_ROM_AUTO_1R' to 'p_anonymous_namespace_gain_chain_fn_Outline_VITIS_LOOP_119_1_phc_step_weightsdEe' due to the length limit 80
+INFO: [RTGEN 206-100] Generating core module 'mul_40s_25s_64_2_1': 1 instance(s).
+INFO: [RTGEN 206-100] Finished creating RTL model for 'p_anonymous_namespace_gain_chain_fn_Outline_VITIS_LOOP_119_1'.
+INFO: [RTMG 210-279] Implementing memory 'phc_step_p_anonymous_namespace_gain_chain_fn_Outline_VITIS_LOOP_119_1_phc_step_weightscud' using auto ROMs.
+INFO: [RTMG 210-279] Implementing memory 'phc_step_p_anonymous_namespace_gain_chain_fn_Outline_VITIS_LOOP_119_1_phc_step_weightsdEe' using auto ROMs.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.36 seconds; current allocated memory: 362.812 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'p_anonymous_namespace_gain_chain_fn_Outline_VITIS_LOOP_136_1' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SYN 201-210] Renamed object name 'p_anonymous_namespace_gain_chain_fn_Outline_VITIS_LOOP_136_1_phc_step_weights_GAIN_FROM_PREV_STATE_W_ROM_AUTO_1R' to 'p_anonymous_namespace_gain_chain_fn_Outline_VITIS_LOOP_136_1_phc_step_weightseOg' due to the length limit 80
+INFO: [RTGEN 206-100] Generating core module 'mul_36s_24s_60_2_1': 1 instance(s).
+INFO: [RTGEN 206-100] Finished creating RTL model for 'p_anonymous_namespace_gain_chain_fn_Outline_VITIS_LOOP_136_1'.
+INFO: [RTMG 210-279] Implementing memory 'phc_step_p_anonymous_namespace_gain_chain_fn_Outline_VITIS_LOOP_136_1_phc_step_weightseOg' using auto ROMs.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 1.426 seconds; current allocated memory: 364.859 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'p_anonymous_namespace_gain_chain_fn' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [RTGEN 206-100] Generating core module 'mul_40s_26s_64_2_1': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'sparsemux_129_6_25_1_1': 2 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'sparsemux_7_2_40_1_1': 1 instance(s).
+INFO: [RTGEN 206-100] Finished creating RTL model for 'p_anonymous_namespace_gain_chain_fn'.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.179 seconds; current allocated memory: 366.148 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'p_anonymous_namespace_step_dataflow_fn' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [RTGEN 206-100] Finished creating RTL model for 'p_anonymous_namespace_step_dataflow_fn'.
+INFO: [HLS 200-741] Implementing PIPO phc_step_p_anonymous_namespace_step_dataflow_fn_encoded_for_main_RAM_AUTO_1R1W using a single memory for all blocks
+INFO: [RTMG 210-278] Implementing memory 'phc_step_p_anonymous_namespace_step_dataflow_fn_encoded_for_main_RAM_AUTO_1R1W_memcore' using auto RAMs.
+INFO: [HLS 200-741] Implementing PIPO phc_step_p_anonymous_namespace_step_dataflow_fn_state_prev_for_main_RAM_AUTO_1R1W using a single memory for all blocks
+INFO: [RTMG 210-278] Implementing memory 'phc_step_p_anonymous_namespace_step_dataflow_fn_state_prev_for_main_RAM_AUTO_1R1W_memcore' using auto RAMs.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.26 seconds; current allocated memory: 370.328 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'phc_step_Outline_VITIS_LOOP_357_2' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [RTGEN 206-100] Finished creating RTL model for 'phc_step_Outline_VITIS_LOOP_357_2'.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.228 seconds; current allocated memory: 371.785 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'phc_step_Outline_VITIS_LOOP_361_3' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [RTGEN 206-100] Finished creating RTL model for 'phc_step_Outline_VITIS_LOOP_361_3'.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 1 seconds. CPU system time: 0 seconds. Elapsed time: 0.215 seconds; current allocated memory: 372.562 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'phc_step' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [RTGEN 206-500] Setting interface mode on port 'phc_step/x_t' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'phc_step/state_prev' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'phc_step/readout' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'phc_step/state_next' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on function 'phc_step' to 'ap_ctrl_hs'.
+INFO: [RTGEN 206-104] Estimated max fanout for 'phc_step' is 5707 from HDL expression: ((1'b1 == ap_CS_fsm_state19) | (1'b1 == ap_CS_fsm_state18) | (1'b1 == ap_CS_fsm_state171) | (1'b1 == ap_CS_fsm_state47) | (1'b1 == ap_CS_fsm_state170) | (1'b1 == ap_CS_fsm_state169) | (1'b1 == ap_CS_fsm_state168) | (1'b1 == ap_CS_fsm_state167) | (1'b1 == ap_CS_fsm_state166) | (1'b1 == ap_CS_fsm_state165) | (1'b1 == ap_CS_fsm_state164) | (1'b1 == ap_CS_fsm_state163) | (1'b1 == ap_CS_fsm_state162) | (1'b1 == ap_CS_fsm_state161) | (1'b1 == ap_CS_fsm_state160) | (1'b1 == ap_CS_fsm_state159) | (1'b1 == ap_CS_fsm_state158) | (1'b1 == ap_CS_fsm_state157) | (1'b1 == ap_CS_fsm_state156) | (1'b1 == ap_CS_fsm_state155) | (1'b1 == ap_CS_fsm_state154) | (1'b1 == ap_CS_fsm_state153) | (1'b1 == ap_CS_fsm_state152) | (1'b1 == ap_CS_fsm_state151) | (1'b1 == ap_CS_fsm_state150) | (1'b1 == ap_CS_fsm_state149) | (1'b1 == ap_CS_fsm_state148) | (1'b1 == ap_CS_fsm_state147) | (1'b1 == ap_CS_fsm_state146) | (1'b1 == ap_CS_fsm_state145) | (1'b1 == ap_CS_fsm_state144) | (1'b1 == ap_CS_fsm_state143) | (1'b1 == ap_CS_fsm_state142) | (1'b1 
+    == ap_CS_fsm_state46) | (1'b1 == ap_CS_fsm_state45) | (1'b1 == ap_CS_fsm_state44) | (1'b1 == ap_CS_fsm_state43) | (1'b1 == ap_CS_fsm_state42) | (1'b1 == ap_CS_fsm_state41) | (1'b1 == ap_CS_fsm_state40) | (1'b1 == ap_CS_fsm_state39) | (1'b1 == ap_CS_fsm_state38) | (1'b1 == ap_CS_fsm_state37) | (1'b1 == ap_CS_fsm_state36) | (1'b1 == ap_CS_fsm_state35) | (1'b1 == ap_CS_fsm_state34) | (1'b1 == ap_CS_fsm_state33) | (1'b1 == ap_CS_fsm_state32) | (1'b1 == ap_CS_fsm_state31) | (1'b1 == ap_CS_fsm_state30) | (1'b1 == ap_CS_fsm_state29) | (1'b1 == ap_CS_fsm_state28) | (1'b1 == ap_CS_fsm_state27) | (1'b1 == ap_CS_fsm_state26) | (1'b1 == ap_CS_fsm_state25) | (1'b1 == ap_CS_fsm_state24) | (1'b1 == ap_CS_fsm_state23) | (1'b1 == ap_CS_fsm_state22) | (1'b1 == ap_CS_fsm_state21) | (1'b1 == ap_CS_fsm_state20))
+INFO: [RTGEN 206-100] Generating core module 'mul_36s_25s_61_2_1': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'mul_40s_24s_64_2_1': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'mul_40s_25ns_64_2_1': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'mul_40s_26s_64_2_1': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'mul_40s_40s_64_2_1': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'mul_40s_40s_72_2_1': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'mul_41s_25ns_65_2_1': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'mul_64s_40s_88_5_1': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'mul_65s_40s_88_5_1': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'sparsemux_129_6_25_1_1': 2 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'sparsemux_7_2_40_1_1': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'udiv_49s_37ns_40_53_seq_1': 2 instance(s).
+INFO: [RTGEN 206-100] Finished creating RTL model for 'phc_step'.
+INFO: [RTMG 210-279] Implementing memory 'phc_step_phc_step_weights_ENC_LINEAR_B_ROM_AUTO_1R' using auto ROMs.
+INFO: [RTMG 210-279] Implementing memory 'phc_step_phc_step_weights_ENC_LINEAR_W_ROM_AUTO_1R' using auto ROMs.
+INFO: [RTMG 210-279] Implementing memory 'phc_step_phc_step_weights_ENC_NORM_GAMMA_ROM_AUTO_1R' using auto ROMs.
+INFO: [RTMG 210-279] Implementing memory 'phc_step_phc_step_weights_ENC_NORM_BETA_ROM_AUTO_1R' using auto ROMs.
+INFO: [RTMG 210-279] Implementing memory 'phc_step_phc_step_weights_LOOP_NORM_GAMMA_ROM_AUTO_1R' using auto ROMs.
+INFO: [RTMG 210-279] Implementing memory 'phc_step_phc_step_weights_LOOP_NORM_BETA_ROM_AUTO_1R' using auto ROMs.
+INFO: [RTMG 210-279] Implementing memory 'phc_step_phc_step_weights_READOUT_B_ROM_AUTO_1R' using auto ROMs.
+INFO: [RTMG 210-279] Implementing memory 'phc_step_phc_step_weights_READOUT_W_ROM_AUTO_1R' using auto ROMs.
+INFO: [RTMG 210-278] Implementing memory 'phc_step_readout_acc_RAM_AUTO_1R1W' using auto RAMs.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 1.194 seconds; current allocated memory: 376.438 MB.
+INFO: [HLS 200-111] Finished Generating all RTL models: CPU user time: 0 seconds. CPU system time: 1 seconds. Elapsed time: 3.713 seconds; current allocated memory: 388.816 MB.
+INFO: [HLS 200-2225] Wrote inferred directives to file C:/Users/holbo/00VS_projjects/00_HFT_project/n2ew_era/06n2_phc_lite_gain_dataflow/hls_component/hls_component/hls/syn/inferred_directives.ini
+INFO: [HLS 200-111] Finished Updating report files: CPU user time: 2 seconds. CPU system time: 2 seconds. Elapsed time: 4.458 seconds; current allocated memory: 404.535 MB.
+INFO: [VHDL 208-304] Generating VHDL RTL for phc_step.
+INFO: [VLOG 209-307] Generating Verilog RTL for phc_step.
+INFO: [HLS 200-790] **** Loop Constraint Status: All loop constraints were satisfied.
+INFO: [HLS 200-789] **** Estimated Fmax: 139.92 MHz
+INFO: [HLS 200-112] Total CPU user time: 12 seconds. Total CPU system time: 5 seconds. Total elapsed time: 127.993 seconds; peak allocated memory: 404.574 MB.
+INFO: [v++ 60-791] Total elapsed time: 0h 2m 15s

@@ -1,0 +1,30 @@
+{
+  "side": "bid",
+  "config_name": "primary_fw1_h10_posw",
+  "window_size": 100,
+  "feature_count": 8,
+  "channel_list": [
+    16,
+    16,
+    16
+  ],
+  "kernel_size": 3,
+  "dropout": 0.1,
+  "epochs": 30,
+  "batch_size": 1024,
+  "lr": 0.001,
+  "seed": 42,
+  "device": "cpu",
+  "pos_weight": 26.884135472370765,
+  "train_samples": 15643,
+  "val_samples": 12603,
+  "test_samples": 24329,
+  "positive_rate_train": 0.03586268618551429,
+  "positive_rate_val": 0.03229389827818773,
+  "positive_rate_test": 0.027703563648320932,
+  "best_epoch": 28,
+  "best_val_loss": 1.0035429511751448,
+  "best_val_pr_auc": 0.126071813959332,
+  "test_pr_auc": 0.07240934721896708,
+  "test_roc_auc": 0.726100654374487
+}

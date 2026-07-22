@@ -1,0 +1,83 @@
+================================================================
+== Design Size Report
+================================================================
+
+* Total Instructions per Compilation Phase
++---------------+----------------------------+--------------+----------------------------------------------------------------------------------------+
+| Phase         | Step                       | Instructions | Description                                                                            |
++---------------+----------------------------+--------------+----------------------------------------------------------------------------------------+
+| Compile/Link  |                            | 174,992 *    | After all functions are compiled and linked into a single design                       |
+|               |                            |              |                                                                                        |
+| Unroll/Inline |                            |              | After user unroll and inline pragmas are applied                                       |
+|               | (1) unroll                 |  16,061      | user unroll pragmas are applied                                                        |
+|               | (2) simplification         |   5,598      | simplification of applied user unroll pragmas                                          |
+|               | (3) inline                 |   5,132      | user inline pragmas are applied                                                        |
+|               | (4) simplification         |   5,087      | simplification of applied user inline pragmas                                          |
+|               |                            |              |                                                                                        |
+| Array/Struct  |                            |              | After user array partition and struct aggregate/disaggregate pragmas are applied       |
+|               | (1) array partition        |   5,929      | user array partition pragmas are applied                                               |
+|               | (2) simplification         |   5,269      | simplification of applied user array partition & struct aggregate/disaggregate pragmas |
+|               | (3) aggregate/disaggregate |   5,269      | user struct aggregate/disaggregate pragmas are applied                                 |
+|               | (4) array reshape          |   5,269      | apply array reshape pragmas                                                            |
+|               | (5) access patterns        |   5,298      | array access pattern optmizations                                                      |
+|               |                            |              |                                                                                        |
+| Performance   |                            |              | After transformations are applied to meet performance pragma targets                   |
+|               | (1) loop simplification    |   5,298      | loop and instruction simplification                                                    |
+|               | (2) parallelization        |   5,269      | loops are unrolled or pipelined to meet performance targets                            |
+|               | (3) array partition        |   5,269      | arrays are partitioned to meet performance targets                                     |
+|               | (4) simplification         |   4,944      | simplification of design after performance transformations                             |
+|               |                            |              |                                                                                        |
+| HW Transforms |                            |              | After hardware transfomations                                                          |
+|               | (1) lowering               |   4,952      | initial conversion to HW specific instructions                                         |
+|               | (2) optimizations          |   5,112      | high level synthesis optimizations                                                     |
++---------------+----------------------------+--------------+----------------------------------------------------------------------------------------+
+    * - Exceeded design size warning message threshold
+
+* Instructions per Function for each Compilation Phase
++---------------------------------------+-----------------------+------------------+-----------------+-----------------+-----------------+-----------------+
+| Function                              | Location              | Compile/Link     | Unroll/Inline   | Array/Struct    | Performance     | HW Transforms   |
++---------------------------------------+-----------------------+------------------+-----------------+-----------------+-----------------+-----------------+
+| + phc_step                            | phc_step_hls.cpp:324  | 174,992 *        | 5,087           | 5,298           | 4,944           | 5,112           |
+|    linear_16_16_fixed                 | phc_step_hls.cpp:94   |    607           |                 |                 |                 |                 |
+|    layernorm_16                       | phc_step_hls.cpp:165  | 17,258 (2 calls) |                 |                 |                 |                 |
+|  + silu_16                            | phc_step_hls.cpp:86   | 30,853           |                 |                 |                 |                 |
+|   + sigmoid_scalar                    | phc_step_hls.cpp:60   | 30,611           |                 |                 |                 |                 |
+|      tanh_lut_scalar                  | phc_step_hls.cpp:16   | 28,837           |                 |                 |                 |                 |
+|  + step_dataflow_fn                   | phc_step_hls.cpp:296  | 124,872          |  535            |  774            |  499            |  596            |
+|     fork_inputs_for_main_gain         | phc_step_hls.cpp:236  |     34           |   18            |   18            |   18            |   23            |
+|   + main_chain_fn                     | phc_step_hls.cpp:254  | 92,759           |  358            |  537            |  333            |  392            |
+|    + gate_candidate_dataflow          | phc_step_hls.cpp:221  | 60,649           |  216            |  336            |  200            |  239            |
+|       fork_encoded_for_gate_candid... | phc_step_hls.cpp:208  |     22           |   12            |   12            |   12            |   17            |
+|     + gate_branch                     | phc_step_hls.cpp:194  | 31,189           |  103            |  164            |   96            |  112            |
+|        linear_16_16_acc               | phc_step_hls.cpp:112  |    543           |                 |                 |                 |                 |
+|      + sigmoid_16                     | phc_step_hls.cpp:70   | 30,636           |                 |                 |                 |                 |
+|       + sigmoid_scalar                | phc_step_hls.cpp:60   | 30,611           |                 |                 |                 |                 |
+|          tanh_lut_scalar              | phc_step_hls.cpp:16   | 28,837           |                 |                 |                 |                 |
+|     + candidate_branch                | phc_step_hls.cpp:201  | 29,420           |   93            |  154            |   86            |  102            |
+|        linear_16_16_acc               | phc_step_hls.cpp:112  |    543           |                 |                 |                 |                 |
+|      + tanh_16                        | phc_step_hls.cpp:78   | 28,867           |                 |                 |                 |                 |
+|       + tanh_scalar                   | phc_step_hls.cpp:65   | 28,842           |                 |                 |                 |                 |
+|          tanh_lut_scalar              | phc_step_hls.cpp:16   | 28,837           |                 |                 |                 |                 |
+|      linear_16_16_acc                 | phc_step_hls.cpp:112  |    543           |                 |                 |                 |                 |
+|    + silu_16                          | phc_step_hls.cpp:86   | 30,853           |                 |                 |                 |                 |
+|     + sigmoid_scalar                  | phc_step_hls.cpp:60   | 30,611           |                 |                 |                 |                 |
+|        tanh_lut_scalar                | phc_step_hls.cpp:16   | 28,837           |                 |                 |                 |                 |
+|   + gain_chain_fn                     | phc_step_hls.cpp:277  | 32,047           |  147            |  211            |  140            |  171            |
+|      linear_16_16_acc                 | phc_step_hls.cpp:112  |    543           |                 |                 |                 |                 |
+|      linear_16_16_fixed_no_bias       | phc_step_hls.cpp:130  |    602           |                 |                 |                 |                 |
+|    + sigmoid_16                       | phc_step_hls.cpp:70   | 30,636           |                 |                 |                 |                 |
+|     + sigmoid_scalar                  | phc_step_hls.cpp:60   | 30,611           |                 |                 |                 |                 |
+|        tanh_lut_scalar                | phc_step_hls.cpp:16   | 28,837           |                 |                 |                 |                 |
+|    linear_16_2_acc                    | phc_step_hls.cpp:147  |    543           |                 |                 |                 |                 |
+|    sqrt_fixed<49, 25>                 | hls_sqrt_apfixed.h:19 |                  | 4,194 (2 calls) | 4,098 (2 calls) | 4,098 (2 calls) | 4,100 (2 calls) |
++---------------------------------------+-----------------------+------------------+-----------------+-----------------+-----------------+-----------------+
+    * - Exceeded design size warning message threshold
+
+* Design Size Message Settings
++---------------------------------------------+--------+------------------------------------------------------------------+
+| Message Setting                             | Value  | Description                                                      |
++---------------------------------------------+--------+------------------------------------------------------------------+
+| config_compile -design_size_maximum_warning | 100000 | Show a warning when total design instructions exceeds this value |
++---------------------------------------------+--------+------------------------------------------------------------------+
+
+

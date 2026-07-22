@@ -1,0 +1,3 @@
+model,sample_count,max_abs_diff,mean_abs_diff,allclose_atol_1e_6
+manual_layernorm_vectorized_mean,64,5.960464477539062e-07,5.028606153700821e-08,True
+manual_layernorm_unrolled_reduction,64,4.76837158203125e-07,6.388240336718809e-08,True

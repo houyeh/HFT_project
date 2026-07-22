@@ -1,0 +1,104 @@
+{
+  "selection_split": "validation",
+  "test_used_for_selection": false,
+  "selection_rule": {
+    "min_trade_count": 100,
+    "max_drawdown": 201556.25,
+    "max_any_cancel_rate": 0.4,
+    "max_side_cancel_rate": 0.45,
+    "score": "net_pnl - 0.10*max_drawdown - 5000*any_cancel_rate - 500*hls_complexity_rank",
+    "tie_breaker": "Prefer simpler, more HLS-friendly policies and lower cancel rates."
+  },
+  "selected_main_policy": {
+    "policy": {
+      "ask_threshold": 0.03156697750091553,
+      "ask_weighted_threshold": 0.1645185947418213,
+      "bid_threshold": 0.024306584149599075,
+      "bid_weighted_threshold": 0.14466540329158306,
+      "ensemble_mode": "weighted",
+      "hls_complexity_rank": 4,
+      "is_diagnostic_only": false,
+      "is_main_policy": true,
+      "max_spread_ticks": 3.0,
+      "policy_family": "C_015_016_ensemble",
+      "policy_id": "C_ensemble_weighted_w0.75_s3_r0.05",
+      "policy_type": "ensemble",
+      "target_cancel_rate": 0.05,
+      "weight_016": 0.75
+    },
+    "validation_metrics": {
+      "net_pnl": 38440.0,
+      "trade_count": 144,
+      "max_drawdown": 92570.0,
+      "cancel_count": 68887,
+      "bid_cancel_rate": 0.0609537468626747,
+      "ask_cancel_rate": 0.061321173350752,
+      "any_cancel_rate": 0.1108882490974088
+    }
+  },
+  "backup_policies": [
+    {
+      "policy": {
+        "ask_threshold": 0.03156697750091553,
+        "ask_weighted_threshold": 0.30158810690045357,
+        "bid_threshold": 0.024306584149599075,
+        "bid_weighted_threshold": 0.268626376055181,
+        "ensemble_mode": "weighted",
+        "hls_complexity_rank": 4,
+        "is_diagnostic_only": false,
+        "is_main_policy": true,
+        "max_spread_ticks": 3.0,
+        "policy_family": "C_015_016_ensemble",
+        "policy_id": "C_ensemble_weighted_w0.5_s3_r0.05",
+        "policy_type": "ensemble",
+        "target_cancel_rate": 0.05,
+        "weight_016": 0.5
+      },
+      "validation_metrics": {
+        "net_pnl": 34610.0,
+        "trade_count": 146,
+        "max_drawdown": 96400.0,
+        "cancel_count": 68863,
+        "bid_cancel_rate": 0.060935996790787,
+        "ask_cancel_rate": 0.0612963232501091,
+        "any_cancel_rate": 0.1108456489248781
+      }
+    },
+    {
+      "policy": {
+        "ask_threshold": 0.024906190112233162,
+        "bid_threshold": 0.019025884568691254,
+        "hls_complexity_rank": 1,
+        "is_diagnostic_only": false,
+        "is_main_policy": true,
+        "max_spread_ticks": 3.0,
+        "policy_family": "A_spread_filter_side_specific_toxic_cancel",
+        "policy_id": "A_spread_toxic_s3_r0.075",
+        "policy_type": "spread_toxic",
+        "target_cancel_rate": 0.075
+      },
+      "validation_metrics": {
+        "net_pnl": 29590.0,
+        "trade_count": 134,
+        "max_drawdown": 89480.0,
+        "cancel_count": 97075,
+        "bid_cancel_rate": 0.0859529481094398,
+        "ask_cancel_rate": 0.0863558747412927,
+        "any_cancel_rate": 0.1485734267223782
+      }
+    }
+  ],
+  "eligible_policy_count": 19,
+  "diagnostic_policy_b_excluded_from_main_claim": true,
+  "validation_no_cancel": {
+    "net_pnl": -56175.0,
+    "trade_count": 185,
+    "max_drawdown": 161245.0,
+    "cancel_count": 0,
+    "bid_cancel_count": 0,
+    "ask_cancel_count": 0,
+    "bid_cancel_rate": 0.0,
+    "ask_cancel_rate": 0.0,
+    "any_cancel_rate": 0.0
+  }
+}

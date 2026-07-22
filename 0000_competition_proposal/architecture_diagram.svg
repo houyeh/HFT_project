@@ -1,0 +1,114 @@
+<svg viewBox="0 0 1300 760" xmlns="http://www.w3.org/2000/svg" font-family="Noto Sans CJK TC, Arial, sans-serif">
+  <defs>
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto" markerUnits="strokeWidth">
+      <path d="M0,0 L0,6 L9,3 z" fill="#333"/>
+    </marker>
+    <marker id="arrowGrey" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto" markerUnits="strokeWidth">
+      <path d="M0,0 L0,6 L9,3 z" fill="#888"/>
+    </marker>
+    <marker id="arrowRed" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto" markerUnits="strokeWidth">
+      <path d="M0,0 L0,6 L9,3 z" fill="#a33"/>
+    </marker>
+  </defs>
+  <rect x="0" y="0" width="1300" height="760" fill="#ffffff"/>
+
+  <text x="600" y="28" text-anchor="middle" font-size="18" font-weight="bold" fill="#111">PHC-lite 單步推論核心：資料流與遞迴回授架構</text>
+  <text x="600" y="50" text-anchor="middle" font-size="12" fill="#555">輸入：x_t (16 維, ap_fixed&lt;24,12&gt;) ＋ state_prev (16 維)　／　輸出：readout (2 維訊號分數) ＋ state_next (16 維)</text>
+
+  <rect x="40" y="84" width="140" height="50" rx="6" fill="#eef4ff" stroke="#3a6fc4"/>
+  <text x="110" y="104" text-anchor="middle" font-size="12" font-weight="bold">x_t</text>
+  <text x="110" y="120" text-anchor="middle" font-size="10">市場特徵 (16維)</text>
+
+  <rect x="900" y="84" width="160" height="50" rx="6" fill="#eef4ff" stroke="#3a6fc4"/>
+  <text x="980" y="104" text-anchor="middle" font-size="12" font-weight="bold">state_prev</text>
+  <text x="980" y="120" text-anchor="middle" font-size="10">前一步隱藏狀態 (16維)</text>
+
+  <rect x="40" y="174" width="220" height="56" rx="6" fill="#fff3d6" stroke="#c98a14"/>
+  <text x="150" y="194" text-anchor="middle" font-size="12" font-weight="bold">STEP1  ENC_LINEAR</text>
+  <text x="150" y="210" text-anchor="middle" font-size="10">LayerNorm → SiLU</text>
+  <text x="150" y="224" text-anchor="middle" font-size="9" fill="#555">輸出：encoded</text>
+  <line x1="110" y1="134" x2="150" y2="174" stroke="#333" marker-end="url(#arrow)"/>
+
+  <rect x="40" y="274" width="160" height="56" rx="6" fill="#e9f7ef" stroke="#2e8b57"/>
+  <text x="120" y="296" text-anchor="middle" font-size="11" font-weight="bold">STEP2 GATE_LINEAR</text>
+  <text x="120" y="312" text-anchor="middle" font-size="10">Sigmoid → gate_t</text>
+
+  <rect x="230" y="274" width="160" height="56" rx="6" fill="#fdeaea" stroke="#c0392b"/>
+  <text x="310" y="296" text-anchor="middle" font-size="11" font-weight="bold">STEP3 CANDIDATE_LINEAR</text>
+  <text x="310" y="312" text-anchor="middle" font-size="10">Tanh → candidate_t</text>
+
+  <rect x="420" y="274" width="220" height="56" rx="6" fill="#e9f7ef" stroke="#2e8b57"/>
+  <text x="530" y="296" text-anchor="middle" font-size="11" font-weight="bold">STEP5 GAIN_LINEAR + GAIN_PREV_W</text>
+  <text x="530" y="312" text-anchor="middle" font-size="10">Sigmoid → gain_t</text>
+
+  <line x1="110" y1="230" x2="120" y2="274" stroke="#333" marker-end="url(#arrow)"/>
+  <line x1="190" y1="230" x2="310" y2="274" stroke="#333" marker-end="url(#arrow)"/>
+  <line x1="220" y1="230" x2="530" y2="274" stroke="#333" marker-end="url(#arrow)"/>
+
+  <polyline points="980,134 980,250 530,250 530,274" fill="none" stroke="#888" stroke-width="1.3" marker-end="url(#arrowGrey)"/>
+  <text x="700" y="244" font-size="9" fill="#777">state_prev → GAIN_PREV_W</text>
+
+  <rect x="130" y="374" width="300" height="56" rx="6" fill="#f3e9ff" stroke="#7d3fc4"/>
+  <text x="280" y="396" text-anchor="middle" font-size="12" font-weight="bold">STEP4  state_temporal</text>
+  <text x="280" y="412" text-anchor="middle" font-size="10">= DECAY ⊙ state_prev + gate_t ⊙ candidate_t</text>
+
+  <rect x="470" y="374" width="210" height="56" rx="6" fill="#fff3d6" stroke="#c98a14"/>
+  <text x="575" y="396" text-anchor="middle" font-size="12" font-weight="bold">STEP6  SYNAPSE_LINEAR</text>
+  <text x="575" y="412" text-anchor="middle" font-size="10">SiLU → message</text>
+
+  <line x1="120" y1="330" x2="210" y2="374" stroke="#333" marker-end="url(#arrow)"/>
+  <line x1="310" y1="330" x2="330" y2="374" stroke="#333" marker-end="url(#arrow)"/>
+  <line x1="430" y1="402" x2="470" y2="402" stroke="#333" marker-end="url(#arrow)"/>
+
+  <polyline points="980,134 980,345 280,345 280,374" fill="none" stroke="#888" stroke-width="1.3" marker-end="url(#arrowGrey)"/>
+  <text x="650" y="340" font-size="9" fill="#777">state_prev → DECAY 衰減項</text>
+
+  <rect x="300" y="474" width="320" height="56" rx="6" fill="#f3e9ff" stroke="#7d3fc4"/>
+  <text x="460" y="496" text-anchor="middle" font-size="12" font-weight="bold">STEP7  loop_input</text>
+  <text x="460" y="512" text-anchor="middle" font-size="10">= state_temporal + ALPHA ⊙ gain_t ⊙ message</text>
+
+  <line x1="220" y1="430" x2="380" y2="474" stroke="#333" marker-end="url(#arrow)"/>
+  <line x1="575" y1="430" x2="540" y2="474" stroke="#333" marker-end="url(#arrow)"/>
+  <polyline points="640,302 700,302 700,452 600,452 600,474" fill="none" stroke="#333" stroke-width="1.3" marker-end="url(#arrow)"/>
+
+  <rect x="330" y="574" width="180" height="50" rx="6" fill="#eef4ff" stroke="#3a6fc4"/>
+  <text x="420" y="594" text-anchor="middle" font-size="11" font-weight="bold">STEP8  LayerNorm</text>
+  <text x="420" y="610" text-anchor="middle" font-size="10">z = LayerNorm(loop_input)</text>
+  <line x1="460" y1="530" x2="420" y2="574" stroke="#333" marker-end="url(#arrow)"/>
+
+  <rect x="550" y="574" width="190" height="50" rx="6" fill="#fff3d6" stroke="#c98a14"/>
+  <text x="645" y="594" text-anchor="middle" font-size="11" font-weight="bold">STEP9  READOUT_LINEAR</text>
+  <text x="645" y="610" text-anchor="middle" font-size="10">readout (2維訊號分數)</text>
+  <line x1="510" y1="599" x2="550" y2="599" stroke="#333" marker-end="url(#arrow)"/>
+
+  <rect x="880" y="574" width="190" height="50" rx="6" fill="#e8e8e8" stroke="#555"/>
+  <text x="975" y="594" text-anchor="middle" font-size="11" font-weight="bold">輸出 readout</text>
+  <text x="975" y="610" text-anchor="middle" font-size="10">2 維訊號分數</text>
+  <line x1="740" y1="599" x2="880" y2="599" stroke="#333" marker-end="url(#arrow)"/>
+
+  <rect x="860" y="374" width="190" height="56" rx="6" fill="#e8e8e8" stroke="#555"/>
+  <text x="955" y="396" text-anchor="middle" font-size="11" font-weight="bold">state_next</text>
+  <text x="955" y="412" text-anchor="middle" font-size="10">= state_temporal（回授下一步）</text>
+
+  <polyline points="430,388 430,358 955,358 955,374" fill="none" stroke="#333" stroke-width="1.3" marker-end="url(#arrow)"/>
+
+  <polyline points="1050,402 1080,402 1080,110 1060,110" fill="none" stroke="#a33" stroke-width="1.5" stroke-dasharray="6,4" marker-end="url(#arrowRed)"/>
+  <text x="1090" y="190" font-size="10" fill="#a33">回授路徑 (t → t+1)</text>
+  <text x="1090" y="205" font-size="10" fill="#a33">state_next → state_prev</text>
+  <text x="1090" y="220" font-size="10" fill="#a33">II = Latency，無法管線化</text>
+
+  <rect x="40" y="680" width="14" height="14" fill="#fff3d6" stroke="#c98a14"/>
+  <text x="60" y="691" font-size="10">線性層 (Linear)</text>
+  <rect x="180" y="680" width="14" height="14" fill="#e9f7ef" stroke="#2e8b57"/>
+  <text x="200" y="691" font-size="10">Sigmoid 閘控</text>
+  <rect x="300" y="680" width="14" height="14" fill="#fdeaea" stroke="#c0392b"/>
+  <text x="320" y="691" font-size="10">Tanh</text>
+  <rect x="390" y="680" width="14" height="14" fill="#f3e9ff" stroke="#7d3fc4"/>
+  <text x="410" y="691" font-size="10">狀態更新 (遞迴核心)</text>
+  <rect x="560" y="680" width="14" height="14" fill="#eef4ff" stroke="#3a6fc4"/>
+  <text x="580" y="691" font-size="10">LayerNorm</text>
+  <line x1="40" y1="712" x2="70" y2="712" stroke="#888" stroke-width="1.3"/>
+  <text x="80" y="716" font-size="10">同時間步輸入依賴（非回授）</text>
+  <line x1="300" y1="712" x2="330" y2="712" stroke="#a33" stroke-width="1.5" stroke-dasharray="6,4"/>
+  <text x="340" y="716" font-size="10">跨時間步回授 (II=Latency)</text>
+</svg>

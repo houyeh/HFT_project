@@ -1,0 +1,7 @@
+INFO: [SIM 2] *************** CSIM start ***************
+   Compiling ../../../../../queue_rule_testbench.cpp in debug mode
+   Compiling ../../../../../queue_rule_hls.cpp in debug mode
+   Generating csim.exe
+total=405528 mismatches=0
+INFO: [SIM 1] CSim done with 0 errors.
+INFO: [SIM 3] *************** CSIM finish ***************

@@ -1,0 +1,2 @@
+policy_id,policy_type,min_spread_ticks,split,selection_split,test_used_for_selection,policy,selected_quote_count,selection_rate,selected_quote_pnl,avg_selected_quote_pnl,oracle_recall,oracle_precision,captured_oracle_pnl,missed_oracle_pnl,false_positive_loss,avoided_bad_pnl,missed_good_pnl,policy_role
+bid_only_spread_ge_1,bid_only_spread,1.0,test_diagnostic_burned,validation,False,bid_only_spread_ge_1,419,0.4486081370449679,2312590.0,5519.307875894988,0.9690721649484536,0.4486873508353222,2326930.0,3160.0,14340.0,3440970.0,3160.0,fixed_026_non_ml

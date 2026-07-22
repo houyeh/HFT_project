@@ -1,0 +1,196 @@
+# 06H subprocess PATH diagnostic
+
+This file records the environment after calling resolve_vitis_for_hls4ml(), immediately before hls4ml build would inherit it.
+
+## vitis_info
+{
+  "original_vitis_run": "",
+  "path_modified": true,
+  "post_patch_clang": "",
+  "post_patch_clang_tidy": "",
+  "post_patch_vitis_run": "C:\\AMDDesignTools\\2025.2\\Vitis\\bin\\vitis-run.BAT",
+  "selected_reason": "called Vitis settings64.bat and imported the resulting environment before hls4ml build",
+  "selected_vitis_run": "C:\\AMDDesignTools\\2025.2\\Vitis\\bin\\vitis-run.bat",
+  "settings64_applied": true,
+  "settings64_env_keys_applied": 59,
+  "settings64_error": "",
+  "settings64_found": true,
+  "settings64_path": "C:\\AMDDesignTools\\2025.2\\Vitis\\settings64.bat"
+}
+
+## Key environment
+XILINX_VITIS=C:\AMDDesignTools\2025.2\Vitis
+XILINX_HLS=C:\AMDDesignTools\2025.2\Vitis
+XILINX_VIVADO=C:\AMDDesignTools\2025.2\Vivado
+RDI_PLATFORM=win64
+
+## PATH comparison
+manual_segments=48
+subprocess_segments=49
+missing_from_subprocess_vs_manual=0
+extra_in_subprocess_vs_manual=0
+
+## First 30 subprocess PATH segments
+000: C:\AMDDesignTools\2025.2\Model_Composer\bin
+001: C:\AMDDesignTools\2025.2\Vitis\bin
+002: C:\AMDDesignTools\2025.2\Vitis\gnu\microblaze\nt\bin
+003: C:\AMDDesignTools\2025.2\Vitis\gnu\microblaze\linux_toolchain\nt64_le\bin
+004: C:\AMDDesignTools\2025.2\Vitis\gnu\aarch32\nt\gcc-arm-linux-gnueabi\bin
+005: C:\AMDDesignTools\2025.2\Vitis\gnu\aarch32\nt\gcc-arm-none-eabi\bin
+006: C:\AMDDesignTools\2025.2\Vitis\gnu\aarch64\nt\aarch64-linux\bin
+007: C:\AMDDesignTools\2025.2\Vitis\gnu\aarch64\nt\aarch64-none\bin
+008: C:\AMDDesignTools\2025.2\Vitis\gnu\armr5\nt\gcc-arm-none-eabi\bin
+009: C:\AMDDesignTools\2025.2\Vitis\gnuwin\bin
+010: C:\AMDDesignTools\2025.2\Vitis\gnu\riscv\nt\bin
+011: C:\AMDDesignTools\2025.2\Vitis\gnu\riscv\linux_toolchain\nt32\bin
+012: C:\AMDDesignTools\2025.2\Vitis\gnu\riscv\linux_toolchain\nt64\bin
+013: C:\AMDDesignTools\2025.2\Vivado\bin
+014: C:\AMDDesignTools\2025.2\Vivado\lib\win64.o
+015: C:\AMDDesignTools\DocNav
+016: C:\AMDDesignTools\2025.2\Vitis\bin
+017: C:\Users\holbo\.codex\tmp\arg0\codex-arg0nDayq5
+018: C:\Users\holbo\.cache\codex-runtimes\codex-primary-runtime\dependencies\bin
+019: C:\Windows\system32
+020: C:\Windows
+021: C:\Windows\System32\Wbem
+022: C:\Windows\System32\WindowsPowerShell\v1.0\
+023: C:\Windows\System32\OpenSSH\
+024: C:\Program Files\dotnet\
+025: C:\Program Files\Rhino 8\System
+026: C:\Program Files (x86)\Windows Kits\10\Windows Performance Toolkit\
+027: C:\Program Files\nodejs\
+028: C:\Program Files\Git\cmd
+029: C:\Program Files\Graphviz\bin
+
+## First 30 manual settings64 PATH segments
+000: C:\AMDDesignTools\2025.2\Model_Composer\bin
+001: C:\AMDDesignTools\2025.2\Vitis\bin
+002: C:\AMDDesignTools\2025.2\Vitis\gnu\microblaze\nt\bin
+003: C:\AMDDesignTools\2025.2\Vitis\gnu\microblaze\linux_toolchain\nt64_le\bin
+004: C:\AMDDesignTools\2025.2\Vitis\gnu\aarch32\nt\gcc-arm-linux-gnueabi\bin
+005: C:\AMDDesignTools\2025.2\Vitis\gnu\aarch32\nt\gcc-arm-none-eabi\bin
+006: C:\AMDDesignTools\2025.2\Vitis\gnu\aarch64\nt\aarch64-linux\bin
+007: C:\AMDDesignTools\2025.2\Vitis\gnu\aarch64\nt\aarch64-none\bin
+008: C:\AMDDesignTools\2025.2\Vitis\gnu\armr5\nt\gcc-arm-none-eabi\bin
+009: C:\AMDDesignTools\2025.2\Vitis\gnuwin\bin
+010: C:\AMDDesignTools\2025.2\Vitis\gnu\riscv\nt\bin
+011: C:\AMDDesignTools\2025.2\Vitis\gnu\riscv\linux_toolchain\nt32\bin
+012: C:\AMDDesignTools\2025.2\Vitis\gnu\riscv\linux_toolchain\nt64\bin
+013: C:\AMDDesignTools\2025.2\Vivado\bin
+014: C:\AMDDesignTools\2025.2\Vivado\lib\win64.o
+015: C:\AMDDesignTools\DocNav
+016: C:\Users\holbo\.codex\tmp\arg0\codex-arg0nDayq5
+017: C:\Users\holbo\.cache\codex-runtimes\codex-primary-runtime\dependencies\bin
+018: C:\Windows\system32
+019: C:\Windows
+020: C:\Windows\System32\Wbem
+021: C:\Windows\System32\WindowsPowerShell\v1.0\
+022: C:\Windows\System32\OpenSSH\
+023: C:\Program Files\dotnet\
+024: C:\Program Files\Rhino 8\System
+025: C:\Program Files (x86)\Windows Kits\10\Windows Performance Toolkit\
+026: C:\Program Files\nodejs\
+027: C:\Program Files\Git\cmd
+028: C:\Program Files\Graphviz\bin
+029: C:\Program Files\MATLAB\R2026a\bin
+
+## Full subprocess PATH segments
+000: C:\AMDDesignTools\2025.2\Model_Composer\bin
+001: C:\AMDDesignTools\2025.2\Vitis\bin
+002: C:\AMDDesignTools\2025.2\Vitis\gnu\microblaze\nt\bin
+003: C:\AMDDesignTools\2025.2\Vitis\gnu\microblaze\linux_toolchain\nt64_le\bin
+004: C:\AMDDesignTools\2025.2\Vitis\gnu\aarch32\nt\gcc-arm-linux-gnueabi\bin
+005: C:\AMDDesignTools\2025.2\Vitis\gnu\aarch32\nt\gcc-arm-none-eabi\bin
+006: C:\AMDDesignTools\2025.2\Vitis\gnu\aarch64\nt\aarch64-linux\bin
+007: C:\AMDDesignTools\2025.2\Vitis\gnu\aarch64\nt\aarch64-none\bin
+008: C:\AMDDesignTools\2025.2\Vitis\gnu\armr5\nt\gcc-arm-none-eabi\bin
+009: C:\AMDDesignTools\2025.2\Vitis\gnuwin\bin
+010: C:\AMDDesignTools\2025.2\Vitis\gnu\riscv\nt\bin
+011: C:\AMDDesignTools\2025.2\Vitis\gnu\riscv\linux_toolchain\nt32\bin
+012: C:\AMDDesignTools\2025.2\Vitis\gnu\riscv\linux_toolchain\nt64\bin
+013: C:\AMDDesignTools\2025.2\Vivado\bin
+014: C:\AMDDesignTools\2025.2\Vivado\lib\win64.o
+015: C:\AMDDesignTools\DocNav
+016: C:\AMDDesignTools\2025.2\Vitis\bin
+017: C:\Users\holbo\.codex\tmp\arg0\codex-arg0nDayq5
+018: C:\Users\holbo\.cache\codex-runtimes\codex-primary-runtime\dependencies\bin
+019: C:\Windows\system32
+020: C:\Windows
+021: C:\Windows\System32\Wbem
+022: C:\Windows\System32\WindowsPowerShell\v1.0\
+023: C:\Windows\System32\OpenSSH\
+024: C:\Program Files\dotnet\
+025: C:\Program Files\Rhino 8\System
+026: C:\Program Files (x86)\Windows Kits\10\Windows Performance Toolkit\
+027: C:\Program Files\nodejs\
+028: C:\Program Files\Git\cmd
+029: C:\Program Files\Graphviz\bin
+030: C:\Program Files\MATLAB\R2026a\bin
+031: C:\Program Files\Tailscale\
+032: C:\Users\holbo\AppData\Local\Programs\Python\Python313\Scripts\
+033: C:\Users\holbo\AppData\Local\Programs\Python\Python313\
+034: C:\Users\holbo\AppData\Local\Microsoft\WindowsApps
+035: C:\Users\holbo\AppData\Local\Programs\Microsoft VS Code\bin
+036: C:\mingw64\bin
+037: C:\Users\holbo\.dotnet\tools
+038: C:\Program Files\iverilog\bin
+039: C:\Program Files\iverilog\gtkwave\bin
+040: C:\Users\holbo\AppData\Roaming\npm
+041: C:\Users\holbo\AppData\Local\Programs\Antigravity\bin
+042: C:\ProgramData\anaconda3
+043: C:\ProgramData\anaconda3\Scripts
+044: C:\ProgramData\anaconda3\Library\bin
+045: C:\Users\holbo\AppData\Local\Programs\cursor\resources\app\bin
+046: C:\Users\holbo\AppData\Local\Programs\Antigravity IDE\bin
+047: C:\Users\holbo\AppData\Local\OpenAI\Codex\bin\ada252862d154cdd
+048: C:\Program Files\WindowsApps\OpenAI.Codex_26.623.5546.0_x64__2p2nqsd0c76g0\app\resources
+
+## Full manual settings64 PATH segments
+000: C:\AMDDesignTools\2025.2\Model_Composer\bin
+001: C:\AMDDesignTools\2025.2\Vitis\bin
+002: C:\AMDDesignTools\2025.2\Vitis\gnu\microblaze\nt\bin
+003: C:\AMDDesignTools\2025.2\Vitis\gnu\microblaze\linux_toolchain\nt64_le\bin
+004: C:\AMDDesignTools\2025.2\Vitis\gnu\aarch32\nt\gcc-arm-linux-gnueabi\bin
+005: C:\AMDDesignTools\2025.2\Vitis\gnu\aarch32\nt\gcc-arm-none-eabi\bin
+006: C:\AMDDesignTools\2025.2\Vitis\gnu\aarch64\nt\aarch64-linux\bin
+007: C:\AMDDesignTools\2025.2\Vitis\gnu\aarch64\nt\aarch64-none\bin
+008: C:\AMDDesignTools\2025.2\Vitis\gnu\armr5\nt\gcc-arm-none-eabi\bin
+009: C:\AMDDesignTools\2025.2\Vitis\gnuwin\bin
+010: C:\AMDDesignTools\2025.2\Vitis\gnu\riscv\nt\bin
+011: C:\AMDDesignTools\2025.2\Vitis\gnu\riscv\linux_toolchain\nt32\bin
+012: C:\AMDDesignTools\2025.2\Vitis\gnu\riscv\linux_toolchain\nt64\bin
+013: C:\AMDDesignTools\2025.2\Vivado\bin
+014: C:\AMDDesignTools\2025.2\Vivado\lib\win64.o
+015: C:\AMDDesignTools\DocNav
+016: C:\Users\holbo\.codex\tmp\arg0\codex-arg0nDayq5
+017: C:\Users\holbo\.cache\codex-runtimes\codex-primary-runtime\dependencies\bin
+018: C:\Windows\system32
+019: C:\Windows
+020: C:\Windows\System32\Wbem
+021: C:\Windows\System32\WindowsPowerShell\v1.0\
+022: C:\Windows\System32\OpenSSH\
+023: C:\Program Files\dotnet\
+024: C:\Program Files\Rhino 8\System
+025: C:\Program Files (x86)\Windows Kits\10\Windows Performance Toolkit\
+026: C:\Program Files\nodejs\
+027: C:\Program Files\Git\cmd
+028: C:\Program Files\Graphviz\bin
+029: C:\Program Files\MATLAB\R2026a\bin
+030: C:\Program Files\Tailscale\
+031: C:\Users\holbo\AppData\Local\Programs\Python\Python313\Scripts\
+032: C:\Users\holbo\AppData\Local\Programs\Python\Python313\
+033: C:\Users\holbo\AppData\Local\Microsoft\WindowsApps
+034: C:\Users\holbo\AppData\Local\Programs\Microsoft VS Code\bin
+035: C:\mingw64\bin
+036: C:\Users\holbo\.dotnet\tools
+037: C:\Program Files\iverilog\bin
+038: C:\Program Files\iverilog\gtkwave\bin
+039: C:\Users\holbo\AppData\Roaming\npm
+040: C:\Users\holbo\AppData\Local\Programs\Antigravity\bin
+041: C:\ProgramData\anaconda3
+042: C:\ProgramData\anaconda3\Scripts
+043: C:\ProgramData\anaconda3\Library\bin
+044: C:\Users\holbo\AppData\Local\Programs\cursor\resources\app\bin
+045: C:\Users\holbo\AppData\Local\Programs\Antigravity IDE\bin
+046: C:\Users\holbo\AppData\Local\OpenAI\Codex\bin\ada252862d154cdd
+047: C:\Program Files\WindowsApps\OpenAI.Codex_26.623.5546.0_x64__2p2nqsd0c76g0\app\resources

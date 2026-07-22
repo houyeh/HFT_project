@@ -1,0 +1,3 @@
+source_group,assigned_role,session_id,files,raw_rows,target_rows,target_valid_info_time_rows,malformed_info_time_rows,target_timestamp_min_us,target_timestamp_max_us,target_row_rate,usability_threshold,usable_for_final_holdout,decision
+NEW5,final_holdout_locked,20260128,2,1262091,848983,848983,0,28929215000.0,49500001000.0,0.6726797037614561,target_row_rate >= 0.5 and target_rows >= 50000,True,usable_after_txf_filter_metadata_only_locked_until_final_one_shot
+NEW5,final_holdout_locked,20260518,1,141356,494,494,0,28815161000.0,34815114000.0,0.0034947225444975807,target_row_rate >= 0.5 and target_rows >= 50000,False,not_usable_for_primary_txf_final_holdout_due_to_sparse_target_rows

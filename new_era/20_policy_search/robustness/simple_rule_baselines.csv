@@ -1,0 +1,6 @@
+policy_id,policy_type,rule,max_spread_ticks,split,stress_name,net_pnl,trade_count,max_drawdown,cancel_count,bid_cancel_count,ask_cancel_count,bid_cancel_rate,ask_cancel_rate,any_cancel_rate,selection_role,test_evaluated,random_cancel_rate,seed,queue_threshold,event_rate_threshold
+simple_spread_filter_only_s2,simple_rule,spread_filter_only,2.0,val,base,33990.0,174,90010.0,407088,203544,203544,0.3612920632328561,0.3612920632328561,0.3612920632328561,non_ml_baseline,False,,,,
+simple_spread_filter_only_s3,simple_rule,spread_filter_only,3.0,val,base,-9485.0,179,102485.0,12830,6415,6415,0.011386671116018019,0.011386671116018019,0.011386671116018019,non_ml_baseline,False,,,,
+simple_spread_filter_random_cancel_s3_r10,simple_rule,spread_filter_random_cancel,3.0,val,base,6955.0,163,98490.0,124696,62251,62445,0.11049597250868866,0.1108403239033118,0.20011963548452372,non_ml_baseline,False,0.1,20260525.0,,
+simple_spread_filter_queue_imbalance_s3_z1,simple_rule,spread_filter_queue_imbalance,3.0,val,base,-46830.0,122,114140.0,216521,108228,108293,0.192105478027186,0.19222085349445664,0.37293966040562465,non_ml_baseline,False,,,1.0,
+simple_spread_filter_event_rate_s3_q75,simple_rule,spread_filter_event_rate,3.0,val,base,-19685.0,99,129925.0,709578,354789,354789,0.6297530254997533,0.6297530254997533,0.6297530254997533,non_ml_baseline,False,,,,1000000000.0

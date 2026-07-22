@@ -1,0 +1,7 @@
+INFO: [SIM 2] *************** CSIM start ***************
+mingw32-make: 'csim.exe' is up to date.
+total=200 mismatches=0
+max_abs_diff=0.342693 mean_abs_diff=0.0690597 tolerance=1
+sign_agreement_readout_0=1 sign_agreement_readout_1=1 joint=1 zero_sign_convention=positive
+INFO: [SIM 1] CSim done with 0 errors.
+INFO: [SIM 3] *************** CSIM finish ***************

@@ -1,0 +1,2 @@
+method,num_runs,matched_bid_signal_rate,matched_ask_signal_rate,mean_net_pnl,std_net_pnl,mean_plus_1std_net_pnl,mean_trade_count,mean_net_cancel_value
+matched_random_cancel,20,0.1475837269499563,0.1382938316295428,47719.5,31139.907630723636,78859.40763072364,574.7,8710.0

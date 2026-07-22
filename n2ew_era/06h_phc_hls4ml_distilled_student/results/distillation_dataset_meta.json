@@ -1,0 +1,19 @@
+{
+  "model_path": "C:\\Users\\holbo\\00VS_projjects\\00_HFT_project\\n2ew_era\\06h_phc_hls4ml_distilled_student\\models\\phc_distilled_student.keras",
+  "train_meta": {
+    "split": "train",
+    "sequence_count": 4096,
+    "seq_len": 128,
+    "row_count": 524288,
+    "new5_used": false
+  },
+  "val_meta": {
+    "split": "val",
+    "sequence_count": 1024,
+    "seq_len": 128,
+    "row_count": 131072,
+    "new5_used": false
+  },
+  "teacher_checkpoint": "C:\\Users\\holbo\\00VS_projjects\\00_HFT_project\\n2ew_era\\06e_phc_stp_step_hls4ml\\models\\phc_stp_step_hls_seed2.pt",
+  "new5_used": false
+}

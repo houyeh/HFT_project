@@ -1,0 +1,3 @@
+Decision,Condition,Action
+Edge Weak,True,Fallback to tiny TCN MVP
+Regime Shift,True,Trigger Auto-Gating

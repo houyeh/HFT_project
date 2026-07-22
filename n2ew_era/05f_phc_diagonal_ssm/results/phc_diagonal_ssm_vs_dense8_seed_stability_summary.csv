@@ -1,0 +1,4 @@
+split,diagonal16_seed_count,dense8_seed_count,diagonal16_min_action_pnl,dense8_min_action_pnl,diagonal16_mean_action_pnl,dense8_mean_action_pnl,mean_action_pnl_delta_diagonal16_minus_dense8,diagonal16_all_seed_action_positive,dense8_all_seed_action_positive
+new3,3,3,4632845.0,5032255.0,4676853.333333333,5048498.333333333,-371645.0,True,True
+new4,3,3,1595345.0,1755610.0,1623343.3333333333,1768695.0,-145351.66666666666,True,True
+val,3,3,1676175.0,1906280.0,1728256.6666666667,1915036.6666666667,-186780.0,True,True

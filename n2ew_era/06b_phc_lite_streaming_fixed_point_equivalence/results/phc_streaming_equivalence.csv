@@ -1,0 +1,4 @@
+split,row_count,max_abs_score_diff,mean_abs_score_diff,action_agreement_rate,threshold,new5_used
+val,82960,7.62939453125e-05,2.9653514843630546e-07,1.0,0.0,False
+new3,176754,8.392333984375e-05,2.9292931458257954e-07,1.0,0.0,False
+new4,68620,7.62939453125e-05,2.89983461243537e-07,1.0,0.0,False

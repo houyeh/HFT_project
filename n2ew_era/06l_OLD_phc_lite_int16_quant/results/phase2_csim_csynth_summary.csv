@@ -1,0 +1,3 @@
+phase,scheme,rows,mismatches,csim_max_abs_diff,csim_mean_abs_diff,dsp,bram_18k,ff,lut,uram,latency_cycles,latency_us,interval_cycles,pipeline,csynth_status,impl_or_pnr_run
+06f_baseline,Q24.12,25600,0,0.00725275,0.000372553,46,6,14518,24836,0,8316,83.160,8317,no,pass,false
+06l_phase2,Q16.8,25600,0,0.11749,0.00589889,46,6,14332,24746,0,8316,83.160,8317,no,pass,false

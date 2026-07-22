@@ -1,0 +1,40 @@
+{
+  "class_names": [
+    "Non-adverse",
+    "Adverse"
+  ],
+  "device": "cpu",
+  "label_type": "adverse_ask_fill_binary",
+  "splits": {
+    "test": {
+      "accuracy": 0.9999867679360627,
+      "average_precision": 3.605780406437954e-05,
+      "balanced_accuracy": 0.5,
+      "best_threshold_by_f1": 0.06057338789105415,
+      "best_threshold_by_precision_at_min_recall": 0.06057338789105415,
+      "brier_score": 0.0019100812503340054,
+      "expected_calibration_error": 0.035653265381964575,
+      "loss": 0.03670438379049301,
+      "macro_f1": 0.4999966919621296,
+      "min_recall": 0.2,
+      "num_samples": 151148,
+      "p_pos_ge_0p70_actual_pos_rate": NaN,
+      "precision_at_min_recall": 4.607021100156639e-05
+    },
+    "val": {
+      "accuracy": 0.9999756448038188,
+      "average_precision": 6.553938610659888e-05,
+      "balanced_accuracy": 0.5,
+      "best_threshold_by_f1": 0.04453827068209648,
+      "best_threshold_by_precision_at_min_recall": 0.04453827068209648,
+      "brier_score": 0.0019495106693596343,
+      "expected_calibration_error": 0.035695616147947265,
+      "loss": 0.036805231124162674,
+      "macro_f1": 0.49999391112680686,
+      "min_recall": 0.2,
+      "num_samples": 82118,
+      "p_pos_ge_0p70_actual_pos_rate": NaN,
+      "precision_at_min_recall": 8.060940711781066e-05
+    }
+  }
+}

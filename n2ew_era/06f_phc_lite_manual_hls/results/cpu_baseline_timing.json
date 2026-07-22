@@ -1,0 +1,21 @@
+{
+  "device": "CPU",
+  "model": "PHC-lite step model (PyTorch float32)",
+  "batch_size": 1,
+  "warmup_iters": 100,
+  "timing_iters": 10000,
+  "mean_us": 117.50671011977829,
+  "median_us": 84.20000085607171,
+  "p99_us": 778.7999929860234,
+  "min_us": 61.20000034570694,
+  "torch_no_grad": true,
+  "new5_used": false,
+  "step_checkpoint": "C:\\Users\\holbo\\00VS_projjects\\00_HFT_project\\n2ew_era\\06e_phc_stp_step_hls4ml\\models\\phc_stp_step_hls_seed2.pt",
+  "grad_enabled_check": {
+    "mean_us": 175.74289995245636,
+    "median_us": 117.09996033459902,
+    "p99_us": 1372.199971228838,
+    "min_us": 87.49996777623892,
+    "torch_no_grad": false
+  }
+}

@@ -1,0 +1,36 @@
+{
+  "datasets": [
+    {
+      "dataset": "NEW",
+      "rows": 5322624,
+      "sessions": [
+        "20260121Day",
+        "20260122Day",
+        "20260122Night",
+        "20260123Day",
+        "20260123Night",
+        "20260126Day",
+        "20260126Night",
+        "20260127Day",
+        "20260127Night"
+      ],
+      "symbol": "TXFB6",
+      "tick_size": 1.0
+    },
+    {
+      "dataset": "NEW3",
+      "rows": 5657398,
+      "sessions": [
+        "20260113",
+        "20260114",
+        "20260115",
+        "20260116",
+        "20260119Day",
+        "20260330"
+      ],
+      "symbol": "TXFA6",
+      "tick_size": 1.0
+    }
+  ],
+  "model_dir": "C:\\Users\\holbo\\00VS_projjects\\00_HFT_project\\new_era\\15_models_playaround\\015_models_playaround_result\\lt=smoothed_mid_move_3class__fc=8__w=100__H=5__thr=0p5__expC_snapshot"
+}

@@ -1,0 +1,11 @@
+2026-05-21 11:53:33,284 INFO Loaded simulate_with_metrics from C:\Users\holbo\00VS_projjects\00_HFT_project\new_era\15_models_playaround\run_diagnosis_1.py
+2026-05-21 11:59:07,490 INFO Loaded NEW pack rows=1166333 symbol=TXFB6 tick=1.000000
+2026-05-21 12:02:13,002 INFO Loaded NEW3 pack rows=5657398 symbol=TXFA6 tick=1.000000
+2026-05-21 20:07:48,765 INFO Completed scenarios for NEW / no_gate_tcn_055
+2026-05-21 20:52:31,422 INFO Completed scenarios for NEW / spread_filter_tcn_055
+2026-05-22 02:05:10,906 INFO Completed scenarios for NEW / combined_filter_tcn_055
+2026-05-22 14:27:23,039 INFO Completed scenarios for NEW3 / combined_filter_tcn_055
+2026-05-22 15:13:39,977 INFO Saved queue sensitivity summary with 1110 rows
+2026-05-22 15:13:40,229 INFO Saved aggregate table with 108 rows
+2026-05-22 15:13:40,310 INFO Saved verdict table with 7 rows
+2026-05-22 15:13:45,007 INFO Queue-aware sensitivity run complete.

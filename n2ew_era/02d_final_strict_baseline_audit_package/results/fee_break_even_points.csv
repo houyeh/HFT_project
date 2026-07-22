@@ -1,0 +1,4 @@
+split,policy_id,horizon,base_total_pnl_fee_1x,selected_action_count,break_even_fee_multiplier,max_tested_fee_multiplier_positive,eligibility_column_note
+new4,side_by_queue_imbalance_abs_0p1,20,495871045.0,1799304,19.372698369295385,5.0,`eligible_for_final_selection_at_1x` is meaningful only on validation. Test and NEW4 are frozen evaluation splits and are not used for selection.
+test,side_by_queue_imbalance_abs_0p1,20,233869570.0,971600,17.047040620282694,5.0,`eligible_for_final_selection_at_1x` is meaningful only on validation. Test and NEW4 are frozen evaluation splits and are not used for selection.
+val,side_by_queue_imbalance_abs_0p1,20,111460580.0,468627,16.85633207931539,5.0,`eligible_for_final_selection_at_1x` is meaningful only on validation. Test and NEW4 are frozen evaluation splits and are not used for selection.

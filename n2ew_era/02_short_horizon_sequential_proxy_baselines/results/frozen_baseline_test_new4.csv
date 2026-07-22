@@ -1,0 +1,7 @@
+role,policy_id,horizon,split,selection_split,test_used_for_selection,new4_used_for_selection,total_pnl,selected_action_count,selection_rate,win_rate,avg_pnl_per_selected_action,max_drawdown,no_quote_pnl,old_bid_only_pnl,beats_no_quote,beats_old_bid_only
+main,ask_all,1,test,val,False,False,243492015.0,1166321,1.0,0.9929487558721072,208.76929678879145,1015.0,0.0,243650415.0,True,False
+main,ask_all,1,new4,val,False,False,533655460.0,2196640,1.0,0.9897739088315042,242.94170187194987,3230.0,0.0,533760260.0,True,False
+backup_1,bid_all,1,test,val,False,False,243650415.0,1166321,1.0,0.99300105717218,208.9051084564198,4615.0,0.0,243650415.0,True,False
+backup_1,bid_all,1,new4,val,False,False,533760260.0,2196640,1.0,0.9898340007174607,242.98941110059,3860.0,0.0,533760260.0,True,False
+backup_2,old_bid_only_spread_ge_1,1,test,val,False,False,243650415.0,1166321,1.0,0.99300105717218,208.9051084564198,4615.0,0.0,243650415.0,True,False
+backup_2,old_bid_only_spread_ge_1,1,new4,val,False,False,533760260.0,2196640,1.0,0.9898340007174607,242.98941110059,3860.0,0.0,533760260.0,True,False

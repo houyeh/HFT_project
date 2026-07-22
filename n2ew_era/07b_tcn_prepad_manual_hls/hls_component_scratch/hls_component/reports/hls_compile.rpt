@@ -1,0 +1,795 @@
+
+
+================================================================
+== Synthesis Summary Report of 'tcn_prepad_infer'
+================================================================
++ General Information: 
+    * Date:           Wed Jun 24 13:16:44 2026
+    * Version:        2025.2 (Build 6295257 on Nov 14 2025)
+    * Project:        hls_component
+    * Solution:       hls (Vivado IP Flow Target)
+    * Product family: zynq
+    * Target device:  xc7z020-clg400-1
+    
+
+* Performance & Resource Estimates: 
++---------------------------------------------------------+--------+---------------+----------+---------+------+----------+---------+-----------+-------+----------+----------+-------------+-------------+-----+
+|                         Modules                         |  Issue |               | Iteration|         | Trip |          |       Latency       |       |          |          |             |             |     |
+|                         & Loops                         |  Type  | Violation Type|  Latency | Interval| Count| Pipelined| (cycles)|    (ns)   | Slack |   BRAM   |    DSP   |      FF     |     LUT     | URAM|
++---------------------------------------------------------+--------+---------------+----------+---------+------+----------+---------+-----------+-------+----------+----------+-------------+-------------+-----+
+|+ tcn_prepad_infer                                       |  Timing|              -|         -|  1370386|     -|        no|  1370385|  1.370e+07|  -0.92|  63 (22%)|  34 (15%)|  17306 (16%)|  25275 (47%)|    -|
+| + p_anonymous_namespace_copy_and_prepad_252_s           |       -|              -|         -|     2269|     -|        no|     2269|  2.269e+04|   1.44|         -|         -|     34 (~0%)|    443 (~0%)|    -|
+|  o VITIS_LOOP_26_1                                      |       -|              -|         9|        -|   252|        no|     2268|  2.268e+04|   7.30|         -|         -|            -|            -|    -|
+| + p_anonymous_namespace_tcn_block_252_1_s               |  Timing|              -|         -|   319689|     -|        no|   319689|  3.197e+06|  -0.92|    6 (2%)|    4 (1%)|    2818 (2%)|    4329 (8%)|    -|
+|  + p_anonymous_namespace_conv1_relu_252_1_9             |  Timing|              -|         -|   156501|     -|        no|   156501|  1.565e+06|  -0.92|         -|         -|    1225 (1%)|    1890 (3%)|    -|
+|   o VITIS_LOOP_47_1                                     |       -|              -|       626|        -|   250|        no|   156500|  1.565e+06|   7.30|         -|         -|            -|            -|    -|
+|    o VITIS_LOOP_49_2                                    |       -|              -|        39|        -|    16|        no|      624|  6.240e+03|   7.30|         -|         -|            -|            -|    -|
+|     o VITIS_LOOP_52_3                                   |       -|              -|        12|        -|     3|        no|       36|    360.000|   7.30|         -|         -|            -|            -|    -|
+|  + p_anonymous_namespace_conv2_relu_residual_252_1_8    |  Timing|              -|         -|   163185|     -|        no|   163185|  1.632e+06|  -0.78|         -|    4 (1%)|    1587 (1%)|    2145 (4%)|    -|
+|   o VITIS_LOOP_73_1                                     |       -|              -|       658|        -|   248|        no|   163184|  1.632e+06|   7.30|         -|         -|            -|            -|    -|
+|    o VITIS_LOOP_75_2                                    |       -|              -|        41|        -|    16|        no|      656|  6.560e+03|   7.30|         -|         -|            -|            -|    -|
+|     o VITIS_LOOP_78_3                                   |       -|              -|        12|        -|     3|        no|       36|    360.000|   7.30|         -|         -|            -|            -|    -|
+| + p_anonymous_namespace_tcn_block_248_2_s               |  Timing|              -|         -|   310669|     -|        no|   310669|  3.107e+06|  -0.78|    6 (2%)|         -|    2417 (2%)|    4262 (8%)|    -|
+|  + p_anonymous_namespace_conv1_relu_248_2_11            |  Timing|              -|         -|   152745|     -|        no|   152745|  1.527e+06|  -0.78|         -|         -|    1236 (1%)|    1927 (3%)|    -|
+|   o VITIS_LOOP_47_1                                     |       -|              -|       626|        -|   244|        no|   152744|  1.527e+06|   7.30|         -|         -|            -|            -|    -|
+|    o VITIS_LOOP_49_2                                    |       -|              -|        39|        -|    16|        no|      624|  6.240e+03|   7.30|         -|         -|            -|            -|    -|
+|     o VITIS_LOOP_52_3                                   |       -|              -|        12|        -|     3|        no|       36|    360.000|   7.30|         -|         -|            -|            -|    -|
+|  + p_anonymous_namespace_conv2_relu_residual_248_2_10   |  Timing|              -|         -|   157921|     -|        no|   157921|  1.579e+06|  -0.78|         -|         -|    1175 (1%)|    2083 (3%)|    -|
+|   o VITIS_LOOP_73_1                                     |       -|              -|       658|        -|   240|        no|   157920|  1.579e+06|   7.30|         -|         -|            -|            -|    -|
+|    o VITIS_LOOP_75_2                                    |       -|              -|        41|        -|    16|        no|      656|  6.560e+03|   7.30|         -|         -|            -|            -|    -|
+|     o VITIS_LOOP_78_3                                   |       -|              -|        12|        -|     3|        no|       36|    360.000|   7.30|         -|         -|            -|            -|    -|
+| + p_anonymous_namespace_tcn_block_240_4_s               |  Timing|              -|         -|   292629|     -|        no|   292629|  2.926e+06|  -0.85|    6 (2%)|         -|    2398 (2%)|    4223 (7%)|    -|
+|  + p_anonymous_namespace_conv1_relu_240_4_13            |  Timing|              -|         -|   145233|     -|        no|   145233|  1.452e+06|  -0.85|         -|         -|    1221 (1%)|    1890 (3%)|    -|
+|   o VITIS_LOOP_47_1                                     |       -|              -|       626|        -|   232|        no|   145232|  1.452e+06|   7.30|         -|         -|            -|            -|    -|
+|    o VITIS_LOOP_49_2                                    |       -|              -|        39|        -|    16|        no|      624|  6.240e+03|   7.30|         -|         -|            -|            -|    -|
+|     o VITIS_LOOP_52_3                                   |       -|              -|        12|        -|     3|        no|       36|    360.000|   7.30|         -|         -|            -|            -|    -|
+|  + p_anonymous_namespace_conv2_relu_residual_240_4_12   |  Timing|              -|         -|   147393|     -|        no|   147393|  1.474e+06|  -0.78|         -|         -|    1171 (1%)|    2081 (3%)|    -|
+|   o VITIS_LOOP_73_1                                     |       -|              -|       658|        -|   224|        no|   147392|  1.474e+06|   7.30|         -|         -|            -|            -|    -|
+|    o VITIS_LOOP_75_2                                    |       -|              -|        41|        -|    16|        no|      656|  6.560e+03|   7.30|         -|         -|            -|            -|    -|
+|     o VITIS_LOOP_78_3                                   |       -|              -|        12|        -|     3|        no|       36|    360.000|   7.30|         -|         -|            -|            -|    -|
+| + p_anonymous_namespace_tcn_block_224_8_s               |  Timing|              -|         -|   256549|     -|        no|   256549|  2.565e+06|  -0.92|    6 (2%)|         -|    2574 (2%)|    4298 (8%)|    -|
+|  + p_anonymous_namespace_conv1_relu_224_8_15            |  Timing|              -|         -|   130209|     -|        no|   130209|  1.302e+06|  -0.85|         -|         -|    1284 (1%)|    1896 (3%)|    -|
+|   o VITIS_LOOP_47_1                                     |       -|              -|       626|        -|   208|        no|   130208|  1.302e+06|   7.30|         -|         -|            -|            -|    -|
+|    o VITIS_LOOP_49_2                                    |       -|              -|        39|        -|    16|        no|      624|  6.240e+03|   7.30|         -|         -|            -|            -|    -|
+|     o VITIS_LOOP_52_3                                   |       -|              -|        12|        -|     3|        no|       36|    360.000|   7.30|         -|         -|            -|            -|    -|
+|  + p_anonymous_namespace_conv2_relu_residual_224_8_14   |  Timing|              -|         -|   126337|     -|        no|   126337|  1.263e+06|  -0.92|         -|         -|    1284 (1%)|    2075 (3%)|    -|
+|   o VITIS_LOOP_73_1                                     |       -|              -|       658|        -|   192|        no|   126336|  1.263e+06|   7.30|         -|         -|            -|            -|    -|
+|    o VITIS_LOOP_75_2                                    |       -|              -|        41|        -|    16|        no|      656|  6.560e+03|   7.30|         -|         -|            -|            -|    -|
+|     o VITIS_LOOP_78_3                                   |       -|              -|        12|        -|     3|        no|       36|    360.000|   7.30|         -|         -|            -|            -|    -|
+| + p_anonymous_namespace_tcn_block_192_16_s              |  Timing|              -|         -|   184389|     -|        no|   184389|  1.844e+06|  -0.92|    6 (2%)|         -|    2439 (2%)|    4253 (7%)|    -|
+|  + p_anonymous_namespace_conv1_relu_192_16_17           |  Timing|              -|         -|   100161|     -|        no|   100161|  1.002e+06|  -0.92|         -|         -|    1151 (1%)|    1913 (3%)|    -|
+|   o VITIS_LOOP_47_1                                     |       -|              -|       626|        -|   160|        no|   100160|  1.002e+06|   7.30|         -|         -|            -|            -|    -|
+|    o VITIS_LOOP_49_2                                    |       -|              -|        39|        -|    16|        no|      624|  6.240e+03|   7.30|         -|         -|            -|            -|    -|
+|     o VITIS_LOOP_52_3                                   |       -|              -|        12|        -|     3|        no|       36|    360.000|   7.30|         -|         -|            -|            -|    -|
+|  + p_anonymous_namespace_conv2_relu_residual_192_16_16  |  Timing|              -|         -|    84225|     -|        no|    84225|  8.422e+05|  -0.92|         -|         -|    1282 (1%)|    2055 (3%)|    -|
+|   o VITIS_LOOP_73_1                                     |       -|              -|       658|        -|   128|        no|    84224|  8.422e+05|   7.30|         -|         -|            -|            -|    -|
+|    o VITIS_LOOP_75_2                                    |       -|              -|        41|        -|    16|        no|      656|  6.560e+03|   7.30|         -|         -|            -|            -|    -|
+|     o VITIS_LOOP_78_3                                   |       -|              -|        12|        -|     3|        no|       36|    360.000|   7.30|         -|         -|            -|            -|    -|
+| + p_anonymous_namespace_global_average_readout          |  Timing|              -|         -|     4178|     -|        no|     4178|  4.178e+04|  -0.92|         -|   16 (7%)|    3393 (3%)|    2090 (3%)|    -|
+|  o VITIS_LOOP_111_1                                     |       -|              -|       259|        -|    16|        no|     4144|  4.144e+04|   7.30|         -|         -|            -|            -|    -|
+|   o VITIS_LOOP_114_2                                    |       -|              -|         2|        -|   128|        no|      256|  2.560e+03|   7.30|         -|         -|            -|            -|    -|
+|  o VITIS_LOOP_120_3                                     |       -|              -|        12|        -|     2|        no|       24|    240.000|   7.30|         -|         -|            -|            -|    -|
++---------------------------------------------------------+--------+---------------+----------+---------+------+----------+---------+-----------+-------+----------+----------+-------------+-------------+-----+
+    Name Prefix: '+' for module, 'o' for loop, '*' for dataflow
+
+
+================================================================
+== HW Interfaces
+================================================================
+* AP_MEMORY
++------------------+-----------+----------+
+| Port             | Direction | Bitwidth |
++------------------+-----------+----------+
+| readout_address0 | out       | 1        |
+| readout_d0       | out       | 24       |
+| x_address0       | out       | 11       |
+| x_address1       | out       | 11       |
+| x_q0             | in        | 24       |
+| x_q1             | in        | 24       |
++------------------+-----------+----------+
+
+* TOP LEVEL CONTROL
++-----------+------------+-----------------------------------+
+| Interface | Type       | Ports                             |
++-----------+------------+-----------------------------------+
+| ap_clk    | clock      | ap_clk                            |
+| ap_rst    | reset      | ap_rst                            |
+| ap_ctrl   | ap_ctrl_hs | ap_done ap_idle ap_ready ap_start |
++-----------+------------+-----------------------------------+
+
+
+================================================================
+== SW I/O Information
+================================================================
+* Top Function Arguments
++----------+-----------+---------------------------------------------------------+
+| Argument | Direction | Datatype                                                |
++----------+-----------+---------------------------------------------------------+
+| x        | in        | ap_fixed<24, 12, (ap_q_mode)5, (ap_o_mode)3, 0> const * |
+| readout  | out       | ap_fixed<24, 12, (ap_q_mode)5, (ap_o_mode)3, 0>*        |
++----------+-----------+---------------------------------------------------------+
+
+* SW-to-HW Mapping
++----------+------------------+---------+----------+
+| Argument | HW Interface     | HW Type | HW Usage |
++----------+------------------+---------+----------+
+| x        | x_address0       | port    | offset   |
+| x        | x_ce0            | port    |          |
+| x        | x_q0             | port    |          |
+| x        | x_address1       | port    | offset   |
+| x        | x_ce1            | port    |          |
+| x        | x_q1             | port    |          |
+| readout  | readout_address0 | port    | offset   |
+| readout  | readout_ce0      | port    |          |
+| readout  | readout_we0      | port    |          |
+| readout  | readout_d0       | port    |          |
++----------+------------------+---------+----------+
+
+
+================================================================
+== Bind Op Report
+================================================================
++----------------------------------------------------------+-----+--------+---------------------------------------------+--------+----------+---------+
+| Name                                                     | DSP | Pragma | Variable                                    | Op     | Impl     | Latency |
++----------------------------------------------------------+-----+--------+---------------------------------------------+--------+----------+---------+
+| + tcn_prepad_infer                                       | 34  |        |                                             |        |          |         |
+|  + p_anonymous_namespace_copy_and_prepad_252_s           | 0   |        |                                             |        |          |         |
+|    icmp_ln26_fu_378_p2                                   |     |        | icmp_ln26                                   | seteq  | auto     | 0       |
+|    add_ln26_fu_384_p2                                    |     |        | add_ln26                                    | add    | fabric   | 0       |
+|    icmp_ln31_fu_455_p2                                   |     |        | icmp_ln31                                   | setlt  | auto     | 0       |
+|    add_ln34_fu_394_p2                                    |     |        | add_ln34                                    | add    | fabric   | 0       |
+|    grp_fu_354_p3                                         |     |        | storemerge20141                             | select | auto_sel | 0       |
+|    grp_fu_354_p3                                         |     |        | storemerge18112113140                       | select | auto_sel | 0       |
+|    grp_fu_354_p3                                         |     |        | storemerge168788111114139                   | select | auto_sel | 0       |
+|    grp_fu_354_p3                                         |     |        | storemerge1466678689110115138               | select | auto_sel | 0       |
+|    grp_fu_354_p3                                         |     |        | storemerge12495065688590109116137           | select | auto_sel | 0       |
+|    grp_fu_354_p3                                         |     |        | storemerge103637485164698491108117136       | select | auto_sel | 0       |
+|    grp_fu_354_p3                                         |     |        | storemerge827283538475263708392107118135    | select | auto_sel | 0       |
+|    storemerge222326293439465362718293106119134_fu_484_p3 |     |        | storemerge222326293439465362718293106119134 | select | auto_sel | 0       |
+|    storemerge72425303340455461728194105120133_fu_493_p3  |     |        | storemerge72425303340455461728194105120133  | select | auto_sel | 0       |
+|    grp_fu_362_p3                                         |     |        | storemerge9313241445560738095104121132      | select | auto_sel | 0       |
+|    grp_fu_362_p3                                         |     |        | storemerge1142435659747996103122131         | select | auto_sel | 0       |
+|    grp_fu_362_p3                                         |     |        | storemerge135758757897102123130             | select | auto_sel | 0       |
+|    grp_fu_362_p3                                         |     |        | storemerge15767798101124129                 | select | auto_sel | 0       |
+|    grp_fu_362_p3                                         |     |        | storemerge1799100125128                     | select | auto_sel | 0       |
+|    grp_fu_362_p3                                         |     |        | storemerge19126127                          | select | auto_sel | 0       |
+|    grp_fu_362_p3                                         |     |        | storemerge21                                | select | auto_sel | 0       |
+|  + p_anonymous_namespace_tcn_block_252_1_s               | 4   |        |                                             |        |          |         |
+|   + p_anonymous_namespace_conv1_relu_252_1_9             | 0   |        |                                             |        |          |         |
+|     icmp_ln47_fu_616_p2                                  |     |        | icmp_ln47                                   | seteq  | auto     | 0       |
+|     add_ln47_fu_622_p2                                   |     |        | add_ln47                                    | add    | fabric   | 0       |
+|     icmp_ln49_fu_636_p2                                  |     |        | icmp_ln49                                   | seteq  | auto     | 0       |
+|     add_ln49_fu_642_p2                                   |     |        | add_ln49                                    | add    | fabric   | 0       |
+|     sub_ln57_fu_682_p2                                   |     |        | sub_ln57                                    | sub    | fabric   | 0       |
+|     add_ln60_fu_657_p2                                   |     |        | add_ln60                                    | add    | fabric   | 0       |
+|     icmp_ln52_fu_704_p2                                  |     |        | icmp_ln52                                   | seteq  | auto     | 0       |
+|     add_ln52_fu_710_p2                                   |     |        | add_ln52                                    | add    | fabric   | 0       |
+|     add_ln57_17_fu_720_p2                                |     |        | add_ln57_17                                 | add    | fabric   | 0       |
+|     add_ln57_fu_735_p2                                   |     |        | add_ln57                                    | add    | fabric   | 0       |
+|     add_ln57_1_fu_999_p2                                 |     |        | add_ln57_1                                  | add    | fabric   | 0       |
+|     add_ln57_2_fu_1027_p2                                |     |        | add_ln57_2                                  | add    | fabric   | 0       |
+|     add_ln57_3_fu_1128_p2                                |     |        | add_ln57_3                                  | add    | fabric   | 0       |
+|     add_ln57_4_fu_1156_p2                                |     |        | add_ln57_4                                  | add    | fabric   | 0       |
+|     add_ln57_5_fu_1257_p2                                |     |        | add_ln57_5                                  | add    | fabric   | 0       |
+|     add_ln57_6_fu_1285_p2                                |     |        | add_ln57_6                                  | add    | fabric   | 0       |
+|     add_ln57_7_fu_1386_p2                                |     |        | add_ln57_7                                  | add    | fabric   | 0       |
+|     add_ln57_8_fu_1414_p2                                |     |        | add_ln57_8                                  | add    | fabric   | 0       |
+|     add_ln57_9_fu_1491_p2                                |     |        | add_ln57_9                                  | add    | fabric   | 0       |
+|     add_ln57_10_fu_1518_p2                               |     |        | add_ln57_10                                 | add    | fabric   | 0       |
+|     add_ln57_11_fu_1595_p2                               |     |        | add_ln57_11                                 | add    | fabric   | 0       |
+|     add_ln57_12_fu_1622_p2                               |     |        | add_ln57_12                                 | add    | fabric   | 0       |
+|     add_ln57_13_fu_1699_p2                               |     |        | add_ln57_13                                 | add    | fabric   | 0       |
+|     add_ln57_14_fu_1727_p2                               |     |        | add_ln57_14                                 | add    | fabric   | 0       |
+|     add_ln57_15_fu_1754_p2                               |     |        | add_ln57_15                                 | add    | fabric   | 0       |
+|     add_ln57_16_fu_1782_p2                               |     |        | add_ln57_16                                 | add    | fabric   | 0       |
+|     icmp_ln17_fu_766_p2                                  |     |        | icmp_ln17                                   | setgt  | auto     | 0       |
+|     select_ln17_fu_782_p3                                |     |        | select_ln17                                 | select | auto_sel | 0       |
+|   + p_anonymous_namespace_conv2_relu_residual_252_1_8    | 4   |        |                                             |        |          |         |
+|     icmp_ln73_fu_637_p2                                  |     |        | icmp_ln73                                   | seteq  | auto     | 0       |
+|     add_ln73_fu_643_p2                                   |     |        | add_ln73                                    | add    | fabric   | 0       |
+|     add_ln87_fu_657_p2                                   |     |        | add_ln87                                    | add    | fabric   | 0       |
+|     icmp_ln75_fu_671_p2                                  |     |        | icmp_ln75                                   | seteq  | auto     | 0       |
+|     add_ln75_fu_677_p2                                   |     |        | add_ln75                                    | add    | fabric   | 0       |
+|     sub_ln83_fu_712_p2                                   |     |        | sub_ln83                                    | sub    | fabric   | 0       |
+|     add_ln87_1_fu_718_p2                                 |     |        | add_ln87_1                                  | add    | fabric   | 0       |
+|     add_ln88_fu_728_p2                                   |     |        | add_ln88                                    | add    | fabric   | 0       |
+|     icmp_ln78_fu_750_p2                                  |     |        | icmp_ln78                                   | seteq  | auto     | 0       |
+|     add_ln78_fu_756_p2                                   |     |        | add_ln78                                    | add    | fabric   | 0       |
+|     add_ln83_17_fu_766_p2                                |     |        | add_ln83_17                                 | add    | fabric   | 0       |
+|     add_ln83_fu_781_p2                                   |     |        | add_ln83                                    | add    | fabric   | 0       |
+|     add_ln83_1_fu_1020_p2                                |     |        | add_ln83_1                                  | add    | fabric   | 0       |
+|     add_ln83_2_fu_1048_p2                                |     |        | add_ln83_2                                  | add    | fabric   | 0       |
+|     add_ln83_3_fu_1149_p2                                |     |        | add_ln83_3                                  | add    | fabric   | 0       |
+|     mul_36s_26s_62_2_1_U32                               | 4   |        | mul_ln83_3                                  | mul    | auto     | 1       |
+|     add_ln83_4_fu_1176_p2                                |     |        | add_ln83_4                                  | add    | fabric   | 0       |
+|     add_ln83_5_fu_1277_p2                                |     |        | add_ln83_5                                  | add    | fabric   | 0       |
+|     add_ln83_6_fu_1304_p2                                |     |        | add_ln83_6                                  | add    | fabric   | 0       |
+|     add_ln83_7_fu_1405_p2                                |     |        | add_ln83_7                                  | add    | fabric   | 0       |
+|     add_ln83_8_fu_1433_p2                                |     |        | add_ln83_8                                  | add    | fabric   | 0       |
+|     add_ln83_9_fu_1510_p2                                |     |        | add_ln83_9                                  | add    | fabric   | 0       |
+|     add_ln83_10_fu_1538_p2                               |     |        | add_ln83_10                                 | add    | fabric   | 0       |
+|     add_ln83_11_fu_1615_p2                               |     |        | add_ln83_11                                 | add    | fabric   | 0       |
+|     add_ln83_12_fu_1642_p2                               |     |        | add_ln83_12                                 | add    | fabric   | 0       |
+|     add_ln83_13_fu_1719_p2                               |     |        | add_ln83_13                                 | add    | fabric   | 0       |
+|     add_ln83_14_fu_1747_p2                               |     |        | add_ln83_14                                 | add    | fabric   | 0       |
+|     add_ln83_15_fu_1774_p2                               |     |        | add_ln83_15                                 | add    | fabric   | 0       |
+|     add_ln83_16_fu_1802_p2                               |     |        | add_ln83_16                                 | add    | fabric   | 0       |
+|     icmp_ln17_fu_1822_p2                                 |     |        | icmp_ln17                                   | setgt  | auto     | 0       |
+|     conv2_relu_fu_1828_p3                                |     |        | conv2_relu                                  | select | auto_sel | 0       |
+|     x_fu_1852_p2                                         |     |        | x                                           | add    | fabric   | 0       |
+|     icmp_ln17_1_fu_1868_p2                               |     |        | icmp_ln17_1                                 | setgt  | auto     | 0       |
+|     select_ln17_fu_1873_p3                               |     |        | select_ln17                                 | select | auto_sel | 0       |
+|  + p_anonymous_namespace_tcn_block_248_2_s               | 0   |        |                                             |        |          |         |
+|   + p_anonymous_namespace_conv1_relu_248_2_11            | 0   |        |                                             |        |          |         |
+|     icmp_ln47_fu_626_p2                                  |     |        | icmp_ln47                                   | seteq  | auto     | 0       |
+|     add_ln47_fu_632_p2                                   |     |        | add_ln47                                    | add    | fabric   | 0       |
+|     icmp_ln49_fu_646_p2                                  |     |        | icmp_ln49                                   | seteq  | auto     | 0       |
+|     add_ln49_fu_652_p2                                   |     |        | add_ln49                                    | add    | fabric   | 0       |
+|     sub_ln57_fu_692_p2                                   |     |        | sub_ln57                                    | sub    | fabric   | 0       |
+|     add_ln60_fu_667_p2                                   |     |        | add_ln60                                    | add    | fabric   | 0       |
+|     icmp_ln52_fu_714_p2                                  |     |        | icmp_ln52                                   | seteq  | auto     | 0       |
+|     add_ln52_fu_720_p2                                   |     |        | add_ln52                                    | add    | fabric   | 0       |
+|     add_ln57_33_fu_730_p2                                |     |        | add_ln57_33                                 | add    | fabric   | 0       |
+|     add_ln57_fu_753_p2                                   |     |        | add_ln57                                    | add    | fabric   | 0       |
+|     add_ln57_17_fu_1017_p2                               |     |        | add_ln57_17                                 | add    | fabric   | 0       |
+|     add_ln57_18_fu_1045_p2                               |     |        | add_ln57_18                                 | add    | fabric   | 0       |
+|     add_ln57_19_fu_1146_p2                               |     |        | add_ln57_19                                 | add    | fabric   | 0       |
+|     add_ln57_20_fu_1174_p2                               |     |        | add_ln57_20                                 | add    | fabric   | 0       |
+|     add_ln57_21_fu_1275_p2                               |     |        | add_ln57_21                                 | add    | fabric   | 0       |
+|     add_ln57_22_fu_1303_p2                               |     |        | add_ln57_22                                 | add    | fabric   | 0       |
+|     add_ln57_23_fu_1404_p2                               |     |        | add_ln57_23                                 | add    | fabric   | 0       |
+|     add_ln57_24_fu_1432_p2                               |     |        | add_ln57_24                                 | add    | fabric   | 0       |
+|     add_ln57_25_fu_1509_p2                               |     |        | add_ln57_25                                 | add    | fabric   | 0       |
+|     add_ln57_26_fu_1537_p2                               |     |        | add_ln57_26                                 | add    | fabric   | 0       |
+|     add_ln57_27_fu_1614_p2                               |     |        | add_ln57_27                                 | add    | fabric   | 0       |
+|     add_ln57_28_fu_1642_p2                               |     |        | add_ln57_28                                 | add    | fabric   | 0       |
+|     add_ln57_29_fu_1719_p2                               |     |        | add_ln57_29                                 | add    | fabric   | 0       |
+|     add_ln57_30_fu_1747_p2                               |     |        | add_ln57_30                                 | add    | fabric   | 0       |
+|     add_ln57_31_fu_1774_p2                               |     |        | add_ln57_31                                 | add    | fabric   | 0       |
+|     add_ln57_32_fu_1802_p2                               |     |        | add_ln57_32                                 | add    | fabric   | 0       |
+|     icmp_ln17_fu_784_p2                                  |     |        | icmp_ln17                                   | setgt  | auto     | 0       |
+|     select_ln17_fu_800_p3                                |     |        | select_ln17                                 | select | auto_sel | 0       |
+|   + p_anonymous_namespace_conv2_relu_residual_248_2_10   | 0   |        |                                             |        |          |         |
+|     icmp_ln73_fu_627_p2                                  |     |        | icmp_ln73                                   | seteq  | auto     | 0       |
+|     add_ln73_fu_633_p2                                   |     |        | add_ln73                                    | add    | fabric   | 0       |
+|     add_ln87_fu_647_p2                                   |     |        | add_ln87                                    | add    | fabric   | 0       |
+|     icmp_ln75_fu_661_p2                                  |     |        | icmp_ln75                                   | seteq  | auto     | 0       |
+|     add_ln75_fu_667_p2                                   |     |        | add_ln75                                    | add    | fabric   | 0       |
+|     sub_ln83_fu_702_p2                                   |     |        | sub_ln83                                    | sub    | fabric   | 0       |
+|     add_ln87_2_fu_708_p2                                 |     |        | add_ln87_2                                  | add    | fabric   | 0       |
+|     add_ln88_fu_718_p2                                   |     |        | add_ln88                                    | add    | fabric   | 0       |
+|     icmp_ln78_fu_740_p2                                  |     |        | icmp_ln78                                   | seteq  | auto     | 0       |
+|     add_ln78_fu_746_p2                                   |     |        | add_ln78                                    | add    | fabric   | 0       |
+|     add_ln83_33_fu_756_p2                                |     |        | add_ln83_33                                 | add    | fabric   | 0       |
+|     add_ln83_fu_779_p2                                   |     |        | add_ln83                                    | add    | fabric   | 0       |
+|     add_ln83_17_fu_1018_p2                               |     |        | add_ln83_17                                 | add    | fabric   | 0       |
+|     add_ln83_18_fu_1046_p2                               |     |        | add_ln83_18                                 | add    | fabric   | 0       |
+|     add_ln83_19_fu_1147_p2                               |     |        | add_ln83_19                                 | add    | fabric   | 0       |
+|     add_ln83_20_fu_1175_p2                               |     |        | add_ln83_20                                 | add    | fabric   | 0       |
+|     add_ln83_21_fu_1276_p2                               |     |        | add_ln83_21                                 | add    | fabric   | 0       |
+|     add_ln83_22_fu_1304_p2                               |     |        | add_ln83_22                                 | add    | fabric   | 0       |
+|     add_ln83_23_fu_1405_p2                               |     |        | add_ln83_23                                 | add    | fabric   | 0       |
+|     add_ln83_24_fu_1433_p2                               |     |        | add_ln83_24                                 | add    | fabric   | 0       |
+|     add_ln83_25_fu_1510_p2                               |     |        | add_ln83_25                                 | add    | fabric   | 0       |
+|     add_ln83_26_fu_1538_p2                               |     |        | add_ln83_26                                 | add    | fabric   | 0       |
+|     add_ln83_27_fu_1615_p2                               |     |        | add_ln83_27                                 | add    | fabric   | 0       |
+|     add_ln83_28_fu_1643_p2                               |     |        | add_ln83_28                                 | add    | fabric   | 0       |
+|     add_ln83_29_fu_1720_p2                               |     |        | add_ln83_29                                 | add    | fabric   | 0       |
+|     add_ln83_30_fu_1748_p2                               |     |        | add_ln83_30                                 | add    | fabric   | 0       |
+|     add_ln83_31_fu_1775_p2                               |     |        | add_ln83_31                                 | add    | fabric   | 0       |
+|     add_ln83_32_fu_1803_p2                               |     |        | add_ln83_32                                 | add    | fabric   | 0       |
+|     icmp_ln17_fu_1823_p2                                 |     |        | icmp_ln17                                   | setgt  | auto     | 0       |
+|     conv2_relu_fu_1829_p3                                |     |        | conv2_relu                                  | select | auto_sel | 0       |
+|     x_fu_1853_p2                                         |     |        | x                                           | add    | fabric   | 0       |
+|     icmp_ln17_2_fu_1869_p2                               |     |        | icmp_ln17_2                                 | setgt  | auto     | 0       |
+|     select_ln17_fu_1874_p3                               |     |        | select_ln17                                 | select | auto_sel | 0       |
+|  + p_anonymous_namespace_tcn_block_240_4_s               | 0   |        |                                             |        |          |         |
+|   + p_anonymous_namespace_conv1_relu_240_4_13            | 0   |        |                                             |        |          |         |
+|     icmp_ln47_fu_616_p2                                  |     |        | icmp_ln47                                   | seteq  | auto     | 0       |
+|     add_ln47_fu_622_p2                                   |     |        | add_ln47                                    | add    | fabric   | 0       |
+|     icmp_ln49_fu_636_p2                                  |     |        | icmp_ln49                                   | seteq  | auto     | 0       |
+|     add_ln49_fu_642_p2                                   |     |        | add_ln49                                    | add    | fabric   | 0       |
+|     sub_ln57_fu_682_p2                                   |     |        | sub_ln57                                    | sub    | fabric   | 0       |
+|     add_ln60_fu_657_p2                                   |     |        | add_ln60                                    | add    | fabric   | 0       |
+|     icmp_ln52_fu_704_p2                                  |     |        | icmp_ln52                                   | seteq  | auto     | 0       |
+|     add_ln52_fu_710_p2                                   |     |        | add_ln52                                    | add    | fabric   | 0       |
+|     add_ln57_49_fu_720_p2                                |     |        | add_ln57_49                                 | add    | fabric   | 0       |
+|     add_ln57_fu_743_p2                                   |     |        | add_ln57                                    | add    | fabric   | 0       |
+|     add_ln57_33_fu_1006_p2                               |     |        | add_ln57_33                                 | add    | fabric   | 0       |
+|     add_ln57_34_fu_1034_p2                               |     |        | add_ln57_34                                 | add    | fabric   | 0       |
+|     add_ln57_35_fu_1135_p2                               |     |        | add_ln57_35                                 | add    | fabric   | 0       |
+|     add_ln57_36_fu_1163_p2                               |     |        | add_ln57_36                                 | add    | fabric   | 0       |
+|     add_ln57_37_fu_1264_p2                               |     |        | add_ln57_37                                 | add    | fabric   | 0       |
+|     add_ln57_38_fu_1292_p2                               |     |        | add_ln57_38                                 | add    | fabric   | 0       |
+|     add_ln57_39_fu_1393_p2                               |     |        | add_ln57_39                                 | add    | fabric   | 0       |
+|     add_ln57_40_fu_1421_p2                               |     |        | add_ln57_40                                 | add    | fabric   | 0       |
+|     add_ln57_41_fu_1498_p2                               |     |        | add_ln57_41                                 | add    | fabric   | 0       |
+|     add_ln57_42_fu_1526_p2                               |     |        | add_ln57_42                                 | add    | fabric   | 0       |
+|     add_ln57_43_fu_1603_p2                               |     |        | add_ln57_43                                 | add    | fabric   | 0       |
+|     add_ln57_44_fu_1631_p2                               |     |        | add_ln57_44                                 | add    | fabric   | 0       |
+|     add_ln57_45_fu_1708_p2                               |     |        | add_ln57_45                                 | add    | fabric   | 0       |
+|     add_ln57_46_fu_1735_p2                               |     |        | add_ln57_46                                 | add    | fabric   | 0       |
+|     add_ln57_47_fu_1762_p2                               |     |        | add_ln57_47                                 | add    | fabric   | 0       |
+|     add_ln57_48_fu_1790_p2                               |     |        | add_ln57_48                                 | add    | fabric   | 0       |
+|     icmp_ln17_fu_774_p2                                  |     |        | icmp_ln17                                   | setgt  | auto     | 0       |
+|     select_ln17_fu_790_p3                                |     |        | select_ln17                                 | select | auto_sel | 0       |
+|   + p_anonymous_namespace_conv2_relu_residual_240_4_12   | 0   |        |                                             |        |          |         |
+|     icmp_ln73_fu_625_p2                                  |     |        | icmp_ln73                                   | seteq  | auto     | 0       |
+|     add_ln73_fu_631_p2                                   |     |        | add_ln73                                    | add    | fabric   | 0       |
+|     add_ln87_fu_645_p2                                   |     |        | add_ln87                                    | add    | fabric   | 0       |
+|     icmp_ln75_fu_659_p2                                  |     |        | icmp_ln75                                   | seteq  | auto     | 0       |
+|     add_ln75_fu_665_p2                                   |     |        | add_ln75                                    | add    | fabric   | 0       |
+|     sub_ln83_fu_700_p2                                   |     |        | sub_ln83                                    | sub    | fabric   | 0       |
+|     add_ln87_3_fu_706_p2                                 |     |        | add_ln87_3                                  | add    | fabric   | 0       |
+|     add_ln88_fu_716_p2                                   |     |        | add_ln88                                    | add    | fabric   | 0       |
+|     icmp_ln78_fu_738_p2                                  |     |        | icmp_ln78                                   | seteq  | auto     | 0       |
+|     add_ln78_fu_744_p2                                   |     |        | add_ln78                                    | add    | fabric   | 0       |
+|     add_ln83_49_fu_754_p2                                |     |        | add_ln83_49                                 | add    | fabric   | 0       |
+|     add_ln83_fu_777_p2                                   |     |        | add_ln83                                    | add    | fabric   | 0       |
+|     add_ln83_33_fu_1016_p2                               |     |        | add_ln83_33                                 | add    | fabric   | 0       |
+|     add_ln83_34_fu_1044_p2                               |     |        | add_ln83_34                                 | add    | fabric   | 0       |
+|     add_ln83_35_fu_1145_p2                               |     |        | add_ln83_35                                 | add    | fabric   | 0       |
+|     add_ln83_36_fu_1173_p2                               |     |        | add_ln83_36                                 | add    | fabric   | 0       |
+|     add_ln83_37_fu_1274_p2                               |     |        | add_ln83_37                                 | add    | fabric   | 0       |
+|     add_ln83_38_fu_1302_p2                               |     |        | add_ln83_38                                 | add    | fabric   | 0       |
+|     add_ln83_39_fu_1403_p2                               |     |        | add_ln83_39                                 | add    | fabric   | 0       |
+|     add_ln83_40_fu_1431_p2                               |     |        | add_ln83_40                                 | add    | fabric   | 0       |
+|     add_ln83_41_fu_1508_p2                               |     |        | add_ln83_41                                 | add    | fabric   | 0       |
+|     add_ln83_42_fu_1536_p2                               |     |        | add_ln83_42                                 | add    | fabric   | 0       |
+|     add_ln83_43_fu_1613_p2                               |     |        | add_ln83_43                                 | add    | fabric   | 0       |
+|     add_ln83_44_fu_1641_p2                               |     |        | add_ln83_44                                 | add    | fabric   | 0       |
+|     add_ln83_45_fu_1718_p2                               |     |        | add_ln83_45                                 | add    | fabric   | 0       |
+|     add_ln83_46_fu_1746_p2                               |     |        | add_ln83_46                                 | add    | fabric   | 0       |
+|     add_ln83_47_fu_1773_p2                               |     |        | add_ln83_47                                 | add    | fabric   | 0       |
+|     add_ln83_48_fu_1801_p2                               |     |        | add_ln83_48                                 | add    | fabric   | 0       |
+|     icmp_ln17_fu_1821_p2                                 |     |        | icmp_ln17                                   | setgt  | auto     | 0       |
+|     conv2_relu_fu_1827_p3                                |     |        | conv2_relu                                  | select | auto_sel | 0       |
+|     x_fu_1851_p2                                         |     |        | x                                           | add    | fabric   | 0       |
+|     icmp_ln17_3_fu_1867_p2                               |     |        | icmp_ln17_3                                 | setgt  | auto     | 0       |
+|     select_ln17_fu_1872_p3                               |     |        | select_ln17                                 | select | auto_sel | 0       |
+|  + p_anonymous_namespace_tcn_block_224_8_s               | 0   |        |                                             |        |          |         |
+|   + p_anonymous_namespace_conv1_relu_224_8_15            | 0   |        |                                             |        |          |         |
+|     icmp_ln47_fu_628_p2                                  |     |        | icmp_ln47                                   | seteq  | auto     | 0       |
+|     add_ln47_fu_634_p2                                   |     |        | add_ln47                                    | add    | fabric   | 0       |
+|     icmp_ln49_fu_648_p2                                  |     |        | icmp_ln49                                   | seteq  | auto     | 0       |
+|     add_ln49_fu_654_p2                                   |     |        | add_ln49                                    | add    | fabric   | 0       |
+|     sub_ln57_fu_694_p2                                   |     |        | sub_ln57                                    | sub    | fabric   | 0       |
+|     add_ln60_fu_669_p2                                   |     |        | add_ln60                                    | add    | fabric   | 0       |
+|     icmp_ln52_fu_716_p2                                  |     |        | icmp_ln52                                   | seteq  | auto     | 0       |
+|     add_ln52_fu_722_p2                                   |     |        | add_ln52                                    | add    | fabric   | 0       |
+|     add_ln57_65_fu_732_p2                                |     |        | add_ln57_65                                 | add    | fabric   | 0       |
+|     add_ln57_fu_755_p2                                   |     |        | add_ln57                                    | add    | fabric   | 0       |
+|     add_ln57_49_fu_1019_p2                               |     |        | add_ln57_49                                 | add    | fabric   | 0       |
+|     add_ln57_50_fu_1047_p2                               |     |        | add_ln57_50                                 | add    | fabric   | 0       |
+|     add_ln57_51_fu_1148_p2                               |     |        | add_ln57_51                                 | add    | fabric   | 0       |
+|     add_ln57_52_fu_1176_p2                               |     |        | add_ln57_52                                 | add    | fabric   | 0       |
+|     add_ln57_53_fu_1277_p2                               |     |        | add_ln57_53                                 | add    | fabric   | 0       |
+|     add_ln57_54_fu_1305_p2                               |     |        | add_ln57_54                                 | add    | fabric   | 0       |
+|     add_ln57_55_fu_1406_p2                               |     |        | add_ln57_55                                 | add    | fabric   | 0       |
+|     add_ln57_56_fu_1434_p2                               |     |        | add_ln57_56                                 | add    | fabric   | 0       |
+|     add_ln57_57_fu_1511_p2                               |     |        | add_ln57_57                                 | add    | fabric   | 0       |
+|     add_ln57_58_fu_1539_p2                               |     |        | add_ln57_58                                 | add    | fabric   | 0       |
+|     add_ln57_59_fu_1616_p2                               |     |        | add_ln57_59                                 | add    | fabric   | 0       |
+|     add_ln57_60_fu_1644_p2                               |     |        | add_ln57_60                                 | add    | fabric   | 0       |
+|     add_ln57_61_fu_1720_p2                               |     |        | add_ln57_61                                 | add    | fabric   | 0       |
+|     add_ln57_62_fu_1748_p2                               |     |        | add_ln57_62                                 | add    | fabric   | 0       |
+|     add_ln57_63_fu_1775_p2                               |     |        | add_ln57_63                                 | add    | fabric   | 0       |
+|     add_ln57_64_fu_1802_p2                               |     |        | add_ln57_64                                 | add    | fabric   | 0       |
+|     icmp_ln17_fu_786_p2                                  |     |        | icmp_ln17                                   | setgt  | auto     | 0       |
+|     select_ln17_fu_802_p3                                |     |        | select_ln17                                 | select | auto_sel | 0       |
+|   + p_anonymous_namespace_conv2_relu_residual_224_8_14   | 0   |        |                                             |        |          |         |
+|     icmp_ln73_fu_641_p2                                  |     |        | icmp_ln73                                   | seteq  | auto     | 0       |
+|     add_ln73_fu_647_p2                                   |     |        | add_ln73                                    | add    | fabric   | 0       |
+|     add_ln87_fu_661_p2                                   |     |        | add_ln87                                    | add    | fabric   | 0       |
+|     icmp_ln75_fu_675_p2                                  |     |        | icmp_ln75                                   | seteq  | auto     | 0       |
+|     add_ln75_fu_681_p2                                   |     |        | add_ln75                                    | add    | fabric   | 0       |
+|     sub_ln83_fu_716_p2                                   |     |        | sub_ln83                                    | sub    | fabric   | 0       |
+|     add_ln87_4_fu_722_p2                                 |     |        | add_ln87_4                                  | add    | fabric   | 0       |
+|     add_ln88_fu_732_p2                                   |     |        | add_ln88                                    | add    | fabric   | 0       |
+|     icmp_ln78_fu_754_p2                                  |     |        | icmp_ln78                                   | seteq  | auto     | 0       |
+|     add_ln78_fu_760_p2                                   |     |        | add_ln78                                    | add    | fabric   | 0       |
+|     add_ln83_65_fu_770_p2                                |     |        | add_ln83_65                                 | add    | fabric   | 0       |
+|     add_ln83_fu_793_p2                                   |     |        | add_ln83                                    | add    | fabric   | 0       |
+|     add_ln83_49_fu_1032_p2                               |     |        | add_ln83_49                                 | add    | fabric   | 0       |
+|     add_ln83_50_fu_1060_p2                               |     |        | add_ln83_50                                 | add    | fabric   | 0       |
+|     add_ln83_51_fu_1161_p2                               |     |        | add_ln83_51                                 | add    | fabric   | 0       |
+|     add_ln83_52_fu_1189_p2                               |     |        | add_ln83_52                                 | add    | fabric   | 0       |
+|     add_ln83_53_fu_1290_p2                               |     |        | add_ln83_53                                 | add    | fabric   | 0       |
+|     add_ln83_54_fu_1318_p2                               |     |        | add_ln83_54                                 | add    | fabric   | 0       |
+|     add_ln83_55_fu_1419_p2                               |     |        | add_ln83_55                                 | add    | fabric   | 0       |
+|     add_ln83_56_fu_1447_p2                               |     |        | add_ln83_56                                 | add    | fabric   | 0       |
+|     add_ln83_57_fu_1524_p2                               |     |        | add_ln83_57                                 | add    | fabric   | 0       |
+|     add_ln83_58_fu_1552_p2                               |     |        | add_ln83_58                                 | add    | fabric   | 0       |
+|     add_ln83_59_fu_1629_p2                               |     |        | add_ln83_59                                 | add    | fabric   | 0       |
+|     add_ln83_60_fu_1656_p2                               |     |        | add_ln83_60                                 | add    | fabric   | 0       |
+|     add_ln83_61_fu_1733_p2                               |     |        | add_ln83_61                                 | add    | fabric   | 0       |
+|     add_ln83_62_fu_1761_p2                               |     |        | add_ln83_62                                 | add    | fabric   | 0       |
+|     add_ln83_63_fu_1788_p2                               |     |        | add_ln83_63                                 | add    | fabric   | 0       |
+|     add_ln83_64_fu_1816_p2                               |     |        | add_ln83_64                                 | add    | fabric   | 0       |
+|     icmp_ln17_fu_1836_p2                                 |     |        | icmp_ln17                                   | setgt  | auto     | 0       |
+|     conv2_relu_fu_1842_p3                                |     |        | conv2_relu                                  | select | auto_sel | 0       |
+|     x_fu_1866_p2                                         |     |        | x                                           | add    | fabric   | 0       |
+|     icmp_ln17_4_fu_1882_p2                               |     |        | icmp_ln17_4                                 | setgt  | auto     | 0       |
+|     select_ln17_fu_1887_p3                               |     |        | select_ln17                                 | select | auto_sel | 0       |
+|  + p_anonymous_namespace_tcn_block_192_16_s              | 0   |        |                                             |        |          |         |
+|   + p_anonymous_namespace_conv1_relu_192_16_17           | 0   |        |                                             |        |          |         |
+|     icmp_ln47_fu_616_p2                                  |     |        | icmp_ln47                                   | seteq  | auto     | 0       |
+|     add_ln47_fu_622_p2                                   |     |        | add_ln47                                    | add    | fabric   | 0       |
+|     icmp_ln49_fu_636_p2                                  |     |        | icmp_ln49                                   | seteq  | auto     | 0       |
+|     add_ln49_fu_642_p2                                   |     |        | add_ln49                                    | add    | fabric   | 0       |
+|     sub_ln57_fu_682_p2                                   |     |        | sub_ln57                                    | sub    | fabric   | 0       |
+|     add_ln60_fu_657_p2                                   |     |        | add_ln60                                    | add    | fabric   | 0       |
+|     icmp_ln52_fu_704_p2                                  |     |        | icmp_ln52                                   | seteq  | auto     | 0       |
+|     add_ln52_fu_710_p2                                   |     |        | add_ln52                                    | add    | fabric   | 0       |
+|     add_ln57_81_fu_720_p2                                |     |        | add_ln57_81                                 | add    | fabric   | 0       |
+|     add_ln57_fu_743_p2                                   |     |        | add_ln57                                    | add    | fabric   | 0       |
+|     add_ln57_65_fu_1007_p2                               |     |        | add_ln57_65                                 | add    | fabric   | 0       |
+|     add_ln57_66_fu_1035_p2                               |     |        | add_ln57_66                                 | add    | fabric   | 0       |
+|     add_ln57_67_fu_1136_p2                               |     |        | add_ln57_67                                 | add    | fabric   | 0       |
+|     add_ln57_68_fu_1164_p2                               |     |        | add_ln57_68                                 | add    | fabric   | 0       |
+|     add_ln57_69_fu_1265_p2                               |     |        | add_ln57_69                                 | add    | fabric   | 0       |
+|     add_ln57_70_fu_1293_p2                               |     |        | add_ln57_70                                 | add    | fabric   | 0       |
+|     add_ln57_71_fu_1394_p2                               |     |        | add_ln57_71                                 | add    | fabric   | 0       |
+|     add_ln57_72_fu_1422_p2                               |     |        | add_ln57_72                                 | add    | fabric   | 0       |
+|     add_ln57_73_fu_1499_p2                               |     |        | add_ln57_73                                 | add    | fabric   | 0       |
+|     add_ln57_74_fu_1527_p2                               |     |        | add_ln57_74                                 | add    | fabric   | 0       |
+|     add_ln57_75_fu_1604_p2                               |     |        | add_ln57_75                                 | add    | fabric   | 0       |
+|     add_ln57_76_fu_1632_p2                               |     |        | add_ln57_76                                 | add    | fabric   | 0       |
+|     add_ln57_77_fu_1709_p2                               |     |        | add_ln57_77                                 | add    | fabric   | 0       |
+|     add_ln57_78_fu_1737_p2                               |     |        | add_ln57_78                                 | add    | fabric   | 0       |
+|     add_ln57_79_fu_1764_p2                               |     |        | add_ln57_79                                 | add    | fabric   | 0       |
+|     add_ln57_80_fu_1792_p2                               |     |        | add_ln57_80                                 | add    | fabric   | 0       |
+|     icmp_ln17_fu_774_p2                                  |     |        | icmp_ln17                                   | setgt  | auto     | 0       |
+|     select_ln17_fu_790_p3                                |     |        | select_ln17                                 | select | auto_sel | 0       |
+|   + p_anonymous_namespace_conv2_relu_residual_192_16_16  | 0   |        |                                             |        |          |         |
+|     icmp_ln73_fu_637_p2                                  |     |        | icmp_ln73                                   | seteq  | auto     | 0       |
+|     add_ln73_fu_643_p2                                   |     |        | add_ln73                                    | add    | fabric   | 0       |
+|     add_ln87_fu_661_p2                                   |     |        | add_ln87                                    | add    | fabric   | 0       |
+|     icmp_ln75_fu_675_p2                                  |     |        | icmp_ln75                                   | seteq  | auto     | 0       |
+|     add_ln75_fu_681_p2                                   |     |        | add_ln75                                    | add    | fabric   | 0       |
+|     sub_ln83_fu_720_p2                                   |     |        | sub_ln83                                    | sub    | fabric   | 0       |
+|     add_ln87_5_fu_726_p2                                 |     |        | add_ln87_5                                  | add    | fabric   | 0       |
+|     add_ln88_fu_736_p2                                   |     |        | add_ln88                                    | add    | fabric   | 0       |
+|     icmp_ln78_fu_758_p2                                  |     |        | icmp_ln78                                   | seteq  | auto     | 0       |
+|     add_ln78_fu_764_p2                                   |     |        | add_ln78                                    | add    | fabric   | 0       |
+|     add_ln83_81_fu_774_p2                                |     |        | add_ln83_81                                 | add    | fabric   | 0       |
+|     add_ln83_fu_797_p2                                   |     |        | add_ln83                                    | add    | fabric   | 0       |
+|     add_ln83_65_fu_1036_p2                               |     |        | add_ln83_65                                 | add    | fabric   | 0       |
+|     add_ln83_66_fu_1064_p2                               |     |        | add_ln83_66                                 | add    | fabric   | 0       |
+|     add_ln83_67_fu_1165_p2                               |     |        | add_ln83_67                                 | add    | fabric   | 0       |
+|     add_ln83_68_fu_1193_p2                               |     |        | add_ln83_68                                 | add    | fabric   | 0       |
+|     add_ln83_69_fu_1293_p2                               |     |        | add_ln83_69                                 | add    | fabric   | 0       |
+|     add_ln83_70_fu_1320_p2                               |     |        | add_ln83_70                                 | add    | fabric   | 0       |
+|     add_ln83_71_fu_1421_p2                               |     |        | add_ln83_71                                 | add    | fabric   | 0       |
+|     add_ln83_72_fu_1449_p2                               |     |        | add_ln83_72                                 | add    | fabric   | 0       |
+|     add_ln83_73_fu_1526_p2                               |     |        | add_ln83_73                                 | add    | fabric   | 0       |
+|     add_ln83_74_fu_1554_p2                               |     |        | add_ln83_74                                 | add    | fabric   | 0       |
+|     add_ln83_75_fu_1631_p2                               |     |        | add_ln83_75                                 | add    | fabric   | 0       |
+|     add_ln83_76_fu_1659_p2                               |     |        | add_ln83_76                                 | add    | fabric   | 0       |
+|     add_ln83_77_fu_1736_p2                               |     |        | add_ln83_77                                 | add    | fabric   | 0       |
+|     add_ln83_78_fu_1764_p2                               |     |        | add_ln83_78                                 | add    | fabric   | 0       |
+|     add_ln83_79_fu_1791_p2                               |     |        | add_ln83_79                                 | add    | fabric   | 0       |
+|     add_ln83_80_fu_1819_p2                               |     |        | add_ln83_80                                 | add    | fabric   | 0       |
+|     icmp_ln17_fu_1839_p2                                 |     |        | icmp_ln17                                   | setgt  | auto     | 0       |
+|     conv2_relu_fu_1845_p3                                |     |        | conv2_relu                                  | select | auto_sel | 0       |
+|     x_fu_1869_p2                                         |     |        | x                                           | add    | fabric   | 0       |
+|     icmp_ln17_5_fu_1885_p2                               |     |        | icmp_ln17_5                                 | setgt  | auto     | 0       |
+|     select_ln17_fu_1890_p3                               |     |        | select_ln17                                 | select | auto_sel | 0       |
+|  + p_anonymous_namespace_global_average_readout          | 16  |        |                                             |        |          |         |
+|    icmp_ln111_fu_613_p2                                  |     |        | icmp_ln111                                  | seteq  | auto     | 0       |
+|    add_ln111_fu_619_p2                                   |     |        | add_ln111                                   | add    | fabric   | 0       |
+|    icmp_ln114_fu_638_p2                                  |     |        | icmp_ln114                                  | seteq  | auto     | 0       |
+|    add_ln114_fu_644_p2                                   |     |        | add_ln114                                   | add    | fabric   | 0       |
+|    add_ln116_fu_662_p2                                   |     |        | add_ln116                                   | add    | fabric   | 0       |
+|    acc_1_fu_712_p2                                       |     |        | acc_1                                       | add    | fabric   | 0       |
+|    sub_ln118_fu_680_p2                                   |     |        | sub_ln118                                   | sub    | fabric   | 0       |
+|    sub_ln118_1_fu_736_p2                                 |     |        | sub_ln118_1                                 | sub    | fabric   | 0       |
+|    select_ln118_fu_741_p3                                |     |        | select_ln118                                | select | auto_sel | 0       |
+|    icmp_ln120_fu_803_p2                                  |     |        | icmp_ln120                                  | seteq  | auto     | 0       |
+|    add_ln120_fu_809_p2                                   |     |        | add_ln120                                   | add    | fabric   | 0       |
+|    icmp_ln122_fu_823_p2                                  |     |        | icmp_ln122                                  | seteq  | auto     | 0       |
+|    mul_31s_33s_60_2_1_U288                               | 4   |        | mul_ln126                                   | mul    | auto     | 1       |
+|    select_ln126_fu_882_p3                                |     |        | select_ln126                                | select | auto_sel | 0       |
+|    add_ln126_fu_889_p2                                   |     |        | add_ln126                                   | add    | fabric   | 0       |
+|    mul_31s_33s_60_2_1_U289                               | 4   |        | mul_ln126_1                                 | mul    | auto     | 1       |
+|    add_ln126_1_fu_913_p2                                 |     |        | add_ln126_1                                 | add    | fabric   | 0       |
+|    mul_31s_33s_60_2_1_U290                               | 4   |        | mul_ln126_2                                 | mul    | auto     | 1       |
+|    add_ln126_2_fu_960_p2                                 |     |        | add_ln126_2                                 | add    | fabric   | 0       |
+|    mul_30s_33s_60_2_1_U287                               | 4   |        | mul_ln126_3                                 | mul    | auto     | 1       |
+|    add_ln126_3_fu_983_p2                                 |     |        | add_ln126_3                                 | add    | fabric   | 0       |
+|    mul_31s_33s_60_2_1_U288                               | 4   |        | mul_ln126_4                                 | mul    | auto     | 1       |
+|    add_ln126_4_fu_1030_p2                                |     |        | add_ln126_4                                 | add    | fabric   | 0       |
+|    mul_30s_33s_60_2_1_U287                               | 4   |        | mul_ln126_5                                 | mul    | auto     | 1       |
+|    add_ln126_5_fu_1054_p2                                |     |        | add_ln126_5                                 | add    | fabric   | 0       |
+|    mul_31s_33s_60_2_1_U288                               | 4   |        | mul_ln126_6                                 | mul    | auto     | 1       |
+|    add_ln126_6_fu_1101_p2                                |     |        | add_ln126_6                                 | add    | fabric   | 0       |
+|    mul_30s_33s_60_2_1_U287                               | 4   |        | mul_ln126_7                                 | mul    | auto     | 1       |
+|    add_ln126_7_fu_1125_p2                                |     |        | add_ln126_7                                 | add    | fabric   | 0       |
+|    mul_31s_33s_60_2_1_U288                               | 4   |        | mul_ln126_8                                 | mul    | auto     | 1       |
+|    add_ln126_8_fu_1172_p2                                |     |        | add_ln126_8                                 | add    | fabric   | 0       |
+|    mul_31s_33s_60_2_1_U289                               | 4   |        | mul_ln126_9                                 | mul    | auto     | 1       |
+|    add_ln126_9_fu_1196_p2                                |     |        | add_ln126_9                                 | add    | fabric   | 0       |
+|    mul_30s_33s_60_2_1_U287                               | 4   |        | mul_ln126_10                                | mul    | auto     | 1       |
+|    add_ln126_10_fu_1243_p2                               |     |        | add_ln126_10                                | add    | fabric   | 0       |
+|    mul_31s_33s_60_2_1_U288                               | 4   |        | mul_ln126_11                                | mul    | auto     | 1       |
+|    add_ln126_11_fu_1267_p2                               |     |        | add_ln126_11                                | add    | fabric   | 0       |
+|    mul_31s_33s_60_2_1_U288                               | 4   |        | mul_ln126_12                                | mul    | auto     | 1       |
+|    add_ln126_12_fu_1314_p2                               |     |        | add_ln126_12                                | add    | fabric   | 0       |
+|    mul_31s_33s_60_2_1_U289                               | 4   |        | mul_ln126_13                                | mul    | auto     | 1       |
+|    add_ln126_13_fu_1338_p2                               |     |        | add_ln126_13                                | add    | fabric   | 0       |
+|    mul_31s_33s_60_2_1_U288                               | 4   |        | mul_ln126_14                                | mul    | auto     | 1       |
+|    add_ln126_14_fu_1361_p2                               |     |        | add_ln126_14                                | add    | fabric   | 0       |
+|    mul_30s_33s_60_2_1_U287                               | 4   |        | mul_ln126_15                                | mul    | auto     | 1       |
+|    add_ln126_15_fu_1385_p2                               |     |        | add_ln126_15                                | add    | fabric   | 0       |
++----------------------------------------------------------+-----+--------+---------------------------------------------+--------+----------+---------+
+
+
+================================================================
+== Storage Report
+================================================================
++---------------------------------------------------------+---------------+------+------+------+--------+----------------------------------+------+---------+------------------+
+| Name                                                    | Usage         | Type | BRAM | URAM | Pragma | Variable                         | Impl | Latency | Bitwidth, Depth, |
+|                                                         |               |      |      |      |        |                                  |      |         | Banks            |
++---------------------------------------------------------+---------------+------+------+------+--------+----------------------------------+------+---------+------------------+
+| + tcn_prepad_infer                                      |               |      | 63   | 0    |        |                                  |      |         |                  |
+|   mul_36s_25s_61_2_1_U314                               | ram_t2p array |      | 6    |      |        | buf0                             | auto | 1       | 24, 4032, 1      |
+|   buf1_U                                                | ram_2p array  |      | 6    |      |        | buf1                             | auto | 1       | 24, 3968, 1      |
+|   mul_36s_25s_61_2_1_U314                               | ram_2p array  |      | 6    |      |        | buf2                             | auto | 1       | 24, 3840, 1      |
+|   mul_36s_24s_60_2_1_U317                               | ram_2p array  |      | 6    |      |        | buf3                             | auto | 1       | 24, 3584, 1      |
+|   buf4_U                                                | ram_2p array  |      | 6    |      |        | buf4                             | auto | 1       | 24, 3072, 1      |
+|   buf5_U                                                | ram_1p array  |      | 3    |      |        | buf5                             | auto | 1       | 24, 2048, 1      |
+|  + p_anonymous_namespace_tcn_block_252_1_s              |               |      | 6    | 0    |        |                                  |      |         |                  |
+|    tmp_U                                                | ram_2p array  |      | 6    |      |        | tmp                              | auto | 1       | 24, 4000, 1      |
+|   + p_anonymous_namespace_conv1_relu_252_1_9            |               |      | 0    | 0    |        |                                  |      |         |                  |
+|     p_ZN11tcn_weightsL7CONV1_BE_0_U                     | rom_1p        |      |      |      |        | p_ZN11tcn_weightsL7CONV1_BE_0    | auto | 1       | 12, 16, 1        |
+|     p_ZN11tcn_weightsL7CONV1_WE_0_0_U                   | rom_1p        |      |      |      |        | p_ZN11tcn_weightsL7CONV1_WE_0_0  | auto | 1       | 13, 48, 1        |
+|     p_ZN11tcn_weightsL7CONV1_WE_0_1_U                   | rom_1p        |      |      |      |        | p_ZN11tcn_weightsL7CONV1_WE_0_1  | auto | 1       | 12, 48, 1        |
+|     p_ZN11tcn_weightsL7CONV1_WE_0_2_U                   | rom_1p        |      |      |      |        | p_ZN11tcn_weightsL7CONV1_WE_0_2  | auto | 1       | 12, 48, 1        |
+|     p_ZN11tcn_weightsL7CONV1_WE_0_3_U                   | rom_1p        |      |      |      |        | p_ZN11tcn_weightsL7CONV1_WE_0_3  | auto | 1       | 13, 48, 1        |
+|     p_ZN11tcn_weightsL7CONV1_WE_0_4_U                   | rom_1p        |      |      |      |        | p_ZN11tcn_weightsL7CONV1_WE_0_4  | auto | 1       | 12, 48, 1        |
+|     p_ZN11tcn_weightsL7CONV1_WE_0_5_U                   | rom_1p        |      |      |      |        | p_ZN11tcn_weightsL7CONV1_WE_0_5  | auto | 1       | 13, 48, 1        |
+|     p_ZN11tcn_weightsL7CONV1_WE_0_6_U                   | rom_1p        |      |      |      |        | p_ZN11tcn_weightsL7CONV1_WE_0_6  | auto | 1       | 11, 48, 1        |
+|     p_ZN11tcn_weightsL7CONV1_WE_0_7_U                   | rom_1p        |      |      |      |        | p_ZN11tcn_weightsL7CONV1_WE_0_7  | auto | 1       | 12, 48, 1        |
+|     p_ZN11tcn_weightsL7CONV1_WE_0_8_U                   | rom_1p        |      |      |      |        | p_ZN11tcn_weightsL7CONV1_WE_0_8  | auto | 1       | 12, 48, 1        |
+|     p_ZN11tcn_weightsL7CONV1_WE_0_9_U                   | rom_1p        |      |      |      |        | p_ZN11tcn_weightsL7CONV1_WE_0_9  | auto | 1       | 14, 48, 1        |
+|     p_ZN11tcn_weightsL7CONV1_WE_0_10_U                  | rom_1p        |      |      |      |        | p_ZN11tcn_weightsL7CONV1_WE_0_10 | auto | 1       | 13, 48, 1        |
+|     p_ZN11tcn_weightsL7CONV1_WE_0_11_U                  | rom_1p        |      |      |      |        | p_ZN11tcn_weightsL7CONV1_WE_0_11 | auto | 1       | 13, 48, 1        |
+|     p_ZN11tcn_weightsL7CONV1_WE_0_12_U                  | rom_1p        |      |      |      |        | p_ZN11tcn_weightsL7CONV1_WE_0_12 | auto | 1       | 13, 48, 1        |
+|     p_ZN11tcn_weightsL7CONV1_WE_0_13_U                  | rom_1p        |      |      |      |        | p_ZN11tcn_weightsL7CONV1_WE_0_13 | auto | 1       | 12, 48, 1        |
+|     p_ZN11tcn_weightsL7CONV1_WE_0_14_U                  | rom_1p        |      |      |      |        | p_ZN11tcn_weightsL7CONV1_WE_0_14 | auto | 1       | 12, 48, 1        |
+|     p_ZN11tcn_weightsL7CONV1_WE_0_15_U                  | rom_1p        |      |      |      |        | p_ZN11tcn_weightsL7CONV1_WE_0_15 | auto | 1       | 11, 48, 1        |
+|   + p_anonymous_namespace_conv2_relu_residual_252_1_8   |               |      | 0    | 0    |        |                                  |      |         |                  |
+|     p_ZN11tcn_weightsL7CONV2_BE_0_U                     | rom_1p        |      |      |      |        | p_ZN11tcn_weightsL7CONV2_BE_0    | auto | 1       | 13, 16, 1        |
+|     p_ZN11tcn_weightsL7CONV2_WE_0_0_U                   | rom_1p        |      |      |      |        | p_ZN11tcn_weightsL7CONV2_WE_0_0  | auto | 1       | 14, 48, 1        |
+|     p_ZN11tcn_weightsL7CONV2_WE_0_1_U                   | rom_1p        |      |      |      |        | p_ZN11tcn_weightsL7CONV2_WE_0_1  | auto | 1       | 13, 48, 1        |
+|     p_ZN11tcn_weightsL7CONV2_WE_0_2_U                   | rom_1p        |      |      |      |        | p_ZN11tcn_weightsL7CONV2_WE_0_2  | auto | 1       | 14, 48, 1        |
+|     p_ZN11tcn_weightsL7CONV2_WE_0_3_U                   | rom_1p        |      |      |      |        | p_ZN11tcn_weightsL7CONV2_WE_0_3  | auto | 1       | 14, 48, 1        |
+|     p_ZN11tcn_weightsL7CONV2_WE_0_4_U                   | rom_1p        |      |      |      |        | p_ZN11tcn_weightsL7CONV2_WE_0_4  | auto | 1       | 12, 48, 1        |
+|     p_ZN11tcn_weightsL7CONV2_WE_0_5_U                   | rom_1p        |      |      |      |        | p_ZN11tcn_weightsL7CONV2_WE_0_5  | auto | 1       | 12, 48, 1        |
+|     p_ZN11tcn_weightsL7CONV2_WE_0_6_U                   | rom_1p        |      |      |      |        | p_ZN11tcn_weightsL7CONV2_WE_0_6  | auto | 1       | 14, 48, 1        |
+|     p_ZN11tcn_weightsL7CONV2_WE_0_7_U                   | rom_1p        |      |      |      |        | p_ZN11tcn_weightsL7CONV2_WE_0_7  | auto | 1       | 12, 48, 1        |
+|     p_ZN11tcn_weightsL7CONV2_WE_0_8_U                   | rom_1p        |      |      |      |        | p_ZN11tcn_weightsL7CONV2_WE_0_8  | auto | 1       | 14, 48, 1        |
+|     p_ZN11tcn_weightsL7CONV2_WE_0_9_U                   | rom_1p        |      |      |      |        | p_ZN11tcn_weightsL7CONV2_WE_0_9  | auto | 1       | 13, 48, 1        |
+|     p_ZN11tcn_weightsL7CONV2_WE_0_10_U                  | rom_1p        |      |      |      |        | p_ZN11tcn_weightsL7CONV2_WE_0_10 | auto | 1       | 13, 48, 1        |
+|     p_ZN11tcn_weightsL7CONV2_WE_0_11_U                  | rom_1p        |      |      |      |        | p_ZN11tcn_weightsL7CONV2_WE_0_11 | auto | 1       | 13, 48, 1        |
+|     p_ZN11tcn_weightsL7CONV2_WE_0_12_U                  | rom_1p        |      |      |      |        | p_ZN11tcn_weightsL7CONV2_WE_0_12 | auto | 1       | 14, 48, 1        |
+|     p_ZN11tcn_weightsL7CONV2_WE_0_13_U                  | rom_1p        |      |      |      |        | p_ZN11tcn_weightsL7CONV2_WE_0_13 | auto | 1       | 12, 48, 1        |
+|     p_ZN11tcn_weightsL7CONV2_WE_0_14_U                  | rom_1p        |      |      |      |        | p_ZN11tcn_weightsL7CONV2_WE_0_14 | auto | 1       | 12, 48, 1        |
+|     p_ZN11tcn_weightsL7CONV2_WE_0_15_U                  | rom_1p        |      |      |      |        | p_ZN11tcn_weightsL7CONV2_WE_0_15 | auto | 1       | 13, 48, 1        |
+|  + p_anonymous_namespace_tcn_block_248_2_s              |               |      | 6    | 0    |        |                                  |      |         |                  |
+|    tmp_U                                                | ram_2p array  |      | 6    |      |        | tmp                              | auto | 1       | 24, 3904, 1      |
+|   + p_anonymous_namespace_conv1_relu_248_2_11           |               |      | 0    | 0    |        |                                  |      |         |                  |
+|     p_ZN11tcn_weightsL7CONV1_BE_1_U                     | rom_1p        |      |      |      |        | p_ZN11tcn_weightsL7CONV1_BE_1    | auto | 1       | 12, 16, 1        |
+|     p_ZN11tcn_weightsL7CONV1_WE_1_0_U                   | rom_1p        |      |      |      |        | p_ZN11tcn_weightsL7CONV1_WE_1_0  | auto | 1       | 13, 48, 1        |
+|     p_ZN11tcn_weightsL7CONV1_WE_1_1_U                   | rom_1p        |      |      |      |        | p_ZN11tcn_weightsL7CONV1_WE_1_1  | auto | 1       | 13, 48, 1        |
+|     p_ZN11tcn_weightsL7CONV1_WE_1_2_U                   | rom_1p        |      |      |      |        | p_ZN11tcn_weightsL7CONV1_WE_1_2  | auto | 1       | 13, 48, 1        |
+|     p_ZN11tcn_weightsL7CONV1_WE_1_3_U                   | rom_1p        |      |      |      |        | p_ZN11tcn_weightsL7CONV1_WE_1_3  | auto | 1       | 13, 48, 1        |
+|     p_ZN11tcn_weightsL7CONV1_WE_1_4_U                   | rom_1p        |      |      |      |        | p_ZN11tcn_weightsL7CONV1_WE_1_4  | auto | 1       | 12, 48, 1        |
+|     p_ZN11tcn_weightsL7CONV1_WE_1_5_U                   | rom_1p        |      |      |      |        | p_ZN11tcn_weightsL7CONV1_WE_1_5  | auto | 1       | 12, 48, 1        |
+|     p_ZN11tcn_weightsL7CONV1_WE_1_6_U                   | rom_1p        |      |      |      |        | p_ZN11tcn_weightsL7CONV1_WE_1_6  | auto | 1       | 12, 48, 1        |
+|     p_ZN11tcn_weightsL7CONV1_WE_1_7_U                   | rom_1p        |      |      |      |        | p_ZN11tcn_weightsL7CONV1_WE_1_7  | auto | 1       | 12, 48, 1        |
+|     p_ZN11tcn_weightsL7CONV1_WE_1_8_U                   | rom_1p        |      |      |      |        | p_ZN11tcn_weightsL7CONV1_WE_1_8  | auto | 1       | 13, 48, 1        |
+|     p_ZN11tcn_weightsL7CONV1_WE_1_9_U                   | rom_1p        |      |      |      |        | p_ZN11tcn_weightsL7CONV1_WE_1_9  | auto | 1       | 14, 48, 1        |
+|     p_ZN11tcn_weightsL7CONV1_WE_1_10_U                  | rom_1p        |      |      |      |        | p_ZN11tcn_weightsL7CONV1_WE_1_10 | auto | 1       | 14, 48, 1        |
+|     p_ZN11tcn_weightsL7CONV1_WE_1_11_U                  | rom_1p        |      |      |      |        | p_ZN11tcn_weightsL7CONV1_WE_1_11 | auto | 1       | 12, 48, 1        |
+|     p_ZN11tcn_weightsL7CONV1_WE_1_12_U                  | rom_1p        |      |      |      |        | p_ZN11tcn_weightsL7CONV1_WE_1_12 | auto | 1       | 12, 48, 1        |
+|     p_ZN11tcn_weightsL7CONV1_WE_1_13_U                  | rom_1p        |      |      |      |        | p_ZN11tcn_weightsL7CONV1_WE_1_13 | auto | 1       | 13, 48, 1        |
+|     p_ZN11tcn_weightsL7CONV1_WE_1_14_U                  | rom_1p        |      |      |      |        | p_ZN11tcn_weightsL7CONV1_WE_1_14 | auto | 1       | 13, 48, 1        |
+|     p_ZN11tcn_weightsL7CONV1_WE_1_15_U                  | rom_1p        |      |      |      |        | p_ZN11tcn_weightsL7CONV1_WE_1_15 | auto | 1       | 12, 48, 1        |
+|   + p_anonymous_namespace_conv2_relu_residual_248_2_10  |               |      | 0    | 0    |        |                                  |      |         |                  |
+|     p_ZN11tcn_weightsL7CONV2_BE_1_U                     | rom_1p        |      |      |      |        | p_ZN11tcn_weightsL7CONV2_BE_1    | auto | 1       | 12, 16, 1        |
+|     p_ZN11tcn_weightsL7CONV2_WE_1_0_U                   | rom_1p        |      |      |      |        | p_ZN11tcn_weightsL7CONV2_WE_1_0  | auto | 1       | 12, 48, 1        |
+|     p_ZN11tcn_weightsL7CONV2_WE_1_1_U                   | rom_1p        |      |      |      |        | p_ZN11tcn_weightsL7CONV2_WE_1_1  | auto | 1       | 12, 48, 1        |
+|     p_ZN11tcn_weightsL7CONV2_WE_1_2_U                   | rom_1p        |      |      |      |        | p_ZN11tcn_weightsL7CONV2_WE_1_2  | auto | 1       | 12, 48, 1        |
+|     p_ZN11tcn_weightsL7CONV2_WE_1_3_U                   | rom_1p        |      |      |      |        | p_ZN11tcn_weightsL7CONV2_WE_1_3  | auto | 1       | 13, 48, 1        |
+|     p_ZN11tcn_weightsL7CONV2_WE_1_4_U                   | rom_1p        |      |      |      |        | p_ZN11tcn_weightsL7CONV2_WE_1_4  | auto | 1       | 12, 48, 1        |
+|     p_ZN11tcn_weightsL7CONV2_WE_1_5_U                   | rom_1p        |      |      |      |        | p_ZN11tcn_weightsL7CONV2_WE_1_5  | auto | 1       | 13, 48, 1        |
+|     p_ZN11tcn_weightsL7CONV2_WE_1_6_U                   | rom_1p        |      |      |      |        | p_ZN11tcn_weightsL7CONV2_WE_1_6  | auto | 1       | 12, 48, 1        |
+|     p_ZN11tcn_weightsL7CONV2_WE_1_7_U                   | rom_1p        |      |      |      |        | p_ZN11tcn_weightsL7CONV2_WE_1_7  | auto | 1       | 13, 48, 1        |
+|     p_ZN11tcn_weightsL7CONV2_WE_1_8_U                   | rom_1p        |      |      |      |        | p_ZN11tcn_weightsL7CONV2_WE_1_8  | auto | 1       | 13, 48, 1        |
+|     p_ZN11tcn_weightsL7CONV2_WE_1_9_U                   | rom_1p        |      |      |      |        | p_ZN11tcn_weightsL7CONV2_WE_1_9  | auto | 1       | 12, 48, 1        |
+|     p_ZN11tcn_weightsL7CONV2_WE_1_10_U                  | rom_1p        |      |      |      |        | p_ZN11tcn_weightsL7CONV2_WE_1_10 | auto | 1       | 12, 48, 1        |
+|     p_ZN11tcn_weightsL7CONV2_WE_1_11_U                  | rom_1p        |      |      |      |        | p_ZN11tcn_weightsL7CONV2_WE_1_11 | auto | 1       | 12, 48, 1        |
+|     p_ZN11tcn_weightsL7CONV2_WE_1_12_U                  | rom_1p        |      |      |      |        | p_ZN11tcn_weightsL7CONV2_WE_1_12 | auto | 1       | 12, 48, 1        |
+|     p_ZN11tcn_weightsL7CONV2_WE_1_13_U                  | rom_1p        |      |      |      |        | p_ZN11tcn_weightsL7CONV2_WE_1_13 | auto | 1       | 12, 48, 1        |
+|     p_ZN11tcn_weightsL7CONV2_WE_1_14_U                  | rom_1p        |      |      |      |        | p_ZN11tcn_weightsL7CONV2_WE_1_14 | auto | 1       | 12, 48, 1        |
+|     p_ZN11tcn_weightsL7CONV2_WE_1_15_U                  | rom_1p        |      |      |      |        | p_ZN11tcn_weightsL7CONV2_WE_1_15 | auto | 1       | 13, 48, 1        |
+|  + p_anonymous_namespace_tcn_block_240_4_s              |               |      | 6    | 0    |        |                                  |      |         |                  |
+|    tmp_U                                                | ram_2p array  |      | 6    |      |        | tmp                              | auto | 1       | 24, 3712, 1      |
+|   + p_anonymous_namespace_conv1_relu_240_4_13           |               |      | 0    | 0    |        |                                  |      |         |                  |
+|     p_ZN11tcn_weightsL7CONV1_BE_2_U                     | rom_1p        |      |      |      |        | p_ZN11tcn_weightsL7CONV1_BE_2    | auto | 1       | 12, 16, 1        |
+|     p_ZN11tcn_weightsL7CONV1_WE_2_0_U                   | rom_1p        |      |      |      |        | p_ZN11tcn_weightsL7CONV1_WE_2_0  | auto | 1       | 11, 48, 1        |
+|     p_ZN11tcn_weightsL7CONV1_WE_2_1_U                   | rom_1p        |      |      |      |        | p_ZN11tcn_weightsL7CONV1_WE_2_1  | auto | 1       | 13, 48, 1        |
+|     p_ZN11tcn_weightsL7CONV1_WE_2_2_U                   | rom_1p        |      |      |      |        | p_ZN11tcn_weightsL7CONV1_WE_2_2  | auto | 1       | 12, 48, 1        |
+|     p_ZN11tcn_weightsL7CONV1_WE_2_3_U                   | rom_1p        |      |      |      |        | p_ZN11tcn_weightsL7CONV1_WE_2_3  | auto | 1       | 13, 48, 1        |
+|     p_ZN11tcn_weightsL7CONV1_WE_2_4_U                   | rom_1p        |      |      |      |        | p_ZN11tcn_weightsL7CONV1_WE_2_4  | auto | 1       | 12, 48, 1        |
+|     p_ZN11tcn_weightsL7CONV1_WE_2_5_U                   | rom_1p        |      |      |      |        | p_ZN11tcn_weightsL7CONV1_WE_2_5  | auto | 1       | 12, 48, 1        |
+|     p_ZN11tcn_weightsL7CONV1_WE_2_6_U                   | rom_1p        |      |      |      |        | p_ZN11tcn_weightsL7CONV1_WE_2_6  | auto | 1       | 12, 48, 1        |
+|     p_ZN11tcn_weightsL7CONV1_WE_2_7_U                   | rom_1p        |      |      |      |        | p_ZN11tcn_weightsL7CONV1_WE_2_7  | auto | 1       | 13, 48, 1        |
+|     p_ZN11tcn_weightsL7CONV1_WE_2_8_U                   | rom_1p        |      |      |      |        | p_ZN11tcn_weightsL7CONV1_WE_2_8  | auto | 1       | 13, 48, 1        |
+|     p_ZN11tcn_weightsL7CONV1_WE_2_9_U                   | rom_1p        |      |      |      |        | p_ZN11tcn_weightsL7CONV1_WE_2_9  | auto | 1       | 12, 48, 1        |
+|     p_ZN11tcn_weightsL7CONV1_WE_2_10_U                  | rom_1p        |      |      |      |        | p_ZN11tcn_weightsL7CONV1_WE_2_10 | auto | 1       | 12, 48, 1        |
+|     p_ZN11tcn_weightsL7CONV1_WE_2_11_U                  | rom_1p        |      |      |      |        | p_ZN11tcn_weightsL7CONV1_WE_2_11 | auto | 1       | 12, 48, 1        |
+|     p_ZN11tcn_weightsL7CONV1_WE_2_12_U                  | rom_1p        |      |      |      |        | p_ZN11tcn_weightsL7CONV1_WE_2_12 | auto | 1       | 13, 48, 1        |
+|     p_ZN11tcn_weightsL7CONV1_WE_2_13_U                  | rom_1p        |      |      |      |        | p_ZN11tcn_weightsL7CONV1_WE_2_13 | auto | 1       | 13, 48, 1        |
+|     p_ZN11tcn_weightsL7CONV1_WE_2_14_U                  | rom_1p        |      |      |      |        | p_ZN11tcn_weightsL7CONV1_WE_2_14 | auto | 1       | 12, 48, 1        |
+|     p_ZN11tcn_weightsL7CONV1_WE_2_15_U                  | rom_1p        |      |      |      |        | p_ZN11tcn_weightsL7CONV1_WE_2_15 | auto | 1       | 12, 48, 1        |
+|   + p_anonymous_namespace_conv2_relu_residual_240_4_12  |               |      | 0    | 0    |        |                                  |      |         |                  |
+|     p_ZN11tcn_weightsL7CONV2_BE_2_U                     | rom_1p        |      |      |      |        | p_ZN11tcn_weightsL7CONV2_BE_2    | auto | 1       | 12, 16, 1        |
+|     p_ZN11tcn_weightsL7CONV2_WE_2_0_U                   | rom_1p        |      |      |      |        | p_ZN11tcn_weightsL7CONV2_WE_2_0  | auto | 1       | 12, 48, 1        |
+|     p_ZN11tcn_weightsL7CONV2_WE_2_1_U                   | rom_1p        |      |      |      |        | p_ZN11tcn_weightsL7CONV2_WE_2_1  | auto | 1       | 12, 48, 1        |
+|     p_ZN11tcn_weightsL7CONV2_WE_2_2_U                   | rom_1p        |      |      |      |        | p_ZN11tcn_weightsL7CONV2_WE_2_2  | auto | 1       | 12, 48, 1        |
+|     p_ZN11tcn_weightsL7CONV2_WE_2_3_U                   | rom_1p        |      |      |      |        | p_ZN11tcn_weightsL7CONV2_WE_2_3  | auto | 1       | 13, 48, 1        |
+|     p_ZN11tcn_weightsL7CONV2_WE_2_4_U                   | rom_1p        |      |      |      |        | p_ZN11tcn_weightsL7CONV2_WE_2_4  | auto | 1       | 12, 48, 1        |
+|     p_ZN11tcn_weightsL7CONV2_WE_2_5_U                   | rom_1p        |      |      |      |        | p_ZN11tcn_weightsL7CONV2_WE_2_5  | auto | 1       | 13, 48, 1        |
+|     p_ZN11tcn_weightsL7CONV2_WE_2_6_U                   | rom_1p        |      |      |      |        | p_ZN11tcn_weightsL7CONV2_WE_2_6  | auto | 1       | 12, 48, 1        |
+|     p_ZN11tcn_weightsL7CONV2_WE_2_7_U                   | rom_1p        |      |      |      |        | p_ZN11tcn_weightsL7CONV2_WE_2_7  | auto | 1       | 12, 48, 1        |
+|     p_ZN11tcn_weightsL7CONV2_WE_2_8_U                   | rom_1p        |      |      |      |        | p_ZN11tcn_weightsL7CONV2_WE_2_8  | auto | 1       | 12, 48, 1        |
+|     p_ZN11tcn_weightsL7CONV2_WE_2_9_U                   | rom_1p        |      |      |      |        | p_ZN11tcn_weightsL7CONV2_WE_2_9  | auto | 1       | 12, 48, 1        |
+|     p_ZN11tcn_weightsL7CONV2_WE_2_10_U                  | rom_1p        |      |      |      |        | p_ZN11tcn_weightsL7CONV2_WE_2_10 | auto | 1       | 12, 48, 1        |
+|     p_ZN11tcn_weightsL7CONV2_WE_2_11_U                  | rom_1p        |      |      |      |        | p_ZN11tcn_weightsL7CONV2_WE_2_11 | auto | 1       | 12, 48, 1        |
+|     p_ZN11tcn_weightsL7CONV2_WE_2_12_U                  | rom_1p        |      |      |      |        | p_ZN11tcn_weightsL7CONV2_WE_2_12 | auto | 1       | 12, 48, 1        |
+|     p_ZN11tcn_weightsL7CONV2_WE_2_13_U                  | rom_1p        |      |      |      |        | p_ZN11tcn_weightsL7CONV2_WE_2_13 | auto | 1       | 12, 48, 1        |
+|     p_ZN11tcn_weightsL7CONV2_WE_2_14_U                  | rom_1p        |      |      |      |        | p_ZN11tcn_weightsL7CONV2_WE_2_14 | auto | 1       | 13, 48, 1        |
+|     p_ZN11tcn_weightsL7CONV2_WE_2_15_U                  | rom_1p        |      |      |      |        | p_ZN11tcn_weightsL7CONV2_WE_2_15 | auto | 1       | 12, 48, 1        |
+|  + p_anonymous_namespace_tcn_block_224_8_s              |               |      | 6    | 0    |        |                                  |      |         |                  |
+|    tmp_U                                                | ram_2p array  |      | 6    |      |        | tmp                              | auto | 1       | 24, 3328, 1      |
+|   + p_anonymous_namespace_conv1_relu_224_8_15           |               |      | 0    | 0    |        |                                  |      |         |                  |
+|     p_ZN11tcn_weightsL7CONV1_BE_3_U                     | rom_1p        |      |      |      |        | p_ZN11tcn_weightsL7CONV1_BE_3    | auto | 1       | 11, 16, 1        |
+|     p_ZN11tcn_weightsL7CONV1_WE_3_0_U                   | rom_1p        |      |      |      |        | p_ZN11tcn_weightsL7CONV1_WE_3_0  | auto | 1       | 11, 48, 1        |
+|     p_ZN11tcn_weightsL7CONV1_WE_3_1_U                   | rom_1p        |      |      |      |        | p_ZN11tcn_weightsL7CONV1_WE_3_1  | auto | 1       | 12, 48, 1        |
+|     p_ZN11tcn_weightsL7CONV1_WE_3_2_U                   | rom_1p        |      |      |      |        | p_ZN11tcn_weightsL7CONV1_WE_3_2  | auto | 1       | 13, 48, 1        |
+|     p_ZN11tcn_weightsL7CONV1_WE_3_3_U                   | rom_1p        |      |      |      |        | p_ZN11tcn_weightsL7CONV1_WE_3_3  | auto | 1       | 12, 48, 1        |
+|     p_ZN11tcn_weightsL7CONV1_WE_3_4_U                   | rom_1p        |      |      |      |        | p_ZN11tcn_weightsL7CONV1_WE_3_4  | auto | 1       | 13, 48, 1        |
+|     p_ZN11tcn_weightsL7CONV1_WE_3_5_U                   | rom_1p        |      |      |      |        | p_ZN11tcn_weightsL7CONV1_WE_3_5  | auto | 1       | 13, 48, 1        |
+|     p_ZN11tcn_weightsL7CONV1_WE_3_6_U                   | rom_1p        |      |      |      |        | p_ZN11tcn_weightsL7CONV1_WE_3_6  | auto | 1       | 13, 48, 1        |
+|     p_ZN11tcn_weightsL7CONV1_WE_3_7_U                   | rom_1p        |      |      |      |        | p_ZN11tcn_weightsL7CONV1_WE_3_7  | auto | 1       | 13, 48, 1        |
+|     p_ZN11tcn_weightsL7CONV1_WE_3_8_U                   | rom_1p        |      |      |      |        | p_ZN11tcn_weightsL7CONV1_WE_3_8  | auto | 1       | 11, 48, 1        |
+|     p_ZN11tcn_weightsL7CONV1_WE_3_9_U                   | rom_1p        |      |      |      |        | p_ZN11tcn_weightsL7CONV1_WE_3_9  | auto | 1       | 12, 48, 1        |
+|     p_ZN11tcn_weightsL7CONV1_WE_3_10_U                  | rom_1p        |      |      |      |        | p_ZN11tcn_weightsL7CONV1_WE_3_10 | auto | 1       | 12, 48, 1        |
+|     p_ZN11tcn_weightsL7CONV1_WE_3_11_U                  | rom_1p        |      |      |      |        | p_ZN11tcn_weightsL7CONV1_WE_3_11 | auto | 1       | 13, 48, 1        |
+|     p_ZN11tcn_weightsL7CONV1_WE_3_12_U                  | rom_1p        |      |      |      |        | p_ZN11tcn_weightsL7CONV1_WE_3_12 | auto | 1       | 14, 48, 1        |
+|     p_ZN11tcn_weightsL7CONV1_WE_3_13_U                  | rom_1p        |      |      |      |        | p_ZN11tcn_weightsL7CONV1_WE_3_13 | auto | 1       | 12, 48, 1        |
+|     p_ZN11tcn_weightsL7CONV1_WE_3_14_U                  | rom_1p        |      |      |      |        | p_ZN11tcn_weightsL7CONV1_WE_3_14 | auto | 1       | 12, 48, 1        |
+|     p_ZN11tcn_weightsL7CONV1_WE_3_15_U                  | rom_1p        |      |      |      |        | p_ZN11tcn_weightsL7CONV1_WE_3_15 | auto | 1       | 12, 48, 1        |
+|   + p_anonymous_namespace_conv2_relu_residual_224_8_14  |               |      | 0    | 0    |        |                                  |      |         |                  |
+|     p_ZN11tcn_weightsL7CONV2_BE_3_U                     | rom_1p        |      |      |      |        | p_ZN11tcn_weightsL7CONV2_BE_3    | auto | 1       | 11, 16, 1        |
+|     p_ZN11tcn_weightsL7CONV2_WE_3_0_U                   | rom_1p        |      |      |      |        | p_ZN11tcn_weightsL7CONV2_WE_3_0  | auto | 1       | 12, 48, 1        |
+|     p_ZN11tcn_weightsL7CONV2_WE_3_1_U                   | rom_1p        |      |      |      |        | p_ZN11tcn_weightsL7CONV2_WE_3_1  | auto | 1       | 11, 48, 1        |
+|     p_ZN11tcn_weightsL7CONV2_WE_3_2_U                   | rom_1p        |      |      |      |        | p_ZN11tcn_weightsL7CONV2_WE_3_2  | auto | 1       | 12, 48, 1        |
+|     p_ZN11tcn_weightsL7CONV2_WE_3_3_U                   | rom_1p        |      |      |      |        | p_ZN11tcn_weightsL7CONV2_WE_3_3  | auto | 1       | 12, 48, 1        |
+|     p_ZN11tcn_weightsL7CONV2_WE_3_4_U                   | rom_1p        |      |      |      |        | p_ZN11tcn_weightsL7CONV2_WE_3_4  | auto | 1       | 12, 48, 1        |
+|     p_ZN11tcn_weightsL7CONV2_WE_3_5_U                   | rom_1p        |      |      |      |        | p_ZN11tcn_weightsL7CONV2_WE_3_5  | auto | 1       | 11, 48, 1        |
+|     p_ZN11tcn_weightsL7CONV2_WE_3_6_U                   | rom_1p        |      |      |      |        | p_ZN11tcn_weightsL7CONV2_WE_3_6  | auto | 1       | 11, 48, 1        |
+|     p_ZN11tcn_weightsL7CONV2_WE_3_7_U                   | rom_1p        |      |      |      |        | p_ZN11tcn_weightsL7CONV2_WE_3_7  | auto | 1       | 12, 48, 1        |
+|     p_ZN11tcn_weightsL7CONV2_WE_3_8_U                   | rom_1p        |      |      |      |        | p_ZN11tcn_weightsL7CONV2_WE_3_8  | auto | 1       | 12, 48, 1        |
+|     p_ZN11tcn_weightsL7CONV2_WE_3_9_U                   | rom_1p        |      |      |      |        | p_ZN11tcn_weightsL7CONV2_WE_3_9  | auto | 1       | 12, 48, 1        |
+|     p_ZN11tcn_weightsL7CONV2_WE_3_10_U                  | rom_1p        |      |      |      |        | p_ZN11tcn_weightsL7CONV2_WE_3_10 | auto | 1       | 13, 48, 1        |
+|     p_ZN11tcn_weightsL7CONV2_WE_3_11_U                  | rom_1p        |      |      |      |        | p_ZN11tcn_weightsL7CONV2_WE_3_11 | auto | 1       | 13, 48, 1        |
+|     p_ZN11tcn_weightsL7CONV2_WE_3_12_U                  | rom_1p        |      |      |      |        | p_ZN11tcn_weightsL7CONV2_WE_3_12 | auto | 1       | 13, 48, 1        |
+|     p_ZN11tcn_weightsL7CONV2_WE_3_13_U                  | rom_1p        |      |      |      |        | p_ZN11tcn_weightsL7CONV2_WE_3_13 | auto | 1       | 12, 48, 1        |
+|     p_ZN11tcn_weightsL7CONV2_WE_3_14_U                  | rom_1p        |      |      |      |        | p_ZN11tcn_weightsL7CONV2_WE_3_14 | auto | 1       | 12, 48, 1        |
+|     p_ZN11tcn_weightsL7CONV2_WE_3_15_U                  | rom_1p        |      |      |      |        | p_ZN11tcn_weightsL7CONV2_WE_3_15 | auto | 1       | 12, 48, 1        |
+|  + p_anonymous_namespace_tcn_block_192_16_s             |               |      | 6    | 0    |        |                                  |      |         |                  |
+|    tmp_U                                                | ram_2p array  |      | 6    |      |        | tmp                              | auto | 1       | 24, 2560, 1      |
+|   + p_anonymous_namespace_conv1_relu_192_16_17          |               |      | 0    | 0    |        |                                  |      |         |                  |
+|     p_ZN11tcn_weightsL7CONV1_BE_4_U                     | rom_1p        |      |      |      |        | p_ZN11tcn_weightsL7CONV1_BE_4    | auto | 1       | 11, 16, 1        |
+|     p_ZN11tcn_weightsL7CONV1_WE_4_0_U                   | rom_1p        |      |      |      |        | p_ZN11tcn_weightsL7CONV1_WE_4_0  | auto | 1       | 12, 48, 1        |
+|     p_ZN11tcn_weightsL7CONV1_WE_4_1_U                   | rom_1p        |      |      |      |        | p_ZN11tcn_weightsL7CONV1_WE_4_1  | auto | 1       | 12, 48, 1        |
+|     p_ZN11tcn_weightsL7CONV1_WE_4_2_U                   | rom_1p        |      |      |      |        | p_ZN11tcn_weightsL7CONV1_WE_4_2  | auto | 1       | 12, 48, 1        |
+|     p_ZN11tcn_weightsL7CONV1_WE_4_3_U                   | rom_1p        |      |      |      |        | p_ZN11tcn_weightsL7CONV1_WE_4_3  | auto | 1       | 11, 48, 1        |
+|     p_ZN11tcn_weightsL7CONV1_WE_4_4_U                   | rom_1p        |      |      |      |        | p_ZN11tcn_weightsL7CONV1_WE_4_4  | auto | 1       | 12, 48, 1        |
+|     p_ZN11tcn_weightsL7CONV1_WE_4_5_U                   | rom_1p        |      |      |      |        | p_ZN11tcn_weightsL7CONV1_WE_4_5  | auto | 1       | 12, 48, 1        |
+|     p_ZN11tcn_weightsL7CONV1_WE_4_6_U                   | rom_1p        |      |      |      |        | p_ZN11tcn_weightsL7CONV1_WE_4_6  | auto | 1       | 12, 48, 1        |
+|     p_ZN11tcn_weightsL7CONV1_WE_4_7_U                   | rom_1p        |      |      |      |        | p_ZN11tcn_weightsL7CONV1_WE_4_7  | auto | 1       | 13, 48, 1        |
+|     p_ZN11tcn_weightsL7CONV1_WE_4_8_U                   | rom_1p        |      |      |      |        | p_ZN11tcn_weightsL7CONV1_WE_4_8  | auto | 1       | 12, 48, 1        |
+|     p_ZN11tcn_weightsL7CONV1_WE_4_9_U                   | rom_1p        |      |      |      |        | p_ZN11tcn_weightsL7CONV1_WE_4_9  | auto | 1       | 12, 48, 1        |
+|     p_ZN11tcn_weightsL7CONV1_WE_4_10_U                  | rom_1p        |      |      |      |        | p_ZN11tcn_weightsL7CONV1_WE_4_10 | auto | 1       | 12, 48, 1        |
+|     p_ZN11tcn_weightsL7CONV1_WE_4_11_U                  | rom_1p        |      |      |      |        | p_ZN11tcn_weightsL7CONV1_WE_4_11 | auto | 1       | 13, 48, 1        |
+|     p_ZN11tcn_weightsL7CONV1_WE_4_12_U                  | rom_1p        |      |      |      |        | p_ZN11tcn_weightsL7CONV1_WE_4_12 | auto | 1       | 13, 48, 1        |
+|     p_ZN11tcn_weightsL7CONV1_WE_4_13_U                  | rom_1p        |      |      |      |        | p_ZN11tcn_weightsL7CONV1_WE_4_13 | auto | 1       | 11, 48, 1        |
+|     p_ZN11tcn_weightsL7CONV1_WE_4_14_U                  | rom_1p        |      |      |      |        | p_ZN11tcn_weightsL7CONV1_WE_4_14 | auto | 1       | 12, 48, 1        |
+|     p_ZN11tcn_weightsL7CONV1_WE_4_15_U                  | rom_1p        |      |      |      |        | p_ZN11tcn_weightsL7CONV1_WE_4_15 | auto | 1       | 12, 48, 1        |
+|   + p_anonymous_namespace_conv2_relu_residual_192_16_16 |               |      | 0    | 0    |        |                                  |      |         |                  |
+|     p_ZN11tcn_weightsL7CONV2_BE_4_U                     | rom_1p        |      |      |      |        | p_ZN11tcn_weightsL7CONV2_BE_4    | auto | 1       | 11, 16, 1        |
+|     p_ZN11tcn_weightsL7CONV2_WE_4_0_U                   | rom_1p        |      |      |      |        | p_ZN11tcn_weightsL7CONV2_WE_4_0  | auto | 1       | 12, 48, 1        |
+|     p_ZN11tcn_weightsL7CONV2_WE_4_1_U                   | rom_1p        |      |      |      |        | p_ZN11tcn_weightsL7CONV2_WE_4_1  | auto | 1       | 12, 48, 1        |
+|     p_ZN11tcn_weightsL7CONV2_WE_4_2_U                   | rom_1p        |      |      |      |        | p_ZN11tcn_weightsL7CONV2_WE_4_2  | auto | 1       | 12, 48, 1        |
+|     p_ZN11tcn_weightsL7CONV2_WE_4_3_U                   | rom_1p        |      |      |      |        | p_ZN11tcn_weightsL7CONV2_WE_4_3  | auto | 1       | 12, 48, 1        |
+|     p_ZN11tcn_weightsL7CONV2_WE_4_4_U                   | rom_1p        |      |      |      |        | p_ZN11tcn_weightsL7CONV2_WE_4_4  | auto | 1       | 13, 48, 1        |
+|     p_ZN11tcn_weightsL7CONV2_WE_4_5_U                   | rom_1p        |      |      |      |        | p_ZN11tcn_weightsL7CONV2_WE_4_5  | auto | 1       | 13, 48, 1        |
+|     p_ZN11tcn_weightsL7CONV2_WE_4_6_U                   | rom_1p        |      |      |      |        | p_ZN11tcn_weightsL7CONV2_WE_4_6  | auto | 1       | 12, 48, 1        |
+|     p_ZN11tcn_weightsL7CONV2_WE_4_7_U                   | rom_1p        |      |      |      |        | p_ZN11tcn_weightsL7CONV2_WE_4_7  | auto | 1       | 12, 48, 1        |
+|     p_ZN11tcn_weightsL7CONV2_WE_4_8_U                   | rom_1p        |      |      |      |        | p_ZN11tcn_weightsL7CONV2_WE_4_8  | auto | 1       | 12, 48, 1        |
+|     p_ZN11tcn_weightsL7CONV2_WE_4_9_U                   | rom_1p        |      |      |      |        | p_ZN11tcn_weightsL7CONV2_WE_4_9  | auto | 1       | 11, 48, 1        |
+|     p_ZN11tcn_weightsL7CONV2_WE_4_10_U                  | rom_1p        |      |      |      |        | p_ZN11tcn_weightsL7CONV2_WE_4_10 | auto | 1       | 12, 48, 1        |
+|     p_ZN11tcn_weightsL7CONV2_WE_4_11_U                  | rom_1p        |      |      |      |        | p_ZN11tcn_weightsL7CONV2_WE_4_11 | auto | 1       | 12, 48, 1        |
+|     p_ZN11tcn_weightsL7CONV2_WE_4_12_U                  | rom_1p        |      |      |      |        | p_ZN11tcn_weightsL7CONV2_WE_4_12 | auto | 1       | 12, 48, 1        |
+|     p_ZN11tcn_weightsL7CONV2_WE_4_13_U                  | rom_1p        |      |      |      |        | p_ZN11tcn_weightsL7CONV2_WE_4_13 | auto | 1       | 12, 48, 1        |
+|     p_ZN11tcn_weightsL7CONV2_WE_4_14_U                  | rom_1p        |      |      |      |        | p_ZN11tcn_weightsL7CONV2_WE_4_14 | auto | 1       | 12, 48, 1        |
+|     p_ZN11tcn_weightsL7CONV2_WE_4_15_U                  | rom_1p        |      |      |      |        | p_ZN11tcn_weightsL7CONV2_WE_4_15 | auto | 1       | 11, 48, 1        |
+|  + p_anonymous_namespace_global_average_readout         |               |      | 0    | 0    |        |                                  |      |         |                  |
+|    pooled_U                                             | ram_2p array  |      |      |      |        | pooled                           | auto | 1       | 33, 16, 1        |
+|    p_ZN11tcn_weightsL4FC_WE_0_U                         | rom_1p        |      |      |      |        | p_ZN11tcn_weightsL4FC_WE_0       | auto | 1       | 19, 2, 1         |
+|    p_ZN11tcn_weightsL4FC_WE_1_U                         | rom_1p        |      |      |      |        | p_ZN11tcn_weightsL4FC_WE_1       | auto | 1       | 19, 2, 1         |
+|    p_ZN11tcn_weightsL4FC_WE_2_U                         | rom_1p        |      |      |      |        | p_ZN11tcn_weightsL4FC_WE_2       | auto | 1       | 19, 2, 1         |
+|    p_ZN11tcn_weightsL4FC_WE_3_U                         | rom_1p        |      |      |      |        | p_ZN11tcn_weightsL4FC_WE_3       | auto | 1       | 18, 2, 1         |
+|    p_ZN11tcn_weightsL4FC_WE_4_U                         | rom_1p        |      |      |      |        | p_ZN11tcn_weightsL4FC_WE_4       | auto | 1       | 19, 2, 1         |
+|    p_ZN11tcn_weightsL4FC_WE_5_U                         | rom_1p        |      |      |      |        | p_ZN11tcn_weightsL4FC_WE_5       | auto | 1       | 18, 2, 1         |
+|    p_ZN11tcn_weightsL4FC_WE_6_U                         | rom_1p        |      |      |      |        | p_ZN11tcn_weightsL4FC_WE_6       | auto | 1       | 19, 2, 1         |
+|    p_ZN11tcn_weightsL4FC_WE_7_U                         | rom_1p        |      |      |      |        | p_ZN11tcn_weightsL4FC_WE_7       | auto | 1       | 18, 2, 1         |
+|    p_ZN11tcn_weightsL4FC_WE_8_U                         | rom_1p        |      |      |      |        | p_ZN11tcn_weightsL4FC_WE_8       | auto | 1       | 19, 2, 1         |
+|    p_ZN11tcn_weightsL4FC_WE_9_U                         | rom_1p        |      |      |      |        | p_ZN11tcn_weightsL4FC_WE_9       | auto | 1       | 19, 2, 1         |
+|    p_ZN11tcn_weightsL4FC_WE_10_U                        | rom_1p        |      |      |      |        | p_ZN11tcn_weightsL4FC_WE_10      | auto | 1       | 18, 2, 1         |
+|    p_ZN11tcn_weightsL4FC_WE_11_U                        | rom_1p        |      |      |      |        | p_ZN11tcn_weightsL4FC_WE_11      | auto | 1       | 19, 2, 1         |
+|    p_ZN11tcn_weightsL4FC_WE_12_U                        | rom_1p        |      |      |      |        | p_ZN11tcn_weightsL4FC_WE_12      | auto | 1       | 19, 2, 1         |
+|    p_ZN11tcn_weightsL4FC_WE_13_U                        | rom_1p        |      |      |      |        | p_ZN11tcn_weightsL4FC_WE_13      | auto | 1       | 19, 2, 1         |
+|    p_ZN11tcn_weightsL4FC_WE_14_U                        | rom_1p        |      |      |      |        | p_ZN11tcn_weightsL4FC_WE_14      | auto | 1       | 19, 2, 1         |
+|    p_ZN11tcn_weightsL4FC_WE_15_U                        | rom_1p        |      |      |      |        | p_ZN11tcn_weightsL4FC_WE_15      | auto | 1       | 18, 2, 1         |
++---------------------------------------------------------+---------------+------+------+------+--------+----------------------------------+------+---------+------------------+
+
+
+================================================================
+== Pragma Report
+================================================================
+* Inferred Pragmas
++-----------------+------------------------------------------------+------------------------------------------------------------------------------------------+------------------------------------------+
+| Type            | Options                                        | Location                                                                                 | Inferred From                            |
++-----------------+------------------------------------------------+------------------------------------------------------------------------------------------+------------------------------------------+
+| ARRAY_PARTITION | dim=1 type=complete variable=tcn_weights::FC_B | variable tcn_weights::FC_B in tcn_prepad_infer (../hls_src/tcn_weights_scratch.hpp:2933) | syn.array_partition.complete_threshold=4 |
++-----------------+------------------------------------------------+------------------------------------------------------------------------------------------+------------------------------------------+
+
+* Valid Pragma Syntax
++-----------+------------------------+--------------------------------------------------------------------+
+| Type      | Options                | Location                                                           |
++-----------+------------------------+--------------------------------------------------------------------+
+| INLINE    |                        | in relu_acc (../hls_src/tcn_prepad_hls_impl.hpp:16)                |
+| INLINE    | off                    | in copy_and_prepad (../hls_src/tcn_prepad_hls_impl.hpp:25)         |
+| PIPELINE  | off                    | in copy_and_prepad (../hls_src/tcn_prepad_hls_impl.hpp:27)         |
+| PIPELINE  | off                    | in copy_and_prepad (../hls_src/tcn_prepad_hls_impl.hpp:29)         |
+| UNROLL    | factor=16              | in copy_and_prepad (../hls_src/tcn_prepad_hls_impl.hpp:30)         |
+| INLINE    | off                    | in conv1_relu (../hls_src/tcn_prepad_hls_impl.hpp:46)              |
+| PIPELINE  | off                    | in conv1_relu (../hls_src/tcn_prepad_hls_impl.hpp:48)              |
+| PIPELINE  | off                    | in conv1_relu (../hls_src/tcn_prepad_hls_impl.hpp:50)              |
+| PIPELINE  | off                    | in conv1_relu (../hls_src/tcn_prepad_hls_impl.hpp:53)              |
+| PIPELINE  | off                    | in conv1_relu (../hls_src/tcn_prepad_hls_impl.hpp:55)              |
+| UNROLL    | factor=16              | in conv1_relu (../hls_src/tcn_prepad_hls_impl.hpp:56)              |
+| INLINE    | off                    | in conv2_relu_residual (../hls_src/tcn_prepad_hls_impl.hpp:72)     |
+| PIPELINE  | off                    | in conv2_relu_residual (../hls_src/tcn_prepad_hls_impl.hpp:74)     |
+| PIPELINE  | off                    | in conv2_relu_residual (../hls_src/tcn_prepad_hls_impl.hpp:76)     |
+| PIPELINE  | off                    | in conv2_relu_residual (../hls_src/tcn_prepad_hls_impl.hpp:79)     |
+| PIPELINE  | off                    | in conv2_relu_residual (../hls_src/tcn_prepad_hls_impl.hpp:81)     |
+| UNROLL    | factor=16              | in conv2_relu_residual (../hls_src/tcn_prepad_hls_impl.hpp:82)     |
+| INLINE    | off                    | in tcn_block (../hls_src/tcn_prepad_hls_impl.hpp:99)               |
+| INLINE    | off                    | in global_average_readout (../hls_src/tcn_prepad_hls_impl.hpp:109) |
+| PIPELINE  | off                    | in global_average_readout (../hls_src/tcn_prepad_hls_impl.hpp:112) |
+| PIPELINE  | off                    | in global_average_readout (../hls_src/tcn_prepad_hls_impl.hpp:115) |
+| PIPELINE  | off                    | in global_average_readout (../hls_src/tcn_prepad_hls_impl.hpp:121) |
+| PIPELINE  | off                    | in global_average_readout (../hls_src/tcn_prepad_hls_impl.hpp:124) |
+| UNROLL    | factor=16              | in global_average_readout (../hls_src/tcn_prepad_hls_impl.hpp:125) |
+| INTERFACE | ap_ctrl_hs port=return | in tcn_prepad_infer (../hls_src/tcn_prepad_hls_impl.hpp:138)       |
+| INTERFACE | ap_memory port=x       | in tcn_prepad_infer (../hls_src/tcn_prepad_hls_impl.hpp:139)       |
+| INTERFACE | ap_memory port=readout | in tcn_prepad_infer (../hls_src/tcn_prepad_hls_impl.hpp:140)       |
++-----------+------------------------+--------------------------------------------------------------------+
+
+

@@ -1,0 +1,20 @@
+split,session_id,symbol,tick_size_min,tick_size_max,point_value,maker_fee,maker_fee_interpretation,exchange_certified
+train,20260121Day,TXFB6,1.0,1.0,200.0,15.0,one-way proxy fee subtracted once per quote-level markout/fill,False
+train,20260122Day,TXFB6,1.0,1.0,200.0,15.0,one-way proxy fee subtracted once per quote-level markout/fill,False
+train,20260122Night,TXFB6,1.0,1.0,200.0,15.0,one-way proxy fee subtracted once per quote-level markout/fill,False
+train,20260123Day,TXFB6,1.0,1.0,200.0,15.0,one-way proxy fee subtracted once per quote-level markout/fill,False
+train,20260123Night,TXFB6,1.0,1.0,200.0,15.0,one-way proxy fee subtracted once per quote-level markout/fill,False
+train,20260126Day,TXFB6,1.0,1.0,200.0,15.0,one-way proxy fee subtracted once per quote-level markout/fill,False
+val,20260126Night,TXFB6,1.0,1.0,200.0,15.0,one-way proxy fee subtracted once per quote-level markout/fill,False
+test,20260127Day,TXFB6,1.0,1.0,200.0,15.0,one-way proxy fee subtracted once per quote-level markout/fill,False
+test,20260127Night,TXFB6,1.0,1.0,200.0,15.0,one-way proxy fee subtracted once per quote-level markout/fill,False
+new4,20260102,TXFA6,1.0,1.0,200.0,15.0,one-way proxy fee subtracted once per quote-level markout/fill,False
+new4,20260105,TXFA6,1.0,1.0,200.0,15.0,one-way proxy fee subtracted once per quote-level markout/fill,False
+new4,20260109,TXFA6,1.0,1.0,200.0,15.0,one-way proxy fee subtracted once per quote-level markout/fill,False
+new4,20260112,TXFA6,1.0,1.0,200.0,15.0,one-way proxy fee subtracted once per quote-level markout/fill,False
+new3,20260113,TXFA6,1.0,1.0,200.0,15.0,one-way proxy fee subtracted once per quote-level markout/fill,False
+new3,20260114,TXFA6,1.0,1.0,200.0,15.0,one-way proxy fee subtracted once per quote-level markout/fill,False
+new3,20260115,TXFA6,1.0,1.0,200.0,15.0,one-way proxy fee subtracted once per quote-level markout/fill,False
+new3,20260116,TXFA6,1.0,1.0,200.0,15.0,one-way proxy fee subtracted once per quote-level markout/fill,False
+new3,20260119Day,TXFA6,1.0,1.0,200.0,15.0,one-way proxy fee subtracted once per quote-level markout/fill,False
+new3,20260330,TXFA6,1.0,1.0,200.0,15.0,one-way proxy fee subtracted once per quote-level markout/fill,False

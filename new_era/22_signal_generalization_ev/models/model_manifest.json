@@ -1,0 +1,73 @@
+[
+  {
+    "model_name": "logistic_sgd",
+    "feature_set": "spread_only",
+    "features": [
+      "spread_ticks"
+    ],
+    "model_path": "C:\\Users\\holbo\\00VS_projjects\\00_HFT_project\\new_era\\22_signal_generalization_ev\\models\\logistic_sgd_spread_only.pkl",
+    "val_policy_pnl": 395195.0,
+    "val_quote_rate": 0.840712629886151
+  },
+  {
+    "model_name": "logistic_sgd",
+    "feature_set": "spread_queue_imbalance",
+    "features": [
+      "spread_ticks",
+      "queue_imbalance_z"
+    ],
+    "model_path": "C:\\Users\\holbo\\00VS_projjects\\00_HFT_project\\new_era\\22_signal_generalization_ev\\models\\logistic_sgd_spread_queue_imbalance.pkl",
+    "val_policy_pnl": 360535.0,
+    "val_quote_rate": 0.6749997337489216
+  },
+  {
+    "model_name": "logistic_sgd",
+    "feature_set": "spread_event_rate",
+    "features": [
+      "spread_ticks",
+      "trade_intensity_short_z"
+    ],
+    "model_path": "C:\\Users\\holbo\\00VS_projjects\\00_HFT_project\\new_era\\22_signal_generalization_ev\\models\\logistic_sgd_spread_event_rate.pkl",
+    "val_policy_pnl": 391510.0,
+    "val_quote_rate": 0.8250002662510784
+  },
+  {
+    "model_name": "logistic_sgd",
+    "feature_set": "spread_cancel_pressure",
+    "features": [
+      "spread_ticks",
+      "cancel_pressure_short_z"
+    ],
+    "model_path": "C:\\Users\\holbo\\00VS_projjects\\00_HFT_project\\new_era\\22_signal_generalization_ev\\models\\logistic_sgd_spread_cancel_pressure.pkl",
+    "val_policy_pnl": 333115.0,
+    "val_quote_rate": 0.6000003550014378
+  },
+  {
+    "model_name": "logistic_sgd",
+    "feature_set": "all_hls",
+    "features": [
+      "spread_ticks",
+      "queue_imbalance_z",
+      "trade_intensity_short_z",
+      "cancel_pressure_short_z",
+      "normalized_spread_z"
+    ],
+    "model_path": "C:\\Users\\holbo\\00VS_projjects\\00_HFT_project\\new_era\\22_signal_generalization_ev\\models\\logistic_sgd_all_hls.pkl",
+    "val_policy_pnl": -16735.0,
+    "val_quote_rate": 0.8250002662510784
+  },
+  {
+    "model_name": "small_mlp",
+    "feature_set": "all_hls",
+    "features": [
+      "spread_ticks",
+      "queue_imbalance_z",
+      "trade_intensity_short_z",
+      "cancel_pressure_short_z",
+      "normalized_spread_z"
+    ],
+    "model_path": "C:\\Users\\holbo\\00VS_projjects\\00_HFT_project\\new_era\\22_signal_generalization_ev\\models\\small_mlp_all_hls.pkl",
+    "val_policy_pnl": 135445.0,
+    "val_quote_rate": 0.7000007100028756
+  }
+]

@@ -1,0 +1,212 @@
+
+
+================================================================
+== Vitis HLS Report for 'requantize_hidden_to_fixed_2'
+================================================================
+* Date:           Thu Apr  9 01:53:54 2026
+
+* Version:        2025.2 (Build 6295257 on Nov 14 2025)
+* Project:        fixed_tcn_hls
+* Solution:       solution1 (Vivado IP Flow Target)
+* Product family: zynq
+* Target device:  xc7z020-clg400-1
+
+
+================================================================
+== Performance Estimates
+================================================================
++ Timing: 
+    * Summary: 
+    +--------+---------+----------+------------+
+    |  Clock |  Target | Estimated| Uncertainty|
+    +--------+---------+----------+------------+
+    |ap_clk  |  5.00 ns|  6.312 ns|     1.35 ns|
+    +--------+---------+----------+------------+
+
++ Latency: 
+    * Summary: 
+    +---------+---------+-----------+-----------+------+------+---------+
+    |  Latency (cycles) |   Latency (absolute)  |   Interval  | Pipeline|
+    |   min   |   max   |    min    |    max    |  min |  max |   Type  |
+    +---------+---------+-----------+-----------+------+------+---------+
+    |     3237|     3237|  20.432 us|  20.432 us|  3237|  3237|       no|
+    +---------+---------+-----------+-----------+------+------+---------+
+
+    + Detail: 
+        * Instance: 
+        +-----------------------------------------------------------------+-------------------------------------------------------+---------+---------+-----------+-----------+-----+-----+-------------------+
+        |                                                                 |                                                       |  Latency (cycles) |   Latency (absolute)  |  Interval |      Pipeline     |
+        |                             Instance                            |                         Module                        |   min   |   max   |    min    |    max    | min | max |        Type       |
+        +-----------------------------------------------------------------+-------------------------------------------------------+---------+---------+-----------+-----------+-----+-----+-------------------+
+        |grp_requantize_hidden_to_fixed_2_Pipeline_VITIS_LOOP_48_1_fu_54  |requantize_hidden_to_fixed_2_Pipeline_VITIS_LOOP_48_1  |     3228|     3228|  20.375 us|  20.375 us|    0|    0|  loop pipeline stp|
+        +-----------------------------------------------------------------+-------------------------------------------------------+---------+---------+-----------+-----------+-----+-----+-------------------+
+
+        * Loop: 
+        N/A
+
+
+
+================================================================
+== Utilization Estimates
+================================================================
+* Summary: 
++-----------------+---------+-----+--------+-------+-----+
+|       Name      | BRAM_18K| DSP |   FF   |  LUT  | URAM|
++-----------------+---------+-----+--------+-------+-----+
+|DSP              |        -|    -|       -|      -|    -|
+|Expression       |        -|    -|       -|      -|    -|
+|FIFO             |        -|    -|       -|      -|    -|
+|Instance         |        0|    -|    1188|   1007|    -|
+|Memory           |        -|    -|       -|      -|    -|
+|Multiplexer      |        -|    -|       0|    105|    -|
+|Register         |        -|    -|      43|      -|    -|
++-----------------+---------+-----+--------+-------+-----+
+|Total            |        0|    0|    1231|   1112|    0|
++-----------------+---------+-----+--------+-------+-----+
+|Available        |      280|  220|  106400|  53200|    0|
++-----------------+---------+-----+--------+-------+-----+
+|Utilization (%)  |        0|    0|       1|      2|    0|
++-----------------+---------+-----+--------+-------+-----+
+
++ Detail: 
+    * Instance: 
+    +-----------------------------------------------------------------+-------------------------------------------------------+---------+----+------+------+-----+
+    |                             Instance                            |                         Module                        | BRAM_18K| DSP|  FF  |  LUT | URAM|
+    +-----------------------------------------------------------------+-------------------------------------------------------+---------+----+------+------+-----+
+    |grp_requantize_hidden_to_fixed_2_Pipeline_VITIS_LOOP_48_1_fu_54  |requantize_hidden_to_fixed_2_Pipeline_VITIS_LOOP_48_1  |        0|   0|  1188|  1007|    0|
+    +-----------------------------------------------------------------+-------------------------------------------------------+---------+----+------+------+-----+
+    |Total                                                            |                                                       |        0|   0|  1188|  1007|    0|
+    +-----------------------------------------------------------------+-------------------------------------------------------+---------+----+------+------+-----+
+
+    * DSP: 
+    N/A
+
+    * Memory: 
+    N/A
+
+    * FIFO: 
+    N/A
+
+    * Expression: 
+    N/A
+
+    * Multiplexer: 
+    +---------------+----+-----------+-----+-----------+
+    |      Name     | LUT| Input Size| Bits| Total Bits|
+    +---------------+----+-----------+-----+-----------+
+    |ap_NS_fsm      |  59|         11|    1|         11|
+    |grp_fu_115_ce  |   9|          2|    1|          2|
+    |grp_fu_99_ce   |   9|          2|    1|          2|
+    |grp_fu_99_p0   |  14|          3|   32|         96|
+    |grp_fu_99_p1   |  14|          3|   32|         96|
+    +---------------+----+-----------+-----+-----------+
+    |Total          | 105|         21|   67|        207|
+    +---------------+----+-----------+-----+-----------+
+
+    * Register: 
+    +------------------------------------------------------------------------------+----+----+-----+-----------+
+    |                                     Name                                     | FF | LUT| Bits| Const Bits|
+    +------------------------------------------------------------------------------+----+----+-----+-----------+
+    |ap_CS_fsm                                                                     |  10|   0|   10|          0|
+    |grp_requantize_hidden_to_fixed_2_Pipeline_VITIS_LOOP_48_1_fu_54_ap_start_reg  |   1|   0|    1|          0|
+    |ratio_reg_110                                                                 |  32|   0|   32|          0|
+    +------------------------------------------------------------------------------+----+----+-----+-----------+
+    |Total                                                                         |  43|   0|   43|          0|
+    +------------------------------------------------------------------------------+----+----+-----+-----------+
+
+
+
+================================================================
+== Interface
+================================================================
+* Summary: 
++----------------------+-----+-----+------------+------------------------------+--------------+
+|       RTL Ports      | Dir | Bits|  Protocol  |         Source Object        |    C Type    |
++----------------------+-----+-----+------------+------------------------------+--------------+
+|ap_clk                |   in|    1|  ap_ctrl_hs|  requantize_hidden_to_fixed.2|  return value|
+|ap_rst                |   in|    1|  ap_ctrl_hs|  requantize_hidden_to_fixed.2|  return value|
+|ap_start              |   in|    1|  ap_ctrl_hs|  requantize_hidden_to_fixed.2|  return value|
+|ap_done               |  out|    1|  ap_ctrl_hs|  requantize_hidden_to_fixed.2|  return value|
+|ap_idle               |  out|    1|  ap_ctrl_hs|  requantize_hidden_to_fixed.2|  return value|
+|ap_ready              |  out|    1|  ap_ctrl_hs|  requantize_hidden_to_fixed.2|  return value|
+|grp_fu_68213_p_din0   |  out|   32|  ap_ctrl_hs|  requantize_hidden_to_fixed.2|  return value|
+|grp_fu_68213_p_dout0  |   in|   32|  ap_ctrl_hs|  requantize_hidden_to_fixed.2|  return value|
+|grp_fu_68213_p_ce     |  out|    1|  ap_ctrl_hs|  requantize_hidden_to_fixed.2|  return value|
+|grp_fu_68216_p_din0   |  out|   32|  ap_ctrl_hs|  requantize_hidden_to_fixed.2|  return value|
+|grp_fu_68216_p_din1   |  out|   32|  ap_ctrl_hs|  requantize_hidden_to_fixed.2|  return value|
+|grp_fu_68216_p_dout0  |   in|   32|  ap_ctrl_hs|  requantize_hidden_to_fixed.2|  return value|
+|grp_fu_68216_p_ce     |  out|    1|  ap_ctrl_hs|  requantize_hidden_to_fixed.2|  return value|
+|src_address0          |  out|   11|   ap_memory|                           src|         array|
+|src_ce0               |  out|    1|   ap_memory|                           src|         array|
+|src_q0                |   in|   32|   ap_memory|                           src|         array|
+|acc_scale             |   in|   32|     ap_none|                     acc_scale|        scalar|
+|dst_0_address0        |  out|    7|   ap_memory|                         dst_0|         array|
+|dst_0_ce0             |  out|    1|   ap_memory|                         dst_0|         array|
+|dst_0_we0             |  out|    1|   ap_memory|                         dst_0|         array|
+|dst_0_d0              |  out|    8|   ap_memory|                         dst_0|         array|
+|dst_1_address0        |  out|    7|   ap_memory|                         dst_1|         array|
+|dst_1_ce0             |  out|    1|   ap_memory|                         dst_1|         array|
+|dst_1_we0             |  out|    1|   ap_memory|                         dst_1|         array|
+|dst_1_d0              |  out|    8|   ap_memory|                         dst_1|         array|
+|dst_2_address0        |  out|    7|   ap_memory|                         dst_2|         array|
+|dst_2_ce0             |  out|    1|   ap_memory|                         dst_2|         array|
+|dst_2_we0             |  out|    1|   ap_memory|                         dst_2|         array|
+|dst_2_d0              |  out|    8|   ap_memory|                         dst_2|         array|
+|dst_3_address0        |  out|    7|   ap_memory|                         dst_3|         array|
+|dst_3_ce0             |  out|    1|   ap_memory|                         dst_3|         array|
+|dst_3_we0             |  out|    1|   ap_memory|                         dst_3|         array|
+|dst_3_d0              |  out|    8|   ap_memory|                         dst_3|         array|
+|dst_4_address0        |  out|    7|   ap_memory|                         dst_4|         array|
+|dst_4_ce0             |  out|    1|   ap_memory|                         dst_4|         array|
+|dst_4_we0             |  out|    1|   ap_memory|                         dst_4|         array|
+|dst_4_d0              |  out|    8|   ap_memory|                         dst_4|         array|
+|dst_5_address0        |  out|    7|   ap_memory|                         dst_5|         array|
+|dst_5_ce0             |  out|    1|   ap_memory|                         dst_5|         array|
+|dst_5_we0             |  out|    1|   ap_memory|                         dst_5|         array|
+|dst_5_d0              |  out|    8|   ap_memory|                         dst_5|         array|
+|dst_6_address0        |  out|    7|   ap_memory|                         dst_6|         array|
+|dst_6_ce0             |  out|    1|   ap_memory|                         dst_6|         array|
+|dst_6_we0             |  out|    1|   ap_memory|                         dst_6|         array|
+|dst_6_d0              |  out|    8|   ap_memory|                         dst_6|         array|
+|dst_7_address0        |  out|    7|   ap_memory|                         dst_7|         array|
+|dst_7_ce0             |  out|    1|   ap_memory|                         dst_7|         array|
+|dst_7_we0             |  out|    1|   ap_memory|                         dst_7|         array|
+|dst_7_d0              |  out|    8|   ap_memory|                         dst_7|         array|
+|dst_8_address0        |  out|    7|   ap_memory|                         dst_8|         array|
+|dst_8_ce0             |  out|    1|   ap_memory|                         dst_8|         array|
+|dst_8_we0             |  out|    1|   ap_memory|                         dst_8|         array|
+|dst_8_d0              |  out|    8|   ap_memory|                         dst_8|         array|
+|dst_9_address0        |  out|    7|   ap_memory|                         dst_9|         array|
+|dst_9_ce0             |  out|    1|   ap_memory|                         dst_9|         array|
+|dst_9_we0             |  out|    1|   ap_memory|                         dst_9|         array|
+|dst_9_d0              |  out|    8|   ap_memory|                         dst_9|         array|
+|dst_10_address0       |  out|    7|   ap_memory|                        dst_10|         array|
+|dst_10_ce0            |  out|    1|   ap_memory|                        dst_10|         array|
+|dst_10_we0            |  out|    1|   ap_memory|                        dst_10|         array|
+|dst_10_d0             |  out|    8|   ap_memory|                        dst_10|         array|
+|dst_11_address0       |  out|    7|   ap_memory|                        dst_11|         array|
+|dst_11_ce0            |  out|    1|   ap_memory|                        dst_11|         array|
+|dst_11_we0            |  out|    1|   ap_memory|                        dst_11|         array|
+|dst_11_d0             |  out|    8|   ap_memory|                        dst_11|         array|
+|dst_12_address0       |  out|    7|   ap_memory|                        dst_12|         array|
+|dst_12_ce0            |  out|    1|   ap_memory|                        dst_12|         array|
+|dst_12_we0            |  out|    1|   ap_memory|                        dst_12|         array|
+|dst_12_d0             |  out|    8|   ap_memory|                        dst_12|         array|
+|dst_13_address0       |  out|    7|   ap_memory|                        dst_13|         array|
+|dst_13_ce0            |  out|    1|   ap_memory|                        dst_13|         array|
+|dst_13_we0            |  out|    1|   ap_memory|                        dst_13|         array|
+|dst_13_d0             |  out|    8|   ap_memory|                        dst_13|         array|
+|dst_14_address0       |  out|    7|   ap_memory|                        dst_14|         array|
+|dst_14_ce0            |  out|    1|   ap_memory|                        dst_14|         array|
+|dst_14_we0            |  out|    1|   ap_memory|                        dst_14|         array|
+|dst_14_d0             |  out|    8|   ap_memory|                        dst_14|         array|
+|dst_15_address0       |  out|    7|   ap_memory|                        dst_15|         array|
+|dst_15_ce0            |  out|    1|   ap_memory|                        dst_15|         array|
+|dst_15_we0            |  out|    1|   ap_memory|                        dst_15|         array|
+|dst_15_d0             |  out|    8|   ap_memory|                        dst_15|         array|
+|dst_16_address0       |  out|    7|   ap_memory|                        dst_16|         array|
+|dst_16_ce0            |  out|    1|   ap_memory|                        dst_16|         array|
+|dst_16_we0            |  out|    1|   ap_memory|                        dst_16|         array|
+|dst_16_d0             |  out|    8|   ap_memory|                        dst_16|         array|
++----------------------+-----+-----+------------+------------------------------+--------------+
+

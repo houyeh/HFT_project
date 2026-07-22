@@ -1,0 +1,5 @@
+claim,status,metric,safe_wording
+024 rolling threshold is leakage-free,pass,shift(1) recomputation and session-boundary audit,No lookahead detected
+024 PnL is not dominated by a tiny number of quotes,pass,top 5% contribution pct of total PnL = 0.439,PnL concentration is acceptable
+ML adds value beyond spread-only rolling calibration,fail,ML frozen PnL = 637510.000; spread-only frozen PnL = 762510.000,Spread-only explains equal or greater frozen-test PnL.
+024 survives fresh walk-forward splits,pending_or_fail,fixed 024 architecture positive folds in pre-burned walk-forward,Fresh folds do not fully confirm the policy; require new holdout.

@@ -1,0 +1,37 @@
+{
+  "class_names": [
+    "Down",
+    "Stationary",
+    "Up"
+  ],
+  "device": "cpu",
+  "label_type": "smoothed_mid_move_3class",
+  "splits": {
+    "test": {
+      "accuracy": 0.8593431603461508,
+      "balanced_accuracy": 0.49070157982846974,
+      "brier_down": 0.05747482110682434,
+      "brier_up": 0.07971205533456316,
+      "ece_down": 0.19931631908261258,
+      "ece_up": 0.24938938141835637,
+      "loss": 0.6261898875236511,
+      "macro_f1": 0.31931275649326224,
+      "num_samples": 151148,
+      "p_down_ge_0p70_actual_down_rate": 0.016251354279523293,
+      "p_up_ge_0p70_actual_up_rate": 0.009541984732824428
+    },
+    "val": {
+      "accuracy": 0.8403395114347646,
+      "balanced_accuracy": 0.4278027516197234,
+      "brier_down": 0.06722924181203693,
+      "brier_up": 0.07954432381621111,
+      "ece_down": 0.2113479950182796,
+      "ece_up": 0.24405157854979112,
+      "loss": 0.6506544351577759,
+      "macro_f1": 0.31898436404021413,
+      "num_samples": 82118,
+      "p_down_ge_0p70_actual_down_rate": 0.02627939142461964,
+      "p_up_ge_0p70_actual_up_rate": 0.03003003003003003
+    }
+  }
+}

@@ -1,0 +1,4 @@
+﻿run,macro_trend_threshold,macro_trend_lookback_ticks,edge_threshold,cancel_threshold,model_net_pnl_twd,improvement_twd,model_fills,model_realized_trades,experiment_id
+mt3,3.0,2000,0.05,0.1,-540814.9999999978,2715320.000000006,1451,1383,lt=smoothed_mid_move_3class__fc=8__w=100__H=5__thr=0p5__expC_snapshot
+mt5,5.0,2000,0.05,0.1,-631489.9999999986,2624645.000000005,1686,1609,lt=smoothed_mid_move_3class__fc=8__w=100__H=5__thr=0p5__expC_snapshot
+mt10,10.0,2000,0.05,0.1,-830229.9999999986,2425905.000000005,2262,2170,lt=smoothed_mid_move_3class__fc=8__w=100__H=5__thr=0p5__expC_snapshot

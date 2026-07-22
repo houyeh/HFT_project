@@ -1,0 +1,135 @@
+{
+  "model_path": "C:\\Users\\holbo\\00VS_projjects\\00_HFT_project\\artifacts\\latency_proof\\frozen_tcn_best_model.pt",
+  "cme_root": "C:\\Users\\holbo\\00VS_projjects\\00_HFT_project\\data\\raw\\CME",
+  "requested_symbols": [
+    "ESM6",
+    "CLK6"
+  ],
+  "evaluated_symbols": [
+    "ESM6",
+    "CLK6"
+  ],
+  "missing_symbols": [],
+  "feature_set": "execution_aware",
+  "window_size": 100,
+  "horizon": 10,
+  "threshold_ticks": 1.0,
+  "sample_stride": 1000,
+  "num_predictions": 67275,
+  "tick_sizes": {
+    "CLK6": 0.01,
+    "ESM6": 0.25
+  },
+  "raw_metrics": {
+    "accuracy": 0.7769899665551839,
+    "macro_precision": 0.3786185522013154,
+    "macro_recall": 0.5018897869973415,
+    "macro_f1": 0.37591472810478255,
+    "support": 67275,
+    "per_class": {
+      "Down": {
+        "precision": 0.04993195854705328,
+        "recall": 0.32382892057026474,
+        "f1": 0.08652276437511336,
+        "support": 1473
+      },
+      "Stationary": {
+        "precision": 0.9844311607434602,
+        "recall": 0.7965071070884265,
+        "f1": 0.8805542899878792,
+        "support": 64302
+      },
+      "Up": {
+        "precision": 0.10149253731343283,
+        "recall": 0.38533333333333336,
+        "f1": 0.1606671299513551,
+        "support": 1500
+      }
+    },
+    "confusion_matrix": [
+      [
+        477,
+        387,
+        609
+      ],
+      [
+        8577,
+        51217,
+        4508
+      ],
+      [
+        499,
+        423,
+        578
+      ]
+    ]
+  },
+  "raw_signal_summary": {
+    "samples": 67275,
+    "trades": 15248,
+    "trade_rate": 0.22665180230397622,
+    "gross_pnl_ticks": -154.5,
+    "net_pnl_ticks": -42474.5,
+    "avg_net_pnl_ticks": -2.7855784365162646,
+    "hit_rate": 0.35335781741867783,
+    "long_trades": 5695,
+    "short_trades": 9553,
+    "sharpe_like": -148.9911241103253
+  },
+  "gated_metrics": {
+    "accuracy": 0.8202155332590115,
+    "macro_precision": 0.38016976194842617,
+    "macro_recall": 0.48744550243997775,
+    "macro_f1": 0.3868446581224019,
+    "support": 67275,
+    "per_class": {
+      "Down": {
+        "precision": 0.0555138784696174,
+        "recall": 0.25118805159538354,
+        "f1": 0.09093143278446791,
+        "support": 1473
+      },
+      "Stationary": {
+        "precision": 0.9806788606130712,
+        "recall": 0.8438151223912165,
+        "f1": 0.9071136002674914,
+        "support": 64302
+      },
+      "Up": {
+        "precision": 0.10431654676258993,
+        "recall": 0.36733333333333335,
+        "f1": 0.16248894131524624,
+        "support": 1500
+      }
+    },
+    "confusion_matrix": [
+      [
+        370,
+        512,
+        591
+      ],
+      [
+        5903,
+        54259,
+        4140
+      ],
+      [
+        392,
+        557,
+        551
+      ]
+    ]
+  },
+  "gated_signal_summary": {
+    "samples": 67275,
+    "trades": 11947,
+    "trade_rate": 0.17758454106280194,
+    "gross_pnl_ticks": -167.50000000000284,
+    "net_pnl_ticks": -36316.5,
+    "avg_net_pnl_ticks": -3.0398007868084043,
+    "hit_rate": 0.3631037080438604,
+    "long_trades": 5282,
+    "short_trades": 6665,
+    "sharpe_like": -133.0555398209844
+  }
+}

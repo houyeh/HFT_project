@@ -1,0 +1,2 @@
+selected_threshold,test_net_pnl,test_trade_count,test_signal_rate,test_fill_rate,test_max_drawdown,test_missed_fill_count,test_delayed_fill_count
+0.7,63440.0,584,0.050923322004369255,0.0002503575311317875,82760.0,106,0

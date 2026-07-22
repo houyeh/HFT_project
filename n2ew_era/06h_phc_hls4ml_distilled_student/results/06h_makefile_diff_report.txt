@@ -1,0 +1,186 @@
+# 06H clamped32 vs unclamped CSim Makefile Diff Report
+
+Generated: 2026-06-29
+
+Scope: diagnostic only. No files under `06f_phc_lite_manual_hls/`,
+`06g_phc_hls4ml_a3d3_retry/`, or `05c4_phc_stp_cosine_lr/` were modified.
+NEW5 was not used.
+
+## 1. Actual CSim Makefile Paths
+
+Vitis 2025.2 did not generate a file literally named `Makefile` in these CSim
+build directories. The actual top-level CSim makefile is `csim.mk`, with common
+rules in `Makefile.rules`.
+
+Unclamped successful CSim makefile:
+
+`C:\Users\holbo\00VS_projjects\00_HFT_project\n2ew_era\06h_phc_hls4ml_distilled_student\hls4ml_prj\phc_distilled_student_keras\phc_distilled_student_keras_prj\solution1\csim\build\csim.mk`
+
+Clamped32 failed CSim makefile:
+
+`C:\Users\holbo\00VS_projjects\00_HFT_project\n2ew_era\06h_phc_hls4ml_distilled_student\hls4ml_prj\phc_distilled_student_keras_clamped32\phc_distilled_student_keras_clamped32_prj\solution1\csim\build\csim.mk`
+
+Full raw copies were saved as requested:
+
+- `results/06h_makefile_unclamped.txt`
+- `results/06h_makefile_clamped32.txt`
+
+Because the real compile pattern lives partly in `Makefile.rules`, full raw
+copies of that shared rule file were also saved:
+
+- `results/06h_makefile_rules_unclamped.txt`
+- `results/06h_makefile_rules_clamped32.txt`
+
+## 2. Relevant Rule Lines
+
+### `HLS_SOURCES`
+
+| Line | Unclamped | Clamped32 |
+|---:|---|---|
+| 26 | `HLS_SOURCES = ../../../../phc_distilled_student_keras_test.cpp ../../../../firmware/phc_distilled_student_keras.cpp` | `HLS_SOURCES = ../../../../phc_distilled_student_keras_clamped32_test.cpp ../../../../firmware/phc_distilled_student_keras_clamped32.cpp` |
+
+### Testbench object rule
+
+| Line | Unclamped | Clamped32 |
+|---:|---|---|
+| 89 | `$(ObjDir)/phc_distilled_student_keras_test.o: ../../../../phc_distilled_student_keras_test.cpp $(ObjDir)/.dir csim.mk` | `$(ObjDir)/phc_distilled_student_keras_clamped32_test.o: ../../../../phc_distilled_student_keras_clamped32_test.cpp $(ObjDir)/.dir csim.mk` |
+| 90 | `$(Echo) "   Compiling ../../../../phc_distilled_student_keras_test.cpp in $(BuildMode) mode" $(AVE_DIR_DLOG)` | `$(Echo) "   Compiling ../../../../phc_distilled_student_keras_clamped32_test.cpp in $(BuildMode) mode" $(AVE_DIR_DLOG)` |
+| 93 | `-include $(ObjDir)/phc_distilled_student_keras_test.d` | `-include $(ObjDir)/phc_distilled_student_keras_clamped32_test.d` |
+
+### Design object rule
+
+| Line | Unclamped | Clamped32 |
+|---:|---|---|
+| 95 | `$(ObjDir)/phc_distilled_student_keras.o: ../../../../firmware/phc_distilled_student_keras.cpp $(ObjDir)/.dir csim.mk` | `$(ObjDir)/phc_distilled_student_keras_clamped32.o: ../../../../firmware/phc_distilled_student_keras_clamped32.cpp $(ObjDir)/.dir csim.mk` |
+| 96 | `$(Echo) "   Compiling ../../../../firmware/phc_distilled_student_keras.cpp in $(BuildMode) mode" $(AVE_DIR_DLOG)` | `$(Echo) "   Compiling ../../../../firmware/phc_distilled_student_keras_clamped32.cpp in $(BuildMode) mode" $(AVE_DIR_DLOG)` |
+| 97 | `$(Verb)  $(CXX) -std=gnu++17 ${CCFLAG} -c -MMD -std=c++0x  -fhls-csim -fhlstoplevel=phc_distilled_student_keras $(IFLAG) $(DFLAG) $< -o $@ ; \` | `$(Verb)  $(CXX) -std=gnu++17 ${CCFLAG} -c -MMD -std=c++0x  -fhls-csim -fhlstoplevel=phc_distilled_student_keras_clamped32 $(IFLAG) $(DFLAG) $< -o $@ ; \` |
+| 99 | `-include $(ObjDir)/phc_distilled_student_keras.d` | `-include $(ObjDir)/phc_distilled_student_keras_clamped32.d` |
+
+## 3. Structural Diff Result
+
+Checks performed:
+
+- Replace every `phc_distilled_student_keras_clamped32` token in clamped32
+  `csim.mk` with `phc_distilled_student_keras`, then compare against unclamped
+  `csim.mk`.
+- Compare unclamped and clamped32 `Makefile.rules` byte-for-byte as text.
+
+Results:
+
+| Check | Result |
+|---|---|
+| `csim.mk` identical after project-name normalization | `True` |
+| `Makefile.rules` identical | `True` |
+
+There is no structural Makefile rule difference. The path depth is identical
+(`../../../../firmware/...cpp`), the slash direction is identical (forward
+slashes), and the target/prerequisite pattern is identical except for the
+project name suffix.
+
+## 4. Object Directory State
+
+### Unclamped successful CSim `obj/`
+
+| File | Length | CreationTime | LastWriteTime |
+|---|---:|---|---|
+| `.dir` | 0 | 2026-06-29 16:47:17 | 2026-06-29 16:47:17 |
+| `phc_distilled_student_keras.d` | 3187 | 2026-06-29 16:47:31 | 2026-06-29 16:47:31 |
+| `phc_distilled_student_keras.o` | 4112740 | 2026-06-29 16:47:24 | 2026-06-29 16:47:31 |
+| `phc_distilled_student_keras_test.d` | 1503 | 2026-06-29 16:47:23 | 2026-06-29 16:47:23 |
+| `phc_distilled_student_keras_test.o` | 1440964 | 2026-06-29 16:47:17 | 2026-06-29 16:47:23 |
+
+### Clamped32 failed CSim `obj/`
+
+| File | Length | CreationTime | LastWriteTime |
+|---|---:|---|---|
+| `.dir` | 0 | 2026-06-29 17:13:33 | 2026-06-29 17:13:33 |
+| `phc_distilled_student_keras_clamped32_test.d` | 1533 | 2026-06-29 17:13:36 | 2026-06-29 17:13:36 |
+| `phc_distilled_student_keras_clamped32_test.o` | 1228386 | 2026-06-29 17:13:33 | 2026-06-29 17:13:36 |
+
+Clamped32 compiled the testbench object, then failed before producing:
+
+- `obj/phc_distilled_student_keras_clamped32.o`
+- `obj/phc_distilled_student_keras_clamped32.d`
+
+This matches the build log: the failure occurs at the design source prerequisite
+for the design object, not at testbench compilation.
+
+## 5. Project File Time-order Check
+
+### Unclamped successful project
+
+| File | Length | CreationTime | LastWriteTime |
+|---|---:|---|---|
+| project directory |  | 2026-06-29 16:47:11 | 2026-06-29 16:49:08 |
+| `firmware/phc_distilled_student_keras.cpp` | 8174 | 2026-06-29 16:47:11 | 2026-06-29 16:47:11 |
+| `phc_distilled_student_keras_test.cpp` | 3794 | 2026-06-29 16:47:11 | 2026-06-29 16:47:11 |
+| `csim/build/csim.mk` | 3149 | 2026-06-29 16:47:16 | 2026-06-29 16:47:16 |
+| `csim/build/Makefile.rules` | 12720 | 2026-06-29 16:47:16 | 2025-11-15 04:14:04 |
+| `obj/phc_distilled_student_keras.o` | 4112740 | 2026-06-29 16:47:24 | 2026-06-29 16:47:31 |
+
+### Clamped32 failed project
+
+| File | Length | CreationTime | LastWriteTime |
+|---|---:|---|---|
+| project directory |  | 2026-06-29 17:13:27 | 2026-06-29 17:13:36 |
+| `firmware/phc_distilled_student_keras_clamped32.cpp` | 7414 | 2026-06-29 17:13:27 | 2026-06-29 17:13:27 |
+| `phc_distilled_student_keras_clamped32_test.cpp` | 3824 | 2026-06-29 17:13:27 | 2026-06-29 17:13:27 |
+| `csim/build/csim.mk` | 3259 | 2026-06-29 17:13:32 | 2026-06-29 17:13:32 |
+| `csim/build/Makefile.rules` | 12720 | 2026-06-29 17:13:32 | 2025-11-15 04:14:04 |
+| `obj/phc_distilled_student_keras_clamped32_test.o` | 1228386 | 2026-06-29 17:13:33 | 2026-06-29 17:13:36 |
+
+The clamped32 generation order is coherent: firmware and testbench are written
+before `csim.mk`, then the CSim build directory and testbench object are created.
+The old 2025 timestamp on `Makefile.rules` is present in both projects and
+appears to be the Vitis template timestamp, not evidence of stale clamped32
+project contents.
+
+## 6. Relative Path Existence Check
+
+From unclamped CSim build directory:
+
+`...\phc_distilled_student_keras_prj\solution1\csim\build`
+
+`..\..\..\..\firmware\phc_distilled_student_keras.cpp` exists: `True`
+
+From clamped32 CSim build directory:
+
+`...\phc_distilled_student_keras_clamped32_prj\solution1\csim\build`
+
+`..\..\..\..\firmware\phc_distilled_student_keras_clamped32.cpp` exists: `True`
+
+Absolute source path lengths:
+
+| Path | Length | Exists |
+|---|---:|---|
+| unclamped firmware source | 166 | True |
+| clamped32 firmware source | 186 | True |
+| unclamped design object | 212 | True |
+| clamped32 design object | 242 | False, because compilation failed before producing it |
+
+The clamped32 source path is longer than unclamped but still below classic
+Windows `MAX_PATH=260`.
+
+## 7. Diagnostic Conclusion
+
+The two generated CSim makefiles differ only by project name. Their compile
+rule structure, path depth, slash direction, source prerequisite pattern, and
+object target pattern are otherwise identical. `Makefile.rules` is identical.
+
+Therefore, the current evidence does not support a bad `csim.mk` path template
+or a `project_name` / `output_dir` mismatch as the root cause. It also does not
+support literal absence of `firmware/phc_distilled_student_keras_clamped32.cpp`.
+
+The observed failure is narrower:
+
+```text
+mingw32-make reports "No rule to make target '../../../../firmware/phc_distilled_student_keras_clamped32.cpp'"
+even though the target source exists at that exact relative path, and even
+though the generated rule is structurally identical to the successful
+unclamped rule.
+```
+
+This points to a CSim build-state / make dependency resolution issue specific
+to the clamped32 generated project instance, not to a textual Makefile rule
+difference. This report intentionally does not patch the Makefile or generation
+script; it only records the observed diff facts for the next repair decision.

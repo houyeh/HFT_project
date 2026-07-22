@@ -1,0 +1,9 @@
+{
+  "realized_trades": 1908,
+  "gross_pnl_twd": -574799.9999999993,
+  "fees_twd": 128150.0,
+  "net_pnl_twd": -702949.9999999993,
+  "win_rate": 0.025681341719077568,
+  "avg_holding_steps": 19.76153039832285,
+  "max_drawdown_twd": 748895.0000000007
+}

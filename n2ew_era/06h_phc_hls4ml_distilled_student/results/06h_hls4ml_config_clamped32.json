@@ -1,0 +1,229 @@
+{
+  "Model": {
+    "Precision": "ap_fixed<16,6>",
+    "ReuseFactor": 1,
+    "Strategy": "Latency",
+    "BramFactor": 1000000000,
+    "TraceOutput": false
+  },
+  "LayerName": {
+    "x_cat": {
+      "Trace": false,
+      "Precision": {
+        "result": "ap_fixed<16,6>"
+      },
+      "ReuseFactor": 1
+    },
+    "input_x": {
+      "Trace": false,
+      "Precision": {
+        "result": "fixed<32,16,RND_CONV,SAT,0>",
+        "weight": "auto",
+        "bias": "auto",
+        "accum": "fixed<32,16,RND_CONV,SAT,0>"
+      },
+      "ReuseFactor": 1
+    },
+    "enc_linear": {
+      "Trace": false,
+      "Precision": {
+        "result": "fixed<32,16,RND_CONV,SAT,0>",
+        "weight": "auto",
+        "bias": "auto",
+        "accum": "fixed<32,16,RND_CONV,SAT,0>"
+      },
+      "ReuseFactor": 1
+    },
+    "encoded_sigmoid": {
+      "Trace": false,
+      "Precision": {
+        "result": "fixed<32,16,RND_CONV,SAT,0>",
+        "table": "fixed<18,8,TRN,WRAP,0>"
+      },
+      "ReuseFactor": 1,
+      "TableSize": 1024
+    },
+    "encoded_silu": {
+      "Trace": false,
+      "Precision": {
+        "result": "fixed<32,16,RND_CONV,SAT,0>"
+      },
+      "ReuseFactor": 1
+    },
+    "gate": {
+      "Trace": false,
+      "Precision": {
+        "result": "fixed<32,16,RND_CONV,SAT,0>",
+        "weight": "auto",
+        "bias": "auto",
+        "accum": "fixed<32,16,RND_CONV,SAT,0>"
+      },
+      "ReuseFactor": 1
+    },
+    "candidate": {
+      "Trace": false,
+      "Precision": {
+        "result": "fixed<32,16,RND_CONV,SAT,0>",
+        "weight": "auto",
+        "bias": "auto",
+        "accum": "fixed<32,16,RND_CONV,SAT,0>"
+      },
+      "ReuseFactor": 1
+    },
+    "input_state": {
+      "Trace": false,
+      "Precision": {
+        "result": "fixed<32,16,RND_CONV,SAT,0>",
+        "weight": "auto",
+        "bias": "auto",
+        "accum": "fixed<32,16,RND_CONV,SAT,0>"
+      },
+      "ReuseFactor": 1
+    },
+    "gate_sigmoid": {
+      "Trace": false,
+      "Precision": {
+        "result": "fixed<32,16,RND_CONV,SAT,0>",
+        "table": "fixed<18,8,TRN,WRAP,0>"
+      },
+      "ReuseFactor": 1,
+      "TableSize": 1024
+    },
+    "candidate_tanh": {
+      "Trace": false,
+      "Precision": {
+        "result": "fixed<32,16,RND_CONV,SAT,0>",
+        "table": "fixed<18,8,TRN,WRAP,0>"
+      },
+      "ReuseFactor": 1,
+      "TableSize": 1024
+    },
+    "decay_diag": {
+      "Trace": false,
+      "Precision": {
+        "result": "fixed<32,16,RND_CONV,SAT,0>",
+        "weight": "auto",
+        "bias": "auto",
+        "accum": "fixed<32,16,RND_CONV,SAT,0>"
+      },
+      "ReuseFactor": 1
+    },
+    "gate_candidate_mul": {
+      "Trace": false,
+      "Precision": {
+        "result": "fixed<32,16,RND_CONV,SAT,0>"
+      },
+      "ReuseFactor": 1
+    },
+    "state_temporal": {
+      "Trace": false,
+      "Precision": {
+        "result": "fixed<32,16,RND_CONV,SAT,0>"
+      },
+      "ReuseFactor": 1
+    },
+    "gain_from_encoded": {
+      "Trace": false,
+      "Precision": {
+        "result": "fixed<32,16,RND_CONV,SAT,0>",
+        "weight": "auto",
+        "bias": "auto",
+        "accum": "fixed<32,16,RND_CONV,SAT,0>"
+      },
+      "ReuseFactor": 1
+    },
+    "gain_from_prev_state": {
+      "Trace": false,
+      "Precision": {
+        "result": "fixed<32,16,RND_CONV,SAT,0>",
+        "weight": "auto",
+        "bias": "auto",
+        "accum": "fixed<32,16,RND_CONV,SAT,0>"
+      },
+      "ReuseFactor": 1
+    },
+    "synapse": {
+      "Trace": false,
+      "Precision": {
+        "result": "fixed<32,16,RND_CONV,SAT,0>",
+        "weight": "auto",
+        "bias": "auto",
+        "accum": "fixed<32,16,RND_CONV,SAT,0>"
+      },
+      "ReuseFactor": 1
+    },
+    "gain_pre": {
+      "Trace": false,
+      "Precision": {
+        "result": "fixed<32,16,RND_CONV,SAT,0>"
+      },
+      "ReuseFactor": 1
+    },
+    "message_sigmoid": {
+      "Trace": false,
+      "Precision": {
+        "result": "fixed<32,16,RND_CONV,SAT,0>",
+        "table": "fixed<18,8,TRN,WRAP,0>"
+      },
+      "ReuseFactor": 1,
+      "TableSize": 1024
+    },
+    "gain_sigmoid": {
+      "Trace": false,
+      "Precision": {
+        "result": "fixed<32,16,RND_CONV,SAT,0>",
+        "table": "fixed<18,8,TRN,WRAP,0>"
+      },
+      "ReuseFactor": 1,
+      "TableSize": 1024
+    },
+    "message_silu": {
+      "Trace": false,
+      "Precision": {
+        "result": "fixed<32,16,RND_CONV,SAT,0>"
+      },
+      "ReuseFactor": 1
+    },
+    "gain_message_mul": {
+      "Trace": false,
+      "Precision": {
+        "result": "fixed<32,16,RND_CONV,SAT,0>"
+      },
+      "ReuseFactor": 1
+    },
+    "alpha_diag_const": {
+      "Trace": false,
+      "Precision": {
+        "result": "fixed<32,16,RND_CONV,SAT,0>",
+        "weight": "auto",
+        "bias": "auto",
+        "accum": "fixed<32,16,RND_CONV,SAT,0>"
+      },
+      "ReuseFactor": 1
+    },
+    "loop_input_without_layernorm": {
+      "Trace": false,
+      "Precision": {
+        "result": "fixed<32,16,RND_CONV,SAT,0>"
+      },
+      "ReuseFactor": 1
+    },
+    "readout": {
+      "Trace": false,
+      "Precision": {
+        "result": "fixed<32,16,RND_CONV,SAT,0>",
+        "weight": "auto",
+        "bias": "auto",
+        "accum": "fixed<32,16,RND_CONV,SAT,0>"
+      },
+      "ReuseFactor": 1
+    },
+    "readout_and_state": {
+      "Trace": false,
+      "Precision": {
+        "result": "ap_fixed<16,6>"
+      },
+      "ReuseFactor": 1
+    }
+  }
+}

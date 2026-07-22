@@ -1,0 +1,3 @@
+﻿run_label,reason,count,mean,sum,win_rate
+run3_combo_mt0_sl5,max_holding_steps,1024,-1.134765625,-1162.0,0.029296875
+run3_combo_mt0_sl5,stop_loss_exit,71,-10.056338028169014,-714.0,0.0

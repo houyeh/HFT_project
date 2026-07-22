@@ -1,0 +1,21 @@
+{
+  "policy_id": "residual_ev_veto__logistic_l2_balanced__thr0.83338837",
+  "model_name": "logistic_l2_balanced",
+  "threshold": 0.8333883739092597,
+  "selection_split": "validation",
+  "test_used_for_selection": false,
+  "validation_metrics": {
+    "model_name": "logistic_l2_balanced",
+    "threshold": 0.8333883739092597,
+    "selection_split": "validation",
+    "test_used_for_selection": false,
+    "veto_count": 0,
+    "veto_rate": 0.0,
+    "baseline_pnl": 1218095.0,
+    "vetoed_quote_ev": 0.0,
+    "after_veto_pnl": 1218095.0,
+    "incremental_vs_baseline": -0.0
+  },
+  "universe": "quotes selected by frozen bid_only_spread_ge_1 baseline",
+  "label": "negative_ev_moderate; toxic label not used"
+}

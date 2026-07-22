@@ -1,0 +1,9 @@
+phase,input_name,path,exists,row_count,column_count,bytes
+02B,strict_policy_grid,C:\Users\holbo\00VS_projjects\00_HFT_project\n2ew_era\02b_strict_baseline_and_excess_pnl\results\strict_policy_grid.csv,True,720.0,52.0,441112
+02B,random_summary_strict,C:\Users\holbo\00VS_projjects\00_HFT_project\n2ew_era\02b_strict_baseline_and_excess_pnl\results\random_summary_strict.csv,True,720.0,19.0,195484
+02B,random_summary_strict_exact_top_candidates,C:\Users\holbo\00VS_projjects\00_HFT_project\n2ew_era\02b_strict_baseline_and_excess_pnl\results\random_summary_strict_exact_top_candidates.csv,True,3.0,16.0,995
+02B,fee_sensitivity,C:\Users\holbo\00VS_projjects\00_HFT_project\n2ew_era\02b_strict_baseline_and_excess_pnl\results\fee_sensitivity.csv,True,2880.0,10.0,284889
+02B,strict_selected_candidates,C:\Users\holbo\00VS_projjects\00_HFT_project\n2ew_era\02b_strict_baseline_and_excess_pnl\results\strict_selected_candidates.json,True,,,7477
+02C,queue_stress_grid,C:\Users\holbo\00VS_projjects\00_HFT_project\n2ew_era\02c_queue_aware_stress\results\queue_stress_grid.csv,True,900.0,15.0,140543
+02C,delay_sensitivity,C:\Users\holbo\00VS_projjects\00_HFT_project\n2ew_era\02c_queue_aware_stress\results\delay_sensitivity.csv,True,45.0,15.0,7179
+02C,fill_keep_break_even,C:\Users\holbo\00VS_projjects\00_HFT_project\n2ew_era\02c_queue_aware_stress\results\fill_keep_break_even.csv,True,8.0,3.0,168

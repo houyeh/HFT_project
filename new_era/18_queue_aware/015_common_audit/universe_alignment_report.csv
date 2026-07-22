@@ -1,0 +1,3 @@
+model,track,original_event_count,common_universe_event_count,overlap_count,coverage_rate,missing_prediction_rate,dropped_event_count,notes
+015_smoothed,015_original_universe,233266,,233266,1.0,0.0,0,Historical 015 audit universe from dataset_sequences.npz test sessions.
+015_smoothed,015_common_universe,233266,1166321.0,1166123,0.9998302354154646,0.00016976458453543675,198,015 weights re-scored on 016_v2 quote-eligible test universe; first window-1 rows per session lack prediction.

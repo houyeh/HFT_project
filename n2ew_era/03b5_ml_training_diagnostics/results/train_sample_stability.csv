@@ -1,0 +1,10 @@
+split,policy_id,model_id,horizon,threshold,state_count,selected_action_count,bid_count,ask_count,total_excess_pnl,max_drawdown,seed,validation_selected_threshold,validation_total_excess_pnl
+new3,diagnostic_hgb_threshold,seed_0,20,0.0,5657362,4180912,2070450,2110462,77773152.0,95200.0,0,0.0,12026910.0
+new4,diagnostic_hgb_threshold,seed_0,20,0.0,2196640,1615780,798051,817729,27181270.0,73030.0,0,0.0,12026910.0
+test,diagnostic_hgb_threshold,seed_0,20,0.0,1166321,857916,421354,436562,20607625.0,27535.0,0,0.0,12026910.0
+new3,diagnostic_hgb_threshold,seed_1,20,0.0,5657362,4167848,2059727,2108121,77787026.0,86980.0,1,0.0,11882010.0
+new4,diagnostic_hgb_threshold,seed_1,20,0.0,2196640,1610166,793319,816847,27352880.0,78930.0,1,0.0,11882010.0
+test,diagnostic_hgb_threshold,seed_1,20,0.0,1166321,869692,427095,442597,20621025.0,27180.0,1,0.0,11882010.0
+new3,diagnostic_hgb_threshold,seed_2,20,0.0,5657362,4155218,2063436,2091782,78256930.0,82830.0,2,0.0,12058525.0
+new4,diagnostic_hgb_threshold,seed_2,20,0.0,2196640,1604979,794418,810561,27497970.0,65275.0,2,0.0,12058525.0
+test,diagnostic_hgb_threshold,seed_2,20,0.0,1166321,872123,428776,443347,20693405.0,26595.0,2,0.0,12058525.0

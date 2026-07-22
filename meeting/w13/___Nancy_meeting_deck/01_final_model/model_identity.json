@@ -1,0 +1,7 @@
+{
+    "Dataset": "NEW_ALL / TXFB6",
+    "Features": 8,
+    "Window": 100,
+    "Horizon": 5,
+    "Label": "smoothed_mid_move_3class"
+}

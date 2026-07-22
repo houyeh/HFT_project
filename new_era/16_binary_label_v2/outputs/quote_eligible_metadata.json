@@ -1,0 +1,53 @@
+{
+  "data_dir": "C:\\Users\\holbo\\00VS_projjects\\00_HFT_project\\data\\NEW_ALL",
+  "dataset": "NEW_ALL",
+  "symbol": "TXFB6",
+  "selected_features": [
+    "obi",
+    "queue_imbalance",
+    "weighted_mid_deviation",
+    "trade_intensity_short",
+    "deep_obi",
+    "queue_imbalance_change",
+    "normalized_spread",
+    "cancel_pressure_short"
+  ],
+  "z_features": [
+    "obi_z",
+    "queue_imbalance_z",
+    "weighted_mid_deviation_z",
+    "trade_intensity_short_z",
+    "deep_obi_z",
+    "queue_imbalance_change_z",
+    "normalized_spread_z",
+    "cancel_pressure_short_z"
+  ],
+  "zscore_definition": "past-only rolling z-score: (x_t - mean(x_<t)) / std(x_<t), clipped to +/-10",
+  "zscore_window": 2000,
+  "zscore_min_periods": 100,
+  "quote_eligible_rules_in_order": [
+    "valid best bid and ask: bid_px_1 > 0, ask_px_1 > 0, finite",
+    "positive spread: ask_px_1 - bid_px_1 > 0",
+    "complete 5-level depth: bid/ask prices and volumes at levels 1..5 are finite and > 0",
+    "session boundary removal: first 100 ticks and last 10 ticks per session",
+    "finite selected feature and z-score values"
+  ],
+  "split_policy": "chronological session split on raw sessions before filtering",
+  "train_sessions": [
+    "20260121Day",
+    "20260122Day",
+    "20260122Night",
+    "20260123Day",
+    "20260123Night",
+    "20260126Day"
+  ],
+  "val_sessions": [
+    "20260126Night"
+  ],
+  "test_sessions": [
+    "20260127Day",
+    "20260127Night"
+  ],
+  "raw_rows": 5323560,
+  "eligible_rows": 5322562
+}

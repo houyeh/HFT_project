@@ -1,0 +1,5 @@
+﻿reason,count,mean,sum,win_rate
+max_holding_steps,1009,-1.4251734390485629,-1438.0,0.022794846382556987
+passive_ask_fill,13,9.384615384615385,122.0,0.7692307692307693
+passive_bid_fill,10,9.1,91.0,0.7
+stop_loss_exit,71,-10.23943661971831,-727.0,0.0

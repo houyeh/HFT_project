@@ -1,0 +1,32 @@
+{
+  "policy_id": "hgb_convergence_selected",
+  "model_id": "hgb_regressor_iter_320",
+  "max_iter": 320,
+  "threshold": 0.0,
+  "selection_split": "val",
+  "selection_metric": "validation_total_excess_pnl_H20",
+  "validation_metrics": {
+    "model_id": "hgb_regressor_iter_320",
+    "max_iter": 320,
+    "n_iter": 320,
+    "hit_iteration_cap": true,
+    "train_rmse": 146.00856808120886,
+    "val_rmse": 239.18157165373339,
+    "train_mae": 74.56256103515625,
+    "val_mae": 72.1781005859375,
+    "train_spearman": 0.299695128402399,
+    "val_spearman": 0.29639651592132465,
+    "train_pr_auc_positive_excess": 0.38950104200532987,
+    "val_pr_auc_positive_excess": 0.37612482323592755,
+    "train_roc_auc_positive_excess": 0.589750533051741,
+    "val_roc_auc_positive_excess": 0.5806582123246555,
+    "selected_threshold": 0.0,
+    "val_selected_action_count": 421989,
+    "val_selection_rate": 0.7489019072650702,
+    "val_policy_total_excess_pnl": 12591520.0,
+    "val_policy_max_drawdown": 188735.0,
+    "selection_split": "val",
+    "test_new3_new4_used_for_selection": false
+  },
+  "test_new3_new4_used_for_selection": false
+}

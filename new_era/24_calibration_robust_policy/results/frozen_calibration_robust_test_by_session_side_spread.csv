@@ -1,0 +1,15 @@
+session_id,side,spread_bucket,policy,num_quote_actions,selected_quote_count,oracle_positive_quote_count,oracle_recall,oracle_precision,captured_oracle_pnl,missed_oracle_pnl,false_positive_loss,avoided_bad_pnl,missed_good_pnl,selected_quote_pnl,oracle_positive_pnl,selection_rate,split,selection_split,test_used_for_selection
+20260127Day,ask,"(1,2]",side_specific__016_v2__w50__bid0.50__ask0.10,76,4,0,,0.0,0.0,0.0,9530.0,705635.0,0.0,-9530.0,0.0,0.05263157894736842,test_diagnostic_burned,validation,False
+20260127Day,ask,"(2,3]",side_specific__016_v2__w50__bid0.50__ask0.10,40,9,0,,0.0,0.0,0.0,58280.0,417410.0,0.0,-58280.0,0.0,0.225,test_diagnostic_burned,validation,False
+20260127Day,ask,<=1,side_specific__016_v2__w50__bid0.50__ask0.10,52,0,0,,,0.0,0.0,-0.0,315340.0,0.0,0.0,0.0,0.0,test_diagnostic_burned,validation,False
+20260127Day,ask,>3,side_specific__016_v2__w50__bid0.50__ask0.10,1,0,0,,,0.0,0.0,-0.0,49365.0,0.0,0.0,0.0,0.0,test_diagnostic_burned,validation,False
+20260127Day,bid,"(1,2]",side_specific__016_v2__w50__bid0.50__ask0.10,54,21,31,0.41935483870967744,0.6190476190476191,126205.0,390080.0,-0.0,-0.0,390080.0,126205.0,516285.0,0.3888888888888889,test_diagnostic_burned,validation,False
+20260127Day,bid,"(2,3]",side_specific__016_v2__w50__bid0.50__ask0.10,32,19,15,0.6666666666666666,0.5263157894736842,109700.0,175625.0,-0.0,-0.0,175625.0,109700.0,285325.0,0.59375,test_diagnostic_burned,validation,False
+20260127Day,bid,<=1,side_specific__016_v2__w50__bid0.50__ask0.10,32,3,13,0.23076923076923078,1.0,53405.0,135350.0,-0.0,-0.0,135350.0,53405.0,188755.0,0.09375,test_diagnostic_burned,validation,False
+20260127Day,bid,>3,side_specific__016_v2__w50__bid0.50__ask0.10,2,2,1,1.0,0.5,6085.0,0.0,-0.0,-0.0,0.0,6085.0,6085.0,1.0,test_diagnostic_burned,validation,False
+20260127Night,ask,"(1,2]",side_specific__016_v2__w50__bid0.50__ask0.10,119,10,3,0.3333333333333333,0.1,335.0,1070.0,53375.0,566640.0,1070.0,-53040.0,1405.0,0.08403361344537816,test_diagnostic_burned,validation,False
+20260127Night,ask,"(2,3]",side_specific__016_v2__w50__bid0.50__ask0.10,15,5,0,,0.0,0.0,0.0,36545.0,106985.0,0.0,-36545.0,0.0,0.3333333333333333,test_diagnostic_burned,validation,False
+20260127Night,ask,<=1,side_specific__016_v2__w50__bid0.50__ask0.10,212,28,3,0.3333333333333333,0.03571428571428571,585.0,1170.0,165375.0,956490.0,1170.0,-164790.0,1755.0,0.1320754716981132,test_diagnostic_burned,validation,False
+20260127Night,bid,"(1,2]",side_specific__016_v2__w50__bid0.50__ask0.10,104,55,48,0.5416666666666666,0.4727272727272727,281110.0,227670.0,1615.0,1030.0,227670.0,279495.0,508780.0,0.5288461538461539,test_diagnostic_burned,validation,False
+20260127Night,bid,"(2,3]",side_specific__016_v2__w50__bid0.50__ask0.10,15,10,10,0.7,0.7,83645.0,26955.0,-0.0,-0.0,26955.0,83645.0,110600.0,0.6666666666666666,test_diagnostic_burned,validation,False
+20260127Night,bid,<=1,side_specific__016_v2__w50__bid0.50__ask0.10,180,80,70,0.42857142857142855,0.375,307700.0,403400.0,6540.0,5155.0,403400.0,301160.0,711100.0,0.4444444444444444,test_diagnostic_burned,validation,False

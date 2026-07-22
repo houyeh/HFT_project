@@ -1,0 +1,20 @@
+{
+  "experiment_id": "lt=smoothed_mid_move_3class__fc=8__w=100__H=10__thr=1",
+  "label_type": "smoothed_mid_move_3class",
+  "feature_count": 8,
+  "selected_strategy": "tcn_skew",
+  "selected_prob_threshold": 0.55,
+  "selected_edge_threshold": 0.4,
+  "baseline_pnl_after_fees_flatten": -256500.0,
+  "model_pnl_after_fees_flatten": -17770.0,
+  "improvement_flatten": 238730.0,
+  "baseline_pnl_after_fees": -256000.0,
+  "model_pnl_after_fees": -17270.0,
+  "improvement": 238730.0,
+  "baseline_trades": 880,
+  "model_trades": 1218,
+  "baseline_max_drawdown": 530320.0,
+  "model_max_drawdown": 315330.0,
+  "tick_size": 1.0,
+  "device": "cpu"
+}

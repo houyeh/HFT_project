@@ -1,0 +1,190 @@
+
+
+================================================================
+== Vitis HLS Report for 'phc_step_Outline_VITIS_LOOP_127_1'
+================================================================
+* Date:           Mon Jun 22 22:04:21 2026
+
+* Version:        2025.2 (Build 6295257 on Nov 14 2025)
+* Project:        hls_component
+* Solution:       hls (Vivado IP Flow Target)
+* Product family: zynq
+* Target device:  xc7z020-clg400-1
+
+
+================================================================
+== Performance Estimates
+================================================================
++ Timing: 
+    * Summary: 
+    +--------+----------+----------+------------+
+    |  Clock |  Target  | Estimated| Uncertainty|
+    +--------+----------+----------+------------+
+    |ap_clk  |  10.00 ns|  7.040 ns|     2.70 ns|
+    +--------+----------+----------+------------+
+
++ Latency: 
+    * Summary: 
+    +---------+---------+----------+----------+-----+-----+---------+
+    |  Latency (cycles) |  Latency (absolute) |  Interval | Pipeline|
+    |   min   |   max   |    min   |    max   | min | max |   Type  |
+    +---------+---------+----------+----------+-----+-----+---------+
+    |      433|      433|  4.330 us|  4.330 us|  433|  433|       no|
+    +---------+---------+----------+----------+-----+-----+---------+
+
+    + Detail: 
+        * Instance: 
+        N/A
+
+        * Loop: 
+        +---------------------+---------+---------+----------+-----------+-----------+------+----------+
+        |                     |  Latency (cycles) | Iteration|  Initiation Interval  | Trip |          |
+        |      Loop Name      |   min   |   max   |  Latency |  achieved |   target  | Count| Pipelined|
+        +---------------------+---------+---------+----------+-----------+-----------+------+----------+
+        |- VITIS_LOOP_127_1   |      432|      432|        27|          -|          -|    16|        no|
+        | + VITIS_LOOP_130_2  |       24|       24|         6|          -|          -|     4|        no|
+        +---------------------+---------+---------+----------+-----------+-----------+------+----------+
+
+
+
+================================================================
+== Utilization Estimates
+================================================================
+* Summary: 
++-----------------+---------+-----+--------+-------+-----+
+|       Name      | BRAM_18K| DSP |   FF   |  LUT  | URAM|
++-----------------+---------+-----+--------+-------+-----+
+|DSP              |        -|    -|       -|      -|    -|
+|Expression       |        -|    -|       0|    324|    -|
+|FIFO             |        -|    -|       -|      -|    -|
+|Instance         |        -|    -|       -|      -|    -|
+|Memory           |        0|    -|      59|     51|    -|
+|Multiplexer      |        -|    -|       0|    173|    -|
+|Register         |        -|    -|     416|      -|    -|
++-----------------+---------+-----+--------+-------+-----+
+|Total            |        0|    0|     475|    548|    0|
++-----------------+---------+-----+--------+-------+-----+
+|Available        |      280|  220|  106400|  53200|    0|
++-----------------+---------+-----+--------+-------+-----+
+|Utilization (%)  |        0|    0|      ~0|      1|    0|
++-----------------+---------+-----+--------+-------+-----+
+
++ Detail: 
+    * Instance: 
+    N/A
+
+    * DSP: 
+    N/A
+
+    * Memory: 
+    +-------------------------------------------+----------------------------------------------------------------------------------+---------+----+----+-----+------+-----+------+-------------+
+    |                   Memory                  |                                      Module                                      | BRAM_18K| FF | LUT| URAM| Words| Bits| Banks| W*Bits*Banks|
+    +-------------------------------------------+----------------------------------------------------------------------------------+---------+----+----+-----+------+-----+------+-------------+
+    |p_ZN16phc_step_weightsL11CANDIDATE_WE_0_U  |phc_step_Outline_VITIS_LOOP_127_1_p_ZN16phc_step_weightsL11CANDIDATE_WE_0_ROMbkb  |        0|  12|  12|    0|    64|   12|     1|          768|
+    |p_ZN16phc_step_weightsL11CANDIDATE_WE_1_U  |phc_step_Outline_VITIS_LOOP_127_1_p_ZN16phc_step_weightsL11CANDIDATE_WE_1_ROMcud  |        0|  12|  12|    0|    64|   12|     1|          768|
+    |p_ZN16phc_step_weightsL11CANDIDATE_WE_2_U  |phc_step_Outline_VITIS_LOOP_127_1_p_ZN16phc_step_weightsL11CANDIDATE_WE_2_ROMdEe  |        0|  12|  12|    0|    64|   12|     1|          768|
+    |p_ZN16phc_step_weightsL11CANDIDATE_WE_3_U  |phc_step_Outline_VITIS_LOOP_127_1_p_ZN16phc_step_weightsL11CANDIDATE_WE_3_ROMeOg  |        0|  12|  12|    0|    64|   12|     1|          768|
+    |phc_step_weights_CANDIDATE_B_U             |phc_step_Outline_VITIS_LOOP_127_1_phc_step_weights_CANDIDATE_B_ROM_AUTO_1R        |        0|  11|   3|    0|    16|   11|     1|          176|
+    +-------------------------------------------+----------------------------------------------------------------------------------+---------+----+----+-----+------+-----+------+-------------+
+    |Total                                      |                                                                                  |        0|  59|  51|    0|   272|   59|     5|         3248|
+    +-------------------------------------------+----------------------------------------------------------------------------------+---------+----+----+-----+------+-----+------+-------------+
+
+    * FIFO: 
+    N/A
+
+    * Expression: 
+    +-----------------------+----------+----+---+----+------------+------------+
+    |     Variable Name     | Operation| DSP| FF| LUT| Bitwidth P0| Bitwidth P1|
+    +-----------------------+----------+----+---+----+------------+------------+
+    |add_ln127_fu_282_p2    |         +|   0|  0|  13|           5|           1|
+    |add_ln130_fu_370_p2    |         +|   0|  0|  13|           5|           3|
+    |add_ln133_4_fu_480_p2  |         +|   0|  0|  71|          64|          64|
+    |add_ln133_5_fu_504_p2  |         +|   0|  0|  71|          64|          64|
+    |add_ln133_6_fu_527_p2  |         +|   0|  0|  71|          64|          64|
+    |add_ln133_fu_551_p2    |         +|   0|  0|  71|          64|          64|
+    |icmp_ln127_fu_276_p2   |      icmp|   0|  0|  14|           5|           6|
+    +-----------------------+----------+----+---+----+------------+------------+
+    |Total                  |          |   0|  0| 324|         271|         266|
+    +-----------------------+----------+----+---+----+------------+------------+
+
+    * Multiplexer: 
+    +------------------------+----+-----------+-----+-----------+
+    |          Name          | LUT| Input Size| Bits| Total Bits|
+    +------------------------+----+-----------+-----+-----------+
+    |acc_6_reg_222           |   9|          2|   40|         80|
+    |ap_NS_fsm               |  53|         10|    1|         10|
+    |encoded_address0_local  |  14|          3|    4|         12|
+    |encoded_address1_local  |  14|          3|    4|         12|
+    |grp_fu_244_p0           |  14|          3|   24|         72|
+    |grp_fu_244_p1           |  14|          3|   40|        120|
+    |grp_fu_248_p0           |  14|          3|   24|         72|
+    |grp_fu_248_p1           |  14|          3|   40|        120|
+    |i_8_reg_211             |   9|          2|    5|         10|
+    |j_2_fu_88               |   9|          2|    5|         10|
+    |phi_ln133_reg_232       |   9|          2|   40|         80|
+    +------------------------+----+-----------+-----+-----------+
+    |Total                   | 173|         36|  227|        598|
+    +------------------------+----+-----------+-----+-----------+
+
+    * Register: 
+    +------------------------------------------------------+----+----+-----+-----------+
+    |                         Name                         | FF | LUT| Bits| Const Bits|
+    +------------------------------------------------------+----+----+-----+-----------+
+    |acc_6_reg_222                                         |  40|   0|   40|          0|
+    |add_ln127_reg_577                                     |   5|   0|    5|          0|
+    |add_ln130_reg_641                                     |   5|   0|    5|          0|
+    |ap_CS_fsm                                             |   9|   0|    9|          0|
+    |i_8_reg_211                                           |   5|   0|    5|          0|
+    |j_2_fu_88                                             |   5|   0|    5|          0|
+    |lshr_ln129_1_reg_605                                  |   2|   0|    2|          0|
+    |p_ZN16phc_step_weightsL11CANDIDATE_WE_0_load_reg_646  |  12|   0|   12|          0|
+    |p_ZN16phc_step_weightsL11CANDIDATE_WE_1_load_reg_651  |  12|   0|   12|          0|
+    |p_ZN16phc_step_weightsL11CANDIDATE_WE_2_load_reg_656  |  12|   0|   12|          0|
+    |p_ZN16phc_step_weightsL11CANDIDATE_WE_3_load_reg_666  |  12|   0|   12|          0|
+    |phi_ln133_reg_232                                     |  40|   0|   40|          0|
+    |reg_252                                               |  40|   0|   40|          0|
+    |reg_256                                               |  40|   0|   40|          0|
+    |reg_260                                               |  64|   0|   64|          0|
+    |reg_264                                               |  64|   0|   64|          0|
+    |tmp_94_reg_716                                        |  40|   0|   40|          0|
+    |trunc_ln127_reg_582                                   |   4|   0|    4|          0|
+    |zext_ln127_reg_587                                    |   5|   0|   64|         59|
+    +------------------------------------------------------+----+----+-----+-----------+
+    |Total                                                 | 416|   0|  475|         59|
+    +------------------------------------------------------+----+----+-----+-----------+
+
+
+
+================================================================
+== Interface
+================================================================
+* Summary: 
++------------------------+-----+-----+------------+-----------------------------------+--------------+
+|        RTL Ports       | Dir | Bits|  Protocol  |           Source Object           |    C Type    |
++------------------------+-----+-----+------------+-----------------------------------+--------------+
+|ap_clk                  |   in|    1|  ap_ctrl_hs|  phc_step_Outline_VITIS_LOOP_127_1|  return value|
+|ap_rst                  |   in|    1|  ap_ctrl_hs|  phc_step_Outline_VITIS_LOOP_127_1|  return value|
+|ap_start                |   in|    1|  ap_ctrl_hs|  phc_step_Outline_VITIS_LOOP_127_1|  return value|
+|ap_done                 |  out|    1|  ap_ctrl_hs|  phc_step_Outline_VITIS_LOOP_127_1|  return value|
+|ap_idle                 |  out|    1|  ap_ctrl_hs|  phc_step_Outline_VITIS_LOOP_127_1|  return value|
+|ap_ready                |  out|    1|  ap_ctrl_hs|  phc_step_Outline_VITIS_LOOP_127_1|  return value|
+|grp_fu_1464_p_din0      |  out|   24|  ap_ctrl_hs|  phc_step_Outline_VITIS_LOOP_127_1|  return value|
+|grp_fu_1464_p_din1      |  out|   40|  ap_ctrl_hs|  phc_step_Outline_VITIS_LOOP_127_1|  return value|
+|grp_fu_1464_p_dout0     |   in|   64|  ap_ctrl_hs|  phc_step_Outline_VITIS_LOOP_127_1|  return value|
+|grp_fu_1464_p_ce        |  out|    1|  ap_ctrl_hs|  phc_step_Outline_VITIS_LOOP_127_1|  return value|
+|grp_fu_5237_p_din0      |  out|   24|  ap_ctrl_hs|  phc_step_Outline_VITIS_LOOP_127_1|  return value|
+|grp_fu_5237_p_din1      |  out|   40|  ap_ctrl_hs|  phc_step_Outline_VITIS_LOOP_127_1|  return value|
+|grp_fu_5237_p_dout0     |   in|   64|  ap_ctrl_hs|  phc_step_Outline_VITIS_LOOP_127_1|  return value|
+|grp_fu_5237_p_ce        |  out|    1|  ap_ctrl_hs|  phc_step_Outline_VITIS_LOOP_127_1|  return value|
+|candidate_pre_address0  |  out|    4|   ap_memory|                      candidate_pre|         array|
+|candidate_pre_ce0       |  out|    1|   ap_memory|                      candidate_pre|         array|
+|candidate_pre_we0       |  out|    1|   ap_memory|                      candidate_pre|         array|
+|candidate_pre_d0        |  out|   40|   ap_memory|                      candidate_pre|         array|
+|encoded_address0        |  out|    4|   ap_memory|                            encoded|         array|
+|encoded_ce0             |  out|    1|   ap_memory|                            encoded|         array|
+|encoded_q0              |   in|   40|   ap_memory|                            encoded|         array|
+|encoded_address1        |  out|    4|   ap_memory|                            encoded|         array|
+|encoded_ce1             |  out|    1|   ap_memory|                            encoded|         array|
+|encoded_q1              |   in|   40|   ap_memory|                            encoded|         array|
++------------------------+-----+-----+------------+-----------------------------------+--------------+
+

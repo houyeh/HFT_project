@@ -1,0 +1,78 @@
+{
+  "label_type": "all_event_quote_risk_binary_proxyC",
+  "proxy_type": "price_level_removed_proxy",
+  "fill_window": 1,
+  "horizon": 10,
+  "window_size": 100,
+  "train_stride": 5,
+  "eval_stride": 1,
+  "toxic_threshold": -0.5,
+  "sides": {
+    "bid": {
+      "npz_path": "C:\\Users\\holbo\\00VS_projjects\\00_HFT_project\\new_era\\016_new_binary\\outputs_fix\\datasets\\bid_all_event_fw1_h10.npz",
+      "splits": {
+        "NEW_train": {
+          "num_samples": 718664,
+          "positive_count": 508,
+          "positive_rate": 0.0007068671868912315,
+          "fill_proxy_rate": 0.021924014560350872,
+          "toxic_given_fill_rate": 0.032241685707032244
+        },
+        "NEW_val": {
+          "num_samples": 563484,
+          "positive_count": 407,
+          "positive_rate": 0.0007222920260380064,
+          "fill_proxy_rate": 0.022366207381221116,
+          "toxic_given_fill_rate": 0.03229389827818773
+        },
+        "NEW_test": {
+          "num_samples": 1166432,
+          "positive_count": 677,
+          "positive_rate": 0.0005804024580944281,
+          "fill_proxy_rate": 0.02086276782529972,
+          "toxic_given_fill_rate": 0.027820012327922746
+        },
+        "NEW3_full": {
+          "num_samples": 5657913,
+          "positive_count": 3800,
+          "positive_rate": 0.0006716257390313354,
+          "fill_proxy_rate": 0.021180954885661903,
+          "toxic_given_fill_rate": 0.03170894526034713
+        }
+      }
+    },
+    "ask": {
+      "npz_path": "C:\\Users\\holbo\\00VS_projjects\\00_HFT_project\\new_era\\016_new_binary\\outputs_fix\\datasets\\ask_all_event_fw1_h10.npz",
+      "splits": {
+        "NEW_train": {
+          "num_samples": 718664,
+          "positive_count": 467,
+          "positive_rate": 0.0006498168824374117,
+          "fill_proxy_rate": 0.021907316910266827,
+          "toxic_given_fill_rate": 0.02966209349593496
+        },
+        "NEW_val": {
+          "num_samples": 563484,
+          "positive_count": 358,
+          "positive_rate": 0.0006353330351882219,
+          "fill_proxy_rate": 0.023628000085184318,
+          "toxic_given_fill_rate": 0.026888989034099444
+        },
+        "NEW_test": {
+          "num_samples": 1166432,
+          "positive_count": 675,
+          "positive_rate": 0.0005786878274944446,
+          "fill_proxy_rate": 0.021476605580093823,
+          "toxic_given_fill_rate": 0.02694503213444573
+        },
+        "NEW3_full": {
+          "num_samples": 5657913,
+          "positive_count": 3925,
+          "positive_rate": 0.0006937186909731556,
+          "fill_proxy_rate": 0.021067485484488717,
+          "toxic_given_fill_rate": 0.032928404839007365
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,13 @@
+threshold,delay_events,trade_count,net_pnl,avg_pnl_per_fill,toxic_fill_avoided_count,missed_toxic_pnl_avoided,max_drawdown,prediction_delay_events,cancel_delay_events,notes
+0.55,0,468,84980.0,181.58119,227,32800.0,73300.0,0,0,Total delay 0 ticks
+0.55,1,501,94285.0,188.19362,197,28400.0,72116.0,1,0,Total delay 1 ticks
+0.55,2,496,90960.0,183.3871,202,29300.0,82646.0,2,0,Total delay 2 ticks
+0.55,3,504,111240.0,220.71428,192,28200.0,83526.0,3,0,Total delay 3 ticks
+0.55,5,526,117310.0,223.02281,163,24600.0,66300.0,5,0,Total delay 5 ticks
+0.55,10,536,71760.0,133.8806,142,23000.0,84052.0,10,0,Total delay 10 ticks
+0.6,0,516,83460.0,161.74419,184,26500.0,71820.0,0,0,Total delay 0 ticks
+0.6,1,526,91510.0,173.97339,160,23000.0,70348.0,1,0,Total delay 1 ticks
+0.6,2,530,93050.0,175.56604,158,23200.0,78900.0,2,0,Total delay 2 ticks
+0.6,3,536,126760.0,236.49254,155,24000.0,73446.0,3,0,Total delay 3 ticks
+0.6,5,550,119950.0,218.09091,135,20500.0,69568.0,5,0,Total delay 5 ticks
+0.6,10,570,74650.0,130.9649,107,18300.0,80400.0,10,0,Total delay 10 ticks

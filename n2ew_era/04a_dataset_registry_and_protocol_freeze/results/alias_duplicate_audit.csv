@@ -1,0 +1,3 @@
+alias_group,path_exists,child_dirs_resolving_to_other_paths,alias_or_aggregate_interpretation,csv_files_seen,unique_hashes_seen,new_unique_hashes_not_in_canonical_registry,alias_contributes_new_data
+NEW,True,9,junction_alias,34,33,0,False
+NEW_ALL,True,0,aggregate_duplicate_or_regular_dir,34,33,0,False

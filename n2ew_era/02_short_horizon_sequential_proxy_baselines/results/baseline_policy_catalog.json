@@ -1,0 +1,290 @@
+{
+  "horizons": [
+    1,
+    5,
+    10,
+    20,
+    50,
+    100
+  ],
+  "splits": [
+    "train",
+    "val",
+    "test",
+    "new4"
+  ],
+  "policy_count": 30,
+  "policies": [
+    {
+      "policy_id": "no_quote",
+      "family": "control",
+      "policy_type": "no_quote",
+      "complexity_rank": 0
+    },
+    {
+      "policy_id": "bid_all",
+      "family": "control",
+      "policy_type": "bid_all",
+      "complexity_rank": 1
+    },
+    {
+      "policy_id": "ask_all",
+      "family": "control",
+      "policy_type": "ask_all",
+      "complexity_rank": 1
+    },
+    {
+      "policy_id": "old_bid_only_spread_ge_1",
+      "family": "control",
+      "policy_type": "old_bid_only_spread_ge_1",
+      "min_spread_ticks": 1.0,
+      "complexity_rank": 1
+    },
+    {
+      "policy_id": "bid_if_queue_imbalance_gt_neg0.5",
+      "family": "queue_imbalance",
+      "policy_type": "bid_if_feature_gt",
+      "feature": "queue_imbalance",
+      "threshold": -0.5,
+      "threshold_source": "fixed_grid",
+      "complexity_rank": 2
+    },
+    {
+      "policy_id": "bid_if_queue_imbalance_gt_neg0.25",
+      "family": "queue_imbalance",
+      "policy_type": "bid_if_feature_gt",
+      "feature": "queue_imbalance",
+      "threshold": -0.25,
+      "threshold_source": "fixed_grid",
+      "complexity_rank": 2
+    },
+    {
+      "policy_id": "bid_if_queue_imbalance_gt_0",
+      "family": "queue_imbalance",
+      "policy_type": "bid_if_feature_gt",
+      "feature": "queue_imbalance",
+      "threshold": 0.0,
+      "threshold_source": "fixed_grid",
+      "complexity_rank": 2
+    },
+    {
+      "policy_id": "bid_if_queue_imbalance_gt_0.25",
+      "family": "queue_imbalance",
+      "policy_type": "bid_if_feature_gt",
+      "feature": "queue_imbalance",
+      "threshold": 0.25,
+      "threshold_source": "fixed_grid",
+      "complexity_rank": 2
+    },
+    {
+      "policy_id": "bid_if_queue_imbalance_gt_0.5",
+      "family": "queue_imbalance",
+      "policy_type": "bid_if_feature_gt",
+      "feature": "queue_imbalance",
+      "threshold": 0.5,
+      "threshold_source": "fixed_grid",
+      "complexity_rank": 2
+    },
+    {
+      "policy_id": "side_by_queue_imbalance_abs_0p1",
+      "family": "queue_imbalance",
+      "policy_type": "side_by_feature_abs",
+      "feature": "queue_imbalance",
+      "threshold": 0.1,
+      "threshold_source": "fixed_grid",
+      "complexity_rank": 3
+    },
+    {
+      "policy_id": "side_by_queue_imbalance_abs_0p2",
+      "family": "queue_imbalance",
+      "policy_type": "side_by_feature_abs",
+      "feature": "queue_imbalance",
+      "threshold": 0.2,
+      "threshold_source": "fixed_grid",
+      "complexity_rank": 3
+    },
+    {
+      "policy_id": "side_by_queue_imbalance_abs_0p3",
+      "family": "queue_imbalance",
+      "policy_type": "side_by_feature_abs",
+      "feature": "queue_imbalance",
+      "threshold": 0.3,
+      "threshold_source": "fixed_grid",
+      "complexity_rank": 3
+    },
+    {
+      "policy_id": "side_by_queue_imbalance_abs_0p4",
+      "family": "queue_imbalance",
+      "policy_type": "side_by_feature_abs",
+      "feature": "queue_imbalance",
+      "threshold": 0.4,
+      "threshold_source": "fixed_grid",
+      "complexity_rank": 3
+    },
+    {
+      "policy_id": "side_by_queue_imbalance_abs_0p5",
+      "family": "queue_imbalance",
+      "policy_type": "side_by_feature_abs",
+      "feature": "queue_imbalance",
+      "threshold": 0.5,
+      "threshold_source": "fixed_grid",
+      "complexity_rank": 3
+    },
+    {
+      "policy_id": "bid_if_deep_imbalance_gt_neg0.5",
+      "family": "deep_imbalance",
+      "policy_type": "bid_if_feature_gt",
+      "feature": "deep_imbalance",
+      "threshold": -0.5,
+      "threshold_source": "fixed_grid",
+      "complexity_rank": 2
+    },
+    {
+      "policy_id": "bid_if_deep_imbalance_gt_neg0.25",
+      "family": "deep_imbalance",
+      "policy_type": "bid_if_feature_gt",
+      "feature": "deep_imbalance",
+      "threshold": -0.25,
+      "threshold_source": "fixed_grid",
+      "complexity_rank": 2
+    },
+    {
+      "policy_id": "bid_if_deep_imbalance_gt_0",
+      "family": "deep_imbalance",
+      "policy_type": "bid_if_feature_gt",
+      "feature": "deep_imbalance",
+      "threshold": 0.0,
+      "threshold_source": "fixed_grid",
+      "complexity_rank": 2
+    },
+    {
+      "policy_id": "bid_if_deep_imbalance_gt_0.25",
+      "family": "deep_imbalance",
+      "policy_type": "bid_if_feature_gt",
+      "feature": "deep_imbalance",
+      "threshold": 0.25,
+      "threshold_source": "fixed_grid",
+      "complexity_rank": 2
+    },
+    {
+      "policy_id": "bid_if_deep_imbalance_gt_0.5",
+      "family": "deep_imbalance",
+      "policy_type": "bid_if_feature_gt",
+      "feature": "deep_imbalance",
+      "threshold": 0.5,
+      "threshold_source": "fixed_grid",
+      "complexity_rank": 2
+    },
+    {
+      "policy_id": "side_by_deep_imbalance_abs_0p1",
+      "family": "deep_imbalance",
+      "policy_type": "side_by_feature_abs",
+      "feature": "deep_imbalance",
+      "threshold": 0.1,
+      "threshold_source": "fixed_grid",
+      "complexity_rank": 3
+    },
+    {
+      "policy_id": "side_by_deep_imbalance_abs_0p2",
+      "family": "deep_imbalance",
+      "policy_type": "side_by_feature_abs",
+      "feature": "deep_imbalance",
+      "threshold": 0.2,
+      "threshold_source": "fixed_grid",
+      "complexity_rank": 3
+    },
+    {
+      "policy_id": "side_by_deep_imbalance_abs_0p3",
+      "family": "deep_imbalance",
+      "policy_type": "side_by_feature_abs",
+      "feature": "deep_imbalance",
+      "threshold": 0.3,
+      "threshold_source": "fixed_grid",
+      "complexity_rank": 3
+    },
+    {
+      "policy_id": "side_by_deep_imbalance_abs_0p4",
+      "family": "deep_imbalance",
+      "policy_type": "side_by_feature_abs",
+      "feature": "deep_imbalance",
+      "threshold": 0.4,
+      "threshold_source": "fixed_grid",
+      "complexity_rank": 3
+    },
+    {
+      "policy_id": "side_by_deep_imbalance_abs_0p5",
+      "family": "deep_imbalance",
+      "policy_type": "side_by_feature_abs",
+      "feature": "deep_imbalance",
+      "threshold": 0.5,
+      "threshold_source": "fixed_grid",
+      "complexity_rank": 3
+    },
+    {
+      "policy_id": "bid_if_top_depth_ge_q25",
+      "family": "depth_liquidity",
+      "policy_type": "bid_if_feature_ge",
+      "feature": "top_depth",
+      "threshold": 5.0,
+      "quantile": "q25",
+      "threshold_source": "validation_quantile",
+      "complexity_rank": 2
+    },
+    {
+      "policy_id": "bid_if_top_depth_ge_q50",
+      "family": "depth_liquidity",
+      "policy_type": "bid_if_feature_ge",
+      "feature": "top_depth",
+      "threshold": 8.0,
+      "quantile": "q50",
+      "threshold_source": "validation_quantile",
+      "complexity_rank": 2
+    },
+    {
+      "policy_id": "bid_if_top_depth_ge_q75",
+      "family": "depth_liquidity",
+      "policy_type": "bid_if_feature_ge",
+      "feature": "top_depth",
+      "threshold": 12.0,
+      "quantile": "q75",
+      "threshold_source": "validation_quantile",
+      "complexity_rank": 2
+    },
+    {
+      "policy_id": "bid_only_low_volatility_q25",
+      "family": "volatility",
+      "policy_type": "bid_if_feature_le",
+      "feature": "volatility_past_50",
+      "threshold": 0.12330483215492916,
+      "quantile": "q25",
+      "threshold_source": "validation_quantile",
+      "complexity_rank": 2
+    },
+    {
+      "policy_id": "bid_only_low_volatility_q50",
+      "family": "volatility",
+      "policy_type": "bid_if_feature_le",
+      "feature": "volatility_past_50",
+      "threshold": 0.14285714285751913,
+      "quantile": "q50",
+      "threshold_source": "validation_quantile",
+      "complexity_rank": 2
+    },
+    {
+      "policy_id": "bid_only_low_volatility_q75",
+      "family": "volatility",
+      "policy_type": "bid_if_feature_le",
+      "feature": "volatility_past_50",
+      "threshold": 0.174963553056231,
+      "quantile": "q75",
+      "threshold_source": "validation_quantile",
+      "complexity_rank": 2
+    }
+  ],
+  "critical_rules": [
+    "No ML training.",
+    "No test or NEW4 threshold tuning.",
+    "Policy decisions use only causal/current L2 features.",
+    "Every state maps to at most one action: bid, ask, or no_quote."
+  ]
+}

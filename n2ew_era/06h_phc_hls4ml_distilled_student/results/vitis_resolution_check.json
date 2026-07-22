@@ -1,0 +1,14 @@
+{
+  "original_vitis_run": "",
+  "path_modified": true,
+  "selected_vitis_run": "C:\\AMDDesignTools\\2025.2\\Vitis\\bin\\vitis-run.bat",
+  "selected_reason": "called Vitis settings64.bat and imported the resulting environment before hls4ml build",
+  "settings64_path": "C:\\AMDDesignTools\\2025.2\\Vitis\\settings64.bat",
+  "settings64_found": true,
+  "settings64_applied": true,
+  "settings64_error": "",
+  "settings64_env_keys_applied": 64,
+  "post_patch_vitis_run": "C:\\AMDDesignTools\\2025.2\\Vitis\\bin\\vitis-run.BAT",
+  "post_patch_clang": "",
+  "post_patch_clang_tidy": ""
+}

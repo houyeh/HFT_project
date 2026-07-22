@@ -1,0 +1,5 @@
+method,convertible,compile_success,build_run,build_success,first_error_line,difference_vs_06e
+torch_fx_manual_layernorm,False,False,False,False,Exception: Unsupported function mean,"06E PyTorch FX failed on nn.LayerNorm shape [None,16]; 06G moved past nn.LayerNorm but stopped at unsupported torch.mean."
+torch_fx_unrolled_layernorm,False,False,False,False,KeyError: 'getitem',Second FX attempt avoids torch.mean by explicit 16-way reduction; compare error line for next unsupported primitive.
+onnx_shape_inference_original_step,False,False,False,False,Exception: ERROR: Unsupported operation type: Gemm,Initializer shape annotation moved past 06E's MatMul_72 shape blocker; hls4ml now stops at unsupported ONNX Gemm.
+onnx_shape_inference_manual_layernorm,False,False,False,False,Exception: ERROR: Unsupported operation type: Gemm,Initializer shape annotation moved past MatMul_74 shape lookup; hls4ml now stops at unsupported ONNX Gemm.

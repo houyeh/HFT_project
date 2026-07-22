@@ -1,0 +1,68 @@
+<!DOCTYPE html><html lang="zh-TW"><head><meta charset="UTF-8"><title>Slide 03</title>
+<style>
+* {box-sizing:border-box;margin:0;padding:0}
+body {font-family:"Noto Sans TC",sans-serif;background:#0d1117;color:#e6edf3}
+.slide {width:1280px;min-height:720px;margin:30px auto;background:linear-gradient(135deg,#161b22 0%,#0d1117 100%);border:1px solid #30363d;border-radius:16px;padding:48px 56px;display:flex;flex-direction:column;gap:20px; overflow-y:auto;}
+h1 {font-size:2rem;font-weight:700;color:#58a6ff;border-bottom:2px solid #21262d;padding-bottom:14px; flex-shrink:0;}
+h2 {font-size:1.1rem;font-weight:600;color:#79c0ff;margin-bottom:10px}
+.tag {display:inline-block;padding:3px 10px;border-radius:20px;font-size:.75rem;font-weight:600}
+.tag-blue {background:#1f4e79;color:#79c0ff}
+.tag-red {background:#5c1a1a;color:#ff7b7b}
+.tag-green {background:#0d3d21;color:#56d364}
+.tag-orange {background:#794a15;color:#e3b341}
+.grid-2 {display:grid;grid-template-columns:1fr 1fr;gap:24px}
+.grid-3 {display:grid;grid-template-columns:1fr 1fr 1fr;gap:20px}
+.card {background:#161b22;border:1px solid #30363d;border-radius:12px;padding:20px; display:flex; flex-direction:column;}
+.img-wrap {text-align:center; flex-grow:1; display:flex; align-items:center; justify-content:center; background:#0d1117; border-radius:8px; padding:10px;}
+.img-wrap img {max-width:100%; max-height:260px; border-radius:4px;}
+table {width:100%;border-collapse:collapse;font-size:.85rem}
+th {background:#21262d;color:#8b949e;padding:8px 10px;text-align:left;font-weight:600}
+td {padding:8px 10px;border-bottom:1px solid #21262d}
+tr:last-child td {border-bottom:none}
+.hl {color:#f0c27f;font-weight:700}
+.red {color:#ff7b7b} .green {color:#56d364}
+.note {font-size:.78rem;color:#8b949e;margin-top:8px;padding:8px 12px;background:#161b22;border-left:3px solid #388bfd;border-radius:4px; line-height:1.5;}
+.badge-row {display:flex;gap:10px;flex-wrap:wrap;margin-top:6px; margin-bottom:10px;}
+ul {margin-left:20px;line-height:1.6}
+li {margin-bottom:8px}
+.flowchart {display:flex; align-items:center; justify-content:center; gap:10px; background:#0d1117; padding:15px; border-radius:8px; border:1px solid #30363d;}
+.flow-box {background:#21262d; border:1px solid #58a6ff; padding:10px 15px; border-radius:6px; font-weight:bold; color:#c9d1d9; text-align:center;}
+.flow-arrow {color:#8b949e; font-weight:bold; font-size:1.2rem;}
+.caveat-box {margin-top:12px; padding:10px; border-radius:6px; background:#2d1a1a; border:1px solid #5c1a1a;}
+.caveat-box h3 {color:#ff7b7b; font-size:0.9rem; margin-bottom:4px;}
+</style>
+</head><body>
+<div class="slide">
+  <h1>Slide 03 — 為什麼需要狀態濾網 (Why Regime Gate)</h1>
+  
+  <div class="card" style="margin-bottom:0px;">
+    <h2>如何得知 NEW3 處於強烈趨勢環境？</h2>
+    <div class="grid-2">
+      <div>
+        <p style="font-size:0.9rem; line-height:1.6;"><strong>Trend Strength 評估方式：</strong><br>
+        Session 層級的趨勢評估，使用的是相對於已實現波動率 (Realized Volatility) 的累積中價位移 (Cumulative Mid-price Displacement)。</p>
+        <p style="font-size:0.9rem; line-height:1.6; margin-top:10px;">這顯示 NEW3 具備高強度的持續性單邊推升或下跌，不適合傳統靜態做市。</p>
+      </div>
+      <div class="caveat-box" style="margin-top:0;">
+        <h3>⚠️ TCN 的微觀盲點</h3>
+        <p style="color:#c9d1d9; font-size:0.85rem; line-height:1.5;">
+          微觀的撤單濾網無法處理宏觀的方向性風險與庫存狀態風險 (Inventory regime risk)。<br>
+          在強趨勢中，100 ticks 的視窗不足以判斷宏觀方向，導致錯誤維持掛單而遭受連續單向虧損。
+        </p>
+      </div>
+    </div>
+  </div>
+
+  <div class="card">
+    <h2>壓力測試：模型在 NEW3 的真實表現 (OOS)</h2>
+    <table>
+      <tr><th>Session ID</th><th>趨勢強度 (Trend)</th><th>適合度標籤</th><th>無 Gate 基準 PnL (Baseline)</th></tr>
+      <tr><td>20260113</td><td>620.95</td><td>UNSUITABLE</td><td class='red'>-352,235</td></tr><tr><td>20260114</td><td>459.43</td><td>UNSUITABLE</td><td class='red'>-62,285</td></tr><tr><td>20260115</td><td>1413.23</td><td>UNSUITABLE</td><td class='green'>201,630</td></tr><tr><td>20260116</td><td>1323.54</td><td>UNSUITABLE</td><td class='red'>-125,345</td></tr><tr><td>20260119Day</td><td>1076.49</td><td>UNSUITABLE</td><td class='red'>-21,295</td></tr><tr><td>20260330</td><td>135.59</td><td>UNSUITABLE</td><td class='red'>-14,805</td></tr>
+      <tr style="background:#21262d"><td colspan="3"><strong>NEW3 總虧損對比</strong></td><td class="red hl" style="font-size:1rem">Baseline: -557,165 | Model: -551,705</td></tr>
+    </table>
+    <p class="note" style="margin-top:16px">
+      <strong>核心數據：</strong> 在 NEW3 中，Baseline 虧損 -557,165，Model (0.70) 虧損 -551,705，**改善幅度僅 +5,460**。<br>
+      這明確證明單憑 TCN 模型無法對抗強勢的 Macro Regime。
+    </p>
+  </div>
+</div></body></html>

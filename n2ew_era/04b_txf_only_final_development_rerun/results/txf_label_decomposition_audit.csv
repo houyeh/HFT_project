@@ -1,0 +1,5 @@
+split,horizon,rows_checked,max_abs_reconstruction_error,formula,excess_pnl_H20_confirmed_main_target
+train,20,7411557,0.0,raw_pnl_H20 = half_spread_component_H20 + excess_pnl_H20,True
+val,20,7965867,0.0,raw_pnl_H20 = half_spread_component_H20 + excess_pnl_H20,True
+new3,20,16970226,0.0,raw_pnl_H20 = half_spread_component_H20 + excess_pnl_H20,True
+new4,20,6588680,0.0,raw_pnl_H20 = half_spread_component_H20 + excess_pnl_H20,True

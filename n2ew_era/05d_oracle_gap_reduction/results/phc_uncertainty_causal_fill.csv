@@ -1,0 +1,4 @@
+split,policy_id,sequential_excess_pnl,fill_count,forced_no_quote_count,max_abs_inventory,max_drawdown,win_rate,loss_rate,fill_uses_future_pnl,new5_used
+val,phc_uncertainty_gating,166695.0,6687,0,1,2330.0,0.4623897113802901,0.5376102886197098,False,False
+new3,phc_uncertainty_gating,492030.0,14879,2293,1,2635.0,0.5021170777606022,0.4978157134216009,False,False
+new4,phc_uncertainty_gating,117080.0,3989,2554,1,2325.0,0.4858360491351216,0.5141639508648784,False,False

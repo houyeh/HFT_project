@@ -1,0 +1,4 @@
+symbol,action_rows,analysis_scope,universe,split_scope,is_txf_like_symbol,action_row_fraction
+TXFB6,900000,development-only,mixed_03b6,train_sampled,True,1.0
+TXFB6,1690431,development-only,mixed_03b6,val,True,1.0
+TXFB6,2590431,development-only,mixed_03b6,train_sampled_plus_val,True,1.0

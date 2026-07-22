@@ -1,0 +1,26 @@
+{
+  "selection_split": "validation",
+  "test_used_for_selection": false,
+  "num_candidates": 66,
+  "candidate_families": [
+    "A_spread_filter_side_specific_toxic_cancel",
+    "B_risk_based_quote_depth_proxy",
+    "C_015_016_ensemble",
+    "D_regime_aware_threshold"
+  ],
+  "validation_no_cancel": {
+    "net_pnl": -56175.0,
+    "trade_count": 185,
+    "max_drawdown": 161245.0,
+    "cancel_count": 0,
+    "bid_cancel_count": 0,
+    "ask_cancel_count": 0,
+    "bid_cancel_rate": 0.0,
+    "ask_cancel_rate": 0.0,
+    "any_cancel_rate": 0.0
+  },
+  "notes": [
+    "Policy B depth proxy rows are diagnostic only and are not eligible for the main claim.",
+    "All thresholds are derived from validation scores only."
+  ]
+}

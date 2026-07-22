@@ -1,0 +1,2 @@
+split,quantization,mean_abs_score_error,max_abs_score_error,action_agreement_rate,diagnostic_only
+val,score_round_to_1_16_proxy,0.015630438923835754,0.03125,0.9994455159112825,True

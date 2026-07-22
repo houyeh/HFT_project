@@ -1,0 +1,10 @@
+{
+  "moderate_setting": {
+    "neutral_fill_haircut": 0.5,
+    "toxic_multiplier": 1.5,
+    "cancel_delay_ticks": 0
+  },
+  "random_v3_stress_trials": 5000,
+  "random_v3_reporting_seed": 20260602,
+  "note": "Final reporting only; no model or feature changes."
+}

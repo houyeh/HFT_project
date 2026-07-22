@@ -1,0 +1,12 @@
+{
+  "data_dir": "C:\\Users\\holbo\\00VS_projjects\\00_HFT_project\\data\\NEW2",
+  "symbol": "TXFB6",
+  "tick_size": 1.0,
+  "sessions": [
+    "20260121Day",
+    "20260122Day",
+    "20260122Night"
+  ],
+  "total_lob_rows": 2471161,
+  "total_trade_rows": 68530
+}

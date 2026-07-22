@@ -1,0 +1,3 @@
+dataset,session_id,num_rows,start_time,end_time,cum_return_ticks,realized_vol_ticks,trend_strength,mean_spread_ticks,spread_ge_1tick_rate,spread_ge_2tick_rate,baseline_net_pnl,baseline_max_drawdown,realized_bid_pnl,realized_ask_pnl,suitability_label,trend_regime,main_failure_mode,notes
+NEW_TEST,20260127Day,410696,940965536000000,956700001000000,285.0,0.1681294838141347,1695.1220781422503,2.4123244443578704,1.0,0.8595895747706332,-27205.0,76230.0,15640.0,-41330.0,UNSUITABLE,strong-uptrend,strong_uptrend_adverse_selection,
+NEW_TEST,20260127Night,755845,1090205000000000,1120947505000000,136.5,0.1709521020162626,798.4692694039808,2.145152776032123,1.0,0.8039492223934801,78700.0,31420.0,58510.0,17420.0,UNSUITABLE,strong-uptrend,none_or_minor,

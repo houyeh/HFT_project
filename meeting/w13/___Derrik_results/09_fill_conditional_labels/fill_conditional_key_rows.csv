@@ -1,0 +1,4 @@
+dataset,split,horizon,proxy_type,fill_window,unconditional_bid_toxic_rate,conditional_bid_toxic_rate,bid_toxic_rate_lift,unconditional_ask_toxic_rate,conditional_ask_toxic_rate,ask_toxic_rate_lift,bid_fill_count,ask_fill_count,notes
+NEW,NEW_train_val,10,price_level_removed_proxy,1,0.0038032152444221,0.0325185508511567,8.55027884599729,0.0036088447246565,0.0332655899026633,9.21779473508096,9164,9349,
+NEW,NEW_test,10,price_level_removed_proxy,1,0.0028271859041894,0.0341918294849023,12.093944524212551,0.0028786204567216,0.0312635692574902,10.860608311349129,2252,2303,
+NEW3,NEW3_full,10,price_level_removed_proxy,1,0.0032156170753968,0.0323044397463002,10.046109032529602,0.0032993920832971,0.0354189290786066,10.734986380646312,11825,11971,

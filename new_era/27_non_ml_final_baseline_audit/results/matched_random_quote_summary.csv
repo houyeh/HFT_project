@@ -1,0 +1,7 @@
+split,trials,model_quote_pnl,model_quote_count,random_mean,random_std,random_90p,random_95p,random_99p,empirical_p_value_random_ge_model,match_keys,random_match_level
+val,5000,1218095.0,134,-39540.558,142476.85634392474,145965.00000000003,195536.5,285335.25000000035,0.0,session_id,session_count_matched_main
+val,5000,1218095.0,134,1218095.0,0.0,1218095.0,1218095.0,1218095.0,1.0,"side,session_id",side_session_count_matched_diagnostic
+test,5000,2312590.0,419,-494151.033,173810.77621564103,-272222.4999999998,-207589.99999999997,-86133.19999999963,0.0,session_id,session_count_matched_main
+test,5000,2312590.0,419,2312590.0,0.0,2312590.0,2312590.0,2312590.0,1.0,"side,session_id",side_session_count_matched_diagnostic
+new4,5000,6348770.0,714,-255180.126,430171.8808644069,295520.00000000006,471839.00000000006,791090.5000000009,0.0,session_id,session_count_matched_main
+new4,5000,6348770.0,714,6348770.0,0.0,6348770.0,6348770.0,6348770.0,1.0,"side,session_id",side_session_count_matched_diagnostic

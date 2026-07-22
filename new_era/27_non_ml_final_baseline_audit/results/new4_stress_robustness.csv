@@ -1,0 +1,4 @@
+dataset,symbol,tick_size,policy_id,stress_name,neutral_fill_haircut,toxic_multiplier,selected_quote_count,selected_quote_pnl,avg_selected_quote_pnl,positive_selected_quote_rate
+NEW4,TXFA6,1.0,bid_only_spread_ge_1,base,1.0,1.0,714,13061790.0,18293.823529411766,0.7100840336134454
+NEW4,TXFA6,1.0,bid_only_spread_ge_1,mild,0.75,1.25,714,9915630.0,13887.436974789916,0.5350140056022409
+NEW4,TXFA6,1.0,bid_only_spread_ge_1,moderate,0.5,1.5,714,6348770.0,8891.834733893558,0.3627450980392157

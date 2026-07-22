@@ -1,0 +1,7 @@
+gate,pass,decision
+absolute_price_feature_decision_closed,True,forbid
+dynamic_features_rebuilt_causally,True,allow_rebuilt
+rolling_feature_no_leak_proof,True,allow_volatility_past_50
+cost_unit_contract_closed,True,proxy_units_documented
+split_regime_drift_quantified,True,oos_harshness_documented
+baseline_hurdles_apples_to_apples,True,hurdles_closed

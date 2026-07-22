@@ -1,0 +1,32 @@
+[
+  {
+    "variant": "original",
+    "input_shape": [
+      100,
+      12
+    ],
+    "conversion_succeeded": false,
+    "error_type": "Exception",
+    "error": "Unsupported function permute"
+  },
+  {
+    "variant": "channel_first_mean",
+    "input_shape": [
+      12,
+      100
+    ],
+    "conversion_succeeded": false,
+    "error_type": "Exception",
+    "error": "Unsupported function pad"
+  },
+  {
+    "variant": "channel_first_pool",
+    "input_shape": [
+      12,
+      100
+    ],
+    "conversion_succeeded": false,
+    "error_type": "Exception",
+    "error": "Unsupported function pad"
+  }
+]

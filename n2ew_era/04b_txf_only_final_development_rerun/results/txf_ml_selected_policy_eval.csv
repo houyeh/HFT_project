@@ -1,0 +1,4 @@
+split,policy_id,horizon,state_count,selected_action_count,selection_rate,bid_count,ask_count,total_excess_pnl_H20,avg_excess_pnl_per_selected,win_rate,loss_rate,max_drawdown,model_id,threshold,selected_on_val_only
+val,ml_hgb_regressor_shallow,20,2655369,1968250,0.7412340808377291,1001948,966302,54381630.0,27.629432236758543,0.4607102756255557,0.5392531436555316,204185.0,hgb_regressor_shallow,0.0,True
+new3,ml_hgb_regressor_shallow,20,5656822,4212753,0.7447207990635024,2143429,2069324,129337960.0,30.701529379956526,0.4806709531748004,0.5193107689912037,98830.0,hgb_regressor_shallow,0.0,True
+new4,ml_hgb_regressor_shallow,20,2196280,1622095,0.7385647549492779,823048,799047,45984375.0,28.348755775709808,0.47142923195003994,0.5285337788477247,48850.0,hgb_regressor_shallow,0.0,True

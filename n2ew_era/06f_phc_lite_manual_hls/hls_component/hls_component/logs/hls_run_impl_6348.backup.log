@@ -1,0 +1,211 @@
+  **** HLS Build v2025.2 6295257
+INFO: [HLS 200-2005] Using work_dir C:/Users/holbo/00VS_projjects/00_HFT_project/n2ew_era/06f_phc_lite_manual_hls/hls_component/hls_component 
+INFO: [HLS 200-2176] Writing Vitis IDE component file C:/Users/holbo/00VS_projjects/00_HFT_project/n2ew_era/06f_phc_lite_manual_hls/hls_component/hls_component/vitis-comp.json
+INFO: [HLS 200-10] Creating and opening component 'C:/Users/holbo/00VS_projjects/00_HFT_project/n2ew_era/06f_phc_lite_manual_hls/hls_component/hls_component'.
+INFO: [HLS 200-1611] Setting target device to 'xc7z020-clg400-1'
+INFO: [HLS 200-1505] Using default flow_target 'vivado'
+Resolution: For help on HLS 200-1505 see docs.amd.com/access/sources/dita/topic?Doc_Version=2025.2%20English&url=ug1448-hls-guidance&resourceid=200-1505.html
+INFO: [HLS 200-2174] Applying component config ini file hls_config.cfg
+INFO: [HLS 200-1465] Applying config ini 'syn.file=../hls_src/phc_step_hls.cpp' from hls_config.cfg(8)
+INFO: [HLS 200-10] Adding design file 'C:/Users/holbo/00VS_projjects/00_HFT_project/n2ew_era/06f_phc_lite_manual_hls/hls_src/phc_step_hls.cpp' to the project
+INFO: [HLS 200-1465] Applying config ini 'syn.file=../hls_src/phc_step_hls.hpp' from hls_config.cfg(9)
+INFO: [HLS 200-10] Adding design file 'C:/Users/holbo/00VS_projjects/00_HFT_project/n2ew_era/06f_phc_lite_manual_hls/hls_src/phc_step_hls.hpp' to the project
+INFO: [HLS 200-1465] Applying config ini 'syn.file=../hls_src/phc_weights.hpp' from hls_config.cfg(10)
+INFO: [HLS 200-10] Adding design file 'C:/Users/holbo/00VS_projjects/00_HFT_project/n2ew_era/06f_phc_lite_manual_hls/hls_src/phc_weights.hpp' to the project
+INFO: [HLS 200-1465] Applying config ini 'tb.file=../hls_src/phc_step_testbench.cpp' from hls_config.cfg(11)
+INFO: [HLS 200-10] Adding test bench file 'C:/Users/holbo/00VS_projjects/00_HFT_project/n2ew_era/06f_phc_lite_manual_hls/hls_src/phc_step_testbench.cpp' to the project
+INFO: [HLS 200-1465] Applying config ini 'syn.top=phc_step' from hls_config.cfg(7)
+INFO: [HLS 200-1465] Applying config ini 'flow_target=vivado' from hls_config.cfg(4)
+INFO: [HLS 200-1505] Using flow_target 'vivado'
+Resolution: For help on HLS 200-1505 see docs.amd.com/access/sources/dita/topic?Doc_Version=2025.2%20English&url=ug1448-hls-guidance&resourceid=200-1505.html
+INFO: [HLS 200-1465] Applying config ini 'part=xc7z020clg400-1' from hls_config.cfg(1)
+INFO: [HLS 200-1465] Applying config ini 'clock=10ns' from hls_config.cfg(12)
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 10ns.
+INFO: [HLS 200-1465] Applying config ini 'cosim.argv=C:/Users/holbo/00VS_projjects/00_HFT_project/n2ew_era/06f_phc_lite_manual_hls/results/phc_step_test_vectors.csv C:/Users/holbo/00VS_projjects/00_HFT_project/n2ew_era/06f_phc_lite_manual_hls/results/phc_step_cosim_out.csv' from hls_config.cfg(13)
+INFO: [HLS 200-1465] Applying config ini 'csim.argv=C:/Users/holbo/00VS_projjects/00_HFT_project/n2ew_era/06f_phc_lite_manual_hls/results/phc_step_test_vectors.csv C:/Users/holbo/00VS_projjects/00_HFT_project/n2ew_era/06f_phc_lite_manual_hls/results/phc_step_csim_out.csv' from hls_config.cfg(14)
+INFO: [HLS 200-1465] Applying config ini 'package.output.format=ip_catalog' from hls_config.cfg(5)
+INFO: [HLS 200-2176] Writing Vitis IDE component file C:/Users/holbo/00VS_projjects/00_HFT_project/n2ew_era/06f_phc_lite_manual_hls/hls_component/hls_component/vitis-comp.json
+INFO: [IMPL 213-8] Exporting RTL as a Vivado IP.
+
+****** Vivado v2025.2 (64-bit)
+  **** SW Build 6299465 on Fri Nov 14 19:35:11 GMT 2025
+  **** IP Build 6300035 on Fri Nov 14 10:48:45 MST 2025
+  **** SharedData Build 6298862 on Thu Nov 13 04:50:51 MST 2025
+  **** Start of session at: Mon Jun 15 15:36:23 2026
+    ** Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+    ** Copyright 2022-2025 Advanced Micro Devices, Inc. All Rights Reserved.
+
+source run_ippack.tcl -notrace
+INFO: calling package_hls_ip ip_types=vitis sysgen json_file=C:/Users/holbo/00VS_projjects/00_HFT_project/n2ew_era/06f_phc_lite_manual_hls/hls_component/hls_component/hls/hls_data.json outdir=C:/Users/holbo/00VS_projjects/00_HFT_project/n2ew_era/06f_phc_lite_manual_hls/hls_component/hls_component/hls/impl/ip srcdir=C:/Users/holbo/00VS_projjects/00_HFT_project/n2ew_era/06f_phc_lite_manual_hls/hls_component/hls_component/hls ippack_options_dict= ippack_options_dict=
+INFO: Copied 1 ipmisc file(s) to C:/Users/holbo/00VS_projjects/00_HFT_project/n2ew_era/06f_phc_lite_manual_hls/hls_component/hls_component/hls/impl/ip/misc
+INFO: Copied 64 verilog file(s) to C:/Users/holbo/00VS_projjects/00_HFT_project/n2ew_era/06f_phc_lite_manual_hls/hls_component/hls_component/hls/impl/ip/hdl/verilog
+INFO: Copied 46 vhdl file(s) to C:/Users/holbo/00VS_projjects/00_HFT_project/n2ew_era/06f_phc_lite_manual_hls/hls_component/hls_component/hls/impl/ip/hdl/vhdl
+ipx::create_core: Time (s): cpu = 00:00:09 ; elapsed = 00:00:07 . Memory (MB): peak = 532.934 ; gain = 213.328
+INFO: Import ports from HDL: C:/Users/holbo/00VS_projjects/00_HFT_project/n2ew_era/06f_phc_lite_manual_hls/hls_component/hls_component/hls/impl/ip/hdl/vhdl/phc_step.vhd (phc_step)
+INFO: Add clock interface ap_clk
+INFO: Add reset interface ap_rst
+INFO: Add ap_ctrl interface ap_ctrl
+INFO: Add data interface x_t_address0
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1704] No user IP repositories specified
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'C:/AMDDesignTools/2025.2/Vivado/data/ip'.
+INFO: Add data interface x_t_q0
+INFO: Add data interface state_prev_address0
+INFO: Add data interface state_prev_q0
+INFO: Add data interface readout_address0
+INFO: Add data interface readout_d0
+INFO: Add data interface state_next_address0
+INFO: Add data interface state_next_d0
+INFO: Calling post_process_vitis to specialize IP
+INFO: Calling post_process_sysgen to specialize IP
+Generating sysgen info xml from json file
+INFO: Created IP C:/Users/holbo/00VS_projjects/00_HFT_project/n2ew_era/06f_phc_lite_manual_hls/hls_component/hls_component/hls/impl/ip/component.xml
+INFO: Created IP archive C:/Users/holbo/00VS_projjects/00_HFT_project/n2ew_era/06f_phc_lite_manual_hls/hls_component/hls_component/hls/impl/ip/xilinx_com_hls_phc_step_1_0.zip
+INFO: [Common 17-206] Exiting Vivado at Mon Jun 15 15:36:37 2026...
+INFO: [IMPL 213-8] Starting RTL evaluation using Vivado ...
+
+C:\Users\holbo\00VS_projjects\00_HFT_project\n2ew_era\06f_phc_lite_manual_hls\hls_component\hls_component\hls\impl\verilog>C:/AMDDesignTools/2025.2/Vivado/bin/vivado  -mode batch -source run_vivado.tcl   || exit $? 
+
+****** Vivado v2025.2 (64-bit)
+  **** SW Build 6299465 on Fri Nov 14 19:35:11 GMT 2025
+  **** IP Build 6300035 on Fri Nov 14 10:48:45 MST 2025
+  **** SharedData Build 6298862 on Thu Nov 13 04:50:51 MST 2025
+  **** Start of session at: Mon Jun 15 15:36:39 2026
+    ** Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+    ** Copyright 2022-2025 Advanced Micro Devices, Inc. All Rights Reserved.
+
+source run_vivado.tcl
+# source ./settings.tcl
+## set top_module phc_step
+## set language verilog
+## set family zynq
+## set device xc7z020
+## set package -clg400
+## set speed -1
+## set clock ap_clk
+## set fsm_ext "off"
+## set add_io_buffers false 
+# source -notrace ./extraction.tcl
+# set vivado_proj_name project
+# set vivado_proj_dir .
+# set target_device "${device}${package}${speed}"
+# set target_clk_period_ns "10.000"
+# set target_clk_freq_hz [expr {floor(1000 / $target_clk_period_ns) * 1000000}]
+# set other_clks_freq_hz {}
+# set ip_vlnv xilinx.com:hls:phc_step:1.0
+# set ip_repo_path ../ip
+# set bd_design_name bd_0
+# set bd_inst_name hls_inst
+# set bd_props {}
+# set has_synth true
+# set synth_design_args {-directive sdx_optimization_effort_high}
+# set synth_dcp ""
+# set synth_props {}
+# set has_impl 1
+# set impl_props {}
+# set has_subcore 0
+# set report_options [dict create]
+# dict set report_options report_level 2
+# dict set report_options report_max_paths 10
+# dict set report_options stdout_hls_reports 1
+# dict set report_options stdout_vivado_reports 0
+# dict set report_options hls_project hls_component
+# dict set report_options hls_solution hls
+# dict set report_options has_synth $has_synth
+# dict set report_options has_impl $has_impl
+# dict set report_options vivado_reportbasename $top_module
+# dict set report_options vivado_reportdir ./report
+# dict set report_options hls_impl_dir ..
+# dict set report_options hls_reportdir ../report/$language
+# dict set report_options target_clk_period $target_clk_period_ns
+# dict set report_options target_device $target_device
+# dict set report_options language $language
+# dict set report_options clock_name $clock
+# dict set report_options error_if_impl_timing_fails false
+# dict set report_options topmodule "phc_step"
+# dict set report_options funcmodules {phc_step_sqrt_fixed_49_25_s phc_step_phc_step_Outline_VITIS_LOOP_72_1 phc_step_phc_step_Outline_VITIS_LOOP_119_1 phc_step_phc_step_Outline_VITIS_LOOP_80_1 phc_step_phc_step_Outline_VITIS_LOOP_233_1 phc_step_phc_step_Outline_VITIS_LOOP_119_11 phc_step_phc_step_Outline_VITIS_LOOP_136_1 phc_step_phc_step_Outline_VITIS_LOOP_241_2 phc_step_phc_step_Outline_VITIS_LOOP_72_12 phc_step_phc_step_Outline_VITIS_LOOP_119_13 phc_step_phc_step_Outline_VITIS_LOOP_88_1 phc_step_phc_step_Outline_VITIS_LOOP_258_4 phc_step_phc_step_Outline_VITIS_LOOP_262_5}
+# dict set report_options bindmodules {phc_step_sparsemux_129_6_25_1_1 phc_step_sparsemux_7_2_40_1_1 phc_step_phc_step_Outline_VITIS_LOOP_119_1_phc_step_weights_CANDIDATE_B_ROM_AUTO_1R phc_step_phc_step_Outline_VITIS_LOOP_119_1_phc_step_weights_CANDIDATE_W_ROM_AUTO_1R phc_step_phc_step_Outline_VITIS_LOOP_233_1_phc_step_weights_DECAY_ROM_AUTO_1R phc_step_phc_step_Outline_VITIS_LOOP_119_11_phc_step_weights_GAIN_FROM_ENCODED_B_ROM_Abkb phc_step_phc_step_Outline_VITIS_LOOP_119_11_phc_step_weights_GAIN_FROM_ENCODED_W_ROM_Acud phc_step_phc_step_Outline_VITIS_LOOP_136_1_phc_step_weights_GAIN_FROM_PREV_STATE_W_ROMdEe phc_step_phc_step_Outline_VITIS_LOOP_119_13_phc_step_weights_SYNAPSE_B_ROM_AUTO_1R phc_step_phc_step_Outline_VITIS_LOOP_119_13_phc_step_weights_SYNAPSE_W_ROM_AUTO_1R phc_step_mul_24s_40s_64_2_1 phc_step_mul_25s_40s_64_2_1 phc_step_mul_26s_40s_64_2_1 phc_step_mul_36s_25s_61_2_1 phc_step_mul_40s_40s_64_2_1 phc_step_mul_40s_40s_72_2_1 phc_step_mul_40s_25ns_64_2_1 phc_step_mul_41s_25ns_65_2_1 phc_step_mul_64s_40s_88_5_1 phc_step_mul_65s_40s_88_5_1 phc_step_udiv_49s_37ns_40_53_seq_1 phc_step_mul_36s_24s_60_2_1 phc_step_phc_step_weights_ENC_LINEAR_B_ROM_AUTO_1R phc_step_phc_step_weights_ENC_LINEAR_W_ROM_AUTO_1R phc_step_phc_step_weights_ENC_NORM_GAMMA_ROM_AUTO_1R phc_step_phc_step_weights_ENC_NORM_BETA_ROM_AUTO_1R phc_step_phc_step_weights_GATE_B_ROM_AUTO_1R phc_step_phc_step_weights_GATE_W_ROM_AUTO_1R phc_step_phc_step_weights_LOOP_NORM_GAMMA_ROM_AUTO_1R phc_step_phc_step_weights_LOOP_NORM_BETA_ROM_AUTO_1R phc_step_phc_step_weights_READOUT_W_ROM_AUTO_1R phc_step_enc_linear_out_RAM_AUTO_1R1W}
+# dict set report_options max_module_depth 6
+# create_project $vivado_proj_name $vivado_proj_dir -part $target_device -force
+INFO: [ProjectBase 1-489] The host OS only allows 260 characters in a normal path. The project is stored in a path with more than 80 characters. If you experience issues with IP, Block Designs, or files not being found, please consider moving the project to a location with a shorter path. Alternately consider using the OS subst command to map part of the path to a drive letter.
+Current project path is 'C:/Users/holbo/00VS_projjects/00_HFT_project/n2ew_era/06f_phc_lite_manual_hls/hls_component/hls_component/hls/impl/verilog'
+create_project: Time (s): cpu = 00:00:09 ; elapsed = 00:00:08 . Memory (MB): peak = 527.387 ; gain = 223.074
+# set_property target_language $language [current_project]
+# if { ![file exists $ip_repo_path] } {
+#   error "Cannot find packaged HLS IP"
+# }
+# set_property ip_repo_paths [file normalize $ip_repo_path] [current_project]
+# update_ip_catalog
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1700] Loaded user IP repository 'c:/Users/holbo/00VS_projjects/00_HFT_project/n2ew_era/06f_phc_lite_manual_hls/hls_component/hls_component/hls/impl/ip'.
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'C:/AMDDesignTools/2025.2/Vivado/data/ip'.
+# create_bd_design bd_0
+Wrote  : <C:\Users\holbo\00VS_projjects\00_HFT_project\n2ew_era\06f_phc_lite_manual_hls\hls_component\hls_component\hls\impl\verilog\project.srcs\sources_1\bd\bd_0\bd_0.bd> 
+# set cell_inst [create_bd_cell -type ip -vlnv $ip_vlnv $bd_inst_name]
+# if { [llength $bd_props] } { 
+#   set_property -dict $bd_props $cell_inst 
+# }
+# make_bd_pins_external $cell_inst
+# make_bd_intf_pins_external $cell_inst
+# set bd_clk_ports [get_bd_ports -filter {TYPE==clk}]
+# if { $target_clk_freq_hz ne "" } { 
+#   foreach bd_clk_port $bd_clk_ports {
+#     # Remove "_0" suffix from BD ports & interfaces so they match IP ports 
+#     set clk_name [regsub {_0$} [get_property name $bd_clk_port] {}]
+#     set port_freq_hz $target_clk_freq_hz
+#     if { [dict exists $other_clks_freq_hz $clk_name] } {
+#         set port_freq_hz [dict get $other_clks_freq_hz $clk_name]
+#     }
+#     set_property CONFIG.FREQ_HZ $port_freq_hz $bd_clk_port
+#   }
+# }
+# foreach bd_port [get_bd_intf_ports] {
+#   set_property name [regsub {_0$} [get_property name $bd_port] {}] $bd_port
+# }
+# foreach bd_port [get_bd_ports -filter {INTF!=TRUE}] {
+#   set_property name [regsub {_0$} [get_property name $bd_port] {}] $bd_port
+# }
+# set s_axi_addr_width_min 32
+WARNING: [BD 5-233] No interface ports matched 'get_bd_intf_ports -filter {MODE == "Slave" && VLNV =~ "xilinx.com:interface:aximm_rtl:*"}'
+# foreach bd_port [get_bd_intf_ports -filter {MODE == "Slave" && VLNV =~ "xilinx.com:interface:aximm_rtl:*"}] {
+#   set bd_port_addr_width [get_property CONFIG.ADDR_WIDTH $bd_port]
+#   if { $bd_port_addr_width < $s_axi_addr_width_min } {
+#     puts "INFO: Updating $bd_port CONFIG.ADDR_WIDTH to $s_axi_addr_width_min"
+#     set_property CONFIG.ADDR_WIDTH $s_axi_addr_width_min $bd_port
+#   }
+# }
+# set_msg_config -id {[BD 41-1265]} -severity {CRITICAL WARNING} -new_severity {INFO}
+# assign_bd_address
+INFO: [BD 41-3093] Triggering Legacy Auto Assign Algorithm
+Wrote  : <C:\Users\holbo\00VS_projjects\00_HFT_project\n2ew_era\06f_phc_lite_manual_hls\hls_component\hls_component\hls\impl\verilog\project.srcs\sources_1\bd\bd_0\bd_0.bd> 
+Verilog Output written to : C:/Users/holbo/00VS_projjects/00_HFT_project/n2ew_era/06f_phc_lite_manual_hls/hls_component/hls_component/hls/impl/verilog/project.gen/sources_1/bd/bd_0/synth/bd_0.v
+Verilog Output written to : C:/Users/holbo/00VS_projjects/00_HFT_project/n2ew_era/06f_phc_lite_manual_hls/hls_component/hls_component/hls/impl/verilog/project.gen/sources_1/bd/bd_0/sim/bd_0.v
+Verilog Output written to : C:/Users/holbo/00VS_projjects/00_HFT_project/n2ew_era/06f_phc_lite_manual_hls/hls_component/hls_component/hls/impl/verilog/project.gen/sources_1/bd/bd_0/hdl/bd_0_wrapper.v
+# set toprtl [make_wrapper -files [get_files ${bd_design_name}.bd] -top]
+# add_files -norecurse $toprtl
+# set top_inst_name [file root [file tail $toprtl]]
+# puts "Using BD top: $top_inst_name"
+Using BD top: bd_0_wrapper
+# set xdc_files [glob -nocomplain ./*.xdc]
+# if { [llength $xdc_files] } {
+#     add_files -fileset constrs_1 -norecurse $xdc_files
+# }
+# launch_runs synth_1 -scripts_only
+INFO: [BD 41-1662] The design 'bd_0.bd' is already validated. Therefore parameter propagation will not be re-run.
+Verilog Output written to : C:/Users/holbo/00VS_projjects/00_HFT_project/n2ew_era/06f_phc_lite_manual_hls/hls_component/hls_component/hls/impl/verilog/project.gen/sources_1/bd/bd_0/synth/bd_0.v
+Verilog Output written to : C:/Users/holbo/00VS_projjects/00_HFT_project/n2ew_era/06f_phc_lite_manual_hls/hls_component/hls_component/hls/impl/verilog/project.gen/sources_1/bd/bd_0/sim/bd_0.v
+Verilog Output written to : C:/Users/holbo/00VS_projjects/00_HFT_project/n2ew_era/06f_phc_lite_manual_hls/hls_component/hls_component/hls/impl/verilog/project.gen/sources_1/bd/bd_0/hdl/bd_0_wrapper.v
+ERROR: [Common 17-680] Path length exceeds 260-Byte maximum allowed by Windows: c:/Users/holbo/00VS_projjects/00_HFT_project/n2ew_era/06f_phc_lite_manual_hls/hls_component/hls_component/hls/impl/verilog/project.gen/sources_1/bd/bd_0/ip/bd_0_hls_inst_0/hdl/verilog/phc_step_phc_step_Outline_VITIS_LOOP_119_1_phc_step_weights_CANDIDATE_B_ROM_AUTO_1R.dat
+Please consider using the OS subst command to shorten the path length by mapping part of the path to a virtual drive letter. See Answer Record AR52787 for more information.
+Resolution: In Windows 7 or later, the mklink command can also be used to create a symbolic link and shorten the path.
+ERROR: [BD 41-1030] Generation failed for the IP Integrator block hls_inst 
+Exporting to file C:/Users/holbo/00VS_projjects/00_HFT_project/n2ew_era/06f_phc_lite_manual_hls/hls_component/hls_component/hls/impl/verilog/project.gen/sources_1/bd/bd_0/hw_handoff/bd_0.hwh
+Generated Hardware Definition File C:/Users/holbo/00VS_projjects/00_HFT_project/n2ew_era/06f_phc_lite_manual_hls/hls_component/hls_component/hls/impl/verilog/project.gen/sources_1/bd/bd_0/synth/bd_0.hwdef
+INFO: [BD 41-3262] Generated VHDL Instantiation Template file c:/Users/holbo/00VS_projjects/00_HFT_project/n2ew_era/06f_phc_lite_manual_hls/hls_component/hls_component/hls/impl/verilog/project.gen/sources_1/bd/bd_0/bd_0.vho
+INFO: [BD 41-3262] Generated Verilog Instantiation Template file c:/Users/holbo/00VS_projjects/00_HFT_project/n2ew_era/06f_phc_lite_manual_hls/hls_component/hls_component/hls/impl/verilog/project.gen/sources_1/bd/bd_0/bd_0.veo
+INFO: [BD 41-3262] Generated System Verilog Instantiation Template file c:/Users/holbo/00VS_projjects/00_HFT_project/n2ew_era/06f_phc_lite_manual_hls/hls_component/hls_component/hls/impl/verilog/project.gen/sources_1/bd/bd_0/bd_0_sv.sveo
+ERROR: [Vivado 12-4756] Launch of runs aborted due to earlier errors while preparing sub-designs for run execution.
+INFO: [Common 17-206] Exiting Vivado at Mon Jun 15 15:36:56 2026...
+ERROR: [HLS 200-478] vivado returned an error 
+ERROR: 
+INFO: [HLS 200-112] Total CPU user time: 2 seconds. Total CPU system time: 1 seconds. Total elapsed time: 38.392 seconds; peak allocated memory: 205.926 MB.

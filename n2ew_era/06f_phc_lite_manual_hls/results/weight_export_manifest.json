@@ -1,0 +1,17 @@
+{
+  "phase": "06f",
+  "source_checkpoint": "C:\\Users\\holbo\\00VS_projjects\\00_HFT_project\\n2ew_era\\05c4_phc_stp_cosine_lr\\models\\phc_stp_v2_seed2_best_val.pt",
+  "step_checkpoint": "C:\\Users\\holbo\\00VS_projjects\\00_HFT_project\\n2ew_era\\06e_phc_stp_step_hls4ml\\models\\phc_stp_step_hls_seed2.pt",
+  "exported_header": "C:\\Users\\holbo\\00VS_projjects\\00_HFT_project\\n2ew_era\\06f_phc_lite_manual_hls\\hls_src\\phc_weights.hpp",
+  "total_bits": 24,
+  "frac_bits": 12,
+  "alpha_scalar_raw": 0.5916999578475952,
+  "any_saturated": false,
+  "num_saturated_total": 0,
+  "omitted_routing_tensors": [
+    "input_state.weight",
+    "input_x.weight",
+    "output_pack.bias",
+    "output_pack.weight"
+  ]
+}

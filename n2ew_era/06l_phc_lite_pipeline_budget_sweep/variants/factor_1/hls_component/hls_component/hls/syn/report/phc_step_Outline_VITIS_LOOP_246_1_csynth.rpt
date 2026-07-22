@@ -1,0 +1,164 @@
+
+
+================================================================
+== Vitis HLS Report for 'phc_step_Outline_VITIS_LOOP_246_1'
+================================================================
+* Date:           Mon Jun 22 21:46:20 2026
+
+* Version:        2025.2 (Build 6295257 on Nov 14 2025)
+* Project:        hls_component
+* Solution:       hls (Vivado IP Flow Target)
+* Product family: zynq
+* Target device:  xc7z020-clg400-1
+
+
+================================================================
+== Performance Estimates
+================================================================
++ Timing: 
+    * Summary: 
+    +--------+----------+----------+------------+
+    |  Clock |  Target  | Estimated| Uncertainty|
+    +--------+----------+----------+------------+
+    |ap_clk  |  10.00 ns|  6.912 ns|     2.70 ns|
+    +--------+----------+----------+------------+
+
++ Latency: 
+    * Summary: 
+    +---------+---------+----------+----------+-----+-----+---------+
+    |  Latency (cycles) |  Latency (absolute) |  Interval | Pipeline|
+    |   min   |   max   |    min   |    max   | min | max |   Type  |
+    +---------+---------+----------+----------+-----+-----+---------+
+    |       81|       81|  0.810 us|  0.810 us|   81|   81|       no|
+    +---------+---------+----------+----------+-----+-----+---------+
+
+    + Detail: 
+        * Instance: 
+        N/A
+
+        * Loop: 
+        +--------------------+---------+---------+----------+-----------+-----------+------+----------+
+        |                    |  Latency (cycles) | Iteration|  Initiation Interval  | Trip |          |
+        |      Loop Name     |   min   |   max   |  Latency |  achieved |   target  | Count| Pipelined|
+        +--------------------+---------+---------+----------+-----------+-----------+------+----------+
+        |- VITIS_LOOP_246_1  |       80|       80|         5|          -|          -|    16|        no|
+        +--------------------+---------+---------+----------+-----------+-----------+------+----------+
+
+
+
+================================================================
+== Utilization Estimates
+================================================================
+* Summary: 
++-----------------+---------+-----+--------+-------+-----+
+|       Name      | BRAM_18K| DSP |   FF   |  LUT  | URAM|
++-----------------+---------+-----+--------+-------+-----+
+|DSP              |        -|    -|       -|      -|    -|
+|Expression       |        -|    -|       0|     98|    -|
+|FIFO             |        -|    -|       -|      -|    -|
+|Instance         |        -|    -|       -|      -|    -|
+|Memory           |        0|    -|      10|      3|    -|
+|Multiplexer      |        -|    -|       0|     46|    -|
+|Register         |        -|    -|     230|      -|    -|
++-----------------+---------+-----+--------+-------+-----+
+|Total            |        0|    0|     240|    147|    0|
++-----------------+---------+-----+--------+-------+-----+
+|Available        |      280|  220|  106400|  53200|    0|
++-----------------+---------+-----+--------+-------+-----+
+|Utilization (%)  |        0|    0|      ~0|     ~0|    0|
++-----------------+---------+-----+--------+-------+-----+
+
++ Detail: 
+    * Instance: 
+    N/A
+
+    * DSP: 
+    N/A
+
+    * Memory: 
+    +--------------------------+----------------------------------------------------------------------+---------+----+----+-----+------+-----+------+-------------+
+    |          Memory          |                                Module                                | BRAM_18K| FF | LUT| URAM| Words| Bits| Banks| W*Bits*Banks|
+    +--------------------------+----------------------------------------------------------------------+---------+----+----+-----+------+-----+------+-------------+
+    |phc_step_weights_DECAY_U  |phc_step_Outline_VITIS_LOOP_246_1_phc_step_weights_DECAY_ROM_AUTO_1R  |        0|  10|   3|    0|    16|   10|     1|          160|
+    +--------------------------+----------------------------------------------------------------------+---------+----+----+-----+------+-----+------+-------------+
+    |Total                     |                                                                      |        0|  10|   3|    0|    16|   10|     1|          160|
+    +--------------------------+----------------------------------------------------------------------+---------+----+----+-----+------+-----+------+-------------+
+
+    * FIFO: 
+    N/A
+
+    * Expression: 
+    +----------------------+----------+----+---+----+------------+------------+
+    |     Variable Name    | Operation| DSP| FF| LUT| Bitwidth P0| Bitwidth P1|
+    +----------------------+----------+----+---+----+------------+------------+
+    |add_ln246_fu_143_p2   |         +|   0|  0|  13|           5|           1|
+    |add_ln249_fu_201_p2   |         +|   0|  0|  71|          64|          64|
+    |icmp_ln246_fu_137_p2  |      icmp|   0|  0|  14|           5|           6|
+    +----------------------+----------+----+---+----+------------+------------+
+    |Total                 |          |   0|  0|  98|          74|          71|
+    +----------------------+----------+----+---+----+------------+------------+
+
+    * Multiplexer: 
+    +-----------+----+-----------+-----+-----------+
+    |    Name   | LUT| Input Size| Bits| Total Bits|
+    +-----------+----+-----------+-----+-----------+
+    |ap_NS_fsm  |  37|          7|    1|          7|
+    |i_fu_52    |   9|          2|    5|         10|
+    +-----------+----+-----------+-----+-----------+
+    |Total      |  46|          9|    6|         17|
+    +-----------+----+-----------+-----+-----------+
+
+    * Register: 
+    +-------------------------------------+----+----+-----+-----------+
+    |                 Name                | FF | LUT| Bits| Const Bits|
+    +-------------------------------------+----+----+-----+-----------+
+    |ap_CS_fsm                            |   6|   0|    6|          0|
+    |candidate_t_load_reg_263             |  40|   0|   40|          0|
+    |gate_t_load_reg_258                  |  40|   0|   40|          0|
+    |i_fu_52                              |   5|   0|    5|          0|
+    |mul_ln249_1_reg_293                  |  64|   0|   64|          0|
+    |mul_ln249_reg_288                    |  60|   0|   60|          0|
+    |phc_step_weights_DECAY_load_reg_248  |  10|   0|   10|          0|
+    |zext_ln246_reg_227                   |   5|   0|   64|         59|
+    +-------------------------------------+----+----+-----+-----------+
+    |Total                                | 230|   0|  289|         59|
+    +-------------------------------------+----+----+-----+-----------+
+
+
+
+================================================================
+== Interface
+================================================================
+* Summary: 
++-------------------------+-----+-----+------------+-----------------------------------+--------------+
+|        RTL Ports        | Dir | Bits|  Protocol  |           Source Object           |    C Type    |
++-------------------------+-----+-----+------------+-----------------------------------+--------------+
+|ap_clk                   |   in|    1|  ap_ctrl_hs|  phc_step_Outline_VITIS_LOOP_246_1|  return value|
+|ap_rst                   |   in|    1|  ap_ctrl_hs|  phc_step_Outline_VITIS_LOOP_246_1|  return value|
+|ap_start                 |   in|    1|  ap_ctrl_hs|  phc_step_Outline_VITIS_LOOP_246_1|  return value|
+|ap_done                  |  out|    1|  ap_ctrl_hs|  phc_step_Outline_VITIS_LOOP_246_1|  return value|
+|ap_idle                  |  out|    1|  ap_ctrl_hs|  phc_step_Outline_VITIS_LOOP_246_1|  return value|
+|ap_ready                 |  out|    1|  ap_ctrl_hs|  phc_step_Outline_VITIS_LOOP_246_1|  return value|
+|grp_fu_4104_p_din0       |  out|   36|  ap_ctrl_hs|  phc_step_Outline_VITIS_LOOP_246_1|  return value|
+|grp_fu_4104_p_din1       |  out|   24|  ap_ctrl_hs|  phc_step_Outline_VITIS_LOOP_246_1|  return value|
+|grp_fu_4104_p_dout0      |   in|   60|  ap_ctrl_hs|  phc_step_Outline_VITIS_LOOP_246_1|  return value|
+|grp_fu_4104_p_ce         |  out|    1|  ap_ctrl_hs|  phc_step_Outline_VITIS_LOOP_246_1|  return value|
+|grp_fu_1199_p_din0       |  out|   40|  ap_ctrl_hs|  phc_step_Outline_VITIS_LOOP_246_1|  return value|
+|grp_fu_1199_p_din1       |  out|   40|  ap_ctrl_hs|  phc_step_Outline_VITIS_LOOP_246_1|  return value|
+|grp_fu_1199_p_dout0      |   in|   64|  ap_ctrl_hs|  phc_step_Outline_VITIS_LOOP_246_1|  return value|
+|grp_fu_1199_p_ce         |  out|    1|  ap_ctrl_hs|  phc_step_Outline_VITIS_LOOP_246_1|  return value|
+|state_prev_address0      |  out|    4|   ap_memory|                         state_prev|         array|
+|state_prev_ce0           |  out|    1|   ap_memory|                         state_prev|         array|
+|state_prev_q0            |   in|   24|   ap_memory|                         state_prev|         array|
+|gate_t_address0          |  out|    4|   ap_memory|                             gate_t|         array|
+|gate_t_ce0               |  out|    1|   ap_memory|                             gate_t|         array|
+|gate_t_q0                |   in|   40|   ap_memory|                             gate_t|         array|
+|candidate_t_address0     |  out|    4|   ap_memory|                        candidate_t|         array|
+|candidate_t_ce0          |  out|    1|   ap_memory|                        candidate_t|         array|
+|candidate_t_q0           |   in|   40|   ap_memory|                        candidate_t|         array|
+|state_temporal_address0  |  out|    4|   ap_memory|                     state_temporal|         array|
+|state_temporal_ce0       |  out|    1|   ap_memory|                     state_temporal|         array|
+|state_temporal_we0       |  out|    1|   ap_memory|                     state_temporal|         array|
+|state_temporal_d0        |  out|   40|   ap_memory|                     state_temporal|         array|
++-------------------------+-----+-----+------------+-----------------------------------+--------------+
+

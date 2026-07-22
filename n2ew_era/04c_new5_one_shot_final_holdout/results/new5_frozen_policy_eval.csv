@@ -1,0 +1,5 @@
+split,policy_id,horizon,state_count,selected_action_count,selection_rate,bid_count,ask_count,total_excess_pnl_H20,avg_excess_pnl_per_selected,win_rate,loss_rate,max_drawdown,holdout_scope,new5_used_for_tuning
+new5_final_holdout,no_quote,20,815912,0,0.0,0,0,0.0,0.0,0.0,0.0,0.0,NEW5_20260128,False
+new5_final_holdout,old_bid_only_spread_ge_1,20,815912,815912,1.0,815912,0,-11459180.0,-14.044627361774308,0.357816774358019,0.6421587131945602,11605300.0,NEW5_20260128,False
+new5_final_holdout,side_by_queue_imbalance_abs_0p1,20,815912,672049,0.8236782888350704,325153,346896,11439805.0,17.02227813745724,0.4272441444001851,0.5727320478119899,80890.0,NEW5_20260128,False
+new5_final_holdout,ml_hgb_regressor_shallow_convergence_selected,20,815912,617738,0.7571135122415162,318294,299444,15648070.0,25.331240752552052,0.45607361049506423,0.5439004885566373,51785.0,NEW5_20260128,False

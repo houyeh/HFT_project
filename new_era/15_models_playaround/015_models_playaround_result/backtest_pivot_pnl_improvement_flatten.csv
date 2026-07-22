@@ -1,0 +1,9 @@
+﻿label_type,6,7,8,9
+active_buy_profitable_binary,-3595.0,12030.0,-28020.0,-27850.0
+active_sell_profitable_binary,-22240.0,-4170.0,3795.0,-18160.0
+adverse_ask_fill_binary,0.0,0.0,0.0,0.0
+adverse_bid_fill_binary,0.0,0.0,0.0,0.0
+mid_move_3class,-22875.0,2120.0,54435.0,30435.0
+smoothed_mid_move_3class,-29460.0,-6205.0,79385.0,-4590.0
+toxic_ask_binary,-2170.0,0.0,-570.0,0.0
+toxic_bid_binary,0.0,0.0,0.0,0.0

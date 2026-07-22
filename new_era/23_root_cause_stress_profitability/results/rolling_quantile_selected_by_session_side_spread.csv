@@ -1,0 +1,15 @@
+session_id,side,spread_bucket,policy,num_quote_actions,selected_quote_count,oracle_positive_quote_count,oracle_recall,oracle_precision,captured_oracle_pnl,missed_oracle_pnl,false_positive_loss,avoided_bad_pnl,missed_good_pnl,selected_quote_pnl,oracle_positive_pnl,selection_rate,split,DIAGNOSTIC_ONLY,used_for_model_selection,score_name,window,quantile
+20260127Day,ask,"(1,2]",021_ev_score_w50_q0.8,76,0,0,,,0.0,0.0,-0.0,715165.0,0.0,0.0,0.0,0.0,test_diagnostic_burned,True,False,021_ev_score,50,0.8
+20260127Day,ask,"(2,3]",021_ev_score_w50_q0.8,40,22,0,,0.0,0.0,0.0,124055.0,351635.0,0.0,-124055.0,0.0,0.55,test_diagnostic_burned,True,False,021_ev_score,50,0.8
+20260127Day,ask,<=1,021_ev_score_w50_q0.8,52,0,0,,,0.0,0.0,-0.0,315340.0,0.0,0.0,0.0,0.0,test_diagnostic_burned,True,False,021_ev_score,50,0.8
+20260127Day,ask,>3,021_ev_score_w50_q0.8,1,1,0,,0.0,0.0,0.0,49365.0,-0.0,0.0,-49365.0,0.0,1.0,test_diagnostic_burned,True,False,021_ev_score,50,0.8
+20260127Day,bid,"(1,2]",021_ev_score_w50_q0.8,54,2,31,0.03225806451612903,0.5,2735.0,513550.0,-0.0,-0.0,513550.0,2735.0,516285.0,0.037037037037037035,test_diagnostic_burned,True,False,021_ev_score,50,0.8
+20260127Day,bid,"(2,3]",021_ev_score_w50_q0.8,32,23,15,0.8,0.5217391304347826,124170.0,161155.0,-0.0,-0.0,161155.0,124170.0,285325.0,0.71875,test_diagnostic_burned,True,False,021_ev_score,50,0.8
+20260127Day,bid,<=1,021_ev_score_w50_q0.8,32,0,13,0.0,,0.0,188755.0,-0.0,-0.0,188755.0,0.0,188755.0,0.0,test_diagnostic_burned,True,False,021_ev_score,50,0.8
+20260127Day,bid,>3,021_ev_score_w50_q0.8,2,2,1,1.0,0.5,6085.0,0.0,-0.0,-0.0,0.0,6085.0,6085.0,1.0,test_diagnostic_burned,True,False,021_ev_score,50,0.8
+20260127Night,ask,"(1,2]",021_ev_score_w50_q0.8,119,52,3,0.6666666666666666,0.038461538461538464,870.0,535.0,239545.0,380470.0,535.0,-238675.0,1405.0,0.4369747899159664,test_diagnostic_burned,True,False,021_ev_score,50,0.8
+20260127Night,ask,"(2,3]",021_ev_score_w50_q0.8,15,15,0,,0.0,0.0,0.0,143530.0,-0.0,0.0,-143530.0,0.0,1.0,test_diagnostic_burned,True,False,021_ev_score,50,0.8
+20260127Night,ask,<=1,021_ev_score_w50_q0.8,212,0,3,0.0,,0.0,1755.0,-0.0,1121865.0,1755.0,0.0,1755.0,0.0,test_diagnostic_burned,True,False,021_ev_score,50,0.8
+20260127Night,bid,"(1,2]",021_ev_score_w50_q0.8,104,60,48,0.5,0.4,270090.0,238690.0,1615.0,1030.0,238690.0,268475.0,508780.0,0.5769230769230769,test_diagnostic_burned,True,False,021_ev_score,50,0.8
+20260127Night,bid,"(2,3]",021_ev_score_w50_q0.8,15,15,10,1.0,0.6666666666666666,110600.0,0.0,-0.0,-0.0,0.0,110600.0,110600.0,1.0,test_diagnostic_burned,True,False,021_ev_score,50,0.8
+20260127Night,bid,<=1,021_ev_score_w50_q0.8,180,0,70,0.0,,0.0,711100.0,-0.0,11695.0,711100.0,0.0,711100.0,0.0,test_diagnostic_burned,True,False,021_ev_score,50,0.8

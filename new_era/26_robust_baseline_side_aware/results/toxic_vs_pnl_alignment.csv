@@ -1,0 +1,15 @@
+side,side_toxic,pnl_positive,quote_count,total_pnl,avg_pnl,split
+ask,False,False,9,-196505.0,-21833.88888888889,validation
+ask,True,False,110,-1118565.0,-10168.772727272728,validation
+ask,True,True,9,19215.0,2135.0,validation
+bid,False,False,3,0.0,0.0,validation
+bid,True,False,81,-55355.0,-683.395061728395,validation
+bid,True,True,50,1273450.0,25469.0,validation
+ask,False,False,148,-792235.0,-5352.939189189189,test_diagnostic_burned
+ask,False,True,3,1755.0,585.0,test_diagnostic_burned
+ask,True,False,361,-2648735.0,-7337.216066481995,test_diagnostic_burned
+ask,True,True,3,1405.0,468.3333333333333,test_diagnostic_burned
+bid,False,False,78,-9965.0,-127.75641025641026,test_diagnostic_burned
+bid,False,True,48,467480.0,9739.166666666666,test_diagnostic_burned
+bid,True,False,153,-4375.0,-28.594771241830067,test_diagnostic_burned
+bid,True,True,140,1859450.0,13281.785714285714,test_diagnostic_burned

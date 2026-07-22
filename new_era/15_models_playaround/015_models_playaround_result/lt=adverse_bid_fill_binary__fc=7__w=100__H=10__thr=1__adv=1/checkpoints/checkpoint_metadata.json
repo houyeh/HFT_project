@@ -1,0 +1,31 @@
+{
+  "best_epoch": 1,
+  "best_val_acc": 0.9999634672057284,
+  "feature_count": 7,
+  "horizon": 10,
+  "label_type": "adverse_bid_fill_binary",
+  "num_classes": 2,
+  "num_inputs": 7,
+  "num_parameters": 4434,
+  "selected_features": [
+    "obi",
+    "queue_imbalance",
+    "weighted_mid_deviation",
+    "trade_intensity_short",
+    "deep_obi",
+    "queue_imbalance_change",
+    "normalized_spread"
+  ],
+  "threshold_ticks": 1.0,
+  "weights_path": "C:\\Users\\holbo\\00VS_projjects\\00_HFT_project\\new_era\\15_models_playaround\\015_models_playaround_result\\lt=adverse_bid_fill_binary__fc=7__w=100__H=10__thr=1__adv=1\\checkpoints\\tcn_weights.pth",
+  "window_size": 100,
+  "z_features": [
+    "obi_z",
+    "queue_imbalance_z",
+    "weighted_mid_deviation_z",
+    "trade_intensity_short_z",
+    "deep_obi_z",
+    "queue_imbalance_change_z",
+    "normalized_spread_z"
+  ]
+}

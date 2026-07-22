@@ -1,0 +1,4 @@
+split,policy_id,model_variant,horizon,fill_model,inventory_cap,fee_multiplier,sequential_excess_pnl,fill_count,forced_no_quote_count,max_abs_inventory,max_drawdown,win_rate,loss_rate,avg_trade_excess_pnl,fill_uses_future_pnl,phase,new5_used_for_selection
+val,tcn_5block_prepad_18feat,18feat,20,conservative_l2_stress,1,1.0,151305.0,6593,0,1,3615.0,0.45153951160321554,0.5484604883967845,22.949340209312908,False,06d,False
+new3,tcn_5block_prepad_18feat,18feat,20,conservative_l2_stress,1,1.0,441990.0,14775,2369,1,2465.0,0.4931979695431472,0.5067343485617597,29.91472081218274,False,06d,False
+new4,tcn_5block_prepad_18feat,18feat,20,conservative_l2_stress,1,1.0,121000.0,4101,2386,1,2635.0,0.48110217020238966,0.5188978297976103,29.504998780785176,False,06d,False

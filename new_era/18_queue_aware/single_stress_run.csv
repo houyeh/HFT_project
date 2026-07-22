@@ -1,0 +1,5 @@
+policy,neutral_fill_haircut,good_fill_haircut,toxic_multiplier,cancel_delay_ticks,net_pnl,trade_count,max_drawdown
+no_cancel,1.0,1.0,1.0,0,63785.0,661.0,76230.0
+016_v2_binary,1.0,1.0,1.0,0,132590.0,474.0,69390.0
+015_common,1.0,1.0,1.0,0,90845.0,577.0,69730.0
+random_v3_mean,1.0,1.0,1.0,0,25046.086,,

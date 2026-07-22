@@ -1,0 +1,16 @@
+file,path,exists,description
+regime_features_NEW.csv,C:\Users\holbo\00VS_projjects\00_HFT_project\new_era\017_regime_auto_gate\outputs\features\regime_features_NEW.csv,True,Causal regime features for NEW.
+regime_features_NEW3.csv,C:\Users\holbo\00VS_projjects\00_HFT_project\new_era\017_regime_auto_gate\outputs\features\regime_features_NEW3.csv,True,Causal regime features for NEW3.
+regime_feature_report.md,C:\Users\holbo\00VS_projjects\00_HFT_project\new_era\017_regime_auto_gate\outputs\reports\regime_feature_report.md,True,Feature leakage/availability report.
+static_gate_summary.csv,C:\Users\holbo\00VS_projjects\00_HFT_project\new_era\017_regime_auto_gate\outputs\policies\static_gate_summary.csv,True,Static gate baseline and oracle summary.
+auto_gate_validation_selection.csv,C:\Users\holbo\00VS_projjects\00_HFT_project\new_era\017_regime_auto_gate\outputs\policies\auto_gate_validation_selection.csv,True,Validation-only policy selection table.
+auto_gate_test_results.csv,C:\Users\holbo\00VS_projjects\00_HFT_project\new_era\017_regime_auto_gate\outputs\backtests\auto_gate_test_results.csv,True,Frozen auto-gate test results.
+auto_gate_vs_static.csv,C:\Users\holbo\00VS_projjects\00_HFT_project\new_era\017_regime_auto_gate\outputs\comparison\auto_gate_vs_static.csv,True,Auto-gate vs static comparison.
+ewma_gate_ablation.csv,C:\Users\holbo\00VS_projjects\00_HFT_project\new_era\017_regime_auto_gate\outputs\comparison\ewma_gate_ablation.csv,True,EWMA ablation table.
+meta_classifier_skip_reason.md,C:\Users\holbo\00VS_projjects\00_HFT_project\new_era\017_regime_auto_gate\outputs\reports\meta_classifier_skip_reason.md,True,Reason meta-classifier gate training was skipped.
+regime_feature_distributions_NEW_vs_NEW3.png,C:\Users\holbo\00VS_projjects\00_HFT_project\new_era\017_regime_auto_gate\outputs\figures\regime_feature_distributions_NEW_vs_NEW3.png,True,Feature distribution comparison plot.
+static_vs_auto_gate_pnl.png,C:\Users\holbo\00VS_projjects\00_HFT_project\new_era\017_regime_auto_gate\outputs\figures\static_vs_auto_gate_pnl.png,True,Static vs auto net PnL bars.
+active_rate_vs_pnl_auto_gate.png,C:\Users\holbo\00VS_projjects\00_HFT_project\new_era\017_regime_auto_gate\outputs\figures\active_rate_vs_pnl_auto_gate.png,True,Validation candidate scatter.
+auto_gate_policy_timeline_sample.png,C:\Users\holbo\00VS_projjects\00_HFT_project\new_era\017_regime_auto_gate\outputs\figures\auto_gate_policy_timeline_sample.png,True,Sample NEW3 timeline for selected policy.
+regime_auto_gate_report.md,C:\Users\holbo\00VS_projjects\00_HFT_project\new_era\017_regime_auto_gate\outputs\reports\regime_auto_gate_report.md,True,Final experiment report.
+final_checkpoint.md,C:\Users\holbo\00VS_projjects\00_HFT_project\new_era\017_regime_auto_gate\outputs\reports\final_checkpoint.md,True,Meeting-ready checkpoint summary.

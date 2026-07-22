@@ -1,0 +1,2 @@
+experiment_id,snapshot,zscore_window,best_val_loss,best_epoch,model_test_pnl,pnl_improvement,selected,selection_reason
+lt=smoothed_mid_move_3class__fc=8__w=100__H=5__thr=0p5__expC_snapshot,base/expC_snapshot,2000,0.7814035496196231,30,106865.0,50765.0,True,"SELECTED: stable zscore_window=2000, consistent val_loss"

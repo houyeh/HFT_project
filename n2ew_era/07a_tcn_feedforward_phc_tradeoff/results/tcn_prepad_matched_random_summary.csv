@@ -1,0 +1,7 @@
+split,policy_id,model_total_excess_pnl_H20,random_mean,random_std,random_95p,random_99p,empirical_p_value_fraction_random_ge_model,empirical_p_value_wording,beats_random_95p,n_trials,matching,variant,seed
+val,tcn_prepad_scratch_16feat,1920890.0,-926128.065,30117.195040886112,-875187.25,-854624.7,0.0,< 0.001,True,1000,count_session_side_spread_bucket_with_session_side_fallback,scratch,2
+new3,tcn_prepad_scratch_16feat,5005925.0,-2065337.7,43762.70914157395,-1992959.25,-1969966.4,0.0,< 0.001,True,1000,count_session_side_spread_bucket_with_session_side_fallback,scratch,2
+new4,tcn_prepad_scratch_16feat,1795280.0,-790982.78,28617.26607786984,-744085.0,-729080.85,0.0,< 0.001,True,1000,count_session_side_spread_bucket_with_session_side_fallback,scratch,2
+val,tcn_prepad_distilled_16feat,1971550.0,-918868.33,27853.424129020477,-874200.0,-855365.15,0.0,< 0.001,True,1000,count_session_side_spread_bucket_with_session_side_fallback,distilled,1
+new3,tcn_prepad_distilled_16feat,5091230.0,-2022136.44,43383.83022194329,-1947710.75,-1917237.0,0.0,< 0.001,True,1000,count_session_side_spread_bucket_with_session_side_fallback,distilled,1
+new4,tcn_prepad_distilled_16feat,1814455.0,-774641.09,27723.79999768971,-729612.25,-713336.0,0.0,< 0.001,True,1000,count_session_side_spread_bucket_with_session_side_fallback,distilled,1

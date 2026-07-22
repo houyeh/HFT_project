@@ -1,0 +1,82 @@
+<ENTRY>
+{
+ "thisFile": "c:/Users\\holbo\\00VS_projjects\\00_HFT_project\\n2ew_era\\07b_tcn_prepad_manual_hls\\hls_component_distilled\\hls_component\\hls_component\\hls_component.hlsrun_csim_summary",
+ "connectId": "",
+ "serverToken": "",
+ "timestamp": "0"
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_CmdStep",
+ "dateTimestamp": "06/24/26 10:06:33",
+ "timestampMillis": "1782266793899",
+ "buildStep": {
+  "cmdId": "2e4ae8bf-b9ae-4c6b-b952-3227e5653806",
+  "name": "vitis-run",
+  "logFile": "c:/Users\\holbo\\00VS_projjects\\00_HFT_project\\n2ew_era\\07b_tcn_prepad_manual_hls\\hls_component_distilled\\hls_component\\hls_component\\logs\\hls_component.steps.log",
+  "commandLine": "C:/AMDDesignTools/2025.2/Vitis/bin/unwrapped/win64.o/vitis-run.exe  --mode hls --csim --config hls_config.cfg --work_dir hls_component ",
+  "args": [
+   "--mode",
+   "hls",
+   "--csim",
+   "--config",
+   "hls_config.cfg",
+   "--work_dir",
+   "hls_component"
+  ],
+  "iniFiles": [],
+  "cwd": "c:\\Users\\holbo\\00VS_projjects\\00_HFT_project\\n2ew_era\\07b_tcn_prepad_manual_hls\\hls_component_distilled\\hls_component"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Status",
+ "dateTimestamp": "06/24/26 10:06:33",
+ "timestampMillis": "1782266793900",
+ "status": {
+  "cmdId": "2e4ae8bf-b9ae-4c6b-b952-3227e5653806",
+  "state": "CS_RUNNING"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Status",
+ "dateTimestamp": "06/24/26 10:06:37",
+ "timestampMillis": "1782266797412",
+ "status": {
+  "cmdId": "2e4ae8bf-b9ae-4c6b-b952-3227e5653806",
+  "state": "CS_FAILED"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "06/24/26 10:06:37",
+ "timestampMillis": "1782266797413",
+ "report": {
+  "path": "",
+  "name": "",
+  "fileType": "HTML",
+  "reportType": "GLOBAL_RULECHECK_GUIDANCE",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "06/24/26 10:06:37",
+ "timestampMillis": "1782266797413",
+ "report": {
+  "path": "",
+  "name": "",
+  "fileType": "BINARY_PROTOBUF",
+  "reportType": "GLOBAL_RULECHECK_GUIDANCE",
+  "cmdId": ""
+ }
+}
+</ENTRY>

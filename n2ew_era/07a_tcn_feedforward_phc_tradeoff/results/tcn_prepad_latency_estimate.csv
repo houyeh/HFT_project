@@ -1,0 +1,3 @@
+model,estimate_type,feature_dim,seq_len_in,seq_len_out,channels,blocks,kernel_size,receptive_field,parameter_count,macs_per_sample,assumed_rate_name,assumed_macs_per_second,estimated_latency_us,vendor_synthesis_run,csim_run,csynth_run,cosim_run
+tcn_prepad_16feat,pre_synthesis_macs_only_not_hls_verified,16,252,128,16,5,3,125,7874,1632800,fpga_effective_50gmac_per_s,50000000000.0,32.656,False,False,False,False
+tcn_prepad_16feat,pre_synthesis_macs_only_not_hls_verified,16,252,128,16,5,3,125,7874,1632800,cpp_int8_reference_8gmac_per_s,8000000000.0,204.1,False,False,False,False

@@ -1,0 +1,39 @@
+{
+  "top_k": 1,
+  "experiments": [
+    {
+      "experiment_id": "lt=smoothed_mid_move_3class__fc=8__w=100__H=10__thr=1",
+      "label_type": "smoothed_mid_move_3class",
+      "feature_count": 8,
+      "window_size": 100,
+      "horizon": 10,
+      "threshold_ticks": 1.0,
+      "adverse_threshold_ticks": 1.0,
+      "num_train_samples": 337085,
+      "num_val_samples": 82118,
+      "num_test_samples": 151148,
+      "class_distribution_train": "{\"0\": 934, \"1\": 335273, \"2\": 878}",
+      "class_distribution_val": "{\"0\": 325, \"1\": 81444, \"2\": 349}",
+      "class_distribution_test": "{\"0\": 285, \"1\": 150567, \"2\": 296}",
+      "best_epoch": 29,
+      "best_val_loss": 1.0332769560225217,
+      "best_val_acc": 0.7449402079933753,
+      "best_val_balanced_acc": 0.4718940236944444,
+      "best_val_macro_f1": 0.2988507898245479,
+      "test_loss": 0.7093441486358643,
+      "test_acc": 0.7577804535951518,
+      "test_balanced_acc": 0.5271381669780721,
+      "test_macro_f1": 0.2962077491631695,
+      "val_selected_strategy": "tcn_skew",
+      "val_selected_threshold": "pthr=0.55,ethr=0.4",
+      "baseline_test_pnl": 90990.0,
+      "model_test_pnl": 170625.0,
+      "pnl_improvement": 79635.0,
+      "baseline_test_pnl_flatten": 90490.0,
+      "model_test_pnl_flatten": 169875.0,
+      "pnl_improvement_flatten": 79385.0,
+      "max_abs_inventory": 3.0,
+      "max_drawdown": 25420.0
+    }
+  ]
+}

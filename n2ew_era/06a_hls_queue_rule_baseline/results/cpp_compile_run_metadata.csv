@@ -1,0 +1,3 @@
+gpp_path,cpp_compiled,cpp_ran,returncode,compile_stdout,compile_stderr,compile_returncode,run_stdout,run_stderr
+C:\mingw64\bin\g++.EXE,True,True,0,,,0,"total=405528 mismatches=0
+",

@@ -1,0 +1,97 @@
+<design_size title="Design Size Report">
+    <item name="Total Instructions per Compilation Phase">
+        <table>
+            <keys size="4">Phase, Step, Instructions, Description</keys>
+            <column name="Compile/Link">, 174992 *, After all functions are compiled and linked into a single design</column>
+            <column name="">, , </column>
+            <column name="Unroll/Inline">, , After user unroll and inline pragmas are applied</column>
+            <column name="">(1) unroll,  16061, user unroll pragmas are applied</column>
+            <column name="">(2) simplification,   5598, simplification of applied user unroll pragmas</column>
+            <column name="">(3) inline,   5132, user inline pragmas are applied</column>
+            <column name="">(4) simplification,   5087, simplification of applied user inline pragmas</column>
+            <column name="">, , </column>
+            <column name="Array/Struct">, , After user array partition and struct aggregate/disaggregate pragmas are applied</column>
+            <column name="">(1) array partition,   5929, user array partition pragmas are applied</column>
+            <column name="">(2) simplification,   5269, simplification of applied user array partition &amp; struct aggregate/disaggregate pragmas</column>
+            <column name="">(3) aggregate/disaggregate,   5269, user struct aggregate/disaggregate pragmas are applied</column>
+            <column name="">(4) array reshape,   5269, apply array reshape pragmas</column>
+            <column name="">(5) access patterns,   5298, array access pattern optmizations</column>
+            <column name="">, , </column>
+            <column name="Performance">, , After transformations are applied to meet performance pragma targets</column>
+            <column name="">(1) loop simplification,   5298, loop and instruction simplification</column>
+            <column name="">(2) parallelization,   5269, loops are unrolled or pipelined to meet performance targets</column>
+            <column name="">(3) array partition,   5269, arrays are partitioned to meet performance targets</column>
+            <column name="">(4) simplification,   4944, simplification of design after performance transformations</column>
+            <column name="">, , </column>
+            <column name="HW Transforms">, , After hardware transfomations</column>
+            <column name="">(1) lowering,   4952, initial conversion to HW specific instructions</column>
+            <column name="">(2) optimizations,   5112, high level synthesis optimizations</column>
+        </table>
+    </item>
+    <item name="Instructions per Function for each Compilation Phase">
+        <hiertable>
+            <header size="7" col0="Function" col1="Location" col2="Compile/Link" col3="Unroll/Inline" col4="Array/Struct" col5="Performance" col6="HW Transforms"/>
+            <rows>
+                <row id="0" col0="phc_step" col1="phc_step_hls.cpp:324" col2="174992" col2_note="*" col3="5087" col4="5298" col5="4944" col6="5112">
+                    <row id="15" col0="linear_16_16_fixed" col1="phc_step_hls.cpp:94" col2="607" col3="" col4="" col5="" col6=""/>
+                    <row id="20" col0="layernorm_16" col1="phc_step_hls.cpp:165" col2="17258" col2_disp="17,258 (2 calls)" col3="" col4="" col5="" col6=""/>
+                    <row id="16" col0="silu_16" col1="phc_step_hls.cpp:86" col2="30853" col3="" col4="" col5="" col6="">
+                        <row id="7" col0="sigmoid_scalar" col1="phc_step_hls.cpp:60" col2="30611" col3="" col4="" col5="" col6="">
+                            <row id="13" col0="tanh_lut_scalar" col1="phc_step_hls.cpp:16" col2="28837" col3="" col4="" col5="" col6=""/>
+                        </row>
+                    </row>
+                    <row id="3" col0="step_dataflow_fn" col1="phc_step_hls.cpp:296" col2="124872" col3="535" col4="774" col5="499" col6="596">
+                        <row id="14" col0="fork_inputs_for_main_gain" col1="phc_step_hls.cpp:236" col2="34" col3="18" col4="18" col5="18" col6="23"/>
+                        <row id="9" col0="main_chain_fn" col1="phc_step_hls.cpp:254" col2="92759" col3="358" col4="537" col5="333" col6="392">
+                            <row id="5" col0="gate_candidate_dataflow" col1="phc_step_hls.cpp:221" col2="60649" col3="216" col4="336" col5="200" col6="239">
+                                <row id="4" col0="fork_encoded_for_gate_candidate" col1="phc_step_hls.cpp:208" col2="22" col3="12" col4="12" col5="12" col6="17"/>
+                                <row id="2" col0="gate_branch" col1="phc_step_hls.cpp:194" col2="31189" col3="103" col4="164" col5="96" col6="112">
+                                    <row id="8" col0="linear_16_16_acc" col1="phc_step_hls.cpp:112" col2="543" col3="" col4="" col5="" col6=""/>
+                                    <row id="10" col0="sigmoid_16" col1="phc_step_hls.cpp:70" col2="30636" col3="" col4="" col5="" col6="">
+                                        <row id="7" col0="sigmoid_scalar" col1="phc_step_hls.cpp:60" col2="30611" col3="" col4="" col5="" col6="">
+                                            <row id="13" col0="tanh_lut_scalar" col1="phc_step_hls.cpp:16" col2="28837" col3="" col4="" col5="" col6=""/>
+                                        </row>
+                                    </row>
+                                </row>
+                                <row id="1" col0="candidate_branch" col1="phc_step_hls.cpp:201" col2="29420" col3="93" col4="154" col5="86" col6="102">
+                                    <row id="8" col0="linear_16_16_acc" col1="phc_step_hls.cpp:112" col2="543" col3="" col4="" col5="" col6=""/>
+                                    <row id="6" col0="tanh_16" col1="phc_step_hls.cpp:78" col2="28867" col3="" col4="" col5="" col6="">
+                                        <row id="11" col0="tanh_scalar" col1="phc_step_hls.cpp:65" col2="28842" col3="" col4="" col5="" col6="">
+                                            <row id="13" col0="tanh_lut_scalar" col1="phc_step_hls.cpp:16" col2="28837" col3="" col4="" col5="" col6=""/>
+                                        </row>
+                                    </row>
+                                </row>
+                            </row>
+                            <row id="8" col0="linear_16_16_acc" col1="phc_step_hls.cpp:112" col2="543" col3="" col4="" col5="" col6=""/>
+                            <row id="16" col0="silu_16" col1="phc_step_hls.cpp:86" col2="30853" col3="" col4="" col5="" col6="">
+                                <row id="7" col0="sigmoid_scalar" col1="phc_step_hls.cpp:60" col2="30611" col3="" col4="" col5="" col6="">
+                                    <row id="13" col0="tanh_lut_scalar" col1="phc_step_hls.cpp:16" col2="28837" col3="" col4="" col5="" col6=""/>
+                                </row>
+                            </row>
+                        </row>
+                        <row id="18" col0="gain_chain_fn" col1="phc_step_hls.cpp:277" col2="32047" col3="147" col4="211" col5="140" col6="171">
+                            <row id="8" col0="linear_16_16_acc" col1="phc_step_hls.cpp:112" col2="543" col3="" col4="" col5="" col6=""/>
+                            <row id="12" col0="linear_16_16_fixed_no_bias" col1="phc_step_hls.cpp:130" col2="602" col3="" col4="" col5="" col6=""/>
+                            <row id="10" col0="sigmoid_16" col1="phc_step_hls.cpp:70" col2="30636" col3="" col4="" col5="" col6="">
+                                <row id="7" col0="sigmoid_scalar" col1="phc_step_hls.cpp:60" col2="30611" col3="" col4="" col5="" col6="">
+                                    <row id="13" col0="tanh_lut_scalar" col1="phc_step_hls.cpp:16" col2="28837" col3="" col4="" col5="" col6=""/>
+                                </row>
+                            </row>
+                        </row>
+                    </row>
+                    <row id="19" col0="linear_16_2_acc" col1="phc_step_hls.cpp:147" col2="543" col3="" col4="" col5="" col6=""/>
+                    <row id="17" col0="sqrt_fixed&lt;49, 25&gt;" col1="hls_sqrt_apfixed.h:19" col2="" col3="4194" col3_disp="4,194 (2 calls)" col4="4098" col4_disp="4,098 (2 calls)" col5="4098" col5_disp="4,098 (2 calls)" col6="4100" col6_disp="4,100 (2 calls)"/>
+                </row>
+            </rows>
+            <notes>
+                <note name="*" desc="Exceeded design size warning message threshold"/>
+            </notes>
+        </hiertable>
+    </item>
+    <item name="Design Size Message Settings">
+        <table>
+            <keys size="3">Message Setting, Value, Description</keys>
+            <column name="config_compile -design_size_maximum_warning">100000, Show a warning when total design instructions exceeds this value</column>
+        </table>
+    </item>
+</design_size>

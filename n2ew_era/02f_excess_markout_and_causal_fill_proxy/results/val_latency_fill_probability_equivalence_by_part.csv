@@ -1,0 +1,2 @@
+split,part_index,selected_action_count,different_probability_count,different_probability_rate,max_abs_probability_diff,mean_abs_probability_diff,cpu_mean_event_shift,fpga_mean_event_shift,cpu_latency_no_fill_count,fpga_latency_no_fill_count
+val,0,468627,427,0.0009111724249776475,0.2575757575757576,4.4809842471780324e-05,2.5072306973349807,2.5013688925307336,0,0

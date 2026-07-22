@@ -1,0 +1,3 @@
+relativeroot=C:/Users/holbo/00VS_projjects/00_HFT_project/n2ew_era/06l_phc_lite_int16_quant/hls_component
+original_argv=-c --mode hls --config hls_config.cfg --work_dir hls_component 
+

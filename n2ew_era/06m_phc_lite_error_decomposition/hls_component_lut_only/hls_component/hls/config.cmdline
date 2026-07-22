@@ -1,0 +1,3 @@
+relativeroot=C:/Users/holbo/00VS_projjects/00_HFT_project/n2ew_era/06m_phc_lite_error_decomposition/hls_component_lut_only
+original_argv=--mode hls --csim --config hls_config.cfg --work_dir hls_component 
+

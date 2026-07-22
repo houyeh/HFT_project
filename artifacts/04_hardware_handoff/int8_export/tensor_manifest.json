@@ -1,0 +1,199 @@
+{
+  "summary": {
+    "source_model": "C:\\Users\\holbo\\00VS_projjects\\00_HFT_project\\artifacts\\latency_proof\\frozen_tcn_best_model.pt",
+    "weight_file": "C:\\Users\\holbo\\00VS_projjects\\00_HFT_project\\artifacts\\hardware_handoff\\int8_export\\tcn_int8_weights.wts",
+    "tensor_count": 16,
+    "total_parameters": 4771,
+    "reference_input": "C:\\Users\\holbo\\00VS_projjects\\00_HFT_project\\artifacts\\hardware_handoff\\int8_export\\reference_input.txt",
+    "reference_output": "C:\\Users\\holbo\\00VS_projjects\\00_HFT_project\\artifacts\\hardware_handoff\\int8_export\\reference_output.txt",
+    "generated_weights_header": "C:\\Users\\holbo\\00VS_projjects\\00_HFT_project\\cpp_hls_prep\\include\\generated\\fixed_tcn_weights.hpp",
+    "generated_test_vectors_header": "C:\\Users\\holbo\\00VS_projjects\\00_HFT_project\\cpp_hls_prep\\include\\generated\\fixed_tcn_test_vectors.hpp",
+    "input_scale": 0.02794869490495817,
+    "fp32_logits": [
+      -0.16463416814804077,
+      -0.06134485453367233,
+      -0.07320940494537354
+    ],
+    "fp32_probabilities": [
+      0.31205666065216064,
+      0.3460122048854828,
+      0.34193119406700134
+    ],
+    "fixed_logits_int32": [
+      -3947,
+      220,
+      -4732
+    ],
+    "fixed_logits_float": [
+      -0.12609626352787018,
+      0.007028421387076378,
+      -0.15117494761943817
+    ],
+    "fixed_probabilities": [
+      0.3207569420337677,
+      0.36643028259277344,
+      0.31281280517578125
+    ]
+  },
+  "tensors": [
+    {
+      "name": "tcn.network.0.conv1.conv.weight",
+      "shape": [
+        16,
+        12,
+        3
+      ],
+      "count": 576,
+      "scale": 0.0014487320747901137,
+      "dtype": "int8"
+    },
+    {
+      "name": "tcn.network.0.conv1.conv.bias",
+      "shape": [
+        16
+      ],
+      "count": 16,
+      "scale": 0.0012386821386382336,
+      "dtype": "int8"
+    },
+    {
+      "name": "tcn.network.0.conv2.conv.weight",
+      "shape": [
+        16,
+        16,
+        3
+      ],
+      "count": 768,
+      "scale": 0.0012493893856138694,
+      "dtype": "int8"
+    },
+    {
+      "name": "tcn.network.0.conv2.conv.bias",
+      "shape": [
+        16
+      ],
+      "count": 16,
+      "scale": 0.0012236040408217061,
+      "dtype": "int8"
+    },
+    {
+      "name": "tcn.network.0.downsample.weight",
+      "shape": [
+        16,
+        12,
+        1
+      ],
+      "count": 192,
+      "scale": 0.0024061562038782073,
+      "dtype": "int8"
+    },
+    {
+      "name": "tcn.network.0.downsample.bias",
+      "shape": [
+        16
+      ],
+      "count": 16,
+      "scale": 0.0018116678074588926,
+      "dtype": "int8"
+    },
+    {
+      "name": "tcn.network.1.conv1.conv.weight",
+      "shape": [
+        16,
+        16,
+        3
+      ],
+      "count": 768,
+      "scale": 0.0012616291055529136,
+      "dtype": "int8"
+    },
+    {
+      "name": "tcn.network.1.conv1.conv.bias",
+      "shape": [
+        16
+      ],
+      "count": 16,
+      "scale": 0.0010792610682840422,
+      "dtype": "int8"
+    },
+    {
+      "name": "tcn.network.1.conv2.conv.weight",
+      "shape": [
+        16,
+        16,
+        3
+      ],
+      "count": 768,
+      "scale": 0.0012067063586918387,
+      "dtype": "int8"
+    },
+    {
+      "name": "tcn.network.1.conv2.conv.bias",
+      "shape": [
+        16
+      ],
+      "count": 16,
+      "scale": 0.0012392301963070247,
+      "dtype": "int8"
+    },
+    {
+      "name": "tcn.network.2.conv1.conv.weight",
+      "shape": [
+        16,
+        16,
+        3
+      ],
+      "count": 768,
+      "scale": 0.0012847870353638656,
+      "dtype": "int8"
+    },
+    {
+      "name": "tcn.network.2.conv1.conv.bias",
+      "shape": [
+        16
+      ],
+      "count": 16,
+      "scale": 0.001228881985183776,
+      "dtype": "int8"
+    },
+    {
+      "name": "tcn.network.2.conv2.conv.weight",
+      "shape": [
+        16,
+        16,
+        3
+      ],
+      "count": 768,
+      "scale": 0.0012643761991515874,
+      "dtype": "int8"
+    },
+    {
+      "name": "tcn.network.2.conv2.conv.bias",
+      "shape": [
+        16
+      ],
+      "count": 16,
+      "scale": 0.0011843383077561386,
+      "dtype": "int8"
+    },
+    {
+      "name": "fc.weight",
+      "shape": [
+        3,
+        16
+      ],
+      "count": 48,
+      "scale": 0.0020446317402396615,
+      "dtype": "int8"
+    },
+    {
+      "name": "fc.bias",
+      "shape": [
+        3
+      ],
+      "count": 3,
+      "scale": 0.0016639889694574311,
+      "dtype": "int8"
+    }
+  ]
+}

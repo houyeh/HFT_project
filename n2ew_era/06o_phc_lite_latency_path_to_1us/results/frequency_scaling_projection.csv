@@ -1,0 +1,4 @@
+frequency_mhz,period_ns,latency_us_if_cycles_unchanged,distance_to_1us_x,existing_routed_timing_status,slack_proxy_vs_existing_routed_path_ns,evidence
+100,10.0,83.16,83.16,verified_pass,0.019999999999999574,06F routed timing
+150,6.666666666666667,55.44,55.44,not_verified_expected_fail_without_retiming,-3.3133333333333335,linear estimate only; requires fresh P&R timing report
+200,5.0,41.58,41.58,not_verified_expected_fail_without_retiming,-4.98,linear estimate only; requires fresh P&R timing report

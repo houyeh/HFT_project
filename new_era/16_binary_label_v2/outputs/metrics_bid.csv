@@ -1,0 +1,3 @@
+side,split,sampling_mode,examples,positive_count,positive_rate,loss,pr_auc,roc_auc,precision_at_0p5,recall_at_0p5,f1_at_0p5,predicted_positive_rate_at_0p5
+bid,train_natural,weighted_bce,718435,5831,0.008116252688134627,0.043642760621442914,0.03210732792896767,0.7401945152873206,0.0,0.0,0.0,0.0
+bid,val,weighted_bce,563378,3872,0.006872827834952732,0.03772803342059651,0.03509279420448621,0.7456189841135095,0.0,0.0,0.0,0.0

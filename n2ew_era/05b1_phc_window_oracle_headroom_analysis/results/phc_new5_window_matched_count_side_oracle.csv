@@ -1,0 +1,4 @@
+policy_id,policy_selected_count,policy_bid_count,policy_ask_count,policy_pnl,oracle_selected_count,oracle_bid_count,oracle_ask_count,matched_count_side_oracle_pnl,positive_only_oracle_selected_count,positive_only_oracle_bid_count,positive_only_oracle_ask_count,positive_only_oracle_pnl,forced_nonpositive_actions_for_exact_count,capture_ratio,opportunity_gap,oracle_uses_future_labels,post_hoc_diagnostic_only
+side_by_queue_imbalance_abs_0p1,20979,10259,10720,361030.0,20979,10259,10720,2603630.0,18110,9194,8916,2646650.0,2869,0.13866409589688242,2242600.0,True,True
+ml_hgb_regressor_shallow_convergence_selected,19219,9996,9223,487430.0,19219,9996,9223,2630030.0,18110,9194,8916,2646650.0,1109,0.1853324867016726,2142600.0,True,True
+phc_lite_posthoc_new5,19819,9982,9837,582715.0,19819,9982,9837,2621030.0,18110,9194,8916,2646650.0,1709,0.22232290359133622,2038315.0,True,True

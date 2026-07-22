@@ -1,0 +1,38 @@
+{
+  "selection_split": "validation",
+  "test_used_for_selection": false,
+  "selected_policy": {
+    "policy": "candidate",
+    "sample_count": 262,
+    "selected_count": 90,
+    "selection_rate": 0.3435114503816794,
+    "selected_quote_pnl": 154460.0,
+    "avg_selected_quote_pnl": 1716.2222222222222,
+    "selected_positive_count": 22,
+    "selected_negative_count": 24,
+    "oracle_positive_count": 59,
+    "oracle_positive_pnl": 1292665.0,
+    "oracle_recall": 0.3728813559322034,
+    "oracle_precision": 0.24444444444444444,
+    "captured_oracle_positive_pnl": 507220.0,
+    "missed_oracle_positive_pnl": 785445.0,
+    "selected_negative_loss": 352760.0,
+    "avoided_negative_ev_pnl": 1017665.0,
+    "threshold": 0.26731341966234373,
+    "model_name": "full_hist_gradient_boosting_classifier",
+    "objective": "positive_ev_classification",
+    "complexity": 3
+  },
+  "feature_columns": [
+    "spread_ticks",
+    "queue_imbalance_calc",
+    "deep_imbalance_calc",
+    "top_depth",
+    "depth_ratio",
+    "volatility_past_50",
+    "abs_return_past_50",
+    "event_rate_past_50",
+    "queue_imbalance_change_past",
+    "normalized_spread_calc"
+  ]
+}

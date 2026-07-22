@@ -1,0 +1,12 @@
+{
+  "source_experiment": "016_new_binary",
+  "old_outputs_dir": "C:\\Users\\holbo\\00VS_projjects\\00_HFT_project\\new_era\\016_new_binary\\outputs",
+  "old_fix_outputs_dir": "C:\\Users\\holbo\\00VS_projjects\\00_HFT_project\\new_era\\016_new_binary\\outputs_fix",
+  "required_no_test_tuning_rule": "threshold selection must use validation only",
+  "current_016_binary_best_threshold_bid": 0.4,
+  "current_016_binary_best_threshold_ask": 0.2,
+  "current_016_binary_best_selected_from_new_test_sweep": true,
+  "source_code_mentions_new_test_net_pnl_selection": true,
+  "val_only_fix_artifact_available_in_outputs_fix": false,
+  "verdict": "VIOLATION: current 016 binary_best was selected on NEW_test."
+}

@@ -1,0 +1,252 @@
+================================================================
+== Vivado Place & Route Results
+================================================================
++ General Information:
+    * Date:            Mon Jun 15 15:45:17 +0800 2026
+    * Version:         2025.2 (Build 6295257 on Nov 14 2025)
+    * Project:         hls_component
+    * Solution:        hls (Vivado IP Flow Target)
+    * Product family:  zynq
+    * Target device:   xc7z020-clg400-1
+
+
+================================================================
+== Run Constraints & Options
+================================================================
++ Design Constraints & Options:
+    * Place & Route target clock:  10 ns
+    * C-Synthesis target clock:    10 ns
+    * C-Synthesis uncertainty:     27%
+
++ RTL Synthesis Options:
+    * config_export -vivado_synth_strategy:     default
+    * config_export -vivado_synth_design_args:  -directive sdx_optimization_effort_high
+
++ Place & Route Options:
+    * config_export -vivado_impl_strategy:  default
+    * config_export -vivado_phys_opt:       auto
+
++ Reporting Options:
+    * config_export -vivado_report_level:      2
+    * config_export -vivado_max_timing_paths:  10
+
+
+================================================================
+== Place & Route Resource Summary
+================================================================
+LUT:              7555
+FF:               8217
+DSP:              47
+BRAM:             6
+URAM:             0
+SRL:              26
+
+
+================================================================
+== Place & Route Timing Summary
+================================================================
+* Timing was met
++----------------+-------------+
+| Timing         | Period (ns) |
++----------------+-------------+
+| Target         | 10.000      |
+| Post-Synthesis | 9.729       |
+| Post-Route     | 9.980       |
++----------------+-------------+
+
+
+================================================================
+== Place & Route Resources
+================================================================
++------------------------------------------------------+-----+----+-----+------+------+-----+--------+------+---------+----------+--------+
+| Name                                                 | LUT | FF | DSP | BRAM | URAM | SRL | Pragma | Impl | Latency | Variable | Source |
++------------------------------------------------------+-----+----+-----+------+------+-----+--------+------+---------+----------+--------+
+| inst                                                 |     |    |     |      |      | 26  |        |      |         |          |        |
+|   (inst)                                             |     |    |     |      |      |     |        |      |         |          |        |
+|   candidate_pre_U                                    |     |    |     |      |      |     |        |      |         |          |        |
+|   candidate_t_U                                      |     |    |     |      |      |     |        |      |         |          |        |
+|   enc_linear_out_U                                   |     |    |     |      |      |     |        |      |         |          |        |
+|   encoded_U                                          |     |    |     |      |      |     |        |      |         |          |        |
+|   encoded_pre_U                                      |     |    |     |      |      |     |        |      |         |          |        |
+|   gain_encoded_U                                     |     |    |     |      |      |     |        |      |         |          |        |
+|   gain_pre_U                                         |     |    |     |      |      |     |        |      |         |          |        |
+|   gain_prev_state_U                                  |     |    |     |      |      |     |        |      |         |          |        |
+|   gain_t_U                                           |     |    |     |      |      |     |        |      |         |          |        |
+|   gate_pre_U                                         |     |    |     |      |      |     |        |      |         |          |        |
+|   gate_t_U                                           |     |    |     |      |      |     |        |      |         |          |        |
+|   grp_phc_step_Outline_VITIS_LOOP_119_11_fu_1109     |     |    |     |      |      |     |        |      |         |          |        |
+|     (grp_phc_step_Outline_VITIS_LOOP_119_11_fu_1109) |     |    |     |      |      |     |        |      |         |          |        |
+|     phc_step_weights_GAIN_FROM_ENCODED_B_U           |     |    |     |      |      |     |        |      |         |          |        |
+|     phc_step_weights_GAIN_FROM_ENCODED_W_U           |     |    |     |      |      |     |        |      |         |          |        |
+|   grp_phc_step_Outline_VITIS_LOOP_119_13_fu_1139     |     |    |     |      |      |     |        |      |         |          |        |
+|     (grp_phc_step_Outline_VITIS_LOOP_119_13_fu_1139) |     |    |     |      |      |     |        |      |         |          |        |
+|     phc_step_weights_SYNAPSE_B_U                     |     |    |     |      |      |     |        |      |         |          |        |
+|     phc_step_weights_SYNAPSE_W_U                     |     |    |     |      |      |     |        |      |         |          |        |
+|   grp_phc_step_Outline_VITIS_LOOP_119_1_fu_1093      |     |    |     |      |      |     |        |      |         |          |        |
+|     (grp_phc_step_Outline_VITIS_LOOP_119_1_fu_1093)  |     |    |     |      |      |     |        |      |         |          |        |
+|     phc_step_weights_CANDIDATE_B_U                   |     |    |     |      |      |     |        |      |         |          |        |
+|     phc_step_weights_CANDIDATE_W_U                   |     |    |     |      |      |     |        |      |         |          |        |
+|   grp_phc_step_Outline_VITIS_LOOP_136_1_fu_1130      |     |    |     |      |      |     |        |      |         |          |        |
+|     (grp_phc_step_Outline_VITIS_LOOP_136_1_fu_1130)  |     |    |     |      |      |     |        |      |         |          |        |
+|     phc_step_weights_GAIN_FROM_PREV_STATE_W_U        |     |    |     |      |      |     |        |      |         |          |        |
+|   grp_phc_step_Outline_VITIS_LOOP_233_1_fu_1119      |     |    |     |      |      |     |        |      |         |          |        |
+|     (grp_phc_step_Outline_VITIS_LOOP_233_1_fu_1119)  |     |    |     |      |      |     |        |      |         |          |        |
+|     phc_step_weights_DECAY_U                         |     |    |     |      |      |     |        |      |         |          |        |
+|   grp_phc_step_Outline_VITIS_LOOP_241_2_fu_1149      |     |    |     |      |      |     |        |      |         |          |        |
+|   grp_phc_step_Outline_VITIS_LOOP_258_4_fu_1168      |     |    |     |      |      |     |        |      |         |          |        |
+|   grp_phc_step_Outline_VITIS_LOOP_262_5_fu_1176      |     |    |     |      |      |     |        |      |         |          |        |
+|   grp_phc_step_Outline_VITIS_LOOP_72_12_fu_1162      |     |    |     |      |      |     |        |      |         |          |        |
+|   grp_phc_step_Outline_VITIS_LOOP_72_1_fu_1087       |     |    |     |      |      |     |        |      |         |          |        |
+|   grp_phc_step_Outline_VITIS_LOOP_80_1_fu_1103       |     |    |     |      |      |     |        |      |         |          |        |
+|   grp_phc_step_Outline_VITIS_LOOP_88_1_fu_1156       |     |    |     |      |      |     |        |      |         |          |        |
+|   grp_sqrt_fixed_49_25_s_fu_1082                     |     |    |     |      |      | 22  |        |      |         |          |        |
+|   loop_input_U                                       |     |    |     |      |      |     |        |      |         |          |        |
+|   message_U                                          |     |    |     |      |      |     |        |      |         |          |        |
+|   message_pre_U                                      |     |    |     |      |      |     |        |      |         |          |        |
+|   mul_24s_40s_64_2_1_U64                             |     |    |     |      |      |     |        |      |         |          |        |
+|   mul_25s_40s_64_2_1_U65                             |     |    |     |      |      |     |        |      |         |          |        |
+|   mul_26s_40s_64_2_1_U66                             |     |    |     |      |      |     |        |      |         |          |        |
+|   mul_36s_24s_60_2_1_U79                             |     |    |     |      |      |     |        |      |         |          |        |
+|   mul_36s_25s_61_2_1_U67                             |     |    |     |      |      |     |        |      |         |          |        |
+|   mul_40s_25ns_64_2_1_U70                            |     |    |     |      |      |     |        |      |         |          |        |
+|   mul_40s_40s_64_2_1_U68                             |     |    |     |      |      |     |        |      |         |          |        |
+|   mul_40s_40s_72_2_1_U69                             |     |    |     |      |      |     |        |      |         |          |        |
+|   mul_41s_25ns_65_2_1_U71                            |     |    |     |      |      |     |        |      |         |          |        |
+|   mul_64s_40s_88_5_1_U72                             |     |    |     |      |      |     |        |      |         |          |        |
+|   mul_65s_40s_88_5_1_U73                             |     |    |     |      |      |     |        |      |         |          |        |
+|   phc_step_weights_ENC_LINEAR_B_U                    |     |    |     |      |      |     |        |      |         |          |        |
+|   phc_step_weights_ENC_LINEAR_W_U                    |     |    |     |      |      |     |        |      |         |          |        |
+|   phc_step_weights_ENC_NORM_BETA_U                   |     |    |     |      |      |     |        |      |         |          |        |
+|   phc_step_weights_ENC_NORM_GAMMA_U                  |     |    |     |      |      |     |        |      |         |          |        |
+|   phc_step_weights_GATE_B_U                          |     |    |     |      |      |     |        |      |         |          |        |
+|   phc_step_weights_GATE_W_U                          |     |    |     |      |      |     |        |      |         |          |        |
+|   phc_step_weights_LOOP_NORM_BETA_U                  |     |    |     |      |      |     |        |      |         |          |        |
+|   phc_step_weights_LOOP_NORM_GAMMA_U                 |     |    |     |      |      |     |        |      |         |          |        |
+|   phc_step_weights_READOUT_W_U                       |     |    |     |      |      |     |        |      |         |          |        |
+|   state_temporal_U                                   |     |    |     |      |      |     |        |      |         |          |        |
+|   udiv_49s_37ns_40_53_seq_1_U74                      |     |    |     |      |      | 2   |        |      |         |          |        |
+|   udiv_49s_37ns_40_53_seq_1_U78                      |     |    |     |      |      | 2   |        |      |         |          |        |
+|   z_U                                                |     |    |     |      |      |     |        |      |         |          |        |
++------------------------------------------------------+-----+----+-----+------+------+-----+--------+------+---------+----------+--------+
+
+
+================================================================
+== Place & Route Fail Fast
+================================================================
++-----------------------------------------------------------+-----------+--------+--------+
+| Criteria                                                  | Guideline | Actual | Status |
++-----------------------------------------------------------+-----------+--------+--------+
+| LUT                                                       | 70%       | 14.20% | OK     |
+| FD                                                        | 50%       | 7.72%  | OK     |
+| LUTRAM+SRL                                                | 25%       | 3.82%  | OK     |
+| MUXF7                                                     | 15%       | 0.00%  | OK     |
+| DSP                                                       | 80%       | 21.36% | OK     |
+| RAMB/FIFO                                                 | 80%       | 2.14%  | OK     |
+| DSP+RAMB+URAM (Avg)                                       | 70%       | 11.75% | OK     |
+| BUFGCE* + BUFGCTRL                                        | 24        | 0      | OK     |
+| DONT_TOUCH (cells/nets)                                   | 0         | 0      | OK     |
+| MARK_DEBUG (nets)                                         | 0         | 0      | OK     |
+| Control Sets                                              | 998       | 210    | OK     |
+| Average Fanout for modules > 100k cells                   | 4         | 2.34   | OK     |
+| Max Average Fanout for modules > 100k cells               | 4         | 0      | OK     |
+| Non-FD high fanout nets > 10k loads                       | 0         | 0      | OK     |
++-----------------------------------------------------------+-----------+--------+--------+
+| TIMING-6 (No common primary clock between related clocks) | 0         | 0      | OK     |
+| TIMING-7 (No common node between related clocks)          | 0         | 0      | OK     |
+| TIMING-8 (No common period between related clocks)        | 0         | 0      | OK     |
+| TIMING-14 (LUT on the clock tree)                         | 0         | 0      | OK     |
+| TIMING-35 (No common node in paths with the same clock)   | 0         | 0      | OK     |
++-----------------------------------------------------------+-----------+--------+--------+
+| Number of paths above max LUT budgeting (0.575ns)         | 0         | 0      | OK     |
+| Number of paths above max Net budgeting (0.403ns)         | 0         | 0      | OK     |
++-----------------------------------------------------------+-----------+--------+--------+
+
+
+================================================================
+== Place & Route Timing Paths
+================================================================
+* Timing was met
++-------+-------+----------------------+----------------------------------------------+--------------+------------+----------------+----------------+--------------+
+| Path  | SLACK | STARTPOINT PIN       | ENDPOINT PIN                                 | LOGIC LEVELS | MAX FANOUT | DATAPATH DELAY | DATAPATH LOGIC | DATAPATH NET |
+|       |       |                      |                                              |              |            |                |          DELAY |        DELAY |
++-------+-------+----------------------+----------------------------------------------+--------------+------------+----------------+----------------+--------------+
+| Path1 | 0.020 | ap_CS_fsm_reg[130]/C | mul_26s_40s_64_2_1_U66/buff0_reg__0/PCIN[0]  |            4 |         78 |          8.496 |          5.098 |        3.398 |
+| Path2 | 0.020 | ap_CS_fsm_reg[130]/C | mul_26s_40s_64_2_1_U66/buff0_reg__0/PCIN[10] |            4 |         78 |          8.496 |          5.098 |        3.398 |
+| Path3 | 0.020 | ap_CS_fsm_reg[130]/C | mul_26s_40s_64_2_1_U66/buff0_reg__0/PCIN[11] |            4 |         78 |          8.496 |          5.098 |        3.398 |
+| Path4 | 0.020 | ap_CS_fsm_reg[130]/C | mul_26s_40s_64_2_1_U66/buff0_reg__0/PCIN[12] |            4 |         78 |          8.496 |          5.098 |        3.398 |
+| Path5 | 0.020 | ap_CS_fsm_reg[130]/C | mul_26s_40s_64_2_1_U66/buff0_reg__0/PCIN[13] |            4 |         78 |          8.496 |          5.098 |        3.398 |
++-------+-------+----------------------+----------------------------------------------+--------------+------------+----------------+----------------+--------------+
+
+    +------------------------------------------------------------------+----------------------+
+    | Path1 Cells                                                      | Primitive Type       |
+    +------------------------------------------------------------------+----------------------+
+    | ap_CS_fsm_reg[130]                                               | FLOP_LATCH.flop.FDRE |
+    | mul_26s_40s_64_2_1_U66/tmp_product_i_47                          | LUT.others.LUT4      |
+    | grp_phc_step_Outline_VITIS_LOOP_72_1_fu_1087/tmp_product__0_i_23 | LUT.others.LUT6      |
+    | grp_phc_step_Outline_VITIS_LOOP_72_1_fu_1087/tmp_product__0_i_6  | LUT.others.LUT5      |
+    | mul_26s_40s_64_2_1_U66/tmp_product__0                            | MULT.dsp.DSP48E1     |
+    | mul_26s_40s_64_2_1_U66/buff0_reg__0                              | MULT.dsp.DSP48E1     |
+    +------------------------------------------------------------------+----------------------+
+
+    +------------------------------------------------------------------+----------------------+
+    | Path2 Cells                                                      | Primitive Type       |
+    +------------------------------------------------------------------+----------------------+
+    | ap_CS_fsm_reg[130]                                               | FLOP_LATCH.flop.FDRE |
+    | mul_26s_40s_64_2_1_U66/tmp_product_i_47                          | LUT.others.LUT4      |
+    | grp_phc_step_Outline_VITIS_LOOP_72_1_fu_1087/tmp_product__0_i_23 | LUT.others.LUT6      |
+    | grp_phc_step_Outline_VITIS_LOOP_72_1_fu_1087/tmp_product__0_i_6  | LUT.others.LUT5      |
+    | mul_26s_40s_64_2_1_U66/tmp_product__0                            | MULT.dsp.DSP48E1     |
+    | mul_26s_40s_64_2_1_U66/buff0_reg__0                              | MULT.dsp.DSP48E1     |
+    +------------------------------------------------------------------+----------------------+
+
+    +------------------------------------------------------------------+----------------------+
+    | Path3 Cells                                                      | Primitive Type       |
+    +------------------------------------------------------------------+----------------------+
+    | ap_CS_fsm_reg[130]                                               | FLOP_LATCH.flop.FDRE |
+    | mul_26s_40s_64_2_1_U66/tmp_product_i_47                          | LUT.others.LUT4      |
+    | grp_phc_step_Outline_VITIS_LOOP_72_1_fu_1087/tmp_product__0_i_23 | LUT.others.LUT6      |
+    | grp_phc_step_Outline_VITIS_LOOP_72_1_fu_1087/tmp_product__0_i_6  | LUT.others.LUT5      |
+    | mul_26s_40s_64_2_1_U66/tmp_product__0                            | MULT.dsp.DSP48E1     |
+    | mul_26s_40s_64_2_1_U66/buff0_reg__0                              | MULT.dsp.DSP48E1     |
+    +------------------------------------------------------------------+----------------------+
+
+    +------------------------------------------------------------------+----------------------+
+    | Path4 Cells                                                      | Primitive Type       |
+    +------------------------------------------------------------------+----------------------+
+    | ap_CS_fsm_reg[130]                                               | FLOP_LATCH.flop.FDRE |
+    | mul_26s_40s_64_2_1_U66/tmp_product_i_47                          | LUT.others.LUT4      |
+    | grp_phc_step_Outline_VITIS_LOOP_72_1_fu_1087/tmp_product__0_i_23 | LUT.others.LUT6      |
+    | grp_phc_step_Outline_VITIS_LOOP_72_1_fu_1087/tmp_product__0_i_6  | LUT.others.LUT5      |
+    | mul_26s_40s_64_2_1_U66/tmp_product__0                            | MULT.dsp.DSP48E1     |
+    | mul_26s_40s_64_2_1_U66/buff0_reg__0                              | MULT.dsp.DSP48E1     |
+    +------------------------------------------------------------------+----------------------+
+
+    +------------------------------------------------------------------+----------------------+
+    | Path5 Cells                                                      | Primitive Type       |
+    +------------------------------------------------------------------+----------------------+
+    | ap_CS_fsm_reg[130]                                               | FLOP_LATCH.flop.FDRE |
+    | mul_26s_40s_64_2_1_U66/tmp_product_i_47                          | LUT.others.LUT4      |
+    | grp_phc_step_Outline_VITIS_LOOP_72_1_fu_1087/tmp_product__0_i_23 | LUT.others.LUT6      |
+    | grp_phc_step_Outline_VITIS_LOOP_72_1_fu_1087/tmp_product__0_i_6  | LUT.others.LUT5      |
+    | mul_26s_40s_64_2_1_U66/tmp_product__0                            | MULT.dsp.DSP48E1     |
+    | mul_26s_40s_64_2_1_U66/buff0_reg__0                              | MULT.dsp.DSP48E1     |
+    +------------------------------------------------------------------+----------------------+
+
+
+================================================================
+== Place & Route Vivado Reports
+================================================================
++--------------------------+------------------------------------------------------------------+
+| Report Type              | Report Location                                                  |
++--------------------------+------------------------------------------------------------------+
+| design_analysis          | impl/verilog/report/phc_step_design_analysis_routed.rpt          |
+| failfast                 | impl/verilog/report/phc_step_failfast_routed.rpt                 |
+| power                    | impl/verilog/report/phc_step_power_routed.rpt                    |
+| status                   | impl/verilog/report/phc_step_status_routed.rpt                   |
+| timing                   | impl/verilog/report/phc_step_timing_routed.rpt                   |
+| timing_paths             | impl/verilog/report/phc_step_timing_paths_routed.rpt             |
+| utilization              | impl/verilog/report/phc_step_utilization_routed.rpt              |
+| utilization_hierarchical | impl/verilog/report/phc_step_utilization_hierarchical_routed.rpt |
++--------------------------+------------------------------------------------------------------+
+
+

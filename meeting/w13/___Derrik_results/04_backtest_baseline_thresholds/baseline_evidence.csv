@@ -1,0 +1,4 @@
+experiment,threshold,net_pnl,random_mean,random_std,random_mean_plus_1std,beats_random_mean,beats_random_mean_plus_1std,interpretation
+Model_0.55,0.55,84980.0,42362.1,38111.08740366771,80473.18740366772,True,True,在 NEW 測試集中，擊敗了隨機基準的 平均值+1標準差
+Model_0.60,0.6,83460.0,46293.4,32755.933927152804,79049.33392715281,True,True,在 NEW 測試集中，擊敗了隨機基準的 平均值+1標準差
+Val-selected_0.70,0.7,63440.0,53209.4,19569.30332536138,72778.70332536138,True,False,擊敗隨機基準的平均值，但未超過 平均值+1標準差

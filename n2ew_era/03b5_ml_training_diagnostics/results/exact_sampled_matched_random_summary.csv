@@ -1,0 +1,4 @@
+split,model_total_excess_pnl,random_mean,random_95p,random_99p,empirical_p_value_fraction_random_ge_model,random_trials
+new3,76868856.0,-62773001.765,-62333325.25,-62200459.65,0.0,1000
+new4,27081276.0,-24325533.85,-24039117.5,-23914425.55,0.0,1000
+test,20709870.0,-13088306.165,-12930681.0,-12874163.9,0.0,1000

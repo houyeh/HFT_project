@@ -1,0 +1,31 @@
+eval_group,setup,selected_quote_count,selected_quote_pnl,missing_delayed_entry_count,uses_current_row_book_for_decision,uses_previous_row_book_for_decision,uses_future_or_outcome_in_decision,interpretation
+phase031_new4,A_current_row_decision_current_entry,714,6348770.0,0,True,False,False,Uses row t spread. Kept only as legacy proxy timing reference.
+phase031_new4,B_previous_row_decision_current_entry,713,6348770.0,0,False,True,False,Uses row t-1 spread for row t entry; decision feature is available before entry.
+phase031_new4,C_previous_row_decision_delayed_entry,713,61505.0,708,False,True,False,Uses row t-1 spread and row t+1 proxy entry value; strictest timing stress here.
+phase031_test,A_current_row_decision_current_entry,419,2312590.0,0,True,False,False,Uses row t spread. Kept only as legacy proxy timing reference.
+phase031_test,B_previous_row_decision_current_entry,419,2312590.0,0,False,True,False,Uses row t-1 spread for row t entry; decision feature is available before entry.
+phase031_test,C_previous_row_decision_delayed_entry,419,0.0,419,False,True,False,Uses row t-1 spread and row t+1 proxy entry value; strictest timing stress here.
+unused_NEW1_MXFB6,A_current_row_decision_current_entry,682,4174225.0,0,True,False,False,Uses row t spread. Kept only as legacy proxy timing reference.
+unused_NEW1_MXFB6,B_previous_row_decision_current_entry,680,4155240.0,0,False,True,False,Uses row t-1 spread for row t entry; decision feature is available before entry.
+unused_NEW1_MXFB6,C_previous_row_decision_delayed_entry,680,0.0,680,False,True,False,Uses row t-1 spread and row t+1 proxy entry value; strictest timing stress here.
+unused_NEW1_TMFB6,A_current_row_decision_current_entry,873,5665815.0,0,True,False,False,Uses row t spread. Kept only as legacy proxy timing reference.
+unused_NEW1_TMFB6,B_previous_row_decision_current_entry,873,5665815.0,0,False,True,False,Uses row t-1 spread for row t entry; decision feature is available before entry.
+unused_NEW1_TMFB6,C_previous_row_decision_delayed_entry,873,0.0,873,False,True,False,Uses row t-1 spread and row t+1 proxy entry value; strictest timing stress here.
+unused_NEW1_TXFB6,A_current_row_decision_current_entry,422,2788070.0,0,True,False,False,Uses row t spread. Kept only as legacy proxy timing reference.
+unused_NEW1_TXFB6,B_previous_row_decision_current_entry,422,2788070.0,0,False,True,False,Uses row t-1 spread for row t entry; decision feature is available before entry.
+unused_NEW1_TXFB6,C_previous_row_decision_delayed_entry,422,0.0,422,False,True,False,Uses row t-1 spread and row t+1 proxy entry value; strictest timing stress here.
+unused_NEW3_TXFA6,A_current_row_decision_current_entry,1399,7367885.0,0,True,False,False,Uses row t spread. Kept only as legacy proxy timing reference.
+unused_NEW3_TXFA6,B_previous_row_decision_current_entry,1397,7329100.0,0,False,True,False,Uses row t-1 spread for row t entry; decision feature is available before entry.
+unused_NEW3_TXFA6,C_previous_row_decision_delayed_entry,1397,0.0,1397,False,True,False,Uses row t-1 spread and row t+1 proxy entry value; strictest timing stress here.
+unused_NEW4_TXFA6,A_current_row_decision_current_entry,714,6348770.0,0,True,False,False,Uses row t spread. Kept only as legacy proxy timing reference.
+unused_NEW4_TXFA6,B_previous_row_decision_current_entry,713,6348770.0,0,False,True,False,Uses row t-1 spread for row t entry; decision feature is available before entry.
+unused_NEW4_TXFA6,C_previous_row_decision_delayed_entry,713,61505.0,708,False,True,False,Uses row t-1 spread and row t+1 proxy entry value; strictest timing stress here.
+unused_NEW_MXFB6,A_current_row_decision_current_entry,682,3992335.0,0,True,False,False,Uses row t spread. Kept only as legacy proxy timing reference.
+unused_NEW_MXFB6,B_previous_row_decision_current_entry,680,3992335.0,0,False,True,False,Uses row t-1 spread for row t entry; decision feature is available before entry.
+unused_NEW_MXFB6,C_previous_row_decision_delayed_entry,680,0.0,680,False,True,False,Uses row t-1 spread and row t+1 proxy entry value; strictest timing stress here.
+unused_NEW_TMFB6,A_current_row_decision_current_entry,873,4874985.0,0,True,False,False,Uses row t spread. Kept only as legacy proxy timing reference.
+unused_NEW_TMFB6,B_previous_row_decision_current_entry,873,4874985.0,0,False,True,False,Uses row t-1 spread for row t entry; decision feature is available before entry.
+unused_NEW_TMFB6,C_previous_row_decision_delayed_entry,873,0.0,873,False,True,False,Uses row t-1 spread and row t+1 proxy entry value; strictest timing stress here.
+unused_NEW_TXFB6,A_current_row_decision_current_entry,422,2624355.0,0,True,False,False,Uses row t spread. Kept only as legacy proxy timing reference.
+unused_NEW_TXFB6,B_previous_row_decision_current_entry,422,2624355.0,0,False,True,False,Uses row t-1 spread for row t entry; decision feature is available before entry.
+unused_NEW_TXFB6,C_previous_row_decision_delayed_entry,422,0.0,422,False,True,False,Uses row t-1 spread and row t+1 proxy entry value; strictest timing stress here.

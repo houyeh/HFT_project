@@ -1,0 +1,11 @@
+{
+  "source_dir": "C:\\Users\\holbo\\00VS_projjects\\00_HFT_project\\artifacts\\cme_eval_transfer\\20260407_161938",
+  "output_dir": "C:\\Users\\holbo\\00VS_projjects\\00_HFT_project\\meeting\\w7\\w6_result",
+  "generated_files": [
+    "p01_cme_validation_overview.svg",
+    "p02_cme_validation_by_symbol.svg",
+    "p03_cme_gated_confusion_matrix.svg",
+    "p04_cme_input_data_scale.svg",
+    "p05_cme_label_prediction_distribution.svg"
+  ]
+}

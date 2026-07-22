@@ -1,0 +1,5 @@
+category,cycles,pct_of_8316
+six 16x16 linear blocks,7956,95.67099567099568
+two LayerNorm visible subtotals,600,7.215007215007215
+activation and elementwise loops,821,9.872534872534873
+readout/output/residual,334,4.016354016354017

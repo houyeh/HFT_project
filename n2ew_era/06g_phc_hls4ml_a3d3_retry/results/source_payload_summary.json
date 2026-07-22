@@ -1,0 +1,9 @@
+{
+  "source_step_checkpoint": "C:\\Users\\holbo\\00VS_projjects\\00_HFT_project\\n2ew_era\\06e_phc_stp_step_hls4ml\\models\\phc_stp_step_hls_seed2.pt",
+  "source_05c4_checkpoint": "C:\\Users\\holbo\\00VS_projjects\\00_HFT_project\\n2ew_era\\05c4_phc_stp_cosine_lr\\models\\phc_stp_v2_seed2_best_val.pt",
+  "seed": null,
+  "phase": "06e",
+  "new5_used": false,
+  "feature_dim": 16,
+  "hidden_dim": 16
+}

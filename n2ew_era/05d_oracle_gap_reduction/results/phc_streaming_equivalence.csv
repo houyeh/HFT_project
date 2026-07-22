@@ -1,0 +1,4 @@
+split,matched_terminal_count,window_terminal_count,dense_state_count,score_bid_mae,score_ask_mae,score_bid_max_abs_error,score_ask_max_abs_error,action_agreement,selected_action_agreement,equivalence_exact_expected,reason
+val,82960,82960,2655369,0.01314060389995575,0.013766875490546227,10.687202453613281,14.52243423461914,0.9997468659594986,0.9998118119373961,False,window inference resets state at each 128-row window; streaming dense carries state from session start
+new3,176754,176754,5656822,0.01131115946918726,0.012339843437075615,57.664581298828125,60.707542419433594,0.9998415877434174,0.999898742233891,False,window inference resets state at each 128-row window; streaming dense carries state from session start
+new4,68620,68620,2196280,0.012102462351322174,0.013039680197834969,15.082244873046875,21.981369018554688,0.9998251238705916,0.9997931125279769,False,window inference resets state at each 128-row window; streaming dense carries state from session start

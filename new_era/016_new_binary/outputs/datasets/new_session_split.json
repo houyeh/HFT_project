@@ -1,0 +1,17 @@
+{
+  "train_sessions": [
+    "20260121Day",
+    "20260122Day",
+    "20260122Night",
+    "20260123Day",
+    "20260123Night",
+    "20260126Day"
+  ],
+  "val_sessions": [
+    "20260126Night"
+  ],
+  "test_sessions": [
+    "20260127Day",
+    "20260127Night"
+  ]
+}

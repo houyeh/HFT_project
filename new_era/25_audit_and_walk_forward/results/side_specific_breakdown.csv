@@ -1,0 +1,3 @@
+side,selected_quote_count,selected_quote_pnl,avg_quote_pnl,median_quote_pnl,positive_quote_count,negative_quote_count,max_win,max_loss,all_quote_count,all_quote_pnl,all_negative_quote_count,all_negative_quote_rate,selection_rate_within_side,pnl_share,ask_toxic_interpretation
+ask,56,-322185.0,-5753.303571428572,0.0,2,27,585.0,-49365.0,515,-3437810.0,258,0.5009708737864078,0.1087378640776699,-0.5053803077598783,Ask had low selected fraction under validation-selected ask0.10; inspect negative-rate and selected PnL as toxicity evidence.
+bid,190,959695.0,5051.026315789473,0.0,90,7,32335.0,-2815.0,419,2312590.0,16,0.03818615751789976,0.45346062052505964,1.5053803077598782,

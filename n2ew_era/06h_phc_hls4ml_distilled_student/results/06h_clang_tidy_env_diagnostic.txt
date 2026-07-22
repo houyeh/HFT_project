@@ -1,0 +1,357 @@
+﻿# 06H clang-tidy Environment Diagnostic
+Generated: 2026-06-29 21:58:49
+Window start: 06/29/2026 19:58:49
+
+## Application Log Relevant Events
+---
+TimeCreated: 06/29/2026 20:50:13
+ProviderName: Windows Error Reporting
+Id: 1001
+Level: Information
+Message:
+Fault bucket , type 0
+Event Name: AppTermFailureEvent
+Response: Not available
+Cab Id: 0
+
+Problem signature:
+P1: 
+P2: 
+P3: 
+P4: 
+P5: 
+P6: 
+P7: 
+P8: 
+P9: 
+P10: 
+
+Attached files:
+\\?\C:\Windows\SystemTemp\WER.d043ebed-2083-41c9-ab05-72655ac9aca7.tmpatk.kdmp
+\\?\C:\Windows\SystemTemp\WER.82b01dde-609b-4fa1-b933-316e0a81e16c.tmp.appcompat.txt
+\\?\C:\ProgramData\Microsoft\Windows\WER\Temp\WER.cd274f5a-198b-499c-8b2a-0769add19e32.tmp.WERInternalMetadata.xml
+\\?\C:\ProgramData\Microsoft\Windows\WER\Temp\WER.c34a8bc8-904b-47ab-be6e-43d3fa62faa3.tmp.csv
+\\?\C:\ProgramData\Microsoft\Windows\WER\Temp\WER.d7e9959f-224b-4c8d-bd40-27783b4a0e3a.tmp.txt
+\\?\C:\ProgramData\Microsoft\Windows\WER\Temp\WER.febd5db4-e7c0-40b4-a364-3d86792b4fba.tmp.xml
+
+These files may be available here:
+\\?\C:\ProgramData\Microsoft\Windows\WER\ReportQueue\Kernel_0_0_00000000_e5c39a61-2519-4de7-9362-0794ae675351
+
+Analysis symbol: 
+Rechecking for solution: 0
+Report Id: 05cd792a-e64f-4953-80ad-214c5e98e188
+Report Status: 2051
+Hashed bucket: 
+Cab Guid: 0
+---
+TimeCreated: 06/29/2026 20:50:13
+ProviderName: Windows Error Reporting
+Id: 1001
+Level: Information
+Message:
+Fault bucket , type 0
+Event Name: BlueScreen
+Response: Not available
+Cab Id: 0
+
+Problem signature:
+P1: 9f
+P2: 4
+P3: 12c
+P4: ffffbf8e94116040
+P5: ffff8103780ef610
+P6: 10_0_26200
+P7: 0_0
+P8: 768_1
+P9: 
+P10: 
+
+Attached files:
+\\?\C:\Windows\Minidump\042826-15609-01.dmp
+\\?\C:\Windows\SystemTemp\WER-15609-0.sysdata.xml
+\\?\C:\ProgramData\Microsoft\Windows\WER\Temp\WER.98af6a56-51d2-4f92-bf27-348ff103bb1d.tmp.WERInternalMetadata.xml
+\\?\C:\ProgramData\Microsoft\Windows\WER\Temp\WER.0f5a5387-e8f7-4465-b236-8e5fb3c6bf1a.tmp.csv
+\\?\C:\ProgramData\Microsoft\Windows\WER\Temp\WER.bd389804-9d33-41d5-9a2f-b80727cae5f8.tmp.txt
+\\?\C:\ProgramData\Microsoft\Windows\WER\Temp\WER.fad9df7a-de81-4a34-9319-abc3a23f4ae2.tmp.xml
+
+These files may be available here:
+\\?\C:\ProgramData\Microsoft\Windows\WER\ReportQueue\Kernel_9f_29aced7855b17a7d9ef6d6b1a7acd340493b68_00000000_a8d59b64-66fa-4e2c-a712-04760f818dad
+
+Analysis symbol: 
+Rechecking for solution: 0
+Report Id: 6b7e6a31-ad00-41be-b03f-dbe1e991e9b9
+Report Status: 2051
+Hashed bucket: 
+Cab Guid: 0
+---
+TimeCreated: 06/29/2026 20:50:13
+ProviderName: Windows Error Reporting
+Id: 1001
+Level: Information
+Message:
+Fault bucket , type 0
+Event Name: BlueScreen
+Response: Not available
+Cab Id: 0
+
+Problem signature:
+P1: 44
+P2: ffffd48daf86f540
+P3: 1312
+P4: 0
+P5: 0
+P6: 10_0_26200
+P7: 0_0
+P8: 768_1
+P9: 
+P10: 
+
+Attached files:
+\\?\C:\Windows\Minidump\021926-13031-01.dmp
+\\?\C:\Windows\SystemTemp\WER-13031-0.sysdata.xml
+\\?\C:\ProgramData\Microsoft\Windows\WER\Temp\WER.6677fb1b-a7e6-448e-a885-8375f3e6e9cd.tmp.WERInternalMetadata.xml
+\\?\C:\ProgramData\Microsoft\Windows\WER\Temp\WER.df897c51-f91f-4c62-a24f-bf73ae428f46.tmp.csv
+\\?\C:\ProgramData\Microsoft\Windows\WER\Temp\WER.eb599612-863e-431a-a220-62dd613535b9.tmp.txt
+\\?\C:\ProgramData\Microsoft\Windows\WER\Temp\WER.18fdf7e1-57b6-4a3c-867c-91e3d96871fc.tmp.xml
+
+These files may be available here:
+\\?\C:\ProgramData\Microsoft\Windows\WER\ReportQueue\Kernel_44_c05064ba0f1fa1eff86583c6b3e93956ddef81_00000000_ba870a85-a8e6-4e5c-98de-5222783263b9
+
+Analysis symbol: 
+Rechecking for solution: 0
+Report Id: d766585a-3818-46f0-9d3d-bc30b8027d24
+Report Status: 2051
+Hashed bucket: 
+Cab Guid: 0
+---
+TimeCreated: 06/29/2026 20:50:13
+ProviderName: Windows Error Reporting
+Id: 1001
+Level: Information
+Message:
+Fault bucket , type 0
+Event Name: BlueScreen
+Response: Not available
+Cab Id: 0
+
+Problem signature:
+P1: 139
+P2: 3
+P3: fffffc8b4d747270
+P4: fffffc8b4d7471c8
+P5: 0
+P6: 10_0_26200
+P7: 0_0
+P8: 768_1
+P9: 
+P10: 
+
+Attached files:
+\\?\C:\Windows\Minidump\021926-13906-01.dmp
+\\?\C:\Windows\SystemTemp\WER-13906-0.sysdata.xml
+\\?\C:\ProgramData\Microsoft\Windows\WER\Temp\WER.9efecb8a-c5e6-4888-bec8-e2dfd6a8125d.tmp.WERInternalMetadata.xml
+\\?\C:\ProgramData\Microsoft\Windows\WER\Temp\WER.f05387a4-64ce-4159-a6f3-4482fc7754bc.tmp.csv
+\\?\C:\ProgramData\Microsoft\Windows\WER\Temp\WER.7db8e09a-293a-43fd-ac27-a62cc8cf90fc.tmp.txt
+\\?\C:\ProgramData\Microsoft\Windows\WER\Temp\WER.962e5064-eea0-48ac-a872-9a501e3f786d.tmp.xml
+
+These files may be available here:
+\\?\C:\ProgramData\Microsoft\Windows\WER\ReportQueue\Kernel_139_c8b5cf99724242e5d78df95f35a45676bc4a7a5_00000000_ca3530a7-2814-4a22-9378-43c23af57b88
+
+Analysis symbol: 
+Rechecking for solution: 0
+Report Id: 9eaeb3d2-9133-4325-aa8f-4d072370f9c7
+Report Status: 2051
+Hashed bucket: 
+Cab Guid: 0
+---
+TimeCreated: 06/29/2026 20:50:13
+ProviderName: Windows Error Reporting
+Id: 1001
+Level: Information
+Message:
+Fault bucket , type 0
+Event Name: BlueScreen
+Response: Not available
+Cab Id: 0
+
+Problem signature:
+P1: 3b
+P2: c0000005
+P3: fffff805a88d5c97
+P4: fffff908195248f0
+P5: 0
+P6: 10_0_26100
+P7: 0_0
+P8: 768_1
+P9: 
+P10: 
+
+Attached files:
+\\?\C:\Windows\Minidump\112525-11390-01.dmp
+\\?\C:\Windows\SystemTemp\WER-12312-0.sysdata.xml
+\\?\C:\ProgramData\Microsoft\Windows\WER\Temp\WER.e5aadc2b-b7a9-4788-9541-93acfcb21fc7.tmp.WERInternalMetadata.xml
+\\?\C:\ProgramData\Microsoft\Windows\WER\Temp\WER.f047742b-bb3e-46eb-ae38-b8ade338bd51.tmp.csv
+\\?\C:\ProgramData\Microsoft\Windows\WER\Temp\WER.a913dfdf-5b3b-42a5-a6e1-9e94d8bc7aaf.tmp.txt
+\\?\C:\ProgramData\Microsoft\Windows\WER\Temp\WER.ab90c0a6-6eeb-42c1-a390-ac2c8a32141d.tmp.xml
+
+These files may be available here:
+\\?\C:\ProgramData\Microsoft\Windows\WER\ReportQueue\Kernel_3b_59f3d829ff981789de3ec2611baf43bc7568ee7_00000000_b9b2e343-3956-424a-8f60-1b42419abcd9
+
+Analysis symbol: 
+Rechecking for solution: 0
+Report Id: d703c4ac-4188-4b2a-a651-14372da6e484
+Report Status: 2051
+Hashed bucket: 
+Cab Guid: 0
+---
+TimeCreated: 06/29/2026 20:50:12
+ProviderName: Windows Error Reporting
+Id: 1001
+Level: Information
+Message:
+Fault bucket , type 0
+Event Name: LiveKernelEvent
+Response: Not available
+Cab Id: 0
+
+Problem signature:
+P1: 15f
+P2: 4
+P3: fffff90afbfe78f0
+P4: 92807
+P5: 0
+P6: 10_0_26100
+P7: 0_0
+P8: 768_1
+P9: 
+P10: 
+
+Attached files:
+\\?\C:\Windows\LiveKernelReports\DripsWatchdog\DripsWatchdog-20251003-1237.dmp
+\\?\C:\Windows\SystemTemp\WER-12312-0.sysdata.xml
+\\?\C:\Windows\LiveKernelReports\DripsWatchdog-20251003-1237.dmp
+\\?\C:\ProgramData\Microsoft\Windows\WER\Temp\WER.58b65b2f-b29c-4c26-8649-dee5b38fbbe7.tmp.WERInternalMetadata.xml
+\\?\C:\ProgramData\Microsoft\Windows\WER\Temp\WER.a58410ea-4109-4adf-9742-fc39e28e631b.tmp.csv
+\\?\C:\ProgramData\Microsoft\Windows\WER\Temp\WER.59dd24e9-ab5c-41f5-9cd2-a4b2e1cfe842.tmp.txt
+\\?\C:\ProgramData\Microsoft\Windows\WER\Temp\WER.6a2d585e-e4b4-4345-bf1e-732984c4799e.tmp.xml
+
+These files may be available here:
+\\?\C:\ProgramData\Microsoft\Windows\WER\ReportQueue\Kernel_15f_9c62edbd39da5eeb92fed57c3c87123e6ecff52_00000000_49a07477-6fb6-46d1-afff-635dfdeb433d
+
+Analysis symbol: 
+Rechecking for solution: 0
+Report Id: 49a07477-6fb6-46d1-afff-635dfdeb433d
+Report Status: 2051
+Hashed bucket: 
+Cab Guid: 0
+
+## System Log Relevant Events
+---
+TimeCreated: 06/29/2026 21:50:00
+ProviderName: Service Control Manager
+Id: 7040
+Level: Information
+Message:
+The start type of the Background Intelligent Transfer Service service was changed from auto start to demand start.
+---
+TimeCreated: 06/29/2026 21:45:54
+ProviderName: Service Control Manager
+Id: 7040
+Level: Information
+Message:
+The start type of the Background Intelligent Transfer Service service was changed from demand start to auto start.
+---
+TimeCreated: 06/29/2026 21:33:52
+ProviderName: Service Control Manager
+Id: 7040
+Level: Information
+Message:
+The start type of the Background Intelligent Transfer Service service was changed from auto start to demand start.
+---
+TimeCreated: 06/29/2026 21:29:47
+ProviderName: Service Control Manager
+Id: 7040
+Level: Information
+Message:
+The start type of the Background Intelligent Transfer Service service was changed from demand start to auto start.
+
+## clang-tidy command metadata
+Get-Command Source: C:\AMDDesignTools\2025.2\Vitis\win64\tools\clang-16\bin\clang-tidy.exe
+Get-Command Version: 0.0.0.0
+
+## clang-tidy --version
+ExitCode: -1073741515
+STDOUT:
+STDERR:
+
+## Windows Defender ExclusionPath
+N/A: Must be an administrator to view exclusions
+Project root excluded: False
+Vitis root excluded: False
+
+## Follow-up Broad Event Log Search
+
+Command scope: Application log, last 7 days, filtering for `clang-tidy`,
+`clang-16`, `C0000135`, `0xc0000135`, `STATUS_DLL`, `SideBySide`, and
+`Application Error`.
+
+Result: no clang / clang-tidy / C0000135 / SideBySide event was found. The
+matching Application Error events in this window were unrelated processes:
+
+- `IntelConnectivityNetworkService.exe`, exception `0xc0000005`
+- `DAX3API.exe`, exception `0xc0000005`
+- `WidgetBoard.exe`, exception `0xc0000005`
+- `ipfsvc.exe`, exception `0xc0000005`
+- `AsusSystemAnalysis.exe`, exception `0xc0000005`
+- `AsusOptimization.exe`, exception `0xc0000005`
+- `Microsoft.CmdPal.UI.exe`, exception `0xc0020043`
+
+No event log entry identified a concrete missing DLL name for the
+`clang-tidy.exe` failure.
+
+## Vitis clang Toolchain Bare-launch Check
+
+All three executables below were run with `--version` and no project arguments:
+
+| Executable | ExitCode | stdout | stderr |
+|---|---:|---|---|
+| `C:/AMDDesignTools/2025.2/Vitis/win64/tools/clang-16/bin/clang.exe` | `-1073741515` (`0xC0000135`) | empty | empty |
+| `C:/AMDDesignTools/2025.2/Vitis/win64/tools/clang-16/bin/clang++.exe` | `-1073741515` (`0xC0000135`) | empty | empty |
+| `C:/AMDDesignTools/2025.2/Vitis/win64/tools/clang-16/bin/clang-tidy.exe` | `-1073741515` (`0xC0000135`) | empty | empty |
+
+Interpretation: this is not limited to `clang-tidy.exe`, and it is not triggered
+only by clamped32 project arguments. The current Windows loader failure affects
+the Vitis `clang-16/bin` toolchain executables even for bare `--version`.
+
+## Defender Exclusion Registry Check
+
+Attempted registry read:
+
+`reg query "HKLM\SOFTWARE\Microsoft\Windows Defender\Exclusions\Paths"`
+
+Result:
+
+```text
+ERROR: Access is denied.
+```
+
+The current shell cannot confirm whether these paths are excluded:
+
+- `C:\Users\holbo\00VS_projjects\00_HFT_project\`
+- `C:\AMDDesignTools\2025.2\Vitis\`
+
+## Diagnostic Conclusion
+
+The event logs did not expose a named missing DLL. However, the bare-launch
+check is decisive: `clang.exe`, `clang++.exe`, and `clang-tidy.exe` all fail
+with `STATUS_DLL_NOT_FOUND` before printing a version string. This moves the
+root cause outside the 06H generated project and into the Vitis clang runtime
+environment: a required DLL is not visible/loadable to the Windows loader at
+process startup, or a security/endpoint tool is preventing timely access.
+
+Because the same Vitis install previously completed the unclamped CSim, this
+may still be time/environment dependent, but retrying clamped32 alone is no
+longer the most informative next step. The next useful diagnostic would be a
+DLL dependency trace for `clang.exe` / `clang-tidy.exe` under the same shell, or
+an administrator-level check of Defender/endpoint exclusions and quarantine
+history. No 06H config or code was changed by this diagnostic.

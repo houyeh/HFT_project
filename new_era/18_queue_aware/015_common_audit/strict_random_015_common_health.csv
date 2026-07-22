@@ -1,0 +1,17 @@
+method,side,bucket_id,required_model_cancels,candidate_pool_size,effective_unique_candidates,replacement_used,duplicate_rate,overlap_with_model_rate,fallback_level,fallback_reason
+random_v3,bid,"random_v3|bid|20260127Day|(1,2]",8911,151877,151877,False,0.0,0.05867247838711589,random_v3_exact,exact_match
+random_v3,bid,"random_v3|bid|20260127Day|(2,3]",2193,176886,176886,False,0.0,0.01239781554221363,random_v3_exact,exact_match
+random_v3,bid,random_v3|bid|20260127Day|<=1,8684,57651,57651,False,0.0,0.1506305181176389,random_v3_exact,exact_match
+random_v3,bid,random_v3|bid|20260127Day|>3,24155,24172,24172,False,0.0,0.9992967069336423,random_v3_exact,exact_match
+random_v3,bid,"random_v3|bid|20260127Night|(1,2]",12330,360705,360705,False,0.0,0.034183058177735266,random_v3_exact,exact_match
+random_v3,bid,"random_v3|bid|20260127Night|(2,3]",916,238475,238475,False,0.0,0.0038410734877869796,random_v3_exact,exact_match
+random_v3,bid,random_v3|bid|20260127Night|<=1,23654,148180,148180,False,0.0,0.15963017951140504,random_v3_exact,exact_match
+random_v3,bid,random_v3|bid|20260127Night|>3,8296,8375,8375,False,0.0,0.9905671641791045,random_v3_exact,exact_match
+random_v3,ask,"random_v3|ask|20260127Day|(1,2]",15797,151877,151877,False,0.0,0.10401179902157667,random_v3_exact,exact_match
+random_v3,ask,"random_v3|ask|20260127Day|(2,3]",5286,176886,176886,False,0.0,0.029883653878769376,random_v3_exact,exact_match
+random_v3,ask,random_v3|ask|20260127Day|<=1,9729,57651,57651,False,0.0,0.16875682989020138,random_v3_exact,exact_match
+random_v3,ask,random_v3|ask|20260127Day|>3,24155,24172,24172,False,0.0,0.9992967069336423,random_v3_exact,exact_match
+random_v3,ask,"random_v3|ask|20260127Night|(1,2]",27417,360705,360705,False,0.0,0.07600948143219528,random_v3_exact,exact_match
+random_v3,ask,"random_v3|ask|20260127Night|(2,3]",2871,238475,238475,False,0.0,0.012038997798511374,random_v3_exact,exact_match
+random_v3,ask,random_v3|ask|20260127Night|<=1,26998,148180,148180,False,0.0,0.18219732757457147,random_v3_exact,exact_match
+random_v3,ask,random_v3|ask|20260127Night|>3,8296,8375,8375,False,0.0,0.9905671641791045,random_v3_exact,exact_match

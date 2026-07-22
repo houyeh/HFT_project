@@ -1,0 +1,16 @@
+split,policy_id,error_type,state_count,error_rate
+val,phc_uncertainty_gating,correct_selected,29727,0.35832931533269047
+val,phc_uncertainty_gating,false_positive,19163,0.23099083895853423
+val,phc_uncertainty_gating,side_error,14240,0.171648987463838
+val,phc_uncertainty_gating,missed_opportunity,13590,0.1638138862102218
+val,phc_uncertainty_gating,correct_no_quote,6240,0.07521697203471553
+new3,phc_uncertainty_gating,correct_selected,68976,0.39023727893003834
+new3,phc_uncertainty_gating,false_positive,36276,0.20523439356393633
+new3,phc_uncertainty_gating,side_error,32276,0.18260407119499417
+new3,phc_uncertainty_gating,missed_opportunity,28456,0.16099211333265442
+new3,phc_uncertainty_gating,correct_no_quote,10770,0.06093214297837673
+new4,phc_uncertainty_gating,correct_selected,25892,0.37732439522005246
+new4,phc_uncertainty_gating,false_positive,14033,0.20450306033226465
+new4,phc_uncertainty_gating,side_error,12764,0.18600990964733313
+new4,phc_uncertainty_gating,missed_opportunity,11540,0.1681725444476829
+new4,phc_uncertainty_gating,correct_no_quote,4391,0.06399009035266687

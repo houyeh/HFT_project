@@ -1,0 +1,8 @@
+dataset,policy_name,original_net_pnl,conservative_net_pnl_mean,conservative_net_pnl_p10,trade_count_original,trade_count_conservative_mean,pnl_degradation_pct,still_positive,still_beats_random,still_beats_rule_baseline,verdict
+NEW,combined_filter_tcn_055,71735.0,26103.048780487807,-23530.0,191.0,110.85365853658537,0.6361183692690067,True,False,False,fragile_but_positive
+NEW,no_gate_tcn_055,84980.0,13245.243902439024,-15725.0,468.0,283.4878048780488,0.8441369274836548,True,False,False,fragile_but_positive
+NEW,no_gate_tcn_070,63440.0,23426.951219512193,-20975.0,584.0,352.0243902439024,0.6307227109156338,True,False,False,fragile_but_positive
+NEW,spread_filter_tcn_055,101455.0,41494.634146341465,80.0,223.0,131.90243902439025,0.5910045424440248,True,False,False,fragile_but_positive
+NEW,val_selected_tcn_070,63440.0,23426.951219512193,-20975.0,584.0,352.0243902439024,0.6307227109156338,True,False,False,fragile_but_positive
+NEW3,combined_filter_tcn_055,38010.0,-22149.634146341465,-243460.0,986.0,591.9268292682926,1.582731758651446,False,False,False,not_robust
+NEW3,no_gate_tcn_055,-379275.0,-384221.46341463417,-626655.0,1505.0,925.6585365853658,0.013041891542111056,False,False,False,not_robust

@@ -1,0 +1,3 @@
+check,command,exit_code,ran_simulation
+phc_step_hls_cpp_syntax,"g++ -std=c++17 -I n2ew_era/06f_phc_lite_manual_hls/hls_src -c n2ew_era/06f_phc_lite_manual_hls/hls_src/phc_step_hls.cpp -o n2ew_era/06f_phc_lite_manual_hls/results/phc_step_hls.o",0,false
+phc_step_testbench_cpp_syntax,"g++ -std=c++17 -I n2ew_era/06f_phc_lite_manual_hls/hls_src -c n2ew_era/06f_phc_lite_manual_hls/hls_src/phc_step_testbench.cpp -o n2ew_era/06f_phc_lite_manual_hls/results/phc_step_testbench.o",0,false

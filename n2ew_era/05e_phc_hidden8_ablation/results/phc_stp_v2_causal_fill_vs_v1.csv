@@ -1,0 +1,13 @@
+split,policy_id,horizon,fill_model,inventory_cap,sequential_excess_pnl,fill_count,forced_no_quote_count,max_abs_inventory,max_drawdown,win_rate,loss_rate,avg_trade_excess_pnl,fill_uses_future_pnl,new5_used,fee_multiplier,phase,new5_used_for_selection,phc_lite_v1_causal_fill_pnl,delta_vs_v1_causal_fill_pnl,delta_pct_vs_v1_causal_fill_pnl
+val,side_by_queue_imbalance_abs_0p1,20,conservative_l2_stress,1,103260.0,6416,0,1,2875.0,0.4328241895261845,0.5671758104738155,16.09413965087282,False,False,,,,,,
+val,ml_hgb_regressor_shallow_convergence_selected,20,conservative_l2_stress,1,142435.0,6231,0,1,1845.0,0.4572299791365752,0.5427700208634249,22.859091638581287,False,False,,,,,,
+val,phc_lite,20,conservative_l2_stress,1,170310.0,6746,0,1,2365.0,0.4645715979839905,0.5354284020160095,25.246071746219982,False,False,,,,,,
+new3,side_by_queue_imbalance_abs_0p1,20,conservative_l2_stress,1,303700.0,13821,2113,1,3615.0,0.4589392952753057,0.5409883510599812,21.97380797337385,False,False,,,,,,
+new3,ml_hgb_regressor_shallow_convergence_selected,20,conservative_l2_stress,1,411090.0,13955,1993,1,2615.0,0.4845575062701541,0.5153708348262271,29.458258688642065,False,False,,,,,,
+new3,phc_lite,20,conservative_l2_stress,1,488870.0,15123,2344,1,3335.0,0.4985783244065331,0.5013555511472592,32.326258017589105,False,False,,,,,,
+new4,side_by_queue_imbalance_abs_0p1,20,conservative_l2_stress,1,72415.0,3820,2216,1,3560.0,0.4429319371727748,0.5570680628272251,18.956806282722518,False,False,,,,,,
+new4,ml_hgb_regressor_shallow_convergence_selected,20,conservative_l2_stress,1,97680.0,3629,2479,1,2105.0,0.4723064205015155,0.5276935794984844,26.916505924497105,False,False,,,,,,
+new4,phc_lite,20,conservative_l2_stress,1,121765.0,4110,2574,1,1925.0,0.4854014598540146,0.5145985401459854,29.626520681265205,False,False,,,,,,
+val,phc_stp_v2_hidden8,20,conservative_l2_stress,1,164205.0,6873,0,1,2165.0,0.46137058053251856,0.5386294194674814,23.89131383675251,False,,1.0,05e,False,170310.0,-6105.0,-0.03584639774528801
+new3,phc_stp_v2_hidden8,20,conservative_l2_stress,1,489630.0,15119,2455,1,2515.0,0.5009590581387658,0.49897479992062965,32.385078378199616,False,,1.0,05e,False,488870.0,760.0,0.001554605518849592
+new4,phc_stp_v2_hidden8,20,conservative_l2_stress,1,124540.0,4225,2507,1,2020.0,0.48615384615384616,0.5138461538461538,29.476923076923075,False,,1.0,05e,False,121765.0,2775.0,0.02278980002463762

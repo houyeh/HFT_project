@@ -1,0 +1,19 @@
+{
+  "macs_per_sample": 460848.0,
+  "params": 4771,
+  "weight_bytes_fp32": 19084,
+  "weight_bytes_int8": 4771,
+  "measured_pytorch_cpu_latency_ms": {
+    "mean": 0.5644969991408288,
+    "p50": 0.4465000092750415,
+    "p90": 0.8525099896360188,
+    "p99": 1.7499219899764278
+  },
+  "estimated_cpp_int8_latency_us": 57.605999999999995,
+  "estimated_fpga_latency_us": 9.21696,
+  "assumptions": {
+    "cpp_effective_int8_macs_per_second": 8000000000.0,
+    "fpga_effective_macs_per_second": 50000000000.0,
+    "note": "These are order-of-magnitude engineering estimates, not post-route measurements."
+  }
+}

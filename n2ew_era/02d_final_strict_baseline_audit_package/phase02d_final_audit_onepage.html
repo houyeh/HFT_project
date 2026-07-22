@@ -1,0 +1,70 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Phase 02D Final Strict Baseline Audit</title>
+  <style>
+    body { font-family: Arial, sans-serif; margin: 28px; color: #20242b; background: #ffffff; }
+    h1 { font-size: 26px; margin-bottom: 4px; }
+    h2 { font-size: 16px; margin: 20px 0 8px; border-bottom: 1px solid #d9dee7; padding-bottom: 4px; }
+    .subtitle { color: #5b6472; margin-bottom: 18px; }
+    .grid { display: grid; grid-template-columns: 1fr 1fr; gap: 18px; align-items: start; }
+    .card { border: 1px solid #d9dee7; border-radius: 8px; padding: 14px; background: #fbfcfe; }
+    table { width: 100%; border-collapse: collapse; font-size: 11px; }
+    th, td { border: 1px solid #d9dee7; padding: 5px 6px; text-align: right; }
+    th:first-child, td:first-child { text-align: left; }
+    th { background: #eef2f7; }
+    .claim-pass { color: #0b7a38; font-weight: bold; }
+    .claim-fail { color: #b42318; font-weight: bold; }
+    .muted { color: #667085; }
+    img { max-width: 100%; border: 1px solid #d9dee7; border-radius: 6px; background: white; }
+    .safe { background: #eef8f1; border-left: 4px solid #2f9e44; padding: 10px; }
+    .warn { background: #fff5f5; border-left: 4px solid #c43c35; padding: 10px; }
+  </style>
+</head>
+<body>
+  <h1>Phase 02D Final Strict Baseline Audit</h1>
+  <div class="subtitle">Fixed policy: <b>side_by_queue_imbalance_abs_0p1</b>, horizon <b>H20</b></div>
+
+  <div class="grid">
+    <div class="card">
+      <h2>Rule Definition</h2>
+      <p>If queue_imbalance > +0.1 quote bid; if queue_imbalance < -0.1 quote ask; otherwise no_quote.</p>
+      <p class="safe">Safe claim: non-trivial L2 quote-ranking signal under short-horizon proxy markout.</p>
+      <p class="warn">Forbidden claim: real-world profitability, true queue replay, or FPGA-proven PnL.</p>
+    </div>
+    <div class="card">
+      <h2>Claim Safety</h2>
+      <table><thead><tr><th>claim</th><th>status</th><th>evidence</th><th>safe_wording</th></tr></thead><tbody><tr><td>Selected policy beats matched random 95p</td><td>PASS</td><td>selected_policy_vs_controls.csv and exact_random_oos_summary.csv</td><td>The selected queue-imbalance rule beats matched random 95p under the proxy short-horizon markout audit.</td></tr><tr><td>Selected policy beats old bid-only absolute PnL</td><td>FAIL</td><td>selected_minus_old_bid_only is negative on val/test/NEW4</td><td>The selected rule is not an absolute PnL replacement for old bid-only; it is evidence of non-trivial L2 ranking/excess signal.</td></tr><tr><td>This is true queue replay / Real-world profitability</td><td>FORBIDDEN</td><td>No aggressor_side, true order IDs, queue position, acknowledgements, or exchange matching replay.</td><td>This is a short-horizon sequential proxy markout audit, not true exchange replay or proof of real-world profitability.</td></tr></tbody></table>
+    </div>
+  </div>
+
+  <h2>Selected vs Controls</h2>
+  <table><thead><tr><th>split</th><th>total_pnl</th><th>old_bid_only_pnl</th><th>selected_minus_old_bid_only</th><th>matched_random_95p</th><th>beats_random_95p</th><th>beats_old_bid_only</th></tr></thead><tbody><tr><td>new4</td><td>495,871,045</td><td>534,754,500</td><td>-38,883,455</td><td>439,163,397</td><td>True</td><td>False</td></tr><tr><td>test</td><td>233,869,570</td><td>245,095,685</td><td>-11,226,115</td><td>203,051,736</td><td>True</td><td>False</td></tr><tr><td>val</td><td>111,460,580</td><td>116,710,045</td><td>-5,249,465</td><td>96,922,385</td><td>True</td><td>False</td></tr></tbody></table>
+  <img src="figures/selected_vs_controls_bar.png" alt="Selected vs controls">
+
+  <div class="grid">
+    <div class="card">
+      <h2>Random Hurdle</h2>
+      <p class="muted">In 1000 exact random trials, no random trial exceeded the selected policy. Therefore empirical p-value &lt; 0.001.</p>
+      <table><thead><tr><th>split</th><th>model_pnl</th><th>exact_random_95p</th><th>beats_exact_random_95p</th><th>empirical_p_value_display</th></tr></thead><tbody><tr><td>test</td><td>233,869,570</td><td>203,046,617</td><td>True</td><td>&lt;0.001</td></tr><tr><td>new4</td><td>495,871,045</td><td>439,142,218</td><td>True</td><td>&lt;0.001</td></tr></tbody></table>
+      <img src="figures/random_hurdle_bar.png" alt="Random hurdle">
+    </div>
+    <div class="card">
+      <h2>Fee Break-Even</h2>
+      <p class="muted">`eligible_for_final_selection_at_1x` is meaningful only on validation. Test and NEW4 are frozen evaluation splits and are not used for selection.</p>
+      <table><thead><tr><th>split</th><th>policy_id</th><th>horizon</th><th>base_total_pnl_fee_1x</th><th>selected_action_count</th><th>break_even_fee_multiplier</th><th>max_tested_fee_multiplier_positive</th><th>eligibility_column_note</th></tr></thead><tbody><tr><td>new4</td><td>side_by_queue_imbalance_abs_0p1</td><td>20</td><td>495,871,045</td><td>1799304</td><td>19.37</td><td>5</td><td>`eligible_for_final_selection_at_1x` is meaningful only on validation. Test and NEW4 are frozen evaluation splits and are not used for selection.</td></tr><tr><td>test</td><td>side_by_queue_imbalance_abs_0p1</td><td>20</td><td>233,869,570</td><td>971600</td><td>17.05</td><td>5</td><td>`eligible_for_final_selection_at_1x` is meaningful only on validation. Test and NEW4 are frozen evaluation splits and are not used for selection.</td></tr><tr><td>val</td><td>side_by_queue_imbalance_abs_0p1</td><td>20</td><td>111,460,580</td><td>468627</td><td>16.86</td><td>5</td><td>`eligible_for_final_selection_at_1x` is meaningful only on validation. Test and NEW4 are frozen evaluation splits and are not used for selection.</td></tr></tbody></table>
+      <img src="figures/fee_sensitivity_selected_policy.png" alt="Fee sensitivity">
+    </div>
+  </div>
+
+  <h2>Moderate Queue Stress</h2>
+  <p class="muted">Moderate stress = fill_keep_rate 0.5, adverse_multiplier 1.5, delay 0.</p>
+  <p class="muted">`eligible_for_final_selection_at_1x` is meaningful only on validation. Test and NEW4 are frozen evaluation splits and are not used for selection.</p>
+  <table><thead><tr><th>split</th><th>stress_total_pnl</th><th>selected_action_count</th><th>win_rate</th><th>max_drawdown</th><th>positive_under_stress</th></tr></thead><tbody><tr><td>val</td><td>52,703,425</td><td>468627</td><td>0.9242</td><td>1,035,450</td><td>True</td></tr><tr><td>test</td><td>113,651,665</td><td>971600</td><td>0.949</td><td>47,425</td><td>True</td></tr><tr><td>new4</td><td>238,079,178</td><td>1799304</td><td>0.9311</td><td>90,418</td><td>True</td></tr></tbody></table>
+  <div class="grid">
+    <img src="figures/queue_stress_heatmap_selected_policy.png" alt="Queue stress heatmap">
+    <img src="figures/delay_sensitivity_selected_policy.png" alt="Delay sensitivity">
+  </div>
+</body>
+</html>

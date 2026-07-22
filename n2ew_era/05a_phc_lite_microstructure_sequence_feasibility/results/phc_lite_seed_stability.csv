@@ -1,0 +1,10 @@
+seed,split,best_epoch,threshold,pnl,selected_action_count,matched_random_95p,matched_random_pass,empirical_p_value_fraction_random_ge_model,causal_fill_pnl,causal_fill_count,causal_fill_max_drawdown,causal_fill_beats_queue_rule,causal_fill_beats_hgb,beats_queue_rule,beats_hgb,new3_used_for_selection,new4_used_for_selection,new5_used_for_selection
+0,val,48,0.0,1927170.0,63766,-911154.25,True,0.0,170310.0,6746,2365.0,True,True,True,True,False,False,False
+0,new3,48,0.0,5021515.0,138261,-1996525.0,True,0.0,488870.0,15123,3335.0,True,True,True,True,False,False,False
+0,new4,48,0.0,1762495.0,53169,-752409.25,True,0.0,121765.0,4110,1925.0,True,True,True,True,False,False,False
+1,val,50,0.0,1801825.0,62728,-895102.75,True,0.0,151530.0,6578,3015.0,True,True,True,True,False,False,False
+1,new3,50,0.0,4747195.0,137628,-1990295.0,True,0.0,454620.0,14713,2725.0,True,True,True,True,False,False,False
+1,new4,50,0.0,1639510.0,52727,-745040.0,True,0.0,111995.0,3948,2340.0,True,True,True,True,False,False,False
+2,val,47,0.0,1896735.0,63454,-901763.5,True,0.0,162625.0,6785,2675.0,True,True,True,True,False,False,False
+2,new3,47,0.0,4960205.0,137476,-1989485.0,True,0.0,482590.0,15115,3180.0,True,True,True,True,False,False,False
+2,new4,47,0.0,1716055.0,52765,-743145.0,True,0.0,116845.0,4018,2125.0,True,True,True,True,False,False,False

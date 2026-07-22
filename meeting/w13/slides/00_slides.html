@@ -1,0 +1,54 @@
+<!DOCTYPE html><html lang="zh-TW"><head><meta charset="UTF-8"><title>Slide 00</title>
+<style>
+* {box-sizing:border-box;margin:0;padding:0}
+body {font-family:"Noto Sans TC",sans-serif;background:#0d1117;color:#e6edf3}
+.slide {width:1280px;min-height:720px;margin:30px auto;background:linear-gradient(135deg,#161b22 0%,#0d1117 100%);border:1px solid #30363d;border-radius:16px;padding:48px 56px;display:flex;flex-direction:column;gap:28px}
+h1 {font-size:2rem;font-weight:700;color:#58a6ff;border-bottom:2px solid #21262d;padding-bottom:14px}
+h2 {font-size:1.1rem;font-weight:600;color:#79c0ff;margin-bottom:10px}
+.tag {display:inline-block;padding:3px 10px;border-radius:20px;font-size:.75rem;font-weight:600}
+.tag-blue {background:#1f4e79;color:#79c0ff}
+.tag-red {background:#5c1a1a;color:#ff7b7b}
+.tag-green {background:#0d3d21;color:#56d364}
+.grid-2 {display:grid;grid-template-columns:1fr 1fr;gap:24px}
+.card {background:#161b22;border:1px solid #30363d;border-radius:12px;padding:20px}
+.img-wrap {text-align:center}
+.img-wrap img {max-width:100%;border-radius:8px;border:1px solid #30363d}
+table {width:100%;border-collapse:collapse;font-size:.85rem}
+th {background:#21262d;color:#8b949e;padding:8px 10px;text-align:left;font-weight:600}
+td {padding:8px 10px;border-bottom:1px solid #21262d}
+tr:last-child td {border-bottom:none}
+.hl {color:#f0c27f;font-weight:700}
+.red {color:#ff7b7b} .green {color:#56d364}
+.note {font-size:.78rem;color:#8b949e;margin-top:8px;padding:8px 12px;background:#161b22;border-left:3px solid #388bfd;border-radius:4px}
+.badge-row {display:flex;gap:10px;flex-wrap:wrap;margin-top:6px}
+ul {margin-left:20px;line-height:1.6}
+li {margin-bottom:8px}
+</style>
+</head><body>
+<div class="slide">
+  <h1>Slide 00 — 模型與標籤選擇過程</h1>
+  <div class="grid-2">
+    <div class="card">
+      <h2>為什麼放棄舊的 Toxic Labels?</h2>
+      <ul>
+        <li><span class="red">類別極度不平衡</span>：舊版的 <code>adverse_bid_fill</code> 要求「價格跌破 + 立即成交」，這在真實 Order book 極少發生，導致正樣本近乎為 0。</li>
+        <li><span class="red">Macro F1 接近 0.5 (隨機)</span>：模型無法單憑 Order book 區分出嚴格條件下的毒性，變成盲目預測多數類。</li>
+        <li><span class="red">嚴格利潤條件導致大量假陽性</span>：<code>active_buy_profitable</code> 要求利潤克服 Spread + 50 TWD 手續費，門檻過高，引發大量 False Positives，導致 PnL 平均虧損一萬元以上。</li>
+      </ul>
+      <div class="badge-row"><span class="tag tag-red">結論：全數拒絕舊版二元標籤</span></div>
+    </div>
+    <div class="card">
+      <h2>Label 海選結果 (8 種 Label 評估)</h2>
+      <table>
+        <tr><th>Label 類型</th><th>平均 PnL 改善</th><th>決策</th></tr>
+        <tr><td>smoothed_mid_move_3class</td><td class="green">正提升 (最高)</td><td><span class="tag tag-green">最終選取</span></td></tr>
+        <tr><td>mid_move_3class</td><td class="green">正提升</td><td><span class="tag tag-blue">候補</span></td></tr>
+        <tr><td>toxic_bid_binary</td><td>0.00</td><td><span class="tag tag-red">拒絕</span></td></tr>
+        <tr><td>toxic_ask_binary</td><td class="red">-685.00</td><td><span class="tag tag-red">拒絕</span></td></tr>
+        <tr><td>adverse_fill_binary</td><td>0.00</td><td><span class="tag tag-red">拒絕</span></td></tr>
+        <tr><td>active_profitable</td><td class="red">-11,796.00</td><td><span class="tag tag-red">拒絕</span></td></tr>
+      </table>
+      <p class="note">最終選定的 <code>smoothed_mid_move_3class</code> 雖非完美，但目前能提供最平衡、最穩定的風險評分 (Risk-score)。</p>
+    </div>
+  </div>
+</div></body></html>

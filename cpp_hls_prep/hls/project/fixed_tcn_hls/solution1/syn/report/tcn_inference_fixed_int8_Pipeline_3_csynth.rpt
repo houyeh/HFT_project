@@ -1,0 +1,142 @@
+
+
+================================================================
+== Vitis HLS Report for 'tcn_inference_fixed_int8_Pipeline_3'
+================================================================
+* Date:           Thu Apr  9 01:52:19 2026
+
+* Version:        2025.2 (Build 6295257 on Nov 14 2025)
+* Project:        fixed_tcn_hls
+* Solution:       solution1 (Vivado IP Flow Target)
+* Product family: zynq
+* Target device:  xc7z020-clg400-1
+
+
+================================================================
+== Performance Estimates
+================================================================
++ Timing: 
+    * Summary: 
+    +--------+---------+----------+------------+
+    |  Clock |  Target | Estimated| Uncertainty|
+    +--------+---------+----------+------------+
+    |ap_clk  |  5.00 ns|  3.153 ns|     1.35 ns|
+    +--------+---------+----------+------------+
+
++ Latency: 
+    * Summary: 
+    +---------+---------+-----------+-----------+-----+-----+-------------------+
+    |  Latency (cycles) |   Latency (absolute)  |  Interval |      Pipeline     |
+    |   min   |   max   |    min    |    max    | min | max |        Type       |
+    +---------+---------+-----------+-----------+-----+-----+-------------------+
+    |        5|        5|  25.000 ns|  25.000 ns|    0|    0|  loop pipeline stp|
+    +---------+---------+-----------+-----------+-----+-----+-------------------+
+
+    + Detail: 
+        * Instance: 
+        N/A
+
+        * Loop: 
+        +----------+---------+---------+----------+-----------+-----------+------+----------+
+        |          |  Latency (cycles) | Iteration|  Initiation Interval  | Trip |          |
+        | Loop Name|   min   |   max   |  Latency |  achieved |   target  | Count| Pipelined|
+        +----------+---------+---------+----------+-----------+-----------+------+----------+
+        |- Loop 1  |        3|        3|         2|          1|          1|     3|       yes|
+        +----------+---------+---------+----------+-----------+-----------+------+----------+
+
+
+
+================================================================
+== Utilization Estimates
+================================================================
+* Summary: 
++-----------------+---------+-----+--------+-------+-----+
+|       Name      | BRAM_18K| DSP |   FF   |  LUT  | URAM|
++-----------------+---------+-----+--------+-------+-----+
+|DSP              |        -|    -|       -|      -|    -|
+|Expression       |        -|    -|       0|     22|    -|
+|FIFO             |        -|    -|       -|      -|    -|
+|Instance         |        -|    -|       -|      -|    -|
+|Memory           |        -|    -|       -|      -|    -|
+|Multiplexer      |        -|    -|       0|     41|    -|
+|Register         |        -|    -|       7|      -|    -|
++-----------------+---------+-----+--------+-------+-----+
+|Total            |        0|    0|       7|     63|    0|
++-----------------+---------+-----+--------+-------+-----+
+|Available        |      280|  220|  106400|  53200|    0|
++-----------------+---------+-----+--------+-------+-----+
+|Utilization (%)  |        0|    0|      ~0|     ~0|    0|
++-----------------+---------+-----+--------+-------+-----+
+
++ Detail: 
+    * Instance: 
+    N/A
+
+    * DSP: 
+    N/A
+
+    * Memory: 
+    N/A
+
+    * FIFO: 
+    N/A
+
+    * Expression: 
+    +------------------------+----------+----+---+----+------------+------------+
+    |      Variable Name     | Operation| DSP| FF| LUT| Bitwidth P0| Bitwidth P1|
+    +------------------------+----------+----+---+----+------------+------------+
+    |empty_40_fu_72_p2       |         +|   0|  0|  10|           2|           1|
+    |exitcond_i_i3_fu_66_p2  |      icmp|   0|  0|  10|           2|           2|
+    |ap_enable_pp0           |       xor|   0|  0|   2|           1|           2|
+    +------------------------+----------+----+---+----+------------+------------+
+    |Total                   |          |   0|  0|  22|           5|           5|
+    +------------------------+----------+----+---+----+------------+------------+
+
+    * Multiplexer: 
+    +-------------------------+----+-----------+-----+-----------+
+    |           Name          | LUT| Input Size| Bits| Total Bits|
+    +-------------------------+----+-----------+-----+-----------+
+    |ap_done_int              |   9|          2|    1|          2|
+    |ap_enable_reg_pp0_iter1  |   9|          2|    1|          2|
+    |ap_sig_allocacmp_p_load  |  14|          3|    2|          6|
+    |empty_fu_30              |   9|          2|    2|          4|
+    +-------------------------+----+-----------+-----+-----------+
+    |Total                    |  41|          9|    6|         14|
+    +-------------------------+----+-----------+-----+-----------+
+
+    * Register: 
+    +-------------------------+---+----+-----+-----------+
+    |           Name          | FF| LUT| Bits| Const Bits|
+    +-------------------------+---+----+-----+-----------+
+    |ap_CS_fsm                |  1|   0|    1|          0|
+    |ap_done_reg              |  1|   0|    1|          0|
+    |ap_enable_reg_pp0_iter1  |  1|   0|    1|          0|
+    |empty_40_reg_103         |  2|   0|    2|          0|
+    |empty_fu_30              |  2|   0|    2|          0|
+    +-------------------------+---+----+-----+-----------+
+    |Total                    |  7|   0|    7|          0|
+    +-------------------------+---+----+-----+-----------+
+
+
+
+================================================================
+== Interface
+================================================================
+* Summary: 
++-------------------------------+-----+-----+------------+-------------------------------------+--------------+
+|           RTL Ports           | Dir | Bits|  Protocol  |            Source Object            |    C Type    |
++-------------------------------+-----+-----+------------+-------------------------------------+--------------+
+|ap_clk                         |   in|    1|  ap_ctrl_hs|  tcn_inference_fixed_int8_Pipeline_3|  return value|
+|ap_rst                         |   in|    1|  ap_ctrl_hs|  tcn_inference_fixed_int8_Pipeline_3|  return value|
+|ap_start                       |   in|    1|  ap_ctrl_hs|  tcn_inference_fixed_int8_Pipeline_3|  return value|
+|ap_done                        |  out|    1|  ap_ctrl_hs|  tcn_inference_fixed_int8_Pipeline_3|  return value|
+|ap_idle                        |  out|    1|  ap_ctrl_hs|  tcn_inference_fixed_int8_Pipeline_3|  return value|
+|ap_ready                       |  out|    1|  ap_ctrl_hs|  tcn_inference_fixed_int8_Pipeline_3|  return value|
+|result_probabilities_0         |  out|   32|      ap_vld|               result_probabilities_0|       pointer|
+|result_probabilities_0_ap_vld  |  out|    1|      ap_vld|               result_probabilities_0|       pointer|
+|result_probabilities_2         |  out|   32|      ap_vld|               result_probabilities_2|       pointer|
+|result_probabilities_2_ap_vld  |  out|    1|      ap_vld|               result_probabilities_2|       pointer|
+|result_probabilities_1         |  out|   32|      ap_vld|               result_probabilities_1|       pointer|
+|result_probabilities_1_ap_vld  |  out|    1|      ap_vld|               result_probabilities_1|       pointer|
++-------------------------------+-----+-----+------------+-------------------------------------+--------------+
+

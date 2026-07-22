@@ -1,0 +1,4 @@
+seed,best_epoch,best_val_pnl,final_epoch,early_stop,max_epoch_hit,convergence_closed,strict_convergence_rule,optimizer_restarted
+0,196,2066990.0,200,False,True,False,early_stop=True and best_epoch<185,False
+1,200,2082085.0,200,False,True,False,early_stop=True and best_epoch<185,False
+2,190,2088425.0,200,False,True,False,early_stop=True and best_epoch<185,False

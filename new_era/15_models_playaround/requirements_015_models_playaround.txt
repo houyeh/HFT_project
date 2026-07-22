@@ -1,0 +1,8 @@
+# Minimal dependencies for the 015 models playaround pipeline
+# (dataset generation / TCN training / evaluation / backtest)
+numpy
+pandas
+torch
+scikit-learn
+matplotlib
+

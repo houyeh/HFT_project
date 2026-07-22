@@ -1,0 +1,4 @@
+dataset,split,proxy_type,fill_window,horizon,bid_fill_count,bid_toxic_rate_conditional,ask_fill_count,ask_toxic_rate_conditional,bid_toxic_rate_lift,ask_toxic_rate_lift,interpretation
+NEW,NEW_train_val,price_level_removed_proxy,1,10,9164,0.0325185508511567,9349,0.0332655899026633,8.55027884599729,9.21779473508096,觀察到條件毒性率上升；但此為替代指標，非真實交易所成交紀錄
+NEW,NEW_test,price_level_removed_proxy,1,10,2252,0.0341918294849023,2303,0.0312635692574902,12.093944524212551,10.860608311349129,觀察到條件毒性率上升；但此為替代指標，非真實交易所成交紀錄
+NEW3,NEW3_full,price_level_removed_proxy,1,10,11825,0.0323044397463002,11971,0.0354189290786066,10.046109032529602,10.734986380646312,觀察到條件毒性率上升；但此為替代指標，非真實交易所成交紀錄

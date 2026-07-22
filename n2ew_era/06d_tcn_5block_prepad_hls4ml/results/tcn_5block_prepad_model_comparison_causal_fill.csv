@@ -1,0 +1,16 @@
+split,policy_id,horizon,fill_model,inventory_cap,sequential_excess_pnl,fill_count,forced_no_quote_count,max_abs_inventory,max_drawdown,win_rate,loss_rate,avg_trade_excess_pnl,fill_uses_future_pnl,new5_used,fee_multiplier,phase,new5_used_for_selection,phc_lite_v1_causal_fill_pnl,delta_vs_v1_causal_fill_pnl,delta_pct_vs_v1_causal_fill_pnl,model_variant
+val,side_by_queue_imbalance_abs_0p1,20,conservative_l2_stress,1,103260.0,6416,0,1,2875.0,0.4328241895261845,0.5671758104738155,16.09413965087282,False,False,,,,,,,
+val,ml_hgb_regressor_shallow_convergence_selected,20,conservative_l2_stress,1,142435.0,6231,0,1,1845.0,0.4572299791365752,0.5427700208634249,22.859091638581287,False,False,,,,,,,
+val,phc_lite,20,conservative_l2_stress,1,170310.0,6746,0,1,2365.0,0.4645715979839905,0.5354284020160095,25.246071746219982,False,False,,,,,,,
+new3,side_by_queue_imbalance_abs_0p1,20,conservative_l2_stress,1,303700.0,13821,2113,1,3615.0,0.4589392952753057,0.5409883510599812,21.97380797337385,False,False,,,,,,,
+new3,ml_hgb_regressor_shallow_convergence_selected,20,conservative_l2_stress,1,411090.0,13955,1993,1,2615.0,0.4845575062701541,0.5153708348262271,29.458258688642065,False,False,,,,,,,
+new3,phc_lite,20,conservative_l2_stress,1,488870.0,15123,2344,1,3335.0,0.4985783244065331,0.5013555511472592,32.326258017589105,False,False,,,,,,,
+new4,side_by_queue_imbalance_abs_0p1,20,conservative_l2_stress,1,72415.0,3820,2216,1,3560.0,0.4429319371727748,0.5570680628272251,18.956806282722518,False,False,,,,,,,
+new4,ml_hgb_regressor_shallow_convergence_selected,20,conservative_l2_stress,1,97680.0,3629,2479,1,2105.0,0.4723064205015155,0.5276935794984844,26.916505924497105,False,False,,,,,,,
+new4,phc_lite,20,conservative_l2_stress,1,121765.0,4110,2574,1,1925.0,0.4854014598540146,0.5145985401459854,29.626520681265205,False,False,,,,,,,
+val,phc_stp_v2_cosine,20,conservative_l2_stress,1,171835.0,6891,0,1,3240.0,0.4636482368306486,0.5363517631693513,24.936148599622697,False,,1.0,05c4,False,170310.0,1525.0,0.008954259879044,
+new3,phc_stp_v2_cosine,20,conservative_l2_stress,1,611095.0,17907,0,1,5370.0,0.5047746691238063,0.4952253308761937,34.126040096051824,False,,1.0,05c4,False,488870.0,122225.0,0.2500153415018307,
+new4,phc_stp_v2_cosine,20,conservative_l2_stress,1,129160.0,4237,2589,1,2695.0,0.4906773660608921,0.5093226339391078,30.483832900637243,False,,1.0,05c4,False,121765.0,7395.0,0.0607317373629532,
+val,tcn_5block_prepad_18feat,20,conservative_l2_stress,1,151305.0,6593,0,1,3615.0,0.45153951160321554,0.5484604883967845,22.949340209312908,False,,1.0,06d,False,,,,18feat
+new3,tcn_5block_prepad_18feat,20,conservative_l2_stress,1,441990.0,14775,2369,1,2465.0,0.4931979695431472,0.5067343485617597,29.91472081218274,False,,1.0,06d,False,,,,18feat
+new4,tcn_5block_prepad_18feat,20,conservative_l2_stress,1,121000.0,4101,2386,1,2635.0,0.48110217020238966,0.5188978297976103,29.504998780785176,False,,1.0,06d,False,,,,18feat

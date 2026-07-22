@@ -1,0 +1,3 @@
+﻿run,max_holding_steps_count,passive_bid_fill_count,passive_bid_fill_mean,trades
+old_run3,1024,0,,1095
+fixed_run3,1009,10,9.1,1103

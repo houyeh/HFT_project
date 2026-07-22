@@ -1,0 +1,5 @@
+dataset,method,threshold_setup,net_pnl,random_mean,random_std,random_mean_plus_1std,beats_random_mean,beats_random_mean_plus_1std,beats_smoothed_baseline,smoothed_baseline_reference,max_drawdown,trade_count,net_cancel_value,notes
+NEW_test,binary_best,"bid=0.40,ask=0.20",266045.0,251104.75,20931.078775053615,272035.8287750536,True,False,True,NEW test smoothed baseline reference (Model_0.55=84980),37800.0,77.0,48500.0,
+NEW_test,random_matched_20seed,"matched_rates_bid=0.255478,ask=0.874696",251104.75,251104.75,20931.078775053615,272035.8287750536,False,False,True,NEW test smoothed baseline reference (Model_0.55=84980),40297.0,128.35,39950.0,
+NEW_test,no_model_baseline,none,51780.0,251104.75,20931.078775053615,272035.8287750536,False,False,False,NEW test smoothed baseline reference (Model_0.55=84980),80190.0,668.0,0.0,
+NEW3_full,binary_best_from_new,"bid=0.40,ask=0.20",229385.0,,,,,,,"NEW3 baseline reference in prior diagnostics: model=-551705, baseline=-557165",317640.0,241.0,326500.0,compare with prior NEW3 diagnostics carefully (framework alignment required)

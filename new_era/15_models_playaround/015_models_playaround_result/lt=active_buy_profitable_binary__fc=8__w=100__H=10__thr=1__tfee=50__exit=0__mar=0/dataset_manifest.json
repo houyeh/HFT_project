@@ -1,0 +1,70 @@
+{
+  "adverse_threshold_ticks": 1.0,
+  "class_distribution_by_session": {
+    "TXFB6__20260123Day": {
+      "0": 35857,
+      "1": 584
+    },
+    "TXFB6__20260123Night": {
+      "0": 111265,
+      "1": 1930
+    },
+    "TXFB6__20260126Day": {
+      "0": 73659,
+      "1": 1093
+    },
+    "TXFB6__20260126Night": {
+      "0": 110537,
+      "1": 2160
+    },
+    "TXFB6__20260127Day": {
+      "0": 80490,
+      "1": 1628
+    },
+    "TXFB6__20260127Night": {
+      "0": 148576,
+      "1": 2572
+    }
+  },
+  "exit_cost_ticks": 0.0,
+  "horizon": 10,
+  "label_type": "active_buy_profitable_binary",
+  "margin_ticks": 0.0,
+  "point_value_twd_per_point": 200.0,
+  "sample_stride_train": 5,
+  "selected_features": [
+    "obi",
+    "queue_imbalance",
+    "weighted_mid_deviation",
+    "trade_intensity_short",
+    "deep_obi",
+    "queue_imbalance_change",
+    "normalized_spread",
+    "cancel_pressure_short"
+  ],
+  "sessions": [
+    "TXFB6__20260123Day",
+    "TXFB6__20260123Night",
+    "TXFB6__20260126Day",
+    "TXFB6__20260126Night",
+    "TXFB6__20260127Day",
+    "TXFB6__20260127Night"
+  ],
+  "symbols": [
+    "TXFB6"
+  ],
+  "taker_fee_twd": 50.0,
+  "threshold_ticks": 1.0,
+  "window_size": 100,
+  "z_features": [
+    "obi_z",
+    "queue_imbalance_z",
+    "weighted_mid_deviation_z",
+    "trade_intensity_short_z",
+    "deep_obi_z",
+    "queue_imbalance_change_z",
+    "normalized_spread_z",
+    "cancel_pressure_short_z"
+  ],
+  "zscore_window": 2000
+}

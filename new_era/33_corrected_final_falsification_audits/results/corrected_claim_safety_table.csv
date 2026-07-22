@@ -1,0 +1,9 @@
+claim,status,supporting_evidence,safe_wording
+HLS-friendly deterministic comparator logic,ALLOWED,Core controller is side==bid and spread_ticks>=1; rule ablation confirms bid_all and bid_spread_ge_1 are equivalent in this universe.,The controller is HLS-friendly comparator logic under this proxy dataset.
+Proxy OOS robustness,ALLOWED_WITH_CAVEATS,Falsification metrics were applied to phase031 test/new4 and all rebuilt unused OOS groups. NEW/NEW1 duplication is audited separately.,"The rule remains robust in simulator-derived proxy OOS checks, after separating duplicate-risk datasets."
+Strict previous-row timing feasibility,ALLOWED_WITH_CAVEATS,Source no-future-token pass=True; session-boundary lag reset pass=True.,A previous-row decision version can be evaluated without using current/future outcome columns.
+Beat exact-matched random quote selection,FORBIDDEN,The exact universe random baseline is saturated because the policy selects all bid+spread>=1 actions.,The exact-matched random quote baseline is non-informative due to saturation.
+Real-world profitability,FORBIDDEN,Evaluation uses simulator-derived quote EV and lacks true exchange queue replay/aggressor-side reconstruction.,Do not claim real-world profitability.
+FPGA PnL necessity,FORBIDDEN,Latency sensitivity motivates risk-control analysis but does not prove production FPGA necessity.,Frame FPGA only as a latency risk-control implementation candidate.
+True queue priority replay,FORBIDDEN,No order-id queue replay or true fill priority is available in this proxy evaluation.,Do not claim true exchange queue replay.
+NEW and NEW1 are independent OOS,FORBIDDEN_IF_DEDUP_FLAGS_DUPLICATE,Dedup audit checks price-sequence hashes; likely duplicates must not be summed as independent evidence.,Report NEW and NEW1 separately unless dedup classifies them independent.

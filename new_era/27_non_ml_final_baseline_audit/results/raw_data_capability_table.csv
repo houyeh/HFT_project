@@ -1,0 +1,7 @@
+capability,status,evidence,queue_sim_implication
+timestamp/session/symbol,available,"Raw loader parses row[0] timestamp, parent folder session_id, and row[3] symbol.",Chronological replay and session-reset audits are possible.
+L1-L5 bid/ask price and depth,available,Raw loader maps row[12:31] to bid/ask price-volume levels.,Spread and depth-aware quote eligibility can be simulated as a proxy.
+last trade price and quantity,available,Raw loader maps row[6] trade_price and row[7] trade_volume when volume is positive.,"Trade-hit proxy can be constructed, but not aggressor-side truth."
+order_id,unavailable,No reliable order_id field is consumed by the canonical loader.,Cannot reconstruct exact queue position or order-level fills.
+aggressor_side,unavailable,No aggressor_side field is consumed by the canonical loader.,"Fill toxicity remains a proxy, not true exchange-side fill toxicity."
+exchange queue position,unavailable,"No order queue IDs, add/cancel messages, or order priority fields are present in the loader output.","Queue-aware stress tests are scenario/proxy analyses, not production fill replay."

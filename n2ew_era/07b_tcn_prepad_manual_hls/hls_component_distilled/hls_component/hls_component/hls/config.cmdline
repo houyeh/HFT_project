@@ -1,0 +1,3 @@
+relativeroot=c:/Users/holbo/00VS_projjects/00_HFT_project/n2ew_era/07b_tcn_prepad_manual_hls/hls_component_distilled/hls_component
+original_argv=--mode hls --csim --config hls_config.cfg --work_dir hls_component 
+

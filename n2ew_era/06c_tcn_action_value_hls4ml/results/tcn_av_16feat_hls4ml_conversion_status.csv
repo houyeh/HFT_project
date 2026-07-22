@@ -1,0 +1,24 @@
+model_variant,policy_id,hls4ml_attempted,cpp_project_generated,hls4ml_convertible,vivado_synthesis_run,input_shape,precision,reuse_factor,strategy,error
+16feat,tcn_action_value_16feat,True,False,False,False,"1,16,128","ap_fixed<16,6>",1,Latency,"ValueError: too many values to unpack (expected 3)
+Traceback (most recent call last):
+  File ""C:\Users\holbo\00VS_projjects\00_HFT_project\n2ew_era\06c_tcn_action_value_hls4ml\common_06c.py"", line 995, in hls4ml_conversion
+    cfg = hls4ml.utils.config_from_pytorch_model(
+        model,
+    ...<2 lines>...
+        granularity=""name"",
+    )
+  File ""C:\Users\holbo\AppData\Local\Programs\Python\Python313\Lib\site-packages\hls4ml\utils\config.py"", line 380, in config_from_pytorch_model
+    ) = parse_pytorch_model(config, verbose=False)
+        ~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^
+  File ""C:\Users\holbo\AppData\Local\Programs\Python\Python313\Lib\site-packages\hls4ml\converters\pytorch_to_hls.py"", line 273, in parse_pytorch_model
+    layer, output_shape = layer_handlers[pytorch_class](
+                          ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^
+        pytorch_class, layer_name, input_names, input_shapes, node, class_object, reader, config
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File ""C:\Users\holbo\AppData\Local\Programs\Python\Python313\Lib\site-packages\hls4ml\converters\pytorch\reshape.py"", line 241, in parse_constantpad1d_layer
+    batch, channels, width = input_shapes[0]
+    ^^^^^^^^^^^^^^^^^^^^^^
+ValueError: too many values to unpack (expected 3)
+"

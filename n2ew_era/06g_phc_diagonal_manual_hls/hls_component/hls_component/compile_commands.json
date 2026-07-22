@@ -1,0 +1,27 @@
+[
+  {
+    "directory": "C:\\Users\\holbo\\00VS_projjects\\00_HFT_project\\n2ew_era\\06g_phc_diagonal_manual_hls\\hls_component\\hls_component",
+    "arguments": [
+      "C:\\AMDDesignTools\\2025.2\\Vitis\\win64\\tools\\vcxx\\libexec\\clang++.exe",
+      "--sysroot=C:\\AMDDesignTools\\2025.2\\Vitis\\tps\\mingw\\10.0.0\\win64.o\\nt",
+      "-fhls",
+      "-hls-syn-headers-dir=C:\\AMDDesignTools\\2025.2\\Vitis\\common\\technology\\autopilot",
+      "-fhlstoplevel=phc_diag_step",
+      "-c",
+      "C:\\Users\\holbo\\00VS_projjects\\00_HFT_project\\n2ew_era\\06g_phc_diagonal_manual_hls\\hls_src\\phc_diag_step_hls.cpp"
+    ],
+    "file": "C:\\Users\\holbo\\00VS_projjects\\00_HFT_project\\n2ew_era\\06g_phc_diagonal_manual_hls\\hls_src\\phc_diag_step_hls.cpp"
+  },
+  {
+    "directory": "C:\\Users\\holbo\\00VS_projjects\\00_HFT_project\\n2ew_era\\06g_phc_diagonal_manual_hls\\hls_component\\hls_component",
+    "arguments": [
+      "C:\\AMDDesignTools\\2025.2\\Vitis\\win64\\tools\\vcxx\\libexec\\clang++.exe",
+      "--sysroot=C:\\AMDDesignTools\\2025.2\\Vitis\\tps\\mingw\\10.0.0\\win64.o\\nt",
+      "-fhls-tb",
+      "-hls-sim-headers-dir=C:\\AMDDesignTools\\2025.2\\Vitis\\include",
+      "-c",
+      "C:\\Users\\holbo\\00VS_projjects\\00_HFT_project\\n2ew_era\\06g_phc_diagonal_manual_hls\\hls_src\\phc_diag_step_testbench.cpp"
+    ],
+    "file": "C:\\Users\\holbo\\00VS_projjects\\00_HFT_project\\n2ew_era\\06g_phc_diagonal_manual_hls\\hls_src\\phc_diag_step_testbench.cpp"
+  }
+]

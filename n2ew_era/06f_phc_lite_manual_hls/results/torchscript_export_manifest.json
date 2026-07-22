@@ -1,0 +1,17 @@
+{
+  "phase": "06f",
+  "source_step_checkpoint": "C:\\Users\\holbo\\00VS_projjects\\00_HFT_project\\n2ew_era\\06e_phc_stp_step_hls4ml\\models\\phc_stp_step_hls_seed2.pt",
+  "torchscript_model": "C:\\Users\\holbo\\00VS_projjects\\00_HFT_project\\n2ew_era\\06f_phc_lite_manual_hls\\models\\phc_stp_step_hls_seed2_torchscript.pt",
+  "input_shape": [
+    1,
+    32
+  ],
+  "output_shape": [
+    1,
+    18
+  ],
+  "trace_method": "torch.jit.trace",
+  "frozen": true,
+  "max_abs_diff_vs_python_step": 0.0,
+  "new5_used": false
+}

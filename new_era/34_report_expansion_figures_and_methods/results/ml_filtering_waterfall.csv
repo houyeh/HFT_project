@@ -1,0 +1,5 @@
+split,raw_rows,valid_book_rows,quote_eligible_rows,candidate_actions,baseline_selected_actions,residual_ml_samples,negative_ev_labels,nonnegative_ev_labels,negative_ev_rate,source_note,baseline_to_candidate_rate,residual_to_baseline_rate
+train,3593426,3593424,3592764,1726,820,820,226,594,0.275609756097561,"Historical split from 016 quote-eligible universe, then Phase 031 full-action table.",0.47508690614136734,1.0
+val,563593,563587,563477,262,134,134,17,117,0.12686567164179105,"Historical split from 016 quote-eligible universe, then Phase 031 full-action table.",0.5114503816793893,1.0
+test,1166541,1166540,1166321,934,419,419,16,403,0.03818615751789976,"Historical split from 016 quote-eligible universe, then Phase 031 full-action table.",0.4486081370449679,1.0
+NEW4,2274678,2197106,2197106,1306,714,714,103,611,0.14425770308123248,External OOS NEW4 used the valid-book controller/action-source flow; no train/val quote-eligible refit or boundary tuning was applied.,0.5467075038284839,1.0

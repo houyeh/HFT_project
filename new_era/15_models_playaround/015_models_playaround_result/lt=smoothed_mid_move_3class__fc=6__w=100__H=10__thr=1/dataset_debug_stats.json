@@ -1,0 +1,11 @@
+{
+  "sessions_processed": 6,
+  "sessions_skipped_no_samples": 0,
+  "sessions_skipped_too_short": 0,
+  "symbols_loaded": [
+    "TXFB6"
+  ],
+  "symbols_requested": [
+    "TXFB6"
+  ]
+}

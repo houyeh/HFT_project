@@ -1,0 +1,13 @@
+{
+  "allow_inside_skew": true,
+  "edge_threshold": 0.0,
+  "max_spread_ticks": 3.0,
+  "prob_threshold": 0.75,
+  "selection_metric": "pnl_after_fees_on_val",
+  "skew_ticks": 1,
+  "strategy": "tcn_gated",
+  "val_baseline_pnl_after_fees": -27205.0,
+  "val_baseline_pnl_after_fees_flatten": -27555.0,
+  "val_selected_pnl_after_fees": -27205.0,
+  "val_selected_pnl_after_fees_flatten": -27555.0
+}

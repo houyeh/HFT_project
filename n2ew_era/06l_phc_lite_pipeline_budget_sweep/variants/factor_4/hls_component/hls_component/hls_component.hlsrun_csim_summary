@@ -1,0 +1,158 @@
+<ENTRY>
+{
+ "thisFile": "C:/Users\\holbo\\00VS_projjects\\00_HFT_project\\n2ew_era\\06l_phc_lite_pipeline_budget_sweep\\variants\\factor_4\\hls_component\\hls_component\\hls_component.hlsrun_csim_summary",
+ "connectId": "",
+ "serverToken": "",
+ "timestamp": "0"
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_CmdStep",
+ "dateTimestamp": "06/22/26 21:57:40",
+ "timestampMillis": "1782136660073",
+ "buildStep": {
+  "cmdId": "6c42b63f-691f-4686-94f1-5262ca091895",
+  "name": "vitis-run",
+  "logFile": "C:/Users\\holbo\\00VS_projjects\\00_HFT_project\\n2ew_era\\06l_phc_lite_pipeline_budget_sweep\\variants\\factor_4\\hls_component\\hls_component\\logs\\hls_component.steps.log",
+  "commandLine": "C:/AMDDesignTools/2025.2/Vitis/bin/unwrapped/win64.o/vitis-run.exe  --mode hls --csim --config C:\\Users\\holbo\\00VS_projjects\\00_HFT_project\\n2ew_era\\06l_phc_lite_pipeline_budget_sweep\\variants\\factor_4\\hls_component\\hls_component\\..\\hls_config.cfg --work_dir C:/Users/holbo/00VS_projjects/00_HFT_project/n2ew_era/06l_phc_lite_pipeline_budget_sweep/variants/factor_4/hls_component/hls_component ",
+  "args": [
+   "--mode",
+   "hls",
+   "--csim",
+   "--config",
+   "C:\\Users\\holbo\\00VS_projjects\\00_HFT_project\\n2ew_era\\06l_phc_lite_pipeline_budget_sweep\\variants\\factor_4\\hls_component\\hls_component\\..\\hls_config.cfg",
+   "--work_dir",
+   "C:/Users/holbo/00VS_projjects/00_HFT_project/n2ew_era/06l_phc_lite_pipeline_budget_sweep/variants/factor_4/hls_component/hls_component"
+  ],
+  "iniFiles": [],
+  "cwd": "C:\\Users\\holbo\\00VS_projjects\\00_HFT_project\\n2ew_era\\06l_phc_lite_pipeline_budget_sweep\\variants\\factor_4\\hls_component\\hls_component"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Status",
+ "dateTimestamp": "06/22/26 21:57:40",
+ "timestampMillis": "1782136660073",
+ "status": {
+  "cmdId": "6c42b63f-691f-4686-94f1-5262ca091895",
+  "state": "CS_RUNNING"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_FlowMetaData",
+ "dateTimestamp": "06/22/26 21:57:45",
+ "timestampMillis": "1782136665064",
+ "buildSummary": {
+  "hardwarePlatform": "",
+  "hardwareDsa": "",
+  "platformDirectory": "",
+  "runtime": "",
+  "systemConfig": "",
+  "flow": "BF_RUN",
+  "target": "TT_HLS_C_SIM",
+  "kernels": [
+   {
+    "base": {
+     "type": "KERNEL",
+     "name": "phc_step",
+     "file": "",
+     "reports": [],
+     "uuid": ""
+    },
+    "sources": [
+     "C:/Users\\holbo\\00VS_projjects\\00_HFT_project\\n2ew_era\\06l_phc_lite_pipeline_budget_sweep\\variants\\factor_4\\hls_src\\phc_step_hls.cpp",
+     "C:/Users\\holbo\\00VS_projjects\\00_HFT_project\\n2ew_era\\06l_phc_lite_pipeline_budget_sweep\\variants\\factor_4\\hls_src\\phc_step_hls.hpp",
+     "C:/Users\\holbo\\00VS_projjects\\00_HFT_project\\n2ew_era\\06l_phc_lite_pipeline_budget_sweep\\variants\\factor_4\\hls_src\\phc_weights.hpp"
+    ],
+    "psSources": [],
+    "cuNames": [],
+    "type": "HLS",
+    "frequency": 0,
+    "freqUnits": ""
+   }
+  ],
+  "toolVersion": "2025.2"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_SubCmdStep",
+ "dateTimestamp": "06/22/26 21:57:45",
+ "timestampMillis": "1782136665065",
+ "buildStep": {
+  "cmdId": "d2eff87e-bafb-4792-809a-deb80d98a878",
+  "name": "",
+  "logFile": "C:/Users\\holbo\\00VS_projjects\\00_HFT_project\\n2ew_era\\06l_phc_lite_pipeline_budget_sweep\\variants\\factor_4\\hls_component\\hls_component\\hls\\hls.log",
+  "commandLine": "",
+  "args": [],
+  "iniFiles": [],
+  "cwd": "C:\\Users\\holbo\\00VS_projjects\\00_HFT_project\\n2ew_era\\06l_phc_lite_pipeline_budget_sweep\\variants\\factor_4\\hls_component\\hls_component"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Status",
+ "dateTimestamp": "06/22/26 21:57:45",
+ "timestampMillis": "1782136665066",
+ "status": {
+  "cmdId": "d2eff87e-bafb-4792-809a-deb80d98a878",
+  "state": "CS_RUNNING"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Status",
+ "dateTimestamp": "06/22/26 21:59:12",
+ "timestampMillis": "1782136752180",
+ "status": {
+  "cmdId": "d2eff87e-bafb-4792-809a-deb80d98a878",
+  "state": "CS_PASSED"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Status",
+ "dateTimestamp": "06/22/26 21:59:12",
+ "timestampMillis": "1782136752263",
+ "status": {
+  "cmdId": "6c42b63f-691f-4686-94f1-5262ca091895",
+  "state": "CS_PASSED"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "06/22/26 21:59:12",
+ "timestampMillis": "1782136752264",
+ "report": {
+  "path": "",
+  "name": "",
+  "fileType": "HTML",
+  "reportType": "GLOBAL_RULECHECK_GUIDANCE",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "06/22/26 21:59:12",
+ "timestampMillis": "1782136752264",
+ "report": {
+  "path": "",
+  "name": "",
+  "fileType": "BINARY_PROTOBUF",
+  "reportType": "GLOBAL_RULECHECK_GUIDANCE",
+  "cmdId": ""
+ }
+}
+</ENTRY>

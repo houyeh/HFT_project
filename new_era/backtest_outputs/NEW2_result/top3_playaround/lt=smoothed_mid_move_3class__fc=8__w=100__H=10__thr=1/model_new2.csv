@@ -1,0 +1,2 @@
+﻿strategy,prob_threshold,edge_threshold,pnl,pnl_after_fees,pnl_after_fees_flatten,fees_paid,fees_paid_flatten,trades,maker_trades,taker_trades,ending_inventory,ending_inventory_flatten,forced_liquidation_trades,max_abs_inventory,fill_rate,avg_spread_capture,avg_adverse_selection,max_drawdown
+tcn_skew,0.55,0.4,1000.0,-17270.0,-17770.0,18270.0,18370.0,1218,1218,0,-2,0,2,3,0.0003581866228765385,1.026272577996716,1.1009852216748768,315330.0

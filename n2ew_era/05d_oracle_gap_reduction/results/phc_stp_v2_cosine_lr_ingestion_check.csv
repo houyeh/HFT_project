@@ -1,0 +1,4 @@
+split,action_pnl,causal_fill_pnl,oracle_capture,report_action_pnl,report_causal_fill_pnl,report_oracle_capture,abs_diff_action_pnl,abs_diff_causal_fill_pnl,abs_diff_oracle_capture
+val,2037925.0,171835.0,0.2642866591276922,2037925.0,171835.0,0.2642866591276922,0.0,0.0,0.0
+new3,5237410.0,611095.0,0.2786297299705672,5237410.0,611095.0,0.2786297299705672,0.0,0.0,0.0
+new4,1871685.0,129160.0,0.254391955946903,1871685.0,129160.0,0.254391955946903,0.0,0.0,0.0

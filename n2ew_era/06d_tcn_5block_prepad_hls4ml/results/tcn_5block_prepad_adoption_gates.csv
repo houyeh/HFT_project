@@ -1,0 +1,7 @@
+model_variant,policy_id,gate,pass,rule
+18feat,tcn_5block_prepad_18feat,Convergence closed,True,all seeds early_stop=True and best_epoch<185
+18feat,tcn_5block_prepad_18feat,Seed stability,True,all seeds x splits action PnL > 0
+18feat,tcn_5block_prepad_18feat,Matched random,True,val/NEW3/NEW4 all beat random 95p
+18feat,tcn_5block_prepad_18feat,Action PnL improvement over PHC-lite v1,False,val/NEW3/NEW4 action PnL >= PHC-lite v1
+18feat,tcn_5block_prepad_18feat,Causal-fill improvement over PHC-lite v1,False,val/NEW3/NEW4 sequential PnL >= PHC-lite v1
+18feat,tcn_5block_prepad_18feat,Oracle capture improvement over PHC-lite v1,False,val/NEW3/NEW4 capture ratio >= PHC-lite v1

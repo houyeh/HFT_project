@@ -1,0 +1,12 @@
+{
+  "selected_budget_on_validation": 120,
+  "selected_threshold_on_validation": 0.22419440373778343,
+  "iter80_validation_policy_pnl": 54382565.0,
+  "best_validation_policy_pnl": 54550215.0,
+  "best_minus_iter80_val_pnl": 167650.0,
+  "best_at_max_grid_boundary": false,
+  "convergence_closed_for_candidate_decision": true,
+  "selection_split": "val",
+  "test_new3_new4_used_for_selection": false,
+  "new5_used": false
+}

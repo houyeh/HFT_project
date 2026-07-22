@@ -1,0 +1,3 @@
+split,model_name,threshold,selection_split,test_used_for_selection,baseline_pnl,veto_count,veto_rate,vetoed_quote_ev,after_veto_pnl,incremental_vs_baseline,negative_ev_rate_vetoed,random_veto_mean_pnl,random_veto_std_pnl,random_veto_95p_pnl,random_veto_99p_pnl,beats_random_veto_95p,beats_random_veto_99p,improves_baseline
+test,logistic_l2_balanced,0.8333883739092597,validation,False,2312590.0,0,0.0,0.0,2312590.0,0.0,,2312590.0,0.0,2312590.0,2312590.0,False,False,False
+new4,logistic_l2_balanced,0.8333883739092597,validation,False,6348770.0,0,0.0,0.0,6348770.0,0.0,,6348770.0,0.0,6348770.0,6348770.0,False,False,False

@@ -1,0 +1,31 @@
+WARNING: All log messages before absl::InitializeLog() is called are written to STDERR
+I0000 00:00:1782740014.775284    6116 port.cc:153] oneDNN custom operations are on. You may see slightly different numerical results due to floating-point round-off errors from different computation orders. To turn them off, set the environment variable `TF_ENABLE_ONEDNN_OPTS=0`.
+WARNING: All log messages before absl::InitializeLog() is called are written to STDERR
+I0000 00:00:1782740017.800320    6116 port.cc:153] oneDNN custom operations are on. You may see slightly different numerical results due to floating-point round-off errors from different computation orders. To turn them off, set the environment variable `TF_ENABLE_ONEDNN_OPTS=0`.
+Traceback (most recent call last):
+  File "C:\Users\holbo\00VS_projjects\00_HFT_project\.venv\Lib\site-packages\pandas\compat\_optional.py", line 158, in import_optional_dependency
+    module = importlib.import_module(name)
+  File "C:\Users\holbo\AppData\Local\Programs\Python\Python313\Lib\importlib\__init__.py", line 88, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+           ~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "<frozen importlib._bootstrap>", line 1387, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 1360, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 1324, in _find_and_load_unlocked
+ModuleNotFoundError: No module named 'tabulate'
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\holbo\00VS_projjects\00_HFT_project\n2ew_era\06h_phc_hls4ml_distilled_student\01_build_clamped32_nocsim.py", line 236, in <module>
+    main()
+    ~~~~^^
+  File "C:\Users\holbo\00VS_projjects\00_HFT_project\n2ew_era\06h_phc_hls4ml_distilled_student\01_build_clamped32_nocsim.py", line 231, in main
+    append_or_replace_report_section(phase, row, env, report_failure_excerpt(build_log))
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\holbo\00VS_projjects\00_HFT_project\n2ew_era\06h_phc_hls4ml_distilled_student\01_build_clamped32_nocsim.py", line 107, in append_or_replace_report_section
+    summary_table = pd.DataFrame([summary]).to_markdown(index=False)
+  File "C:\Users\holbo\00VS_projjects\00_HFT_project\.venv\Lib\site-packages\pandas\core\frame.py", line 2983, in to_markdown
+    tabulate = import_optional_dependency("tabulate")
+  File "C:\Users\holbo\00VS_projjects\00_HFT_project\.venv\Lib\site-packages\pandas\compat\_optional.py", line 161, in import_optional_dependency
+    raise ImportError(msg) from err
+ImportError: `Import tabulate` failed.  Use pip or conda to install the tabulate package.

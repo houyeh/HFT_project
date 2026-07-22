@@ -1,0 +1,4 @@
+﻿session_id,strategy,pnl,pnl_after_fees,pnl_after_fees_flatten,fees_paid,fees_paid_flatten,trades,maker_trades,taker_trades,ending_inventory,ending_inventory_flatten,forced_liquidation_trades,max_abs_inventory,fill_rate,avg_spread_capture,avg_adverse_selection,max_drawdown
+20260121Day,baseline,-84700.0,-88405.0,-90055.0,3705.0,3855.0,247,247,0,-3,0,3,3,0.00022853230447534718,1.228744939271255,1.6720647773279351,160110.0
+20260122Day,baseline,-19500.0,-24975.0,-26025.0,5475.0,5625.0,365,365,0,3,0,3,3,0.0002567043799393615,0.9945205479452055,0.915068493150685,166350.0
+20260122Night,baseline,7400.0,3410.0,2710.0,3990.0,4090.0,266,266,0,-2,0,2,3,0.00019700332757876244,1.2725563909774436,2.154135338345865,72565.0

@@ -1,0 +1,5 @@
+﻿"cancel_threshold","model_fills","model_realized_trades","model_net_pnl_twd","improvement_twd","experiment_id","edge_threshold","out_dir"
+"0.1","3812","3610","-1609179.99999999","1645755.00000001","lt=smoothed_mid_move_3class__fc=8__w=100__H=10__thr=1","0.4","NEW3_cancel_ct010"
+"0.2","4862","4590","-2001930","1253005.00000001","lt=smoothed_mid_move_3class__fc=8__w=100__H=10__thr=1","0.4","NEW3_cancel_ct020"
+"0.3","5766","5447","-2343890","911045.000000003","lt=smoothed_mid_move_3class__fc=8__w=100__H=10__thr=1","0.4","NEW3_cancel_ct030"
+"0.5","7303","6906","-2797495","457440.000000002","lt=smoothed_mid_move_3class__fc=8__w=100__H=10__thr=1","0.4","NEW3_cancel_ct050"

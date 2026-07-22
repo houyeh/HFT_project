@@ -1,0 +1,6 @@
+dataset_group,assigned_role,allowed_for_model_fit,allowed_for_validation_selection,allowed_for_diagnostic_oos,allowed_for_final_holdout,forbidden_usage
+NEW1,development,True,True,False,False,final holdout claim
+NEW2,development,True,True,False,False,final holdout claim
+NEW3,used_oos_diagnostic,False,False,True,False,tuning/model selection
+NEW4,used_oos_diagnostic,False,False,True,False,tuning/model selection
+NEW5,final_holdout_locked,False,False,False,True,any pre-final pnl/score/threshold/model-selection evaluation

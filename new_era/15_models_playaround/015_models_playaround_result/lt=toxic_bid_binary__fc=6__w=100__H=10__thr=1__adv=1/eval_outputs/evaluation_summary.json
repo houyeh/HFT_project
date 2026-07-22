@@ -1,0 +1,40 @@
+{
+  "class_names": [
+    "Non-toxic",
+    "Toxic"
+  ],
+  "device": "cpu",
+  "label_type": "toxic_bid_binary",
+  "splits": {
+    "test": {
+      "accuracy": 0.9964538068647948,
+      "average_precision": 0.0004966598272874563,
+      "balanced_accuracy": 0.4983324068927182,
+      "best_threshold_by_f1": 0.46449893712997437,
+      "best_threshold_by_precision_at_min_recall": 0.3206896185874939,
+      "brier_score": 0.06328972962616337,
+      "expected_calibration_error": 0.2392366746252525,
+      "loss": 0.2793233096599579,
+      "macro_f1": 0.4991118769883351,
+      "min_recall": 0.2,
+      "num_samples": 151148,
+      "p_pos_ge_0p70_actual_pos_rate": NaN,
+      "precision_at_min_recall": 0.00043902439024390245
+    },
+    "val": {
+      "accuracy": 0.9948366984096056,
+      "average_precision": 0.0019147884042284265,
+      "balanced_accuracy": 0.5028507093535626,
+      "best_threshold_by_f1": 0.5607895851135254,
+      "best_threshold_by_precision_at_min_recall": 0.2939864993095398,
+      "brier_score": 0.061246043776377344,
+      "expected_calibration_error": 0.2320105245856729,
+      "loss": 0.2727026641368866,
+      "macro_f1": 0.5010532355560218,
+      "min_recall": 0.2,
+      "num_samples": 82118,
+      "p_pos_ge_0p70_actual_pos_rate": 0.0,
+      "precision_at_min_recall": 0.001894633907835228
+    }
+  }
+}

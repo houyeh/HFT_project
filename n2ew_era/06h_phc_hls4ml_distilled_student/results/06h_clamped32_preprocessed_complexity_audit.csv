@@ -1,0 +1,3 @@
+project,pp0_path,file_size_bytes,line_count,ap_fixed_token_count,max_ap_fixed_token_length,max_ap_fixed_token,ap_fixed_32_16_count,AP_RND_CONV_count,AP_SAT_count,ap_fixed_156_76_count
+unclamped,hls4ml_prj/phc_distilled_student_keras/phc_distilled_student_keras_prj/solution1/.autopilot/db/phc_distilled_student_keras.pp.0.cpp,2526158,58801,150,102,"ap_fixed<2 * (decltype(w_T::weight)::width + x_T::width), (decltype(w_T::weight)::width + x_T::width)>",0,2,9,3
+clamped32,hls4ml_prj/phc_distilled_student_keras_clamped32/phc_distilled_student_keras_clamped32_prj/solution1/.autopilot/db/phc_distilled_student_keras_clamped32.pp.0.cpp,2524118,58801,150,102,"ap_fixed<2 * (decltype(w_T::weight)::width + x_T::width), (decltype(w_T::weight)::width + x_T::width)>",34,36,43,0

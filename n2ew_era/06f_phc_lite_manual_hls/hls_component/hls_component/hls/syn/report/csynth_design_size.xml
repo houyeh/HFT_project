@@ -1,0 +1,70 @@
+<design_size title="Design Size Report">
+    <item name="Total Instructions per Compilation Phase">
+        <table>
+            <keys size="4">Phase, Step, Instructions, Description</keys>
+            <column name="Compile/Link">, 174882 *, After all functions are compiled and linked into a single design</column>
+            <column name="">, , </column>
+            <column name="Unroll/Inline">, , After user unroll and inline pragmas are applied</column>
+            <column name="">(1) unroll,  15971, user unroll pragmas are applied</column>
+            <column name="">(2) simplification,   5526, simplification of applied user unroll pragmas</column>
+            <column name="">(3) inline,   5062, user inline pragmas are applied</column>
+            <column name="">(4) simplification,   5017, simplification of applied user inline pragmas</column>
+            <column name="">, , </column>
+            <column name="Array/Struct">, , After user array partition and struct aggregate/disaggregate pragmas are applied</column>
+            <column name="">(1) array partition,   5619, user array partition pragmas are applied</column>
+            <column name="">(2) simplification,   4959, simplification of applied user array partition &amp; struct aggregate/disaggregate pragmas</column>
+            <column name="">(3) aggregate/disaggregate,   4959, user struct aggregate/disaggregate pragmas are applied</column>
+            <column name="">(4) array reshape,   4959, apply array reshape pragmas</column>
+            <column name="">(5) access patterns,   4988, array access pattern optmizations</column>
+            <column name="">, , </column>
+            <column name="Performance">, , After transformations are applied to meet performance pragma targets</column>
+            <column name="">(1) loop simplification,   4988, loop and instruction simplification</column>
+            <column name="">(2) parallelization,   4959, loops are unrolled or pipelined to meet performance targets</column>
+            <column name="">(3) array partition,   4967, arrays are partitioned to meet performance targets</column>
+            <column name="">(4) simplification,   4898, simplification of design after performance transformations</column>
+            <column name="">, , </column>
+            <column name="HW Transforms">, , After hardware transfomations</column>
+            <column name="">(1) lowering,   4906, initial conversion to HW specific instructions</column>
+            <column name="">(2) optimizations,   5049, high level synthesis optimizations</column>
+        </table>
+    </item>
+    <item name="Instructions per Function for each Compilation Phase">
+        <hiertable>
+            <header size="7" col0="Function" col1="Location" col2="Compile/Link" col3="Unroll/Inline" col4="Array/Struct" col5="Performance" col6="HW Transforms"/>
+            <rows>
+                <row id="0" col0="phc_step" col1="phc_step_hls.cpp:196" col2="174882" col2_note="*" col3="5017" col4="4988" col5="4898" col6="5049">
+                    <row id="9" col0="linear_16_16_fixed" col1="phc_step_hls.cpp:94" col2="607" col3="" col4="" col5="" col6=""/>
+                    <row id="10" col0="layernorm_16" col1="phc_step_hls.cpp:165" col2="17258" col2_disp="17,258 (2 calls)" col3="" col4="" col5="" col6=""/>
+                    <row id="7" col0="silu_16" col1="phc_step_hls.cpp:86" col2="61706" col2_disp="61,706 (2 calls)" col3="" col4="" col5="" col6="">
+                        <row id="11" col0="sigmoid_scalar" col1="phc_step_hls.cpp:60" col2="61222" col2_disp="61,222 (2 calls)" col3="" col4="" col5="" col6="">
+                            <row id="5" col0="tanh_lut_scalar" col1="phc_step_hls.cpp:16" col2="57674" col2_disp="57,674 (2 calls)" col3="" col4="" col5="" col6=""/>
+                        </row>
+                    </row>
+                    <row id="8" col0="linear_16_16_acc" col1="phc_step_hls.cpp:112" col2="2172" col2_disp=" 2,172 (4 calls)" col3="" col4="" col5="" col6=""/>
+                    <row id="2" col0="sigmoid_16" col1="phc_step_hls.cpp:70" col2="61272" col2_disp="61,272 (2 calls)" col3="" col4="" col5="" col6="">
+                        <row id="11" col0="sigmoid_scalar" col1="phc_step_hls.cpp:60" col2="61222" col2_disp="61,222 (2 calls)" col3="" col4="" col5="" col6="">
+                            <row id="5" col0="tanh_lut_scalar" col1="phc_step_hls.cpp:16" col2="57674" col2_disp="57,674 (2 calls)" col3="" col4="" col5="" col6=""/>
+                        </row>
+                    </row>
+                    <row id="3" col0="tanh_16" col1="phc_step_hls.cpp:78" col2="28867" col3="" col4="" col5="" col6="">
+                        <row id="12" col0="tanh_scalar" col1="phc_step_hls.cpp:65" col2="28842" col3="" col4="" col5="" col6="">
+                            <row id="5" col0="tanh_lut_scalar" col1="phc_step_hls.cpp:16" col2="28837" col3="" col4="" col5="" col6=""/>
+                        </row>
+                    </row>
+                    <row id="4" col0="linear_16_16_fixed_no_bias" col1="phc_step_hls.cpp:130" col2="602" col3="" col4="" col5="" col6=""/>
+                    <row id="6" col0="linear_16_2_acc" col1="phc_step_hls.cpp:147" col2="543" col3="" col4="" col5="" col6=""/>
+                    <row id="1" col0="sqrt_fixed&lt;49, 25&gt;" col1="hls_sqrt_apfixed.h:19" col2="" col3="4194" col3_disp="4,194 (2 calls)" col4="4098" col4_disp="4,098 (2 calls)" col5="4098" col5_disp="4,098 (2 calls)" col6="4100" col6_disp="4,100 (2 calls)"/>
+                </row>
+            </rows>
+            <notes>
+                <note name="*" desc="Exceeded design size warning message threshold"/>
+            </notes>
+        </hiertable>
+    </item>
+    <item name="Design Size Message Settings">
+        <table>
+            <keys size="3">Message Setting, Value, Description</keys>
+            <column name="config_compile -design_size_maximum_warning">100000, Show a warning when total design instructions exceeds this value</column>
+        </table>
+    </item>
+</design_size>

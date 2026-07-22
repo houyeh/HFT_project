@@ -1,0 +1,4 @@
+split,raw_rows,after_valid_bid_ask,after_positive_spread,after_complete_depth,after_session_boundary,after_feature_finite,quote_eligible_rows,dropped_invalid_bid_ask,dropped_nonpositive_spread,dropped_missing_depth,dropped_session_boundary,dropped_feature_na,retention_rate
+test,1166541,1166541,1166541,1166540,1166321,1166321,1166321,0,0,1,219,0,0.9998114082574038
+train,3593426,3593426,3593426,3593424,3592764,3592764,3592764,0,0,2,660,0,0.9998157746952351
+val,563593,563593,563593,563587,563477,563477,563477,0,0,6,110,0,0.9997941777133499

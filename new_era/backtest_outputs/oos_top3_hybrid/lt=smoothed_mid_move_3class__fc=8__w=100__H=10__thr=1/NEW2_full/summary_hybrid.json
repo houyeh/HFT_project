@@ -1,0 +1,18 @@
+{
+  "experiment_id": "lt=smoothed_mid_move_3class__fc=8__w=100__H=10__thr=1",
+  "dataset": "NEW2_full",
+  "label_type": "smoothed_mid_move_3class",
+  "feature_count": 8,
+  "tick_size": 1.0,
+  "edge_threshold": 0.4,
+  "quote_step_ticks": 1.0,
+  "baseline_net_pnl_twd": -941964.9999999993,
+  "model_net_pnl_twd": -702949.9999999993,
+  "improvement_twd": 239015.0,
+  "baseline_realized_trades": 2404,
+  "model_realized_trades": 1908,
+  "baseline_max_drawdown_twd": 954644.9999999991,
+  "model_max_drawdown_twd": 748895.0000000007,
+  "baseline_fills": 2561,
+  "model_fills": 2030
+}

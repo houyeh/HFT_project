@@ -1,0 +1,4 @@
+split,policy_id,model_id,threshold_selected_on_val,model_total_excess_pnl_H20,model_selected_action_count,random_trials,random_mean,random_std,random_95p,random_99p,empirical_p_value_fraction_random_ge_model,beats_random_95p,matching,test_new3_new4_used_for_selection,new5_used
+val,ml_hgb_regressor_shallow,hgb_regressor_shallow,0.0,54381630.0,1968250,1000,-29493198.15,165327.79313889574,-29216542.25,-29111544.45,0.0,True,exact_count_side_session,False,False
+new3,ml_hgb_regressor_shallow,hgb_regressor_shallow,0.0,129337960.0,4212753,1000,-63175927.28,264459.27771152515,-62751158.75,-62566950.5,0.0,True,exact_count_side_session,False,False
+new4,ml_hgb_regressor_shallow,hgb_regressor_shallow,0.0,45984375.0,1622095,1000,-24316761.855,171085.20370193906,-24034294.25,-23945929.3,0.0,True,exact_count_side_session,False,False

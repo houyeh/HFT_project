@@ -1,0 +1,207 @@
+
+
+================================================================
+== Vitis HLS Report for 'phc_step_Outline_VITIS_LOOP_127_13'
+================================================================
+* Date:           Mon Jun 22 23:32:15 2026
+
+* Version:        2025.2 (Build 6295257 on Nov 14 2025)
+* Project:        hls_component
+* Solution:       hls (Vivado IP Flow Target)
+* Product family: zynq
+* Target device:  xc7z020-clg400-1
+
+
+================================================================
+== Performance Estimates
+================================================================
++ Timing: 
+    * Summary: 
+    +--------+----------+----------+------------+
+    |  Clock |  Target  | Estimated| Uncertainty|
+    +--------+----------+----------+------------+
+    |ap_clk  |  10.00 ns|  7.040 ns|     2.70 ns|
+    +--------+----------+----------+------------+
+
++ Latency: 
+    * Summary: 
+    +---------+---------+----------+----------+-----+-----+---------+
+    |  Latency (cycles) |  Latency (absolute) |  Interval | Pipeline|
+    |   min   |   max   |    min   |    max   | min | max |   Type  |
+    +---------+---------+----------+----------+-----+-----+---------+
+    |      305|      305|  3.050 us|  3.050 us|  305|  305|       no|
+    +---------+---------+----------+----------+-----+-----+---------+
+
+    + Detail: 
+        * Instance: 
+        N/A
+
+        * Loop: 
+        +---------------------+---------+---------+----------+-----------+-----------+------+----------+
+        |                     |  Latency (cycles) | Iteration|  Initiation Interval  | Trip |          |
+        |      Loop Name      |   min   |   max   |  Latency |  achieved |   target  | Count| Pipelined|
+        +---------------------+---------+---------+----------+-----------+-----------+------+----------+
+        |- VITIS_LOOP_127_1   |      304|      304|        19|          -|          -|    16|        no|
+        | + VITIS_LOOP_130_2  |       16|       16|         8|          -|          -|     2|        no|
+        +---------------------+---------+---------+----------+-----------+-----------+------+----------+
+
+
+
+================================================================
+== Utilization Estimates
+================================================================
+* Summary: 
++-----------------+---------+-----+--------+-------+-----+
+|       Name      | BRAM_18K| DSP |   FF   |  LUT  | URAM|
++-----------------+---------+-----+--------+-------+-----+
+|DSP              |        -|    -|       -|      -|    -|
+|Expression       |        -|    -|       0|    608|    -|
+|FIFO             |        -|    -|       -|      -|    -|
+|Instance         |        -|    -|       -|      -|    -|
+|Memory           |        0|    -|     107|     51|    -|
+|Multiplexer      |        -|    -|       0|    251|    -|
+|Register         |        -|    -|     553|      -|    -|
++-----------------+---------+-----+--------+-------+-----+
+|Total            |        0|    0|     660|    910|    0|
++-----------------+---------+-----+--------+-------+-----+
+|Available        |      280|  220|  106400|  53200|    0|
++-----------------+---------+-----+--------+-------+-----+
+|Utilization (%)  |        0|    0|      ~0|      1|    0|
++-----------------+---------+-----+--------+-------+-----+
+
++ Detail: 
+    * Instance: 
+    N/A
+
+    * DSP: 
+    N/A
+
+    * Memory: 
+    +----------------------------------------+----------------------------------------------------------------------------------+---------+----+----+-----+------+-----+------+-------------+
+    |                 Memory                 |                                      Module                                      | BRAM_18K| FF | LUT| URAM| Words| Bits| Banks| W*Bits*Banks|
+    +----------------------------------------+----------------------------------------------------------------------------------+---------+----+----+-----+------+-----+------+-------------+
+    |p_ZN16phc_step_weightsL9SYNAPSE_WE_0_U  |phc_step_Outline_VITIS_LOOP_127_13_p_ZN16phc_step_weightsL9SYNAPSE_WE_0_ROM_AAem  |        0|  12|   6|    0|    32|   12|     1|          384|
+    |p_ZN16phc_step_weightsL9SYNAPSE_WE_1_U  |phc_step_Outline_VITIS_LOOP_127_13_p_ZN16phc_step_weightsL9SYNAPSE_WE_1_ROM_ABew  |        0|  12|   6|    0|    32|   12|     1|          384|
+    |p_ZN16phc_step_weightsL9SYNAPSE_WE_2_U  |phc_step_Outline_VITIS_LOOP_127_13_p_ZN16phc_step_weightsL9SYNAPSE_WE_2_ROM_ACeG  |        0|  12|   6|    0|    32|   12|     1|          384|
+    |p_ZN16phc_step_weightsL9SYNAPSE_WE_3_U  |phc_step_Outline_VITIS_LOOP_127_13_p_ZN16phc_step_weightsL9SYNAPSE_WE_3_ROM_ADeQ  |        0|  12|   6|    0|    32|   12|     1|          384|
+    |p_ZN16phc_step_weightsL9SYNAPSE_WE_4_U  |phc_step_Outline_VITIS_LOOP_127_13_p_ZN16phc_step_weightsL9SYNAPSE_WE_4_ROM_AEe0  |        0|  12|   6|    0|    32|   12|     1|          384|
+    |p_ZN16phc_step_weightsL9SYNAPSE_WE_5_U  |phc_step_Outline_VITIS_LOOP_127_13_p_ZN16phc_step_weightsL9SYNAPSE_WE_5_ROM_AFfa  |        0|  12|   6|    0|    32|   12|     1|          384|
+    |p_ZN16phc_step_weightsL9SYNAPSE_WE_6_U  |phc_step_Outline_VITIS_LOOP_127_13_p_ZN16phc_step_weightsL9SYNAPSE_WE_6_ROM_AGfk  |        0|  12|   6|    0|    32|   12|     1|          384|
+    |p_ZN16phc_step_weightsL9SYNAPSE_WE_7_U  |phc_step_Outline_VITIS_LOOP_127_13_p_ZN16phc_step_weightsL9SYNAPSE_WE_7_ROM_AHfu  |        0|  12|   6|    0|    32|   12|     1|          384|
+    |phc_step_weights_SYNAPSE_B_U            |phc_step_Outline_VITIS_LOOP_127_13_phc_step_weights_SYNAPSE_B_ROM_AUTO_1R         |        0|  11|   3|    0|    16|   11|     1|          176|
+    +----------------------------------------+----------------------------------------------------------------------------------+---------+----+----+-----+------+-----+------+-------------+
+    |Total                                   |                                                                                  |        0| 107|  51|    0|   272|  107|     9|         3248|
+    +----------------------------------------+----------------------------------------------------------------------------------+---------+----+----+-----+------+-----+------+-------------+
+
+    * FIFO: 
+    N/A
+
+    * Expression: 
+    +-----------------------+----------+----+---+----+------------+------------+
+    |     Variable Name     | Operation| DSP| FF| LUT| Bitwidth P0| Bitwidth P1|
+    +-----------------------+----------+----+---+----+------------+------------+
+    |add_ln127_fu_384_p2    |         +|   0|  0|  13|           5|           1|
+    |add_ln130_fu_486_p2    |         +|   0|  0|  13|           5|           4|
+    |add_ln133_1_fu_671_p2  |         +|   0|  0|  71|          64|          64|
+    |add_ln133_2_fu_728_p2  |         +|   0|  0|  71|          64|          64|
+    |add_ln133_3_fu_752_p2  |         +|   0|  0|  71|          64|          64|
+    |add_ln133_4_fu_809_p2  |         +|   0|  0|  71|          64|          64|
+    |add_ln133_5_fu_833_p2  |         +|   0|  0|  71|          64|          64|
+    |add_ln133_6_fu_856_p2  |         +|   0|  0|  71|          64|          64|
+    |add_ln133_7_fu_880_p2  |         +|   0|  0|  71|          64|          64|
+    |add_ln133_fu_647_p2    |         +|   0|  0|  71|          64|          64|
+    |icmp_ln127_fu_378_p2   |      icmp|   0|  0|  14|           5|           6|
+    +-----------------------+----------+----+---+----+------------+------------+
+    |Total                  |          |   0|  0| 608|         527|         523|
+    +-----------------------+----------+----+---+----+------------+------------+
+
+    * Multiplexer: 
+    +-------------------------------+----+-----------+-----+-----------+
+    |              Name             | LUT| Input Size| Bits| Total Bits|
+    +-------------------------------+----+-----------+-----+-----------+
+    |acc_2_reg_324                  |   9|          2|   40|         80|
+    |ap_NS_fsm                      |  65|         12|    1|         12|
+    |grp_fu_346_p0                  |  25|          5|   24|        120|
+    |grp_fu_346_p1                  |  25|          5|   40|        200|
+    |grp_fu_350_p0                  |  25|          5|   24|        120|
+    |grp_fu_350_p1                  |  25|          5|   40|        200|
+    |i_reg_313                      |   9|          2|    5|         10|
+    |j_fu_106                       |   9|          2|    5|         10|
+    |phi_ln133_reg_334              |   9|          2|   40|         80|
+    |state_temporal_address0_local  |  25|          5|    4|         20|
+    |state_temporal_address1_local  |  25|          5|    4|         20|
+    +-------------------------------+----+-----------+-----+-----------+
+    |Total                          | 251|         50|  227|        872|
+    +-------------------------------+----+-----------+-----+-----------+
+
+    * Register: 
+    +----------------------------------------------------+----+----+-----+-----------+
+    |                        Name                        | FF | LUT| Bits| Const Bits|
+    +----------------------------------------------------+----+----+-----+-----------+
+    |acc_2_reg_324                                       |  40|   0|   40|          0|
+    |add_ln127_reg_906                                   |   5|   0|    5|          0|
+    |add_ln130_reg_983                                   |   5|   0|    5|          0|
+    |ap_CS_fsm                                           |  11|   0|   11|          0|
+    |i_reg_313                                           |   5|   0|    5|          0|
+    |j_fu_106                                            |   5|   0|    5|          0|
+    |p_ZN16phc_step_weightsL9SYNAPSE_WE_0_load_reg_1018  |  12|   0|   12|          0|
+    |p_ZN16phc_step_weightsL9SYNAPSE_WE_1_load_reg_1023  |  12|   0|   12|          0|
+    |p_ZN16phc_step_weightsL9SYNAPSE_WE_2_load_reg_1058  |  12|   0|   12|          0|
+    |p_ZN16phc_step_weightsL9SYNAPSE_WE_3_load_reg_1063  |  12|   0|   12|          0|
+    |p_ZN16phc_step_weightsL9SYNAPSE_WE_4_load_reg_1068  |  12|   0|   12|          0|
+    |p_ZN16phc_step_weightsL9SYNAPSE_WE_5_load_reg_1078  |  12|   0|   12|          0|
+    |p_ZN16phc_step_weightsL9SYNAPSE_WE_6_load_reg_1088  |  12|   0|   12|          0|
+    |p_ZN16phc_step_weightsL9SYNAPSE_WE_7_load_reg_1093  |  12|   0|   12|          0|
+    |phi_ln133_reg_334                                   |  40|   0|   40|          0|
+    |reg_354                                             |  40|   0|   40|          0|
+    |reg_358                                             |  40|   0|   40|          0|
+    |reg_362                                             |  64|   0|   64|          0|
+    |reg_366                                             |  64|   0|   64|          0|
+    |tmp_127_reg_934                                     |   1|   0|    1|          0|
+    |tmp_128_reg_978                                     |   1|   0|    1|          0|
+    |tmp_91_reg_972                                      |   2|   0|    2|          0|
+    |tmp_92_reg_1128                                     |  40|   0|   40|          0|
+    |tmp_94_reg_1153                                     |  40|   0|   40|          0|
+    |tmp_96_reg_1178                                     |  40|   0|   40|          0|
+    |trunc_ln127_reg_911                                 |   4|   0|    4|          0|
+    |zext_ln127_reg_916                                  |   5|   0|   64|         59|
+    |zext_ln133_reg_942                                  |   5|   0|   64|         59|
+    +----------------------------------------------------+----+----+-----+-----------+
+    |Total                                               | 553|   0|  671|        118|
+    +----------------------------------------------------+----+----+-----+-----------+
+
+
+
+================================================================
+== Interface
+================================================================
+* Summary: 
++-------------------------+-----+-----+------------+------------------------------------+--------------+
+|        RTL Ports        | Dir | Bits|  Protocol  |            Source Object           |    C Type    |
++-------------------------+-----+-----+------------+------------------------------------+--------------+
+|ap_clk                   |   in|    1|  ap_ctrl_hs|  phc_step_Outline_VITIS_LOOP_127_13|  return value|
+|ap_rst                   |   in|    1|  ap_ctrl_hs|  phc_step_Outline_VITIS_LOOP_127_13|  return value|
+|ap_start                 |   in|    1|  ap_ctrl_hs|  phc_step_Outline_VITIS_LOOP_127_13|  return value|
+|ap_done                  |  out|    1|  ap_ctrl_hs|  phc_step_Outline_VITIS_LOOP_127_13|  return value|
+|ap_idle                  |  out|    1|  ap_ctrl_hs|  phc_step_Outline_VITIS_LOOP_127_13|  return value|
+|ap_ready                 |  out|    1|  ap_ctrl_hs|  phc_step_Outline_VITIS_LOOP_127_13|  return value|
+|grp_fu_1818_p_din0       |  out|   24|  ap_ctrl_hs|  phc_step_Outline_VITIS_LOOP_127_13|  return value|
+|grp_fu_1818_p_din1       |  out|   40|  ap_ctrl_hs|  phc_step_Outline_VITIS_LOOP_127_13|  return value|
+|grp_fu_1818_p_dout0      |   in|   64|  ap_ctrl_hs|  phc_step_Outline_VITIS_LOOP_127_13|  return value|
+|grp_fu_1818_p_ce         |  out|    1|  ap_ctrl_hs|  phc_step_Outline_VITIS_LOOP_127_13|  return value|
+|grp_fu_1822_p_din0       |  out|   24|  ap_ctrl_hs|  phc_step_Outline_VITIS_LOOP_127_13|  return value|
+|grp_fu_1822_p_din1       |  out|   40|  ap_ctrl_hs|  phc_step_Outline_VITIS_LOOP_127_13|  return value|
+|grp_fu_1822_p_dout0      |   in|   64|  ap_ctrl_hs|  phc_step_Outline_VITIS_LOOP_127_13|  return value|
+|grp_fu_1822_p_ce         |  out|    1|  ap_ctrl_hs|  phc_step_Outline_VITIS_LOOP_127_13|  return value|
+|message_pre_address0     |  out|    4|   ap_memory|                         message_pre|         array|
+|message_pre_ce0          |  out|    1|   ap_memory|                         message_pre|         array|
+|message_pre_we0          |  out|    1|   ap_memory|                         message_pre|         array|
+|message_pre_d0           |  out|   40|   ap_memory|                         message_pre|         array|
+|state_temporal_address0  |  out|    4|   ap_memory|                      state_temporal|         array|
+|state_temporal_ce0       |  out|    1|   ap_memory|                      state_temporal|         array|
+|state_temporal_q0        |   in|   40|   ap_memory|                      state_temporal|         array|
+|state_temporal_address1  |  out|    4|   ap_memory|                      state_temporal|         array|
+|state_temporal_ce1       |  out|    1|   ap_memory|                      state_temporal|         array|
+|state_temporal_q1        |   in|   40|   ap_memory|                      state_temporal|         array|
++-------------------------+-----+-----+------------+------------------------------------+--------------+
+

@@ -1,0 +1,5 @@
+split,session_id,side,required_count,candidate_pool_size,method
+test,20260127Day,ask,159548,410586,finite_population_normal_1000_trials_matched_session_side
+test,20260127Day,bid,148537,410586,finite_population_normal_1000_trials_matched_session_side
+test,20260127Night,ask,282431,755735,finite_population_normal_1000_trials_matched_session_side
+test,20260127Night,bid,279993,755735,finite_population_normal_1000_trials_matched_session_side

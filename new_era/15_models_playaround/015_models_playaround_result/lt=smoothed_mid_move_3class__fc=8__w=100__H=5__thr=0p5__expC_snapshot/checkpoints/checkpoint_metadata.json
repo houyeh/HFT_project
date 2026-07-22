@@ -1,0 +1,33 @@
+{
+  "best_epoch": 30,
+  "best_val_acc": 0.5803386040568599,
+  "feature_count": 8,
+  "horizon": 5,
+  "label_type": "smoothed_mid_move_3class",
+  "num_classes": 3,
+  "num_inputs": 8,
+  "num_parameters": 4515,
+  "selected_features": [
+    "obi",
+    "queue_imbalance",
+    "weighted_mid_deviation",
+    "trade_intensity_short",
+    "deep_obi",
+    "queue_imbalance_change",
+    "normalized_spread",
+    "cancel_pressure_short"
+  ],
+  "threshold_ticks": 0.5,
+  "weights_path": "C:\\Users\\holbo\\00VS_projjects\\00_HFT_project\\new_era\\15_models_playaround\\015_models_playaround_result\\lt=smoothed_mid_move_3class__fc=8__w=100__H=5__thr=0p5\\checkpoints\\tcn_weights.pth",
+  "window_size": 100,
+  "z_features": [
+    "obi_z",
+    "queue_imbalance_z",
+    "weighted_mid_deviation_z",
+    "trade_intensity_short_z",
+    "deep_obi_z",
+    "queue_imbalance_change_z",
+    "normalized_spread_z",
+    "cancel_pressure_short_z"
+  ]
+}

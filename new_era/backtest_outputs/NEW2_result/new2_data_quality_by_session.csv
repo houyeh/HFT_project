@@ -1,0 +1,4 @@
+﻿session_id,lob_rows,num_nonfinite_bid_or_ask,num_bid_le_0,num_ask_le_0,num_ask_le_bid,spread_min,spread_median,spread_mean,spread_max
+20260121Day,705922,0,0,0,0,1.0,3.0,2.844137170962231,150.0
+20260122Day,944718,0,0,0,0,1.0,3.0,2.504529393956715,15.0
+20260122Night,820521,0,0,0,0,1.0,2.0,2.2002800659580926,225.0

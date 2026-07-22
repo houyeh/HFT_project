@@ -1,0 +1,6 @@
+split,policy_id,horizon,state_count,selected_action_count,selection_rate,bid_count,ask_count,no_quote_count,total_excess_pnl_H20,avg_selected_excess,win_rate,negative_rate,max_drawdown,positive_session_count,session_count,post_hoc_diagnostic_only,new5_used_for_selection
+post_hoc_diagnostic_only_not_fresh_holdout,no_quote,20,25494,0,0.0,0,0,25494,0.0,0.0,0.0,0.0,0.0,0,1,True,False
+post_hoc_diagnostic_only_not_fresh_holdout,old_bid_only_spread_ge_1,20,25494,25494,1.0,25494,0,0,-333895.0,-13.097003216443085,0.3606338746371695,0.639326900447164,335450.0,0,1,True,False
+post_hoc_diagnostic_only_not_fresh_holdout,side_by_queue_imbalance_abs_0p1,20,25494,20979,0.8228995057660626,10259,10720,4515,361030.0,17.20911387578054,0.4302874302874303,0.5696649029982364,4640.0,1,1,True,False
+post_hoc_diagnostic_only_not_fresh_holdout,ml_hgb_regressor_shallow_convergence_selected,20,25494,19219,0.7538636541931435,9996,9223,6275,487430.0,25.361881471460535,0.45756803163536086,0.5423799365211509,3595.0,1,1,True,False
+post_hoc_diagnostic_only_not_fresh_holdout,phc_lite_posthoc_new5,20,25494,19819,0.7773986035930023,9982,9837,5675,582715.0,29.401836621423886,0.47197134063272617,0.5280286593672738,3580.0,1,1,True,False

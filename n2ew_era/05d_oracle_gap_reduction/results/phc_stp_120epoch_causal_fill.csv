@@ -1,0 +1,4 @@
+split,policy_id,sequential_excess_pnl,fill_count,forced_no_quote_count,max_abs_inventory,max_drawdown,win_rate,loss_rate,fill_uses_future_pnl,new5_used
+val,phc_stp_120epoch,181945.0,6737,0,1,2605.0,0.4691999406263916,0.5308000593736084,False,False
+new3,phc_stp_120epoch,606750.0,17550,0,1,5170.0,0.5063817663817664,0.4936182336182336,False,False
+new4,phc_stp_120epoch,129555.0,4144,2556,1,2370.0,0.4946911196911197,0.5053088803088803,False,False

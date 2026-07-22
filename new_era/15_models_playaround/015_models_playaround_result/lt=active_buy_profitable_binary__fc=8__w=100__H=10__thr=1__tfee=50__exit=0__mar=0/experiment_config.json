@@ -1,0 +1,55 @@
+{
+  "backtest": {
+    "allow_active_alpha": false,
+    "maker_fee_twd": 15.0,
+    "max_inventory": 3,
+    "point_value_twd_per_point": 200.0,
+    "sample_stride": 1,
+    "symbol": "TXFB6",
+    "taker_fee_twd": 50.0
+  },
+  "data": {
+    "data_dir": "C:\\Users\\holbo\\00VS_projjects\\00_HFT_project\\data\\NEW",
+    "symbols": [
+      "TXFB6"
+    ],
+    "zscore_window": 2000
+  },
+  "features": {
+    "feature_count": 8
+  },
+  "labels": {
+    "adverse_threshold_ticks": 1.0,
+    "exit_cost_ticks": 0.0,
+    "label_type": "active_buy_profitable_binary",
+    "margin_ticks": 0.0,
+    "point_value_twd_per_point": 200.0,
+    "taker_fee_twd": 50.0
+  },
+  "model": {
+    "channel_list": [
+      16,
+      16,
+      16
+    ],
+    "dropout": 0.1,
+    "kernel_size": 3
+  },
+  "split": {
+    "train_session_frac": 0.7,
+    "val_session_frac": 0.15
+  },
+  "train": {
+    "batch_size": 1024,
+    "device": "auto",
+    "epochs": 30,
+    "lr": 0.001,
+    "seed": 42
+  },
+  "window": {
+    "horizon": 10,
+    "sample_stride_train": 5,
+    "threshold_ticks": 1.0,
+    "window_size": 100
+  }
+}

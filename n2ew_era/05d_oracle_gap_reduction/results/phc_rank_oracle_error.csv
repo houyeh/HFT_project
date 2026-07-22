@@ -1,0 +1,16 @@
+split,policy_id,error_type,state_count,error_rate
+val,phc_rank_head,correct_selected,29670,0.35764223722275795
+val,phc_rank_head,false_positive,18643,0.22472275795564128
+val,phc_rank_head,missed_opportunity,13980,0.16851494696239153
+val,phc_rank_head,side_error,13907,0.16763500482160076
+val,phc_rank_head,correct_no_quote,6760,0.08148505303760849
+new3,phc_rank_head,correct_selected,70413,0.39836722224108084
+new3,phc_rank_head,false_positive,36119,0.20434615341095533
+new3,phc_rank_head,side_error,32584,0.18434660601740271
+new3,phc_rank_head,missed_opportunity,26711,0.1511196351992034
+new3,phc_rank_head,correct_no_quote,10927,0.06182038313135771
+new4,phc_rank_head,correct_selected,26350,0.38399883415913727
+new4,phc_rank_head,false_positive,13899,0.2025502768872049
+new4,phc_rank_head,side_error,12788,0.1863596619061498
+new4,phc_rank_head,missed_opportunity,11058,0.1611483532497814
+new4,phc_rank_head,correct_no_quote,4525,0.0659428737977266

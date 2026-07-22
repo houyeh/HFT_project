@@ -1,0 +1,6 @@
+check,historical_setting,new4_setting,status,notes
+point_value,200.0,200.0,match,Both evaluations use common_027.POINT_VALUE imported from 026 baseline utilities.
+maker_fee,15.0,15.0,match,Both evaluations use common_027.MAKER_FEE imported from 026 baseline utilities.
+tick_size,1.0,1.0,match,NEW4 tick size is inferred from observed valid L1 prices.
+symbol,TXFB6,TXFA6,review,NEW4 detected symbol is used only for external OOS evaluation.
+loader,load_new_tw_data / binary_labels_v2 derived from same raw format,load_new_tw_data,match,NEW4 is read with the same canonical TW loader.

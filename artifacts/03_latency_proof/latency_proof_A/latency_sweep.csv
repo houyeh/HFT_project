@@ -1,0 +1,5 @@
+latency_steps,fill_rate,adverse_selection_loss_ticks,realized_trades,fills,quote_updates,toxicity_freeze_events,net_pnl_ticks,avg_pnl_ticks,win_rate,avg_holding_steps,sharpe_like
+0,0.02830188679245283,15.0,3,3,106,0,-15.0,-5.0,0.0,1.6666666666666667,-5.0
+1,0.038461538461538464,1.0,1,1,26,0,-1.0,-1.0,0.0,10.0,0.0
+2,0.0,0.0,0,0,2,0,0.0,0.0,0.0,0.0,0.0
+4,0.0,0.0,0,0,2,0,0.0,0.0,0.0,0.0,0.0

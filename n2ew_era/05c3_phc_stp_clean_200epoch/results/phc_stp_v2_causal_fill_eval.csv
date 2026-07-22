@@ -1,0 +1,4 @@
+split,policy_id,horizon,fill_model,inventory_cap,fee_multiplier,sequential_excess_pnl,fill_count,forced_no_quote_count,max_abs_inventory,max_drawdown,win_rate,loss_rate,avg_trade_excess_pnl,fill_uses_future_pnl,phase,new5_used_for_selection,phc_lite_v1_causal_fill_pnl,delta_vs_v1_causal_fill_pnl,delta_pct_vs_v1_causal_fill_pnl
+val,phc_stp_v2_clean_200epoch,20,conservative_l2_stress,1,1.0,191525.0,6625,0,1,2545.0,0.47426415094339625,0.5257358490566038,28.90943396226415,False,05c3,False,170310.0,21215.0,0.12456696612060361
+new3,phc_stp_v2_clean_200epoch,20,conservative_l2_stress,1,1.0,527500.0,15081,2339,1,2955.0,0.5095152841323519,0.4904184072674226,34.977786618924476,False,05c3,False,488870.0,38630.0,0.07901896209626282
+new4,phc_stp_v2_clean_200epoch,20,conservative_l2_stress,1,1.0,134580.0,4049,2562,1,1840.0,0.5008644109656706,0.4991355890343295,33.23783650284021,False,05c3,False,121765.0,12815.0,0.10524370714080401

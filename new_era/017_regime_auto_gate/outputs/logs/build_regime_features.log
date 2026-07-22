@@ -1,0 +1,6 @@
+2026-05-21 03:28:34,143 INFO Loading config and model from C:\Users\holbo\00VS_projjects\00_HFT_project\new_era\15_models_playaround\015_models_playaround_result\lt=smoothed_mid_move_3class__fc=8__w=100__H=5__thr=0p5__expC_snapshot
+2026-05-21 03:28:34,154 INFO Building causal regime features for NEW from C:\Users\holbo\00VS_projjects\00_HFT_project\data\NEW_ALL
+2026-05-21 03:56:23,886 INFO Saved 5322624 rows to C:\Users\holbo\00VS_projjects\00_HFT_project\new_era\017_regime_auto_gate\outputs\features\regime_features_NEW.csv
+2026-05-21 03:56:23,886 INFO Building causal regime features for NEW3 from C:\Users\holbo\00VS_projjects\00_HFT_project\data\NEW3
+2026-05-21 04:15:23,475 INFO Saved 5657398 rows to C:\Users\holbo\00VS_projjects\00_HFT_project\new_era\017_regime_auto_gate\outputs\features\regime_features_NEW3.csv
+2026-05-21 04:15:23,689 INFO Feature build complete.

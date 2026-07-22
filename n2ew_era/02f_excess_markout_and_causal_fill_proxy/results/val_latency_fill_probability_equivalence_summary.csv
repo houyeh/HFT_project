@@ -1,0 +1,2 @@
+split,policy_id,fill_model,selected_action_count,different_probability_count,different_probability_rate,max_abs_probability_diff,mean_abs_probability_diff,diff_epsilon,indistinguishable_threshold_rate,proxy_indistinguishable,cpu_raw_latency_source,fpga_latency_us
+val,side_by_queue_imbalance_abs_0p1,conservative_l2_stress,468627,427,0.0009111724249776475,0.2575757575757576,4.4809842471780324e-05,1e-12,0.001,True,C:\Users\holbo\00VS_projjects\00_HFT_project\n2ew_era\06f_phc_lite_manual_hls\results\cpu_baseline_timing_libtorch_raw.csv,83.16

@@ -1,0 +1,4 @@
+split,policy_id,model_id,horizon,threshold,state_count,selected_action_count,bid_count,ask_count,total_excess_pnl,max_drawdown,selection_rate
+test,phase03b_selected_simple_ml_action_value,hgb_regressor_shallow,20,0.0,1166321,870509,428530,441979,20709870.0,26375.0,0.746371710704
+new4,phase03b_selected_simple_ml_action_value,hgb_regressor_shallow,20,0.0,2196640,1621093,802623,818470,27081275.0,68420.0,0.7379875628232209
+new3,phase03b_selected_simple_ml_action_value,hgb_regressor_shallow,20,0.0,5657362,4185481,2078114,2107367,76868860.0,72175.0,0.7398290934891563

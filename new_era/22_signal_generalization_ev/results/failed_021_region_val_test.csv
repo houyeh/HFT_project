@@ -1,0 +1,2 @@
+variable,val_mean,test_mean,mean_diff_test_minus_val,val_sample_count,test_sample_count,val_total_stress_quote_pnl,test_total_stress_quote_pnl,interpretation
+021_selected_region,-0.3180214731431911,-0.10191169175726968,0.21610978138592146,715219,1423242,-227455.0,-145045.0,Region quoted by failed 021 EV_s2_lam5_thr0 policy.

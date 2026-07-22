@@ -1,0 +1,7 @@
+split,session_id,source_rows,action_rows,part_path
+new3,20260113,1277836,3833508,C:\Users\holbo\00VS_projjects\00_HFT_project\n2ew_era\02e_final_non_ml_feasibility_decision\data\full_l2_action_universe_new3.parquet\part-20260113.parquet
+new3,20260114,910661,2731983,C:\Users\holbo\00VS_projjects\00_HFT_project\n2ew_era\02e_final_non_ml_feasibility_decision\data\full_l2_action_universe_new3.parquet\part-20260114.parquet
+new3,20260115,976150,2928450,C:\Users\holbo\00VS_projjects\00_HFT_project\n2ew_era\02e_final_non_ml_feasibility_decision\data\full_l2_action_universe_new3.parquet\part-20260115.parquet
+new3,20260116,976422,2929266,C:\Users\holbo\00VS_projjects\00_HFT_project\n2ew_era\02e_final_non_ml_feasibility_decision\data\full_l2_action_universe_new3.parquet\part-20260116.parquet
+new3,20260119Day,1365489,4096467,C:\Users\holbo\00VS_projjects\00_HFT_project\n2ew_era\02e_final_non_ml_feasibility_decision\data\full_l2_action_universe_new3.parquet\part-20260119Day.parquet
+new3,20260330,150804,452412,C:\Users\holbo\00VS_projjects\00_HFT_project\n2ew_era\02e_final_non_ml_feasibility_decision\data\full_l2_action_universe_new3.parquet\part-20260330.parquet

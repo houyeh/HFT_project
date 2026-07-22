@@ -1,0 +1,159 @@
+MEETING REVISE:
+
+
+
+
+
+====================================================================
+cd n2ew_era/06l_phc_lite_pipeline_budget_sweep/hls_component
+
+vitis-run.bat --mode hls --csim --config hls_config.cfg --work_dir hls_component
+
+vitis-run.bat --mode hls --syn  --config hls_config.cfg --work_dir hls_component
+
+====================================================================
+
+
+
+
+
+階段	工作項目	時程	預期產出
+Phase 1（已
+完成）	HLS 資源優化、csim / cosim
+/ P&R 驗證、CPU 基準對照	已完成	v8 設計與完整驗證
+報告
+Phase 2	INT16 量化（ap_fixed<16,8>）	1 周	量化版 csynth／csim
+ 報告，工程預估延遲
+約 25 µs（待確認）
+Phase 3	PS–PL 整合與 PYNQ-Z2 上板測試	Phase2 後2周	實機量測延遲，與 P&R 估算對照
+Phase 4	隱藏層維度縮減評估（16→8維）		精度與延遲權衡報告
+Phase 5（複賽延伸方向）	模型與合成策略升級實驗
+（詳見下方）	七月中旬	延遲／資源／訊號品質三方權衡報告
+Phase 6	決賽報告與簡報整理	決賽前	最終報告、簡報、問答清單
+
+
+
+
+
+
+
+
+
+
+
+2.4 這個猜會不會成交的機率模型是什麼 用現在簡單的講法講出來很好，但還是要給出具體的量化做法
+沒考慮滑價 延遲等 那有考慮什麼? 手續費之類的呢
+
+因為這個被擋下來的成交而影響的數據如何？
+
+為什麼既然win rate低還是賺錢？這樣代表用擲骰子都可以贏比較多嗎？
+
+給出測試最高可行上界的codex 實驗prompt
+3.3判斷自然收斂的依據是什麼
+
+n2ew_era\03a_ml_readiness_excess_markout\figures\bucket_lift_queue_imbalance.png
+所以我們的結論是那些feature可以用？為什麼？
+
+3.4的缺口補起來了 請看
+
+
+
+
+
+現在該給PHC開鎖NEW5嗎
+
+現在測試的方法
+- 只考慮哪一段的時間？
+- 現在的PnL是什麼？代理PnL又是怎麼做的？怎麼樣可以算賺/賠 進出場依據？
+
+更淺顯易懂的講回測方法 現在2.1講得太難了
+
+side_by_queue_imbalance_abs_0p1	2,040,260	NEW3	5,731,540	True
+side_by_queue_imbalance_abs_0p1	2,040,260	NEW4	2,075,260	True
+
+這兩個為什麼val會一樣？
+
+2.4的oracle headroom怎麼知道不是笨造成的 那具體可用 預期想達到的上界要怎麼抓
+
+圖表的PnL怎麼來的
+
+
+3.1 （縱軸：動作/列數，log scale；說明從原始事件到最終可報價動作經過哪些篩選步驟，每一階逐漸減少）] 這怎麼說明的
+
+（不同切分 train/val/test 之間特徵分布是否一致的快照）] 這個可以解釋到什麼結果
+
+[插入圖表：n2ew_era\02_short_horizon_sequential_proxy_baselines\figures\selected_policy_equity_curves.png（橫軸：依時間順序downsample後的事件索引；縱軸：累積短horizon代理PnL曲線）]
+這張圖又說明了什麼？
+
+之後每張圖都要在下面直接為我準備好這張圖的數據解釋 以及意義說明
+
+不用特別定義哪個phase做了什麼 又 只要聚焦在我的成果就好了
+
+
+3.4 轉折點 2：03B6「ML輸給簡單規則」被04B1的TXF篩選逆轉（最大的方法論缺口，尚未有明確解釋
+再次檢視這個缺口有沒有補起來了 如果還沒則給我prompt讓我叫codex做實驗然後補起來
+
+
+解釋什麼是PHC 用的Huber loss
+
+其他關於圖表的細節也要在上面提到的下面解釋部分中提及 包含但不限於圖表各指標 軸等的意義 因此一整個4. 常見圖表座標軸速查部分理應要直接寫到各個有用到該指標的圖表下方
+
+
+
+之前的舊資料事先做原本的路徑B，再轉到路徑A(new_era) 再轉到目前的n2ew_era
+
+不要把它當成是一個陌生不能改的東西，只要用最合理的方式去解釋就好，像是reset的原因 之前沒寫完整就再加上去就好了
+
+原本TCN遇到什麼問題 -->PHC有什麼特性所以解決?不然感覺好像矇到的 少了一點邏輯性\
+
+PHC先用淺顯易懂的概念說明 再引入專業的講法以及實作方式
+
+一開始怎麼確認訓練資料的狀態？
+
+PHC因為有遞迴的概念所以可以超越原本的HGB?
+PHCSSM是這個: https://arxiv.org/abs/2604.01295
+
+
+[05c1→05c2→05c3→05c4→05d]  4種生物啟發消融實驗（Dale's Law/STP/收斂修法/
+   餘弦退火）—— 05c4自稱"應採用"但05d總結卻"維持v1不變"，
+   兩份報告彼此矛盾，目前未對齊（你要主動跟教授說明這個未決狀態）
+
+這個狀態是怎麼來的 現在還沒報告 要怎麼修正
+
+[06c→06d]  重新嘗試hls4ml把TCN自動轉HLS：TCN效能不如PHC，且hls4ml
+   兩次都失敗（ConstantPad1d解析錯誤 / torch.fx控制流追蹤錯誤），
+   從未產出任何C++專案
+
+最後TCN HLS合成不出來嗎？
+
+reset的理由？列出所有的理由 不要只看文件說什麼，看所有內容表示顯現了什麼
+
+像是01不是也定義了很多資料集的樣式/特徵選取的部分嗎？這些根本的東西也很重要
+
+DATA_CONTRACT.md：逐欄位標註是否causal（因果，只用過去資訊）或future（含未來資訊），規定任何future label的allowed_as_feature必須是no。14個允許作feature的causal特徵：spread_ticks, queue_imbalance, deep_imbalance, top_depth, depth ratio, event_rate_past_50, inter_arrival_ms, volatility_past_50, abs_return_past_50, imbalance_change_past, spread_change_past, hawkes_excite(optional)等。future labels（pnl_H1/5/10/20/50/100等）禁止作feature；terminal_quote_ev只能用於診斷，不能是優化目標——這條規則直接對應第1.3節reset理由中「terminal quote EV虛高」的教訓。
+
+列出這些feature的計算方式以及意義
+
+
+EVALUATION_CONTRACT.md：主優化目標改為sequential proxy PnL（逐tick模擬下單→成交→平倉），不是一次性的terminal quote EV。Horizon集合H=1,5,10,20,50,100。五層baseline階層：No quote → Old baseline → Simple L2 rule → Best Val non-ML rule → ML full-action model。明確禁止在凍結split上調參。
+這個詳細是怎麼做
+
+02f確認殘餘訊號存在，評估資料是否準備好上ML：這個部分是怎麼確定的？
+
+03a5 pre_ml_freeze_audit	03a結論，正式上ML前凍結標籤/特徵/split	6道hard gate逐一檢查，含split獨立性稽核	6道關卡全PASS；但發現event_rate_past_50等3個動態特徵在02f parquet中缺失，禁用直到因果重建。狀態freeze_pass_with_minor_caveats。PRE_ML_FREEZE_AUDIT_REPORT.md	continue
+03a6 root_cause_feature_and_contract_closure	03a5「動態特徵缺失」警示	重建動態特徵；決定絕對價格能否作特徵	絕對價格決策=forbid（凍結OOS下排序相關性過弱）。6道封閉關卡全PASS。狀態phase03b_permission_granted_with_constraints。ROOT_CAUSE_CLOSURE_REPORT.md	continue
+這邊有因果重建了嗎?這個特徵是怎麼做出來的？
+
+所以HGB的最終狀況？到底有沒有確認收斂可用？
+
+最後是只看TXF-only 嗎？這樣總共的資料用了多少？狀態？
+
+oracle代表？畢竟都偷看了 根本不可能做到，那在這樣的狀況下差多少是合理的？
+
+05c4與05d之間的版本判定矛盾，尚未找到任何後續文件正式解決或裁定：給出prompt讓codex agent去解決
+
+
+
+
+
+

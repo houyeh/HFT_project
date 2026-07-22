@@ -1,0 +1,883 @@
+  **** HLS Build v2025.2 6295257
+INFO: [HLS 200-2005] Using work_dir C:/Users/holbo/00VS_projjects/00_HFT_project/n2ew_era/07b_tcn_prepad_manual_hls/hls_component_distilled/hls_component 
+INFO: [HLS 200-2176] Writing Vitis IDE component file C:/Users/holbo/00VS_projjects/00_HFT_project/n2ew_era/07b_tcn_prepad_manual_hls/hls_component_distilled/hls_component/vitis-comp.json
+INFO: [HLS 200-10] Creating and opening component 'C:/Users/holbo/00VS_projjects/00_HFT_project/n2ew_era/07b_tcn_prepad_manual_hls/hls_component_distilled/hls_component'.
+INFO: [HLS 200-1505] Using default flow_target 'vivado'
+Resolution: For help on HLS 200-1505 see docs.amd.com/access/sources/dita/topic?Doc_Version=2025.2%20English&url=ug1448-hls-guidance&resourceid=200-1505.html
+INFO: [HLS 200-2174] Applying component config ini file ../hls_config.cfg
+INFO: [HLS 200-1465] Applying config ini 'syn.file=C:/Users/holbo/00VS_projjects/00_HFT_project/n2ew_era/07b_tcn_prepad_manual_hls/hls_src/tcn_prepad_hls_distilled.cpp' from ../hls_config.cfg(8)
+INFO: [HLS 200-10] Adding design file 'C:/Users/holbo/00VS_projjects/00_HFT_project/n2ew_era/07b_tcn_prepad_manual_hls/hls_src/tcn_prepad_hls_distilled.cpp' to the project
+INFO: [HLS 200-1465] Applying config ini 'syn.file=C:/Users/holbo/00VS_projjects/00_HFT_project/n2ew_era/07b_tcn_prepad_manual_hls/hls_src/tcn_prepad_hls.hpp' from ../hls_config.cfg(9)
+INFO: [HLS 200-10] Adding design file 'C:/Users/holbo/00VS_projjects/00_HFT_project/n2ew_era/07b_tcn_prepad_manual_hls/hls_src/tcn_prepad_hls.hpp' to the project
+INFO: [HLS 200-1465] Applying config ini 'syn.file=C:/Users/holbo/00VS_projjects/00_HFT_project/n2ew_era/07b_tcn_prepad_manual_hls/hls_src/tcn_prepad_hls_impl.hpp' from ../hls_config.cfg(10)
+INFO: [HLS 200-10] Adding design file 'C:/Users/holbo/00VS_projjects/00_HFT_project/n2ew_era/07b_tcn_prepad_manual_hls/hls_src/tcn_prepad_hls_impl.hpp' to the project
+INFO: [HLS 200-1465] Applying config ini 'syn.file=C:/Users/holbo/00VS_projjects/00_HFT_project/n2ew_era/07b_tcn_prepad_manual_hls/hls_src/tcn_weights_distilled.hpp' from ../hls_config.cfg(11)
+INFO: [HLS 200-10] Adding design file 'C:/Users/holbo/00VS_projjects/00_HFT_project/n2ew_era/07b_tcn_prepad_manual_hls/hls_src/tcn_weights_distilled.hpp' to the project
+INFO: [HLS 200-1465] Applying config ini 'tb.file=C:/Users/holbo/00VS_projjects/00_HFT_project/n2ew_era/07b_tcn_prepad_manual_hls/hls_src/tcn_prepad_testbench.cpp' from ../hls_config.cfg(12)
+INFO: [HLS 200-10] Adding test bench file 'C:/Users/holbo/00VS_projjects/00_HFT_project/n2ew_era/07b_tcn_prepad_manual_hls/hls_src/tcn_prepad_testbench.cpp' to the project
+INFO: [HLS 200-1465] Applying config ini 'syn.top=tcn_prepad_infer' from ../hls_config.cfg(7)
+INFO: [HLS 200-1465] Applying config ini 'flow_target=vivado' from ../hls_config.cfg(4)
+INFO: [HLS 200-1505] Using flow_target 'vivado'
+Resolution: For help on HLS 200-1505 see docs.amd.com/access/sources/dita/topic?Doc_Version=2025.2%20English&url=ug1448-hls-guidance&resourceid=200-1505.html
+INFO: [HLS 200-1465] Applying config ini 'part=xc7z020clg400-1' from ../hls_config.cfg(1)
+INFO: [HLS 200-1611] Setting target device to 'xc7z020-clg400-1'
+INFO: [HLS 200-1465] Applying config ini 'clock=10ns' from ../hls_config.cfg(13)
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 10ns.
+INFO: [HLS 200-1465] Applying config ini 'cosim.argv=C:/Users/holbo/00VS_projjects/00_HFT_project/n2ew_era/07b_tcn_prepad_manual_hls/results/tcn_prepad_distilled_test_vectors.csv C:/Users/holbo/00VS_projjects/00_HFT_project/n2ew_era/07b_tcn_prepad_manual_hls/results/tcn_prepad_distilled_cosim_out.csv' from ../hls_config.cfg(15)
+INFO: [HLS 200-1465] Applying config ini 'csim.argv=C:/Users/holbo/00VS_projjects/00_HFT_project/n2ew_era/07b_tcn_prepad_manual_hls/results/tcn_prepad_distilled_test_vectors.csv C:/Users/holbo/00VS_projjects/00_HFT_project/n2ew_era/07b_tcn_prepad_manual_hls/results/tcn_prepad_distilled_csim_out.csv' from ../hls_config.cfg(14)
+INFO: [HLS 200-1465] Applying config ini 'package.output.format=ip_catalog' from ../hls_config.cfg(5)
+INFO: [HLS 200-2176] Writing Vitis IDE component file C:/Users/holbo/00VS_projjects/00_HFT_project/n2ew_era/07b_tcn_prepad_manual_hls/hls_component_distilled/hls_component/vitis-comp.json
+INFO: [HLS 200-111] Finished File checks and directory preparation: CPU user time: 1 seconds. CPU system time: 1 seconds. Elapsed time: 8.85 seconds; current allocated memory: 134.879 MB.
+INFO: [HLS 200-2191] C-Synthesis will use clang-16 as the compiler
+INFO: [HLS 200-10] Analyzing design file 'C:/Users/holbo/00VS_projjects/00_HFT_project/n2ew_era/07b_tcn_prepad_manual_hls/hls_src/tcn_prepad_hls_distilled.cpp' ... 
+INFO: [HLS 200-111] Finished Source Code Analysis and Preprocessing: CPU user time: 0 seconds. CPU system time: 1 seconds. Elapsed time: 16.951 seconds; current allocated memory: 137.656 MB.
+INFO: [HLS 200-777] Using interface defaults for 'Vivado' flow target.
+INFO: [HLS 200-1995] There were 11,960 instructions in the design after the 'Compile/Link' phase of compilation. See the Design Size Report for more details (C:/Users/holbo/00VS_projjects/00_HFT_project/n2ew_era/07b_tcn_prepad_manual_hls/hls_component_distilled/hls_component/hls/syn/report/csynth_design_size.rpt:2)
+INFO: [HLS 200-1995] There were 11,805 instructions in the design after the 'Unroll/Inline (step 1)' phase of compilation. See the Design Size Report for more details (C:/Users/holbo/00VS_projjects/00_HFT_project/n2ew_era/07b_tcn_prepad_manual_hls/hls_component_distilled/hls_component/hls/syn/report/csynth_design_size.rpt:2)
+INFO: [HLS 200-1995] There were 3,589 instructions in the design after the 'Unroll/Inline (step 2)' phase of compilation. See the Design Size Report for more details (C:/Users/holbo/00VS_projjects/00_HFT_project/n2ew_era/07b_tcn_prepad_manual_hls/hls_component_distilled/hls_component/hls/syn/report/csynth_design_size.rpt:2)
+INFO: [HLS 200-1995] There were 3,522 instructions in the design after the 'Unroll/Inline (step 3)' phase of compilation. See the Design Size Report for more details (C:/Users/holbo/00VS_projjects/00_HFT_project/n2ew_era/07b_tcn_prepad_manual_hls/hls_component_distilled/hls_component/hls/syn/report/csynth_design_size.rpt:2)
+INFO: [HLS 200-1995] There were 3,490 instructions in the design after the 'Unroll/Inline (step 4)' phase of compilation. See the Design Size Report for more details (C:/Users/holbo/00VS_projjects/00_HFT_project/n2ew_era/07b_tcn_prepad_manual_hls/hls_component_distilled/hls_component/hls/syn/report/csynth_design_size.rpt:2)
+INFO: [HLS 200-1995] There were 3,451 instructions in the design after the 'Array/Struct (step 1)' phase of compilation. See the Design Size Report for more details (C:/Users/holbo/00VS_projjects/00_HFT_project/n2ew_era/07b_tcn_prepad_manual_hls/hls_component_distilled/hls_component/hls/syn/report/csynth_design_size.rpt:2)
+INFO: [HLS 200-1995] There were 3,451 instructions in the design after the 'Array/Struct (step 2)' phase of compilation. See the Design Size Report for more details (C:/Users/holbo/00VS_projjects/00_HFT_project/n2ew_era/07b_tcn_prepad_manual_hls/hls_component_distilled/hls_component/hls/syn/report/csynth_design_size.rpt:2)
+INFO: [HLS 200-1995] There were 3,467 instructions in the design after the 'Array/Struct (step 3)' phase of compilation. See the Design Size Report for more details (C:/Users/holbo/00VS_projjects/00_HFT_project/n2ew_era/07b_tcn_prepad_manual_hls/hls_component_distilled/hls_component/hls/syn/report/csynth_design_size.rpt:2)
+INFO: [HLS 200-1995] There were 3,483 instructions in the design after the 'Array/Struct (step 4)' phase of compilation. See the Design Size Report for more details (C:/Users/holbo/00VS_projjects/00_HFT_project/n2ew_era/07b_tcn_prepad_manual_hls/hls_component_distilled/hls_component/hls/syn/report/csynth_design_size.rpt:2)
+INFO: [HLS 200-1995] There were 3,514 instructions in the design after the 'Array/Struct (step 5)' phase of compilation. See the Design Size Report for more details (C:/Users/holbo/00VS_projjects/00_HFT_project/n2ew_era/07b_tcn_prepad_manual_hls/hls_component_distilled/hls_component/hls/syn/report/csynth_design_size.rpt:2)
+INFO: [HLS 200-1995] There were 3,482 instructions in the design after the 'Performance' phase of compilation. See the Design Size Report for more details (C:/Users/holbo/00VS_projjects/00_HFT_project/n2ew_era/07b_tcn_prepad_manual_hls/hls_component_distilled/hls_component/hls/syn/report/csynth_design_size.rpt:2)
+INFO: [HLS 200-1995] There were 3,451 instructions in the design after the 'Performance (step 2)' phase of compilation. See the Design Size Report for more details (C:/Users/holbo/00VS_projjects/00_HFT_project/n2ew_era/07b_tcn_prepad_manual_hls/hls_component_distilled/hls_component/hls/syn/report/csynth_design_size.rpt:2)
+INFO: [HLS 200-1995] There were 16,558 instructions in the design after the 'Performance (step 3)' phase of compilation. See the Design Size Report for more details (C:/Users/holbo/00VS_projjects/00_HFT_project/n2ew_era/07b_tcn_prepad_manual_hls/hls_component_distilled/hls_component/hls/syn/report/csynth_design_size.rpt:2)
+INFO: [HLS 200-1995] There were 3,636 instructions in the design after the 'Performance (step 4)' phase of compilation. See the Design Size Report for more details (C:/Users/holbo/00VS_projjects/00_HFT_project/n2ew_era/07b_tcn_prepad_manual_hls/hls_component_distilled/hls_component/hls/syn/report/csynth_design_size.rpt:2)
+INFO: [HLS 200-1995] There were 3,636 instructions in the design after the 'HW Transforms (step 1)' phase of compilation. See the Design Size Report for more details (C:/Users/holbo/00VS_projjects/00_HFT_project/n2ew_era/07b_tcn_prepad_manual_hls/hls_component_distilled/hls_component/hls/syn/report/csynth_design_size.rpt:2)
+INFO: [HLS 200-1995] There were 3,821 instructions in the design after the 'HW Transforms (step 2)' phase of compilation. See the Design Size Report for more details (C:/Users/holbo/00VS_projjects/00_HFT_project/n2ew_era/07b_tcn_prepad_manual_hls/hls_component_distilled/hls_component/hls/syn/report/csynth_design_size.rpt:2)
+INFO: [HLS 214-131] Inlining function '(anonymous namespace)::relu_acc(ap_fixed<40, 16, (ap_q_mode)5, (ap_o_mode)3, 0>)' into 'void (anonymous namespace)::conv1_relu<252, 1>(ap_fixed<24, 12, (ap_q_mode)5, (ap_o_mode)3, 0> const (*) [16], ap_fixed<24, 12, (ap_q_mode)5, (ap_o_mode)3, 0> (*) [16], int)' (C:/Users/holbo/00VS_projjects/00_HFT_project/n2ew_era/07b_tcn_prepad_manual_hls/hls_src/tcn_prepad_hls_impl.hpp:60:39)
+INFO: [HLS 214-131] Inlining function '(anonymous namespace)::relu_acc(ap_fixed<40, 16, (ap_q_mode)5, (ap_o_mode)3, 0>)' into 'void (anonymous namespace)::conv2_relu_residual<252, 1>(ap_fixed<24, 12, (ap_q_mode)5, (ap_o_mode)3, 0> const (*) [16], ap_fixed<24, 12, (ap_q_mode)5, (ap_o_mode)3, 0> const (*) [16], ap_fixed<24, 12, (ap_q_mode)5, (ap_o_mode)3, 0> (*) [16], int)' (C:/Users/holbo/00VS_projjects/00_HFT_project/n2ew_era/07b_tcn_prepad_manual_hls/hls_src/tcn_prepad_hls_impl.hpp:88:39)
+INFO: [HLS 214-131] Inlining function '(anonymous namespace)::relu_acc(ap_fixed<40, 16, (ap_q_mode)5, (ap_o_mode)3, 0>)' into 'void (anonymous namespace)::conv1_relu<248, 2>(ap_fixed<24, 12, (ap_q_mode)5, (ap_o_mode)3, 0> const (*) [16], ap_fixed<24, 12, (ap_q_mode)5, (ap_o_mode)3, 0> (*) [16], int)' (C:/Users/holbo/00VS_projjects/00_HFT_project/n2ew_era/07b_tcn_prepad_manual_hls/hls_src/tcn_prepad_hls_impl.hpp:60:39)
+INFO: [HLS 214-131] Inlining function '(anonymous namespace)::relu_acc(ap_fixed<40, 16, (ap_q_mode)5, (ap_o_mode)3, 0>)' into 'void (anonymous namespace)::conv2_relu_residual<248, 2>(ap_fixed<24, 12, (ap_q_mode)5, (ap_o_mode)3, 0> const (*) [16], ap_fixed<24, 12, (ap_q_mode)5, (ap_o_mode)3, 0> const (*) [16], ap_fixed<24, 12, (ap_q_mode)5, (ap_o_mode)3, 0> (*) [16], int)' (C:/Users/holbo/00VS_projjects/00_HFT_project/n2ew_era/07b_tcn_prepad_manual_hls/hls_src/tcn_prepad_hls_impl.hpp:88:39)
+INFO: [HLS 214-131] Inlining function '(anonymous namespace)::relu_acc(ap_fixed<40, 16, (ap_q_mode)5, (ap_o_mode)3, 0>)' into 'void (anonymous namespace)::conv1_relu<240, 4>(ap_fixed<24, 12, (ap_q_mode)5, (ap_o_mode)3, 0> const (*) [16], ap_fixed<24, 12, (ap_q_mode)5, (ap_o_mode)3, 0> (*) [16], int)' (C:/Users/holbo/00VS_projjects/00_HFT_project/n2ew_era/07b_tcn_prepad_manual_hls/hls_src/tcn_prepad_hls_impl.hpp:60:39)
+INFO: [HLS 214-131] Inlining function '(anonymous namespace)::relu_acc(ap_fixed<40, 16, (ap_q_mode)5, (ap_o_mode)3, 0>)' into 'void (anonymous namespace)::conv2_relu_residual<240, 4>(ap_fixed<24, 12, (ap_q_mode)5, (ap_o_mode)3, 0> const (*) [16], ap_fixed<24, 12, (ap_q_mode)5, (ap_o_mode)3, 0> const (*) [16], ap_fixed<24, 12, (ap_q_mode)5, (ap_o_mode)3, 0> (*) [16], int)' (C:/Users/holbo/00VS_projjects/00_HFT_project/n2ew_era/07b_tcn_prepad_manual_hls/hls_src/tcn_prepad_hls_impl.hpp:88:39)
+INFO: [HLS 214-131] Inlining function '(anonymous namespace)::relu_acc(ap_fixed<40, 16, (ap_q_mode)5, (ap_o_mode)3, 0>)' into 'void (anonymous namespace)::conv1_relu<224, 8>(ap_fixed<24, 12, (ap_q_mode)5, (ap_o_mode)3, 0> const (*) [16], ap_fixed<24, 12, (ap_q_mode)5, (ap_o_mode)3, 0> (*) [16], int)' (C:/Users/holbo/00VS_projjects/00_HFT_project/n2ew_era/07b_tcn_prepad_manual_hls/hls_src/tcn_prepad_hls_impl.hpp:60:39)
+INFO: [HLS 214-131] Inlining function '(anonymous namespace)::relu_acc(ap_fixed<40, 16, (ap_q_mode)5, (ap_o_mode)3, 0>)' into 'void (anonymous namespace)::conv2_relu_residual<224, 8>(ap_fixed<24, 12, (ap_q_mode)5, (ap_o_mode)3, 0> const (*) [16], ap_fixed<24, 12, (ap_q_mode)5, (ap_o_mode)3, 0> const (*) [16], ap_fixed<24, 12, (ap_q_mode)5, (ap_o_mode)3, 0> (*) [16], int)' (C:/Users/holbo/00VS_projjects/00_HFT_project/n2ew_era/07b_tcn_prepad_manual_hls/hls_src/tcn_prepad_hls_impl.hpp:88:39)
+INFO: [HLS 214-131] Inlining function '(anonymous namespace)::relu_acc(ap_fixed<40, 16, (ap_q_mode)5, (ap_o_mode)3, 0>)' into 'void (anonymous namespace)::conv1_relu<192, 16>(ap_fixed<24, 12, (ap_q_mode)5, (ap_o_mode)3, 0> const (*) [16], ap_fixed<24, 12, (ap_q_mode)5, (ap_o_mode)3, 0> (*) [16], int)' (C:/Users/holbo/00VS_projjects/00_HFT_project/n2ew_era/07b_tcn_prepad_manual_hls/hls_src/tcn_prepad_hls_impl.hpp:60:39)
+INFO: [HLS 214-131] Inlining function '(anonymous namespace)::relu_acc(ap_fixed<40, 16, (ap_q_mode)5, (ap_o_mode)3, 0>)' into 'void (anonymous namespace)::conv2_relu_residual<192, 16>(ap_fixed<24, 12, (ap_q_mode)5, (ap_o_mode)3, 0> const (*) [16], ap_fixed<24, 12, (ap_q_mode)5, (ap_o_mode)3, 0> const (*) [16], ap_fixed<24, 12, (ap_q_mode)5, (ap_o_mode)3, 0> (*) [16], int)' (C:/Users/holbo/00VS_projjects/00_HFT_project/n2ew_era/07b_tcn_prepad_manual_hls/hls_src/tcn_prepad_hls_impl.hpp:88:39)
+INFO: [HLS 214-359] Unrolling loop 'VITIS_LOOP_123_4' (C:/Users/holbo/00VS_projjects/00_HFT_project/n2ew_era/07b_tcn_prepad_manual_hls/hls_src/tcn_prepad_hls_impl.hpp:123:27) in function '(anonymous namespace)::global_average_readout': changing partial unrolling into complete unrolling since the unrolling factor (=16) is no less than the loop trip count (=16). (C:/Users/holbo/00VS_projjects/00_HFT_project/n2ew_era/07b_tcn_prepad_manual_hls/hls_src/tcn_prepad_hls_impl.hpp:108:0)
+INFO: [HLS 214-186] Unrolling loop 'VITIS_LOOP_123_4' (C:/Users/holbo/00VS_projjects/00_HFT_project/n2ew_era/07b_tcn_prepad_manual_hls/hls_src/tcn_prepad_hls_impl.hpp:123:27) in function '(anonymous namespace)::global_average_readout' completely with a factor of 16 (C:/Users/holbo/00VS_projjects/00_HFT_project/n2ew_era/07b_tcn_prepad_manual_hls/hls_src/tcn_prepad_hls_impl.hpp:108:0)
+INFO: [HLS 214-359] Unrolling loop 'VITIS_LOOP_80_4' (C:/Users/holbo/00VS_projjects/00_HFT_project/n2ew_era/07b_tcn_prepad_manual_hls/hls_src/tcn_prepad_hls_impl.hpp:80:34) in function '(anonymous namespace)::conv2_relu_residual<192, 16>': changing partial unrolling into complete unrolling since the unrolling factor (=16) is no less than the loop trip count (=16). (C:/Users/holbo/00VS_projjects/00_HFT_project/n2ew_era/07b_tcn_prepad_manual_hls/hls_src/tcn_prepad_hls_impl.hpp:71:0)
+INFO: [HLS 214-186] Unrolling loop 'VITIS_LOOP_80_4' (C:/Users/holbo/00VS_projjects/00_HFT_project/n2ew_era/07b_tcn_prepad_manual_hls/hls_src/tcn_prepad_hls_impl.hpp:80:34) in function '(anonymous namespace)::conv2_relu_residual<192, 16>' completely with a factor of 16 (C:/Users/holbo/00VS_projjects/00_HFT_project/n2ew_era/07b_tcn_prepad_manual_hls/hls_src/tcn_prepad_hls_impl.hpp:71:0)
+INFO: [HLS 214-359] Unrolling loop 'VITIS_LOOP_54_4' (C:/Users/holbo/00VS_projjects/00_HFT_project/n2ew_era/07b_tcn_prepad_manual_hls/hls_src/tcn_prepad_hls_impl.hpp:54:34) in function '(anonymous namespace)::conv1_relu<192, 16>': changing partial unrolling into complete unrolling since the unrolling factor (=16) is no less than the loop trip count (=16). (C:/Users/holbo/00VS_projjects/00_HFT_project/n2ew_era/07b_tcn_prepad_manual_hls/hls_src/tcn_prepad_hls_impl.hpp:45:0)
+INFO: [HLS 214-186] Unrolling loop 'VITIS_LOOP_54_4' (C:/Users/holbo/00VS_projjects/00_HFT_project/n2ew_era/07b_tcn_prepad_manual_hls/hls_src/tcn_prepad_hls_impl.hpp:54:34) in function '(anonymous namespace)::conv1_relu<192, 16>' completely with a factor of 16 (C:/Users/holbo/00VS_projjects/00_HFT_project/n2ew_era/07b_tcn_prepad_manual_hls/hls_src/tcn_prepad_hls_impl.hpp:45:0)
+INFO: [HLS 214-359] Unrolling loop 'VITIS_LOOP_80_4' (C:/Users/holbo/00VS_projjects/00_HFT_project/n2ew_era/07b_tcn_prepad_manual_hls/hls_src/tcn_prepad_hls_impl.hpp:80:34) in function '(anonymous namespace)::conv2_relu_residual<224, 8>': changing partial unrolling into complete unrolling since the unrolling factor (=16) is no less than the loop trip count (=16). (C:/Users/holbo/00VS_projjects/00_HFT_project/n2ew_era/07b_tcn_prepad_manual_hls/hls_src/tcn_prepad_hls_impl.hpp:71:0)
+INFO: [HLS 214-186] Unrolling loop 'VITIS_LOOP_80_4' (C:/Users/holbo/00VS_projjects/00_HFT_project/n2ew_era/07b_tcn_prepad_manual_hls/hls_src/tcn_prepad_hls_impl.hpp:80:34) in function '(anonymous namespace)::conv2_relu_residual<224, 8>' completely with a factor of 16 (C:/Users/holbo/00VS_projjects/00_HFT_project/n2ew_era/07b_tcn_prepad_manual_hls/hls_src/tcn_prepad_hls_impl.hpp:71:0)
+INFO: [HLS 214-359] Unrolling loop 'VITIS_LOOP_54_4' (C:/Users/holbo/00VS_projjects/00_HFT_project/n2ew_era/07b_tcn_prepad_manual_hls/hls_src/tcn_prepad_hls_impl.hpp:54:34) in function '(anonymous namespace)::conv1_relu<224, 8>': changing partial unrolling into complete unrolling since the unrolling factor (=16) is no less than the loop trip count (=16). (C:/Users/holbo/00VS_projjects/00_HFT_project/n2ew_era/07b_tcn_prepad_manual_hls/hls_src/tcn_prepad_hls_impl.hpp:45:0)
+INFO: [HLS 214-186] Unrolling loop 'VITIS_LOOP_54_4' (C:/Users/holbo/00VS_projjects/00_HFT_project/n2ew_era/07b_tcn_prepad_manual_hls/hls_src/tcn_prepad_hls_impl.hpp:54:34) in function '(anonymous namespace)::conv1_relu<224, 8>' completely with a factor of 16 (C:/Users/holbo/00VS_projjects/00_HFT_project/n2ew_era/07b_tcn_prepad_manual_hls/hls_src/tcn_prepad_hls_impl.hpp:45:0)
+INFO: [HLS 214-359] Unrolling loop 'VITIS_LOOP_80_4' (C:/Users/holbo/00VS_projjects/00_HFT_project/n2ew_era/07b_tcn_prepad_manual_hls/hls_src/tcn_prepad_hls_impl.hpp:80:34) in function '(anonymous namespace)::conv2_relu_residual<240, 4>': changing partial unrolling into complete unrolling since the unrolling factor (=16) is no less than the loop trip count (=16). (C:/Users/holbo/00VS_projjects/00_HFT_project/n2ew_era/07b_tcn_prepad_manual_hls/hls_src/tcn_prepad_hls_impl.hpp:71:0)
+INFO: [HLS 214-186] Unrolling loop 'VITIS_LOOP_80_4' (C:/Users/holbo/00VS_projjects/00_HFT_project/n2ew_era/07b_tcn_prepad_manual_hls/hls_src/tcn_prepad_hls_impl.hpp:80:34) in function '(anonymous namespace)::conv2_relu_residual<240, 4>' completely with a factor of 16 (C:/Users/holbo/00VS_projjects/00_HFT_project/n2ew_era/07b_tcn_prepad_manual_hls/hls_src/tcn_prepad_hls_impl.hpp:71:0)
+INFO: [HLS 214-359] Unrolling loop 'VITIS_LOOP_54_4' (C:/Users/holbo/00VS_projjects/00_HFT_project/n2ew_era/07b_tcn_prepad_manual_hls/hls_src/tcn_prepad_hls_impl.hpp:54:34) in function '(anonymous namespace)::conv1_relu<240, 4>': changing partial unrolling into complete unrolling since the unrolling factor (=16) is no less than the loop trip count (=16). (C:/Users/holbo/00VS_projjects/00_HFT_project/n2ew_era/07b_tcn_prepad_manual_hls/hls_src/tcn_prepad_hls_impl.hpp:45:0)
+INFO: [HLS 214-186] Unrolling loop 'VITIS_LOOP_54_4' (C:/Users/holbo/00VS_projjects/00_HFT_project/n2ew_era/07b_tcn_prepad_manual_hls/hls_src/tcn_prepad_hls_impl.hpp:54:34) in function '(anonymous namespace)::conv1_relu<240, 4>' completely with a factor of 16 (C:/Users/holbo/00VS_projjects/00_HFT_project/n2ew_era/07b_tcn_prepad_manual_hls/hls_src/tcn_prepad_hls_impl.hpp:45:0)
+INFO: [HLS 214-359] Unrolling loop 'VITIS_LOOP_80_4' (C:/Users/holbo/00VS_projjects/00_HFT_project/n2ew_era/07b_tcn_prepad_manual_hls/hls_src/tcn_prepad_hls_impl.hpp:80:34) in function '(anonymous namespace)::conv2_relu_residual<248, 2>': changing partial unrolling into complete unrolling since the unrolling factor (=16) is no less than the loop trip count (=16). (C:/Users/holbo/00VS_projjects/00_HFT_project/n2ew_era/07b_tcn_prepad_manual_hls/hls_src/tcn_prepad_hls_impl.hpp:71:0)
+INFO: [HLS 214-186] Unrolling loop 'VITIS_LOOP_80_4' (C:/Users/holbo/00VS_projjects/00_HFT_project/n2ew_era/07b_tcn_prepad_manual_hls/hls_src/tcn_prepad_hls_impl.hpp:80:34) in function '(anonymous namespace)::conv2_relu_residual<248, 2>' completely with a factor of 16 (C:/Users/holbo/00VS_projjects/00_HFT_project/n2ew_era/07b_tcn_prepad_manual_hls/hls_src/tcn_prepad_hls_impl.hpp:71:0)
+INFO: [HLS 214-359] Unrolling loop 'VITIS_LOOP_54_4' (C:/Users/holbo/00VS_projjects/00_HFT_project/n2ew_era/07b_tcn_prepad_manual_hls/hls_src/tcn_prepad_hls_impl.hpp:54:34) in function '(anonymous namespace)::conv1_relu<248, 2>': changing partial unrolling into complete unrolling since the unrolling factor (=16) is no less than the loop trip count (=16). (C:/Users/holbo/00VS_projjects/00_HFT_project/n2ew_era/07b_tcn_prepad_manual_hls/hls_src/tcn_prepad_hls_impl.hpp:45:0)
+INFO: [HLS 214-186] Unrolling loop 'VITIS_LOOP_54_4' (C:/Users/holbo/00VS_projjects/00_HFT_project/n2ew_era/07b_tcn_prepad_manual_hls/hls_src/tcn_prepad_hls_impl.hpp:54:34) in function '(anonymous namespace)::conv1_relu<248, 2>' completely with a factor of 16 (C:/Users/holbo/00VS_projjects/00_HFT_project/n2ew_era/07b_tcn_prepad_manual_hls/hls_src/tcn_prepad_hls_impl.hpp:45:0)
+INFO: [HLS 214-359] Unrolling loop 'VITIS_LOOP_80_4' (C:/Users/holbo/00VS_projjects/00_HFT_project/n2ew_era/07b_tcn_prepad_manual_hls/hls_src/tcn_prepad_hls_impl.hpp:80:34) in function '(anonymous namespace)::conv2_relu_residual<252, 1>': changing partial unrolling into complete unrolling since the unrolling factor (=16) is no less than the loop trip count (=16). (C:/Users/holbo/00VS_projjects/00_HFT_project/n2ew_era/07b_tcn_prepad_manual_hls/hls_src/tcn_prepad_hls_impl.hpp:71:0)
+INFO: [HLS 214-186] Unrolling loop 'VITIS_LOOP_80_4' (C:/Users/holbo/00VS_projjects/00_HFT_project/n2ew_era/07b_tcn_prepad_manual_hls/hls_src/tcn_prepad_hls_impl.hpp:80:34) in function '(anonymous namespace)::conv2_relu_residual<252, 1>' completely with a factor of 16 (C:/Users/holbo/00VS_projjects/00_HFT_project/n2ew_era/07b_tcn_prepad_manual_hls/hls_src/tcn_prepad_hls_impl.hpp:71:0)
+INFO: [HLS 214-359] Unrolling loop 'VITIS_LOOP_54_4' (C:/Users/holbo/00VS_projjects/00_HFT_project/n2ew_era/07b_tcn_prepad_manual_hls/hls_src/tcn_prepad_hls_impl.hpp:54:34) in function '(anonymous namespace)::conv1_relu<252, 1>': changing partial unrolling into complete unrolling since the unrolling factor (=16) is no less than the loop trip count (=16). (C:/Users/holbo/00VS_projjects/00_HFT_project/n2ew_era/07b_tcn_prepad_manual_hls/hls_src/tcn_prepad_hls_impl.hpp:45:0)
+INFO: [HLS 214-186] Unrolling loop 'VITIS_LOOP_54_4' (C:/Users/holbo/00VS_projjects/00_HFT_project/n2ew_era/07b_tcn_prepad_manual_hls/hls_src/tcn_prepad_hls_impl.hpp:54:34) in function '(anonymous namespace)::conv1_relu<252, 1>' completely with a factor of 16 (C:/Users/holbo/00VS_projjects/00_HFT_project/n2ew_era/07b_tcn_prepad_manual_hls/hls_src/tcn_prepad_hls_impl.hpp:45:0)
+INFO: [HLS 214-359] Unrolling loop 'VITIS_LOOP_28_2' (C:/Users/holbo/00VS_projjects/00_HFT_project/n2ew_era/07b_tcn_prepad_manual_hls/hls_src/tcn_prepad_hls_impl.hpp:28:26) in function '(anonymous namespace)::copy_and_prepad<252>': changing partial unrolling into complete unrolling since the unrolling factor (=16) is no less than the loop trip count (=16). (C:/Users/holbo/00VS_projjects/00_HFT_project/n2ew_era/07b_tcn_prepad_manual_hls/hls_src/tcn_prepad_hls_impl.hpp:24:0)
+INFO: [HLS 214-186] Unrolling loop 'VITIS_LOOP_28_2' (C:/Users/holbo/00VS_projjects/00_HFT_project/n2ew_era/07b_tcn_prepad_manual_hls/hls_src/tcn_prepad_hls_impl.hpp:28:26) in function '(anonymous namespace)::copy_and_prepad<252>' completely with a factor of 16 (C:/Users/holbo/00VS_projjects/00_HFT_project/n2ew_era/07b_tcn_prepad_manual_hls/hls_src/tcn_prepad_hls_impl.hpp:24:0)
+INFO: [HLS 214-241] Aggregating bram variable 'x' with compact=bit mode in 24-bits
+INFO: [HLS 214-421] Partitioning small array 'tcn_weights::FC_B' due to array size. (C:/Users/holbo/00VS_projjects/00_HFT_project/n2ew_era/07b_tcn_prepad_manual_hls/hls_src/tcn_weights_distilled.hpp:2933:0)
+INFO: [HLS 214-449] Partitioning array 'tcn_weights::FC_W' dimension 2 due to constant index. (C:/Users/holbo/00VS_projjects/00_HFT_project/n2ew_era/07b_tcn_prepad_manual_hls/hls_src/tcn_weights_distilled.hpp:2929:0)
+INFO: [HLS 214-449] Partitioning array 'tcn_weights::CONV2_B' dimension 1 due to constant index. (C:/Users/holbo/00VS_projjects/00_HFT_project/n2ew_era/07b_tcn_prepad_manual_hls/hls_src/tcn_weights_distilled.hpp:2922:0)
+INFO: [HLS 214-449] Partitioning array 'tcn_weights::CONV2_W' dimension 1 due to constant index. (C:/Users/holbo/00VS_projjects/00_HFT_project/n2ew_era/07b_tcn_prepad_manual_hls/hls_src/tcn_weights_distilled.hpp:1470:0)
+INFO: [HLS 214-449] Partitioning array 'tcn_weights::CONV2_W' dimension 3 due to constant index. (C:/Users/holbo/00VS_projjects/00_HFT_project/n2ew_era/07b_tcn_prepad_manual_hls/hls_src/tcn_weights_distilled.hpp:1470:0)
+INFO: [HLS 214-449] Partitioning array 'tcn_weights::CONV1_B' dimension 1 due to constant index. (C:/Users/holbo/00VS_projjects/00_HFT_project/n2ew_era/07b_tcn_prepad_manual_hls/hls_src/tcn_weights_distilled.hpp:1463:0)
+INFO: [HLS 214-449] Partitioning array 'tcn_weights::CONV1_W' dimension 1 due to constant index. (C:/Users/holbo/00VS_projjects/00_HFT_project/n2ew_era/07b_tcn_prepad_manual_hls/hls_src/tcn_weights_distilled.hpp:11:0)
+INFO: [HLS 214-449] Partitioning array 'tcn_weights::CONV1_W' dimension 3 due to constant index. (C:/Users/holbo/00VS_projjects/00_HFT_project/n2ew_era/07b_tcn_prepad_manual_hls/hls_src/tcn_weights_distilled.hpp:11:0)
+INFO: [HLS 214-248] Applying array_partition to '_ZN11tcn_weightsL7CONV2_WE': Complete partitioning on dimension 1. Complete partitioning on dimension 3. (C:/Users/holbo/00VS_projjects/00_HFT_project/n2ew_era/07b_tcn_prepad_manual_hls/hls_src/tcn_weights_distilled.hpp:1470:0)
+INFO: [HLS 214-248] Applying array_partition to '_ZN11tcn_weightsL7CONV2_BE': Complete partitioning on dimension 1. (C:/Users/holbo/00VS_projjects/00_HFT_project/n2ew_era/07b_tcn_prepad_manual_hls/hls_src/tcn_weights_distilled.hpp:2922:0)
+INFO: [HLS 214-248] Applying array_partition to '_ZN11tcn_weightsL7CONV1_WE': Complete partitioning on dimension 1. Complete partitioning on dimension 3. (C:/Users/holbo/00VS_projjects/00_HFT_project/n2ew_era/07b_tcn_prepad_manual_hls/hls_src/tcn_weights_distilled.hpp:11:0)
+INFO: [HLS 214-248] Applying array_partition to '_ZN11tcn_weightsL7CONV1_BE': Complete partitioning on dimension 1. (C:/Users/holbo/00VS_projjects/00_HFT_project/n2ew_era/07b_tcn_prepad_manual_hls/hls_src/tcn_weights_distilled.hpp:1463:0)
+INFO: [HLS 214-248] Applying array_partition to '_ZN11tcn_weightsL4FC_WE': Complete partitioning on dimension 2. (C:/Users/holbo/00VS_projjects/00_HFT_project/n2ew_era/07b_tcn_prepad_manual_hls/hls_src/tcn_weights_distilled.hpp:2929:0)
+INFO: [HLS 214-248] Applying array_partition to '_ZN11tcn_weightsL4FC_BE': Complete partitioning on dimension 1. (C:/Users/holbo/00VS_projjects/00_HFT_project/n2ew_era/07b_tcn_prepad_manual_hls/hls_src/tcn_weights_distilled.hpp:2933:0)
+INFO: [HLS 200-111] Finished Compiling Optimization and Transform: CPU user time: 1 seconds. CPU system time: 0 seconds. Elapsed time: 19.096 seconds; current allocated memory: 142.066 MB.
+INFO: [HLS 200-111] Finished Checking Pragmas: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.004 seconds; current allocated memory: 142.066 MB.
+INFO: [HLS 200-10] Starting code transformations ...
+INFO: [HLS 200-111] Finished Standard Transforms: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.737 seconds; current allocated memory: 151.156 MB.
+INFO: [HLS 200-10] Checking synthesizability ...
+INFO: [HLS 200-111] Finished Checking Synthesizability: CPU user time: 1 seconds. CPU system time: 0 seconds. Elapsed time: 0.849 seconds; current allocated memory: 157.383 MB.
+INFO: [XFORM 203-401] Performing if-conversion on hyperblock from (C:/Users/holbo/00VS_projjects/00_HFT_project/n2ew_era/07b_tcn_prepad_manual_hls/hls_src/tcn_prepad_hls_impl.hpp:27:1) to (C:/Users/holbo/00VS_projjects/00_HFT_project/n2ew_era/07b_tcn_prepad_manual_hls/hls_src/tcn_prepad_hls_impl.hpp:26:22) in function '(anonymous namespace)::copy_and_prepad<252>'... converting 3 basic blocks.
+INFO: [HLS 200-111] Finished Loop, function and other optimizations: CPU user time: 2 seconds. CPU system time: 0 seconds. Elapsed time: 1.968 seconds; current allocated memory: 182.203 MB.
+INFO: [HLS 200-111] Finished Architecture Synthesis: CPU user time: 1 seconds. CPU system time: 0 seconds. Elapsed time: 1.878 seconds; current allocated memory: 334.086 MB.
+INFO: [HLS 200-10] Starting hardware synthesis ...
+INFO: [HLS 200-10] Synthesizing 'tcn_prepad_infer' ...
+WARNING: [SYN 201-103] Legalizing function name '(anonymous namespace)copy_and_prepad<252>' to 'p_anonymous_namespace_copy_and_prepad_252_s'.
+WARNING: [SYN 201-103] Legalizing function name '(anonymous namespace)conv1_relu<252, 1>9' to 'p_anonymous_namespace_conv1_relu_252_1_9'.
+WARNING: [SYN 201-103] Legalizing function name '(anonymous namespace)conv2_relu_residual<252, 1>8' to 'p_anonymous_namespace_conv2_relu_residual_252_1_8'.
+WARNING: [SYN 201-103] Legalizing function name '(anonymous namespace)tcn_block<252, 1>' to 'p_anonymous_namespace_tcn_block_252_1_s'.
+WARNING: [SYN 201-103] Legalizing function name '(anonymous namespace)conv1_relu<248, 2>11' to 'p_anonymous_namespace_conv1_relu_248_2_11'.
+WARNING: [SYN 201-103] Legalizing function name '(anonymous namespace)conv2_relu_residual<248, 2>10' to 'p_anonymous_namespace_conv2_relu_residual_248_2_10'.
+WARNING: [SYN 201-103] Legalizing function name '(anonymous namespace)tcn_block<248, 2>' to 'p_anonymous_namespace_tcn_block_248_2_s'.
+WARNING: [SYN 201-103] Legalizing function name '(anonymous namespace)conv1_relu<240, 4>13' to 'p_anonymous_namespace_conv1_relu_240_4_13'.
+WARNING: [SYN 201-103] Legalizing function name '(anonymous namespace)conv2_relu_residual<240, 4>12' to 'p_anonymous_namespace_conv2_relu_residual_240_4_12'.
+WARNING: [SYN 201-103] Legalizing function name '(anonymous namespace)tcn_block<240, 4>' to 'p_anonymous_namespace_tcn_block_240_4_s'.
+WARNING: [SYN 201-103] Legalizing function name '(anonymous namespace)conv1_relu<224, 8>15' to 'p_anonymous_namespace_conv1_relu_224_8_15'.
+WARNING: [SYN 201-103] Legalizing function name '(anonymous namespace)conv2_relu_residual<224, 8>14' to 'p_anonymous_namespace_conv2_relu_residual_224_8_14'.
+WARNING: [SYN 201-103] Legalizing function name '(anonymous namespace)tcn_block<224, 8>' to 'p_anonymous_namespace_tcn_block_224_8_s'.
+WARNING: [SYN 201-103] Legalizing function name '(anonymous namespace)conv1_relu<192, 16>17' to 'p_anonymous_namespace_conv1_relu_192_16_17'.
+WARNING: [SYN 201-103] Legalizing function name '(anonymous namespace)conv2_relu_residual<192, 16>16' to 'p_anonymous_namespace_conv2_relu_residual_192_16_16'.
+WARNING: [SYN 201-103] Legalizing function name '(anonymous namespace)tcn_block<192, 16>' to 'p_anonymous_namespace_tcn_block_192_16_s'.
+WARNING: [SYN 201-103] Legalizing function name '(anonymous namespace)global_average_readout' to 'p_anonymous_namespace_global_average_readout'.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'p_anonymous_namespace_copy_and_prepad_252_s' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 1 seconds. CPU system time: 0 seconds. Elapsed time: 0.703 seconds; current allocated memory: 339.285 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.108 seconds; current allocated memory: 340.527 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'p_anonymous_namespace_conv1_relu_252_1_9' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.299 seconds; current allocated memory: 343.168 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.086 seconds; current allocated memory: 343.398 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'p_anonymous_namespace_conv2_relu_residual_252_1_8' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.32 seconds; current allocated memory: 345.355 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.204 seconds; current allocated memory: 345.535 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'p_anonymous_namespace_tcn_block_252_1_s' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.176 seconds; current allocated memory: 345.605 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.043 seconds; current allocated memory: 345.781 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'p_anonymous_namespace_conv1_relu_248_2_11' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.231 seconds; current allocated memory: 347.758 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 1 seconds. CPU system time: 0 seconds. Elapsed time: 0.159 seconds; current allocated memory: 347.898 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'p_anonymous_namespace_conv2_relu_residual_248_2_10' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.293 seconds; current allocated memory: 350.098 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.183 seconds; current allocated memory: 350.574 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'p_anonymous_namespace_tcn_block_248_2_s' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.121 seconds; current allocated memory: 350.680 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.03 seconds; current allocated memory: 350.770 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'p_anonymous_namespace_conv1_relu_240_4_13' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.172 seconds; current allocated memory: 352.730 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.13 seconds; current allocated memory: 352.789 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'p_anonymous_namespace_conv2_relu_residual_240_4_12' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.291 seconds; current allocated memory: 355.160 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 1 seconds. CPU system time: 0 seconds. Elapsed time: 0.095 seconds; current allocated memory: 355.578 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'p_anonymous_namespace_tcn_block_240_4_s' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.166 seconds; current allocated memory: 355.688 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.026 seconds; current allocated memory: 355.754 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'p_anonymous_namespace_conv1_relu_224_8_15' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.201 seconds; current allocated memory: 357.523 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.105 seconds; current allocated memory: 357.867 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'p_anonymous_namespace_conv2_relu_residual_224_8_14' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0 seconds. CPU system time: 1 seconds. Elapsed time: 0.291 seconds; current allocated memory: 359.727 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.107 seconds; current allocated memory: 360.305 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'p_anonymous_namespace_tcn_block_224_8_s' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.121 seconds; current allocated memory: 360.504 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.032 seconds; current allocated memory: 360.570 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'p_anonymous_namespace_conv1_relu_192_16_17' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.218 seconds; current allocated memory: 362.117 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 1 seconds. CPU system time: 0 seconds. Elapsed time: 0.186 seconds; current allocated memory: 362.609 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'p_anonymous_namespace_conv2_relu_residual_192_16_16' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.279 seconds; current allocated memory: 364.277 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.14 seconds; current allocated memory: 365.117 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'p_anonymous_namespace_tcn_block_192_16_s' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.113 seconds; current allocated memory: 365.188 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.025 seconds; current allocated memory: 365.234 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'p_anonymous_namespace_global_average_readout' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.158 seconds; current allocated memory: 366.719 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.076 seconds; current allocated memory: 367.238 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'tcn_prepad_infer' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.088 seconds; current allocated memory: 367.527 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.063 seconds; current allocated memory: 368.410 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'p_anonymous_namespace_copy_and_prepad_252_s' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [RTGEN 206-100] Finished creating RTL model for 'p_anonymous_namespace_copy_and_prepad_252_s'.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.198 seconds; current allocated memory: 370.262 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'p_anonymous_namespace_conv1_relu_252_1_9' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SYN 201-210] Renamed object name 'p_anonymous_namespace_conv1_relu_252_1_9_p_ZN11tcn_weightsL7CONV1_BE_0_ROM_AUTO_1R' to 'p_anonymous_namespace_conv1_relu_252_1_9_p_ZN11tcn_weightsL7CONV1_BE_0_ROM_AUbkb' due to the length limit 80
+INFO: [SYN 201-210] Renamed object name 'p_anonymous_namespace_conv1_relu_252_1_9_p_ZN11tcn_weightsL7CONV1_WE_0_0_ROM_AUTO_1R' to 'p_anonymous_namespace_conv1_relu_252_1_9_p_ZN11tcn_weightsL7CONV1_WE_0_0_ROM_cud' due to the length limit 80
+INFO: [SYN 201-210] Renamed object name 'p_anonymous_namespace_conv1_relu_252_1_9_p_ZN11tcn_weightsL7CONV1_WE_0_1_ROM_AUTO_1R' to 'p_anonymous_namespace_conv1_relu_252_1_9_p_ZN11tcn_weightsL7CONV1_WE_0_1_ROM_dEe' due to the length limit 80
+INFO: [SYN 201-210] Renamed object name 'p_anonymous_namespace_conv1_relu_252_1_9_p_ZN11tcn_weightsL7CONV1_WE_0_2_ROM_AUTO_1R' to 'p_anonymous_namespace_conv1_relu_252_1_9_p_ZN11tcn_weightsL7CONV1_WE_0_2_ROM_eOg' due to the length limit 80
+INFO: [SYN 201-210] Renamed object name 'p_anonymous_namespace_conv1_relu_252_1_9_p_ZN11tcn_weightsL7CONV1_WE_0_3_ROM_AUTO_1R' to 'p_anonymous_namespace_conv1_relu_252_1_9_p_ZN11tcn_weightsL7CONV1_WE_0_3_ROM_fYi' due to the length limit 80
+INFO: [SYN 201-210] Renamed object name 'p_anonymous_namespace_conv1_relu_252_1_9_p_ZN11tcn_weightsL7CONV1_WE_0_4_ROM_AUTO_1R' to 'p_anonymous_namespace_conv1_relu_252_1_9_p_ZN11tcn_weightsL7CONV1_WE_0_4_ROM_g8j' due to the length limit 80
+INFO: [SYN 201-210] Renamed object name 'p_anonymous_namespace_conv1_relu_252_1_9_p_ZN11tcn_weightsL7CONV1_WE_0_5_ROM_AUTO_1R' to 'p_anonymous_namespace_conv1_relu_252_1_9_p_ZN11tcn_weightsL7CONV1_WE_0_5_ROM_hbi' due to the length limit 80
+INFO: [SYN 201-210] Renamed object name 'p_anonymous_namespace_conv1_relu_252_1_9_p_ZN11tcn_weightsL7CONV1_WE_0_6_ROM_AUTO_1R' to 'p_anonymous_namespace_conv1_relu_252_1_9_p_ZN11tcn_weightsL7CONV1_WE_0_6_ROM_ibs' due to the length limit 80
+INFO: [SYN 201-210] Renamed object name 'p_anonymous_namespace_conv1_relu_252_1_9_p_ZN11tcn_weightsL7CONV1_WE_0_7_ROM_AUTO_1R' to 'p_anonymous_namespace_conv1_relu_252_1_9_p_ZN11tcn_weightsL7CONV1_WE_0_7_ROM_jbC' due to the length limit 80
+INFO: [SYN 201-210] Renamed object name 'p_anonymous_namespace_conv1_relu_252_1_9_p_ZN11tcn_weightsL7CONV1_WE_0_8_ROM_AUTO_1R' to 'p_anonymous_namespace_conv1_relu_252_1_9_p_ZN11tcn_weightsL7CONV1_WE_0_8_ROM_kbM' due to the length limit 80
+INFO: [SYN 201-210] Renamed object name 'p_anonymous_namespace_conv1_relu_252_1_9_p_ZN11tcn_weightsL7CONV1_WE_0_9_ROM_AUTO_1R' to 'p_anonymous_namespace_conv1_relu_252_1_9_p_ZN11tcn_weightsL7CONV1_WE_0_9_ROM_lbW' due to the length limit 80
+INFO: [SYN 201-210] Renamed object name 'p_anonymous_namespace_conv1_relu_252_1_9_p_ZN11tcn_weightsL7CONV1_WE_0_10_ROM_AUTO_1R' to 'p_anonymous_namespace_conv1_relu_252_1_9_p_ZN11tcn_weightsL7CONV1_WE_0_10_ROMmb6' due to the length limit 80
+INFO: [SYN 201-210] Renamed object name 'p_anonymous_namespace_conv1_relu_252_1_9_p_ZN11tcn_weightsL7CONV1_WE_0_11_ROM_AUTO_1R' to 'p_anonymous_namespace_conv1_relu_252_1_9_p_ZN11tcn_weightsL7CONV1_WE_0_11_ROMncg' due to the length limit 80
+INFO: [SYN 201-210] Renamed object name 'p_anonymous_namespace_conv1_relu_252_1_9_p_ZN11tcn_weightsL7CONV1_WE_0_12_ROM_AUTO_1R' to 'p_anonymous_namespace_conv1_relu_252_1_9_p_ZN11tcn_weightsL7CONV1_WE_0_12_ROMocq' due to the length limit 80
+INFO: [SYN 201-210] Renamed object name 'p_anonymous_namespace_conv1_relu_252_1_9_p_ZN11tcn_weightsL7CONV1_WE_0_13_ROM_AUTO_1R' to 'p_anonymous_namespace_conv1_relu_252_1_9_p_ZN11tcn_weightsL7CONV1_WE_0_13_ROMpcA' due to the length limit 80
+INFO: [SYN 201-210] Renamed object name 'p_anonymous_namespace_conv1_relu_252_1_9_p_ZN11tcn_weightsL7CONV1_WE_0_14_ROM_AUTO_1R' to 'p_anonymous_namespace_conv1_relu_252_1_9_p_ZN11tcn_weightsL7CONV1_WE_0_14_ROMqcK' due to the length limit 80
+INFO: [SYN 201-210] Renamed object name 'p_anonymous_namespace_conv1_relu_252_1_9_p_ZN11tcn_weightsL7CONV1_WE_0_15_ROM_AUTO_1R' to 'p_anonymous_namespace_conv1_relu_252_1_9_p_ZN11tcn_weightsL7CONV1_WE_0_15_ROMrcU' due to the length limit 80
+INFO: [RTGEN 206-100] Generating core module 'mul_36s_23s_59_2_1': 2 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'mul_36s_24s_60_2_1': 2 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'mul_36s_25s_61_2_1': 2 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'mul_36s_26s_62_2_1': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'mul_36s_27s_63_2_1': 1 instance(s).
+INFO: [RTGEN 206-100] Finished creating RTL model for 'p_anonymous_namespace_conv1_relu_252_1_9'.
+INFO: [RTMG 210-279] Implementing memory 'tcn_prepad_infer_p_anonymous_namespace_conv1_relu_252_1_9_p_ZN11tcn_weightsL7CONV1_BE_0_ROM_AUbkb' using auto ROMs.
+INFO: [RTMG 210-279] Implementing memory 'tcn_prepad_infer_p_anonymous_namespace_conv1_relu_252_1_9_p_ZN11tcn_weightsL7CONV1_WE_0_0_ROM_cud' using auto ROMs.
+INFO: [RTMG 210-279] Implementing memory 'tcn_prepad_infer_p_anonymous_namespace_conv1_relu_252_1_9_p_ZN11tcn_weightsL7CONV1_WE_0_1_ROM_dEe' using auto ROMs.
+INFO: [RTMG 210-279] Implementing memory 'tcn_prepad_infer_p_anonymous_namespace_conv1_relu_252_1_9_p_ZN11tcn_weightsL7CONV1_WE_0_2_ROM_eOg' using auto ROMs.
+INFO: [RTMG 210-279] Implementing memory 'tcn_prepad_infer_p_anonymous_namespace_conv1_relu_252_1_9_p_ZN11tcn_weightsL7CONV1_WE_0_3_ROM_fYi' using auto ROMs.
+INFO: [RTMG 210-279] Implementing memory 'tcn_prepad_infer_p_anonymous_namespace_conv1_relu_252_1_9_p_ZN11tcn_weightsL7CONV1_WE_0_4_ROM_g8j' using auto ROMs.
+INFO: [RTMG 210-279] Implementing memory 'tcn_prepad_infer_p_anonymous_namespace_conv1_relu_252_1_9_p_ZN11tcn_weightsL7CONV1_WE_0_5_ROM_hbi' using auto ROMs.
+INFO: [RTMG 210-279] Implementing memory 'tcn_prepad_infer_p_anonymous_namespace_conv1_relu_252_1_9_p_ZN11tcn_weightsL7CONV1_WE_0_6_ROM_ibs' using auto ROMs.
+INFO: [RTMG 210-279] Implementing memory 'tcn_prepad_infer_p_anonymous_namespace_conv1_relu_252_1_9_p_ZN11tcn_weightsL7CONV1_WE_0_7_ROM_jbC' using auto ROMs.
+INFO: [RTMG 210-279] Implementing memory 'tcn_prepad_infer_p_anonymous_namespace_conv1_relu_252_1_9_p_ZN11tcn_weightsL7CONV1_WE_0_8_ROM_kbM' using auto ROMs.
+INFO: [RTMG 210-279] Implementing memory 'tcn_prepad_infer_p_anonymous_namespace_conv1_relu_252_1_9_p_ZN11tcn_weightsL7CONV1_WE_0_9_ROM_lbW' using auto ROMs.
+INFO: [RTMG 210-279] Implementing memory 'tcn_prepad_infer_p_anonymous_namespace_conv1_relu_252_1_9_p_ZN11tcn_weightsL7CONV1_WE_0_10_ROMmb6' using auto ROMs.
+INFO: [RTMG 210-279] Implementing memory 'tcn_prepad_infer_p_anonymous_namespace_conv1_relu_252_1_9_p_ZN11tcn_weightsL7CONV1_WE_0_11_ROMncg' using auto ROMs.
+INFO: [RTMG 210-279] Implementing memory 'tcn_prepad_infer_p_anonymous_namespace_conv1_relu_252_1_9_p_ZN11tcn_weightsL7CONV1_WE_0_12_ROMocq' using auto ROMs.
+INFO: [RTMG 210-279] Implementing memory 'tcn_prepad_infer_p_anonymous_namespace_conv1_relu_252_1_9_p_ZN11tcn_weightsL7CONV1_WE_0_13_ROMpcA' using auto ROMs.
+INFO: [RTMG 210-279] Implementing memory 'tcn_prepad_infer_p_anonymous_namespace_conv1_relu_252_1_9_p_ZN11tcn_weightsL7CONV1_WE_0_14_ROMqcK' using auto ROMs.
+INFO: [RTMG 210-279] Implementing memory 'tcn_prepad_infer_p_anonymous_namespace_conv1_relu_252_1_9_p_ZN11tcn_weightsL7CONV1_WE_0_15_ROMrcU' using auto ROMs.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 1 seconds. CPU system time: 0 seconds. Elapsed time: 2.261 seconds; current allocated memory: 376.102 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'p_anonymous_namespace_conv2_relu_residual_252_1_8' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SYN 201-210] Renamed object name 'p_anonymous_namespace_conv2_relu_residual_252_1_8_p_ZN11tcn_weightsL7CONV2_BE_0_ROM_AUTO_1R' to 'p_anonymous_namespace_conv2_relu_residual_252_1_8_p_ZN11tcn_weightsL7CONV2_BEsc4' due to the length limit 80
+INFO: [SYN 201-210] Renamed object name 'p_anonymous_namespace_conv2_relu_residual_252_1_8_p_ZN11tcn_weightsL7CONV2_WE_0_0_ROM_AUTO_1R' to 'p_anonymous_namespace_conv2_relu_residual_252_1_8_p_ZN11tcn_weightsL7CONV2_WEtde' due to the length limit 80
+INFO: [SYN 201-210] Renamed object name 'p_anonymous_namespace_conv2_relu_residual_252_1_8_p_ZN11tcn_weightsL7CONV2_WE_0_1_ROM_AUTO_1R' to 'p_anonymous_namespace_conv2_relu_residual_252_1_8_p_ZN11tcn_weightsL7CONV2_WEudo' due to the length limit 80
+INFO: [SYN 201-210] Renamed object name 'p_anonymous_namespace_conv2_relu_residual_252_1_8_p_ZN11tcn_weightsL7CONV2_WE_0_2_ROM_AUTO_1R' to 'p_anonymous_namespace_conv2_relu_residual_252_1_8_p_ZN11tcn_weightsL7CONV2_WEvdy' due to the length limit 80
+INFO: [SYN 201-210] Renamed object name 'p_anonymous_namespace_conv2_relu_residual_252_1_8_p_ZN11tcn_weightsL7CONV2_WE_0_3_ROM_AUTO_1R' to 'p_anonymous_namespace_conv2_relu_residual_252_1_8_p_ZN11tcn_weightsL7CONV2_WEwdI' due to the length limit 80
+INFO: [SYN 201-210] Renamed object name 'p_anonymous_namespace_conv2_relu_residual_252_1_8_p_ZN11tcn_weightsL7CONV2_WE_0_4_ROM_AUTO_1R' to 'p_anonymous_namespace_conv2_relu_residual_252_1_8_p_ZN11tcn_weightsL7CONV2_WExdS' due to the length limit 80
+INFO: [SYN 201-210] Renamed object name 'p_anonymous_namespace_conv2_relu_residual_252_1_8_p_ZN11tcn_weightsL7CONV2_WE_0_5_ROM_AUTO_1R' to 'p_anonymous_namespace_conv2_relu_residual_252_1_8_p_ZN11tcn_weightsL7CONV2_WEyd2' due to the length limit 80
+INFO: [SYN 201-210] Renamed object name 'p_anonymous_namespace_conv2_relu_residual_252_1_8_p_ZN11tcn_weightsL7CONV2_WE_0_6_ROM_AUTO_1R' to 'p_anonymous_namespace_conv2_relu_residual_252_1_8_p_ZN11tcn_weightsL7CONV2_WEzec' due to the length limit 80
+INFO: [SYN 201-210] Renamed object name 'p_anonymous_namespace_conv2_relu_residual_252_1_8_p_ZN11tcn_weightsL7CONV2_WE_0_7_ROM_AUTO_1R' to 'p_anonymous_namespace_conv2_relu_residual_252_1_8_p_ZN11tcn_weightsL7CONV2_WEAem' due to the length limit 80
+INFO: [SYN 201-210] Renamed object name 'p_anonymous_namespace_conv2_relu_residual_252_1_8_p_ZN11tcn_weightsL7CONV2_WE_0_8_ROM_AUTO_1R' to 'p_anonymous_namespace_conv2_relu_residual_252_1_8_p_ZN11tcn_weightsL7CONV2_WEBew' due to the length limit 80
+INFO: [SYN 201-210] Renamed object name 'p_anonymous_namespace_conv2_relu_residual_252_1_8_p_ZN11tcn_weightsL7CONV2_WE_0_9_ROM_AUTO_1R' to 'p_anonymous_namespace_conv2_relu_residual_252_1_8_p_ZN11tcn_weightsL7CONV2_WECeG' due to the length limit 80
+INFO: [SYN 201-210] Renamed object name 'p_anonymous_namespace_conv2_relu_residual_252_1_8_p_ZN11tcn_weightsL7CONV2_WE_0_10_ROM_AUTO_1R' to 'p_anonymous_namespace_conv2_relu_residual_252_1_8_p_ZN11tcn_weightsL7CONV2_WEDeQ' due to the length limit 80
+INFO: [SYN 201-210] Renamed object name 'p_anonymous_namespace_conv2_relu_residual_252_1_8_p_ZN11tcn_weightsL7CONV2_WE_0_11_ROM_AUTO_1R' to 'p_anonymous_namespace_conv2_relu_residual_252_1_8_p_ZN11tcn_weightsL7CONV2_WEEe0' due to the length limit 80
+INFO: [SYN 201-210] Renamed object name 'p_anonymous_namespace_conv2_relu_residual_252_1_8_p_ZN11tcn_weightsL7CONV2_WE_0_12_ROM_AUTO_1R' to 'p_anonymous_namespace_conv2_relu_residual_252_1_8_p_ZN11tcn_weightsL7CONV2_WEFfa' due to the length limit 80
+INFO: [SYN 201-210] Renamed object name 'p_anonymous_namespace_conv2_relu_residual_252_1_8_p_ZN11tcn_weightsL7CONV2_WE_0_13_ROM_AUTO_1R' to 'p_anonymous_namespace_conv2_relu_residual_252_1_8_p_ZN11tcn_weightsL7CONV2_WEGfk' due to the length limit 80
+INFO: [SYN 201-210] Renamed object name 'p_anonymous_namespace_conv2_relu_residual_252_1_8_p_ZN11tcn_weightsL7CONV2_WE_0_14_ROM_AUTO_1R' to 'p_anonymous_namespace_conv2_relu_residual_252_1_8_p_ZN11tcn_weightsL7CONV2_WEHfu' due to the length limit 80
+INFO: [SYN 201-210] Renamed object name 'p_anonymous_namespace_conv2_relu_residual_252_1_8_p_ZN11tcn_weightsL7CONV2_WE_0_15_ROM_AUTO_1R' to 'p_anonymous_namespace_conv2_relu_residual_252_1_8_p_ZN11tcn_weightsL7CONV2_WEIfE' due to the length limit 80
+INFO: [RTGEN 206-100] Generating core module 'mul_36s_24s_60_2_1': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'mul_36s_25s_61_2_1': 2 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'mul_36s_26s_62_2_1': 2 instance(s).
+INFO: [RTGEN 206-100] Finished creating RTL model for 'p_anonymous_namespace_conv2_relu_residual_252_1_8'.
+INFO: [RTMG 210-279] Implementing memory 'tcn_prepad_infer_p_anonymous_namespace_conv2_relu_residual_252_1_8_p_ZN11tcn_weightsL7CONV2_BEsc4' using auto ROMs.
+INFO: [RTMG 210-279] Implementing memory 'tcn_prepad_infer_p_anonymous_namespace_conv2_relu_residual_252_1_8_p_ZN11tcn_weightsL7CONV2_WEtde' using auto ROMs.
+INFO: [RTMG 210-279] Implementing memory 'tcn_prepad_infer_p_anonymous_namespace_conv2_relu_residual_252_1_8_p_ZN11tcn_weightsL7CONV2_WEudo' using auto ROMs.
+INFO: [RTMG 210-279] Implementing memory 'tcn_prepad_infer_p_anonymous_namespace_conv2_relu_residual_252_1_8_p_ZN11tcn_weightsL7CONV2_WEvdy' using auto ROMs.
+INFO: [RTMG 210-279] Implementing memory 'tcn_prepad_infer_p_anonymous_namespace_conv2_relu_residual_252_1_8_p_ZN11tcn_weightsL7CONV2_WEwdI' using auto ROMs.
+INFO: [RTMG 210-279] Implementing memory 'tcn_prepad_infer_p_anonymous_namespace_conv2_relu_residual_252_1_8_p_ZN11tcn_weightsL7CONV2_WExdS' using auto ROMs.
+INFO: [RTMG 210-279] Implementing memory 'tcn_prepad_infer_p_anonymous_namespace_conv2_relu_residual_252_1_8_p_ZN11tcn_weightsL7CONV2_WEyd2' using auto ROMs.
+INFO: [RTMG 210-279] Implementing memory 'tcn_prepad_infer_p_anonymous_namespace_conv2_relu_residual_252_1_8_p_ZN11tcn_weightsL7CONV2_WEzec' using auto ROMs.
+INFO: [RTMG 210-279] Implementing memory 'tcn_prepad_infer_p_anonymous_namespace_conv2_relu_residual_252_1_8_p_ZN11tcn_weightsL7CONV2_WEAem' using auto ROMs.
+INFO: [RTMG 210-279] Implementing memory 'tcn_prepad_infer_p_anonymous_namespace_conv2_relu_residual_252_1_8_p_ZN11tcn_weightsL7CONV2_WEBew' using auto ROMs.
+INFO: [RTMG 210-279] Implementing memory 'tcn_prepad_infer_p_anonymous_namespace_conv2_relu_residual_252_1_8_p_ZN11tcn_weightsL7CONV2_WECeG' using auto ROMs.
+INFO: [RTMG 210-279] Implementing memory 'tcn_prepad_infer_p_anonymous_namespace_conv2_relu_residual_252_1_8_p_ZN11tcn_weightsL7CONV2_WEDeQ' using auto ROMs.
+INFO: [RTMG 210-279] Implementing memory 'tcn_prepad_infer_p_anonymous_namespace_conv2_relu_residual_252_1_8_p_ZN11tcn_weightsL7CONV2_WEEe0' using auto ROMs.
+INFO: [RTMG 210-279] Implementing memory 'tcn_prepad_infer_p_anonymous_namespace_conv2_relu_residual_252_1_8_p_ZN11tcn_weightsL7CONV2_WEFfa' using auto ROMs.
+INFO: [RTMG 210-279] Implementing memory 'tcn_prepad_infer_p_anonymous_namespace_conv2_relu_residual_252_1_8_p_ZN11tcn_weightsL7CONV2_WEGfk' using auto ROMs.
+INFO: [RTMG 210-279] Implementing memory 'tcn_prepad_infer_p_anonymous_namespace_conv2_relu_residual_252_1_8_p_ZN11tcn_weightsL7CONV2_WEHfu' using auto ROMs.
+INFO: [RTMG 210-279] Implementing memory 'tcn_prepad_infer_p_anonymous_namespace_conv2_relu_residual_252_1_8_p_ZN11tcn_weightsL7CONV2_WEIfE' using auto ROMs.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 3.652 seconds; current allocated memory: 382.957 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'p_anonymous_namespace_tcn_block_252_1_s' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [RTGEN 206-100] Generating core module 'mul_36s_23s_59_2_1': 2 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'mul_36s_24s_60_2_1': 2 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'mul_36s_25s_61_2_1': 2 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'mul_36s_26s_62_2_1': 2 instance(s).
+INFO: [RTGEN 206-100] Finished creating RTL model for 'p_anonymous_namespace_tcn_block_252_1_s'.
+INFO: [RTMG 210-278] Implementing memory 'tcn_prepad_infer_p_anonymous_namespace_tcn_block_252_1_s_tmp_RAM_AUTO_1R1W' using auto RAMs.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.484 seconds; current allocated memory: 389.395 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'p_anonymous_namespace_conv1_relu_248_2_11' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SYN 201-210] Renamed object name 'p_anonymous_namespace_conv1_relu_248_2_11_p_ZN11tcn_weightsL7CONV1_BE_1_ROM_AUTO_1R' to 'p_anonymous_namespace_conv1_relu_248_2_11_p_ZN11tcn_weightsL7CONV1_BE_1_ROM_AJfO' due to the length limit 80
+INFO: [SYN 201-210] Renamed object name 'p_anonymous_namespace_conv1_relu_248_2_11_p_ZN11tcn_weightsL7CONV1_WE_1_0_ROM_AUTO_1R' to 'p_anonymous_namespace_conv1_relu_248_2_11_p_ZN11tcn_weightsL7CONV1_WE_1_0_ROMKfY' due to the length limit 80
+INFO: [SYN 201-210] Renamed object name 'p_anonymous_namespace_conv1_relu_248_2_11_p_ZN11tcn_weightsL7CONV1_WE_1_1_ROM_AUTO_1R' to 'p_anonymous_namespace_conv1_relu_248_2_11_p_ZN11tcn_weightsL7CONV1_WE_1_1_ROMLf8' due to the length limit 80
+INFO: [SYN 201-210] Renamed object name 'p_anonymous_namespace_conv1_relu_248_2_11_p_ZN11tcn_weightsL7CONV1_WE_1_2_ROM_AUTO_1R' to 'p_anonymous_namespace_conv1_relu_248_2_11_p_ZN11tcn_weightsL7CONV1_WE_1_2_ROMMgi' due to the length limit 80
+INFO: [SYN 201-210] Renamed object name 'p_anonymous_namespace_conv1_relu_248_2_11_p_ZN11tcn_weightsL7CONV1_WE_1_3_ROM_AUTO_1R' to 'p_anonymous_namespace_conv1_relu_248_2_11_p_ZN11tcn_weightsL7CONV1_WE_1_3_ROMNgs' due to the length limit 80
+INFO: [SYN 201-210] Renamed object name 'p_anonymous_namespace_conv1_relu_248_2_11_p_ZN11tcn_weightsL7CONV1_WE_1_4_ROM_AUTO_1R' to 'p_anonymous_namespace_conv1_relu_248_2_11_p_ZN11tcn_weightsL7CONV1_WE_1_4_ROMOgC' due to the length limit 80
+INFO: [SYN 201-210] Renamed object name 'p_anonymous_namespace_conv1_relu_248_2_11_p_ZN11tcn_weightsL7CONV1_WE_1_5_ROM_AUTO_1R' to 'p_anonymous_namespace_conv1_relu_248_2_11_p_ZN11tcn_weightsL7CONV1_WE_1_5_ROMPgM' due to the length limit 80
+INFO: [SYN 201-210] Renamed object name 'p_anonymous_namespace_conv1_relu_248_2_11_p_ZN11tcn_weightsL7CONV1_WE_1_6_ROM_AUTO_1R' to 'p_anonymous_namespace_conv1_relu_248_2_11_p_ZN11tcn_weightsL7CONV1_WE_1_6_ROMQgW' due to the length limit 80
+INFO: [SYN 201-210] Renamed object name 'p_anonymous_namespace_conv1_relu_248_2_11_p_ZN11tcn_weightsL7CONV1_WE_1_7_ROM_AUTO_1R' to 'p_anonymous_namespace_conv1_relu_248_2_11_p_ZN11tcn_weightsL7CONV1_WE_1_7_ROMRg6' due to the length limit 80
+INFO: [SYN 201-210] Renamed object name 'p_anonymous_namespace_conv1_relu_248_2_11_p_ZN11tcn_weightsL7CONV1_WE_1_8_ROM_AUTO_1R' to 'p_anonymous_namespace_conv1_relu_248_2_11_p_ZN11tcn_weightsL7CONV1_WE_1_8_ROMShg' due to the length limit 80
+INFO: [SYN 201-210] Renamed object name 'p_anonymous_namespace_conv1_relu_248_2_11_p_ZN11tcn_weightsL7CONV1_WE_1_9_ROM_AUTO_1R' to 'p_anonymous_namespace_conv1_relu_248_2_11_p_ZN11tcn_weightsL7CONV1_WE_1_9_ROMThq' due to the length limit 80
+INFO: [SYN 201-210] Renamed object name 'p_anonymous_namespace_conv1_relu_248_2_11_p_ZN11tcn_weightsL7CONV1_WE_1_10_ROM_AUTO_1R' to 'p_anonymous_namespace_conv1_relu_248_2_11_p_ZN11tcn_weightsL7CONV1_WE_1_10_ROUhA' due to the length limit 80
+INFO: [SYN 201-210] Renamed object name 'p_anonymous_namespace_conv1_relu_248_2_11_p_ZN11tcn_weightsL7CONV1_WE_1_11_ROM_AUTO_1R' to 'p_anonymous_namespace_conv1_relu_248_2_11_p_ZN11tcn_weightsL7CONV1_WE_1_11_ROVhK' due to the length limit 80
+INFO: [SYN 201-210] Renamed object name 'p_anonymous_namespace_conv1_relu_248_2_11_p_ZN11tcn_weightsL7CONV1_WE_1_12_ROM_AUTO_1R' to 'p_anonymous_namespace_conv1_relu_248_2_11_p_ZN11tcn_weightsL7CONV1_WE_1_12_ROWhU' due to the length limit 80
+INFO: [SYN 201-210] Renamed object name 'p_anonymous_namespace_conv1_relu_248_2_11_p_ZN11tcn_weightsL7CONV1_WE_1_13_ROM_AUTO_1R' to 'p_anonymous_namespace_conv1_relu_248_2_11_p_ZN11tcn_weightsL7CONV1_WE_1_13_ROXh4' due to the length limit 80
+INFO: [SYN 201-210] Renamed object name 'p_anonymous_namespace_conv1_relu_248_2_11_p_ZN11tcn_weightsL7CONV1_WE_1_14_ROM_AUTO_1R' to 'p_anonymous_namespace_conv1_relu_248_2_11_p_ZN11tcn_weightsL7CONV1_WE_1_14_ROYie' due to the length limit 80
+INFO: [SYN 201-210] Renamed object name 'p_anonymous_namespace_conv1_relu_248_2_11_p_ZN11tcn_weightsL7CONV1_WE_1_15_ROM_AUTO_1R' to 'p_anonymous_namespace_conv1_relu_248_2_11_p_ZN11tcn_weightsL7CONV1_WE_1_15_ROZio' due to the length limit 80
+INFO: [RTGEN 206-100] Generating core module 'mul_36s_24s_60_2_1': 2 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'mul_36s_25s_61_2_1': 2 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'mul_36s_26s_62_2_1': 2 instance(s).
+INFO: [RTGEN 206-100] Finished creating RTL model for 'p_anonymous_namespace_conv1_relu_248_2_11'.
+INFO: [RTMG 210-279] Implementing memory 'tcn_prepad_infer_p_anonymous_namespace_conv1_relu_248_2_11_p_ZN11tcn_weightsL7CONV1_BE_1_ROM_AJfO' using auto ROMs.
+INFO: [RTMG 210-279] Implementing memory 'tcn_prepad_infer_p_anonymous_namespace_conv1_relu_248_2_11_p_ZN11tcn_weightsL7CONV1_WE_1_0_ROMKfY' using auto ROMs.
+INFO: [RTMG 210-279] Implementing memory 'tcn_prepad_infer_p_anonymous_namespace_conv1_relu_248_2_11_p_ZN11tcn_weightsL7CONV1_WE_1_1_ROMLf8' using auto ROMs.
+INFO: [RTMG 210-279] Implementing memory 'tcn_prepad_infer_p_anonymous_namespace_conv1_relu_248_2_11_p_ZN11tcn_weightsL7CONV1_WE_1_2_ROMMgi' using auto ROMs.
+INFO: [RTMG 210-279] Implementing memory 'tcn_prepad_infer_p_anonymous_namespace_conv1_relu_248_2_11_p_ZN11tcn_weightsL7CONV1_WE_1_3_ROMNgs' using auto ROMs.
+INFO: [RTMG 210-279] Implementing memory 'tcn_prepad_infer_p_anonymous_namespace_conv1_relu_248_2_11_p_ZN11tcn_weightsL7CONV1_WE_1_4_ROMOgC' using auto ROMs.
+INFO: [RTMG 210-279] Implementing memory 'tcn_prepad_infer_p_anonymous_namespace_conv1_relu_248_2_11_p_ZN11tcn_weightsL7CONV1_WE_1_5_ROMPgM' using auto ROMs.
+INFO: [RTMG 210-279] Implementing memory 'tcn_prepad_infer_p_anonymous_namespace_conv1_relu_248_2_11_p_ZN11tcn_weightsL7CONV1_WE_1_6_ROMQgW' using auto ROMs.
+INFO: [RTMG 210-279] Implementing memory 'tcn_prepad_infer_p_anonymous_namespace_conv1_relu_248_2_11_p_ZN11tcn_weightsL7CONV1_WE_1_7_ROMRg6' using auto ROMs.
+INFO: [RTMG 210-279] Implementing memory 'tcn_prepad_infer_p_anonymous_namespace_conv1_relu_248_2_11_p_ZN11tcn_weightsL7CONV1_WE_1_8_ROMShg' using auto ROMs.
+INFO: [RTMG 210-279] Implementing memory 'tcn_prepad_infer_p_anonymous_namespace_conv1_relu_248_2_11_p_ZN11tcn_weightsL7CONV1_WE_1_9_ROMThq' using auto ROMs.
+INFO: [RTMG 210-279] Implementing memory 'tcn_prepad_infer_p_anonymous_namespace_conv1_relu_248_2_11_p_ZN11tcn_weightsL7CONV1_WE_1_10_ROUhA' using auto ROMs.
+INFO: [RTMG 210-279] Implementing memory 'tcn_prepad_infer_p_anonymous_namespace_conv1_relu_248_2_11_p_ZN11tcn_weightsL7CONV1_WE_1_11_ROVhK' using auto ROMs.
+INFO: [RTMG 210-279] Implementing memory 'tcn_prepad_infer_p_anonymous_namespace_conv1_relu_248_2_11_p_ZN11tcn_weightsL7CONV1_WE_1_12_ROWhU' using auto ROMs.
+INFO: [RTMG 210-279] Implementing memory 'tcn_prepad_infer_p_anonymous_namespace_conv1_relu_248_2_11_p_ZN11tcn_weightsL7CONV1_WE_1_13_ROXh4' using auto ROMs.
+INFO: [RTMG 210-279] Implementing memory 'tcn_prepad_infer_p_anonymous_namespace_conv1_relu_248_2_11_p_ZN11tcn_weightsL7CONV1_WE_1_14_ROYie' using auto ROMs.
+INFO: [RTMG 210-279] Implementing memory 'tcn_prepad_infer_p_anonymous_namespace_conv1_relu_248_2_11_p_ZN11tcn_weightsL7CONV1_WE_1_15_ROZio' using auto ROMs.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 1.714 seconds; current allocated memory: 390.594 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'p_anonymous_namespace_conv2_relu_residual_248_2_10' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SYN 201-210] Renamed object name 'p_anonymous_namespace_conv2_relu_residual_248_2_10_p_ZN11tcn_weightsL7CONV2_BE_1_ROM_AUTO_1R' to 'p_anonymous_namespace_conv2_relu_residual_248_2_10_p_ZN11tcn_weightsL7CONV2_B0iy' due to the length limit 80
+INFO: [SYN 201-210] Renamed object name 'p_anonymous_namespace_conv2_relu_residual_248_2_10_p_ZN11tcn_weightsL7CONV2_WE_1_0_ROM_AUTO_1R' to 'p_anonymous_namespace_conv2_relu_residual_248_2_10_p_ZN11tcn_weightsL7CONV2_W1iI' due to the length limit 80
+INFO: [SYN 201-210] Renamed object name 'p_anonymous_namespace_conv2_relu_residual_248_2_10_p_ZN11tcn_weightsL7CONV2_WE_1_1_ROM_AUTO_1R' to 'p_anonymous_namespace_conv2_relu_residual_248_2_10_p_ZN11tcn_weightsL7CONV2_W2iS' due to the length limit 80
+INFO: [SYN 201-210] Renamed object name 'p_anonymous_namespace_conv2_relu_residual_248_2_10_p_ZN11tcn_weightsL7CONV2_WE_1_2_ROM_AUTO_1R' to 'p_anonymous_namespace_conv2_relu_residual_248_2_10_p_ZN11tcn_weightsL7CONV2_W3i2' due to the length limit 80
+INFO: [SYN 201-210] Renamed object name 'p_anonymous_namespace_conv2_relu_residual_248_2_10_p_ZN11tcn_weightsL7CONV2_WE_1_3_ROM_AUTO_1R' to 'p_anonymous_namespace_conv2_relu_residual_248_2_10_p_ZN11tcn_weightsL7CONV2_W4jc' due to the length limit 80
+INFO: [SYN 201-210] Renamed object name 'p_anonymous_namespace_conv2_relu_residual_248_2_10_p_ZN11tcn_weightsL7CONV2_WE_1_4_ROM_AUTO_1R' to 'p_anonymous_namespace_conv2_relu_residual_248_2_10_p_ZN11tcn_weightsL7CONV2_W5jm' due to the length limit 80
+INFO: [SYN 201-210] Renamed object name 'p_anonymous_namespace_conv2_relu_residual_248_2_10_p_ZN11tcn_weightsL7CONV2_WE_1_5_ROM_AUTO_1R' to 'p_anonymous_namespace_conv2_relu_residual_248_2_10_p_ZN11tcn_weightsL7CONV2_W6jw' due to the length limit 80
+INFO: [SYN 201-210] Renamed object name 'p_anonymous_namespace_conv2_relu_residual_248_2_10_p_ZN11tcn_weightsL7CONV2_WE_1_6_ROM_AUTO_1R' to 'p_anonymous_namespace_conv2_relu_residual_248_2_10_p_ZN11tcn_weightsL7CONV2_W7jG' due to the length limit 80
+INFO: [SYN 201-210] Renamed object name 'p_anonymous_namespace_conv2_relu_residual_248_2_10_p_ZN11tcn_weightsL7CONV2_WE_1_7_ROM_AUTO_1R' to 'p_anonymous_namespace_conv2_relu_residual_248_2_10_p_ZN11tcn_weightsL7CONV2_W8jQ' due to the length limit 80
+INFO: [SYN 201-210] Renamed object name 'p_anonymous_namespace_conv2_relu_residual_248_2_10_p_ZN11tcn_weightsL7CONV2_WE_1_8_ROM_AUTO_1R' to 'p_anonymous_namespace_conv2_relu_residual_248_2_10_p_ZN11tcn_weightsL7CONV2_W9j0' due to the length limit 80
+INFO: [SYN 201-210] Renamed object name 'p_anonymous_namespace_conv2_relu_residual_248_2_10_p_ZN11tcn_weightsL7CONV2_WE_1_9_ROM_AUTO_1R' to 'p_anonymous_namespace_conv2_relu_residual_248_2_10_p_ZN11tcn_weightsL7CONV2_Wbak' due to the length limit 80
+INFO: [SYN 201-210] Renamed object name 'p_anonymous_namespace_conv2_relu_residual_248_2_10_p_ZN11tcn_weightsL7CONV2_WE_1_10_ROM_AUTO_1R' to 'p_anonymous_namespace_conv2_relu_residual_248_2_10_p_ZN11tcn_weightsL7CONV2_Wbbk' due to the length limit 80
+INFO: [SYN 201-210] Renamed object name 'p_anonymous_namespace_conv2_relu_residual_248_2_10_p_ZN11tcn_weightsL7CONV2_WE_1_11_ROM_AUTO_1R' to 'p_anonymous_namespace_conv2_relu_residual_248_2_10_p_ZN11tcn_weightsL7CONV2_Wbck' due to the length limit 80
+INFO: [SYN 201-210] Renamed object name 'p_anonymous_namespace_conv2_relu_residual_248_2_10_p_ZN11tcn_weightsL7CONV2_WE_1_12_ROM_AUTO_1R' to 'p_anonymous_namespace_conv2_relu_residual_248_2_10_p_ZN11tcn_weightsL7CONV2_Wbdk' due to the length limit 80
+INFO: [SYN 201-210] Renamed object name 'p_anonymous_namespace_conv2_relu_residual_248_2_10_p_ZN11tcn_weightsL7CONV2_WE_1_13_ROM_AUTO_1R' to 'p_anonymous_namespace_conv2_relu_residual_248_2_10_p_ZN11tcn_weightsL7CONV2_Wbek' due to the length limit 80
+INFO: [SYN 201-210] Renamed object name 'p_anonymous_namespace_conv2_relu_residual_248_2_10_p_ZN11tcn_weightsL7CONV2_WE_1_14_ROM_AUTO_1R' to 'p_anonymous_namespace_conv2_relu_residual_248_2_10_p_ZN11tcn_weightsL7CONV2_Wbfk' due to the length limit 80
+INFO: [SYN 201-210] Renamed object name 'p_anonymous_namespace_conv2_relu_residual_248_2_10_p_ZN11tcn_weightsL7CONV2_WE_1_15_ROM_AUTO_1R' to 'p_anonymous_namespace_conv2_relu_residual_248_2_10_p_ZN11tcn_weightsL7CONV2_Wbgk' due to the length limit 80
+INFO: [RTGEN 206-100] Generating core module 'mul_36s_24s_60_2_1': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'mul_36s_25s_61_2_1': 2 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'mul_36s_26s_62_2_1': 1 instance(s).
+INFO: [RTGEN 206-100] Finished creating RTL model for 'p_anonymous_namespace_conv2_relu_residual_248_2_10'.
+INFO: [RTMG 210-279] Implementing memory 'tcn_prepad_infer_p_anonymous_namespace_conv2_relu_residual_248_2_10_p_ZN11tcn_weightsL7CONV2_B0iy' using auto ROMs.
+INFO: [RTMG 210-279] Implementing memory 'tcn_prepad_infer_p_anonymous_namespace_conv2_relu_residual_248_2_10_p_ZN11tcn_weightsL7CONV2_W1iI' using auto ROMs.
+INFO: [RTMG 210-279] Implementing memory 'tcn_prepad_infer_p_anonymous_namespace_conv2_relu_residual_248_2_10_p_ZN11tcn_weightsL7CONV2_W2iS' using auto ROMs.
+INFO: [RTMG 210-279] Implementing memory 'tcn_prepad_infer_p_anonymous_namespace_conv2_relu_residual_248_2_10_p_ZN11tcn_weightsL7CONV2_W3i2' using auto ROMs.
+INFO: [RTMG 210-279] Implementing memory 'tcn_prepad_infer_p_anonymous_namespace_conv2_relu_residual_248_2_10_p_ZN11tcn_weightsL7CONV2_W4jc' using auto ROMs.
+INFO: [RTMG 210-279] Implementing memory 'tcn_prepad_infer_p_anonymous_namespace_conv2_relu_residual_248_2_10_p_ZN11tcn_weightsL7CONV2_W5jm' using auto ROMs.
+INFO: [RTMG 210-279] Implementing memory 'tcn_prepad_infer_p_anonymous_namespace_conv2_relu_residual_248_2_10_p_ZN11tcn_weightsL7CONV2_W6jw' using auto ROMs.
+INFO: [RTMG 210-279] Implementing memory 'tcn_prepad_infer_p_anonymous_namespace_conv2_relu_residual_248_2_10_p_ZN11tcn_weightsL7CONV2_W7jG' using auto ROMs.
+INFO: [RTMG 210-279] Implementing memory 'tcn_prepad_infer_p_anonymous_namespace_conv2_relu_residual_248_2_10_p_ZN11tcn_weightsL7CONV2_W8jQ' using auto ROMs.
+INFO: [RTMG 210-279] Implementing memory 'tcn_prepad_infer_p_anonymous_namespace_conv2_relu_residual_248_2_10_p_ZN11tcn_weightsL7CONV2_W9j0' using auto ROMs.
+INFO: [RTMG 210-279] Implementing memory 'tcn_prepad_infer_p_anonymous_namespace_conv2_relu_residual_248_2_10_p_ZN11tcn_weightsL7CONV2_Wbak' using auto ROMs.
+INFO: [RTMG 210-279] Implementing memory 'tcn_prepad_infer_p_anonymous_namespace_conv2_relu_residual_248_2_10_p_ZN11tcn_weightsL7CONV2_Wbbk' using auto ROMs.
+INFO: [RTMG 210-279] Implementing memory 'tcn_prepad_infer_p_anonymous_namespace_conv2_relu_residual_248_2_10_p_ZN11tcn_weightsL7CONV2_Wbck' using auto ROMs.
+INFO: [RTMG 210-279] Implementing memory 'tcn_prepad_infer_p_anonymous_namespace_conv2_relu_residual_248_2_10_p_ZN11tcn_weightsL7CONV2_Wbdk' using auto ROMs.
+INFO: [RTMG 210-279] Implementing memory 'tcn_prepad_infer_p_anonymous_namespace_conv2_relu_residual_248_2_10_p_ZN11tcn_weightsL7CONV2_Wbek' using auto ROMs.
+INFO: [RTMG 210-279] Implementing memory 'tcn_prepad_infer_p_anonymous_namespace_conv2_relu_residual_248_2_10_p_ZN11tcn_weightsL7CONV2_Wbfk' using auto ROMs.
+INFO: [RTMG 210-279] Implementing memory 'tcn_prepad_infer_p_anonymous_namespace_conv2_relu_residual_248_2_10_p_ZN11tcn_weightsL7CONV2_Wbgk' using auto ROMs.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 2.07 seconds; current allocated memory: 397.586 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'p_anonymous_namespace_tcn_block_248_2_s' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [RTGEN 206-100] Generating core module 'mul_36s_24s_60_2_1': 2 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'mul_36s_25s_61_2_1': 2 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'mul_36s_26s_62_2_1': 2 instance(s).
+INFO: [RTGEN 206-100] Finished creating RTL model for 'p_anonymous_namespace_tcn_block_248_2_s'.
+INFO: [RTMG 210-278] Implementing memory 'tcn_prepad_infer_p_anonymous_namespace_tcn_block_248_2_s_tmp_RAM_AUTO_1R1W' using auto RAMs.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 1 seconds. CPU system time: 0 seconds. Elapsed time: 0.451 seconds; current allocated memory: 403.969 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'p_anonymous_namespace_conv1_relu_240_4_13' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SYN 201-210] Renamed object name 'p_anonymous_namespace_conv1_relu_240_4_13_p_ZN11tcn_weightsL7CONV1_BE_2_ROM_AUTO_1R' to 'p_anonymous_namespace_conv1_relu_240_4_13_p_ZN11tcn_weightsL7CONV1_BE_2_ROM_Abhl' due to the length limit 80
+INFO: [SYN 201-210] Renamed object name 'p_anonymous_namespace_conv1_relu_240_4_13_p_ZN11tcn_weightsL7CONV1_WE_2_0_ROM_AUTO_1R' to 'p_anonymous_namespace_conv1_relu_240_4_13_p_ZN11tcn_weightsL7CONV1_WE_2_0_ROMbil' due to the length limit 80
+INFO: [SYN 201-210] Renamed object name 'p_anonymous_namespace_conv1_relu_240_4_13_p_ZN11tcn_weightsL7CONV1_WE_2_1_ROM_AUTO_1R' to 'p_anonymous_namespace_conv1_relu_240_4_13_p_ZN11tcn_weightsL7CONV1_WE_2_1_ROMbjl' due to the length limit 80
+INFO: [SYN 201-210] Renamed object name 'p_anonymous_namespace_conv1_relu_240_4_13_p_ZN11tcn_weightsL7CONV1_WE_2_2_ROM_AUTO_1R' to 'p_anonymous_namespace_conv1_relu_240_4_13_p_ZN11tcn_weightsL7CONV1_WE_2_2_ROMbkl' due to the length limit 80
+INFO: [SYN 201-210] Renamed object name 'p_anonymous_namespace_conv1_relu_240_4_13_p_ZN11tcn_weightsL7CONV1_WE_2_3_ROM_AUTO_1R' to 'p_anonymous_namespace_conv1_relu_240_4_13_p_ZN11tcn_weightsL7CONV1_WE_2_3_ROMbll' due to the length limit 80
+INFO: [SYN 201-210] Renamed object name 'p_anonymous_namespace_conv1_relu_240_4_13_p_ZN11tcn_weightsL7CONV1_WE_2_4_ROM_AUTO_1R' to 'p_anonymous_namespace_conv1_relu_240_4_13_p_ZN11tcn_weightsL7CONV1_WE_2_4_ROMbml' due to the length limit 80
+INFO: [SYN 201-210] Renamed object name 'p_anonymous_namespace_conv1_relu_240_4_13_p_ZN11tcn_weightsL7CONV1_WE_2_5_ROM_AUTO_1R' to 'p_anonymous_namespace_conv1_relu_240_4_13_p_ZN11tcn_weightsL7CONV1_WE_2_5_ROMbnm' due to the length limit 80
+INFO: [SYN 201-210] Renamed object name 'p_anonymous_namespace_conv1_relu_240_4_13_p_ZN11tcn_weightsL7CONV1_WE_2_6_ROM_AUTO_1R' to 'p_anonymous_namespace_conv1_relu_240_4_13_p_ZN11tcn_weightsL7CONV1_WE_2_6_ROMbom' due to the length limit 80
+INFO: [SYN 201-210] Renamed object name 'p_anonymous_namespace_conv1_relu_240_4_13_p_ZN11tcn_weightsL7CONV1_WE_2_7_ROM_AUTO_1R' to 'p_anonymous_namespace_conv1_relu_240_4_13_p_ZN11tcn_weightsL7CONV1_WE_2_7_ROMbpm' due to the length limit 80
+INFO: [SYN 201-210] Renamed object name 'p_anonymous_namespace_conv1_relu_240_4_13_p_ZN11tcn_weightsL7CONV1_WE_2_8_ROM_AUTO_1R' to 'p_anonymous_namespace_conv1_relu_240_4_13_p_ZN11tcn_weightsL7CONV1_WE_2_8_ROMbqm' due to the length limit 80
+INFO: [SYN 201-210] Renamed object name 'p_anonymous_namespace_conv1_relu_240_4_13_p_ZN11tcn_weightsL7CONV1_WE_2_9_ROM_AUTO_1R' to 'p_anonymous_namespace_conv1_relu_240_4_13_p_ZN11tcn_weightsL7CONV1_WE_2_9_ROMbrm' due to the length limit 80
+INFO: [SYN 201-210] Renamed object name 'p_anonymous_namespace_conv1_relu_240_4_13_p_ZN11tcn_weightsL7CONV1_WE_2_10_ROM_AUTO_1R' to 'p_anonymous_namespace_conv1_relu_240_4_13_p_ZN11tcn_weightsL7CONV1_WE_2_10_RObsm' due to the length limit 80
+INFO: [SYN 201-210] Renamed object name 'p_anonymous_namespace_conv1_relu_240_4_13_p_ZN11tcn_weightsL7CONV1_WE_2_11_ROM_AUTO_1R' to 'p_anonymous_namespace_conv1_relu_240_4_13_p_ZN11tcn_weightsL7CONV1_WE_2_11_RObtn' due to the length limit 80
+INFO: [SYN 201-210] Renamed object name 'p_anonymous_namespace_conv1_relu_240_4_13_p_ZN11tcn_weightsL7CONV1_WE_2_12_ROM_AUTO_1R' to 'p_anonymous_namespace_conv1_relu_240_4_13_p_ZN11tcn_weightsL7CONV1_WE_2_12_RObun' due to the length limit 80
+INFO: [SYN 201-210] Renamed object name 'p_anonymous_namespace_conv1_relu_240_4_13_p_ZN11tcn_weightsL7CONV1_WE_2_13_ROM_AUTO_1R' to 'p_anonymous_namespace_conv1_relu_240_4_13_p_ZN11tcn_weightsL7CONV1_WE_2_13_RObvn' due to the length limit 80
+INFO: [SYN 201-210] Renamed object name 'p_anonymous_namespace_conv1_relu_240_4_13_p_ZN11tcn_weightsL7CONV1_WE_2_14_ROM_AUTO_1R' to 'p_anonymous_namespace_conv1_relu_240_4_13_p_ZN11tcn_weightsL7CONV1_WE_2_14_RObwn' due to the length limit 80
+INFO: [SYN 201-210] Renamed object name 'p_anonymous_namespace_conv1_relu_240_4_13_p_ZN11tcn_weightsL7CONV1_WE_2_15_ROM_AUTO_1R' to 'p_anonymous_namespace_conv1_relu_240_4_13_p_ZN11tcn_weightsL7CONV1_WE_2_15_RObxn' due to the length limit 80
+INFO: [RTGEN 206-100] Generating core module 'mul_36s_23s_59_2_1': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'mul_36s_24s_60_2_1': 2 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'mul_36s_25s_61_2_1': 2 instance(s).
+INFO: [RTGEN 206-100] Finished creating RTL model for 'p_anonymous_namespace_conv1_relu_240_4_13'.
+INFO: [RTMG 210-279] Implementing memory 'tcn_prepad_infer_p_anonymous_namespace_conv1_relu_240_4_13_p_ZN11tcn_weightsL7CONV1_BE_2_ROM_Abhl' using auto ROMs.
+INFO: [RTMG 210-279] Implementing memory 'tcn_prepad_infer_p_anonymous_namespace_conv1_relu_240_4_13_p_ZN11tcn_weightsL7CONV1_WE_2_0_ROMbil' using auto ROMs.
+INFO: [RTMG 210-279] Implementing memory 'tcn_prepad_infer_p_anonymous_namespace_conv1_relu_240_4_13_p_ZN11tcn_weightsL7CONV1_WE_2_1_ROMbjl' using auto ROMs.
+INFO: [RTMG 210-279] Implementing memory 'tcn_prepad_infer_p_anonymous_namespace_conv1_relu_240_4_13_p_ZN11tcn_weightsL7CONV1_WE_2_2_ROMbkl' using auto ROMs.
+INFO: [RTMG 210-279] Implementing memory 'tcn_prepad_infer_p_anonymous_namespace_conv1_relu_240_4_13_p_ZN11tcn_weightsL7CONV1_WE_2_3_ROMbll' using auto ROMs.
+INFO: [RTMG 210-279] Implementing memory 'tcn_prepad_infer_p_anonymous_namespace_conv1_relu_240_4_13_p_ZN11tcn_weightsL7CONV1_WE_2_4_ROMbml' using auto ROMs.
+INFO: [RTMG 210-279] Implementing memory 'tcn_prepad_infer_p_anonymous_namespace_conv1_relu_240_4_13_p_ZN11tcn_weightsL7CONV1_WE_2_5_ROMbnm' using auto ROMs.
+INFO: [RTMG 210-279] Implementing memory 'tcn_prepad_infer_p_anonymous_namespace_conv1_relu_240_4_13_p_ZN11tcn_weightsL7CONV1_WE_2_6_ROMbom' using auto ROMs.
+INFO: [RTMG 210-279] Implementing memory 'tcn_prepad_infer_p_anonymous_namespace_conv1_relu_240_4_13_p_ZN11tcn_weightsL7CONV1_WE_2_7_ROMbpm' using auto ROMs.
+INFO: [RTMG 210-279] Implementing memory 'tcn_prepad_infer_p_anonymous_namespace_conv1_relu_240_4_13_p_ZN11tcn_weightsL7CONV1_WE_2_8_ROMbqm' using auto ROMs.
+INFO: [RTMG 210-279] Implementing memory 'tcn_prepad_infer_p_anonymous_namespace_conv1_relu_240_4_13_p_ZN11tcn_weightsL7CONV1_WE_2_9_ROMbrm' using auto ROMs.
+INFO: [RTMG 210-279] Implementing memory 'tcn_prepad_infer_p_anonymous_namespace_conv1_relu_240_4_13_p_ZN11tcn_weightsL7CONV1_WE_2_10_RObsm' using auto ROMs.
+INFO: [RTMG 210-279] Implementing memory 'tcn_prepad_infer_p_anonymous_namespace_conv1_relu_240_4_13_p_ZN11tcn_weightsL7CONV1_WE_2_11_RObtn' using auto ROMs.
+INFO: [RTMG 210-279] Implementing memory 'tcn_prepad_infer_p_anonymous_namespace_conv1_relu_240_4_13_p_ZN11tcn_weightsL7CONV1_WE_2_12_RObun' using auto ROMs.
+INFO: [RTMG 210-279] Implementing memory 'tcn_prepad_infer_p_anonymous_namespace_conv1_relu_240_4_13_p_ZN11tcn_weightsL7CONV1_WE_2_13_RObvn' using auto ROMs.
+INFO: [RTMG 210-279] Implementing memory 'tcn_prepad_infer_p_anonymous_namespace_conv1_relu_240_4_13_p_ZN11tcn_weightsL7CONV1_WE_2_14_RObwn' using auto ROMs.
+INFO: [RTMG 210-279] Implementing memory 'tcn_prepad_infer_p_anonymous_namespace_conv1_relu_240_4_13_p_ZN11tcn_weightsL7CONV1_WE_2_15_RObxn' using auto ROMs.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 2.31 seconds; current allocated memory: 405.809 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'p_anonymous_namespace_conv2_relu_residual_240_4_12' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SYN 201-210] Renamed object name 'p_anonymous_namespace_conv2_relu_residual_240_4_12_p_ZN11tcn_weightsL7CONV2_BE_2_ROM_AUTO_1R' to 'p_anonymous_namespace_conv2_relu_residual_240_4_12_p_ZN11tcn_weightsL7CONV2_Bbyn' due to the length limit 80
+INFO: [SYN 201-210] Renamed object name 'p_anonymous_namespace_conv2_relu_residual_240_4_12_p_ZN11tcn_weightsL7CONV2_WE_2_0_ROM_AUTO_1R' to 'p_anonymous_namespace_conv2_relu_residual_240_4_12_p_ZN11tcn_weightsL7CONV2_Wbzo' due to the length limit 80
+INFO: [SYN 201-210] Renamed object name 'p_anonymous_namespace_conv2_relu_residual_240_4_12_p_ZN11tcn_weightsL7CONV2_WE_2_1_ROM_AUTO_1R' to 'p_anonymous_namespace_conv2_relu_residual_240_4_12_p_ZN11tcn_weightsL7CONV2_WbAo' due to the length limit 80
+INFO: [SYN 201-210] Renamed object name 'p_anonymous_namespace_conv2_relu_residual_240_4_12_p_ZN11tcn_weightsL7CONV2_WE_2_2_ROM_AUTO_1R' to 'p_anonymous_namespace_conv2_relu_residual_240_4_12_p_ZN11tcn_weightsL7CONV2_WbBo' due to the length limit 80
+INFO: [SYN 201-210] Renamed object name 'p_anonymous_namespace_conv2_relu_residual_240_4_12_p_ZN11tcn_weightsL7CONV2_WE_2_3_ROM_AUTO_1R' to 'p_anonymous_namespace_conv2_relu_residual_240_4_12_p_ZN11tcn_weightsL7CONV2_WbCo' due to the length limit 80
+INFO: [SYN 201-210] Renamed object name 'p_anonymous_namespace_conv2_relu_residual_240_4_12_p_ZN11tcn_weightsL7CONV2_WE_2_4_ROM_AUTO_1R' to 'p_anonymous_namespace_conv2_relu_residual_240_4_12_p_ZN11tcn_weightsL7CONV2_WbDo' due to the length limit 80
+INFO: [SYN 201-210] Renamed object name 'p_anonymous_namespace_conv2_relu_residual_240_4_12_p_ZN11tcn_weightsL7CONV2_WE_2_5_ROM_AUTO_1R' to 'p_anonymous_namespace_conv2_relu_residual_240_4_12_p_ZN11tcn_weightsL7CONV2_WbEo' due to the length limit 80
+INFO: [SYN 201-210] Renamed object name 'p_anonymous_namespace_conv2_relu_residual_240_4_12_p_ZN11tcn_weightsL7CONV2_WE_2_6_ROM_AUTO_1R' to 'p_anonymous_namespace_conv2_relu_residual_240_4_12_p_ZN11tcn_weightsL7CONV2_WbFp' due to the length limit 80
+INFO: [SYN 201-210] Renamed object name 'p_anonymous_namespace_conv2_relu_residual_240_4_12_p_ZN11tcn_weightsL7CONV2_WE_2_7_ROM_AUTO_1R' to 'p_anonymous_namespace_conv2_relu_residual_240_4_12_p_ZN11tcn_weightsL7CONV2_WbGp' due to the length limit 80
+INFO: [SYN 201-210] Renamed object name 'p_anonymous_namespace_conv2_relu_residual_240_4_12_p_ZN11tcn_weightsL7CONV2_WE_2_8_ROM_AUTO_1R' to 'p_anonymous_namespace_conv2_relu_residual_240_4_12_p_ZN11tcn_weightsL7CONV2_WbHp' due to the length limit 80
+INFO: [SYN 201-210] Renamed object name 'p_anonymous_namespace_conv2_relu_residual_240_4_12_p_ZN11tcn_weightsL7CONV2_WE_2_9_ROM_AUTO_1R' to 'p_anonymous_namespace_conv2_relu_residual_240_4_12_p_ZN11tcn_weightsL7CONV2_WbIp' due to the length limit 80
+INFO: [SYN 201-210] Renamed object name 'p_anonymous_namespace_conv2_relu_residual_240_4_12_p_ZN11tcn_weightsL7CONV2_WE_2_10_ROM_AUTO_1R' to 'p_anonymous_namespace_conv2_relu_residual_240_4_12_p_ZN11tcn_weightsL7CONV2_WbJp' due to the length limit 80
+INFO: [SYN 201-210] Renamed object name 'p_anonymous_namespace_conv2_relu_residual_240_4_12_p_ZN11tcn_weightsL7CONV2_WE_2_11_ROM_AUTO_1R' to 'p_anonymous_namespace_conv2_relu_residual_240_4_12_p_ZN11tcn_weightsL7CONV2_WbKp' due to the length limit 80
+INFO: [SYN 201-210] Renamed object name 'p_anonymous_namespace_conv2_relu_residual_240_4_12_p_ZN11tcn_weightsL7CONV2_WE_2_12_ROM_AUTO_1R' to 'p_anonymous_namespace_conv2_relu_residual_240_4_12_p_ZN11tcn_weightsL7CONV2_WbLp' due to the length limit 80
+INFO: [SYN 201-210] Renamed object name 'p_anonymous_namespace_conv2_relu_residual_240_4_12_p_ZN11tcn_weightsL7CONV2_WE_2_13_ROM_AUTO_1R' to 'p_anonymous_namespace_conv2_relu_residual_240_4_12_p_ZN11tcn_weightsL7CONV2_WbMq' due to the length limit 80
+INFO: [SYN 201-210] Renamed object name 'p_anonymous_namespace_conv2_relu_residual_240_4_12_p_ZN11tcn_weightsL7CONV2_WE_2_14_ROM_AUTO_1R' to 'p_anonymous_namespace_conv2_relu_residual_240_4_12_p_ZN11tcn_weightsL7CONV2_WbNq' due to the length limit 80
+INFO: [SYN 201-210] Renamed object name 'p_anonymous_namespace_conv2_relu_residual_240_4_12_p_ZN11tcn_weightsL7CONV2_WE_2_15_ROM_AUTO_1R' to 'p_anonymous_namespace_conv2_relu_residual_240_4_12_p_ZN11tcn_weightsL7CONV2_WbOq' due to the length limit 80
+INFO: [RTGEN 206-100] Generating core module 'mul_36s_24s_60_2_1': 2 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'mul_36s_25s_61_2_1': 2 instance(s).
+INFO: [RTGEN 206-100] Finished creating RTL model for 'p_anonymous_namespace_conv2_relu_residual_240_4_12'.
+INFO: [RTMG 210-279] Implementing memory 'tcn_prepad_infer_p_anonymous_namespace_conv2_relu_residual_240_4_12_p_ZN11tcn_weightsL7CONV2_Bbyn' using auto ROMs.
+INFO: [RTMG 210-279] Implementing memory 'tcn_prepad_infer_p_anonymous_namespace_conv2_relu_residual_240_4_12_p_ZN11tcn_weightsL7CONV2_Wbzo' using auto ROMs.
+INFO: [RTMG 210-279] Implementing memory 'tcn_prepad_infer_p_anonymous_namespace_conv2_relu_residual_240_4_12_p_ZN11tcn_weightsL7CONV2_WbAo' using auto ROMs.
+INFO: [RTMG 210-279] Implementing memory 'tcn_prepad_infer_p_anonymous_namespace_conv2_relu_residual_240_4_12_p_ZN11tcn_weightsL7CONV2_WbBo' using auto ROMs.
+INFO: [RTMG 210-279] Implementing memory 'tcn_prepad_infer_p_anonymous_namespace_conv2_relu_residual_240_4_12_p_ZN11tcn_weightsL7CONV2_WbCo' using auto ROMs.
+INFO: [RTMG 210-279] Implementing memory 'tcn_prepad_infer_p_anonymous_namespace_conv2_relu_residual_240_4_12_p_ZN11tcn_weightsL7CONV2_WbDo' using auto ROMs.
+INFO: [RTMG 210-279] Implementing memory 'tcn_prepad_infer_p_anonymous_namespace_conv2_relu_residual_240_4_12_p_ZN11tcn_weightsL7CONV2_WbEo' using auto ROMs.
+INFO: [RTMG 210-279] Implementing memory 'tcn_prepad_infer_p_anonymous_namespace_conv2_relu_residual_240_4_12_p_ZN11tcn_weightsL7CONV2_WbFp' using auto ROMs.
+INFO: [RTMG 210-279] Implementing memory 'tcn_prepad_infer_p_anonymous_namespace_conv2_relu_residual_240_4_12_p_ZN11tcn_weightsL7CONV2_WbGp' using auto ROMs.
+INFO: [RTMG 210-279] Implementing memory 'tcn_prepad_infer_p_anonymous_namespace_conv2_relu_residual_240_4_12_p_ZN11tcn_weightsL7CONV2_WbHp' using auto ROMs.
+INFO: [RTMG 210-279] Implementing memory 'tcn_prepad_infer_p_anonymous_namespace_conv2_relu_residual_240_4_12_p_ZN11tcn_weightsL7CONV2_WbIp' using auto ROMs.
+INFO: [RTMG 210-279] Implementing memory 'tcn_prepad_infer_p_anonymous_namespace_conv2_relu_residual_240_4_12_p_ZN11tcn_weightsL7CONV2_WbJp' using auto ROMs.
+INFO: [RTMG 210-279] Implementing memory 'tcn_prepad_infer_p_anonymous_namespace_conv2_relu_residual_240_4_12_p_ZN11tcn_weightsL7CONV2_WbKp' using auto ROMs.
+INFO: [RTMG 210-279] Implementing memory 'tcn_prepad_infer_p_anonymous_namespace_conv2_relu_residual_240_4_12_p_ZN11tcn_weightsL7CONV2_WbLp' using auto ROMs.
+INFO: [RTMG 210-279] Implementing memory 'tcn_prepad_infer_p_anonymous_namespace_conv2_relu_residual_240_4_12_p_ZN11tcn_weightsL7CONV2_WbMq' using auto ROMs.
+INFO: [RTMG 210-279] Implementing memory 'tcn_prepad_infer_p_anonymous_namespace_conv2_relu_residual_240_4_12_p_ZN11tcn_weightsL7CONV2_WbNq' using auto ROMs.
+INFO: [RTMG 210-279] Implementing memory 'tcn_prepad_infer_p_anonymous_namespace_conv2_relu_residual_240_4_12_p_ZN11tcn_weightsL7CONV2_WbOq' using auto ROMs.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 3.8 seconds; current allocated memory: 412.340 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'p_anonymous_namespace_tcn_block_240_4_s' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [RTGEN 206-100] Generating core module 'mul_36s_23s_59_2_1': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'mul_36s_24s_60_2_1': 2 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'mul_36s_25s_61_2_1': 2 instance(s).
+INFO: [RTGEN 206-100] Finished creating RTL model for 'p_anonymous_namespace_tcn_block_240_4_s'.
+INFO: [RTMG 210-278] Implementing memory 'tcn_prepad_infer_p_anonymous_namespace_tcn_block_240_4_s_tmp_RAM_AUTO_1R1W' using auto RAMs.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.505 seconds; current allocated memory: 418.621 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'p_anonymous_namespace_conv1_relu_224_8_15' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SYN 201-210] Renamed object name 'p_anonymous_namespace_conv1_relu_224_8_15_p_ZN11tcn_weightsL7CONV1_BE_3_ROM_AUTO_1R' to 'p_anonymous_namespace_conv1_relu_224_8_15_p_ZN11tcn_weightsL7CONV1_BE_3_ROM_AbPq' due to the length limit 80
+INFO: [SYN 201-210] Renamed object name 'p_anonymous_namespace_conv1_relu_224_8_15_p_ZN11tcn_weightsL7CONV1_WE_3_0_ROM_AUTO_1R' to 'p_anonymous_namespace_conv1_relu_224_8_15_p_ZN11tcn_weightsL7CONV1_WE_3_0_ROMbQq' due to the length limit 80
+INFO: [SYN 201-210] Renamed object name 'p_anonymous_namespace_conv1_relu_224_8_15_p_ZN11tcn_weightsL7CONV1_WE_3_1_ROM_AUTO_1R' to 'p_anonymous_namespace_conv1_relu_224_8_15_p_ZN11tcn_weightsL7CONV1_WE_3_1_ROMbRq' due to the length limit 80
+INFO: [SYN 201-210] Renamed object name 'p_anonymous_namespace_conv1_relu_224_8_15_p_ZN11tcn_weightsL7CONV1_WE_3_2_ROM_AUTO_1R' to 'p_anonymous_namespace_conv1_relu_224_8_15_p_ZN11tcn_weightsL7CONV1_WE_3_2_ROMbSr' due to the length limit 80
+INFO: [SYN 201-210] Renamed object name 'p_anonymous_namespace_conv1_relu_224_8_15_p_ZN11tcn_weightsL7CONV1_WE_3_3_ROM_AUTO_1R' to 'p_anonymous_namespace_conv1_relu_224_8_15_p_ZN11tcn_weightsL7CONV1_WE_3_3_ROMbTr' due to the length limit 80
+INFO: [SYN 201-210] Renamed object name 'p_anonymous_namespace_conv1_relu_224_8_15_p_ZN11tcn_weightsL7CONV1_WE_3_4_ROM_AUTO_1R' to 'p_anonymous_namespace_conv1_relu_224_8_15_p_ZN11tcn_weightsL7CONV1_WE_3_4_ROMbUr' due to the length limit 80
+INFO: [SYN 201-210] Renamed object name 'p_anonymous_namespace_conv1_relu_224_8_15_p_ZN11tcn_weightsL7CONV1_WE_3_5_ROM_AUTO_1R' to 'p_anonymous_namespace_conv1_relu_224_8_15_p_ZN11tcn_weightsL7CONV1_WE_3_5_ROMbVr' due to the length limit 80
+INFO: [SYN 201-210] Renamed object name 'p_anonymous_namespace_conv1_relu_224_8_15_p_ZN11tcn_weightsL7CONV1_WE_3_6_ROM_AUTO_1R' to 'p_anonymous_namespace_conv1_relu_224_8_15_p_ZN11tcn_weightsL7CONV1_WE_3_6_ROMbWr' due to the length limit 80
+INFO: [SYN 201-210] Renamed object name 'p_anonymous_namespace_conv1_relu_224_8_15_p_ZN11tcn_weightsL7CONV1_WE_3_7_ROM_AUTO_1R' to 'p_anonymous_namespace_conv1_relu_224_8_15_p_ZN11tcn_weightsL7CONV1_WE_3_7_ROMbXr' due to the length limit 80
+INFO: [SYN 201-210] Renamed object name 'p_anonymous_namespace_conv1_relu_224_8_15_p_ZN11tcn_weightsL7CONV1_WE_3_8_ROM_AUTO_1R' to 'p_anonymous_namespace_conv1_relu_224_8_15_p_ZN11tcn_weightsL7CONV1_WE_3_8_ROMbYs' due to the length limit 80
+INFO: [SYN 201-210] Renamed object name 'p_anonymous_namespace_conv1_relu_224_8_15_p_ZN11tcn_weightsL7CONV1_WE_3_9_ROM_AUTO_1R' to 'p_anonymous_namespace_conv1_relu_224_8_15_p_ZN11tcn_weightsL7CONV1_WE_3_9_ROMbZs' due to the length limit 80
+INFO: [SYN 201-210] Renamed object name 'p_anonymous_namespace_conv1_relu_224_8_15_p_ZN11tcn_weightsL7CONV1_WE_3_10_ROM_AUTO_1R' to 'p_anonymous_namespace_conv1_relu_224_8_15_p_ZN11tcn_weightsL7CONV1_WE_3_10_ROb0s' due to the length limit 80
+INFO: [SYN 201-210] Renamed object name 'p_anonymous_namespace_conv1_relu_224_8_15_p_ZN11tcn_weightsL7CONV1_WE_3_11_ROM_AUTO_1R' to 'p_anonymous_namespace_conv1_relu_224_8_15_p_ZN11tcn_weightsL7CONV1_WE_3_11_ROb1s' due to the length limit 80
+INFO: [SYN 201-210] Renamed object name 'p_anonymous_namespace_conv1_relu_224_8_15_p_ZN11tcn_weightsL7CONV1_WE_3_12_ROM_AUTO_1R' to 'p_anonymous_namespace_conv1_relu_224_8_15_p_ZN11tcn_weightsL7CONV1_WE_3_12_ROb2s' due to the length limit 80
+INFO: [SYN 201-210] Renamed object name 'p_anonymous_namespace_conv1_relu_224_8_15_p_ZN11tcn_weightsL7CONV1_WE_3_13_ROM_AUTO_1R' to 'p_anonymous_namespace_conv1_relu_224_8_15_p_ZN11tcn_weightsL7CONV1_WE_3_13_ROb3s' due to the length limit 80
+INFO: [SYN 201-210] Renamed object name 'p_anonymous_namespace_conv1_relu_224_8_15_p_ZN11tcn_weightsL7CONV1_WE_3_14_ROM_AUTO_1R' to 'p_anonymous_namespace_conv1_relu_224_8_15_p_ZN11tcn_weightsL7CONV1_WE_3_14_ROb4t' due to the length limit 80
+INFO: [SYN 201-210] Renamed object name 'p_anonymous_namespace_conv1_relu_224_8_15_p_ZN11tcn_weightsL7CONV1_WE_3_15_ROM_AUTO_1R' to 'p_anonymous_namespace_conv1_relu_224_8_15_p_ZN11tcn_weightsL7CONV1_WE_3_15_ROb5t' due to the length limit 80
+INFO: [RTGEN 206-100] Generating core module 'mul_36s_23s_59_2_1': 2 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'mul_36s_24s_60_2_1': 2 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'mul_36s_25s_61_2_1': 1 instance(s).
+INFO: [RTGEN 206-100] Finished creating RTL model for 'p_anonymous_namespace_conv1_relu_224_8_15'.
+INFO: [RTMG 210-279] Implementing memory 'tcn_prepad_infer_p_anonymous_namespace_conv1_relu_224_8_15_p_ZN11tcn_weightsL7CONV1_BE_3_ROM_AbPq' using auto ROMs.
+INFO: [RTMG 210-279] Implementing memory 'tcn_prepad_infer_p_anonymous_namespace_conv1_relu_224_8_15_p_ZN11tcn_weightsL7CONV1_WE_3_0_ROMbQq' using auto ROMs.
+INFO: [RTMG 210-279] Implementing memory 'tcn_prepad_infer_p_anonymous_namespace_conv1_relu_224_8_15_p_ZN11tcn_weightsL7CONV1_WE_3_1_ROMbRq' using auto ROMs.
+INFO: [RTMG 210-279] Implementing memory 'tcn_prepad_infer_p_anonymous_namespace_conv1_relu_224_8_15_p_ZN11tcn_weightsL7CONV1_WE_3_2_ROMbSr' using auto ROMs.
+INFO: [RTMG 210-279] Implementing memory 'tcn_prepad_infer_p_anonymous_namespace_conv1_relu_224_8_15_p_ZN11tcn_weightsL7CONV1_WE_3_3_ROMbTr' using auto ROMs.
+INFO: [RTMG 210-279] Implementing memory 'tcn_prepad_infer_p_anonymous_namespace_conv1_relu_224_8_15_p_ZN11tcn_weightsL7CONV1_WE_3_4_ROMbUr' using auto ROMs.
+INFO: [RTMG 210-279] Implementing memory 'tcn_prepad_infer_p_anonymous_namespace_conv1_relu_224_8_15_p_ZN11tcn_weightsL7CONV1_WE_3_5_ROMbVr' using auto ROMs.
+INFO: [RTMG 210-279] Implementing memory 'tcn_prepad_infer_p_anonymous_namespace_conv1_relu_224_8_15_p_ZN11tcn_weightsL7CONV1_WE_3_6_ROMbWr' using auto ROMs.
+INFO: [RTMG 210-279] Implementing memory 'tcn_prepad_infer_p_anonymous_namespace_conv1_relu_224_8_15_p_ZN11tcn_weightsL7CONV1_WE_3_7_ROMbXr' using auto ROMs.
+INFO: [RTMG 210-279] Implementing memory 'tcn_prepad_infer_p_anonymous_namespace_conv1_relu_224_8_15_p_ZN11tcn_weightsL7CONV1_WE_3_8_ROMbYs' using auto ROMs.
+INFO: [RTMG 210-279] Implementing memory 'tcn_prepad_infer_p_anonymous_namespace_conv1_relu_224_8_15_p_ZN11tcn_weightsL7CONV1_WE_3_9_ROMbZs' using auto ROMs.
+INFO: [RTMG 210-279] Implementing memory 'tcn_prepad_infer_p_anonymous_namespace_conv1_relu_224_8_15_p_ZN11tcn_weightsL7CONV1_WE_3_10_ROb0s' using auto ROMs.
+INFO: [RTMG 210-279] Implementing memory 'tcn_prepad_infer_p_anonymous_namespace_conv1_relu_224_8_15_p_ZN11tcn_weightsL7CONV1_WE_3_11_ROb1s' using auto ROMs.
+INFO: [RTMG 210-279] Implementing memory 'tcn_prepad_infer_p_anonymous_namespace_conv1_relu_224_8_15_p_ZN11tcn_weightsL7CONV1_WE_3_12_ROb2s' using auto ROMs.
+INFO: [RTMG 210-279] Implementing memory 'tcn_prepad_infer_p_anonymous_namespace_conv1_relu_224_8_15_p_ZN11tcn_weightsL7CONV1_WE_3_13_ROb3s' using auto ROMs.
+INFO: [RTMG 210-279] Implementing memory 'tcn_prepad_infer_p_anonymous_namespace_conv1_relu_224_8_15_p_ZN11tcn_weightsL7CONV1_WE_3_14_ROb4t' using auto ROMs.
+INFO: [RTMG 210-279] Implementing memory 'tcn_prepad_infer_p_anonymous_namespace_conv1_relu_224_8_15_p_ZN11tcn_weightsL7CONV1_WE_3_15_ROb5t' using auto ROMs.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0 seconds. CPU system time: 1 seconds. Elapsed time: 1.702 seconds; current allocated memory: 420.922 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'p_anonymous_namespace_conv2_relu_residual_224_8_14' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SYN 201-210] Renamed object name 'p_anonymous_namespace_conv2_relu_residual_224_8_14_p_ZN11tcn_weightsL7CONV2_BE_3_ROM_AUTO_1R' to 'p_anonymous_namespace_conv2_relu_residual_224_8_14_p_ZN11tcn_weightsL7CONV2_Bb6t' due to the length limit 80
+INFO: [SYN 201-210] Renamed object name 'p_anonymous_namespace_conv2_relu_residual_224_8_14_p_ZN11tcn_weightsL7CONV2_WE_3_0_ROM_AUTO_1R' to 'p_anonymous_namespace_conv2_relu_residual_224_8_14_p_ZN11tcn_weightsL7CONV2_Wb7t' due to the length limit 80
+INFO: [SYN 201-210] Renamed object name 'p_anonymous_namespace_conv2_relu_residual_224_8_14_p_ZN11tcn_weightsL7CONV2_WE_3_1_ROM_AUTO_1R' to 'p_anonymous_namespace_conv2_relu_residual_224_8_14_p_ZN11tcn_weightsL7CONV2_Wb8t' due to the length limit 80
+INFO: [SYN 201-210] Renamed object name 'p_anonymous_namespace_conv2_relu_residual_224_8_14_p_ZN11tcn_weightsL7CONV2_WE_3_2_ROM_AUTO_1R' to 'p_anonymous_namespace_conv2_relu_residual_224_8_14_p_ZN11tcn_weightsL7CONV2_Wb9t' due to the length limit 80
+INFO: [SYN 201-210] Renamed object name 'p_anonymous_namespace_conv2_relu_residual_224_8_14_p_ZN11tcn_weightsL7CONV2_WE_3_3_ROM_AUTO_1R' to 'p_anonymous_namespace_conv2_relu_residual_224_8_14_p_ZN11tcn_weightsL7CONV2_Wcau' due to the length limit 80
+INFO: [SYN 201-210] Renamed object name 'p_anonymous_namespace_conv2_relu_residual_224_8_14_p_ZN11tcn_weightsL7CONV2_WE_3_4_ROM_AUTO_1R' to 'p_anonymous_namespace_conv2_relu_residual_224_8_14_p_ZN11tcn_weightsL7CONV2_Wcbu' due to the length limit 80
+INFO: [SYN 201-210] Renamed object name 'p_anonymous_namespace_conv2_relu_residual_224_8_14_p_ZN11tcn_weightsL7CONV2_WE_3_5_ROM_AUTO_1R' to 'p_anonymous_namespace_conv2_relu_residual_224_8_14_p_ZN11tcn_weightsL7CONV2_Wccu' due to the length limit 80
+INFO: [SYN 201-210] Renamed object name 'p_anonymous_namespace_conv2_relu_residual_224_8_14_p_ZN11tcn_weightsL7CONV2_WE_3_6_ROM_AUTO_1R' to 'p_anonymous_namespace_conv2_relu_residual_224_8_14_p_ZN11tcn_weightsL7CONV2_Wcdu' due to the length limit 80
+INFO: [SYN 201-210] Renamed object name 'p_anonymous_namespace_conv2_relu_residual_224_8_14_p_ZN11tcn_weightsL7CONV2_WE_3_7_ROM_AUTO_1R' to 'p_anonymous_namespace_conv2_relu_residual_224_8_14_p_ZN11tcn_weightsL7CONV2_Wceu' due to the length limit 80
+INFO: [SYN 201-210] Renamed object name 'p_anonymous_namespace_conv2_relu_residual_224_8_14_p_ZN11tcn_weightsL7CONV2_WE_3_8_ROM_AUTO_1R' to 'p_anonymous_namespace_conv2_relu_residual_224_8_14_p_ZN11tcn_weightsL7CONV2_Wcfu' due to the length limit 80
+INFO: [SYN 201-210] Renamed object name 'p_anonymous_namespace_conv2_relu_residual_224_8_14_p_ZN11tcn_weightsL7CONV2_WE_3_9_ROM_AUTO_1R' to 'p_anonymous_namespace_conv2_relu_residual_224_8_14_p_ZN11tcn_weightsL7CONV2_Wcgu' due to the length limit 80
+INFO: [SYN 201-210] Renamed object name 'p_anonymous_namespace_conv2_relu_residual_224_8_14_p_ZN11tcn_weightsL7CONV2_WE_3_10_ROM_AUTO_1R' to 'p_anonymous_namespace_conv2_relu_residual_224_8_14_p_ZN11tcn_weightsL7CONV2_Wchv' due to the length limit 80
+INFO: [SYN 201-210] Renamed object name 'p_anonymous_namespace_conv2_relu_residual_224_8_14_p_ZN11tcn_weightsL7CONV2_WE_3_11_ROM_AUTO_1R' to 'p_anonymous_namespace_conv2_relu_residual_224_8_14_p_ZN11tcn_weightsL7CONV2_Wciv' due to the length limit 80
+INFO: [SYN 201-210] Renamed object name 'p_anonymous_namespace_conv2_relu_residual_224_8_14_p_ZN11tcn_weightsL7CONV2_WE_3_12_ROM_AUTO_1R' to 'p_anonymous_namespace_conv2_relu_residual_224_8_14_p_ZN11tcn_weightsL7CONV2_Wcjv' due to the length limit 80
+INFO: [SYN 201-210] Renamed object name 'p_anonymous_namespace_conv2_relu_residual_224_8_14_p_ZN11tcn_weightsL7CONV2_WE_3_13_ROM_AUTO_1R' to 'p_anonymous_namespace_conv2_relu_residual_224_8_14_p_ZN11tcn_weightsL7CONV2_Wckv' due to the length limit 80
+INFO: [SYN 201-210] Renamed object name 'p_anonymous_namespace_conv2_relu_residual_224_8_14_p_ZN11tcn_weightsL7CONV2_WE_3_14_ROM_AUTO_1R' to 'p_anonymous_namespace_conv2_relu_residual_224_8_14_p_ZN11tcn_weightsL7CONV2_Wclv' due to the length limit 80
+INFO: [SYN 201-210] Renamed object name 'p_anonymous_namespace_conv2_relu_residual_224_8_14_p_ZN11tcn_weightsL7CONV2_WE_3_15_ROM_AUTO_1R' to 'p_anonymous_namespace_conv2_relu_residual_224_8_14_p_ZN11tcn_weightsL7CONV2_Wcmv' due to the length limit 80
+INFO: [RTGEN 206-100] Generating core module 'mul_36s_23s_59_2_1': 2 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'mul_36s_24s_60_2_1': 2 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'mul_36s_25s_61_2_1': 1 instance(s).
+INFO: [RTGEN 206-100] Finished creating RTL model for 'p_anonymous_namespace_conv2_relu_residual_224_8_14'.
+INFO: [RTMG 210-279] Implementing memory 'tcn_prepad_infer_p_anonymous_namespace_conv2_relu_residual_224_8_14_p_ZN11tcn_weightsL7CONV2_Bb6t' using auto ROMs.
+INFO: [RTMG 210-279] Implementing memory 'tcn_prepad_infer_p_anonymous_namespace_conv2_relu_residual_224_8_14_p_ZN11tcn_weightsL7CONV2_Wb7t' using auto ROMs.
+INFO: [RTMG 210-279] Implementing memory 'tcn_prepad_infer_p_anonymous_namespace_conv2_relu_residual_224_8_14_p_ZN11tcn_weightsL7CONV2_Wb8t' using auto ROMs.
+INFO: [RTMG 210-279] Implementing memory 'tcn_prepad_infer_p_anonymous_namespace_conv2_relu_residual_224_8_14_p_ZN11tcn_weightsL7CONV2_Wb9t' using auto ROMs.
+INFO: [RTMG 210-279] Implementing memory 'tcn_prepad_infer_p_anonymous_namespace_conv2_relu_residual_224_8_14_p_ZN11tcn_weightsL7CONV2_Wcau' using auto ROMs.
+INFO: [RTMG 210-279] Implementing memory 'tcn_prepad_infer_p_anonymous_namespace_conv2_relu_residual_224_8_14_p_ZN11tcn_weightsL7CONV2_Wcbu' using auto ROMs.
+INFO: [RTMG 210-279] Implementing memory 'tcn_prepad_infer_p_anonymous_namespace_conv2_relu_residual_224_8_14_p_ZN11tcn_weightsL7CONV2_Wccu' using auto ROMs.
+INFO: [RTMG 210-279] Implementing memory 'tcn_prepad_infer_p_anonymous_namespace_conv2_relu_residual_224_8_14_p_ZN11tcn_weightsL7CONV2_Wcdu' using auto ROMs.
+INFO: [RTMG 210-279] Implementing memory 'tcn_prepad_infer_p_anonymous_namespace_conv2_relu_residual_224_8_14_p_ZN11tcn_weightsL7CONV2_Wceu' using auto ROMs.
+INFO: [RTMG 210-279] Implementing memory 'tcn_prepad_infer_p_anonymous_namespace_conv2_relu_residual_224_8_14_p_ZN11tcn_weightsL7CONV2_Wcfu' using auto ROMs.
+INFO: [RTMG 210-279] Implementing memory 'tcn_prepad_infer_p_anonymous_namespace_conv2_relu_residual_224_8_14_p_ZN11tcn_weightsL7CONV2_Wcgu' using auto ROMs.
+INFO: [RTMG 210-279] Implementing memory 'tcn_prepad_infer_p_anonymous_namespace_conv2_relu_residual_224_8_14_p_ZN11tcn_weightsL7CONV2_Wchv' using auto ROMs.
+INFO: [RTMG 210-279] Implementing memory 'tcn_prepad_infer_p_anonymous_namespace_conv2_relu_residual_224_8_14_p_ZN11tcn_weightsL7CONV2_Wciv' using auto ROMs.
+INFO: [RTMG 210-279] Implementing memory 'tcn_prepad_infer_p_anonymous_namespace_conv2_relu_residual_224_8_14_p_ZN11tcn_weightsL7CONV2_Wcjv' using auto ROMs.
+INFO: [RTMG 210-279] Implementing memory 'tcn_prepad_infer_p_anonymous_namespace_conv2_relu_residual_224_8_14_p_ZN11tcn_weightsL7CONV2_Wckv' using auto ROMs.
+INFO: [RTMG 210-279] Implementing memory 'tcn_prepad_infer_p_anonymous_namespace_conv2_relu_residual_224_8_14_p_ZN11tcn_weightsL7CONV2_Wclv' using auto ROMs.
+INFO: [RTMG 210-279] Implementing memory 'tcn_prepad_infer_p_anonymous_namespace_conv2_relu_residual_224_8_14_p_ZN11tcn_weightsL7CONV2_Wcmv' using auto ROMs.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 1 seconds. CPU system time: 0 seconds. Elapsed time: 3.837 seconds; current allocated memory: 428.609 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'p_anonymous_namespace_tcn_block_224_8_s' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [RTGEN 206-100] Generating core module 'mul_36s_23s_59_2_1': 2 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'mul_36s_24s_60_2_1': 2 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'mul_36s_25s_61_2_1': 1 instance(s).
+INFO: [RTGEN 206-100] Finished creating RTL model for 'p_anonymous_namespace_tcn_block_224_8_s'.
+INFO: [RTMG 210-278] Implementing memory 'tcn_prepad_infer_p_anonymous_namespace_tcn_block_224_8_s_tmp_RAM_AUTO_1R1W' using auto RAMs.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.385 seconds; current allocated memory: 434.906 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'p_anonymous_namespace_conv1_relu_192_16_17' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SYN 201-210] Renamed object name 'p_anonymous_namespace_conv1_relu_192_16_17_p_ZN11tcn_weightsL7CONV1_BE_4_ROM_AUTO_1R' to 'p_anonymous_namespace_conv1_relu_192_16_17_p_ZN11tcn_weightsL7CONV1_BE_4_ROM_cnw' due to the length limit 80
+INFO: [SYN 201-210] Renamed object name 'p_anonymous_namespace_conv1_relu_192_16_17_p_ZN11tcn_weightsL7CONV1_WE_4_0_ROM_AUTO_1R' to 'p_anonymous_namespace_conv1_relu_192_16_17_p_ZN11tcn_weightsL7CONV1_WE_4_0_ROcow' due to the length limit 80
+INFO: [SYN 201-210] Renamed object name 'p_anonymous_namespace_conv1_relu_192_16_17_p_ZN11tcn_weightsL7CONV1_WE_4_1_ROM_AUTO_1R' to 'p_anonymous_namespace_conv1_relu_192_16_17_p_ZN11tcn_weightsL7CONV1_WE_4_1_ROcpw' due to the length limit 80
+INFO: [SYN 201-210] Renamed object name 'p_anonymous_namespace_conv1_relu_192_16_17_p_ZN11tcn_weightsL7CONV1_WE_4_2_ROM_AUTO_1R' to 'p_anonymous_namespace_conv1_relu_192_16_17_p_ZN11tcn_weightsL7CONV1_WE_4_2_ROcqw' due to the length limit 80
+INFO: [SYN 201-210] Renamed object name 'p_anonymous_namespace_conv1_relu_192_16_17_p_ZN11tcn_weightsL7CONV1_WE_4_3_ROM_AUTO_1R' to 'p_anonymous_namespace_conv1_relu_192_16_17_p_ZN11tcn_weightsL7CONV1_WE_4_3_ROcrw' due to the length limit 80
+INFO: [SYN 201-210] Renamed object name 'p_anonymous_namespace_conv1_relu_192_16_17_p_ZN11tcn_weightsL7CONV1_WE_4_4_ROM_AUTO_1R' to 'p_anonymous_namespace_conv1_relu_192_16_17_p_ZN11tcn_weightsL7CONV1_WE_4_4_ROcsw' due to the length limit 80
+INFO: [SYN 201-210] Renamed object name 'p_anonymous_namespace_conv1_relu_192_16_17_p_ZN11tcn_weightsL7CONV1_WE_4_5_ROM_AUTO_1R' to 'p_anonymous_namespace_conv1_relu_192_16_17_p_ZN11tcn_weightsL7CONV1_WE_4_5_ROctx' due to the length limit 80
+INFO: [SYN 201-210] Renamed object name 'p_anonymous_namespace_conv1_relu_192_16_17_p_ZN11tcn_weightsL7CONV1_WE_4_6_ROM_AUTO_1R' to 'p_anonymous_namespace_conv1_relu_192_16_17_p_ZN11tcn_weightsL7CONV1_WE_4_6_ROcux' due to the length limit 80
+INFO: [SYN 201-210] Renamed object name 'p_anonymous_namespace_conv1_relu_192_16_17_p_ZN11tcn_weightsL7CONV1_WE_4_7_ROM_AUTO_1R' to 'p_anonymous_namespace_conv1_relu_192_16_17_p_ZN11tcn_weightsL7CONV1_WE_4_7_ROcvx' due to the length limit 80
+INFO: [SYN 201-210] Renamed object name 'p_anonymous_namespace_conv1_relu_192_16_17_p_ZN11tcn_weightsL7CONV1_WE_4_8_ROM_AUTO_1R' to 'p_anonymous_namespace_conv1_relu_192_16_17_p_ZN11tcn_weightsL7CONV1_WE_4_8_ROcwx' due to the length limit 80
+INFO: [SYN 201-210] Renamed object name 'p_anonymous_namespace_conv1_relu_192_16_17_p_ZN11tcn_weightsL7CONV1_WE_4_9_ROM_AUTO_1R' to 'p_anonymous_namespace_conv1_relu_192_16_17_p_ZN11tcn_weightsL7CONV1_WE_4_9_ROcxx' due to the length limit 80
+INFO: [SYN 201-210] Renamed object name 'p_anonymous_namespace_conv1_relu_192_16_17_p_ZN11tcn_weightsL7CONV1_WE_4_10_ROM_AUTO_1R' to 'p_anonymous_namespace_conv1_relu_192_16_17_p_ZN11tcn_weightsL7CONV1_WE_4_10_Rcyx' due to the length limit 80
+INFO: [SYN 201-210] Renamed object name 'p_anonymous_namespace_conv1_relu_192_16_17_p_ZN11tcn_weightsL7CONV1_WE_4_11_ROM_AUTO_1R' to 'p_anonymous_namespace_conv1_relu_192_16_17_p_ZN11tcn_weightsL7CONV1_WE_4_11_Rczy' due to the length limit 80
+INFO: [SYN 201-210] Renamed object name 'p_anonymous_namespace_conv1_relu_192_16_17_p_ZN11tcn_weightsL7CONV1_WE_4_12_ROM_AUTO_1R' to 'p_anonymous_namespace_conv1_relu_192_16_17_p_ZN11tcn_weightsL7CONV1_WE_4_12_RcAy' due to the length limit 80
+INFO: [SYN 201-210] Renamed object name 'p_anonymous_namespace_conv1_relu_192_16_17_p_ZN11tcn_weightsL7CONV1_WE_4_13_ROM_AUTO_1R' to 'p_anonymous_namespace_conv1_relu_192_16_17_p_ZN11tcn_weightsL7CONV1_WE_4_13_RcBy' due to the length limit 80
+INFO: [SYN 201-210] Renamed object name 'p_anonymous_namespace_conv1_relu_192_16_17_p_ZN11tcn_weightsL7CONV1_WE_4_14_ROM_AUTO_1R' to 'p_anonymous_namespace_conv1_relu_192_16_17_p_ZN11tcn_weightsL7CONV1_WE_4_14_RcCy' due to the length limit 80
+INFO: [SYN 201-210] Renamed object name 'p_anonymous_namespace_conv1_relu_192_16_17_p_ZN11tcn_weightsL7CONV1_WE_4_15_ROM_AUTO_1R' to 'p_anonymous_namespace_conv1_relu_192_16_17_p_ZN11tcn_weightsL7CONV1_WE_4_15_RcDy' due to the length limit 80
+INFO: [RTGEN 206-100] Generating core module 'mul_36s_23s_59_2_1': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'mul_36s_24s_60_2_1': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'mul_36s_25s_61_2_1': 1 instance(s).
+INFO: [RTGEN 206-100] Finished creating RTL model for 'p_anonymous_namespace_conv1_relu_192_16_17'.
+INFO: [RTMG 210-279] Implementing memory 'tcn_prepad_infer_p_anonymous_namespace_conv1_relu_192_16_17_p_ZN11tcn_weightsL7CONV1_BE_4_ROM_cnw' using auto ROMs.
+INFO: [RTMG 210-279] Implementing memory 'tcn_prepad_infer_p_anonymous_namespace_conv1_relu_192_16_17_p_ZN11tcn_weightsL7CONV1_WE_4_0_ROcow' using auto ROMs.
+INFO: [RTMG 210-279] Implementing memory 'tcn_prepad_infer_p_anonymous_namespace_conv1_relu_192_16_17_p_ZN11tcn_weightsL7CONV1_WE_4_1_ROcpw' using auto ROMs.
+INFO: [RTMG 210-279] Implementing memory 'tcn_prepad_infer_p_anonymous_namespace_conv1_relu_192_16_17_p_ZN11tcn_weightsL7CONV1_WE_4_2_ROcqw' using auto ROMs.
+INFO: [RTMG 210-279] Implementing memory 'tcn_prepad_infer_p_anonymous_namespace_conv1_relu_192_16_17_p_ZN11tcn_weightsL7CONV1_WE_4_3_ROcrw' using auto ROMs.
+INFO: [RTMG 210-279] Implementing memory 'tcn_prepad_infer_p_anonymous_namespace_conv1_relu_192_16_17_p_ZN11tcn_weightsL7CONV1_WE_4_4_ROcsw' using auto ROMs.
+INFO: [RTMG 210-279] Implementing memory 'tcn_prepad_infer_p_anonymous_namespace_conv1_relu_192_16_17_p_ZN11tcn_weightsL7CONV1_WE_4_5_ROctx' using auto ROMs.
+INFO: [RTMG 210-279] Implementing memory 'tcn_prepad_infer_p_anonymous_namespace_conv1_relu_192_16_17_p_ZN11tcn_weightsL7CONV1_WE_4_6_ROcux' using auto ROMs.
+INFO: [RTMG 210-279] Implementing memory 'tcn_prepad_infer_p_anonymous_namespace_conv1_relu_192_16_17_p_ZN11tcn_weightsL7CONV1_WE_4_7_ROcvx' using auto ROMs.
+INFO: [RTMG 210-279] Implementing memory 'tcn_prepad_infer_p_anonymous_namespace_conv1_relu_192_16_17_p_ZN11tcn_weightsL7CONV1_WE_4_8_ROcwx' using auto ROMs.
+INFO: [RTMG 210-279] Implementing memory 'tcn_prepad_infer_p_anonymous_namespace_conv1_relu_192_16_17_p_ZN11tcn_weightsL7CONV1_WE_4_9_ROcxx' using auto ROMs.
+INFO: [RTMG 210-279] Implementing memory 'tcn_prepad_infer_p_anonymous_namespace_conv1_relu_192_16_17_p_ZN11tcn_weightsL7CONV1_WE_4_10_Rcyx' using auto ROMs.
+INFO: [RTMG 210-279] Implementing memory 'tcn_prepad_infer_p_anonymous_namespace_conv1_relu_192_16_17_p_ZN11tcn_weightsL7CONV1_WE_4_11_Rczy' using auto ROMs.
+INFO: [RTMG 210-279] Implementing memory 'tcn_prepad_infer_p_anonymous_namespace_conv1_relu_192_16_17_p_ZN11tcn_weightsL7CONV1_WE_4_12_RcAy' using auto ROMs.
+INFO: [RTMG 210-279] Implementing memory 'tcn_prepad_infer_p_anonymous_namespace_conv1_relu_192_16_17_p_ZN11tcn_weightsL7CONV1_WE_4_13_RcBy' using auto ROMs.
+INFO: [RTMG 210-279] Implementing memory 'tcn_prepad_infer_p_anonymous_namespace_conv1_relu_192_16_17_p_ZN11tcn_weightsL7CONV1_WE_4_14_RcCy' using auto ROMs.
+INFO: [RTMG 210-279] Implementing memory 'tcn_prepad_infer_p_anonymous_namespace_conv1_relu_192_16_17_p_ZN11tcn_weightsL7CONV1_WE_4_15_RcDy' using auto ROMs.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 1.792 seconds; current allocated memory: 436.664 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'p_anonymous_namespace_conv2_relu_residual_192_16_16' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SYN 201-210] Renamed object name 'p_anonymous_namespace_conv2_relu_residual_192_16_16_p_ZN11tcn_weightsL7CONV2_BE_4_ROM_AUTO_1R' to 'p_anonymous_namespace_conv2_relu_residual_192_16_16_p_ZN11tcn_weightsL7CONV2_cEy' due to the length limit 80
+INFO: [SYN 201-210] Renamed object name 'p_anonymous_namespace_conv2_relu_residual_192_16_16_p_ZN11tcn_weightsL7CONV2_WE_4_0_ROM_AUTO_1R' to 'p_anonymous_namespace_conv2_relu_residual_192_16_16_p_ZN11tcn_weightsL7CONV2_cFz' due to the length limit 80
+INFO: [SYN 201-210] Renamed object name 'p_anonymous_namespace_conv2_relu_residual_192_16_16_p_ZN11tcn_weightsL7CONV2_WE_4_1_ROM_AUTO_1R' to 'p_anonymous_namespace_conv2_relu_residual_192_16_16_p_ZN11tcn_weightsL7CONV2_cGz' due to the length limit 80
+INFO: [SYN 201-210] Renamed object name 'p_anonymous_namespace_conv2_relu_residual_192_16_16_p_ZN11tcn_weightsL7CONV2_WE_4_2_ROM_AUTO_1R' to 'p_anonymous_namespace_conv2_relu_residual_192_16_16_p_ZN11tcn_weightsL7CONV2_cHz' due to the length limit 80
+INFO: [SYN 201-210] Renamed object name 'p_anonymous_namespace_conv2_relu_residual_192_16_16_p_ZN11tcn_weightsL7CONV2_WE_4_3_ROM_AUTO_1R' to 'p_anonymous_namespace_conv2_relu_residual_192_16_16_p_ZN11tcn_weightsL7CONV2_cIz' due to the length limit 80
+INFO: [SYN 201-210] Renamed object name 'p_anonymous_namespace_conv2_relu_residual_192_16_16_p_ZN11tcn_weightsL7CONV2_WE_4_4_ROM_AUTO_1R' to 'p_anonymous_namespace_conv2_relu_residual_192_16_16_p_ZN11tcn_weightsL7CONV2_cJz' due to the length limit 80
+INFO: [SYN 201-210] Renamed object name 'p_anonymous_namespace_conv2_relu_residual_192_16_16_p_ZN11tcn_weightsL7CONV2_WE_4_5_ROM_AUTO_1R' to 'p_anonymous_namespace_conv2_relu_residual_192_16_16_p_ZN11tcn_weightsL7CONV2_cKz' due to the length limit 80
+INFO: [SYN 201-210] Renamed object name 'p_anonymous_namespace_conv2_relu_residual_192_16_16_p_ZN11tcn_weightsL7CONV2_WE_4_6_ROM_AUTO_1R' to 'p_anonymous_namespace_conv2_relu_residual_192_16_16_p_ZN11tcn_weightsL7CONV2_cLz' due to the length limit 80
+INFO: [SYN 201-210] Renamed object name 'p_anonymous_namespace_conv2_relu_residual_192_16_16_p_ZN11tcn_weightsL7CONV2_WE_4_7_ROM_AUTO_1R' to 'p_anonymous_namespace_conv2_relu_residual_192_16_16_p_ZN11tcn_weightsL7CONV2_cMA' due to the length limit 80
+INFO: [SYN 201-210] Renamed object name 'p_anonymous_namespace_conv2_relu_residual_192_16_16_p_ZN11tcn_weightsL7CONV2_WE_4_8_ROM_AUTO_1R' to 'p_anonymous_namespace_conv2_relu_residual_192_16_16_p_ZN11tcn_weightsL7CONV2_cNA' due to the length limit 80
+INFO: [SYN 201-210] Renamed object name 'p_anonymous_namespace_conv2_relu_residual_192_16_16_p_ZN11tcn_weightsL7CONV2_WE_4_9_ROM_AUTO_1R' to 'p_anonymous_namespace_conv2_relu_residual_192_16_16_p_ZN11tcn_weightsL7CONV2_cOA' due to the length limit 80
+INFO: [SYN 201-210] Renamed object name 'p_anonymous_namespace_conv2_relu_residual_192_16_16_p_ZN11tcn_weightsL7CONV2_WE_4_10_ROM_AUTO_1R' to 'p_anonymous_namespace_conv2_relu_residual_192_16_16_p_ZN11tcn_weightsL7CONV2_cPA' due to the length limit 80
+INFO: [SYN 201-210] Renamed object name 'p_anonymous_namespace_conv2_relu_residual_192_16_16_p_ZN11tcn_weightsL7CONV2_WE_4_11_ROM_AUTO_1R' to 'p_anonymous_namespace_conv2_relu_residual_192_16_16_p_ZN11tcn_weightsL7CONV2_cQA' due to the length limit 80
+INFO: [SYN 201-210] Renamed object name 'p_anonymous_namespace_conv2_relu_residual_192_16_16_p_ZN11tcn_weightsL7CONV2_WE_4_12_ROM_AUTO_1R' to 'p_anonymous_namespace_conv2_relu_residual_192_16_16_p_ZN11tcn_weightsL7CONV2_cRA' due to the length limit 80
+INFO: [SYN 201-210] Renamed object name 'p_anonymous_namespace_conv2_relu_residual_192_16_16_p_ZN11tcn_weightsL7CONV2_WE_4_13_ROM_AUTO_1R' to 'p_anonymous_namespace_conv2_relu_residual_192_16_16_p_ZN11tcn_weightsL7CONV2_cSB' due to the length limit 80
+INFO: [SYN 201-210] Renamed object name 'p_anonymous_namespace_conv2_relu_residual_192_16_16_p_ZN11tcn_weightsL7CONV2_WE_4_14_ROM_AUTO_1R' to 'p_anonymous_namespace_conv2_relu_residual_192_16_16_p_ZN11tcn_weightsL7CONV2_cTB' due to the length limit 80
+INFO: [SYN 201-210] Renamed object name 'p_anonymous_namespace_conv2_relu_residual_192_16_16_p_ZN11tcn_weightsL7CONV2_WE_4_15_ROM_AUTO_1R' to 'p_anonymous_namespace_conv2_relu_residual_192_16_16_p_ZN11tcn_weightsL7CONV2_cUB' due to the length limit 80
+INFO: [RTGEN 206-100] Generating core module 'mul_36s_23s_59_2_1': 2 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'mul_36s_24s_60_2_1': 2 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'mul_36s_25s_61_2_1': 1 instance(s).
+INFO: [RTGEN 206-100] Finished creating RTL model for 'p_anonymous_namespace_conv2_relu_residual_192_16_16'.
+INFO: [RTMG 210-279] Implementing memory 'tcn_prepad_infer_p_anonymous_namespace_conv2_relu_residual_192_16_16_p_ZN11tcn_weightsL7CONV2_cEy' using auto ROMs.
+INFO: [RTMG 210-279] Implementing memory 'tcn_prepad_infer_p_anonymous_namespace_conv2_relu_residual_192_16_16_p_ZN11tcn_weightsL7CONV2_cFz' using auto ROMs.
+INFO: [RTMG 210-279] Implementing memory 'tcn_prepad_infer_p_anonymous_namespace_conv2_relu_residual_192_16_16_p_ZN11tcn_weightsL7CONV2_cGz' using auto ROMs.
+INFO: [RTMG 210-279] Implementing memory 'tcn_prepad_infer_p_anonymous_namespace_conv2_relu_residual_192_16_16_p_ZN11tcn_weightsL7CONV2_cHz' using auto ROMs.
+INFO: [RTMG 210-279] Implementing memory 'tcn_prepad_infer_p_anonymous_namespace_conv2_relu_residual_192_16_16_p_ZN11tcn_weightsL7CONV2_cIz' using auto ROMs.
+INFO: [RTMG 210-279] Implementing memory 'tcn_prepad_infer_p_anonymous_namespace_conv2_relu_residual_192_16_16_p_ZN11tcn_weightsL7CONV2_cJz' using auto ROMs.
+INFO: [RTMG 210-279] Implementing memory 'tcn_prepad_infer_p_anonymous_namespace_conv2_relu_residual_192_16_16_p_ZN11tcn_weightsL7CONV2_cKz' using auto ROMs.
+INFO: [RTMG 210-279] Implementing memory 'tcn_prepad_infer_p_anonymous_namespace_conv2_relu_residual_192_16_16_p_ZN11tcn_weightsL7CONV2_cLz' using auto ROMs.
+INFO: [RTMG 210-279] Implementing memory 'tcn_prepad_infer_p_anonymous_namespace_conv2_relu_residual_192_16_16_p_ZN11tcn_weightsL7CONV2_cMA' using auto ROMs.
+INFO: [RTMG 210-279] Implementing memory 'tcn_prepad_infer_p_anonymous_namespace_conv2_relu_residual_192_16_16_p_ZN11tcn_weightsL7CONV2_cNA' using auto ROMs.
+INFO: [RTMG 210-279] Implementing memory 'tcn_prepad_infer_p_anonymous_namespace_conv2_relu_residual_192_16_16_p_ZN11tcn_weightsL7CONV2_cOA' using auto ROMs.
+INFO: [RTMG 210-279] Implementing memory 'tcn_prepad_infer_p_anonymous_namespace_conv2_relu_residual_192_16_16_p_ZN11tcn_weightsL7CONV2_cPA' using auto ROMs.
+INFO: [RTMG 210-279] Implementing memory 'tcn_prepad_infer_p_anonymous_namespace_conv2_relu_residual_192_16_16_p_ZN11tcn_weightsL7CONV2_cQA' using auto ROMs.
+INFO: [RTMG 210-279] Implementing memory 'tcn_prepad_infer_p_anonymous_namespace_conv2_relu_residual_192_16_16_p_ZN11tcn_weightsL7CONV2_cRA' using auto ROMs.
+INFO: [RTMG 210-279] Implementing memory 'tcn_prepad_infer_p_anonymous_namespace_conv2_relu_residual_192_16_16_p_ZN11tcn_weightsL7CONV2_cSB' using auto ROMs.
+INFO: [RTMG 210-279] Implementing memory 'tcn_prepad_infer_p_anonymous_namespace_conv2_relu_residual_192_16_16_p_ZN11tcn_weightsL7CONV2_cTB' using auto ROMs.
+INFO: [RTMG 210-279] Implementing memory 'tcn_prepad_infer_p_anonymous_namespace_conv2_relu_residual_192_16_16_p_ZN11tcn_weightsL7CONV2_cUB' using auto ROMs.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 1 seconds. CPU system time: 0 seconds. Elapsed time: 4.127 seconds; current allocated memory: 443.746 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'p_anonymous_namespace_tcn_block_192_16_s' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [RTGEN 206-100] Generating core module 'mul_36s_23s_59_2_1': 2 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'mul_36s_24s_60_2_1': 2 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'mul_36s_25s_61_2_1': 1 instance(s).
+INFO: [RTGEN 206-100] Finished creating RTL model for 'p_anonymous_namespace_tcn_block_192_16_s'.
+INFO: [RTMG 210-278] Implementing memory 'tcn_prepad_infer_p_anonymous_namespace_tcn_block_192_16_s_tmp_RAM_AUTO_1R1W' using auto RAMs.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.343 seconds; current allocated memory: 450.316 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'p_anonymous_namespace_global_average_readout' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SYN 201-210] Renamed object name 'p_anonymous_namespace_global_average_readout_p_ZN11tcn_weightsL4FC_WE_0_ROM_AUTO_1R' to 'p_anonymous_namespace_global_average_readout_p_ZN11tcn_weightsL4FC_WE_0_ROM_AcVB' due to the length limit 80
+INFO: [SYN 201-210] Renamed object name 'p_anonymous_namespace_global_average_readout_p_ZN11tcn_weightsL4FC_WE_1_ROM_AUTO_1R' to 'p_anonymous_namespace_global_average_readout_p_ZN11tcn_weightsL4FC_WE_1_ROM_AcWB' due to the length limit 80
+INFO: [SYN 201-210] Renamed object name 'p_anonymous_namespace_global_average_readout_p_ZN11tcn_weightsL4FC_WE_2_ROM_AUTO_1R' to 'p_anonymous_namespace_global_average_readout_p_ZN11tcn_weightsL4FC_WE_2_ROM_AcXB' due to the length limit 80
+INFO: [SYN 201-210] Renamed object name 'p_anonymous_namespace_global_average_readout_p_ZN11tcn_weightsL4FC_WE_3_ROM_AUTO_1R' to 'p_anonymous_namespace_global_average_readout_p_ZN11tcn_weightsL4FC_WE_3_ROM_AcYC' due to the length limit 80
+INFO: [SYN 201-210] Renamed object name 'p_anonymous_namespace_global_average_readout_p_ZN11tcn_weightsL4FC_WE_4_ROM_AUTO_1R' to 'p_anonymous_namespace_global_average_readout_p_ZN11tcn_weightsL4FC_WE_4_ROM_AcZC' due to the length limit 80
+INFO: [SYN 201-210] Renamed object name 'p_anonymous_namespace_global_average_readout_p_ZN11tcn_weightsL4FC_WE_5_ROM_AUTO_1R' to 'p_anonymous_namespace_global_average_readout_p_ZN11tcn_weightsL4FC_WE_5_ROM_Ac0C' due to the length limit 80
+INFO: [SYN 201-210] Renamed object name 'p_anonymous_namespace_global_average_readout_p_ZN11tcn_weightsL4FC_WE_6_ROM_AUTO_1R' to 'p_anonymous_namespace_global_average_readout_p_ZN11tcn_weightsL4FC_WE_6_ROM_Ac1C' due to the length limit 80
+INFO: [SYN 201-210] Renamed object name 'p_anonymous_namespace_global_average_readout_p_ZN11tcn_weightsL4FC_WE_7_ROM_AUTO_1R' to 'p_anonymous_namespace_global_average_readout_p_ZN11tcn_weightsL4FC_WE_7_ROM_Ac2C' due to the length limit 80
+INFO: [SYN 201-210] Renamed object name 'p_anonymous_namespace_global_average_readout_p_ZN11tcn_weightsL4FC_WE_8_ROM_AUTO_1R' to 'p_anonymous_namespace_global_average_readout_p_ZN11tcn_weightsL4FC_WE_8_ROM_Ac3C' due to the length limit 80
+INFO: [SYN 201-210] Renamed object name 'p_anonymous_namespace_global_average_readout_p_ZN11tcn_weightsL4FC_WE_9_ROM_AUTO_1R' to 'p_anonymous_namespace_global_average_readout_p_ZN11tcn_weightsL4FC_WE_9_ROM_Ac4D' due to the length limit 80
+INFO: [SYN 201-210] Renamed object name 'p_anonymous_namespace_global_average_readout_p_ZN11tcn_weightsL4FC_WE_10_ROM_AUTO_1R' to 'p_anonymous_namespace_global_average_readout_p_ZN11tcn_weightsL4FC_WE_10_ROM_c5D' due to the length limit 80
+INFO: [SYN 201-210] Renamed object name 'p_anonymous_namespace_global_average_readout_p_ZN11tcn_weightsL4FC_WE_11_ROM_AUTO_1R' to 'p_anonymous_namespace_global_average_readout_p_ZN11tcn_weightsL4FC_WE_11_ROM_c6D' due to the length limit 80
+INFO: [SYN 201-210] Renamed object name 'p_anonymous_namespace_global_average_readout_p_ZN11tcn_weightsL4FC_WE_12_ROM_AUTO_1R' to 'p_anonymous_namespace_global_average_readout_p_ZN11tcn_weightsL4FC_WE_12_ROM_c7D' due to the length limit 80
+INFO: [SYN 201-210] Renamed object name 'p_anonymous_namespace_global_average_readout_p_ZN11tcn_weightsL4FC_WE_13_ROM_AUTO_1R' to 'p_anonymous_namespace_global_average_readout_p_ZN11tcn_weightsL4FC_WE_13_ROM_c8D' due to the length limit 80
+INFO: [SYN 201-210] Renamed object name 'p_anonymous_namespace_global_average_readout_p_ZN11tcn_weightsL4FC_WE_14_ROM_AUTO_1R' to 'p_anonymous_namespace_global_average_readout_p_ZN11tcn_weightsL4FC_WE_14_ROM_c9D' due to the length limit 80
+INFO: [SYN 201-210] Renamed object name 'p_anonymous_namespace_global_average_readout_p_ZN11tcn_weightsL4FC_WE_15_ROM_AUTO_1R' to 'p_anonymous_namespace_global_average_readout_p_ZN11tcn_weightsL4FC_WE_15_ROM_daE' due to the length limit 80
+INFO: [RTGEN 206-100] Generating core module 'mul_30ns_33s_60_2_1': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'mul_30s_33s_60_2_1': 2 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'mul_31s_33s_60_2_1': 3 instance(s).
+INFO: [RTGEN 206-100] Finished creating RTL model for 'p_anonymous_namespace_global_average_readout'.
+INFO: [RTMG 210-279] Implementing memory 'tcn_prepad_infer_p_anonymous_namespace_global_average_readout_p_ZN11tcn_weightsL4FC_WE_0_ROM_AcVB' using auto ROMs.
+INFO: [RTMG 210-279] Implementing memory 'tcn_prepad_infer_p_anonymous_namespace_global_average_readout_p_ZN11tcn_weightsL4FC_WE_1_ROM_AcWB' using auto ROMs.
+INFO: [RTMG 210-279] Implementing memory 'tcn_prepad_infer_p_anonymous_namespace_global_average_readout_p_ZN11tcn_weightsL4FC_WE_2_ROM_AcXB' using auto ROMs.
+INFO: [RTMG 210-279] Implementing memory 'tcn_prepad_infer_p_anonymous_namespace_global_average_readout_p_ZN11tcn_weightsL4FC_WE_3_ROM_AcYC' using auto ROMs.
+INFO: [RTMG 210-279] Implementing memory 'tcn_prepad_infer_p_anonymous_namespace_global_average_readout_p_ZN11tcn_weightsL4FC_WE_4_ROM_AcZC' using auto ROMs.
+INFO: [RTMG 210-279] Implementing memory 'tcn_prepad_infer_p_anonymous_namespace_global_average_readout_p_ZN11tcn_weightsL4FC_WE_5_ROM_Ac0C' using auto ROMs.
+INFO: [RTMG 210-279] Implementing memory 'tcn_prepad_infer_p_anonymous_namespace_global_average_readout_p_ZN11tcn_weightsL4FC_WE_6_ROM_Ac1C' using auto ROMs.
+INFO: [RTMG 210-279] Implementing memory 'tcn_prepad_infer_p_anonymous_namespace_global_average_readout_p_ZN11tcn_weightsL4FC_WE_7_ROM_Ac2C' using auto ROMs.
+INFO: [RTMG 210-279] Implementing memory 'tcn_prepad_infer_p_anonymous_namespace_global_average_readout_p_ZN11tcn_weightsL4FC_WE_8_ROM_Ac3C' using auto ROMs.
+INFO: [RTMG 210-279] Implementing memory 'tcn_prepad_infer_p_anonymous_namespace_global_average_readout_p_ZN11tcn_weightsL4FC_WE_9_ROM_Ac4D' using auto ROMs.
+INFO: [RTMG 210-279] Implementing memory 'tcn_prepad_infer_p_anonymous_namespace_global_average_readout_p_ZN11tcn_weightsL4FC_WE_10_ROM_c5D' using auto ROMs.
+INFO: [RTMG 210-279] Implementing memory 'tcn_prepad_infer_p_anonymous_namespace_global_average_readout_p_ZN11tcn_weightsL4FC_WE_11_ROM_c6D' using auto ROMs.
+INFO: [RTMG 210-279] Implementing memory 'tcn_prepad_infer_p_anonymous_namespace_global_average_readout_p_ZN11tcn_weightsL4FC_WE_12_ROM_c7D' using auto ROMs.
+INFO: [RTMG 210-279] Implementing memory 'tcn_prepad_infer_p_anonymous_namespace_global_average_readout_p_ZN11tcn_weightsL4FC_WE_13_ROM_c8D' using auto ROMs.
+INFO: [RTMG 210-279] Implementing memory 'tcn_prepad_infer_p_anonymous_namespace_global_average_readout_p_ZN11tcn_weightsL4FC_WE_14_ROM_c9D' using auto ROMs.
+INFO: [RTMG 210-279] Implementing memory 'tcn_prepad_infer_p_anonymous_namespace_global_average_readout_p_ZN11tcn_weightsL4FC_WE_15_ROM_daE' using auto ROMs.
+INFO: [RTMG 210-278] Implementing memory 'tcn_prepad_infer_p_anonymous_namespace_global_average_readout_pooled_RAM_AUTO_1R1W' using auto RAMs.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 1.677 seconds; current allocated memory: 452.160 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'tcn_prepad_infer' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [RTGEN 206-500] Setting interface mode on port 'tcn_prepad_infer/x' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'tcn_prepad_infer/readout' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on function 'tcn_prepad_infer' to 'ap_ctrl_hs'.
+INFO: [RTGEN 206-100] Generating core module 'mul_36s_23s_59_2_1': 2 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'mul_36s_24s_60_2_1': 2 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'mul_36s_25s_61_2_1': 2 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'mul_36s_26s_62_2_1': 2 instance(s).
+INFO: [RTGEN 206-100] Finished creating RTL model for 'tcn_prepad_infer'.
+INFO: [RTMG 210-278] Implementing memory 'tcn_prepad_infer_buf0_RAM_AUTO_1R1W' using auto RAMs.
+INFO: [RTMG 210-278] Implementing memory 'tcn_prepad_infer_buf1_RAM_AUTO_1R1W' using auto RAMs.
+INFO: [RTMG 210-278] Implementing memory 'tcn_prepad_infer_buf2_RAM_AUTO_1R1W' using auto RAMs.
+INFO: [RTMG 210-278] Implementing memory 'tcn_prepad_infer_buf3_RAM_AUTO_1R1W' using auto RAMs.
+INFO: [RTMG 210-278] Implementing memory 'tcn_prepad_infer_buf4_RAM_AUTO_1R1W' using auto RAMs.
+INFO: [RTMG 210-278] Implementing memory 'tcn_prepad_infer_buf5_RAM_AUTO_1R1W' using auto RAMs.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 1.918 seconds; current allocated memory: 458.613 MB.
+INFO: [HLS 200-111] Finished Generating all RTL models: CPU user time: 1 seconds. CPU system time: 2 seconds. Elapsed time: 11.246 seconds; current allocated memory: 463.188 MB.
+INFO: [HLS 200-2225] Wrote inferred directives to file C:/Users/holbo/00VS_projjects/00_HFT_project/n2ew_era/07b_tcn_prepad_manual_hls/hls_component_distilled/hls_component/hls/syn/inferred_directives.ini
+INFO: [HLS 200-111] Finished Updating report files: CPU user time: 2 seconds. CPU system time: 0 seconds. Elapsed time: 5.091 seconds; current allocated memory: 477.746 MB.
+INFO: [VHDL 208-304] Generating VHDL RTL for tcn_prepad_infer.
+INFO: [VLOG 209-307] Generating Verilog RTL for tcn_prepad_infer.
+INFO: [HLS 200-790] **** Loop Constraint Status: All loop constraints were satisfied.
+INFO: [HLS 200-789] **** Estimated Fmax: 121.61 MHz
+INFO: [HLS 200-112] Total CPU user time: 17 seconds. Total CPU system time: 6 seconds. Total elapsed time: 109.92 seconds; peak allocated memory: 477.816 MB.
+INFO: [v++ 60-791] Total elapsed time: 0h 1m 55s

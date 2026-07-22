@@ -1,0 +1,4 @@
+policy_role,fold_count,mean_test_pnl,median_test_pnl,positive_fold_count
+fixed_024_architecture,3,212901.66666666666,210770.0,2
+val_selected_ml_architecture,3,-66380.0,-53385.0,1
+val_selected_spread_only,3,-228923.33333333334,-139635.0,0

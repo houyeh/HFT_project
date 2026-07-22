@@ -1,0 +1,22 @@
+[
+  {
+    "variant": "scratch",
+    "checkpoint": "C:\\Users\\holbo\\00VS_projjects\\00_HFT_project\\n2ew_era\\07a_tcn_feedforward_phc_tradeoff\\models\\tcn_prepad_scratch_16feat_seed2_best_val.pt",
+    "test_vector_csv": "C:\\Users\\holbo\\00VS_projjects\\00_HFT_project\\n2ew_era\\07b_tcn_prepad_manual_hls\\results\\tcn_prepad_scratch_test_vectors.csv",
+    "sample_count": 200,
+    "seq_len": 128,
+    "feature_dim": 16,
+    "target_scale": 201.1750030517578,
+    "new5_used": false
+  },
+  {
+    "variant": "distilled",
+    "checkpoint": "C:\\Users\\holbo\\00VS_projjects\\00_HFT_project\\n2ew_era\\07a_tcn_feedforward_phc_tradeoff\\models\\tcn_prepad_distilled_16feat_seed1_best_val.pt",
+    "test_vector_csv": "C:\\Users\\holbo\\00VS_projjects\\00_HFT_project\\n2ew_era\\07b_tcn_prepad_manual_hls\\results\\tcn_prepad_distilled_test_vectors.csv",
+    "sample_count": 200,
+    "seq_len": 128,
+    "feature_dim": 16,
+    "target_scale": 201.1750030517578,
+    "new5_used": false
+  }
+]

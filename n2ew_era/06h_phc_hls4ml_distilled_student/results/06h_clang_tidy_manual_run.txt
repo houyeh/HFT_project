@@ -1,0 +1,36 @@
+﻿06H clamped32 manual clang-tidy loop-label run
+Started: 2026-06-29T21:54:08.3011223+08:00
+Ended: 2026-06-29T21:54:08.3619221+08:00
+WorkingDirectory: C:\Users\holbo\00VS_projjects\00_HFT_project\n2ew_era\06h_phc_hls4ml_distilled_student\hls4ml_prj\phc_distilled_student_keras_clamped32\phc_distilled_student_keras_clamped32_prj\solution1
+ExecutableUsed: C:\AMDDesignTools\2025.2\Vitis\win64\tools\clang-16\bin\clang-tidy.exe
+FlowExecutableText: C:/AMDDesignTools/2025.2/Vitis/win64/tools/clang-16/bin/clang-tidy
+ExactFlowCommandLength_NoRedirect: 793
+ExactFlowCommandLength_WithRedirects: 1356
+ManualCommandLength_NoRedirect: 793
+ManualCommandLength_WithFlowRedirects: 1356
+WindowsCmdExeNominalLimit: 8191
+ExitCodeDecimal: -1073741515
+ExitCodeHexUnsigned32: 0xC0000135
+Before_expected_diag_exists: False
+Before_expected_flow_out_exists: False
+Before_expected_flow_err_exists: False
+After_expected_diag_exists: False
+After_expected_flow_out_exists: False
+After_expected_flow_err_exists: False
+
+ExactFlowCommand_NoRedirect:
+C:/AMDDesignTools/2025.2/Vitis/win64/tools/clang-16/bin/clang-tidy -export-fixes=C:/Users/holbo/00VS_projjects/00_HFT_project/n2ew_era/06h_phc_hls4ml_distilled_student/hls4ml_prj/phc_distilled_student_keras_clamped32/phc_distilled_student_keras_clamped32_prj/solution1/.autopilot/db/phc_distilled_student_keras_clamped32.pp.0.cpp.clang-tidy.loop-label.diag.yml -header-filter=.* --checks=-*,xilinx-label-all-loops,xilinx-aggregate-on-hls-vector,,xilinx-warn-mayneed-no-ctor-attribute -fix-errors C:/Users/holbo/00VS_projjects/00_HFT_project/n2ew_era/06h_phc_hls4ml_distilled_student/hls4ml_prj/phc_distilled_student_keras_clamped32/phc_distilled_student_keras_clamped32_prj/solution1/.autopilot/db/phc_distilled_student_keras_clamped32.pp.0.cpp -- -std=c++0x -target fpga -fhls -ferror-limit=0
+
+ExactFlowCommand_WithRedirects:
+C:/AMDDesignTools/2025.2/Vitis/win64/tools/clang-16/bin/clang-tidy -export-fixes=C:/Users/holbo/00VS_projjects/00_HFT_project/n2ew_era/06h_phc_hls4ml_distilled_student/hls4ml_prj/phc_distilled_student_keras_clamped32/phc_distilled_student_keras_clamped32_prj/solution1/.autopilot/db/phc_distilled_student_keras_clamped32.pp.0.cpp.clang-tidy.loop-label.diag.yml -header-filter=.* --checks=-*,xilinx-label-all-loops,xilinx-aggregate-on-hls-vector,,xilinx-warn-mayneed-no-ctor-attribute -fix-errors C:/Users/holbo/00VS_projjects/00_HFT_project/n2ew_era/06h_phc_hls4ml_distilled_student/hls4ml_prj/phc_distilled_student_keras_clamped32/phc_distilled_student_keras_clamped32_prj/solution1/.autopilot/db/phc_distilled_student_keras_clamped32.pp.0.cpp -- -std=c++0x -target fpga -fhls -ferror-limit=0 > C:/Users/holbo/00VS_projjects/00_HFT_project/n2ew_era/06h_phc_hls4ml_distilled_student/hls4ml_prj/phc_distilled_student_keras_clamped32/phc_distilled_student_keras_clamped32_prj/solution1/.autopilot/db/phc_distilled_student_keras_clamped32.pp.0.cpp.clang-tidy.loop-label.out.log 2> C:/Users/holbo/00VS_projjects/00_HFT_project/n2ew_era/06h_phc_hls4ml_distilled_student/hls4ml_prj/phc_distilled_student_keras_clamped32/phc_distilled_student_keras_clamped32_prj/solution1/.autopilot/db/phc_distilled_student_keras_clamped32.pp.0.cpp.clang-tidy.loop-label.err.log
+
+ManualCommand_NoRedirect:
+C:/AMDDesignTools/2025.2/Vitis/win64/tools/clang-16/bin/clang-tidy -export-fixes=C:/Users/holbo/00VS_projjects/00_HFT_project/n2ew_era/06h_phc_hls4ml_distilled_student/hls4ml_prj/phc_distilled_student_keras_clamped32/phc_distilled_student_keras_clamped32_prj/solution1/.autopilot/db/phc_distilled_student_keras_clamped32.pp.0.cpp.clang-tidy.loop-label.diag.yml -header-filter=.* --checks=-*,xilinx-label-all-loops,xilinx-aggregate-on-hls-vector,,xilinx-warn-mayneed-no-ctor-attribute -fix-errors C:/Users/holbo/00VS_projjects/00_HFT_project/n2ew_era/06h_phc_hls4ml_distilled_student/hls4ml_prj/phc_distilled_student_keras_clamped32/phc_distilled_student_keras_clamped32_prj/solution1/.autopilot/db/phc_distilled_student_keras_clamped32.pp.0.cpp -- -std=c++0x -target fpga -fhls -ferror-limit=0
+
+STDOUT_BEGIN
+
+STDOUT_END
+
+STDERR_BEGIN
+
+STDERR_END

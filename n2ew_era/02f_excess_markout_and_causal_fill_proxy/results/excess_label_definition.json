@@ -1,0 +1,9 @@
+{
+  "formula_bid": "excess_bid_pnl_H = (future_mid_H - mid_t) * point_value - maker_fee",
+  "formula_ask": "excess_ask_pnl_H = (mid_t - future_mid_H) * point_value - maker_fee",
+  "formula_no_quote": "excess_pnl_H = 0",
+  "point_value": 200.0,
+  "maker_fee": 15.0,
+  "mechanical_half_spread_removed": true,
+  "future_mid_used_only_as_label": true
+}

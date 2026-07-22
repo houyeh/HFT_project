@@ -1,0 +1,4 @@
+Task,Priority,Description
+Quote-Risk Model,High,Binary TCN with conditional labels
+Auto-Gating,High,Causal rolling regime selector
+FPGA MVP,Medium,Baseline implementation for latency mitigation

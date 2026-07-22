@@ -1,0 +1,80 @@
+<!DOCTYPE html><html lang="zh-TW"><head><meta charset="UTF-8"><title>Slide 02</title>
+<style>
+* {box-sizing:border-box;margin:0;padding:0}
+body {font-family:"Noto Sans TC",sans-serif;background:#0d1117;color:#e6edf3}
+.slide {width:1280px;min-height:720px;margin:30px auto;background:linear-gradient(135deg,#161b22 0%,#0d1117 100%);border:1px solid #30363d;border-radius:16px;padding:48px 56px;display:flex;flex-direction:column;gap:20px; overflow-y:auto;}
+h1 {font-size:2rem;font-weight:700;color:#58a6ff;border-bottom:2px solid #21262d;padding-bottom:14px; flex-shrink:0;}
+h2 {font-size:1.1rem;font-weight:600;color:#79c0ff;margin-bottom:10px}
+.tag {display:inline-block;padding:3px 10px;border-radius:20px;font-size:.75rem;font-weight:600}
+.tag-blue {background:#1f4e79;color:#79c0ff}
+.tag-red {background:#5c1a1a;color:#ff7b7b}
+.tag-green {background:#0d3d21;color:#56d364}
+.tag-orange {background:#794a15;color:#e3b341}
+.grid-2 {display:grid;grid-template-columns:1fr 1fr;gap:24px}
+.grid-3 {display:grid;grid-template-columns:1fr 1fr 1fr;gap:20px}
+.card {background:#161b22;border:1px solid #30363d;border-radius:12px;padding:20px; display:flex; flex-direction:column;}
+.img-wrap {text-align:center; flex-grow:1; display:flex; align-items:center; justify-content:center; background:#0d1117; border-radius:8px; padding:10px;}
+.img-wrap img {max-width:100%; max-height:260px; border-radius:4px;}
+table {width:100%;border-collapse:collapse;font-size:.85rem}
+th {background:#21262d;color:#8b949e;padding:8px 10px;text-align:left;font-weight:600}
+td {padding:8px 10px;border-bottom:1px solid #21262d}
+tr:last-child td {border-bottom:none}
+.hl {color:#f0c27f;font-weight:700}
+.red {color:#ff7b7b} .green {color:#56d364}
+.note {font-size:.78rem;color:#8b949e;margin-top:8px;padding:8px 12px;background:#161b22;border-left:3px solid #388bfd;border-radius:4px; line-height:1.5;}
+.badge-row {display:flex;gap:10px;flex-wrap:wrap;margin-top:6px; margin-bottom:10px;}
+ul {margin-left:20px;line-height:1.6}
+li {margin-bottom:8px}
+.flowchart {display:flex; align-items:center; justify-content:center; gap:10px; background:#0d1117; padding:15px; border-radius:8px; border:1px solid #30363d;}
+.flow-box {background:#21262d; border:1px solid #58a6ff; padding:10px 15px; border-radius:6px; font-weight:bold; color:#c9d1d9; text-align:center;}
+.flow-arrow {color:#8b949e; font-weight:bold; font-size:1.2rem;}
+.caveat-box {margin-top:12px; padding:10px; border-radius:6px; background:#2d1a1a; border:1px solid #5c1a1a;}
+.caveat-box h3 {color:#ff7b7b; font-size:0.9rem; margin-bottom:4px;}
+</style>
+</head><body>
+<div class="slide">
+  <h1>Slide 02 — 回測策略與 Threshold 驗證結果</h1>
+  
+  <div class="card" style="margin-bottom:0px; padding:15px 20px;">
+    <h2>回測策略流程 (Maker-only Cancel Filter)</h2>
+    <div class="flowchart" style="margin-bottom:5px;">
+      <div class="flow-box">1. 維持掛單<br><span style="font-size:0.75rem;font-weight:normal">做市商維持雙邊掛單</span></div>
+      <div class="flow-arrow">➔</div>
+      <div class="flow-box" style="border-color:#e3b341">2. 即時預測<br><span style="font-size:0.75rem;font-weight:normal">每 tick 更新 P(Down/Up)</span></div>
+      <div class="flow-arrow">➔</div>
+      <div class="flow-box" style="border-color:#ff7b7b">3. 檢查閾值<br><span style="font-size:0.75rem;font-weight:normal">P > Threshold?</span></div>
+      <div class="flow-arrow">➔</div>
+      <div class="flow-box" style="border-color:#56d364">4. 執行防禦<br><span style="font-size:0.75rem;font-weight:normal">撤銷被狙擊側的掛單</span></div>
+    </div>
+  </div>
+
+  <div class="grid-2" style="margin-bottom:0px;">
+    <div class="card">
+      <h2>各閾值 (Thresholds) 的設定涵義</h2>
+      <ul style="font-size:0.85rem;">
+        <li><span class="hl">0.55 / 0.60 (較敏感)</span>：提高毒性流警示 (toxic-flow warning) 的敏感度，但也增加假陽性撤單 (false-positive cancel)，可能過濾掉安全利潤。</li>
+        <li><span class="hl">0.70 (較保守)</span>：確認極度危險才撤單，保留較多做市機會，但防禦不足。</li>
+      </ul>
+    </div>
+    <div class="card">
+      <h2>Validation Sweep：最佳參數迷思</h2>
+      <p style="font-size:0.85rem; line-height:1.6;">在 <strong>Validation Set</strong> 從 0.50 掃描到 0.90，理論最佳為 <strong>0.70</strong>。<br>但套用於 Test Set 時 0.55/0.60 反而表現較好。<br><br><span style="color:#ff7b7b;font-weight:bold;">重點提醒：</span>0.55 絕對不是可上線的閾值，它僅是測試集掃描的候選值。最佳閾值具有強烈的「狀態依賴性」。</p>
+    </div>
+  </div>
+
+  <div class="card" style="padding:15px 20px;">
+    <h2>NEW 測試集 (Test Split) — PnL 實測證據</h2>
+    <table>
+      <tr><th>實驗設定</th><th>模型 Net PnL</th><th>隨機撤單平均值</th><th>隨機平均 + 1 Std</th><th>擊敗 Random+1Std</th></tr>
+      <tr><td>Model_0.55</td><td class='hl'>84,980</td><td>42,362</td><td>80,473</td><td><span class='tag tag-green'>✔ 擊敗</span></td><td>在 NEW 測試集中，擊敗了隨機基準的 平均值+1標準差</td></tr><tr><td>Model_0.60</td><td class='hl'>83,460</td><td>46,293</td><td>79,049</td><td><span class='tag tag-green'>✔ 擊敗</span></td><td>在 NEW 測試集中，擊敗了隨機基準的 平均值+1標準差</td></tr><tr><td>Val-selected_0.70</td><td class='hl'>63,440</td><td>53,209</td><td>72,779</td><td><span class='tag tag-red'>❌ 未擊敗</span></td><td>擊敗隨機基準的平均值，但未超過 平均值+1標準差</td></tr>
+    </table>
+    
+    <div class="caveat-box">
+      <h3>限制</h3>
+      <ul style="font-size:0.8rem; color:#c9d1d9; margin-left:15px; margin-bottom:0px;">
+        <li><strong style="color:#ff7b7b;">非真實排隊 (Not Queue-aware)：</strong>目前的純造市 (Maker-only) 回測並未完全具備排隊感知；PnL 僅供訊號比較，而非實際上線的獲利預估。</li>
+        <li><strong style="color:#56d364;">有考慮手續費：</strong>所有的 Net PnL 已經嚴格扣除了每口 15 TWD 的 Maker 手續費。</li>
+      </ul>
+    </div>
+  </div>
+</div></body></html>

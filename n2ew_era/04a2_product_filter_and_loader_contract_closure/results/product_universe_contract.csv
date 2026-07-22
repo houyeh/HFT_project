@@ -1,0 +1,4 @@
+contract_item,decision,regex,allowed_in_final_evaluation,reason
+primary_final_product_universe,TXF family only,^TXF[A-Z0-9]*$,True,Inherited proxy point_value=200 and maker_fee=15 are TXF-compatible project assumptions; pooling MXF/TMF without normalization would mix contract scales.
+legacy_broad_target_universe,TXF/MXF/TMF diagnostic only unless normalized,^(TXF|MXF|TMF)[A-Z0-9]*$,False,"MXF and TMF are not assumed comparable to TXF in point value, tick value, or fee. They require separate metrics or product-normalized PnL."
+raw_mixed_product_stream,forbidden for pooled final evaluation,all product_id values,False,Raw files contain hundreds of product IDs; unfiltered evaluation would mix unrelated markets.

@@ -1,0 +1,4 @@
+split,policy_id,model_id,horizon,fill_model,inventory_cap,fee_multiplier,sequential_excess_pnl,fill_count,forced_no_quote_count,max_abs_inventory,max_drawdown,win_rate,loss_rate,avg_trade_excess_pnl,fill_uses_future_pnl,test_new3_new4_used_for_selection
+test,phase03b_selected_simple_ml_action_value,hgb_regressor_shallow,20,conservative_l2_stress,1,1.0,1010805.0,52473,35426,1,3845.0,0.41625216778152574,0.5837478322184743,19.263335429649533,False,False
+new4,phase03b_selected_simple_ml_action_value,hgb_regressor_shallow,20,conservative_l2_stress,1,1.0,1595840.0,113448,70466,1,13845.0,0.4323390452013257,0.5676256963542768,14.066708976799944,False,False
+new3,phase03b_selected_simple_ml_action_value,hgb_regressor_shallow,20,conservative_l2_stress,1,1.0,4130925.0,297351,190094,1,9555.0,0.4313151797034481,0.5686646421232819,13.892420069211134,False,False

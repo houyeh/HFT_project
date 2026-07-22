@@ -1,0 +1,7 @@
+session_id,trend_strength,suitability_label,baseline_net_pnl,main_failure_mode
+20260113,620.9527591903869,UNSUITABLE,-352235.0,strong_downtrend_adverse_selection
+20260114,459.42972400919126,UNSUITABLE,-62285.0,strong_uptrend_adverse_selection
+20260115,1413.2329295378586,UNSUITABLE,201630.0,none_or_minor
+20260116,1323.5383942325393,UNSUITABLE,-125345.0,strong_uptrend_adverse_selection
+20260119Day,1076.491401528584,UNSUITABLE,-21295.0,strong_uptrend_adverse_selection
+20260330,135.5921572803016,UNSUITABLE,-14805.0,strong_uptrend_adverse_selection

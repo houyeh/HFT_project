@@ -1,0 +1,18 @@
+stage,kind,cycles,pct_of_8316,csynth_entry,source
+ENC_LINEAR,16x16 linear,1328,15.96921596921597,VITIS_LOOP_101_1,csynth loop table
+ENC_LAYER_NORM_VISIBLE,LayerNorm visible subtotal,300,3.6075036075036073,mean+var+sqrt+normalize,derived from csynth loops
+ENC_SILU,SiLU activation,176,2.1164021164021163,VITIS_LOOP_88_1,csynth loop table
+GATE_LINEAR,16x16 linear,1328,15.96921596921597,VITIS_LOOP_119_1,csynth loop table
+CANDIDATE_LINEAR,16x16 linear,1329,15.981240981240981,Outline_VITIS_LOOP_119_1,csynth instance table
+GAIN_FROM_ENCODED_LINEAR,16x16 linear,1329,15.981240981240981,Outline_VITIS_LOOP_119_11,csynth instance table
+GAIN_FROM_PREV_STATE_LINEAR,16x16 linear no-bias,1313,15.788840788840789,Outline_VITIS_LOOP_136_1,csynth instance table
+SYNAPSE_LINEAR,16x16 linear,1329,15.981240981240981,Outline_VITIS_LOOP_119_13,csynth instance table
+DECAY_STATE_UPDATE,elementwise recurrence,81,0.974025974025974,Outline_VITIS_LOOP_233_1,csynth instance table
+GAIN_ADD,elementwise add,49,0.5892255892255892,Outline_VITIS_LOOP_241_2,csynth instance table
+GAIN_SIGMOID,sigmoid activation,145,1.7436267436267436,Outline_VITIS_LOOP_72_12,csynth instance table
+MESSAGE_SILU,SiLU activation,177,2.1284271284271283,Outline_VITIS_LOOP_88_1,csynth instance table
+LOOP_INPUT_COMBINE,elementwise combine,160,1.9240019240019242,VITIS_LOOP_250_3,csynth loop table
+LOOP_LAYER_NORM_VISIBLE,LayerNorm visible subtotal,300,3.6075036075036073,mean+var+sqrt+normalize,derived from csynth loops
+READOUT_LINEAR,2x16 linear,164,1.9721019721019721,VITIS_LOOP_154_1,csynth loop table
+OUTPUT_COPY,readout/state copy wait group,33,0.3968253968253968,"max(3,33)",derived
+RESIDUAL_CONTROL,control/divider/handshake residual,137,1.6474266474266475,8316 - attributed total,derived

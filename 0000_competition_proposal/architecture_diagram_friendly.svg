@@ -1,0 +1,130 @@
+<svg viewBox="0 0 1000 780" xmlns="http://www.w3.org/2000/svg" font-family="Arial, sans-serif">
+  <defs>
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto" markerUnits="strokeWidth">
+      <path d="M0,0 L0,6 L9,3 z" fill="#333"/>
+    </marker>
+  </defs>
+  <rect x="0" y="0" width="1000" height="780" fill="#ffffff"/>
+
+  <text x="500" y="28" text-anchor="middle" font-size="18" font-weight="bold" fill="#111">PHC-lite 是怎麼「想事情」的？（每一格＝一個簡單步驟，文字看就懂）</text>
+  <text x="500" y="48" text-anchor="middle" font-size="12" fill="#555">想像它是一個「每一刻都要做決定、又要記住東西」的小助手：輸入＝這一刻的市場資訊＋之前留下的記憶／輸出＝這一刻的判斷＋更新後的記憶</text>
+
+  <!-- Input row -->
+  <rect x="30" y="80" width="160" height="56" rx="8" fill="#eef4ff" stroke="#3a6fc4"/>
+  <text x="110" y="100" text-anchor="middle" font-size="12" font-weight="bold">現在這一刻的資訊</text>
+  <text x="110" y="116" text-anchor="middle" font-size="9" fill="#555">(技術名稱：x_t，16個數字)</text>
+  <text x="110" y="129" text-anchor="middle" font-size="9" fill="#555">就像「現在的市況快照」</text>
+
+  <rect x="810" y="80" width="160" height="56" rx="8" fill="#eef4ff" stroke="#3a6fc4"/>
+  <text x="890" y="100" text-anchor="middle" font-size="12" font-weight="bold">之前留下的記憶</text>
+  <text x="890" y="116" text-anchor="middle" font-size="9" fill="#555">(技術名稱：state_prev)</text>
+  <text x="890" y="129" text-anchor="middle" font-size="9" fill="#555">像「腦中的舊筆記」</text>
+
+  <!-- STEP1 ENC -->
+  <rect x="30" y="170" width="240" height="62" rx="8" fill="#fff3d6" stroke="#c98a14"/>
+  <text x="150" y="190" text-anchor="middle" font-size="12" font-weight="bold">①把資訊整理成好處理的格式</text>
+  <text x="150" y="206" text-anchor="middle" font-size="9" fill="#555">就像把雜亂筆記重新「翻譯、排版」一次</text>
+  <text x="150" y="219" text-anchor="middle" font-size="9" fill="#777">(技術名稱：ENC_LINEAR → LayerNorm → SiLU)</text>
+
+  <line x1="110" y1="136" x2="150" y2="170" stroke="#333" marker-end="url(#arrow)"/>
+
+  <!-- STEP2 GATE / STEP3 CANDIDATE -->
+  <rect x="30" y="262" width="180" height="62" rx="8" fill="#e9f7ef" stroke="#2e8b57"/>
+  <text x="120" y="282" text-anchor="middle" font-size="11" font-weight="bold">②決定要放多少「新資訊」進來</text>
+  <text x="120" y="297" text-anchor="middle" font-size="9" fill="#555">就像水龍頭，開0%~100%</text>
+  <text x="120" y="310" text-anchor="middle" font-size="8" fill="#777">(技術名稱：GATE_LINEAR→Sigmoid，gate_t)</text>
+
+  <rect x="230" y="262" width="180" height="62" rx="8" fill="#fdeaea" stroke="#c0392b"/>
+  <text x="320" y="282" text-anchor="middle" font-size="11" font-weight="bold">③先擬出一份「新記憶草稿」</text>
+  <text x="320" y="297" text-anchor="middle" font-size="9" fill="#555">就像先打草稿，還沒正式寫上去</text>
+  <text x="320" y="310" text-anchor="middle" font-size="8" fill="#777">(技術名稱：CANDIDATE_LINEAR→Tanh)</text>
+
+  <line x1="150" y1="232" x2="120" y2="262" stroke="#333" marker-end="url(#arrow)"/>
+  <line x1="150" y1="232" x2="320" y2="262" stroke="#333" marker-end="url(#arrow)"/>
+
+  <!-- STEP5 GAIN -->
+  <rect x="430" y="262" width="220" height="62" rx="8" fill="#e9f7ef" stroke="#2e8b57"/>
+  <text x="540" y="282" text-anchor="middle" font-size="11" font-weight="bold">⑤決定要多認真聽「別人傳來的話」</text>
+  <text x="540" y="297" text-anchor="middle" font-size="9" fill="#555">就像決定要不要理會旁邊同學的提醒</text>
+  <text x="540" y="310" text-anchor="middle" font-size="8" fill="#777">(技術名稱：GAIN_LINEAR+GAIN_PREV_W→Sigmoid)</text>
+  <line x1="150" y1="232" x2="540" y2="262" stroke="#333" marker-end="url(#arrow)"/>
+  <line x1="890" y1="136" x2="540" y2="262" stroke="#888" stroke-dasharray="4,3" marker-end="url(#arrow)"/>
+
+  <!-- STEP4 state_temporal -->
+  <rect x="110" y="354" width="320" height="64" rx="8" fill="#f3e9ff" stroke="#7d3fc4"/>
+  <text x="270" y="374" text-anchor="middle" font-size="12" font-weight="bold">④把「打折後的舊記憶」+「篩選過的新草稿」合併</text>
+  <text x="270" y="390" text-anchor="middle" font-size="9" fill="#555">＝這一刻真正記住的內容（舊的部分淡忘一點，新的部分按比例加進來）</text>
+  <text x="270" y="403" text-anchor="middle" font-size="8" fill="#777">(技術名稱：state_temporal = DECAY⊙state_prev + gate_t⊙candidate_t)</text>
+
+  <line x1="120" y1="324" x2="220" y2="354" stroke="#333" marker-end="url(#arrow)"/>
+  <line x1="320" y1="324" x2="320" y2="354" stroke="#333" marker-end="url(#arrow)"/>
+  <line x1="890" y1="136" x2="230" y2="354" stroke="#888" stroke-dasharray="4,3" marker-end="url(#arrow)"/>
+
+  <!-- STEP6 SYNAPSE -->
+  <rect x="480" y="354" width="220" height="64" rx="8" fill="#fff3d6" stroke="#c98a14"/>
+  <text x="590" y="374" text-anchor="middle" font-size="11" font-weight="bold">⑥整理出一段「要傳給別人的訊息」</text>
+  <text x="590" y="390" text-anchor="middle" font-size="9" fill="#555">就像把心得整理成一句話分享出去</text>
+  <text x="590" y="403" text-anchor="middle" font-size="8" fill="#777">(技術名稱：SYNAPSE_LINEAR→SiLU，message)</text>
+  <line x1="430" y1="386" x2="480" y2="386" stroke="#333" marker-end="url(#arrow)"/>
+
+  <!-- STEP7 loop_input -->
+  <rect x="270" y="446" width="340" height="64" rx="8" fill="#f3e9ff" stroke="#7d3fc4"/>
+  <text x="440" y="466" text-anchor="middle" font-size="12" font-weight="bold">⑦把「這一刻記憶」加上「篩選過的別人訊息」</text>
+  <text x="440" y="482" text-anchor="middle" font-size="9" fill="#555">＝準備拿去做最後判斷的完整訊號</text>
+  <text x="440" y="495" text-anchor="middle" font-size="8" fill="#777">(技術名稱：loop_input = state_temporal + ALPHA⊙gain_t⊙message)</text>
+
+  <line x1="270" y1="418" x2="370" y2="446" stroke="#333" marker-end="url(#arrow)"/>
+  <line x1="590" y1="418" x2="510" y2="446" stroke="#333" marker-end="url(#arrow)"/>
+  <line x1="540" y1="324" x2="480" y2="446" stroke="#333" marker-end="url(#arrow)"/>
+
+  <!-- STEP8 LayerNorm -->
+  <rect x="290" y="538" width="220" height="58" rx="8" fill="#eef4ff" stroke="#3a6fc4"/>
+  <text x="400" y="558" text-anchor="middle" font-size="11" font-weight="bold">⑧把訊號調整到「穩定、固定範圍」</text>
+  <text x="400" y="573" text-anchor="middle" font-size="9" fill="#555">就像把音量統一調到適中，不會忽大忽小</text>
+  <text x="400" y="586" text-anchor="middle" font-size="8" fill="#777">(技術名稱：z = LayerNorm(loop_input))</text>
+  <line x1="440" y1="510" x2="400" y2="538" stroke="#333" marker-end="url(#arrow)"/>
+
+  <!-- STEP9 READOUT -->
+  <rect x="540" y="538" width="220" height="58" rx="8" fill="#fff3d6" stroke="#c98a14"/>
+  <text x="650" y="558" text-anchor="middle" font-size="11" font-weight="bold">⑨把穩定後的訊號變成最終決定</text>
+  <text x="650" y="573" text-anchor="middle" font-size="9" fill="#555">就像把整理好的想法說成一句結論</text>
+  <text x="650" y="586" text-anchor="middle" font-size="8" fill="#777">(技術名稱：READOUT_LINEAR(z) → readout)</text>
+  <line x1="510" y1="567" x2="540" y2="567" stroke="#333" marker-end="url(#arrow)"/>
+
+  <!-- Outputs -->
+  <rect x="800" y="538" width="170" height="58" rx="8" fill="#e8e8e8" stroke="#555"/>
+  <text x="885" y="558" text-anchor="middle" font-size="11" font-weight="bold">最終輸出：交易訊號分數</text>
+  <text x="885" y="574" text-anchor="middle" font-size="9" fill="#555">(技術名稱：readout，2個數字)</text>
+  <line x1="760" y1="567" x2="800" y2="567" stroke="#333" marker-end="url(#arrow)"/>
+
+  <!-- state_next feedback -->
+  <rect x="800" y="354" width="170" height="64" rx="8" fill="#e8e8e8" stroke="#555"/>
+  <text x="885" y="374" text-anchor="middle" font-size="11" font-weight="bold">更新後的記憶</text>
+  <text x="885" y="390" text-anchor="middle" font-size="9" fill="#555">會留到「下一刻」繼續用</text>
+  <text x="885" y="403" text-anchor="middle" font-size="8" fill="#777">(技術名稱：state_next = state_temporal)</text>
+  <line x1="430" y1="386" x2="800" y2="386" stroke="#333" marker-end="url(#arrow)"/>
+
+  <!-- feedback loop arrow back to state_prev input, dashed, curved -->
+  <path d="M 885 354 C 885 220, 900 170, 890 136" fill="none" stroke="#a33" stroke-width="1.5" stroke-dasharray="6,4" marker-end="url(#arrow)"/>
+  <text x="935" y="250" font-size="10" fill="#a33" transform="rotate(90 935 250)">這份「更新後的記憶」會變成下一刻的輸入，所以必須先算完這一刻，才能算下一刻</text>
+
+  <!-- legend -->
+  <text x="30" y="630" font-size="11" font-weight="bold" fill="#333">圖例（顏色對應的「動作類型」）：</text>
+  <rect x="30" y="645" width="14" height="14" fill="#fff3d6" stroke="#c98a14"/>
+  <text x="50" y="656" font-size="10">整理／轉換資訊</text>
+  <rect x="180" y="645" width="14" height="14" fill="#e9f7ef" stroke="#2e8b57"/>
+  <text x="200" y="656" font-size="10">決定放多少進來（像水龍頭）</text>
+  <rect x="390" y="645" width="14" height="14" fill="#fdeaea" stroke="#c0392b"/>
+  <text x="410" y="656" font-size="10">先打草稿（候選值）</text>
+  <rect x="560" y="645" width="14" height="14" fill="#f3e9ff" stroke="#7d3fc4"/>
+  <text x="580" y="656" font-size="10">真正更新記憶</text>
+  <rect x="700" y="645" width="14" height="14" fill="#eef4ff" stroke="#3a6fc4"/>
+  <text x="720" y="656" font-size="10">穩定訊號（像調音量）</text>
+
+  <text x="30" y="685" font-size="11" font-weight="bold" fill="#333">為什麼這個小助手不能「同時」把好幾刻都算完，要一刻一刻來？</text>
+  <text x="30" y="704" font-size="10" fill="#444">因為第④步「更新後的記憶」一定要先算出來，第⑤~⑨步才能用到它；而下一刻的計算，又要等這一刻的「更新後的記憶」算完才能開始。</text>
+  <text x="30" y="720" font-size="10" fill="#444">這種「一定要先等前一個答案出來，才能算下一個」的特性，在硬體上代表沒辦法像一般作業一樣「多個工人同時分工」，只能「一個接一個」做——</text>
+  <text x="30" y="736" font-size="10" fill="#444">這正是本作品在硬體設計上難度的關鍵來源（技術名稱：Initiation Interval = Latency，無法管線化）。</text>
+
+  <text x="30" y="765" font-size="9" fill="#999">註：本架構之核心概念（門控、狀態相依增益、神經元/突觸式訊息傳遞）受 Parallelized Hierarchical Connectome 論文（arXiv:2604.01295）啟發，經本團隊簡化為單步定點數版本。</text>
+</svg>

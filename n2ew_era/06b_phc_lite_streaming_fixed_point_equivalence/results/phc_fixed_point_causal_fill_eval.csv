@@ -1,0 +1,7 @@
+split,policy_id,sequential_excess_pnl,fill_count,forced_no_quote_count,max_abs_inventory,max_drawdown,win_rate,avg_trade_excess_pnl,fill_uses_future_pnl,new5_used
+val,phc_lite_fp32,170310.0,6746,0,1,2365.0,0.4645715979839905,25.246071746219982,False,False
+val,phc_lite_fixed_point_emulated,169535.0,6731,0,1,2365.0,0.4645669291338583,25.187193581934334,False,False
+new3,phc_lite_fp32,488870.0,15123,2344,1,3335.0,0.4985783244065331,32.326258017589105,False,False
+new3,phc_lite_fixed_point_emulated,491325.0,15106,2338,1,3335.0,0.49894081821792663,32.52515556732424,False,False
+new4,phc_lite_fp32,121765.0,4110,2574,1,1925.0,0.4854014598540146,29.626520681265205,False,False
+new4,phc_lite_fixed_point_emulated,121285.0,4102,2575,1,1925.0,0.4856167723061921,29.567284251584592,False,False

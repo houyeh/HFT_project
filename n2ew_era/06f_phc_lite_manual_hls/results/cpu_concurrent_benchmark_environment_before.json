@@ -1,0 +1,73 @@
+﻿{
+    "timestamp":  "2026-06-29T23:00:15.1537017+08:00",
+    "cpu":  {
+                "Name":  "Intel(R) Core(TM) Ultra 7 258V",
+                "NumberOfCores":  8,
+                "NumberOfLogicalProcessors":  8,
+                "MaxClockSpeed":  2200
+            },
+    "processor_identifier":  "Intel64 Family 6 Model 189 Stepping 1, GenuineIntel",
+    "total_cpu_percent_samples":  [
+                                      40.34,
+                                      38.91,
+                                      41.69,
+                                      41.53,
+                                      41.37
+                                  ],
+    "top_processes_by_cpu_delta":  [
+                                       {
+                                           "Id":  22092,
+                                           "ProcessName":  "Codex",
+                                           "CpuSecondsDelta":  0.2344,
+                                           "ApproxTotalCpuPercent":  1.44
+                                       },
+                                       {
+                                           "Id":  21052,
+                                           "ProcessName":  "Code",
+                                           "CpuSecondsDelta":  0.1875,
+                                           "ApproxTotalCpuPercent":  1.15
+                                       },
+                                       {
+                                           "Id":  2560,
+                                           "ProcessName":  "powershell",
+                                           "CpuSecondsDelta":  0.0938,
+                                           "ApproxTotalCpuPercent":  0.58
+                                       },
+                                       {
+                                           "Id":  28004,
+                                           "ProcessName":  "Taskmgr",
+                                           "CpuSecondsDelta":  0.0938,
+                                           "ApproxTotalCpuPercent":  0.58
+                                       },
+                                       {
+                                           "Id":  1620,
+                                           "ProcessName":  "claude",
+                                           "CpuSecondsDelta":  0.0781,
+                                           "ApproxTotalCpuPercent":  0.48
+                                       },
+                                       {
+                                           "Id":  19288,
+                                           "ProcessName":  "claude",
+                                           "CpuSecondsDelta":  0.0469,
+                                           "ApproxTotalCpuPercent":  0.29
+                                       },
+                                       {
+                                           "Id":  13256,
+                                           "ProcessName":  "claude",
+                                           "CpuSecondsDelta":  0.0312,
+                                           "ApproxTotalCpuPercent":  0.19
+                                       },
+                                       {
+                                           "Id":  7296,
+                                           "ProcessName":  "ipf_helper",
+                                           "CpuSecondsDelta":  0.0312,
+                                           "ApproxTotalCpuPercent":  0.19
+                                       },
+                                       {
+                                           "Id":  3512,
+                                           "ProcessName":  "taskhostw",
+                                           "CpuSecondsDelta":  0.0156,
+                                           "ApproxTotalCpuPercent":  0.1
+                                       }
+                                   ]
+}

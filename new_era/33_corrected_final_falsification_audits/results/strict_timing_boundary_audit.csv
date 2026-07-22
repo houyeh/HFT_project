@@ -1,0 +1,11 @@
+eval_group,session_count,first_row_lag1_non_null_count,session_boundary_lag_reset_pass
+phase031_new4,4,0,True
+phase031_test,2,0,True
+unused_NEW1_MXFB6,2,0,True
+unused_NEW1_TMFB6,2,0,True
+unused_NEW1_TXFB6,2,0,True
+unused_NEW3_TXFA6,6,0,True
+unused_NEW4_TXFA6,4,0,True
+unused_NEW_MXFB6,2,0,True
+unused_NEW_TMFB6,2,0,True
+unused_NEW_TXFB6,2,0,True

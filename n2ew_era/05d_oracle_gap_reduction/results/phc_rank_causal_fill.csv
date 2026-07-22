@@ -1,0 +1,4 @@
+split,policy_id,sequential_excess_pnl,fill_count,forced_no_quote_count,max_abs_inventory,max_drawdown,win_rate,loss_rate,fill_uses_future_pnl,new5_used
+val,phc_rank_head,174780.0,6648,0,1,2150.0,0.4700661853188929,0.5299338146811071,False,False
+new3,phc_rank_head,494545.0,15258,2443,1,3050.0,0.5029492725127802,0.4969851880980469,False,False
+new4,phc_rank_head,125720.0,4213,2482,1,2130.0,0.4908616187989556,0.5091383812010444,False,False

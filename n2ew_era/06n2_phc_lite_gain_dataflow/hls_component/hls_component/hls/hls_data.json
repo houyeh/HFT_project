@@ -1,0 +1,1603 @@
+{
+  "Top": "phc_step",
+  "RtlTop": "phc_step",
+  "RtlPrefix": "",
+  "RtlSubPrefix": "phc_step_",
+  "SourceLanguage": "cpp",
+  "HostMachineBits": "64",
+  "FunctionProtocol": "ap_ctrl_hs",
+  "ResetStyle": "control",
+  "Target": {
+    "Family": "zynq",
+    "Device": "xc7z020",
+    "Package": "-clg400",
+    "Speed": "-1",
+    "Triple": "fpga64-xilinx-none"
+  },
+  "Args": {
+    "x_t": {
+      "index": "0",
+      "direction": "in",
+      "srcType": "ap_fixed<24, 12, (ap_q_mode)5, (ap_o_mode)3, 0> const *",
+      "srcSize": "32",
+      "hwRefs": [
+        {
+          "type": "port",
+          "interface": "x_t_address0",
+          "name": "x_t_address0",
+          "usage": "address",
+          "direction": "out"
+        },
+        {
+          "type": "port",
+          "interface": "x_t_ce0",
+          "name": "x_t_ce0",
+          "usage": "control",
+          "direction": "out"
+        },
+        {
+          "type": "port",
+          "interface": "x_t_q0",
+          "name": "x_t_q0",
+          "usage": "data",
+          "direction": "in"
+        }
+      ]
+    },
+    "state_prev": {
+      "index": "1",
+      "direction": "in",
+      "srcType": "ap_fixed<24, 12, (ap_q_mode)5, (ap_o_mode)3, 0> const *",
+      "srcSize": "32",
+      "hwRefs": [
+        {
+          "type": "port",
+          "interface": "state_prev_address0",
+          "name": "state_prev_address0",
+          "usage": "address",
+          "direction": "out"
+        },
+        {
+          "type": "port",
+          "interface": "state_prev_ce0",
+          "name": "state_prev_ce0",
+          "usage": "control",
+          "direction": "out"
+        },
+        {
+          "type": "port",
+          "interface": "state_prev_q0",
+          "name": "state_prev_q0",
+          "usage": "data",
+          "direction": "in"
+        }
+      ]
+    },
+    "readout": {
+      "index": "2",
+      "direction": "out",
+      "srcType": "ap_fixed<24, 12, (ap_q_mode)5, (ap_o_mode)3, 0>*",
+      "srcSize": "32",
+      "hwRefs": [
+        {
+          "type": "port",
+          "interface": "readout_address0",
+          "name": "readout_address0",
+          "usage": "address",
+          "direction": "out"
+        },
+        {
+          "type": "port",
+          "interface": "readout_ce0",
+          "name": "readout_ce0",
+          "usage": "control",
+          "direction": "out"
+        },
+        {
+          "type": "port",
+          "interface": "readout_we0",
+          "name": "readout_we0",
+          "usage": "control",
+          "direction": "out"
+        },
+        {
+          "type": "port",
+          "interface": "readout_d0",
+          "name": "readout_d0",
+          "usage": "data",
+          "direction": "out"
+        }
+      ]
+    },
+    "state_next": {
+      "index": "3",
+      "direction": "out",
+      "srcType": "ap_fixed<24, 12, (ap_q_mode)5, (ap_o_mode)3, 0>*",
+      "srcSize": "32",
+      "hwRefs": [
+        {
+          "type": "port",
+          "interface": "state_next_address0",
+          "name": "state_next_address0",
+          "usage": "address",
+          "direction": "out"
+        },
+        {
+          "type": "port",
+          "interface": "state_next_ce0",
+          "name": "state_next_ce0",
+          "usage": "control",
+          "direction": "out"
+        },
+        {
+          "type": "port",
+          "interface": "state_next_we0",
+          "name": "state_next_we0",
+          "usage": "control",
+          "direction": "out"
+        },
+        {
+          "type": "port",
+          "interface": "state_next_d0",
+          "name": "state_next_d0",
+          "usage": "data",
+          "direction": "out"
+        }
+      ]
+    }
+  },
+  "HlsSolution": {
+    "FlowTarget": "vivado",
+    "ConfigTcl": [
+      "config_cosim -argv {C:\/Users\/holbo\/00VS_projjects\/00_HFT_project\/n2ew_era\/06f_phc_lite_manual_hls\/results\/phc_step_test_vectors.csv C:\/Users\/holbo\/00VS_projjects\/00_HFT_project\/n2ew_era\/06n2_phc_lite_gain_dataflow\/results\/phc_step_cosim_out.csv}",
+      "config_csim -argv {C:\/Users\/holbo\/00VS_projjects\/00_HFT_project\/n2ew_era\/06f_phc_lite_manual_hls\/results\/phc_step_test_vectors.csv C:\/Users\/holbo\/00VS_projjects\/00_HFT_project\/n2ew_era\/06n2_phc_lite_gain_dataflow\/results\/phc_step_csim_out.csv}",
+      "config_export -format=ip_catalog"
+    ],
+    "ProfileOption": "0",
+    "ProfileType": "none",
+    "KernelName": "phc_step"
+  },
+  "ClockInfo": {
+    "ClockName": "ap_clk",
+    "ClockPeriod": "10",
+    "Uncertainty": "2.7",
+    "IsCombinational": "0",
+    "II": "5720",
+    "Latency": "5719"
+  },
+  "Xdc": {"OocClocks": ["create_clock -name ap_clk -period 10.000 [get_ports ap_clk]"]},
+  "Ipx": {
+    "Vendor": "xilinx.com",
+    "Library": "hls",
+    "Name": "phc_step",
+    "Version": "1.0",
+    "DisplayName": "Phc_step",
+    "Revision": "2114666825",
+    "Description": "An IP generated by Vitis HLS",
+    "Taxonomy": "\/VITIS_HLS_IP",
+    "AutoFamilySupport": "",
+    "ZipFile": "xilinx_com_hls_phc_step_1_0.zip"
+  },
+  "Files": {
+    "CSource": [
+      "..\/..\/..\/hls_src\/phc_step_hls.cpp",
+      "..\/..\/..\/hls_src\/phc_step_hls.hpp",
+      "..\/..\/..\/hls_src\/phc_weights.hpp"
+    ],
+    "TestBench": ["..\/..\/..\/hls_src\/phc_step_testbench.cpp"],
+    "Vhdl": [
+      "impl\/vhdl\/phc_step_mul_36s_24ns_60_2_1.vhd",
+      "impl\/vhdl\/phc_step_mul_36s_24s_60_2_1.vhd",
+      "impl\/vhdl\/phc_step_mul_36s_25s_61_2_1.vhd",
+      "impl\/vhdl\/phc_step_mul_40s_24s_64_2_1.vhd",
+      "impl\/vhdl\/phc_step_mul_40s_25ns_64_2_1.vhd",
+      "impl\/vhdl\/phc_step_mul_40s_25s_64_2_1.vhd",
+      "impl\/vhdl\/phc_step_mul_40s_26s_64_2_1.vhd",
+      "impl\/vhdl\/phc_step_mul_40s_40s_64_2_1.vhd",
+      "impl\/vhdl\/phc_step_mul_40s_40s_72_2_1.vhd",
+      "impl\/vhdl\/phc_step_mul_41s_25ns_65_2_1.vhd",
+      "impl\/vhdl\/phc_step_mul_64s_40s_88_5_1.vhd",
+      "impl\/vhdl\/phc_step_mul_65s_40s_88_5_1.vhd",
+      "impl\/vhdl\/phc_step_p_anonymous_namespace_candidate_branch.vhd",
+      "impl\/vhdl\/phc_step_p_anonymous_namespace_candidate_branch_phc_step_weights_CANDIDATE_B_ROM_AUTO_1R.vhd",
+      "impl\/vhdl\/phc_step_p_anonymous_namespace_candidate_branch_phc_step_weights_CANDIDATE_W_ROM_AUTO_1R.vhd",
+      "impl\/vhdl\/phc_step_p_anonymous_namespace_fork_encoded_for_gate_candidate.vhd",
+      "impl\/vhdl\/phc_step_p_anonymous_namespace_fork_inputs_for_main_gain.vhd",
+      "impl\/vhdl\/phc_step_p_anonymous_namespace_gain_chain_fn.vhd",
+      "impl\/vhdl\/phc_step_p_anonymous_namespace_gain_chain_fn_Outline_VITIS_LOOP_119_1.vhd",
+      "impl\/vhdl\/phc_step_p_anonymous_namespace_gain_chain_fn_Outline_VITIS_LOOP_119_1_phc_step_weightscud.vhd",
+      "impl\/vhdl\/phc_step_p_anonymous_namespace_gain_chain_fn_Outline_VITIS_LOOP_119_1_phc_step_weightsdEe.vhd",
+      "impl\/vhdl\/phc_step_p_anonymous_namespace_gain_chain_fn_Outline_VITIS_LOOP_136_1.vhd",
+      "impl\/vhdl\/phc_step_p_anonymous_namespace_gain_chain_fn_Outline_VITIS_LOOP_136_1_phc_step_weightseOg.vhd",
+      "impl\/vhdl\/phc_step_p_anonymous_namespace_gate_branch.vhd",
+      "impl\/vhdl\/phc_step_p_anonymous_namespace_gate_branch_gate_pre_RAM_AUTO_1R1W.vhd",
+      "impl\/vhdl\/phc_step_p_anonymous_namespace_gate_branch_phc_step_weights_GATE_B_ROM_AUTO_1R.vhd",
+      "impl\/vhdl\/phc_step_p_anonymous_namespace_gate_branch_phc_step_weights_GATE_W_ROM_AUTO_1R.vhd",
+      "impl\/vhdl\/phc_step_p_anonymous_namespace_gate_candidate_dataflow.vhd",
+      "impl\/vhdl\/phc_step_p_anonymous_namespace_gate_candidate_dataflow_encoded_for_gate_RAM_AUTO_1R1W.vhd",
+      "impl\/vhdl\/phc_step_p_anonymous_namespace_gate_candidate_dataflow_encoded_for_gate_RAM_AUTO_1R1W_memcore.vhd",
+      "impl\/vhdl\/phc_step_p_anonymous_namespace_main_chain_fn.vhd",
+      "impl\/vhdl\/phc_step_p_anonymous_namespace_main_chain_fn_phc_step_weights_DECAY_ROM_AUTO_1R.vhd",
+      "impl\/vhdl\/phc_step_p_anonymous_namespace_main_chain_fn_phc_step_weights_SYNAPSE_B_ROM_AUTO_1R.vhd",
+      "impl\/vhdl\/phc_step_p_anonymous_namespace_main_chain_fn_phc_step_weights_SYNAPSE_W_ROM_AUTO_1R.vhd",
+      "impl\/vhdl\/phc_step_p_anonymous_namespace_step_dataflow_fn.vhd",
+      "impl\/vhdl\/phc_step_p_anonymous_namespace_step_dataflow_fn_encoded_for_main_RAM_AUTO_1R1W.vhd",
+      "impl\/vhdl\/phc_step_p_anonymous_namespace_step_dataflow_fn_encoded_for_main_RAM_AUTO_1R1W_memcore.vhd",
+      "impl\/vhdl\/phc_step_p_anonymous_namespace_step_dataflow_fn_state_prev_for_main_RAM_AUTO_1R1W.vhd",
+      "impl\/vhdl\/phc_step_p_anonymous_namespace_step_dataflow_fn_state_prev_for_main_RAM_AUTO_1R1W_memcore.vhd",
+      "impl\/vhdl\/phc_step_phc_step_Outline_VITIS_LOOP_357_2.vhd",
+      "impl\/vhdl\/phc_step_phc_step_Outline_VITIS_LOOP_361_3.vhd",
+      "impl\/vhdl\/phc_step_phc_step_weights_ENC_LINEAR_B_ROM_AUTO_1R.vhd",
+      "impl\/vhdl\/phc_step_phc_step_weights_ENC_LINEAR_W_ROM_AUTO_1R.vhd",
+      "impl\/vhdl\/phc_step_phc_step_weights_ENC_NORM_BETA_ROM_AUTO_1R.vhd",
+      "impl\/vhdl\/phc_step_phc_step_weights_ENC_NORM_GAMMA_ROM_AUTO_1R.vhd",
+      "impl\/vhdl\/phc_step_phc_step_weights_LOOP_NORM_BETA_ROM_AUTO_1R.vhd",
+      "impl\/vhdl\/phc_step_phc_step_weights_LOOP_NORM_GAMMA_ROM_AUTO_1R.vhd",
+      "impl\/vhdl\/phc_step_phc_step_weights_READOUT_B_ROM_AUTO_1R.vhd",
+      "impl\/vhdl\/phc_step_phc_step_weights_READOUT_W_ROM_AUTO_1R.vhd",
+      "impl\/vhdl\/phc_step_readout_acc_RAM_AUTO_1R1W.vhd",
+      "impl\/vhdl\/phc_step_sparsemux_7_2_40_1_1.vhd",
+      "impl\/vhdl\/phc_step_sparsemux_129_6_25_1_1.vhd",
+      "impl\/vhdl\/phc_step_sqrt_fixed_49_25_s.vhd",
+      "impl\/vhdl\/phc_step_udiv_49s_37ns_40_53_seq_1.vhd",
+      "impl\/vhdl\/phc_step.vhd"
+    ],
+    "Verilog": [
+      "impl\/verilog\/phc_step_mul_36s_24ns_60_2_1.v",
+      "impl\/verilog\/phc_step_mul_36s_24s_60_2_1.v",
+      "impl\/verilog\/phc_step_mul_36s_25s_61_2_1.v",
+      "impl\/verilog\/phc_step_mul_40s_24s_64_2_1.v",
+      "impl\/verilog\/phc_step_mul_40s_25ns_64_2_1.v",
+      "impl\/verilog\/phc_step_mul_40s_25s_64_2_1.v",
+      "impl\/verilog\/phc_step_mul_40s_26s_64_2_1.v",
+      "impl\/verilog\/phc_step_mul_40s_40s_64_2_1.v",
+      "impl\/verilog\/phc_step_mul_40s_40s_72_2_1.v",
+      "impl\/verilog\/phc_step_mul_41s_25ns_65_2_1.v",
+      "impl\/verilog\/phc_step_mul_64s_40s_88_5_1.v",
+      "impl\/verilog\/phc_step_mul_65s_40s_88_5_1.v",
+      "impl\/verilog\/phc_step_p_anonymous_namespace_candidate_branch.v",
+      "impl\/verilog\/phc_step_p_anonymous_namespace_candidate_branch_phc_step_weights_CANDIDATE_B_ROM_AUTO_1R.dat",
+      "impl\/verilog\/phc_step_p_anonymous_namespace_candidate_branch_phc_step_weights_CANDIDATE_B_ROM_AUTO_1R.v",
+      "impl\/verilog\/phc_step_p_anonymous_namespace_candidate_branch_phc_step_weights_CANDIDATE_W_ROM_AUTO_1R.dat",
+      "impl\/verilog\/phc_step_p_anonymous_namespace_candidate_branch_phc_step_weights_CANDIDATE_W_ROM_AUTO_1R.v",
+      "impl\/verilog\/phc_step_p_anonymous_namespace_fork_encoded_for_gate_candidate.v",
+      "impl\/verilog\/phc_step_p_anonymous_namespace_fork_inputs_for_main_gain.v",
+      "impl\/verilog\/phc_step_p_anonymous_namespace_gain_chain_fn.v",
+      "impl\/verilog\/phc_step_p_anonymous_namespace_gain_chain_fn_Outline_VITIS_LOOP_119_1.v",
+      "impl\/verilog\/phc_step_p_anonymous_namespace_gain_chain_fn_Outline_VITIS_LOOP_119_1_phc_step_weightscud.dat",
+      "impl\/verilog\/phc_step_p_anonymous_namespace_gain_chain_fn_Outline_VITIS_LOOP_119_1_phc_step_weightscud.v",
+      "impl\/verilog\/phc_step_p_anonymous_namespace_gain_chain_fn_Outline_VITIS_LOOP_119_1_phc_step_weightsdEe.dat",
+      "impl\/verilog\/phc_step_p_anonymous_namespace_gain_chain_fn_Outline_VITIS_LOOP_119_1_phc_step_weightsdEe.v",
+      "impl\/verilog\/phc_step_p_anonymous_namespace_gain_chain_fn_Outline_VITIS_LOOP_136_1.v",
+      "impl\/verilog\/phc_step_p_anonymous_namespace_gain_chain_fn_Outline_VITIS_LOOP_136_1_phc_step_weightseOg.dat",
+      "impl\/verilog\/phc_step_p_anonymous_namespace_gain_chain_fn_Outline_VITIS_LOOP_136_1_phc_step_weightseOg.v",
+      "impl\/verilog\/phc_step_p_anonymous_namespace_gate_branch.v",
+      "impl\/verilog\/phc_step_p_anonymous_namespace_gate_branch_gate_pre_RAM_AUTO_1R1W.v",
+      "impl\/verilog\/phc_step_p_anonymous_namespace_gate_branch_phc_step_weights_GATE_B_ROM_AUTO_1R.dat",
+      "impl\/verilog\/phc_step_p_anonymous_namespace_gate_branch_phc_step_weights_GATE_B_ROM_AUTO_1R.v",
+      "impl\/verilog\/phc_step_p_anonymous_namespace_gate_branch_phc_step_weights_GATE_W_ROM_AUTO_1R.dat",
+      "impl\/verilog\/phc_step_p_anonymous_namespace_gate_branch_phc_step_weights_GATE_W_ROM_AUTO_1R.v",
+      "impl\/verilog\/phc_step_p_anonymous_namespace_gate_candidate_dataflow.v",
+      "impl\/verilog\/phc_step_p_anonymous_namespace_gate_candidate_dataflow_encoded_for_gate_RAM_AUTO_1R1W.v",
+      "impl\/verilog\/phc_step_p_anonymous_namespace_gate_candidate_dataflow_encoded_for_gate_RAM_AUTO_1R1W_memcore.v",
+      "impl\/verilog\/phc_step_p_anonymous_namespace_main_chain_fn.v",
+      "impl\/verilog\/phc_step_p_anonymous_namespace_main_chain_fn_phc_step_weights_DECAY_ROM_AUTO_1R.dat",
+      "impl\/verilog\/phc_step_p_anonymous_namespace_main_chain_fn_phc_step_weights_DECAY_ROM_AUTO_1R.v",
+      "impl\/verilog\/phc_step_p_anonymous_namespace_main_chain_fn_phc_step_weights_SYNAPSE_B_ROM_AUTO_1R.dat",
+      "impl\/verilog\/phc_step_p_anonymous_namespace_main_chain_fn_phc_step_weights_SYNAPSE_B_ROM_AUTO_1R.v",
+      "impl\/verilog\/phc_step_p_anonymous_namespace_main_chain_fn_phc_step_weights_SYNAPSE_W_ROM_AUTO_1R.dat",
+      "impl\/verilog\/phc_step_p_anonymous_namespace_main_chain_fn_phc_step_weights_SYNAPSE_W_ROM_AUTO_1R.v",
+      "impl\/verilog\/phc_step_p_anonymous_namespace_step_dataflow_fn.v",
+      "impl\/verilog\/phc_step_p_anonymous_namespace_step_dataflow_fn_encoded_for_main_RAM_AUTO_1R1W.v",
+      "impl\/verilog\/phc_step_p_anonymous_namespace_step_dataflow_fn_encoded_for_main_RAM_AUTO_1R1W_memcore.v",
+      "impl\/verilog\/phc_step_p_anonymous_namespace_step_dataflow_fn_state_prev_for_main_RAM_AUTO_1R1W.v",
+      "impl\/verilog\/phc_step_p_anonymous_namespace_step_dataflow_fn_state_prev_for_main_RAM_AUTO_1R1W_memcore.v",
+      "impl\/verilog\/phc_step_phc_step_Outline_VITIS_LOOP_357_2.v",
+      "impl\/verilog\/phc_step_phc_step_Outline_VITIS_LOOP_361_3.v",
+      "impl\/verilog\/phc_step_phc_step_weights_ENC_LINEAR_B_ROM_AUTO_1R.dat",
+      "impl\/verilog\/phc_step_phc_step_weights_ENC_LINEAR_B_ROM_AUTO_1R.v",
+      "impl\/verilog\/phc_step_phc_step_weights_ENC_LINEAR_W_ROM_AUTO_1R.dat",
+      "impl\/verilog\/phc_step_phc_step_weights_ENC_LINEAR_W_ROM_AUTO_1R.v",
+      "impl\/verilog\/phc_step_phc_step_weights_ENC_NORM_BETA_ROM_AUTO_1R.dat",
+      "impl\/verilog\/phc_step_phc_step_weights_ENC_NORM_BETA_ROM_AUTO_1R.v",
+      "impl\/verilog\/phc_step_phc_step_weights_ENC_NORM_GAMMA_ROM_AUTO_1R.dat",
+      "impl\/verilog\/phc_step_phc_step_weights_ENC_NORM_GAMMA_ROM_AUTO_1R.v",
+      "impl\/verilog\/phc_step_phc_step_weights_LOOP_NORM_BETA_ROM_AUTO_1R.dat",
+      "impl\/verilog\/phc_step_phc_step_weights_LOOP_NORM_BETA_ROM_AUTO_1R.v",
+      "impl\/verilog\/phc_step_phc_step_weights_LOOP_NORM_GAMMA_ROM_AUTO_1R.dat",
+      "impl\/verilog\/phc_step_phc_step_weights_LOOP_NORM_GAMMA_ROM_AUTO_1R.v",
+      "impl\/verilog\/phc_step_phc_step_weights_READOUT_B_ROM_AUTO_1R.dat",
+      "impl\/verilog\/phc_step_phc_step_weights_READOUT_B_ROM_AUTO_1R.v",
+      "impl\/verilog\/phc_step_phc_step_weights_READOUT_W_ROM_AUTO_1R.dat",
+      "impl\/verilog\/phc_step_phc_step_weights_READOUT_W_ROM_AUTO_1R.v",
+      "impl\/verilog\/phc_step_readout_acc_RAM_AUTO_1R1W.v",
+      "impl\/verilog\/phc_step_sparsemux_7_2_40_1_1.v",
+      "impl\/verilog\/phc_step_sparsemux_129_6_25_1_1.v",
+      "impl\/verilog\/phc_step_sqrt_fixed_49_25_s.v",
+      "impl\/verilog\/phc_step_udiv_49s_37ns_40_53_seq_1.v",
+      "impl\/verilog\/phc_step.v"
+    ],
+    "IpMisc": ["impl\/misc\/logo.png"],
+    "CsynthXml": "syn\/report\/csynth.xml",
+    "DebugDir": ".debug",
+    "KernelXml": ".autopilot\/db\/kernel.internal.xml",
+    "Xo": "",
+    "XoHlsDir": "",
+    "ProtoInst": [".debug\/phc_step.protoinst"]
+  },
+  "SubcoreInfo": {
+    "HasXpmMemory": false,
+    "HasClockedDsp": false,
+    "Ip": [
+      
+    ]
+  },
+  "Interfaces": {
+    "ap_clk": {
+      "type": "clock",
+      "busTypeName": "clock",
+      "mode": "slave",
+      "busParams": {"ASSOCIATED_RESET": "ap_rst"},
+      "portMap": {"ap_clk": "CLK"},
+      "ports": ["ap_clk"]
+    },
+    "ap_rst": {
+      "type": "reset",
+      "busTypeName": "reset",
+      "mode": "slave",
+      "busParams": {"POLARITY": "ACTIVE_HIGH"},
+      "portMap": {"ap_rst": "RST"},
+      "ports": ["ap_rst"]
+    },
+    "ap_ctrl": {
+      "type": "ap_ctrl",
+      "busTypeName": "acc_handshake",
+      "mode": "slave",
+      "portMap": {
+        "ap_start": "start",
+        "ap_done": "done",
+        "ap_idle": "idle",
+        "ap_ready": "ready"
+      },
+      "ports": [
+        "ap_done",
+        "ap_idle",
+        "ap_ready",
+        "ap_start"
+      ]
+    },
+    "x_t_address0": {
+      "type": "data",
+      "busTypeName": "data",
+      "protocol": "ap_memory",
+      "mode": "master",
+      "dataWidth": "4",
+      "portMap": {"x_t_address0": "DATA"},
+      "ports": ["x_t_address0"],
+      "constraints": [{
+          "constraint_type": "pragma interface",
+          "mode": "ap_memory",
+          "register_option": "0",
+          "argName": "x_t"
+        }]
+    },
+    "x_t_q0": {
+      "type": "data",
+      "busTypeName": "data",
+      "protocol": "ap_memory",
+      "mode": "slave",
+      "dataWidth": "24",
+      "portMap": {"x_t_q0": "DATA"},
+      "ports": ["x_t_q0"],
+      "constraints": [{
+          "constraint_type": "pragma interface",
+          "mode": "ap_memory",
+          "register_option": "0",
+          "argName": "x_t"
+        }]
+    },
+    "state_prev_address0": {
+      "type": "data",
+      "busTypeName": "data",
+      "protocol": "ap_memory",
+      "mode": "master",
+      "dataWidth": "4",
+      "portMap": {"state_prev_address0": "DATA"},
+      "ports": ["state_prev_address0"],
+      "constraints": [{
+          "constraint_type": "pragma interface",
+          "mode": "ap_memory",
+          "register_option": "0",
+          "argName": "state_prev"
+        }]
+    },
+    "state_prev_q0": {
+      "type": "data",
+      "busTypeName": "data",
+      "protocol": "ap_memory",
+      "mode": "slave",
+      "dataWidth": "24",
+      "portMap": {"state_prev_q0": "DATA"},
+      "ports": ["state_prev_q0"],
+      "constraints": [{
+          "constraint_type": "pragma interface",
+          "mode": "ap_memory",
+          "register_option": "0",
+          "argName": "state_prev"
+        }]
+    },
+    "readout_address0": {
+      "type": "data",
+      "busTypeName": "data",
+      "protocol": "ap_memory",
+      "mode": "master",
+      "dataWidth": "1",
+      "portMap": {"readout_address0": "DATA"},
+      "ports": ["readout_address0"],
+      "constraints": [{
+          "constraint_type": "pragma interface",
+          "mode": "ap_memory",
+          "register_option": "0",
+          "argName": "readout"
+        }]
+    },
+    "readout_d0": {
+      "type": "data",
+      "busTypeName": "data",
+      "protocol": "ap_memory",
+      "mode": "master",
+      "dataWidth": "24",
+      "portMap": {"readout_d0": "DATA"},
+      "ports": ["readout_d0"],
+      "constraints": [{
+          "constraint_type": "pragma interface",
+          "mode": "ap_memory",
+          "register_option": "0",
+          "argName": "readout"
+        }]
+    },
+    "state_next_address0": {
+      "type": "data",
+      "busTypeName": "data",
+      "protocol": "ap_memory",
+      "mode": "master",
+      "dataWidth": "4",
+      "portMap": {"state_next_address0": "DATA"},
+      "ports": ["state_next_address0"],
+      "constraints": [{
+          "constraint_type": "pragma interface",
+          "mode": "ap_memory",
+          "register_option": "0",
+          "argName": "state_next"
+        }]
+    },
+    "state_next_d0": {
+      "type": "data",
+      "busTypeName": "data",
+      "protocol": "ap_memory",
+      "mode": "master",
+      "dataWidth": "24",
+      "portMap": {"state_next_d0": "DATA"},
+      "ports": ["state_next_d0"],
+      "constraints": [{
+          "constraint_type": "pragma interface",
+          "mode": "ap_memory",
+          "register_option": "0",
+          "argName": "state_next"
+        }]
+    }
+  },
+  "RtlPorts": {
+    "ap_clk": {
+      "dir": "in",
+      "width": "1"
+    },
+    "ap_rst": {
+      "dir": "in",
+      "width": "1"
+    },
+    "ap_start": {
+      "dir": "in",
+      "width": "1"
+    },
+    "ap_done": {
+      "dir": "out",
+      "width": "1"
+    },
+    "ap_idle": {
+      "dir": "out",
+      "width": "1"
+    },
+    "ap_ready": {
+      "dir": "out",
+      "width": "1"
+    },
+    "x_t_address0": {
+      "dir": "out",
+      "width": "4"
+    },
+    "x_t_ce0": {
+      "dir": "out",
+      "width": "1"
+    },
+    "x_t_q0": {
+      "dir": "in",
+      "width": "24"
+    },
+    "state_prev_address0": {
+      "dir": "out",
+      "width": "4"
+    },
+    "state_prev_ce0": {
+      "dir": "out",
+      "width": "1"
+    },
+    "state_prev_q0": {
+      "dir": "in",
+      "width": "24"
+    },
+    "readout_address0": {
+      "dir": "out",
+      "width": "1",
+      "isVector": "true"
+    },
+    "readout_ce0": {
+      "dir": "out",
+      "width": "1"
+    },
+    "readout_we0": {
+      "dir": "out",
+      "width": "1"
+    },
+    "readout_d0": {
+      "dir": "out",
+      "width": "24"
+    },
+    "state_next_address0": {
+      "dir": "out",
+      "width": "4"
+    },
+    "state_next_ce0": {
+      "dir": "out",
+      "width": "1"
+    },
+    "state_next_we0": {
+      "dir": "out",
+      "width": "1"
+    },
+    "state_next_d0": {
+      "dir": "out",
+      "width": "24"
+    }
+  },
+  "ModuleInfo": {
+    "Hierarchy": {
+      "ModuleName": "phc_step",
+      "BindInstances": "enc_linear_out_U encoded_pre_U encoded_U state_temporal_U gain_t_U message_U loop_input_U z_U readout_acc_U icmp_ln101_fu_1090_p2 add_ln101_fu_1096_p2 icmp_ln104_fu_1140_p2 add_ln104_fu_1146_p2 add_ln106_1_fu_1156_p2 mul_36s_25s_61_2_1_U84 add_ln106_fu_1211_p2 icmp_ln173_fu_1230_p2 add_ln173_fu_1236_p2 mean_2_fu_1304_p2 sub_ln177_fu_1268_p2 sub_ln177_1_fu_1315_p2 mean_fu_1320_p3 icmp_ln180_fu_1333_p2 add_ln180_fu_1339_p2 d_fu_1384_p2 mul_40s_40s_72_2_1_U88 add_ln183_fu_1402_p2 sub_ln185_fu_1363_p2 sub_ln185_1_fu_1439_p2 var_fu_1444_p3 x_fu_1456_p2 udiv_49s_37ns_40_53_seq_1_U93 icmp_ln188_fu_1486_p2 add_ln188_fu_1492_p2 sub_ln190_fu_1518_p2 mul_41s_25ns_65_2_1_U90 mul_65s_40s_88_5_1_U92 add_ln190_fu_1555_p2 icmp_ln88_fu_1575_p2 add_ln88_fu_1581_p2 icmp_ln39_fu_1607_p2 icmp_ln42_fu_1623_p2 add_ln46_fu_1634_p2 icmp_ln47_fu_1686_p2 add_ln47_fu_1692_p2 select_ln47_fu_1698_p3 idx_fu_1706_p3 idx_1_fu_1726_p3 icmp_ln51_fu_1748_p2 idx_2_fu_1753_p3 frac_fu_1778_p2 sparsemux_129_6_25_1_1_U94 sparsemux_129_6_25_1_1_U95 sub_ln57_fu_2318_p2 mul_40s_26s_64_2_1_U86 add_ln57_fu_2343_p2 xor_ln39_fu_2358_p2 and_ln42_fu_2363_p2 sparsemux_7_2_40_1_1_U96 add_ln62_fu_2399_p2 mul_40s_40s_64_2_1_U87 icmp_ln349_fu_2441_p2 add_ln349_fu_2447_p2 mul_40s_25ns_64_2_1_U89 mul_64s_40s_88_5_1_U91 add_ln351_fu_2492_p2 icmp_ln173_1_fu_2511_p2 add_ln173_1_fu_2517_p2 mean_7_fu_2585_p2 sub_ln177_2_fu_2549_p2 sub_ln177_3_fu_2596_p2 mean_6_fu_2601_p3 icmp_ln180_1_fu_2614_p2 add_ln180_1_fu_2620_p2 d_1_fu_2665_p2 mul_40s_40s_72_2_1_U88 add_ln183_1_fu_2683_p2 sub_ln185_2_fu_2644_p2 sub_ln185_3_fu_2720_p2 var_6_fu_2725_p3 x_2_fu_2737_p2 udiv_49s_37ns_40_53_seq_1_U97 icmp_ln188_1_fu_2767_p2 add_ln188_1_fu_2773_p2 sub_ln190_1_fu_2799_p2 mul_41s_25ns_65_2_1_U90 mul_65s_40s_88_5_1_U92 add_ln190_1_fu_2836_p2 icmp_ln154_fu_2856_p2 add_ln154_fu_2862_p2 icmp_ln157_fu_2896_p2 add_ln157_fu_2902_p2 add_ln159_1_fu_2913_p2 mul_40s_24s_64_2_1_U85 add_ln159_fu_2951_p2 phc_step_weights_ENC_LINEAR_B_U phc_step_weights_ENC_LINEAR_W_U phc_step_weights_ENC_NORM_GAMMA_U phc_step_weights_ENC_NORM_BETA_U phc_step_weights_LOOP_NORM_GAMMA_U phc_step_weights_LOOP_NORM_BETA_U phc_step_weights_READOUT_B_U phc_step_weights_READOUT_W_U",
+      "Instances": [
+        {
+          "ModuleName": "sqrt_fixed_49_25_s",
+          "InstanceName": "grp_sqrt_fixed_49_25_s_fu_968",
+          "BindInstances": "x_l_I_1_fu_464_p3 select_ln212_fu_472_p3 select_ln216_fu_480_p3 icmp_ln258_fu_508_p2 sub_ln263_fu_514_p2 x_l_I_3_fu_540_p3 res_I_1_fu_548_p3 icmp_ln258_1_fu_584_p2 sub_ln263_1_fu_590_p2 x_l_I_6_fu_616_p3 res_I_3_fu_624_p3 icmp_ln258_2_fu_669_p2 sub_ln263_2_fu_674_p2 x_l_I_8_fu_697_p3 res_I_5_fu_704_p3 icmp_ln258_3_fu_739_p2 sub_ln263_3_fu_745_p2 x_l_I_10_fu_771_p3 res_I_7_fu_779_p3 icmp_ln258_4_fu_815_p2 sub_ln263_4_fu_821_p2 x_l_I_12_fu_844_p3 res_I_9_fu_850_p3 icmp_ln258_5_fu_884_p2 sub_ln263_5_fu_890_p2 x_l_I_14_fu_916_p3 res_I_11_fu_924_p3 icmp_ln258_6_fu_960_p2 sub_ln263_6_fu_966_p2 x_l_I_16_fu_992_p3 res_I_13_fu_1000_p3 icmp_ln258_7_fu_1035_p2 sub_ln263_7_fu_1040_p2 x_l_I_18_fu_1063_p3 res_I_15_fu_1070_p3 icmp_ln258_8_fu_1105_p2 sub_ln263_8_fu_1111_p2 x_l_I_20_fu_1137_p3 res_I_17_fu_1145_p3 icmp_ln258_9_fu_1169_p2 sub_ln263_9_fu_1175_p2 x_l_I_22_fu_1205_p3 res_I_19_fu_1211_p3 icmp_ln295_fu_1221_p2 icmp_ln295_1_fu_1227_p2 icmp_ln295_2_fu_1233_p2 and_ln295_fu_1238_p2 icmp_ln308_fu_1244_p2 x_l_I_23_fu_1249_p2 x_l_I_24_fu_1255_p3 x_l_FH_fu_1263_p2 x_l_I_25_fu_1269_p2 or_ln295_fu_1275_p2 x_l_I_4_fu_1281_p3 x_l_FH_49_fu_1289_p3 res_FH_fu_1463_p3 icmp_ln295_3_fu_1490_p2 icmp_ln295_4_fu_1495_p2 icmp_ln295_5_fu_1500_p2 xor_ln295_fu_1505_p2 and_ln295_1_fu_1511_p2 icmp_ln308_1_fu_1517_p2 x_l_I_26_fu_1522_p2 x_l_I_27_fu_1527_p3 x_l_FH_3_fu_1534_p2 x_l_I_28_fu_1539_p2 or_ln295_1_fu_1545_p2 x_l_I_29_fu_1551_p3 x_l_FH_50_fu_1558_p3 res_FH_2_fu_1574_p3 icmp_ln295_6_fu_1600_p2 icmp_ln295_7_fu_1605_p2 icmp_ln295_8_fu_1610_p2 xor_ln295_1_fu_1615_p2 and_ln295_2_fu_1621_p2 icmp_ln308_2_fu_1627_p2 x_l_I_30_fu_1632_p2 x_l_I_31_fu_1637_p3 x_l_FH_5_fu_1644_p2 x_l_I_32_fu_1649_p2 or_ln295_2_fu_1655_p2 x_l_I_33_fu_1661_p3 x_l_FH_51_fu_1668_p3 res_FH_4_fu_1684_p3 icmp_ln295_9_fu_1710_p2 icmp_ln295_10_fu_1715_p2 icmp_ln295_11_fu_1720_p2 xor_ln295_2_fu_1725_p2 and_ln295_3_fu_1731_p2 icmp_ln308_3_fu_1737_p2 x_l_I_34_fu_1742_p2 x_l_I_35_fu_1747_p3 x_l_FH_7_fu_1754_p2 x_l_I_36_fu_1759_p2 or_ln295_3_fu_1765_p2 x_l_I_37_fu_1771_p3 x_l_FH_52_fu_1778_p3 res_FH_6_fu_1794_p3 icmp_ln295_12_fu_1820_p2 icmp_ln295_13_fu_1825_p2 icmp_ln295_14_fu_1830_p2 xor_ln295_3_fu_1835_p2 and_ln295_4_fu_1841_p2 icmp_ln308_4_fu_1847_p2 x_l_I_38_fu_1852_p2 x_l_I_39_fu_1857_p3 x_l_FH_9_fu_1864_p2 x_l_I_40_fu_1869_p2 or_ln295_4_fu_1875_p2 x_l_I_41_fu_1881_p3 x_l_FH_53_fu_1888_p3 res_FH_8_fu_1904_p3 icmp_ln295_15_fu_1930_p2 icmp_ln295_16_fu_1935_p2 icmp_ln295_17_fu_1940_p2 xor_ln295_4_fu_1945_p2 and_ln295_5_fu_1951_p2 icmp_ln308_5_fu_1957_p2 x_l_I_42_fu_1962_p2 x_l_I_43_fu_1967_p3 x_l_FH_11_fu_1974_p2 x_l_I_44_fu_1979_p2 or_ln295_5_fu_1985_p2 x_l_I_45_fu_1991_p3 x_l_FH_54_fu_1998_p3 res_FH_10_fu_2014_p3 icmp_ln295_18_fu_2040_p2 icmp_ln295_19_fu_2045_p2 icmp_ln295_20_fu_2050_p2 xor_ln295_5_fu_2055_p2 and_ln295_6_fu_2061_p2 icmp_ln308_6_fu_2067_p2 x_l_I_46_fu_2072_p2 x_l_I_47_fu_2077_p3 x_l_FH_13_fu_2084_p2 x_l_I_48_fu_2089_p2 or_ln295_6_fu_2095_p2 x_l_I_49_fu_2101_p3 x_l_FH_55_fu_2108_p3 res_FH_12_fu_2124_p3 icmp_ln295_21_fu_2150_p2 icmp_ln295_22_fu_2155_p2 icmp_ln295_23_fu_2160_p2 xor_ln295_6_fu_2165_p2 and_ln295_7_fu_2171_p2 icmp_ln308_7_fu_2177_p2 x_l_I_50_fu_2182_p2 x_l_I_51_fu_2187_p3 x_l_FH_15_fu_2194_p2 x_l_I_52_fu_2199_p2 or_ln295_7_fu_2205_p2 x_l_I_53_fu_2211_p3 x_l_FH_56_fu_2218_p3 res_FH_14_fu_2234_p3 icmp_ln295_24_fu_2260_p2 icmp_ln295_25_fu_2265_p2 icmp_ln295_26_fu_2270_p2 xor_ln295_7_fu_2275_p2 and_ln295_8_fu_2281_p2 icmp_ln308_8_fu_2287_p2 x_l_I_54_fu_2292_p2 x_l_I_55_fu_2297_p3 x_l_FH_17_fu_2304_p2 x_l_I_56_fu_2309_p2 or_ln295_8_fu_2315_p2 x_l_I_57_fu_2321_p3 x_l_FH_57_fu_2328_p3 res_FH_16_fu_2344_p3 icmp_ln295_27_fu_2370_p2 icmp_ln295_28_fu_2375_p2 icmp_ln295_29_fu_2380_p2 xor_ln295_8_fu_2385_p2 and_ln295_9_fu_2391_p2 icmp_ln308_9_fu_2397_p2 x_l_I_58_fu_2402_p2 x_l_I_59_fu_2407_p3 x_l_FH_19_fu_2414_p2 x_l_I_60_fu_2419_p2 or_ln295_9_fu_2425_p2 x_l_I_61_fu_2431_p3 x_l_FH_58_fu_2438_p3 res_FH_18_fu_2454_p3 icmp_ln295_30_fu_2480_p2 icmp_ln295_31_fu_2485_p2 icmp_ln295_32_fu_2490_p2 xor_ln295_9_fu_2495_p2 and_ln295_10_fu_2501_p2 icmp_ln308_10_fu_2507_p2 x_l_I_62_fu_2512_p2 x_l_I_63_fu_2517_p3 x_l_FH_21_fu_2524_p2 x_l_I_64_fu_2529_p2 or_ln295_10_fu_2535_p2 x_l_I_65_fu_2541_p3 x_l_FH_59_fu_2548_p3 res_FH_20_fu_2564_p3 icmp_ln295_33_fu_2590_p2 icmp_ln295_34_fu_2595_p2 icmp_ln295_35_fu_2600_p2 xor_ln295_10_fu_2605_p2 and_ln295_11_fu_2611_p2 icmp_ln308_11_fu_2617_p2 x_l_I_66_fu_2622_p2 x_l_I_67_fu_2627_p3 x_l_FH_23_fu_2634_p2 x_l_I_68_fu_2639_p2 or_ln295_11_fu_2645_p2 x_l_I_69_fu_2651_p3 x_l_FH_60_fu_2658_p3 res_FH_22_fu_2674_p3 icmp_ln295_36_fu_2698_p2 icmp_ln295_37_fu_2703_p2 icmp_ln295_38_fu_2708_p2 and_ln295_12_fu_2713_p2 x_l_I_70_fu_2719_p2 x_l_I_71_fu_2724_p3 xor_ln319_fu_2731_p2 x_l_FH_25_fu_2737_p2 x_l_I_72_fu_2742_p2 or_ln295_12_fu_2758_p2 x_l_I_73_fu_2764_p3 x_l_FH_61_fu_2771_p3 x_l_FL_l_10_fu_2778_p3 res_FH_24_fu_2786_p3 icmp_ln295_39_fu_2834_p2 icmp_ln295_40_fu_2839_p2 icmp_ln295_41_fu_2844_p2 icmp_ln295_42_fu_2849_p2 xor_ln295_11_fu_2853_p2 and_ln295_13_fu_2859_p2 delta_fu_2822_p2 x_l_FL_fu_2865_p2 icmp_ln308_12_fu_2869_p2 and_ln308_fu_2874_p2 or_ln308_fu_2879_p2 x_l_I_74_fu_2885_p2 x_l_I_75_fu_2890_p3 select_ln319_fu_2897_p3 or_ln295_13_fu_2924_p2 or_ln295_14_fu_2930_p2 x_l_I_76_fu_2936_p3 x_l_FH_62_fu_2944_p3 x_l_FL_23_fu_2951_p3 res_FH_26_fu_2958_p3 icmp_ln295_43_fu_3009_p2 icmp_ln295_44_fu_3014_p2 icmp_ln295_45_fu_3019_p2 icmp_ln295_46_fu_3024_p2 xor_ln295_12_fu_3028_p2 and_ln295_14_fu_3034_p2 delta_1_fu_2993_p2 x_l_FL_3_fu_3040_p2 icmp_ln308_13_fu_3044_p2 and_ln308_1_fu_3049_p2 or_ln308_1_fu_3054_p2 x_l_I_77_fu_3060_p2 x_l_I_78_fu_3065_p3 select_ln319_1_fu_3072_p3 or_ln295_15_fu_3099_p2 or_ln295_16_fu_3105_p2 x_l_I_79_fu_3111_p3 x_l_FH_63_fu_3119_p3 x_l_FL_24_fu_3126_p3 res_FH_28_fu_3133_p3 icmp_ln295_47_fu_3188_p2 icmp_ln295_48_fu_3193_p2 icmp_ln295_49_fu_3198_p2 icmp_ln295_50_fu_3203_p2 xor_ln295_13_fu_3207_p2 and_ln295_15_fu_3213_p2 delta_2_fu_3168_p2 x_l_FL_5_fu_3219_p2 icmp_ln308_14_fu_3223_p2 and_ln308_2_fu_3228_p2 or_ln308_2_fu_3233_p2 x_l_I_80_fu_3239_p2 x_l_I_81_fu_3244_p3 select_ln319_2_fu_3251_p3 sub_ln319_2_fu_3258_p2 x_l_FH_31_fu_3268_p2 or_ln295_17_fu_3282_p2 or_ln295_18_fu_3288_p2 x_l_I_82_fu_3294_p3 x_l_FH_64_fu_3302_p3 x_l_FL_25_fu_3309_p3 res_FH_30_fu_3316_p3 icmp_ln295_51_fu_3371_p2 icmp_ln295_52_fu_3376_p2 icmp_ln295_53_fu_3381_p2 icmp_ln295_54_fu_3386_p2 xor_ln295_14_fu_3390_p2 and_ln295_16_fu_3396_p2 delta_3_fu_3351_p2 x_l_FL_7_fu_3402_p2 icmp_ln308_15_fu_3406_p2 and_ln308_3_fu_3411_p2 or_ln308_3_fu_3416_p2 x_l_I_83_fu_3422_p2 x_l_I_84_fu_3427_p3 select_ln319_3_fu_3434_p3 sub_ln319_3_fu_3441_p2 x_l_FH_33_fu_3451_p2 or_ln295_19_fu_3465_p2 or_ln295_20_fu_3471_p2 x_l_I_85_fu_3477_p3 x_l_FH_65_fu_3485_p3 x_l_FL_26_fu_3492_p3 res_FH_32_fu_3499_p3 icmp_ln295_55_fu_3554_p2 icmp_ln295_56_fu_3559_p2 icmp_ln295_57_fu_3564_p2 icmp_ln295_58_fu_3569_p2 xor_ln295_15_fu_3573_p2 and_ln295_17_fu_3579_p2 delta_4_fu_3534_p2 x_l_FL_9_fu_3585_p2 icmp_ln308_16_fu_3589_p2 and_ln308_4_fu_3594_p2 or_ln308_4_fu_3599_p2 x_l_I_86_fu_3605_p2 x_l_I_87_fu_3610_p3 select_ln319_4_fu_3617_p3 sub_ln319_4_fu_3624_p2 x_l_FH_35_fu_3634_p2 or_ln295_21_fu_3648_p2 or_ln295_22_fu_3654_p2 x_l_I_88_fu_3660_p3 x_l_FH_66_fu_3668_p3 x_l_FL_27_fu_3675_p3 res_FH_34_fu_3682_p3 icmp_ln295_59_fu_3737_p2 icmp_ln295_60_fu_3742_p2 icmp_ln295_61_fu_3747_p2 icmp_ln295_62_fu_3752_p2 xor_ln295_16_fu_3756_p2 and_ln295_18_fu_3762_p2 delta_5_fu_3717_p2 x_l_FL_11_fu_3768_p2 icmp_ln308_17_fu_3772_p2 and_ln308_5_fu_3777_p2 or_ln308_5_fu_3782_p2 x_l_I_89_fu_3788_p2 x_l_I_90_fu_3793_p3 select_ln319_5_fu_3800_p3 sub_ln319_5_fu_3807_p2 x_l_FH_37_fu_3817_p2 or_ln295_23_fu_3831_p2 or_ln295_24_fu_3837_p2 x_l_I_91_fu_3843_p3 x_l_FH_67_fu_3851_p3 x_l_FL_28_fu_3858_p3 res_FH_36_fu_3865_p3 icmp_ln295_63_fu_3920_p2 icmp_ln295_64_fu_3925_p2 icmp_ln295_65_fu_3930_p2 icmp_ln295_66_fu_3935_p2 xor_ln295_17_fu_3939_p2 and_ln295_19_fu_3945_p2 delta_6_fu_3900_p2 x_l_FL_13_fu_3951_p2 icmp_ln308_18_fu_3955_p2 and_ln308_6_fu_3960_p2 or_ln308_6_fu_3965_p2 x_l_I_92_fu_3971_p2 x_l_I_93_fu_3976_p3 select_ln319_6_fu_3983_p3 sub_ln319_6_fu_3990_p2 x_l_FH_39_fu_4000_p2 or_ln295_25_fu_4014_p2 or_ln295_26_fu_4020_p2 x_l_I_94_fu_4026_p3 x_l_FH_68_fu_4034_p3 x_l_FL_29_fu_4041_p3 res_FH_38_fu_4048_p3 icmp_ln295_67_fu_4103_p2 icmp_ln295_68_fu_4108_p2 icmp_ln295_69_fu_4113_p2 icmp_ln295_70_fu_4118_p2 xor_ln295_18_fu_4122_p2 and_ln295_20_fu_4128_p2 delta_7_fu_4083_p2 x_l_FL_15_fu_4134_p2 icmp_ln308_19_fu_4138_p2 and_ln308_7_fu_4143_p2 or_ln308_7_fu_4148_p2 x_l_I_95_fu_4154_p2 x_l_I_96_fu_4159_p3 select_ln319_7_fu_4166_p3 sub_ln319_7_fu_4173_p2 x_l_FH_41_fu_4183_p2 or_ln295_27_fu_4197_p2 or_ln295_28_fu_4203_p2 x_l_I_97_fu_4209_p3 x_l_FH_69_fu_4217_p3 x_l_FL_30_fu_4224_p3 res_FH_40_fu_4231_p3 icmp_ln295_71_fu_4286_p2 icmp_ln295_72_fu_4291_p2 icmp_ln295_73_fu_4296_p2 icmp_ln295_74_fu_4301_p2 xor_ln295_19_fu_4305_p2 and_ln295_21_fu_4311_p2 delta_8_fu_4266_p2 x_l_FL_17_fu_4317_p2 icmp_ln308_20_fu_4321_p2 and_ln308_8_fu_4326_p2 or_ln308_8_fu_4331_p2 x_l_I_98_fu_4337_p2 x_l_I_99_fu_4342_p3 select_ln319_8_fu_4349_p3 sub_ln319_8_fu_4356_p2 x_l_FH_43_fu_4366_p2 or_ln295_29_fu_4380_p2 or_ln295_30_fu_4386_p2 x_l_I_100_fu_4392_p3 x_l_FH_70_fu_4400_p3 x_l_FL_31_fu_4407_p3 res_FH_42_fu_4414_p3 icmp_ln295_75_fu_4469_p2 icmp_ln295_76_fu_4474_p2 icmp_ln295_77_fu_4479_p2 icmp_ln295_78_fu_4484_p2 xor_ln295_20_fu_4488_p2 and_ln295_22_fu_4494_p2 delta_9_fu_4449_p2 x_l_FL_19_fu_4500_p2 icmp_ln308_21_fu_4504_p2 and_ln308_9_fu_4509_p2 or_ln308_9_fu_4514_p2 x_l_I_101_fu_4520_p2 x_l_I_102_fu_4525_p3 select_ln319_9_fu_4532_p3 sub_ln319_9_fu_4539_p2 x_l_FH_45_fu_4549_p2 or_ln295_31_fu_4563_p2 or_ln295_32_fu_4569_p2 x_l_I_103_fu_4575_p3 x_l_FH_71_fu_4583_p3 x_l_FL_32_fu_4590_p3 res_FH_44_fu_4597_p3 icmp_ln295_79_fu_4652_p2 icmp_ln295_80_fu_4657_p2 icmp_ln295_81_fu_4662_p2 icmp_ln295_82_fu_4667_p2 xor_ln295_21_fu_4671_p2 and_ln295_23_fu_4677_p2 delta_10_fu_4632_p2 x_l_FL_22_fu_4683_p2 icmp_ln308_22_fu_4687_p2 and_ln308_10_fu_4692_p2 or_ln308_10_fu_4697_p2 x_l_I_104_fu_4703_p2 x_l_I_105_fu_4708_p3 select_ln319_10_fu_4715_p3 sub_ln319_10_fu_4722_p2 x_l_FH_48_fu_4732_p2 icmp_ln330_fu_4746_p2 or_ln295_33_fu_4752_p2 or_ln295_34_fu_4758_p2 phi_ln295_fu_4818_p2 x_l_FH_47_fu_4764_p3 x_l_FL_21_fu_4771_p3 res_FH_46_fu_4778_p3 icmp_ln295_83_fu_4832_p2 icmp_ln295_84_fu_4837_p2 icmp_ln295_85_fu_4805_p2 xor_ln295_22_fu_4842_p2 and_ln295_24_fu_4847_p2 or_ln295_35_fu_4862_p2 or_ln295_36_fu_4868_p2 res_FH_48_fu_4874_p3 add_ln338_fu_4885_p2 res_I_20_fu_4899_p2 res_I_21_fu_4904_p3 agg_result_0_fu_4929_p3"
+        },
+        {
+          "ModuleName": "p_anonymous_namespace_step_dataflow_fn",
+          "InstanceName": "grp_p_anonymous_namespace_step_dataflow_fn_fu_973",
+          "BindInstances": "encoded_for_main_U encoded_for_gain_U state_prev_for_main_U state_prev_for_gain_U",
+          "Instances": [
+            {
+              "ModuleName": "p_anonymous_namespace_fork_inputs_for_main_gain",
+              "InstanceName": "p_anonymous_namespace_fork_inputs_for_main_gain_U0",
+              "BindInstances": "icmp_ln245_fu_142_p2 add_ln245_fu_148_p2"
+            },
+            {
+              "ModuleName": "p_anonymous_namespace_main_chain_fn",
+              "InstanceName": "p_anonymous_namespace_main_chain_fn_U0",
+              "BindInstances": "gate_t_U candidate_t_U message_pre_U icmp_ln267_fu_652_p2 add_ln267_fu_658_p2 mul_36s_24ns_60_2_1_U40 mul_40s_40s_64_2_1_U43 add_ln270_fu_721_p2 icmp_ln119_fu_740_p2 add_ln119_fu_746_p2 icmp_ln122_fu_785_p2 add_ln122_fu_791_p2 add_ln124_1_fu_806_p2 mul_40s_24s_64_2_1_U41 add_ln124_fu_844_p2 icmp_ln88_fu_862_p2 add_ln88_fu_868_p2 icmp_ln39_fu_894_p2 icmp_ln42_fu_910_p2 add_ln46_fu_921_p2 icmp_ln47_fu_973_p2 add_ln47_fu_979_p2 select_ln47_fu_985_p3 idx_fu_993_p3 idx_3_fu_1013_p3 icmp_ln51_fu_1035_p2 idx_4_fu_1040_p3 frac_fu_1065_p2 sparsemux_129_6_25_1_1_U44 sparsemux_129_6_25_1_1_U45 sub_ln57_fu_1605_p2 mul_40s_26s_64_2_1_U42 add_ln57_fu_1630_p2 xor_ln39_fu_1645_p2 and_ln42_fu_1650_p2 sparsemux_7_2_40_1_1_U46 add_ln62_fu_1686_p2 mul_40s_40s_64_2_1_U43 phc_step_weights_DECAY_U phc_step_weights_SYNAPSE_B_U phc_step_weights_SYNAPSE_W_U",
+              "Instances": [{
+                  "ModuleName": "p_anonymous_namespace_gate_candidate_dataflow",
+                  "InstanceName": "grp_p_anonymous_namespace_gate_candidate_dataflow_fu_610",
+                  "BindInstances": "encoded_for_gate_U encoded_for_candidate_U",
+                  "Instances": [
+                    {
+                      "ModuleName": "p_anonymous_namespace_fork_encoded_for_gate_candidate",
+                      "InstanceName": "p_anonymous_namespace_fork_encoded_for_gate_candidate_U0",
+                      "BindInstances": "icmp_ln214_fu_91_p2 add_ln214_fu_97_p2"
+                    },
+                    {
+                      "ModuleName": "p_anonymous_namespace_gate_branch",
+                      "InstanceName": "p_anonymous_namespace_gate_branch_U0",
+                      "BindInstances": "gate_pre_U icmp_ln119_fu_534_p2 add_ln119_fu_540_p2 icmp_ln122_fu_579_p2 add_ln122_fu_585_p2 add_ln124_2_fu_600_p2 mul_40s_25s_64_2_1_U11 add_ln124_fu_638_p2 icmp_ln72_fu_656_p2 add_ln72_fu_662_p2 icmp_ln39_fu_688_p2 icmp_ln42_fu_704_p2 add_ln46_fu_715_p2 icmp_ln47_fu_767_p2 add_ln47_fu_773_p2 select_ln47_fu_779_p3 idx_fu_787_p3 idx_5_fu_807_p3 icmp_ln51_fu_829_p2 idx_6_fu_834_p3 frac_fu_859_p2 sparsemux_129_6_25_1_1_U13 sparsemux_129_6_25_1_1_U14 sub_ln57_fu_1399_p2 mul_40s_26s_64_2_1_U12 add_ln57_fu_1424_p2 xor_ln39_fu_1439_p2 and_ln42_fu_1444_p2 sparsemux_7_2_40_1_1_U15 add_ln62_fu_1480_p2 phc_step_weights_GATE_B_U phc_step_weights_GATE_W_U"
+                    },
+                    {
+                      "ModuleName": "p_anonymous_namespace_candidate_branch",
+                      "InstanceName": "p_anonymous_namespace_candidate_branch_U0",
+                      "BindInstances": "candidate_pre_U icmp_ln119_fu_512_p2 add_ln119_fu_518_p2 icmp_ln122_fu_557_p2 add_ln122_fu_563_p2 add_ln124_4_fu_578_p2 mul_40s_24s_64_2_1_U26 add_ln124_fu_616_p2 icmp_ln80_fu_634_p2 add_ln80_fu_640_p2 icmp_ln39_fu_672_p2 icmp_ln42_fu_666_p2 scaled_fu_682_p2 icmp_ln47_fu_708_p2 add_ln47_fu_714_p2 select_ln47_fu_720_p3 idx_fu_728_p3 idx_9_fu_748_p3 icmp_ln51_fu_770_p2 idx_10_fu_775_p3 frac_fu_793_p2 sparsemux_129_6_25_1_1_U28 sparsemux_129_6_25_1_1_U29 sub_ln57_fu_1332_p2 mul_40s_26s_64_2_1_U27 add_ln57_fu_1357_p2 xor_ln39_fu_1372_p2 and_ln42_fu_1377_p2 sparsemux_7_2_40_1_1_U30 phc_step_weights_CANDIDATE_B_U phc_step_weights_CANDIDATE_W_U"
+                    }
+                  ]
+                }]
+            },
+            {
+              "ModuleName": "p_anonymous_namespace_gain_chain_fn",
+              "InstanceName": "p_anonymous_namespace_gain_chain_fn_U0",
+              "BindInstances": "gain_encoded_U gain_prev_state_U gain_pre_U icmp_ln289_fu_504_p2 add_ln289_fu_510_p2 add_ln291_fu_532_p2 icmp_ln72_fu_541_p2 add_ln72_fu_547_p2 icmp_ln39_fu_573_p2 icmp_ln42_fu_589_p2 add_ln46_fu_600_p2 icmp_ln47_fu_652_p2 add_ln47_fu_658_p2 select_ln47_fu_664_p3 idx_fu_672_p3 idx_7_fu_692_p3 icmp_ln51_fu_714_p2 idx_8_fu_719_p3 frac_fu_744_p2 sparsemux_129_6_25_1_1_U67 sparsemux_129_6_25_1_1_U68 sub_ln57_fu_1284_p2 mul_40s_26s_64_2_1_U66 add_ln57_fu_1309_p2 xor_ln39_fu_1324_p2 and_ln42_fu_1329_p2 sparsemux_7_2_40_1_1_U69 add_ln62_fu_1365_p2",
+              "Instances": [
+                {
+                  "ModuleName": "p_anonymous_namespace_gain_chain_fn_Outline_VITIS_LOOP_119_1",
+                  "InstanceName": "grp_p_anonymous_namespace_gain_chain_fn_Outline_VITIS_LOOP_119_1_fu_470",
+                  "BindInstances": "icmp_ln119_fu_159_p2 add_ln119_fu_165_p2 icmp_ln122_fu_199_p2 add_ln122_fu_205_p2 add_ln124_3_fu_220_p2 mul_40s_25s_64_2_1_U56 add_ln124_fu_258_p2 phc_step_weights_GAIN_FROM_ENCODED_B_U phc_step_weights_GAIN_FROM_ENCODED_W_U"
+                },
+                {
+                  "ModuleName": "p_anonymous_namespace_gain_chain_fn_Outline_VITIS_LOOP_136_1",
+                  "InstanceName": "grp_p_anonymous_namespace_gain_chain_fn_Outline_VITIS_LOOP_136_1_fu_482",
+                  "BindInstances": "icmp_ln136_fu_135_p2 add_ln136_fu_141_p2 icmp_ln139_fu_163_p2 add_ln139_fu_169_p2 add_ln141_1_fu_184_p2 mul_36s_24s_60_2_1_U61 add_ln141_fu_233_p2 phc_step_weights_GAIN_FROM_PREV_STATE_W_U"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "ModuleName": "phc_step_Outline_VITIS_LOOP_357_2",
+          "InstanceName": "grp_phc_step_Outline_VITIS_LOOP_357_2_fu_1003",
+          "BindInstances": "icmp_ln357_fu_78_p2 add_ln357_fu_84_p2"
+        },
+        {
+          "ModuleName": "phc_step_Outline_VITIS_LOOP_361_3",
+          "InstanceName": "grp_phc_step_Outline_VITIS_LOOP_361_3_fu_1010",
+          "BindInstances": "icmp_ln361_fu_78_p2 add_ln361_fu_84_p2"
+        }
+      ]
+    },
+    "Info": {
+      "sqrt_fixed_49_25_s": {
+        "FunctionProtocol": "ap_ctrl_hs",
+        "isTaskLevelControl": "0",
+        "isPipelined": "1",
+        "isCombinational": "0",
+        "isOneStateSeq": "0"
+      },
+      "p_anonymous_namespace_fork_inputs_for_main_gain": {
+        "FunctionProtocol": "ap_ctrl_hs",
+        "isTaskLevelControl": "0",
+        "isPipelined": "0",
+        "isCombinational": "0",
+        "isOneStateSeq": "0"
+      },
+      "p_anonymous_namespace_fork_encoded_for_gate_candidate": {
+        "FunctionProtocol": "ap_ctrl_hs",
+        "isTaskLevelControl": "0",
+        "isPipelined": "0",
+        "isCombinational": "0",
+        "isOneStateSeq": "0"
+      },
+      "p_anonymous_namespace_gate_branch": {
+        "FunctionProtocol": "ap_ctrl_hs",
+        "isTaskLevelControl": "0",
+        "isPipelined": "0",
+        "isCombinational": "0",
+        "isOneStateSeq": "0"
+      },
+      "p_anonymous_namespace_candidate_branch": {
+        "FunctionProtocol": "ap_ctrl_hs",
+        "isTaskLevelControl": "0",
+        "isPipelined": "0",
+        "isCombinational": "0",
+        "isOneStateSeq": "0"
+      },
+      "p_anonymous_namespace_gate_candidate_dataflow": {
+        "FunctionProtocol": "ap_ctrl_hs",
+        "isTaskLevelControl": "0",
+        "isPipelined": "1",
+        "isCombinational": "0",
+        "isOneStateSeq": "0"
+      },
+      "p_anonymous_namespace_main_chain_fn": {
+        "FunctionProtocol": "ap_ctrl_hs",
+        "isTaskLevelControl": "0",
+        "isPipelined": "0",
+        "isCombinational": "0",
+        "isOneStateSeq": "0"
+      },
+      "p_anonymous_namespace_gain_chain_fn_Outline_VITIS_LOOP_119_1": {
+        "FunctionProtocol": "ap_ctrl_hs",
+        "isTaskLevelControl": "0",
+        "isPipelined": "0",
+        "isCombinational": "0",
+        "isOneStateSeq": "0"
+      },
+      "p_anonymous_namespace_gain_chain_fn_Outline_VITIS_LOOP_136_1": {
+        "FunctionProtocol": "ap_ctrl_hs",
+        "isTaskLevelControl": "0",
+        "isPipelined": "0",
+        "isCombinational": "0",
+        "isOneStateSeq": "0"
+      },
+      "p_anonymous_namespace_gain_chain_fn": {
+        "FunctionProtocol": "ap_ctrl_hs",
+        "isTaskLevelControl": "0",
+        "isPipelined": "0",
+        "isCombinational": "0",
+        "isOneStateSeq": "0"
+      },
+      "p_anonymous_namespace_step_dataflow_fn": {
+        "FunctionProtocol": "ap_ctrl_hs",
+        "isTaskLevelControl": "0",
+        "isPipelined": "1",
+        "isCombinational": "0",
+        "isOneStateSeq": "0"
+      },
+      "phc_step_Outline_VITIS_LOOP_357_2": {
+        "FunctionProtocol": "ap_ctrl_hs",
+        "isTaskLevelControl": "0",
+        "isPipelined": "0",
+        "isCombinational": "0",
+        "isOneStateSeq": "0"
+      },
+      "phc_step_Outline_VITIS_LOOP_361_3": {
+        "FunctionProtocol": "ap_ctrl_hs",
+        "isTaskLevelControl": "0",
+        "isPipelined": "0",
+        "isCombinational": "0",
+        "isOneStateSeq": "0"
+      },
+      "phc_step": {
+        "FunctionProtocol": "ap_ctrl_hs",
+        "isTaskLevelControl": "0",
+        "isPipelined": "0",
+        "isCombinational": "0",
+        "isOneStateSeq": "0"
+      }
+    },
+    "Metrics": {
+      "sqrt_fixed_49_25_s": {
+        "Latency": {
+          "LatencyBest": "28",
+          "LatencyAvg": "28",
+          "LatencyWorst": "28",
+          "PipelineII": "1",
+          "PipelineDepth": "29",
+          "PipelineType": "yes"
+        },
+        "Timing": {
+          "Target": "10.00",
+          "Uncertainty": "2.70",
+          "Estimate": "7.147"
+        },
+        "Area": {
+          "FF": "4242",
+          "AVAIL_FF": "106400",
+          "UTIL_FF": "3",
+          "LUT": "11383",
+          "AVAIL_LUT": "53200",
+          "UTIL_LUT": "21",
+          "BRAM_18K": "0",
+          "AVAIL_BRAM": "280",
+          "UTIL_BRAM": "0",
+          "DSP": "0",
+          "AVAIL_DSP": "220",
+          "UTIL_DSP": "0",
+          "URAM": "0",
+          "AVAIL_URAM": "0",
+          "UTIL_URAM": "0"
+        }
+      },
+      "p_anonymous_namespace_fork_inputs_for_main_gain": {
+        "Latency": {
+          "LatencyBest": "33",
+          "LatencyAvg": "33",
+          "LatencyWorst": "33",
+          "PipelineII": "33",
+          "PipelineDepth": "",
+          "PipelineType": "no"
+        },
+        "Timing": {
+          "Target": "10.00",
+          "Uncertainty": "2.70",
+          "Estimate": "4.644"
+        },
+        "Loops": [{
+            "Name": "VITIS_LOOP_245_1",
+            "TripCount": "16",
+            "Latency": "32",
+            "PipelineII": "",
+            "PipelineDepth": "2",
+            "PipelineType": "no",
+            "TargetTI": "",
+            "RealTI": "",
+            "isPerfectNested": "0",
+            "SourceLocation": ""
+          }],
+        "Area": {
+          "FF": "14",
+          "AVAIL_FF": "106400",
+          "UTIL_FF": "~0",
+          "LUT": "67",
+          "AVAIL_LUT": "53200",
+          "UTIL_LUT": "~0",
+          "BRAM_18K": "0",
+          "AVAIL_BRAM": "280",
+          "UTIL_BRAM": "0",
+          "DSP": "0",
+          "AVAIL_DSP": "220",
+          "UTIL_DSP": "0",
+          "URAM": "0",
+          "AVAIL_URAM": "0",
+          "UTIL_URAM": "0"
+        }
+      },
+      "p_anonymous_namespace_fork_encoded_for_gate_candidate": {
+        "Latency": {
+          "LatencyBest": "33",
+          "LatencyAvg": "33",
+          "LatencyWorst": "33",
+          "PipelineII": "33",
+          "PipelineDepth": "",
+          "PipelineType": "no"
+        },
+        "Timing": {
+          "Target": "10.00",
+          "Uncertainty": "2.70",
+          "Estimate": "4.644"
+        },
+        "Loops": [{
+            "Name": "VITIS_LOOP_214_1",
+            "TripCount": "16",
+            "Latency": "32",
+            "PipelineII": "",
+            "PipelineDepth": "2",
+            "PipelineType": "no",
+            "TargetTI": "",
+            "RealTI": "",
+            "isPerfectNested": "0",
+            "SourceLocation": ""
+          }],
+        "Area": {
+          "FF": "14",
+          "AVAIL_FF": "106400",
+          "UTIL_FF": "~0",
+          "LUT": "67",
+          "AVAIL_LUT": "53200",
+          "UTIL_LUT": "~0",
+          "BRAM_18K": "0",
+          "AVAIL_BRAM": "280",
+          "UTIL_BRAM": "0",
+          "DSP": "0",
+          "AVAIL_DSP": "220",
+          "UTIL_DSP": "0",
+          "URAM": "0",
+          "AVAIL_URAM": "0",
+          "UTIL_URAM": "0"
+        }
+      },
+      "p_anonymous_namespace_gate_branch": {
+        "Latency": {
+          "LatencyBest": "1474",
+          "LatencyAvg": "1474",
+          "LatencyWorst": "1474",
+          "PipelineII": "1474",
+          "PipelineDepth": "",
+          "PipelineType": "no"
+        },
+        "Timing": {
+          "Target": "10.00",
+          "Uncertainty": "2.70",
+          "Estimate": "6.912"
+        },
+        "Loops": [
+          {
+            "Name": "VITIS_LOOP_119_1",
+            "TripCount": "16",
+            "Latency": "1328",
+            "PipelineII": "",
+            "PipelineDepth": "83",
+            "PipelineType": "no",
+            "TargetTI": "",
+            "RealTI": "",
+            "isPerfectNested": "0",
+            "SourceLocation": "",
+            "Loops": [{
+                "Name": "VITIS_LOOP_122_2",
+                "TripCount": "16",
+                "Latency": "80",
+                "PipelineII": "",
+                "PipelineDepth": "5",
+                "PipelineType": "no",
+                "TargetTI": "",
+                "RealTI": "",
+                "isPerfectNested": "0",
+                "SourceLocation": ""
+              }]
+          },
+          {
+            "Name": "VITIS_LOOP_72_1",
+            "TripCount": "16",
+            "Latency": "144",
+            "PipelineII": "",
+            "PipelineDepth": "9",
+            "PipelineType": "no",
+            "TargetTI": "",
+            "RealTI": "",
+            "isPerfectNested": "0",
+            "SourceLocation": ""
+          }
+        ],
+        "Area": {
+          "BRAM_18K": "1",
+          "AVAIL_BRAM": "280",
+          "UTIL_BRAM": "~0",
+          "DSP": "7",
+          "AVAIL_DSP": "220",
+          "UTIL_DSP": "3",
+          "FF": "996",
+          "AVAIL_FF": "106400",
+          "UTIL_FF": "~0",
+          "LUT": "1485",
+          "AVAIL_LUT": "53200",
+          "UTIL_LUT": "2",
+          "URAM": "0",
+          "AVAIL_URAM": "0",
+          "UTIL_URAM": "0"
+        }
+      },
+      "p_anonymous_namespace_candidate_branch": {
+        "Latency": {
+          "LatencyBest": "1474",
+          "LatencyAvg": "1474",
+          "LatencyWorst": "1474",
+          "PipelineII": "1474",
+          "PipelineDepth": "",
+          "PipelineType": "no"
+        },
+        "Timing": {
+          "Target": "10.00",
+          "Uncertainty": "2.70",
+          "Estimate": "6.912"
+        },
+        "Loops": [
+          {
+            "Name": "VITIS_LOOP_119_1",
+            "TripCount": "16",
+            "Latency": "1328",
+            "PipelineII": "",
+            "PipelineDepth": "83",
+            "PipelineType": "no",
+            "TargetTI": "",
+            "RealTI": "",
+            "isPerfectNested": "0",
+            "SourceLocation": "",
+            "Loops": [{
+                "Name": "VITIS_LOOP_122_2",
+                "TripCount": "16",
+                "Latency": "80",
+                "PipelineII": "",
+                "PipelineDepth": "5",
+                "PipelineType": "no",
+                "TargetTI": "",
+                "RealTI": "",
+                "isPerfectNested": "0",
+                "SourceLocation": ""
+              }]
+          },
+          {
+            "Name": "VITIS_LOOP_80_1",
+            "TripCount": "16",
+            "Latency": "144",
+            "PipelineII": "",
+            "PipelineDepth": "9",
+            "PipelineType": "no",
+            "TargetTI": "",
+            "RealTI": "",
+            "isPerfectNested": "0",
+            "SourceLocation": ""
+          }
+        ],
+        "Area": {
+          "BRAM_18K": "1",
+          "AVAIL_BRAM": "280",
+          "UTIL_BRAM": "~0",
+          "DSP": "7",
+          "AVAIL_DSP": "220",
+          "UTIL_DSP": "3",
+          "FF": "1000",
+          "AVAIL_FF": "106400",
+          "UTIL_FF": "~0",
+          "LUT": "1441",
+          "AVAIL_LUT": "53200",
+          "UTIL_LUT": "2",
+          "URAM": "0",
+          "AVAIL_URAM": "0",
+          "UTIL_URAM": "0"
+        }
+      },
+      "p_anonymous_namespace_gate_candidate_dataflow": {
+        "Latency": {
+          "LatencyBest": "1508",
+          "LatencyAvg": "1508",
+          "LatencyWorst": "1508",
+          "PipelineII": "1475",
+          "PipelineDepth": "",
+          "PipelineType": "dataflow"
+        },
+        "Timing": {
+          "Target": "10.00",
+          "Uncertainty": "2.70",
+          "Estimate": "6.912"
+        },
+        "Area": {
+          "BRAM_18K": "2",
+          "AVAIL_BRAM": "280",
+          "UTIL_BRAM": "~0",
+          "DSP": "14",
+          "AVAIL_DSP": "220",
+          "UTIL_DSP": "6",
+          "FF": "2093",
+          "AVAIL_FF": "106400",
+          "UTIL_FF": "1",
+          "LUT": "3047",
+          "AVAIL_LUT": "53200",
+          "UTIL_LUT": "5",
+          "URAM": "0",
+          "AVAIL_URAM": "0",
+          "UTIL_URAM": "0"
+        }
+      },
+      "p_anonymous_namespace_main_chain_fn": {
+        "Latency": {
+          "LatencyBest": "3096",
+          "LatencyAvg": "3096",
+          "LatencyWorst": "3096",
+          "PipelineII": "3096",
+          "PipelineDepth": "",
+          "PipelineType": "no"
+        },
+        "Timing": {
+          "Target": "10.00",
+          "Uncertainty": "2.70",
+          "Estimate": "6.912"
+        },
+        "Loops": [
+          {
+            "Name": "VITIS_LOOP_267_1",
+            "TripCount": "16",
+            "Latency": "80",
+            "PipelineII": "",
+            "PipelineDepth": "5",
+            "PipelineType": "no",
+            "TargetTI": "",
+            "RealTI": "",
+            "isPerfectNested": "0",
+            "SourceLocation": ""
+          },
+          {
+            "Name": "VITIS_LOOP_119_1",
+            "TripCount": "16",
+            "Latency": "1328",
+            "PipelineII": "",
+            "PipelineDepth": "83",
+            "PipelineType": "no",
+            "TargetTI": "",
+            "RealTI": "",
+            "isPerfectNested": "0",
+            "SourceLocation": "",
+            "Loops": [{
+                "Name": "VITIS_LOOP_122_2",
+                "TripCount": "16",
+                "Latency": "80",
+                "PipelineII": "",
+                "PipelineDepth": "5",
+                "PipelineType": "no",
+                "TargetTI": "",
+                "RealTI": "",
+                "isPerfectNested": "0",
+                "SourceLocation": ""
+              }]
+          },
+          {
+            "Name": "VITIS_LOOP_88_1",
+            "TripCount": "16",
+            "Latency": "176",
+            "PipelineII": "",
+            "PipelineDepth": "11",
+            "PipelineType": "no",
+            "TargetTI": "",
+            "RealTI": "",
+            "isPerfectNested": "0",
+            "SourceLocation": ""
+          }
+        ],
+        "Area": {
+          "BRAM_18K": "3",
+          "AVAIL_BRAM": "280",
+          "UTIL_BRAM": "1",
+          "DSP": "28",
+          "AVAIL_DSP": "220",
+          "UTIL_DSP": "12",
+          "FF": "3875",
+          "AVAIL_FF": "106400",
+          "UTIL_FF": "3",
+          "LUT": "4956",
+          "AVAIL_LUT": "53200",
+          "UTIL_LUT": "9",
+          "URAM": "0",
+          "AVAIL_URAM": "0",
+          "UTIL_URAM": "0"
+        }
+      },
+      "p_anonymous_namespace_gain_chain_fn_Outline_VITIS_LOOP_119_1": {
+        "Latency": {
+          "LatencyBest": "1329",
+          "LatencyAvg": "1329",
+          "LatencyWorst": "1329",
+          "PipelineII": "1329",
+          "PipelineDepth": "",
+          "PipelineType": "no"
+        },
+        "Timing": {
+          "Target": "10.00",
+          "Uncertainty": "2.70",
+          "Estimate": "6.912"
+        },
+        "Loops": [{
+            "Name": "VITIS_LOOP_119_1",
+            "TripCount": "16",
+            "Latency": "1328",
+            "PipelineII": "",
+            "PipelineDepth": "83",
+            "PipelineType": "no",
+            "TargetTI": "",
+            "RealTI": "",
+            "isPerfectNested": "0",
+            "SourceLocation": "",
+            "Loops": [{
+                "Name": "VITIS_LOOP_122_2",
+                "TripCount": "16",
+                "Latency": "80",
+                "PipelineII": "",
+                "PipelineDepth": "5",
+                "PipelineType": "no",
+                "TargetTI": "",
+                "RealTI": "",
+                "isPerfectNested": "0",
+                "SourceLocation": ""
+              }]
+          }],
+        "Area": {
+          "BRAM_18K": "1",
+          "AVAIL_BRAM": "280",
+          "UTIL_BRAM": "~0",
+          "DSP": "3",
+          "AVAIL_DSP": "220",
+          "UTIL_DSP": "1",
+          "FF": "447",
+          "AVAIL_FF": "106400",
+          "UTIL_FF": "~0",
+          "LUT": "308",
+          "AVAIL_LUT": "53200",
+          "UTIL_LUT": "~0",
+          "URAM": "0",
+          "AVAIL_URAM": "0",
+          "UTIL_URAM": "0"
+        }
+      },
+      "p_anonymous_namespace_gain_chain_fn_Outline_VITIS_LOOP_136_1": {
+        "Latency": {
+          "LatencyBest": "1313",
+          "LatencyAvg": "1313",
+          "LatencyWorst": "1313",
+          "PipelineII": "1313",
+          "PipelineDepth": "",
+          "PipelineType": "no"
+        },
+        "Timing": {
+          "Target": "10.00",
+          "Uncertainty": "2.70",
+          "Estimate": "6.912"
+        },
+        "Loops": [{
+            "Name": "VITIS_LOOP_136_1",
+            "TripCount": "16",
+            "Latency": "1312",
+            "PipelineII": "",
+            "PipelineDepth": "82",
+            "PipelineType": "no",
+            "TargetTI": "",
+            "RealTI": "",
+            "isPerfectNested": "0",
+            "SourceLocation": "",
+            "Loops": [{
+                "Name": "VITIS_LOOP_139_2",
+                "TripCount": "16",
+                "Latency": "80",
+                "PipelineII": "",
+                "PipelineDepth": "5",
+                "PipelineType": "no",
+                "TargetTI": "",
+                "RealTI": "",
+                "isPerfectNested": "0",
+                "SourceLocation": ""
+              }]
+          }],
+        "Area": {
+          "BRAM_18K": "1",
+          "AVAIL_BRAM": "280",
+          "UTIL_BRAM": "~0",
+          "DSP": "2",
+          "AVAIL_DSP": "220",
+          "UTIL_DSP": "~0",
+          "FF": "374",
+          "AVAIL_FF": "106400",
+          "UTIL_FF": "~0",
+          "LUT": "294",
+          "AVAIL_LUT": "53200",
+          "UTIL_LUT": "~0",
+          "URAM": "0",
+          "AVAIL_URAM": "0",
+          "UTIL_URAM": "0"
+        }
+      },
+      "p_anonymous_namespace_gain_chain_fn": {
+        "Latency": {
+          "LatencyBest": "1524",
+          "LatencyAvg": "1524",
+          "LatencyWorst": "1524",
+          "PipelineII": "1524",
+          "PipelineDepth": "",
+          "PipelineType": "no"
+        },
+        "Timing": {
+          "Target": "10.00",
+          "Uncertainty": "2.70",
+          "Estimate": "6.912"
+        },
+        "Loops": [
+          {
+            "Name": "VITIS_LOOP_289_1",
+            "TripCount": "16",
+            "Latency": "48",
+            "PipelineII": "",
+            "PipelineDepth": "3",
+            "PipelineType": "no",
+            "TargetTI": "",
+            "RealTI": "",
+            "isPerfectNested": "0",
+            "SourceLocation": ""
+          },
+          {
+            "Name": "VITIS_LOOP_72_1",
+            "TripCount": "16",
+            "Latency": "144",
+            "PipelineII": "",
+            "PipelineDepth": "9",
+            "PipelineType": "no",
+            "TargetTI": "",
+            "RealTI": "",
+            "isPerfectNested": "0",
+            "SourceLocation": ""
+          }
+        ],
+        "Area": {
+          "BRAM_18K": "2",
+          "AVAIL_BRAM": "280",
+          "UTIL_BRAM": "~0",
+          "DSP": "9",
+          "AVAIL_DSP": "220",
+          "UTIL_DSP": "4",
+          "FF": "1507",
+          "AVAIL_FF": "106400",
+          "UTIL_FF": "1",
+          "LUT": "1964",
+          "AVAIL_LUT": "53200",
+          "UTIL_LUT": "3",
+          "URAM": "0",
+          "AVAIL_URAM": "0",
+          "UTIL_URAM": "0"
+        }
+      },
+      "p_anonymous_namespace_step_dataflow_fn": {
+        "Latency": {
+          "LatencyBest": "3130",
+          "LatencyAvg": "3130",
+          "LatencyWorst": "3130",
+          "PipelineII": "3097",
+          "PipelineDepth": "",
+          "PipelineType": "dataflow"
+        },
+        "Timing": {
+          "Target": "10.00",
+          "Uncertainty": "2.70",
+          "Estimate": "6.912"
+        },
+        "Area": {
+          "BRAM_18K": "5",
+          "AVAIL_BRAM": "280",
+          "UTIL_BRAM": "1",
+          "DSP": "37",
+          "AVAIL_DSP": "220",
+          "UTIL_DSP": "16",
+          "FF": "5530",
+          "AVAIL_FF": "106400",
+          "UTIL_FF": "5",
+          "LUT": "7081",
+          "AVAIL_LUT": "53200",
+          "UTIL_LUT": "13",
+          "URAM": "0",
+          "AVAIL_URAM": "0",
+          "UTIL_URAM": "0"
+        }
+      },
+      "phc_step_Outline_VITIS_LOOP_357_2": {
+        "Latency": {
+          "LatencyBest": "5",
+          "LatencyAvg": "5",
+          "LatencyWorst": "5",
+          "PipelineII": "5",
+          "PipelineDepth": "",
+          "PipelineType": "no"
+        },
+        "Timing": {
+          "Target": "10.00",
+          "Uncertainty": "2.70",
+          "Estimate": "3.153"
+        },
+        "Loops": [{
+            "Name": "VITIS_LOOP_357_2",
+            "TripCount": "2",
+            "Latency": "4",
+            "PipelineII": "",
+            "PipelineDepth": "2",
+            "PipelineType": "no",
+            "TargetTI": "",
+            "RealTI": "",
+            "isPerfectNested": "0",
+            "SourceLocation": ""
+          }],
+        "Area": {
+          "FF": "7",
+          "AVAIL_FF": "106400",
+          "UTIL_FF": "~0",
+          "LUT": "50",
+          "AVAIL_LUT": "53200",
+          "UTIL_LUT": "~0",
+          "BRAM_18K": "0",
+          "AVAIL_BRAM": "280",
+          "UTIL_BRAM": "0",
+          "DSP": "0",
+          "AVAIL_DSP": "220",
+          "UTIL_DSP": "0",
+          "URAM": "0",
+          "AVAIL_URAM": "0",
+          "UTIL_URAM": "0"
+        }
+      },
+      "phc_step_Outline_VITIS_LOOP_361_3": {
+        "Latency": {
+          "LatencyBest": "33",
+          "LatencyAvg": "33",
+          "LatencyWorst": "33",
+          "PipelineII": "33",
+          "PipelineDepth": "",
+          "PipelineType": "no"
+        },
+        "Timing": {
+          "Target": "10.00",
+          "Uncertainty": "2.70",
+          "Estimate": "3.368"
+        },
+        "Loops": [{
+            "Name": "VITIS_LOOP_361_3",
+            "TripCount": "16",
+            "Latency": "32",
+            "PipelineII": "",
+            "PipelineDepth": "2",
+            "PipelineType": "no",
+            "TargetTI": "",
+            "RealTI": "",
+            "isPerfectNested": "0",
+            "SourceLocation": ""
+          }],
+        "Area": {
+          "FF": "13",
+          "AVAIL_FF": "106400",
+          "UTIL_FF": "~0",
+          "LUT": "56",
+          "AVAIL_LUT": "53200",
+          "UTIL_LUT": "~0",
+          "BRAM_18K": "0",
+          "AVAIL_BRAM": "280",
+          "UTIL_BRAM": "0",
+          "DSP": "0",
+          "AVAIL_DSP": "220",
+          "UTIL_DSP": "0",
+          "URAM": "0",
+          "AVAIL_URAM": "0",
+          "UTIL_URAM": "0"
+        }
+      },
+      "phc_step": {
+        "Latency": {
+          "LatencyBest": "5719",
+          "LatencyAvg": "5719",
+          "LatencyWorst": "5719",
+          "PipelineII": "5720",
+          "PipelineDepth": "",
+          "PipelineType": "no"
+        },
+        "Timing": {
+          "Target": "10.00",
+          "Uncertainty": "2.70",
+          "Estimate": "7.147"
+        },
+        "Loops": [
+          {
+            "Name": "VITIS_LOOP_101_1",
+            "TripCount": "16",
+            "Latency": "1328",
+            "PipelineII": "",
+            "PipelineDepth": "83",
+            "PipelineType": "no",
+            "TargetTI": "",
+            "RealTI": "",
+            "isPerfectNested": "0",
+            "SourceLocation": "",
+            "Loops": [{
+                "Name": "VITIS_LOOP_104_2",
+                "TripCount": "16",
+                "Latency": "80",
+                "PipelineII": "",
+                "PipelineDepth": "5",
+                "PipelineType": "no",
+                "TargetTI": "",
+                "RealTI": "",
+                "isPerfectNested": "0",
+                "SourceLocation": ""
+              }]
+          },
+          {
+            "Name": "VITIS_LOOP_173_1",
+            "TripCount": "16",
+            "Latency": "32",
+            "PipelineII": "",
+            "PipelineDepth": "2",
+            "PipelineType": "no",
+            "TargetTI": "",
+            "RealTI": "",
+            "isPerfectNested": "0",
+            "SourceLocation": ""
+          },
+          {
+            "Name": "VITIS_LOOP_180_2",
+            "TripCount": "16",
+            "Latency": "80",
+            "PipelineII": "",
+            "PipelineDepth": "5",
+            "PipelineType": "no",
+            "TargetTI": "",
+            "RealTI": "",
+            "isPerfectNested": "0",
+            "SourceLocation": ""
+          },
+          {
+            "Name": "VITIS_LOOP_188_3",
+            "TripCount": "16",
+            "Latency": "160",
+            "PipelineII": "",
+            "PipelineDepth": "10",
+            "PipelineType": "no",
+            "TargetTI": "",
+            "RealTI": "",
+            "isPerfectNested": "0",
+            "SourceLocation": ""
+          },
+          {
+            "Name": "VITIS_LOOP_88_1",
+            "TripCount": "16",
+            "Latency": "176",
+            "PipelineII": "",
+            "PipelineDepth": "11",
+            "PipelineType": "no",
+            "TargetTI": "",
+            "RealTI": "",
+            "isPerfectNested": "0",
+            "SourceLocation": ""
+          },
+          {
+            "Name": "VITIS_LOOP_349_1",
+            "TripCount": "16",
+            "Latency": "160",
+            "PipelineII": "",
+            "PipelineDepth": "10",
+            "PipelineType": "no",
+            "TargetTI": "",
+            "RealTI": "",
+            "isPerfectNested": "0",
+            "SourceLocation": ""
+          },
+          {
+            "Name": "VITIS_LOOP_173_1",
+            "TripCount": "16",
+            "Latency": "32",
+            "PipelineII": "",
+            "PipelineDepth": "2",
+            "PipelineType": "no",
+            "TargetTI": "",
+            "RealTI": "",
+            "isPerfectNested": "0",
+            "SourceLocation": ""
+          },
+          {
+            "Name": "VITIS_LOOP_180_2",
+            "TripCount": "16",
+            "Latency": "80",
+            "PipelineII": "",
+            "PipelineDepth": "5",
+            "PipelineType": "no",
+            "TargetTI": "",
+            "RealTI": "",
+            "isPerfectNested": "0",
+            "SourceLocation": ""
+          },
+          {
+            "Name": "VITIS_LOOP_188_3",
+            "TripCount": "16",
+            "Latency": "160",
+            "PipelineII": "",
+            "PipelineDepth": "10",
+            "PipelineType": "no",
+            "TargetTI": "",
+            "RealTI": "",
+            "isPerfectNested": "0",
+            "SourceLocation": ""
+          },
+          {
+            "Name": "VITIS_LOOP_154_1",
+            "TripCount": "2",
+            "Latency": "166",
+            "PipelineII": "",
+            "PipelineDepth": "83",
+            "PipelineType": "no",
+            "TargetTI": "",
+            "RealTI": "",
+            "isPerfectNested": "0",
+            "SourceLocation": "",
+            "Loops": [{
+                "Name": "VITIS_LOOP_157_2",
+                "TripCount": "16",
+                "Latency": "80",
+                "PipelineII": "",
+                "PipelineDepth": "5",
+                "PipelineType": "no",
+                "TargetTI": "",
+                "RealTI": "",
+                "isPerfectNested": "0",
+                "SourceLocation": ""
+              }]
+          }
+        ],
+        "Area": {
+          "BRAM_18K": "6",
+          "AVAIL_BRAM": "280",
+          "UTIL_BRAM": "2",
+          "DSP": "78",
+          "AVAIL_DSP": "220",
+          "UTIL_DSP": "35",
+          "FF": "16478",
+          "AVAIL_FF": "106400",
+          "UTIL_FF": "15",
+          "LUT": "25223",
+          "AVAIL_LUT": "53200",
+          "UTIL_LUT": "47",
+          "URAM": "0",
+          "AVAIL_URAM": "0",
+          "UTIL_URAM": "0"
+        }
+      }
+    }
+  },
+  "GenerateBdFiles": "0",
+  "GenData": {
+    "DataVersion": "0.2",
+    "Time": "2026-06-24 01:05:03 +0800",
+    "ToolName": "vitis_hls",
+    "ToolVersion": "2025.2"
+  }
+}

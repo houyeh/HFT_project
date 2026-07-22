@@ -1,0 +1,18 @@
+metric,value,interpretation
+NEW net_pnl,266045.0,binary_best on NEW_test
+trade_count,77.0,very low if <150; sparse deployment risk
+random_mean,251104.75,matched random cancel mean net_pnl
+random_std,20931.07877505361,matched random dispersion
+random_mean_plus_1std,272035.8287750536,significance gate used in this project
+beats_random_plus_1std,0.0,"1=true, 0=false"
+smoothed_baseline_net_pnl,84980.0,reference Model_0.55
+bid_val_pr_auc,0.1285114421608475,from bid train_history max val_auc_pr
+bid_test_pr_auc,0.072409347218967,from binary_training_summary
+ask_val_pr_auc,0.1085885494716867,from ask train_history max val_auc_pr
+ask_test_pr_auc,0.0802544357377377,from binary_training_summary
+bid_toxic_rate_train,0.034426919300751,price_level_removed_proxy fw=1 h=10
+bid_toxic_rate_val,0.0322938982781877,price_level_removed_proxy fw=1 h=10
+bid_toxic_rate_test,0.0277035636483209,price_level_removed_proxy fw=1 h=10
+ask_toxic_rate_train,0.0318417500346928,price_level_removed_proxy fw=1 h=10
+ask_toxic_rate_val,0.0268889890340994,price_level_removed_proxy fw=1 h=10
+ask_toxic_rate_test,0.0266405719535088,price_level_removed_proxy fw=1 h=10

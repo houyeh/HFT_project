@@ -1,0 +1,7 @@
+split,policy_id,model_id,threshold_selected_on_val,horizon,fill_model,inventory_cap,sequential_excess_pnl,fill_count,forced_no_quote_count,max_abs_inventory,max_drawdown,win_rate,loss_rate,avg_trade_excess_pnl,fill_uses_future_pnl,test_new3_new4_used_for_selection,new5_used,ml_minus_queue_rule
+val,side_by_queue_imbalance_abs_0p1,,,20,conservative_l2_stress,1,2141940.0,123631,84917,1,3690.0,0.42812886735527494,0.5718145125413528,17.325266316700503,False,False,False,721565.0
+val,ml_hgb_regressor_shallow,hgb_regressor_shallow,0.0,20,conservative_l2_stress,1,2863505.0,123579,77371,1,3120.0,0.4517515111790838,0.54819993688248,23.171453078597498,False,False,False,721565.0
+new3,side_by_queue_imbalance_abs_0p1,,,20,conservative_l2_stress,1,5796700.0,282266,224324,1,8215.0,0.4494979912564744,0.5504807521982811,20.536302636520162,False,False,False,1856085.0
+new3,ml_hgb_regressor_shallow,hgb_regressor_shallow,0.0,20,conservative_l2_stress,1,7652785.0,283227,208124,1,8215.0,0.47520540061505434,0.5247734149639688,27.019969847507475,False,False,False,1856085.0
+new4,side_by_queue_imbalance_abs_0p1,,,20,conservative_l2_stress,1,2119835.0,108678,83693,1,3770.0,0.4461252507407203,0.553810338799021,19.505649717514125,False,False,False,672015.0
+new4,ml_hgb_regressor_shallow,hgb_regressor_shallow,0.0,20,conservative_l2_stress,1,2791850.0,108854,77469,1,3905.0,0.47087842431146304,0.5290848292207911,25.64765649401951,False,False,False,672015.0

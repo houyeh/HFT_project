@@ -1,0 +1,21 @@
+# TCN 5-Block PrePad Oracle Capture Report
+
+Oracle capture is matched-count same-universe sequence-window oracle. Oracle uses future labels and is diagnostic only.
+
+| split   | comparison_feature_universe   | policy_id                                     |   policy_selected_count |   policy_pnl |   matched_count_oracle_pnl |   capture_ratio |   opportunity_gap | oracle_uses_future_labels   | new5_used   |
+|:--------|:------------------------------|:----------------------------------------------|------------------------:|-------------:|---------------------------:|----------------:|------------------:|:----------------------------|:------------|
+| val     | 18feat                        | side_by_queue_imbalance_abs_0p1               |                   68981 |  1.23714e+06 |                7.64484e+06 |        0.161827 |       6.4077e+06  | True                        | False       |
+| val     | 18feat                        | ml_hgb_regressor_shallow_convergence_selected |                   61679 |  1.67168e+06 |                7.75438e+06 |        0.215578 |       6.0827e+06  | True                        | False       |
+| val     | 18feat                        | phc_lite_v1                                   |                   63766 |  1.92717e+06 |                7.72307e+06 |        0.249534 |       5.7959e+06  | True                        | False       |
+| val     | 18feat                        | phc_stp_v2_cosine                             |                   64568 |  2.03792e+06 |                7.71104e+06 |        0.264287 |       5.67312e+06 | True                        | False       |
+| val     | 18feat                        | tcn_5block_prepad_18feat                      |                   61538 |  1.71809e+06 |                7.75649e+06 |        0.221504 |       6.0384e+06  | True                        | False       |
+| new3    | 18feat                        | side_by_queue_imbalance_abs_0p1               |                  144745 |  2.95477e+06 |                1.8744e+07  |        0.157638 |       1.57892e+07 | True                        | False       |
+| new3    | 18feat                        | ml_hgb_regressor_shallow_convergence_selected |                  134210 |  4.01058e+06 |                1.8902e+07  |        0.212178 |       1.48914e+07 | True                        | False       |
+| new3    | 18feat                        | phc_lite_v1                                   |                  138261 |  5.02152e+06 |                1.88412e+07 |        0.266517 |       1.38197e+07 | True                        | False       |
+| new3    | 18feat                        | phc_stp_v2_cosine                             |                  141208 |  5.23741e+06 |                1.8797e+07  |        0.27863  |       1.35596e+07 | True                        | False       |
+| new3    | 18feat                        | tcn_5block_prepad_18feat                      |                  134780 |  4.50013e+06 |                1.88934e+07 |        0.238185 |       1.43933e+07 | True                        | False       |
+| new4    | 18feat                        | side_by_queue_imbalance_abs_0p1               |                   56147 |  1.00391e+06 |                7.32802e+06 |        0.136996 |       6.32412e+06 | True                        | False       |
+| new4    | 18feat                        | ml_hgb_regressor_shallow_convergence_selected |                   51753 |  1.39542e+06 |                7.39394e+06 |        0.188725 |       5.99852e+06 | True                        | False       |
+| new4    | 18feat                        | phc_lite_v1                                   |                   53169 |  1.7625e+06  |                7.3727e+06  |        0.239057 |       5.6102e+06  | True                        | False       |
+| new4    | 18feat                        | phc_stp_v2_cosine                             |                   54183 |  1.87168e+06 |                7.35748e+06 |        0.254392 |       5.4858e+06  | True                        | False       |
+| new4    | 18feat                        | tcn_5block_prepad_18feat                      |                   51521 |  1.6034e+06  |                7.39742e+06 |        0.216751 |       5.79402e+06 | True                        | False       |

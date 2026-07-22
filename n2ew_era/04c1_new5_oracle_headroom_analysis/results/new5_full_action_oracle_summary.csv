@@ -1,0 +1,2 @@
+split,policy_id,horizon,state_count,selected_action_count,selection_rate,bid_count,ask_count,no_quote_count,total_excess_pnl_H20,avg_selected_excess,win_rate,loss_rate,max_drawdown,diagnostic_only,oracle_uses_future_labels
+new5_final_holdout,oracle_full_action,20,815912,577627,0.7079525733167302,291947,285680,238285,84517995.0,146.31932890948656,1.0,0.0,0.0,True,True

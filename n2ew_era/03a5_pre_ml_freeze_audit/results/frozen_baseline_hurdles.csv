@@ -1,0 +1,33 @@
+split,hurdle_name,hurdle_type,metric,hurdle_value,ml_requirement,selection_allowed_on_split
+val,no_quote,excess_markout_H20,total_excess_pnl,0.0,ML policy total_excess_pnl must exceed this value on the same split after validation-only selection.,True
+val,old_bid_only_spread_ge_1,excess_markout_H20,total_excess_pnl,-8450055.0,ML policy total_excess_pnl must exceed this value on the same split after validation-only selection.,True
+val,side_by_queue_imbalance_abs_0p1,excess_markout_H20,total_excess_pnl,7783280.0,ML policy total_excess_pnl must exceed this value on the same split after validation-only selection.,True
+val,matched_random_95p_for_old_bid_only_spread_ge_1,matched_random_excess_markout_H20,matched_random_95p,-426901.402319259,ML policy must beat the matched-random 95p hurdle under the same matched universe.,True
+val,matched_random_95p_for_side_by_queue_imbalance_abs_0p1,matched_random_excess_markout_H20,matched_random_95p,-6764943.918292294,ML policy must beat the matched-random 95p hurdle under the same matched universe.,True
+test,no_quote,excess_markout_H20,total_excess_pnl,0.0,ML policy total_excess_pnl must exceed this value on the same split after validation-only selection.,False
+test,old_bid_only_spread_ge_1,excess_markout_H20,total_excess_pnl,-15960815.0,ML policy total_excess_pnl must exceed this value on the same split after validation-only selection.,False
+test,side_by_queue_imbalance_abs_0p1,excess_markout_H20,total_excess_pnl,16357170.0,ML policy total_excess_pnl must exceed this value on the same split after validation-only selection.,False
+test,matched_random_95p_for_old_bid_only_spread_ge_1,matched_random_excess_markout_H20,matched_random_95p,-4288677.46942707,ML policy must beat the matched-random 95p hurdle under the same matched universe.,False
+test,matched_random_95p_for_side_by_queue_imbalance_abs_0p1,matched_random_excess_markout_H20,matched_random_95p,-14435362.008802991,ML policy must beat the matched-random 95p hurdle under the same matched universe.,False
+new4,no_quote,excess_markout_H20,total_excess_pnl,0.0,ML policy total_excess_pnl must exceed this value on the same split after validation-only selection.,False
+new4,old_bid_only_spread_ge_1,excess_markout_H20,total_excess_pnl,-31885900.0,ML policy total_excess_pnl must exceed this value on the same split after validation-only selection.,False
+new4,side_by_queue_imbalance_abs_0p1,excess_markout_H20,total_excess_pnl,29895945.0,ML policy total_excess_pnl must exceed this value on the same split after validation-only selection.,False
+new4,matched_random_95p_for_old_bid_only_spread_ge_1,matched_random_excess_markout_H20,matched_random_95p,-13241347.879916228,ML policy must beat the matched-random 95p hurdle under the same matched universe.,False
+new4,matched_random_95p_for_side_by_queue_imbalance_abs_0p1,matched_random_excess_markout_H20,matched_random_95p,-26709743.64666623,ML policy must beat the matched-random 95p hurdle under the same matched universe.,False
+new3,no_quote,excess_markout_H20,total_excess_pnl,0.0,ML policy total_excess_pnl must exceed this value on the same split after validation-only selection.,False
+new3,old_bid_only_spread_ge_1,excess_markout_H20,total_excess_pnl,-82854630.0,ML policy total_excess_pnl must exceed this value on the same split after validation-only selection.,False
+new3,side_by_queue_imbalance_abs_0p1,excess_markout_H20,total_excess_pnl,86747660.0,ML policy total_excess_pnl must exceed this value on the same split after validation-only selection.,False
+new3,matched_random_95p_for_old_bid_only_spread_ge_1,matched_random_excess_markout_H20,matched_random_95p,-47033689.82284688,ML policy must beat the matched-random 95p hurdle under the same matched universe.,False
+new3,matched_random_95p_for_side_by_queue_imbalance_abs_0p1,matched_random_excess_markout_H20,matched_random_95p,-69030128.2945219,ML policy must beat the matched-random 95p hurdle under the same matched universe.,False
+val,no_quote,sequential_excess_causal_fill_cap1_fee1_H20,sequential_excess_pnl,0.0,ML policy must remain positive and exceed frozen baselines after validation-only selection.,True
+val,old_bid_only_spread_ge_1,sequential_excess_causal_fill_cap1_fee1_H20,sequential_excess_pnl,-363445.0,ML policy must remain positive and exceed frozen baselines after validation-only selection.,True
+val,side_by_queue_imbalance_abs_0p1,sequential_excess_causal_fill_cap1_fee1_H20,sequential_excess_pnl,376545.0,ML policy must remain positive and exceed frozen baselines after validation-only selection.,True
+test,no_quote,sequential_excess_causal_fill_cap1_fee1_H20,sequential_excess_pnl,0.0,ML policy must remain positive and exceed frozen baselines after validation-only selection.,False
+test,old_bid_only_spread_ge_1,sequential_excess_causal_fill_cap1_fee1_H20,sequential_excess_pnl,-776330.0,ML policy must remain positive and exceed frozen baselines after validation-only selection.,False
+test,side_by_queue_imbalance_abs_0p1,sequential_excess_causal_fill_cap1_fee1_H20,sequential_excess_pnl,818715.0,ML policy must remain positive and exceed frozen baselines after validation-only selection.,False
+new4,no_quote,sequential_excess_causal_fill_cap1_fee1_H20,sequential_excess_pnl,0.0,ML policy must remain positive and exceed frozen baselines after validation-only selection.,False
+new4,old_bid_only_spread_ge_1,sequential_excess_causal_fill_cap1_fee1_H20,sequential_excess_pnl,-1595085.0,ML policy must remain positive and exceed frozen baselines after validation-only selection.,False
+new4,side_by_queue_imbalance_abs_0p1,sequential_excess_causal_fill_cap1_fee1_H20,sequential_excess_pnl,1857730.0,ML policy must remain positive and exceed frozen baselines after validation-only selection.,False
+new3,no_quote,sequential_excess_causal_fill_cap1_fee1_H20,sequential_excess_pnl,0.0,ML policy must remain positive and exceed frozen baselines after validation-only selection.,False
+new3,old_bid_only_spread_ge_1,sequential_excess_causal_fill_cap1_fee1_H20,sequential_excess_pnl,-4032010.0,ML policy must remain positive and exceed frozen baselines after validation-only selection.,False
+new3,side_by_queue_imbalance_abs_0p1,sequential_excess_causal_fill_cap1_fee1_H20,sequential_excess_pnl,5466865.0,ML policy must remain positive and exceed frozen baselines after validation-only selection.,False

@@ -1,0 +1,5 @@
+analysis_scope,universe,split_scope,feature,n,mean,std,p50,p95,abs_gt_0p1_rate
+development-only,mixed_txf_like_subset,train_sampled_plus_val,queue_imbalance,2590431,-0.0084359535296983,0.4343168303093626,0.0,0.692307710647583,0.8302517997970222
+development-only,mixed_txf_like_subset,train_sampled_plus_val,deep_imbalance,2590431,-0.0184984133497181,0.1934309836684112,-0.0129870129749178,0.2830188572406769,0.5900639700497716
+development-only,mixed_txf_like_subset,train_sampled_plus_val,spread_ticks,2590431,2.3166484650623778,0.945273975045594,2.0,3.0,1.0
+development-only,mixed_txf_like_subset,train_sampled_plus_val,event_rate_past_50,2590431,153.77240366367457,46.997352207058455,150.9940643310547,234.6099548339844,0.99997915404811

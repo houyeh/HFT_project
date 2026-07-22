@@ -1,0 +1,24 @@
+phase,name,cpp_name,shape,num_values,float_min,float_max,quantized_min,quantized_max,num_saturated,total_bits,frac_bits,exported_to_header,omitted_direct_hls_plumbing,note
+06f,decay,DECAY,16,16,0.8940098285675049,0.9036372303962708,3662,3701,0,24,12,True,False,
+06f,alpha_scalar,ALPHA_SCALAR,1,1,0.5916999578475952,0.5916999578475952,2424,2424,0,24,12,True,False,
+06f,input_x.weight,,16x32,512,0.0,1.0,0,4096,0,24,12,False,True,Implemented directly as slicing/state/output packing in C++ datapath.
+06f,input_state.weight,,16x32,512,0.0,1.0,0,4096,0,24,12,False,True,Implemented directly as slicing/state/output packing in C++ datapath.
+06f,enc_linear.weight,ENC_LINEAR_W,16x16,256,-0.8938870429992676,0.8101180195808411,-3661,3318,0,24,12,True,False,
+06f,enc_linear.bias,ENC_LINEAR_B,16,16,-0.23820768296718597,0.24128830432891846,-976,988,0,24,12,True,False,
+06f,enc_norm.weight,ENC_NORM_GAMMA,16,16,0.9413967728614807,1.5671861171722412,3856,6419,0,24,12,True,False,
+06f,enc_norm.bias,ENC_NORM_BETA,16,16,-0.045946571975946426,0.2316206693649292,-188,949,0,24,12,True,False,
+06f,gate.weight,GATE_W,16x16,256,-0.6543471217155457,0.5663563013076782,-2680,2320,0,24,12,True,False,
+06f,gate.bias,GATE_B,16,16,-0.21938613057136536,0.27910199761390686,-899,1143,0,24,12,True,False,
+06f,candidate.weight,CANDIDATE_W,16x16,256,-0.3707817792892456,0.4025493562221527,-1519,1649,0,24,12,True,False,
+06f,candidate.bias,CANDIDATE_B,16,16,-0.24933645129203796,0.2363085150718689,-1021,968,0,24,12,True,False,
+06f,gain_from_encoded.weight,GAIN_FROM_ENCODED_W,16x16,256,-0.8505285382270813,0.7391051054000854,-3484,3027,0,24,12,True,False,
+06f,gain_from_encoded.bias,GAIN_FROM_ENCODED_B,16,16,-0.28649020195007324,0.2247496247291565,-1173,921,0,24,12,True,False,
+06f,gain_from_prev_state.weight,GAIN_FROM_PREV_STATE_W,16x16,256,-0.4301758408546448,0.46095943450927734,-1762,1888,0,24,12,True,False,
+06f,synapse.weight,SYNAPSE_W,16x16,256,-0.35087162256240845,0.4059363305568695,-1437,1663,0,24,12,True,False,
+06f,synapse.bias,SYNAPSE_B,16,16,-0.19950491189956665,0.24748486280441284,-817,1014,0,24,12,True,False,
+06f,loop_norm.weight,LOOP_NORM_GAMMA,16,16,0.94170081615448,1.0383458137512207,3857,4253,0,24,12,True,False,
+06f,loop_norm.bias,LOOP_NORM_BETA,16,16,-0.03152710199356079,0.037273794412612915,-129,153,0,24,12,True,False,
+06f,readout.weight,READOUT_W,2x16,32,-0.33682161569595337,0.3480346202850342,-1380,1426,0,24,12,True,False,
+06f,readout.bias,READOUT_B,2,2,-0.20177626609802246,0.014373860321938992,-826,59,0,24,12,True,False,
+06f,output_pack.weight,,18x16,288,-0.33682161569595337,1.0,-1380,4096,0,24,12,False,True,Implemented directly as slicing/state/output packing in C++ datapath.
+06f,output_pack.bias,,18,18,-0.20177626609802246,0.014373860321938992,-826,59,0,24,12,False,True,Implemented directly as slicing/state/output packing in C++ datapath.

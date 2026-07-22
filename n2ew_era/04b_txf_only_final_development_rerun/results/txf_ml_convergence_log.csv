@@ -1,0 +1,4 @@
+model_id,n_iter,max_iter,hit_max_iter,convergence_note
+ridge_l2,,,False,diagnostic only; model/threshold selection uses validation only
+logistic_l2,29,200,False,diagnostic only; model/threshold selection uses validation only
+hgb_regressor_shallow,80,80,True,diagnostic only; model/threshold selection uses validation only

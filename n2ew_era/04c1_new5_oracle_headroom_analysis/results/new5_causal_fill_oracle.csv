@@ -1,0 +1,6 @@
+oracle_id,split,fill_model,inventory_cap,horizon,sequential_excess_pnl,fill_count,forced_no_quote_count,max_abs_inventory,max_drawdown,win_rate,loss_rate,oracle_uses_future_labels,diagnostic_only,true_queue_replay
+oracle_full_action,new5_final_holdout,conservative_l2_stress,1,20,3923130.0,29418,50100,1,0.0,1.0,0.0,True,True,False
+oracle_matched_count_for_side_by_queue_imbalance_abs_0p1,new5_final_holdout,conservative_l2_stress,1,20,3832565.0,34630,57964,1,90.0,0.8397054576956396,0.16026566560785446,True,True,False
+oracle_matched_count_side_for_side_by_queue_imbalance_abs_0p1,new5_final_holdout,conservative_l2_stress,1,20,3829950.0,34750,57792,1,105.0,0.8352805755395684,0.16471942446043167,True,True,False
+oracle_matched_count_for_ml_hgb_regressor_shallow_convergence_selected,new5_final_holdout,conservative_l2_stress,1,20,3874390.0,31696,53642,1,105.0,0.9238705199394245,0.07606638061585058,True,True,False
+oracle_matched_count_side_for_ml_hgb_regressor_shallow_convergence_selected,new5_final_holdout,conservative_l2_stress,1,20,3863210.0,31668,53618,1,105.0,0.9225716811923709,0.07736516357206012,True,True,False

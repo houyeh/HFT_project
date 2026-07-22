@@ -1,0 +1,12 @@
+claim,status,evidence,safe_wording
+Full L2 action universe avoids residual bottleneck,PASS,Phase 01 built millions of bid/ask/no_quote candidate actions instead of the old 820-row residual veto universe.,The n2ew_era action universe removes the residual-sample bottleneck for short-horizon proxy audits.
+Selected policy is non-trivial L2 rule,PASS,Policy uses queue_imbalance thresholding and has selection_rate < 0.95 on val/test/NEW4.,The selected rule is a non-trivial L2 queue-imbalance quote-ranking primitive.
+Selected policy beats matched random 95p on validation,PASS,"selected_policy_vs_controls.csv, split=val.","On validation, the selected queue-imbalance rule beats the matched-random 95p hurdle under proxy markout."
+Selected policy beats matched random 95p on frozen test,PASS,"selected_policy_vs_controls.csv and exact_random_oos_summary.csv, split=test.","On frozen test, the selected rule beats the matched-random 95p hurdle under proxy markout."
+Selected policy beats matched random 95p on NEW4,PASS,"selected_policy_vs_controls.csv and exact_random_oos_summary.csv, split=NEW4.","On NEW4, the selected rule beats the matched-random 95p hurdle under proxy markout."
+Selected policy beats old bid-only absolute PnL,FAIL,selected_minus_old_bid_only is negative on val/test/NEW4,The selected rule is not an absolute PnL replacement for old bid-only; it is evidence of non-trivial L2 ranking/excess signal.
+Selected policy remains positive under fee sensitivity,PASS,"fee_sensitivity_summary.csv across fee multipliers 1x, 2x, 3x, and 5x.",The selected rule remains positive under the audited proxy fee multipliers.
+Selected policy remains positive under proxy queue stress,PROXY_PASS,"queue_stress_selected_policy_summary.csv at fill_keep_rate=0.5, adverse_multiplier=1.5, delay=0.",The selected rule remains positive under the defined proxy queue stress; this is not true queue replay.
+This is true queue replay,FORBIDDEN,"No aggressor_side, true order IDs, queue position, acknowledgements, or exchange matching replay.","Use `proxy short-horizon markout audit`, not `true exchange replay`."
+This proves real-world profitability,FORBIDDEN,"No true queue priority, order acknowledgements, partial-fill replay, or production execution model.",Do not claim real-world profitability.
+FPGA improves PnL,FORBIDDEN,No production latency experiment proves an FPGA PnL improvement.,Frame FPGA only as an HLS-friendly deterministic quote-control implementation path.

@@ -1,0 +1,2 @@
+split,row_count,rmse_all,rmse_readout,rmse_state,max_abs_diff,sign_agreement_readout_0,sign_agreement_readout_1,joint_sign_agreement,new5_used
+val,131072,0.09756776690483093,0.04120087996125221,0.10245590656995773,2.626870632171631,0.97418212890625,0.9761581420898438,0.9503707885742188,False

@@ -1,0 +1,55 @@
+mode,threshold,delay_events,net_pnl,delayed_toxic_loss,delayed_toxic_fill_count,interpretation
+prediction_delay,0.55,0,84980.0,0.0,0,prediction delay changes signal timing; non-monotonic response possible
+prediction_delay,0.55,1,94285.0,0.0,0,prediction delay changes signal timing; non-monotonic response possible
+prediction_delay,0.55,2,90960.0,0.0,0,prediction delay changes signal timing; non-monotonic response possible
+prediction_delay,0.55,3,111240.0,0.0,0,prediction delay changes signal timing; non-monotonic response possible
+prediction_delay,0.55,5,117310.0,0.0,0,prediction delay changes signal timing; non-monotonic response possible
+prediction_delay,0.55,10,71760.0,0.0,0,prediction delay changes signal timing; non-monotonic response possible
+prediction_delay,0.6,0,83460.0,0.0,0,prediction delay changes signal timing; non-monotonic response possible
+prediction_delay,0.6,1,91510.0,0.0,0,prediction delay changes signal timing; non-monotonic response possible
+prediction_delay,0.6,2,93050.0,0.0,0,prediction delay changes signal timing; non-monotonic response possible
+prediction_delay,0.6,3,126760.0,0.0,0,prediction delay changes signal timing; non-monotonic response possible
+prediction_delay,0.6,5,119950.0,0.0,0,prediction delay changes signal timing; non-monotonic response possible
+prediction_delay,0.6,10,74650.0,0.0,0,prediction delay changes signal timing; non-monotonic response possible
+prediction_delay,0.7,0,63440.0,0.0,0,prediction delay changes signal timing; non-monotonic response possible
+prediction_delay,0.7,1,75660.0,0.0,0,prediction delay changes signal timing; non-monotonic response possible
+prediction_delay,0.7,2,76550.0,0.0,0,prediction delay changes signal timing; non-monotonic response possible
+prediction_delay,0.7,3,48510.0,0.0,0,prediction delay changes signal timing; non-monotonic response possible
+prediction_delay,0.7,5,93880.0,0.0,0,prediction delay changes signal timing; non-monotonic response possible
+prediction_delay,0.7,10,23050.0,0.0,0,prediction delay changes signal timing; non-monotonic response possible
+cancel_delay,0.55,0,84980.0,0.0,0,cancel delay trade-off
+cancel_delay,0.55,1,99550.0,6100.0,37,cancel delay trade-off
+cancel_delay,0.55,2,92280.0,7900.0,50,cancel delay trade-off
+cancel_delay,0.55,3,113330.0,9700.0,63,possible false-positive cancel reduction; non-monotonic gain
+cancel_delay,0.55,5,116080.0,13900.0,95,possible false-positive cancel reduction; non-monotonic gain
+cancel_delay,0.55,10,61650.0,20000.0,143,deterioration at long cancel delay
+cancel_delay,0.6,0,83460.0,0.0,0,cancel delay trade-off
+cancel_delay,0.6,1,84670.0,4800.0,34,cancel delay trade-off
+cancel_delay,0.6,2,85310.0,7800.0,54,cancel delay trade-off
+cancel_delay,0.6,3,97250.0,8800.0,63,possible false-positive cancel reduction; non-monotonic gain
+cancel_delay,0.6,5,76630.0,12500.0,89,cancel delay trade-off
+cancel_delay,0.6,10,45810.0,16400.0,124,deterioration at long cancel delay
+cancel_delay,0.7,0,63440.0,0.0,0,cancel delay trade-off
+cancel_delay,0.7,1,59540.0,2900.0,19,cancel delay trade-off
+cancel_delay,0.7,2,61590.0,4500.0,33,cancel delay trade-off
+cancel_delay,0.7,3,68010.0,5900.0,44,possible false-positive cancel reduction; non-monotonic gain
+cancel_delay,0.7,5,69630.0,7100.0,55,possible false-positive cancel reduction; non-monotonic gain
+cancel_delay,0.7,10,42650.0,14000.0,75,deterioration at long cancel delay
+combined_delay,0.55,0,84980.0,0.0,0,combined delay effect
+combined_delay,0.55,1,86415.0,2100.0,15,combined delay effect
+combined_delay,0.55,2,114580.0,6600.0,51,combined delay effect
+combined_delay,0.55,3,86390.0,9200.0,63,combined delay effect
+combined_delay,0.55,5,67720.0,10200.0,72,combined delay effect
+combined_delay,0.55,10,52790.0,12500.0,89,combined delay effect
+combined_delay,0.6,0,83460.0,0.0,0,combined delay effect
+combined_delay,0.6,1,92520.0,3300.0,23,combined delay effect
+combined_delay,0.6,2,99960.0,5900.0,43,combined delay effect
+combined_delay,0.6,3,82550.0,8000.0,53,combined delay effect
+combined_delay,0.6,5,59080.0,8600.0,67,combined delay effect
+combined_delay,0.6,10,41210.0,9600.0,69,combined delay effect
+combined_delay,0.7,0,63440.0,0.0,0,combined delay effect
+combined_delay,0.7,1,79450.0,1900.0,16,combined delay effect
+combined_delay,0.7,2,73410.0,4300.0,31,combined delay effect
+combined_delay,0.7,3,29490.0,3100.0,24,combined delay effect
+combined_delay,0.7,5,34460.0,9300.0,39,combined delay effect
+combined_delay,0.7,10,32650.0,5100.0,41,combined delay effect

@@ -1,0 +1,79 @@
+﻿{
+    "timestamp":  "2026-06-29T23:01:58.7185066+08:00",
+    "cpu":  {
+                "Name":  "Intel(R) Core(TM) Ultra 7 258V",
+                "NumberOfCores":  8,
+                "NumberOfLogicalProcessors":  8,
+                "MaxClockSpeed":  2200
+            },
+    "processor_identifier":  "Intel64 Family 6 Model 189 Stepping 1, GenuineIntel",
+    "total_cpu_percent_samples":  [
+                                      42.2,
+                                      37.31,
+                                      38.49,
+                                      41.65,
+                                      45.41
+                                  ],
+    "top_processes_by_cpu_delta":  [
+                                       {
+                                           "Id":  21052,
+                                           "ProcessName":  "Code",
+                                           "CpuSecondsDelta":  0.2031,
+                                           "ApproxTotalCpuPercent":  1.26
+                                       },
+                                       {
+                                           "Id":  22092,
+                                           "ProcessName":  "Codex",
+                                           "CpuSecondsDelta":  0.125,
+                                           "ApproxTotalCpuPercent":  0.78
+                                       },
+                                       {
+                                           "Id":  28004,
+                                           "ProcessName":  "Taskmgr",
+                                           "CpuSecondsDelta":  0.1094,
+                                           "ApproxTotalCpuPercent":  0.68
+                                       },
+                                       {
+                                           "Id":  1620,
+                                           "ProcessName":  "claude",
+                                           "CpuSecondsDelta":  0.0938,
+                                           "ApproxTotalCpuPercent":  0.58
+                                       },
+                                       {
+                                           "Id":  8676,
+                                           "ProcessName":  "powershell",
+                                           "CpuSecondsDelta":  0.0781,
+                                           "ApproxTotalCpuPercent":  0.49
+                                       },
+                                       {
+                                           "Id":  13256,
+                                           "ProcessName":  "claude",
+                                           "CpuSecondsDelta":  0.0625,
+                                           "ApproxTotalCpuPercent":  0.39
+                                       },
+                                       {
+                                           "Id":  18388,
+                                           "ProcessName":  "SpotifyLauncher",
+                                           "CpuSecondsDelta":  0.0312,
+                                           "ApproxTotalCpuPercent":  0.19
+                                       },
+                                       {
+                                           "Id":  7384,
+                                           "ProcessName":  "msedge",
+                                           "CpuSecondsDelta":  0.0156,
+                                           "ApproxTotalCpuPercent":  0.1
+                                       },
+                                       {
+                                           "Id":  3512,
+                                           "ProcessName":  "taskhostw",
+                                           "CpuSecondsDelta":  0.0156,
+                                           "ApproxTotalCpuPercent":  0.1
+                                       },
+                                       {
+                                           "Id":  11528,
+                                           "ProcessName":  "msedge",
+                                           "CpuSecondsDelta":  0.0156,
+                                           "ApproxTotalCpuPercent":  0.1
+                                       }
+                                   ]
+}

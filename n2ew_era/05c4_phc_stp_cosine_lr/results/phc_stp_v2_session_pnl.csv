@@ -1,0 +1,17 @@
+split,policy_id,session_id,session_excess_pnl_H20,selected_action_count,state_count
+val,phc_stp_v2_cosine_lr,NEW1_20260123Day_TXFB6,174060.0,4517,5688
+val,phc_stp_v2_cosine_lr,NEW1_20260123Night_TXFB6,372610.0,13306,17680
+val,phc_stp_v2_cosine_lr,NEW1_20260126Day_TXFB6,299815.0,9319,11674
+val,phc_stp_v2_cosine_lr,NEW1_20260126Night_TXFB6,410460.0,13416,17602
+val,phc_stp_v2_cosine_lr,NEW1_20260127Day_TXFB6,316970.0,10203,12825
+val,phc_stp_v2_cosine_lr,NEW1_20260127Night_TXFB6,464010.0,13807,17491
+new3,phc_stp_v2_cosine_lr,NEW3_20260113_TXFA6,1248290.0,31755,39926
+new3,phc_stp_v2_cosine_lr,NEW3_20260114_TXFA6,806160.0,22637,28452
+new3,phc_stp_v2_cosine_lr,NEW3_20260115_TXFA6,921785.0,24421,30498
+new3,phc_stp_v2_cosine_lr,NEW3_20260116_TXFA6,866730.0,24378,30507
+new3,phc_stp_v2_cosine_lr,NEW3_20260119Day_TXFA6,1300395.0,34307,42665
+new3,phc_stp_v2_cosine_lr,NEW3_20260330_TXFA6,94050.0,3710,4706
+new4,phc_stp_v2_cosine_lr,NEW4_20260102_TXFA6,310985.0,12242,15685
+new4,phc_stp_v2_cosine_lr,NEW4_20260105_TXFA6,51710.0,1586,2041
+new4,phc_stp_v2_cosine_lr,NEW4_20260109_TXFA6,604600.0,15921,20131
+new4,phc_stp_v2_cosine_lr,NEW4_20260112_TXFA6,904390.0,24434,30763

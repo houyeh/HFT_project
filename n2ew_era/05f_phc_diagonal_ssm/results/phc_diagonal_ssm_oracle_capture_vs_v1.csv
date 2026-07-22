@@ -1,0 +1,4 @@
+split,policy_id,policy_selected_count,policy_pnl,matched_count_oracle_pnl,capture_ratio,opportunity_gap,oracle_uses_future_labels,new5_used,phc_lite_v1_capture_ratio,delta_vs_v1_oracle_capture,delta_pct_vs_v1_oracle_capture
+val,phc_diagonal_ssm,61828,1771525.0,7752140.0,0.22852076974874036,5980615.0,True,False,0.24953418782945125,-0.02101341808071089,-0.08421057757052872
+new3,phc_diagonal_ssm,136027,4727425.0,18874740.0,0.25046305273609065,14147315.0,True,False,0.2665173664352062,-0.01605431369911553,-0.0602374018393227
+new4,phc_diagonal_ssm,51950,1642680.0,7390980.0,0.22225469423540586,5748300.0,True,False,0.23905708835100326,-0.01680239411559739,-0.07028611546931725

@@ -1,0 +1,7 @@
+method,test_pnl,improvement_over_no_cancel,random_95p_hurdle,trade_count,cancel_count,pnl_per_trade,max_drawdown,source,notes
+no_cancel,63785.0,0.0,77561.75,661.0,0.0,96.49773071104387,76230.0,recomputed_on_016_v2_test_predictions_with_no_pull_masks,Reference policy; no model-driven cancels.
+015_smoothed,170625.0,106840.0,77561.75,705.0,,242.0212765957447,25420.0,C:\Users\holbo\00VS_projjects\00_HFT_project\new_era\15_models_playaround\015_models_playaround_result\lt=smoothed_mid_move_3class__fc=8__w=100__H=10__thr=1\backtest_outputs\test_final_results.csv,Legacy 015 artifact does not expose quote-level cancel_count; field left NaN rather than guessed.
+016_old_binary,266045.0,202260.0,77561.75,77.0,1318394.9999999998,3455.12987012987,37800.0,outputs/pnl_summary.csv and 016_new_binary backtest summary,Known prior violation: binary_best was selected on NEW_test; included only as historical comparison.
+016_v2_binary,132590.0,68805.0,77561.75,474.0,333425.0,279.7257383966245,69390.0,outputs/test_backtest_summary.csv,Frozen validation-selected 10% thresholds; main audited candidate.
+matched_random_v1,63785.0,0.0,63785.0,661.0,333425.0,96.49773071104387,64185.0,results/strict_random_baseline_distribution.csv,Count+side matched random baseline; reported as distribution mean.
+matched_random_v3,25046.086,-38738.914000000004,77561.75,482.2836,333425.0,51.93227802065009,74298.325,results/strict_random_baseline_distribution.csv,Count+side+session+spread matched random baseline; main stricter hurdle.

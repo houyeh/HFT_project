@@ -1,0 +1,3 @@
+side,config_name,model_dir,best_epoch,best_val_loss,val_auc_pr,test_auc_pr,test_auc_roc,test_f1_at_0p5,best_threshold_by_f1
+bid,primary_fw1_h10_posw,C:\Users\holbo\00VS_projjects\00_HFT_project\new_era\016_new_binary\outputs\models\bid_primary_fw1_h10_posw,28,1.0035429511751448,0.126071813959332,0.07240934721896708,0.726100654374487,0.12469665857756207,0.6
+ask,primary_fw1_h10_posw,C:\Users\holbo\00VS_projjects\00_HFT_project\new_era\016_new_binary\outputs\models\ask_primary_fw1_h10_posw,30,0.9836882097380502,0.1085885494716867,0.08025443573773772,0.7448091301087248,0.12124045504129656,0.7

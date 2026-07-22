@@ -1,0 +1,11 @@
+# PHC STP v2 Matched Random Report
+
+Empirical p-value is the fraction of matched random trials whose PnL >= model PnL.
+
+If the observed fraction is `0.0`, report it as: in 1000 matched random trials, no random trial exceeded the selected policy; therefore empirical p-value < 0.001.
+
+| split   | policy_id            |   model_total_excess_pnl_H20 |      random_mean |   random_std |        random_95p |        random_99p |   empirical_p_value_fraction_random_ge_model | empirical_p_value_wording   | beats_random_95p   |   n_trials | matching                                                    |   seed_selected_on_val |   threshold_selected_on_val | phase   | optimizer_restarted   |
+|:--------|:---------------------|-----------------------------:|-----------------:|-------------:|------------------:|------------------:|---------------------------------------------:|:----------------------------|:-------------------|-----------:|:------------------------------------------------------------|-----------------------:|----------------------------:|:--------|:----------------------|
+| val     | phc_stp_v2_cosine_lr |                  2.03792e+06 | -970005          |      28782.8 | -923128           | -907068           |                                            0 | < 0.001                     | True               |       1000 | count_session_side_spread_bucket_with_session_side_fallback |                      2 |                           0 | 05c4    | False                 |
+| new3    | phc_stp_v2_cosine_lr |                  5.23741e+06 |      -2.1186e+06 |      46802.7 |      -2.04194e+06 |      -2.01006e+06 |                                            0 | < 0.001                     | True               |       1000 | count_session_side_spread_bucket_with_session_side_fallback |                      2 |                           0 | 05c4    | False                 |
+| new4    | phc_stp_v2_cosine_lr |                  1.87168e+06 | -812781          |      29592.8 | -761406           | -746510           |                                            0 | < 0.001                     | True               |       1000 | count_session_side_spread_bucket_with_session_side_fallback |                      2 |                           0 | 05c4    | False                 |

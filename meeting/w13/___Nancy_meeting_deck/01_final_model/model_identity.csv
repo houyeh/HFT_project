@@ -1,0 +1,10 @@
+Parameter,Value
+Dataset,NEW_ALL / TXFB6
+Data Split,"Session-level Chronological (Train: first 70.0% sessions, Val: next 15.0%, Test: last 15.0%)"
+Model Architecture,"TCN (channels=[16, 16, 16], kernel=3, dropout=0.1)"
+Feature Count,8
+Z-score Window,2000
+Lookback Window (Ticks),100
+Prediction Horizon (Ticks),5
+Label Type,smoothed_mid_move_3class
+Default Threshold,0.5

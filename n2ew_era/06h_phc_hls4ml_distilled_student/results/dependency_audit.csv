@@ -1,0 +1,7 @@
+module,available,version,error
+tensorflow,True,2.21.0,
+keras,True,3.14.0,
+hls4ml,True,1.3.0,
+torch,True,2.10.0+cpu,
+numpy,True,2.4.4,
+pandas,True,3.0.1,

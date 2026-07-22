@@ -1,0 +1,7 @@
+split,policy_id,model_variant,horizon,fill_model,inventory_cap,fee_multiplier,sequential_excess_pnl,fill_count,forced_no_quote_count,max_abs_inventory,max_drawdown,win_rate,loss_rate,avg_trade_excess_pnl,fill_uses_future_pnl,phase,new5_used_for_selection
+val,tcn_action_value_16feat,16feat,20,conservative_l2_stress,1,1.0,138735.0,5711,0,1,3095.0,0.4571878830327438,0.5428121169672562,24.29259324111364,False,06c,False
+new3,tcn_action_value_16feat,16feat,20,conservative_l2_stress,1,1.0,466395.0,14947,0,1,4130.0,0.49267411520706494,0.5073258847929351,31.20325148859303,False,06c,False
+new4,tcn_action_value_16feat,16feat,20,conservative_l2_stress,1,1.0,108440.0,3465,2138,1,1925.0,0.47965367965367967,0.5203463203463203,31.295815295815295,False,06c,False
+val,tcn_action_value_18feat,18feat,20,conservative_l2_stress,1,1.0,147400.0,6400,0,1,2760.0,0.456875,0.543125,23.03125,False,06c,False
+new3,tcn_action_value_18feat,18feat,20,conservative_l2_stress,1,1.0,500505.0,16613,0,1,3720.0,0.4910612171191236,0.5089387828808765,30.127309938000362,False,06c,False
+new4,tcn_action_value_18feat,18feat,20,conservative_l2_stress,1,1.0,111490.0,3835,2420,1,2110.0,0.4758800521512386,0.5241199478487614,29.071707953063886,False,06c,False

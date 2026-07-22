@@ -1,0 +1,11 @@
+phase,name,cpp_name,shape,num_values,float_min,float_max,quantized_min,quantized_max,num_saturated,total_bits,frac_bits,exported_to_header,note
+06g,encoder.0.weight,ENC_LINEAR_W,16x16,256,-1.0213347673416138,0.8076339364051819,-4183,3308,0,24,12,True,
+06g,encoder.0.bias,ENC_LINEAR_B,16,16,-0.6068134307861328,0.3033443093299866,-2486,1242,0,24,12,True,
+06g,encoder.1.weight,ENC_NORM_GAMMA,16,16,0.7855205535888672,0.9884021282196045,3217,4048,0,24,12,True,
+06g,encoder.1.bias,ENC_NORM_BETA,16,16,-0.06213454157114029,0.1917211264371872,-255,785,0,24,12,True,
+06g,diag_decay_baked_sigmoid,DIAG_DECAY,16,16,0.8226060271263123,0.9187517762184143,3369,3763,0,24,12,True,sigmoid baked into exported constant
+06g,diag_gain_baked_sigmoid,DIAG_GAIN,16,16,0.4740648567676544,0.5187188982963562,1942,2125,0,24,12,True,sigmoid baked into exported constant
+06g,readout.weight,READOUT_W,2x16,32,-0.25646066665649414,0.2633584141731262,-1050,1079,0,24,12,True,
+06g,readout.bias,READOUT_B,2,2,0.011036000214517117,0.21528419852256775,45,882,0,24,12,True,
+06g,diag_decay_param,,16,16,1.5341041088104248,2.425506830215454,6284,9935,0,24,12,False,raw parameter; sigmoid is baked into DIAG_DECAY for HLS
+06g,diag_gain_param,,16,16,-0.10383381694555283,0.07491052150726318,-425,307,0,24,12,False,raw parameter; sigmoid is baked into DIAG_GAIN for HLS

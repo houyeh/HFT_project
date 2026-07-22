@@ -1,0 +1,40 @@
+{
+  "class_names": [
+    "Not-profitable",
+    "Profitable"
+  ],
+  "device": "cpu",
+  "label_type": "active_sell_profitable_binary",
+  "splits": {
+    "test": {
+      "accuracy": 0.8782583957445682,
+      "average_precision": 0.1516923988112091,
+      "balanced_accuracy": 0.8043413589341846,
+      "best_threshold_by_f1": 0.8502988219261169,
+      "best_threshold_by_precision_at_min_recall": 0.9218253493309021,
+      "brier_score": 0.09287702797033502,
+      "expected_calibration_error": 0.1965684655072713,
+      "loss": 0.3167327344417572,
+      "macro_f1": 0.5510950614357237,
+      "min_recall": 0.2,
+      "num_samples": 151148,
+      "p_pos_ge_0p70_actual_pos_rate": 0.1310797446731997,
+      "precision_at_min_recall": 0.23480662983425415
+    },
+    "val": {
+      "accuracy": 0.869699700431087,
+      "average_precision": 0.14743852932640766,
+      "balanced_accuracy": 0.7844152511558706,
+      "best_threshold_by_f1": 0.8342781066894531,
+      "best_threshold_by_precision_at_min_recall": 0.9016122817993164,
+      "brier_score": 0.09885348691560773,
+      "expected_calibration_error": 0.20893149844895156,
+      "loss": 0.33560264110565186,
+      "macro_f1": 0.5506204630054354,
+      "min_recall": 0.2,
+      "num_samples": 82118,
+      "p_pos_ge_0p70_actual_pos_rate": 0.14136038583070015,
+      "precision_at_min_recall": 0.21985343104596936
+    }
+  }
+}

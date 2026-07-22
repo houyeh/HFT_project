@@ -1,0 +1,8 @@
+claim,status,safe_wording
+ML beats matched random 95p on NEW5,PASS,The frozen ML candidate beat the exact matched random 95p hurdle on NEW5 20260128.
+ML causal-fill sequential PnL is positive on NEW5,PASS,The frozen ML candidate had positive causal-fill sequential excess PnL under the proxy simulator.
+ML beats queue rule in NEW5 causal-fill sequential proxy,PASS,The frozen ML candidate exceeded the frozen queue rule under the same NEW5 causal-fill sequential proxy.
+NEW5 was used for tuning,FORBIDDEN_AND_NOT_DONE,NEW5 was used only for one-shot final holdout evaluation.
+This proves real-world profitability,FORBIDDEN,"The result is proxy TXF-only holdout evidence, not proof of real-world profitability."
+This is true exchange replay / true queue priority,FORBIDDEN,The causal-fill sequential simulator remains a proxy and does not replay exchange queue priority.
+FPGA improves PnL,FORBIDDEN,No FPGA PnL improvement claim is made.

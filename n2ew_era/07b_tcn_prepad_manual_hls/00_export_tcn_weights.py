@@ -1,0 +1,215 @@
+from __future__ import annotations
+
+import csv
+import json
+import sys
+from pathlib import Path
+from typing import Any
+
+import numpy as np
+import torch
+
+PROJECT_ROOT = Path(__file__).resolve().parents[2]
+ROOT = PROJECT_ROOT / "n2ew_era" / "07b_tcn_prepad_manual_hls"
+HLS_SRC = ROOT / "hls_src"
+RESULTS = ROOT / "results"
+PHASE07A = PROJECT_ROOT / "n2ew_era" / "07a_tcn_feedforward_phc_tradeoff"
+
+if str(PROJECT_ROOT) not in sys.path:
+    sys.path.insert(0, str(PROJECT_ROOT))
+
+from src.models.tcn_prepad import TCNPrePadRegressor  # noqa: E402
+
+TOTAL_BITS = 24
+INT_BITS = 12
+FRAC_BITS = TOTAL_BITS - INT_BITS
+SCALE = 1 << FRAC_BITS
+QMIN = -(1 << (TOTAL_BITS - 1))
+QMAX = (1 << (TOTAL_BITS - 1)) - 1
+
+VARIANTS = {
+    "scratch": {
+        "policy_id": "tcn_prepad_scratch_16feat",
+        "seed": 2,
+        "checkpoint": PHASE07A / "models" / "tcn_prepad_scratch_16feat_seed2_best_val.pt",
+        "header": HLS_SRC / "tcn_weights_scratch.hpp",
+    },
+    "distilled": {
+        "policy_id": "tcn_prepad_distilled_16feat",
+        "seed": 1,
+        "checkpoint": PHASE07A / "models" / "tcn_prepad_distilled_16feat_seed1_best_val.pt",
+        "header": HLS_SRC / "tcn_weights_distilled.hpp",
+    },
+}
+
+
+def ensure_dirs() -> None:
+    for path in [ROOT, HLS_SRC, RESULTS]:
+        path.mkdir(parents=True, exist_ok=True)
+
+
+def quantize(name: str, arr: np.ndarray, rows: list[dict[str, Any]]) -> np.ndarray:
+    arr64 = np.asarray(arr, dtype=np.float64)
+    raw = np.rint(arr64 * SCALE)
+    clipped = np.clip(raw, QMIN, QMAX).astype(np.int64)
+    rows.append(
+        {
+            "name": name,
+            "shape": "x".join(map(str, arr64.shape)),
+            "float_min": float(np.min(arr64)) if arr64.size else 0.0,
+            "float_max": float(np.max(arr64)) if arr64.size else 0.0,
+            "quantized_min": int(np.min(clipped)) if clipped.size else 0,
+            "quantized_max": int(np.max(clipped)) if clipped.size else 0,
+            "num_saturated": int(np.sum((raw < QMIN) | (raw > QMAX))),
+            "frac_bits": FRAC_BITS,
+            "total_bits": TOTAL_BITS,
+        }
+    )
+    return clipped
+
+
+def fixed_literal(q: int) -> str:
+    return f"({q}.0/{SCALE}.0)"
+
+
+def emit_1d(name: str, q: np.ndarray) -> list[str]:
+    vals = ", ".join(fixed_literal(int(v)) for v in q.reshape(-1))
+    return [f"static const tcn_fixed_t {name}[{q.size}] = {{ {vals} }};"]
+
+
+def emit_2d(name: str, q: np.ndarray) -> list[str]:
+    lines = [f"static const tcn_fixed_t {name}[{q.shape[0]}][{q.shape[1]}] = {{"]
+    for row in q:
+        vals = ", ".join(fixed_literal(int(v)) for v in row)
+        lines.append(f"    {{ {vals} }},")
+    lines.append("};")
+    return lines
+
+
+def emit_4d(name: str, q: np.ndarray) -> list[str]:
+    b, o, i, k = q.shape
+    lines = [f"static const tcn_fixed_t {name}[{b}][{o}][{i}][{k}] = {{"]
+    for bi in range(b):
+        lines.append("  {")
+        for oc in range(o):
+            lines.append("    {")
+            for ic in range(i):
+                vals = ", ".join(fixed_literal(int(v)) for v in q[bi, oc, ic])
+                lines.append(f"      {{ {vals} }},")
+            lines.append("    },")
+        lines.append("  },")
+    lines.append("};")
+    return lines
+
+
+def load_checkpoint(path: Path) -> tuple[TCNPrePadRegressor, dict[str, Any]]:
+    if not path.exists():
+        raise FileNotFoundError(f"Missing checkpoint: {path}")
+    ckpt = torch.load(path, map_location="cpu", weights_only=False)
+    model = TCNPrePadRegressor(num_inputs=16, num_outputs=2, channels=16, kernel_size=3, dropout=0.1)
+    model.load_state_dict(ckpt["model_state_dict"])
+    model.eval()
+    return model, ckpt
+
+
+def export_variant(variant: str, cfg: dict[str, Any]) -> list[dict[str, Any]]:
+    model, ckpt = load_checkpoint(cfg["checkpoint"])
+    state = model.state_dict()
+    target_scale = float(ckpt["target_scale"])
+    audit: list[dict[str, Any]] = []
+    conv1_w = []
+    conv1_b = []
+    conv2_w = []
+    conv2_b = []
+    for block in range(5):
+        conv1_w.append(state[f"tcn.{block}.conv1.weight"].detach().cpu().numpy())
+        conv1_b.append(state[f"tcn.{block}.conv1.bias"].detach().cpu().numpy())
+        conv2_w.append(state[f"tcn.{block}.conv2.weight"].detach().cpu().numpy())
+        conv2_b.append(state[f"tcn.{block}.conv2.bias"].detach().cpu().numpy())
+    tensors = {
+        "CONV1_W": np.stack(conv1_w, axis=0),
+        "CONV1_B": np.stack(conv1_b, axis=0),
+        "CONV2_W": np.stack(conv2_w, axis=0),
+        "CONV2_B": np.stack(conv2_b, axis=0),
+        "FC_W": state["fc.weight"].detach().cpu().numpy() * target_scale,
+        "FC_B": state["fc.bias"].detach().cpu().numpy() * target_scale,
+    }
+    q = {name: quantize(f"{variant}:{name}", arr, audit) for name, arr in tensors.items()}
+    lines = [
+        "#pragma once",
+        '#include "tcn_prepad_hls.hpp"',
+        "",
+        "// Generated by 07b_tcn_prepad_manual_hls/00_export_tcn_weights.py",
+        f"// Source checkpoint: {cfg['checkpoint']}",
+        f"// policy_id={cfg['policy_id']} seed={cfg['seed']} variant={variant}",
+        "// Quantization: Q24.12 == ap_fixed<24,12>; accumulator uses ap_fixed<40,16>.",
+        f"// Readout scale: FC_W and FC_B are multiplied by checkpoint target_scale={target_scale:.10g}.",
+        "namespace tcn_weights {",
+        "",
+    ]
+    lines += emit_4d("CONV1_W", q["CONV1_W"])
+    lines += emit_2d("CONV1_B", q["CONV1_B"])
+    lines += emit_4d("CONV2_W", q["CONV2_W"])
+    lines += emit_2d("CONV2_B", q["CONV2_B"])
+    lines += emit_2d("FC_W", q["FC_W"])
+    lines += emit_1d("FC_B", q["FC_B"])
+    lines += ["", "}  // namespace tcn_weights", ""]
+    cfg["header"].write_text("\n".join(lines), encoding="utf-8")
+    manifest = {
+        "variant": variant,
+        "policy_id": cfg["policy_id"],
+        "seed": cfg["seed"],
+        "checkpoint": str(cfg["checkpoint"]),
+        "header": str(cfg["header"]),
+        "feature_dim": int(ckpt.get("feature_dim", 16)),
+        "channels": int(ckpt.get("channels", 16)),
+        "seq_length": int(ckpt.get("seq_length", 128)),
+        "seq_length_in": int(ckpt.get("seq_length_in", 252)),
+        "receptive_field": int(ckpt.get("receptive_field", model.receptive_field())),
+        "target_scale": target_scale,
+        "readout_scale_folded_into_fc": True,
+        "phase": "07b",
+        "source_training_phase": ckpt.get("phase", "unknown"),
+        "new5_used_for_selection": bool(ckpt.get("new5_used_for_selection", False)),
+    }
+    (RESULTS / f"tcn_weight_manifest_{variant}.json").write_text(json.dumps(manifest, indent=2), encoding="utf-8")
+    return audit
+
+
+def main() -> None:
+    ensure_dirs()
+    rows: list[dict[str, Any]] = []
+    for variant, cfg in VARIANTS.items():
+        rows.extend(export_variant(variant, cfg))
+    out = RESULTS / "tcn_weight_export_audit.csv"
+    with out.open("w", newline="", encoding="utf-8") as handle:
+        writer = csv.DictWriter(handle, fieldnames=list(rows[0].keys()))
+        writer.writeheader()
+        writer.writerows(rows)
+    saturated = sum(int(row["num_saturated"]) for row in rows)
+    report = [
+        "# TCN PrePad Weight Export Report",
+        "",
+        f"- Variants exported: `{', '.join(VARIANTS)}`.",
+        "- Fixed-point scheme: `ap_fixed<24,12>` for inputs/weights and `ap_fixed<40,16>` accumulators.",
+        "- Readout unit: checkpoint `target_scale` is folded into `FC_W` and `FC_B`, so HLS output is in the same scaled PnL units as the PyTorch reference vectors.",
+        f"- Saturated values: `{saturated}`.",
+        "- ReLU is the only nonlinearity in `TCNPrePadRegressor`; no LUT/tanh/sigmoid core is needed.",
+        "",
+        "## Audit",
+        "",
+        "| name | shape | float_min | float_max | quantized_min | quantized_max | num_saturated | frac_bits | total_bits |",
+        "| --- | --- | --- | --- | --- | --- | --- | --- | --- |",
+    ]
+    for row in rows:
+        report.append(
+            f"| {row['name']} | {row['shape']} | {row['float_min']:.8g} | {row['float_max']:.8g} | "
+            f"{row['quantized_min']} | {row['quantized_max']} | {row['num_saturated']} | {row['frac_bits']} | {row['total_bits']} |"
+        )
+    (ROOT / "TCN_PREPAD_WEIGHT_EXPORT_REPORT.md").write_text("\n".join(report) + "\n", encoding="utf-8")
+    print(f"wrote {out}")
+    print(f"num_saturated={saturated}")
+
+
+if __name__ == "__main__":
+    main()

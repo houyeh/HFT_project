@@ -1,0 +1,4 @@
+seed,best_epoch,best_val_pnl,final_epoch,early_stop,max_epoch_hit,convergence_closed,strict_convergence_rule,optimizer_restarted,lr_at_best_epoch,lr_at_final_epoch,grad_norm_at_best_epoch,grad_norm_at_final_epoch,lr_scheduler,phase
+0,165,1737070.0,185,True,False,True,early_stop=True and best_epoch<185,False,8.705767687650258e-05,2.5551335241327665e-05,0.072336159646511,0.0749365215826975,CosineAnnealingLR,05f
+1,184,1676175.0,200,False,True,False,early_stop=True and best_epoch<185,False,2.754407786339e-05,1.006106692157801e-05,0.0667839120877416,0.061182848717037,CosineAnnealingLR,05f
+2,157,1771525.0,177,True,False,True,early_stop=True and best_epoch<185,False,0.0001235959448259,4.476063948531555e-05,0.0756130975327993,0.0703574350397837,CosineAnnealingLR,05f

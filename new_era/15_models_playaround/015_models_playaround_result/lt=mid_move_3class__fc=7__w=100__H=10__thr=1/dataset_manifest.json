@@ -1,0 +1,74 @@
+{
+  "adverse_threshold_ticks": 1.0,
+  "class_distribution_by_session": {
+    "TXFB6__20260123Day": {
+      "0": 319,
+      "1": 35730,
+      "2": 392
+    },
+    "TXFB6__20260123Night": {
+      "0": 744,
+      "1": 111690,
+      "2": 761
+    },
+    "TXFB6__20260126Day": {
+      "0": 578,
+      "1": 73654,
+      "2": 520
+    },
+    "TXFB6__20260126Night": {
+      "0": 877,
+      "1": 111065,
+      "2": 755
+    },
+    "TXFB6__20260127Day": {
+      "0": 802,
+      "1": 80446,
+      "2": 870
+    },
+    "TXFB6__20260127Night": {
+      "0": 748,
+      "1": 149611,
+      "2": 789
+    }
+  },
+  "exit_cost_ticks": 0.0,
+  "horizon": 10,
+  "label_type": "mid_move_3class",
+  "margin_ticks": 0.0,
+  "point_value_twd_per_point": 200.0,
+  "sample_stride_train": 5,
+  "selected_features": [
+    "obi",
+    "queue_imbalance",
+    "weighted_mid_deviation",
+    "trade_intensity_short",
+    "deep_obi",
+    "queue_imbalance_change",
+    "normalized_spread"
+  ],
+  "sessions": [
+    "TXFB6__20260123Day",
+    "TXFB6__20260123Night",
+    "TXFB6__20260126Day",
+    "TXFB6__20260126Night",
+    "TXFB6__20260127Day",
+    "TXFB6__20260127Night"
+  ],
+  "symbols": [
+    "TXFB6"
+  ],
+  "taker_fee_twd": 50.0,
+  "threshold_ticks": 1.0,
+  "window_size": 100,
+  "z_features": [
+    "obi_z",
+    "queue_imbalance_z",
+    "weighted_mid_deviation_z",
+    "trade_intensity_short_z",
+    "deep_obi_z",
+    "queue_imbalance_change_z",
+    "normalized_spread_z"
+  ],
+  "zscore_window": 2000
+}

@@ -1,0 +1,2 @@
+split,source,event_rows,window_rows,session_count,seq_len,stride,target_horizon,bid_positive_rate,ask_positive_rate
+post_hoc_diagnostic_only_not_fresh_holdout,Phase04C NEW5 20260128 TXF-only action universe,815912,25494,1,128,32,20,0.3606338746371695,0.34972934808190165

@@ -1,0 +1,5 @@
+split,holdout_scope,policy_id,horizon,fill_model,inventory_cap,fee_multiplier,sequential_excess_pnl,fill_count,forced_no_quote_count,max_abs_inventory,max_drawdown,win_rate,loss_rate,avg_trade_excess_pnl,fill_uses_future_pnl,new5_used_for_tuning,ml_minus_queue_rule
+new5_final_holdout,NEW5_20260128,no_quote,20,conservative_l2_stress,1,1.0,0.0,0,0,0,0.0,0.0,0.0,0.0,False,False,170810.0
+new5_final_holdout,NEW5_20260128,old_bid_only_spread_ge_1,20,conservative_l2_stress,1,1.0,-553365.0,30212,86478,1,556140.0,0.3502250761286906,0.6497418244406197,-18.316066463656824,False,False,170810.0
+new5_final_holdout,NEW5_20260128,side_by_queue_imbalance_abs_0p1,20,conservative_l2_stress,1,1.0,722745.0,39600,31932,1,7760.0,0.43691919191919193,0.5630050505050505,18.251136363636363,False,False,170810.0
+new5_final_holdout,NEW5_20260128,ml_hgb_regressor_shallow_convergence_selected,20,conservative_l2_stress,1,1.0,893555.0,40526,30780,1,4610.0,0.4537334057148497,0.546192567734294,22.048931550115974,False,False,170810.0

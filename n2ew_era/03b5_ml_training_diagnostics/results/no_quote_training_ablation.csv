@@ -1,0 +1,7 @@
+split,policy_id,model_id,horizon,threshold,state_count,selected_action_count,bid_count,ask_count,total_excess_pnl,max_drawdown,variant,include_no_quote_rows,validation_selected_threshold,validation_total_excess_pnl,queue_rule_total_excess_pnl,variant_minus_queue_rule,beats_queue_rule
+new3,diagnostic_hgb_threshold,train_with_no_quote_rows,20,0.0,5657362,4256199,2100348,2155851,79072675.0,90565.0,train_with_no_quote_rows,True,0.0,11775785.0,86732392.0,-7659717.0,False
+new4,diagnostic_hgb_threshold,train_with_no_quote_rows,20,0.0,2196640,1645632,809495,836137,27659775.0,88670.0,train_with_no_quote_rows,True,0.0,11775785.0,29901050.0,-2241275.0,False
+test,diagnostic_hgb_threshold,train_with_no_quote_rows,20,0.0,1166321,880142,431802,448340,20548375.0,32310.0,train_with_no_quote_rows,True,0.0,11775785.0,16335715.0,4212660.0,True
+new3,diagnostic_hgb_threshold,train_bid_ask_only,20,0.0,5657362,4021458,1992950,2028508,79899389.0,90545.0,train_bid_ask_only,False,0.0,11389585.0,86732392.0,-6833003.0,False
+new4,diagnostic_hgb_threshold,train_bid_ask_only,20,0.0,2196640,1555191,768759,786432,28202190.0,73745.0,train_bid_ask_only,False,0.0,11389585.0,29901050.0,-1698860.0,False
+test,diagnostic_hgb_threshold,train_bid_ask_only,20,0.0,1166321,829067,408595,420472,20509115.0,27735.0,train_bid_ask_only,False,0.0,11389585.0,16335715.0,4173400.0,True

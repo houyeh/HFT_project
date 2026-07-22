@@ -1,0 +1,13 @@
+file,path,exists,description
+queue_data_audit.md,C:\Users\holbo\00VS_projjects\00_HFT_project\new_era\018_queue_aware_validation\outputs\audit\queue_data_audit.md,True,Queue field availability audit.
+queue_sensitivity_summary.csv,C:\Users\holbo\00VS_projjects\00_HFT_project\new_era\018_queue_aware_validation\outputs\backtests\queue_sensitivity_summary.csv,True,Per-seed scenario results.
+queue_sensitivity_aggregate.csv,C:\Users\holbo\00VS_projjects\00_HFT_project\new_era\018_queue_aware_validation\outputs\comparison\queue_sensitivity_aggregate.csv,True,Aggregated scenario stats.
+queue_aware_verdict_table.csv,C:\Users\holbo\00VS_projjects\00_HFT_project\new_era\018_queue_aware_validation\outputs\comparison\queue_aware_verdict_table.csv,True,Original vs conservative verdict table.
+net_pnl_vs_fill_probability.png,C:\Users\holbo\00VS_projjects\00_HFT_project\new_era\018_queue_aware_validation\outputs\figures\net_pnl_vs_fill_probability.png,True,Net PnL vs fill probability.
+good_vs_toxic_fill_haircut.png,C:\Users\holbo\00VS_projjects\00_HFT_project\new_era\018_queue_aware_validation\outputs\figures\good_vs_toxic_fill_haircut.png,True,Adverse-selection haircut comparison.
+queue_fraction_sensitivity.png,C:\Users\holbo\00VS_projjects\00_HFT_project\new_era\018_queue_aware_validation\outputs\figures\queue_fraction_sensitivity.png,True,Queue fraction sensitivity.
+cancel_delay_under_queue.png,C:\Users\holbo\00VS_projjects\00_HFT_project\new_era\018_queue_aware_validation\outputs\figures\cancel_delay_under_queue.png,True,Cancel delay under queue assumptions.
+trade_count_vs_pnl_queue.png,C:\Users\holbo\00VS_projjects\00_HFT_project\new_era\018_queue_aware_validation\outputs\figures\trade_count_vs_pnl_queue.png,True,Trade count vs PnL scatter.
+queue_aware_validation_report.md,C:\Users\holbo\00VS_projjects\00_HFT_project\new_era\018_queue_aware_validation\outputs\reports\queue_aware_validation_report.md,True,Main queue-aware validation report.
+queue_aware_slide_summary.md,C:\Users\holbo\00VS_projjects\00_HFT_project\new_era\018_queue_aware_validation\outputs\reports\queue_aware_slide_summary.md,True,One-page slide summary.
+final_checkpoint.md,C:\Users\holbo\00VS_projjects\00_HFT_project\new_era\018_queue_aware_validation\outputs\reports\final_checkpoint.md,True,Final checkpoint summary.

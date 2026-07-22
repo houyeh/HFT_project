@@ -1,0 +1,83 @@
+column_name,category,causal_or_future,allowed_as_feature,audit_status,reason
+split,identity,causal_metadata,no,pass,Identifier or ordering metadata; not a model feature.
+session_id,identity,causal_metadata,no,pass,Identifier or ordering metadata; not a model feature.
+symbol,identity,causal_metadata,no,pass,Identifier or ordering metadata; not a model feature.
+event_index,identity,causal_metadata,no,pass,Identifier or ordering metadata; not a model feature.
+timestamp,identity,causal_metadata,no,pass,Identifier or ordering metadata; not a model feature.
+action_side,action_context,causal,yes,pass,Known at quote decision time as the candidate action context.
+action_slot,action_context,causal,yes,pass,Known at quote decision time as the candidate action context.
+quote_price,action_context,causal,yes,pass,Known at quote decision time as the candidate action context.
+best_bid,causal_feature,causal,yes,pass,Current or past-only L2/book feature.
+best_ask,causal_feature,causal,yes,pass,Current or past-only L2/book feature.
+mid_price,causal_feature,causal,yes,pass,Current or past-only L2/book feature.
+tick_size,causal_feature,causal,yes,pass,Current or past-only L2/book feature.
+spread_ticks,causal_feature,causal,yes,pass,Current or past-only L2/book feature.
+quote_eligible,causal_feature,causal,yes,pass,Current or past-only L2/book feature.
+bid_px_1,causal_feature,causal,yes,pass,Current or past-only L2/book feature.
+bid_sz_1,causal_feature,causal,yes,pass,Current or past-only L2/book feature.
+ask_px_1,causal_feature,causal,yes,pass,Current or past-only L2/book feature.
+ask_sz_1,causal_feature,causal,yes,pass,Current or past-only L2/book feature.
+bid_px_2,causal_feature,causal,yes,pass,Current or past-only L2/book feature.
+bid_sz_2,causal_feature,causal,yes,pass,Current or past-only L2/book feature.
+ask_px_2,causal_feature,causal,yes,pass,Current or past-only L2/book feature.
+ask_sz_2,causal_feature,causal,yes,pass,Current or past-only L2/book feature.
+bid_px_3,causal_feature,causal,yes,pass,Current or past-only L2/book feature.
+bid_sz_3,causal_feature,causal,yes,pass,Current or past-only L2/book feature.
+ask_px_3,causal_feature,causal,yes,pass,Current or past-only L2/book feature.
+ask_sz_3,causal_feature,causal,yes,pass,Current or past-only L2/book feature.
+bid_px_4,causal_feature,causal,yes,pass,Current or past-only L2/book feature.
+bid_sz_4,causal_feature,causal,yes,pass,Current or past-only L2/book feature.
+ask_px_4,causal_feature,causal,yes,pass,Current or past-only L2/book feature.
+ask_sz_4,causal_feature,causal,yes,pass,Current or past-only L2/book feature.
+bid_px_5,causal_feature,causal,yes,pass,Current or past-only L2/book feature.
+bid_sz_5,causal_feature,causal,yes,pass,Current or past-only L2/book feature.
+ask_px_5,causal_feature,causal,yes,pass,Current or past-only L2/book feature.
+ask_sz_5,causal_feature,causal,yes,pass,Current or past-only L2/book feature.
+queue_imbalance,causal_feature,causal,yes,pass,Current or past-only L2/book feature.
+deep_imbalance,causal_feature,causal,yes,pass,Current or past-only L2/book feature.
+top_depth,causal_feature,causal,yes,pass,Current or past-only L2/book feature.
+depth_ratio,causal_feature,causal,yes,pass,Current or past-only L2/book feature.
+event_rate_past_50,causal_feature,causal,yes,pass,Current or past-only L2/book feature.
+inter_arrival_ms,causal_feature,causal,yes,pass,Current or past-only L2/book feature.
+volatility_past_50,causal_feature,causal,yes,pass,Current or past-only L2/book feature.
+abs_return_past_50,causal_feature,causal,yes,pass,Current or past-only L2/book feature.
+imbalance_change_past,causal_feature,causal,yes,pass,Current or past-only L2/book feature.
+spread_change_past,causal_feature,causal,yes,pass,Current or past-only L2/book feature.
+hawkes_excite,causal_feature,causal,yes,pass,Current or past-only L2/book feature.
+normalized_spread,causal_feature,causal,yes,pass,Current or past-only L2/book feature.
+future_mid_H1,future_outcome_label,future_label,no,pass,Future outcome label; prohibited as causal feature.
+markout_ticks_H1,future_outcome_label,future_label,no,pass,Future outcome label; prohibited as causal feature.
+pnl_H1,future_outcome_label,future_label,no,pass,Future outcome label; prohibited as causal feature.
+positive_pnl_H1,future_outcome_label,future_label,no,pass,Future outcome label; prohibited as causal feature.
+negative_pnl_H1,future_outcome_label,future_label,no,pass,Future outcome label; prohibited as causal feature.
+severe_negative_pnl_H1,future_outcome_label,future_label,no,pass,Future outcome label; prohibited as causal feature.
+future_mid_H5,future_outcome_label,future_label,no,pass,Future outcome label; prohibited as causal feature.
+markout_ticks_H5,future_outcome_label,future_label,no,pass,Future outcome label; prohibited as causal feature.
+pnl_H5,future_outcome_label,future_label,no,pass,Future outcome label; prohibited as causal feature.
+positive_pnl_H5,future_outcome_label,future_label,no,pass,Future outcome label; prohibited as causal feature.
+negative_pnl_H5,future_outcome_label,future_label,no,pass,Future outcome label; prohibited as causal feature.
+severe_negative_pnl_H5,future_outcome_label,future_label,no,pass,Future outcome label; prohibited as causal feature.
+future_mid_H10,future_outcome_label,future_label,no,pass,Future outcome label; prohibited as causal feature.
+markout_ticks_H10,future_outcome_label,future_label,no,pass,Future outcome label; prohibited as causal feature.
+pnl_H10,future_outcome_label,future_label,no,pass,Future outcome label; prohibited as causal feature.
+positive_pnl_H10,future_outcome_label,future_label,no,pass,Future outcome label; prohibited as causal feature.
+negative_pnl_H10,future_outcome_label,future_label,no,pass,Future outcome label; prohibited as causal feature.
+severe_negative_pnl_H10,future_outcome_label,future_label,no,pass,Future outcome label; prohibited as causal feature.
+future_mid_H20,future_outcome_label,future_label,no,pass,Future outcome label; prohibited as causal feature.
+markout_ticks_H20,future_outcome_label,future_label,no,pass,Future outcome label; prohibited as causal feature.
+pnl_H20,future_outcome_label,future_label,no,pass,Future outcome label; prohibited as causal feature.
+positive_pnl_H20,future_outcome_label,future_label,no,pass,Future outcome label; prohibited as causal feature.
+negative_pnl_H20,future_outcome_label,future_label,no,pass,Future outcome label; prohibited as causal feature.
+severe_negative_pnl_H20,future_outcome_label,future_label,no,pass,Future outcome label; prohibited as causal feature.
+future_mid_H50,future_outcome_label,future_label,no,pass,Future outcome label; prohibited as causal feature.
+markout_ticks_H50,future_outcome_label,future_label,no,pass,Future outcome label; prohibited as causal feature.
+pnl_H50,future_outcome_label,future_label,no,pass,Future outcome label; prohibited as causal feature.
+positive_pnl_H50,future_outcome_label,future_label,no,pass,Future outcome label; prohibited as causal feature.
+negative_pnl_H50,future_outcome_label,future_label,no,pass,Future outcome label; prohibited as causal feature.
+severe_negative_pnl_H50,future_outcome_label,future_label,no,pass,Future outcome label; prohibited as causal feature.
+future_mid_H100,future_outcome_label,future_label,no,pass,Future outcome label; prohibited as causal feature.
+markout_ticks_H100,future_outcome_label,future_label,no,pass,Future outcome label; prohibited as causal feature.
+pnl_H100,future_outcome_label,future_label,no,pass,Future outcome label; prohibited as causal feature.
+positive_pnl_H100,future_outcome_label,future_label,no,pass,Future outcome label; prohibited as causal feature.
+negative_pnl_H100,future_outcome_label,future_label,no,pass,Future outcome label; prohibited as causal feature.
+severe_negative_pnl_H100,future_outcome_label,future_label,no,pass,Future outcome label; prohibited as causal feature.

@@ -1,0 +1,14 @@
+[
+  {
+    "model_variant": "channel_first_mean",
+    "conversion_succeeded": false,
+    "error_type": "Exception",
+    "error": "Unsupported function pad"
+  },
+  {
+    "model_variant": "channel_first_pool",
+    "conversion_succeeded": false,
+    "error_type": "Exception",
+    "error": "Unsupported function pad"
+  }
+]

@@ -1,0 +1,21 @@
+{
+  "baseline_original_source": "06F existing cosim CSV",
+  "original_max_abs_diff": 0.007252753,
+  "original_mean_abs_diff": 0.0003725533494163028,
+  "only_lut_max_abs_diff": 0.005462141831,
+  "only_lut_mean_abs_diff": 0.00029239815720343113,
+  "only_quant_max_abs_diff": 0.0064746145,
+  "only_quant_mean_abs_diff": 0.00025021811458088213,
+  "component_sum_max_abs_diff": 0.011936756331,
+  "component_sum_mean_abs_diff": 0.0005426162717843133,
+  "component_sum_to_original_max_ratio": 1.6458241899317405,
+  "component_sum_to_original_mean_ratio": 1.4564793810992605,
+  "max_interaction_residual": -0.004684003331,
+  "mean_interaction_residual": -0.00017006292236801043,
+  "lut_share_of_component_max_pct": 45.75901257877491,
+  "quant_share_of_component_max_pct": 54.24098742122509,
+  "lut_share_of_component_mean_pct": 53.88672850556492,
+  "quant_share_of_component_mean_pct": 46.11327149443508,
+  "dominant_component_by_max": "quantization_noise",
+  "dominant_component_by_mean": "lut_interpolation"
+}

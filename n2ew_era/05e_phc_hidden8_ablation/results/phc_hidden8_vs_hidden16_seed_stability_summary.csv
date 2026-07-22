@@ -1,0 +1,4 @@
+split,hidden8_seed_count,hidden16_seed_count,hidden8_min_action_pnl,hidden16_min_action_pnl,hidden8_mean_action_pnl,hidden16_mean_action_pnl,mean_action_pnl_delta_hidden8_minus_hidden16,hidden8_all_seed_action_positive,hidden16_all_seed_action_positive
+new3,3,3,5032255.0,5061175.0,5048498.333333333,5149661.666666667,-101163.33333333333,True,True
+new4,3,3,1755610.0,1785095.0,1768695.0,1833893.3333333333,-65198.333333333336,True,True
+val,3,3,1906280.0,1956180.0,1915036.6666666667,1994893.3333333333,-79856.66666666667,True,True

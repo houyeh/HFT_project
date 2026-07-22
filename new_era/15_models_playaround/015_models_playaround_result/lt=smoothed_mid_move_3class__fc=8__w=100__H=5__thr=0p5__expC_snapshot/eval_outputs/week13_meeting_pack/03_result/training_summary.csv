@@ -1,0 +1,2 @@
+best_epoch_by_val_loss,min_val_loss,last_train_loss,last_val_loss,max_val_macro_f1_if_available
+30,0.7814035496196231,0.8561482335257734,0.7814035496196231,

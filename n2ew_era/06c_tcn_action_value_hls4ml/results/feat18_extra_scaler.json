@@ -1,0 +1,10 @@
+{
+  "hawkes_log1p_mean_train": 4.97620964050293,
+  "hawkes_log1p_std_train": 0.34244826436042786,
+  "train_rows": 2470559,
+  "missing_after_coerce": 0,
+  "normalization_fit_split": "train",
+  "new3_used_for_scaler": false,
+  "new4_used_for_scaler": false,
+  "new5_used_for_scaler": false
+}

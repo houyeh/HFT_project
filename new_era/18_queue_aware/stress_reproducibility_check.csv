@@ -1,0 +1,5 @@
+policy,expected_base_pnl,stress_engine_base_pnl,abs_diff,pass
+no_cancel,63785.0,63785.0,0.0,True
+016_v2_binary,132590.0,132590.0,0.0,True
+015_common,90845.0,90845.0,0.0,True
+random_v3_mean,25046.086,25046.086,0.0,True

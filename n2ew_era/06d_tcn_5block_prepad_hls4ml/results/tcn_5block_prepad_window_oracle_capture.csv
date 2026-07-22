@@ -1,0 +1,16 @@
+split,comparison_feature_universe,policy_id,policy_selected_count,policy_pnl,matched_count_oracle_pnl,capture_ratio,opportunity_gap,oracle_uses_future_labels,new5_used
+val,18feat,side_by_queue_imbalance_abs_0p1,68981,1237145.0,7644845.0,0.1618273490175406,6407700.0,True,False
+val,18feat,ml_hgb_regressor_shallow_convergence_selected,61679,1671675.0,7754375.0,0.2155783025711292,6082700.0,True,False
+val,18feat,phc_lite_v1,63766,1927170.0,7723070.0,0.24953418782945125,5795900.0,True,False
+val,18feat,phc_stp_v2_cosine,64568,2037925.0,7711040.0,0.2642866591276922,5673115.0,True,False
+val,18feat,tcn_5block_prepad_18feat,61538,1718090.0,7756490.0,0.22150354090574473,6038400.0,True,False
+new3,18feat,side_by_queue_imbalance_abs_0p1,144745,2954770.0,18743970.0,0.15763842985237386,15789200.0,True,False
+new3,18feat,ml_hgb_regressor_shallow_convergence_selected,134210,4010580.0,18901995.0,0.21217760347518874,14891415.0,True,False
+new3,18feat,phc_lite_v1,138261,5021515.0,18841230.0,0.2665173664352062,13819715.0,True,False
+new3,18feat,phc_stp_v2_cosine,141208,5237410.0,18797025.0,0.2786297299705672,13559615.0,True,False
+new3,18feat,tcn_5block_prepad_18feat,134780,4500130.0,18893445.0,0.2381847249138524,14393315.0,True,False
+new4,18feat,side_by_queue_imbalance_abs_0p1,56147,1003910.0,7328025.0,0.13699598459339318,6324115.0,True,False
+new4,18feat,ml_hgb_regressor_shallow_convergence_selected,51753,1395420.0,7393935.0,0.18872494821769464,5998515.0,True,False
+new4,18feat,phc_lite_v1,53169,1762495.0,7372695.0,0.23905708835100326,5610200.0,True,False
+new4,18feat,phc_stp_v2_cosine,54183,1871685.0,7357485.0,0.25439195594690306,5485800.0,True,False
+new4,18feat,tcn_5block_prepad_18feat,51521,1603400.0,7397415.0,0.21675139220930556,5794015.0,True,False

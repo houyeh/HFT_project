@@ -1,0 +1,208 @@
+  **** HLS Build v2025.2 6295257
+INFO: [HLS 200-2005] Using work_dir C:/Users/holbo/00VS_projjects/00_HFT_project/n2ew_era/06g_phc_diagonal_manual_hls/hls_component/hls_component 
+INFO: [HLS 200-2176] Writing Vitis IDE component file C:/Users/holbo/00VS_projjects/00_HFT_project/n2ew_era/06g_phc_diagonal_manual_hls/hls_component/hls_component/vitis-comp.json
+INFO: [HLS 200-10] Creating and opening component 'C:/Users/holbo/00VS_projjects/00_HFT_project/n2ew_era/06g_phc_diagonal_manual_hls/hls_component/hls_component'.
+INFO: [HLS 200-1505] Using default flow_target 'vivado'
+Resolution: For help on HLS 200-1505 see docs.amd.com/access/sources/dita/topic?Doc_Version=2025.2%20English&url=ug1448-hls-guidance&resourceid=200-1505.html
+INFO: [HLS 200-2174] Applying component config ini file ../hls_config.cfg
+INFO: [HLS 200-1465] Applying config ini 'syn.file=../hls_src/phc_diag_step_hls.cpp' from ../hls_config.cfg(8)
+INFO: [HLS 200-10] Adding design file 'C:/Users/holbo/00VS_projjects/00_HFT_project/n2ew_era/06g_phc_diagonal_manual_hls/hls_src/phc_diag_step_hls.cpp' to the project
+INFO: [HLS 200-1465] Applying config ini 'syn.file=../hls_src/phc_diag_step_hls.hpp' from ../hls_config.cfg(9)
+INFO: [HLS 200-10] Adding design file 'C:/Users/holbo/00VS_projjects/00_HFT_project/n2ew_era/06g_phc_diagonal_manual_hls/hls_src/phc_diag_step_hls.hpp' to the project
+INFO: [HLS 200-1465] Applying config ini 'syn.file=../hls_src/phc_diag_weights.hpp' from ../hls_config.cfg(10)
+INFO: [HLS 200-10] Adding design file 'C:/Users/holbo/00VS_projjects/00_HFT_project/n2ew_era/06g_phc_diagonal_manual_hls/hls_src/phc_diag_weights.hpp' to the project
+INFO: [HLS 200-1465] Applying config ini 'tb.file=../hls_src/phc_diag_step_testbench.cpp' from ../hls_config.cfg(11)
+INFO: [HLS 200-10] Adding test bench file 'C:/Users/holbo/00VS_projjects/00_HFT_project/n2ew_era/06g_phc_diagonal_manual_hls/hls_src/phc_diag_step_testbench.cpp' to the project
+INFO: [HLS 200-1465] Applying config ini 'syn.top=phc_diag_step' from ../hls_config.cfg(7)
+INFO: [HLS 200-1465] Applying config ini 'flow_target=vivado' from ../hls_config.cfg(4)
+INFO: [HLS 200-1505] Using flow_target 'vivado'
+Resolution: For help on HLS 200-1505 see docs.amd.com/access/sources/dita/topic?Doc_Version=2025.2%20English&url=ug1448-hls-guidance&resourceid=200-1505.html
+INFO: [HLS 200-1465] Applying config ini 'part=xc7z020clg400-1' from ../hls_config.cfg(1)
+INFO: [HLS 200-1611] Setting target device to 'xc7z020-clg400-1'
+INFO: [HLS 200-1465] Applying config ini 'clock=10ns' from ../hls_config.cfg(12)
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 10ns.
+INFO: [HLS 200-1465] Applying config ini 'cosim.argv=C:/Users/holbo/00VS_projjects/00_HFT_project/n2ew_era/06g_phc_diagonal_manual_hls/results/phc_diag_step_test_vectors.csv C:/Users/holbo/00VS_projjects/00_HFT_project/n2ew_era/06g_phc_diagonal_manual_hls/results/phc_diag_step_cosim_out.csv' from ../hls_config.cfg(13)
+INFO: [HLS 200-1465] Applying config ini 'csim.argv=C:/Users/holbo/00VS_projjects/00_HFT_project/n2ew_era/06g_phc_diagonal_manual_hls/results/phc_diag_step_test_vectors.csv C:/Users/holbo/00VS_projjects/00_HFT_project/n2ew_era/06g_phc_diagonal_manual_hls/results/phc_diag_step_csim_out.csv' from ../hls_config.cfg(14)
+INFO: [HLS 200-1465] Applying config ini 'package.output.format=ip_catalog' from ../hls_config.cfg(5)
+INFO: [HLS 200-2176] Writing Vitis IDE component file C:/Users/holbo/00VS_projjects/00_HFT_project/n2ew_era/06g_phc_diagonal_manual_hls/hls_component/hls_component/vitis-comp.json
+INFO: [HLS 200-111] Finished File checks and directory preparation: CPU user time: 0 seconds. CPU system time: 2 seconds. Elapsed time: 11.326 seconds; current allocated memory: 134.344 MB.
+INFO: [HLS 200-2191] C-Synthesis will use clang-16 as the compiler
+INFO: [HLS 200-10] Analyzing design file 'C:/Users/holbo/00VS_projjects/00_HFT_project/n2ew_era/06g_phc_diagonal_manual_hls/hls_src/phc_diag_step_hls.cpp' ... 
+INFO: [HLS 200-111] Finished Source Code Analysis and Preprocessing: CPU user time: 1 seconds. CPU system time: 0 seconds. Elapsed time: 99.601 seconds; current allocated memory: 141.020 MB.
+INFO: [HLS 200-777] Using interface defaults for 'Vivado' flow target.
+INFO: [HLS 200-1995] There were 41,588 instructions in the design after the 'Compile/Link' phase of compilation. See the Design Size Report for more details (C:/Users/holbo/00VS_projjects/00_HFT_project/n2ew_era/06g_phc_diagonal_manual_hls/hls_component/hls_component/hls/syn/report/csynth_design_size.rpt:2)
+INFO: [HLS 200-1995] There were 7,417 instructions in the design after the 'Unroll/Inline (step 1)' phase of compilation. See the Design Size Report for more details (C:/Users/holbo/00VS_projjects/00_HFT_project/n2ew_era/06g_phc_diagonal_manual_hls/hls_component/hls_component/hls/syn/report/csynth_design_size.rpt:2)
+INFO: [HLS 200-1995] There were 2,480 instructions in the design after the 'Unroll/Inline (step 2)' phase of compilation. See the Design Size Report for more details (C:/Users/holbo/00VS_projjects/00_HFT_project/n2ew_era/06g_phc_diagonal_manual_hls/hls_component/hls_component/hls/syn/report/csynth_design_size.rpt:2)
+INFO: [HLS 200-1995] There were 2,390 instructions in the design after the 'Unroll/Inline (step 3)' phase of compilation. See the Design Size Report for more details (C:/Users/holbo/00VS_projjects/00_HFT_project/n2ew_era/06g_phc_diagonal_manual_hls/hls_component/hls_component/hls/syn/report/csynth_design_size.rpt:2)
+INFO: [HLS 200-1995] There were 2,381 instructions in the design after the 'Unroll/Inline (step 4)' phase of compilation. See the Design Size Report for more details (C:/Users/holbo/00VS_projjects/00_HFT_project/n2ew_era/06g_phc_diagonal_manual_hls/hls_component/hls_component/hls/syn/report/csynth_design_size.rpt:2)
+INFO: [HLS 200-1995] There were 2,523 instructions in the design after the 'Array/Struct (step 1)' phase of compilation. See the Design Size Report for more details (C:/Users/holbo/00VS_projjects/00_HFT_project/n2ew_era/06g_phc_diagonal_manual_hls/hls_component/hls_component/hls/syn/report/csynth_design_size.rpt:2)
+INFO: [HLS 200-1995] There were 2,391 instructions in the design after the 'Array/Struct (step 2)' phase of compilation. See the Design Size Report for more details (C:/Users/holbo/00VS_projjects/00_HFT_project/n2ew_era/06g_phc_diagonal_manual_hls/hls_component/hls_component/hls/syn/report/csynth_design_size.rpt:2)
+INFO: [HLS 200-1995] There were 2,391 instructions in the design after the 'Array/Struct (step 3)' phase of compilation. See the Design Size Report for more details (C:/Users/holbo/00VS_projjects/00_HFT_project/n2ew_era/06g_phc_diagonal_manual_hls/hls_component/hls_component/hls/syn/report/csynth_design_size.rpt:2)
+INFO: [HLS 200-1995] There were 2,391 instructions in the design after the 'Array/Struct (step 4)' phase of compilation. See the Design Size Report for more details (C:/Users/holbo/00VS_projjects/00_HFT_project/n2ew_era/06g_phc_diagonal_manual_hls/hls_component/hls_component/hls/syn/report/csynth_design_size.rpt:2)
+INFO: [HLS 200-1995] There were 2,401 instructions in the design after the 'Array/Struct (step 5)' phase of compilation. See the Design Size Report for more details (C:/Users/holbo/00VS_projjects/00_HFT_project/n2ew_era/06g_phc_diagonal_manual_hls/hls_component/hls_component/hls/syn/report/csynth_design_size.rpt:2)
+INFO: [HLS 200-1995] There were 2,401 instructions in the design after the 'Performance (step 1)' phase of compilation. See the Design Size Report for more details (C:/Users/holbo/00VS_projjects/00_HFT_project/n2ew_era/06g_phc_diagonal_manual_hls/hls_component/hls_component/hls/syn/report/csynth_design_size.rpt:2)
+INFO: [HLS 200-1995] There were 2,391 instructions in the design after the 'Performance (step 2)' phase of compilation. See the Design Size Report for more details (C:/Users/holbo/00VS_projjects/00_HFT_project/n2ew_era/06g_phc_diagonal_manual_hls/hls_component/hls_component/hls/syn/report/csynth_design_size.rpt:2)
+INFO: [HLS 200-1995] There were 2,399 instructions in the design after the 'Performance (step 3)' phase of compilation. See the Design Size Report for more details (C:/Users/holbo/00VS_projjects/00_HFT_project/n2ew_era/06g_phc_diagonal_manual_hls/hls_component/hls_component/hls/syn/report/csynth_design_size.rpt:2)
+INFO: [HLS 200-1995] There were 2,330 instructions in the design after the 'Performance (step 4)' phase of compilation. See the Design Size Report for more details (C:/Users/holbo/00VS_projjects/00_HFT_project/n2ew_era/06g_phc_diagonal_manual_hls/hls_component/hls_component/hls/syn/report/csynth_design_size.rpt:2)
+INFO: [HLS 200-1995] There were 2,338 instructions in the design after the 'HW Transforms (step 1)' phase of compilation. See the Design Size Report for more details (C:/Users/holbo/00VS_projjects/00_HFT_project/n2ew_era/06g_phc_diagonal_manual_hls/hls_component/hls_component/hls/syn/report/csynth_design_size.rpt:2)
+INFO: [HLS 200-1995] There were 2,383 instructions in the design after the 'HW Transforms (step 2)' phase of compilation. See the Design Size Report for more details (C:/Users/holbo/00VS_projjects/00_HFT_project/n2ew_era/06g_phc_diagonal_manual_hls/hls_component/hls_component/hls/syn/report/csynth_design_size.rpt:2)
+INFO: [HLS 214-131] Inlining function '(anonymous namespace)::tanh_lut_scalar(ap_fixed<40, 16, (ap_q_mode)5, (ap_o_mode)3, 0>)' into '(anonymous namespace)::sigmoid_scalar(ap_fixed<40, 16, (ap_q_mode)5, (ap_o_mode)3, 0>)' (C:/Users/holbo/00VS_projjects/00_HFT_project/n2ew_era/06g_phc_diagonal_manual_hls/hls_src/phc_diag_step_hls.cpp:56:30)
+INFO: [HLS 214-131] Inlining function '(anonymous namespace)::sigmoid_scalar(ap_fixed<40, 16, (ap_q_mode)5, (ap_o_mode)3, 0>)' into '(anonymous namespace)::silu_16(ap_fixed<40, 16, (ap_q_mode)5, (ap_o_mode)3, 0> const*, ap_fixed<40, 16, (ap_q_mode)5, (ap_o_mode)3, 0>*)' (C:/Users/holbo/00VS_projjects/00_HFT_project/n2ew_era/06g_phc_diagonal_manual_hls/hls_src/phc_diag_step_hls.cpp:63:26)
+INFO: [HLS 214-131] Inlining function '(anonymous namespace)::linear_16_16_fixed(ap_fixed<24, 12, (ap_q_mode)5, (ap_o_mode)3, 0> const*, ap_fixed<24, 12, (ap_q_mode)5, (ap_o_mode)3, 0> const (*) [16], ap_fixed<24, 12, (ap_q_mode)5, (ap_o_mode)3, 0> const*, ap_fixed<40, 16, (ap_q_mode)5, (ap_o_mode)3, 0>*)' into '(anonymous namespace)::encoder_stage(ap_fixed<24, 12, (ap_q_mode)5, (ap_o_mode)3, 0> const*, ap_fixed<40, 16, (ap_q_mode)5, (ap_o_mode)3, 0>*)' (C:/Users/holbo/00VS_projjects/00_HFT_project/n2ew_era/06g_phc_diagonal_manual_hls/hls_src/phc_diag_step_hls.cpp:137:5)
+INFO: [HLS 214-131] Inlining function '(anonymous namespace)::silu_16(ap_fixed<40, 16, (ap_q_mode)5, (ap_o_mode)3, 0> const*, ap_fixed<40, 16, (ap_q_mode)5, (ap_o_mode)3, 0>*)' into '(anonymous namespace)::encoder_stage(ap_fixed<24, 12, (ap_q_mode)5, (ap_o_mode)3, 0> const*, ap_fixed<40, 16, (ap_q_mode)5, (ap_o_mode)3, 0>*)' (C:/Users/holbo/00VS_projjects/00_HFT_project/n2ew_era/06g_phc_diagonal_manual_hls/hls_src/phc_diag_step_hls.cpp:139:5)
+INFO: [HLS 214-131] Inlining function '(anonymous namespace)::layernorm_16(ap_fixed<40, 16, (ap_q_mode)5, (ap_o_mode)3, 0> const*, ap_fixed<24, 12, (ap_q_mode)5, (ap_o_mode)3, 0> const*, ap_fixed<24, 12, (ap_q_mode)5, (ap_o_mode)3, 0> const*, ap_fixed<40, 16, (ap_q_mode)5, (ap_o_mode)3, 0>*)' into '(anonymous namespace)::encoder_stage(ap_fixed<24, 12, (ap_q_mode)5, (ap_o_mode)3, 0> const*, ap_fixed<40, 16, (ap_q_mode)5, (ap_o_mode)3, 0>*)' (C:/Users/holbo/00VS_projjects/00_HFT_project/n2ew_era/06g_phc_diagonal_manual_hls/hls_src/phc_diag_step_hls.cpp:138:5)
+INFO: [HLS 214-131] Inlining function '(anonymous namespace)::linear_16_2_acc(ap_fixed<40, 16, (ap_q_mode)5, (ap_o_mode)3, 0> const*, ap_fixed<24, 12, (ap_q_mode)5, (ap_o_mode)3, 0> const (*) [16], ap_fixed<24, 12, (ap_q_mode)5, (ap_o_mode)3, 0> const*, ap_fixed<40, 16, (ap_q_mode)5, (ap_o_mode)3, 0>*)' into '(anonymous namespace)::readout_stage(ap_fixed<40, 16, (ap_q_mode)5, (ap_o_mode)3, 0> const*, ap_fixed<40, 16, (ap_q_mode)5, (ap_o_mode)3, 0>*)' (C:/Users/holbo/00VS_projjects/00_HFT_project/n2ew_era/06g_phc_diagonal_manual_hls/hls_src/phc_diag_step_hls.cpp:159:5)
+INFO: [HLS 214-131] Inlining function '(anonymous namespace)::encoder_stage(ap_fixed<24, 12, (ap_q_mode)5, (ap_o_mode)3, 0> const*, ap_fixed<40, 16, (ap_q_mode)5, (ap_o_mode)3, 0>*)' into 'phc_diag_step(ap_fixed<24, 12, (ap_q_mode)5, (ap_o_mode)3, 0> const*, ap_fixed<24, 12, (ap_q_mode)5, (ap_o_mode)3, 0> const*, ap_fixed<24, 12, (ap_q_mode)5, (ap_o_mode)3, 0>*, ap_fixed<24, 12, (ap_q_mode)5, (ap_o_mode)3, 0>*)' (C:/Users/holbo/00VS_projjects/00_HFT_project/n2ew_era/06g_phc_diagonal_manual_hls/hls_src/phc_diag_step_hls.cpp:174:5)
+INFO: [HLS 214-131] Inlining function '(anonymous namespace)::recurrence_stage(ap_fixed<24, 12, (ap_q_mode)5, (ap_o_mode)3, 0> const*, ap_fixed<40, 16, (ap_q_mode)5, (ap_o_mode)3, 0> const*, ap_fixed<40, 16, (ap_q_mode)5, (ap_o_mode)3, 0>*)' into 'phc_diag_step(ap_fixed<24, 12, (ap_q_mode)5, (ap_o_mode)3, 0> const*, ap_fixed<24, 12, (ap_q_mode)5, (ap_o_mode)3, 0> const*, ap_fixed<24, 12, (ap_q_mode)5, (ap_o_mode)3, 0>*, ap_fixed<24, 12, (ap_q_mode)5, (ap_o_mode)3, 0>*)' (C:/Users/holbo/00VS_projjects/00_HFT_project/n2ew_era/06g_phc_diagonal_manual_hls/hls_src/phc_diag_step_hls.cpp:175:5)
+INFO: [HLS 214-131] Inlining function '(anonymous namespace)::readout_stage(ap_fixed<40, 16, (ap_q_mode)5, (ap_o_mode)3, 0> const*, ap_fixed<40, 16, (ap_q_mode)5, (ap_o_mode)3, 0>*)' into 'phc_diag_step(ap_fixed<24, 12, (ap_q_mode)5, (ap_o_mode)3, 0> const*, ap_fixed<24, 12, (ap_q_mode)5, (ap_o_mode)3, 0> const*, ap_fixed<24, 12, (ap_q_mode)5, (ap_o_mode)3, 0>*, ap_fixed<24, 12, (ap_q_mode)5, (ap_o_mode)3, 0>*)' (C:/Users/holbo/00VS_projjects/00_HFT_project/n2ew_era/06g_phc_diagonal_manual_hls/hls_src/phc_diag_step_hls.cpp:176:5)
+INFO: [HLS 214-291] Loop 'VITIS_LOOP_271_2' is marked as complete unroll implied by the pipeline pragma (C:/AMDDesignTools/2025.2/Vitis/common/technology/autopilot/etc/hls_sqrt_apfixed.h:271:27)
+INFO: [HLS 214-291] Loop 'VITIS_LOOP_243_1' is marked as complete unroll implied by the pipeline pragma (C:/AMDDesignTools/2025.2/Vitis/common/technology/autopilot/etc/hls_sqrt_apfixed.h:243:27)
+INFO: [HLS 214-186] Unrolling loop 'VITIS_LOOP_271_2' (C:/AMDDesignTools/2025.2/Vitis/common/technology/autopilot/etc/hls_sqrt_apfixed.h:271:27) in function 'sqrt_fixed<49, 25>' completely with a factor of 25 (C:/AMDDesignTools/2025.2/Vitis/common/technology/autopilot/etc/hls_sqrt_apfixed.h:20:0)
+INFO: [HLS 214-186] Unrolling loop 'VITIS_LOOP_243_1' (C:/AMDDesignTools/2025.2/Vitis/common/technology/autopilot/etc/hls_sqrt_apfixed.h:243:27) in function 'sqrt_fixed<49, 25>' completely with a factor of 13 (C:/AMDDesignTools/2025.2/Vitis/common/technology/autopilot/etc/hls_sqrt_apfixed.h:20:0)
+INFO: [HLS 214-178] Inlining function 'ap_fixed<49, 25, (ap_q_mode)5, (ap_o_mode)3, 0> hls::sqrt<49, 25>(ap_fixed<49, 25, (ap_q_mode)5, (ap_o_mode)3, 0>)' into 'phc_diag_step(ap_fixed<24, 12, (ap_q_mode)5, (ap_o_mode)3, 0> const*, ap_fixed<24, 12, (ap_q_mode)5, (ap_o_mode)3, 0> const*, ap_fixed<24, 12, (ap_q_mode)5, (ap_o_mode)3, 0>*, ap_fixed<24, 12, (ap_q_mode)5, (ap_o_mode)3, 0>*)' (C:/Users/holbo/00VS_projjects/00_HFT_project/n2ew_era/06g_phc_diagonal_manual_hls/hls_src/phc_diag_step_hls.cpp:169:0)
+INFO: [HLS 214-248] Applying array_partition to '_ZZN12_GLOBAL__N_115tanh_lut_scalarE8ap_fixedILi40ELi16EL9ap_q_mode5EL9ap_o_mode3ELi0EEE8TANH_LUT': Complete partitioning on dimension 1. (C:/Users/holbo/00VS_projjects/00_HFT_project/n2ew_era/06g_phc_diagonal_manual_hls/hls_src/phc_diag_step_hls.cpp:12:0)
+INFO: [HLS 214-421] Partitioning small array 'phc_diag_weights::READOUT_B' due to array size. (C:/Users/holbo/00VS_projjects/00_HFT_project/n2ew_era/06g_phc_diagonal_manual_hls/hls_src/phc_diag_weights.hpp:64:0)
+INFO: [HLS 214-421] Partitioning small array 'readout_acc' due to array size. (C:/Users/holbo/00VS_projjects/00_HFT_project/n2ew_era/06g_phc_diagonal_manual_hls/hls_src/phc_diag_step_hls.cpp:172:15)
+INFO: [HLS 214-248] Applying array_partition to '_ZN16phc_diag_weightsL9READOUT_BE': Complete partitioning on dimension 1. (C:/Users/holbo/00VS_projjects/00_HFT_project/n2ew_era/06g_phc_diagonal_manual_hls/hls_src/phc_diag_weights.hpp:64:0)
+INFO: [HLS 214-248] Applying array_partition to 'readout_acc': Complete partitioning on dimension 1. (C:/Users/holbo/00VS_projjects/00_HFT_project/n2ew_era/06g_phc_diagonal_manual_hls/hls_src/phc_diag_step_hls.cpp:172:15)
+INFO: [HLS 200-111] Finished Compiling Optimization and Transform: CPU user time: 1 seconds. CPU system time: 0 seconds. Elapsed time: 15.9 seconds; current allocated memory: 142.492 MB.
+INFO: [HLS 200-111] Finished Checking Pragmas: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.067 seconds; current allocated memory: 142.492 MB.
+INFO: [HLS 200-10] Starting code transformations ...
+INFO: [HLS 200-111] Finished Standard Transforms: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.686 seconds; current allocated memory: 150.688 MB.
+INFO: [HLS 200-10] Checking synthesizability ...
+WARNING: [SYNCHK 200-120] C:/Users/holbo/00VS_projjects/00_HFT_project/n2ew_era/06g_phc_diagonal_manual_hls/hls_src/phc_diag_step_hls.cpp:121: multiplication is assumed not to overflow by default, otherwise, please add option '-fwrapv'.
+INFO: [SYNCHK 200-10] 0 error(s), 1 warning(s).
+INFO: [HLS 200-111] Finished Checking Synthesizability: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 1.043 seconds; current allocated memory: 154.406 MB.
+INFO: [XFORM 203-401] Performing if-conversion on hyperblock from (C:/AMDDesignTools/2025.2/Vitis/common/technology/autopilot/etc/hls_sqrt_apfixed.h:21:1) to (C:/AMDDesignTools/2025.2/Vitis/common/technology/autopilot/etc/hls_sqrt_apfixed.h:349:1) in function 'sqrt_fixed<49, 25>'... converting 170 basic blocks.
+INFO: [XFORM 203-401] Performing if-conversion on hyperblock from (C:/Users/holbo/00VS_projjects/00_HFT_project/n2ew_era/06g_phc_diagonal_manual_hls/hls_src/phc_diag_step_hls.cpp:62:1) to (C:/Users/holbo/00VS_projjects/00_HFT_project/n2ew_era/06g_phc_diagonal_manual_hls/hls_src/phc_diag_step_hls.cpp:61:22) in function 'phc_diag_step'... converting 6 basic blocks.
+INFO: [XFORM 203-401] Performing if-conversion on hyperblock from (C:/Users/holbo/00VS_projjects/00_HFT_project/n2ew_era/06g_phc_diagonal_manual_hls/hls_src/phc_diag_step_hls.cpp:99:16) to (C:/Users/holbo/00VS_projjects/00_HFT_project/n2ew_era/06g_phc_diagonal_manual_hls/hls_src/phc_diag_step_hls.cpp:92:22) in function 'phc_diag_step'... converting 3 basic blocks.
+INFO: [HLS 200-111] Finished Loop, function and other optimizations: CPU user time: 1 seconds. CPU system time: 0 seconds. Elapsed time: 3.095 seconds; current allocated memory: 180.297 MB.
+INFO: [HLS 200-111] Finished Architecture Synthesis: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 3.125 seconds; current allocated memory: 211.445 MB.
+INFO: [HLS 200-10] Starting hardware synthesis ...
+INFO: [HLS 200-10] Synthesizing 'phc_diag_step' ...
+WARNING: [SYN 201-103] Legalizing function name 'sqrt_fixed<49, 25>' to 'sqrt_fixed_49_25_s'.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'sqrt_fixed_49_25_s' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining function 'sqrt_fixed<49, 25>'.
+INFO: [HLS 200-1470] Pipelining result : Target II = NA, Final II = 1, Depth = 29, function 'sqrt_fixed<49, 25>'
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 1 seconds. CPU system time: 0 seconds. Elapsed time: 4.492 seconds; current allocated memory: 241.469 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.458 seconds; current allocated memory: 241.469 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'phc_diag_step_Pipeline_VITIS_LOOP_149_1' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining loop 'VITIS_LOOP_149_1'.
+INFO: [HLS 200-1470] Pipelining result : Target II = 1, Final II = 1, Depth = 5, loop 'VITIS_LOOP_149_1'
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 1 seconds. CPU system time: 0 seconds. Elapsed time: 1.077 seconds; current allocated memory: 241.469 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.123 seconds; current allocated memory: 241.469 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'phc_diag_step_Outline_VITIS_LOOP_178_1' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.376 seconds; current allocated memory: 241.469 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.042 seconds; current allocated memory: 241.469 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'phc_diag_step_Outline_VITIS_LOOP_182_2' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.178 seconds; current allocated memory: 241.469 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.058 seconds; current allocated memory: 241.469 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'phc_diag_step' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0 seconds. CPU system time: 1 seconds. Elapsed time: 0.511 seconds; current allocated memory: 241.469 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.435 seconds; current allocated memory: 241.469 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'sqrt_fixed_49_25_s' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [RTGEN 206-104] Estimated max fanout for 'sqrt_fixed_49_25_s' is 5560 from HDL expression: (1'b0 == ap_block_pp0_stage0_11001)
+INFO: [RTGEN 206-100] Finished creating RTL model for 'sqrt_fixed_49_25_s'.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 1 seconds. CPU system time: 0 seconds. Elapsed time: 2.156 seconds; current allocated memory: 241.469 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'phc_diag_step_Pipeline_VITIS_LOOP_149_1' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-1030] Apply Unified Pipeline Control on module 'phc_diag_step_Pipeline_VITIS_LOOP_149_1' pipeline 'VITIS_LOOP_149_1' pipeline type 'loop pipeline'
+INFO: [RTGEN 206-100] Generating core module 'mul_24ns_40s_64_2_1': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'mul_36s_24ns_60_2_1': 1 instance(s).
+INFO: [RTGEN 206-100] Finished creating RTL model for 'phc_diag_step_Pipeline_VITIS_LOOP_149_1'.
+INFO: [RTMG 210-279] Implementing memory 'phc_diag_step_phc_diag_step_Pipeline_VITIS_LOOP_149_1_phc_diag_weights_DIAG_DECAY_ROM_AUTO_1R' using auto ROMs.
+INFO: [RTMG 210-279] Implementing memory 'phc_diag_step_phc_diag_step_Pipeline_VITIS_LOOP_149_1_phc_diag_weights_DIAG_GAIN_ROM_AUTO_1R' using auto ROMs.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 2.407 seconds; current allocated memory: 250.879 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'phc_diag_step_Outline_VITIS_LOOP_178_1' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [RTGEN 206-100] Finished creating RTL model for 'phc_diag_step_Outline_VITIS_LOOP_178_1'.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.577 seconds; current allocated memory: 251.188 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'phc_diag_step_Outline_VITIS_LOOP_182_2' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [RTGEN 206-100] Finished creating RTL model for 'phc_diag_step_Outline_VITIS_LOOP_182_2'.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.54 seconds; current allocated memory: 251.848 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'phc_diag_step' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [RTGEN 206-500] Setting interface mode on port 'phc_diag_step/x_t' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'phc_diag_step/state_prev' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'phc_diag_step/readout' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'phc_diag_step/state_next' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on function 'phc_diag_step' to 'ap_ctrl_hs'.
+INFO: [RTGEN 206-100] Generating core module 'mul_24ns_40s_64_2_1': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'mul_26s_40s_64_2_1': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'mul_36s_26s_62_2_1': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'mul_40s_40s_64_2_1': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'mul_40s_40s_72_2_1': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'mul_41s_24ns_65_2_1': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'mul_65s_40s_88_5_1': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'sparsemux_129_6_25_1_1': 2 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'sparsemux_7_2_40_1_1': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'udiv_49s_37ns_40_53_seq_1': 1 instance(s).
+INFO: [RTGEN 206-100] Finished creating RTL model for 'phc_diag_step'.
+INFO: [RTMG 210-279] Implementing memory 'phc_diag_step_phc_diag_weights_ENC_LINEAR_B_ROM_AUTO_1R' using auto ROMs.
+INFO: [RTMG 210-279] Implementing memory 'phc_diag_step_phc_diag_weights_ENC_LINEAR_W_ROM_AUTO_1R' using auto ROMs.
+INFO: [RTMG 210-279] Implementing memory 'phc_diag_step_phc_diag_weights_ENC_NORM_GAMMA_ROM_AUTO_1R' using auto ROMs.
+INFO: [RTMG 210-279] Implementing memory 'phc_diag_step_phc_diag_weights_ENC_NORM_BETA_ROM_AUTO_1R' using auto ROMs.
+INFO: [RTMG 210-279] Implementing memory 'phc_diag_step_phc_diag_weights_READOUT_W_ROM_AUTO_1R' using auto ROMs.
+INFO: [RTMG 210-278] Implementing memory 'phc_diag_step_enc_linear_out_RAM_AUTO_1R1W' using auto RAMs.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 1.699 seconds; current allocated memory: 253.941 MB.
+INFO: [HLS 200-111] Finished Generating all RTL models: CPU user time: 1 seconds. CPU system time: 0 seconds. Elapsed time: 4.741 seconds; current allocated memory: 264.340 MB.
+INFO: [HLS 200-2225] Wrote inferred directives to file C:/Users/holbo/00VS_projjects/00_HFT_project/n2ew_era/06g_phc_diagonal_manual_hls/hls_component/hls_component/hls/syn/inferred_directives.ini
+INFO: [HLS 200-111] Finished Updating report files: CPU user time: 1 seconds. CPU system time: 1 seconds. Elapsed time: 9.409 seconds; current allocated memory: 275.520 MB.
+INFO: [VHDL 208-304] Generating VHDL RTL for phc_diag_step.
+INFO: [VLOG 209-307] Generating Verilog RTL for phc_diag_step.
+INFO: [HLS 200-790] **** Loop Constraint Status: All loop constraints were satisfied.
+INFO: [HLS 200-789] **** Estimated Fmax: 139.92 MHz
+INFO: [HLS 200-112] Total CPU user time: 8 seconds. Total CPU system time: 4 seconds. Total elapsed time: 164.272 seconds; peak allocated memory: 275.559 MB.
+INFO: [v++ 60-791] Total elapsed time: 0h 2m 49s

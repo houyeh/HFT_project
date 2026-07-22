@@ -1,0 +1,22 @@
+# Inferred from syn.array_partition.complete_threshold=4
+set_directive_array_partition tcn_hls::tcn_fixed_top/result.logits_int32 -dim=1 -type=complete result.logits_int32
+set_directive_array_partition tcn_hls::tcn_inference_fixed_int8/fc_bias -dim=1 -type=complete fc_bias
+# Inferred from syn.compile.pipeline_loops=64
+set_directive_pipeline tcn_hls::causal_conv1d_fixed/VITIS_LOOP_63_2
+set_directive_pipeline tcn_hls::residual_block_fixed/VITIS_LOOP_131_1
+set_directive_pipeline tcn_hls::residual_block_fixed/VITIS_LOOP_140_2
+set_directive_pipeline tcn_hls::residual_block_fixed/VITIS_LOOP_169_3
+set_directive_pipeline tcn_hls::requantize_hidden_to_fixed/VITIS_LOOP_48_1
+set_directive_pipeline tcn_hls::bias_to_accumulator_hidden/VITIS_LOOP_26_1
+set_directive_pipeline tcn_hls::residual_block_fixed/VITIS_LOOP_89_2
+set_directive_pipeline tcn_hls::tcn_inference_fixed_int8/VITIS_LOOP_181_2
+set_directive_pipeline tcn_hls::tcn_inference_fixed_int8/VITIS_LOOP_38_1
+set_directive_pipeline tcn_hls::tcn_inference_fixed_int8/VITIS_LOOP_194_1
+set_directive_pipeline tcn_hls::tcn_inference_fixed_int8/VITIS_LOOP_77_1
+set_directive_pipeline tcn_hls::tcn_inference_fixed_int8/VITIS_LOOP_209_1
+set_directive_pipeline tcn_hls::tcn_inference_fixed_int8/VITIS_LOOP_213_2
+set_directive_pipeline tcn_hls::tcn_fixed_top/VITIS_LOOP_17_1
+set_directive_pipeline tcn_hls::tcn_fixed_top/VITIS_LOOP_23_2
+# Inferred from Performance Budgeter performance directives
+set_directive_loop_flatten tcn_hls::residual_block_fixed.4/VITIS_LOOP_62_1
+set_directive_loop_flatten tcn_hls::residual_block_fixed.4/VITIS_LOOP_88_1

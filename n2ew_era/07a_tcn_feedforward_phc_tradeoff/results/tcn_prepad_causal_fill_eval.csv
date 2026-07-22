@@ -1,0 +1,7 @@
+split,policy_id,variant,seed,horizon,fill_model,inventory_cap,sequential_excess_pnl,fill_count,forced_no_quote_count,max_abs_inventory,max_drawdown,win_rate,loss_rate,avg_trade_excess_pnl,fill_uses_future_pnl,new5_used
+val,tcn_prepad_scratch_16feat,scratch,2,20,conservative_l2_stress,1,172195.0,6547,0,1,2965.0,0.46387658469528026,0.5361234153047197,26.301359401252483,False,False
+new3,tcn_prepad_scratch_16feat,scratch,2,20,conservative_l2_stress,1,565260.0,17476,0,1,4635.0,0.4988555733577478,0.5011444266422522,32.344930189974825,False,False
+new4,tcn_prepad_scratch_16feat,scratch,2,20,conservative_l2_stress,1,126915.0,4080,2547,1,2080.0,0.4857843137254902,0.5142156862745098,31.106617647058822,False,False
+val,tcn_prepad_distilled_16feat,distilled,1,20,conservative_l2_stress,1,173650.0,6470,0,1,2290.0,0.46460587326120556,0.5353941267387944,26.839258114374033,False,False
+new3,tcn_prepad_distilled_16feat,distilled,1,20,conservative_l2_stress,1,587795.0,16847,0,1,3220.0,0.50507508755268,0.49492491244732,34.89018816406482,False,False
+new4,tcn_prepad_distilled_16feat,distilled,1,20,conservative_l2_stress,1,133720.0,4033,2370,1,1730.0,0.49243739151996035,0.5075626084800396,33.15645921150508,False,False

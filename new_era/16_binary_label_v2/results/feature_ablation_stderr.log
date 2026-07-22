@@ -1,0 +1,18 @@
+C:\Users\holbo\00VS_projjects\00_HFT_project\new_era\16_binary_label_v2\13_feature_ablation.py:58: FutureWarning: Series.fillna with 'method' is deprecated and will raise in a future version. Use obj.ffill() or obj.bfill() instead.
+  inter_ms = (dt / 1_000_000.0).replace([np.inf, -np.inf], np.nan).fillna(method="bfill").fillna(0.0)
+C:\Users\holbo\00VS_projjects\00_HFT_project\new_era\16_binary_label_v2\13_feature_ablation.py:58: FutureWarning: Series.fillna with 'method' is deprecated and will raise in a future version. Use obj.ffill() or obj.bfill() instead.
+  inter_ms = (dt / 1_000_000.0).replace([np.inf, -np.inf], np.nan).fillna(method="bfill").fillna(0.0)
+C:\Users\holbo\00VS_projjects\00_HFT_project\new_era\16_binary_label_v2\13_feature_ablation.py:58: FutureWarning: Series.fillna with 'method' is deprecated and will raise in a future version. Use obj.ffill() or obj.bfill() instead.
+  inter_ms = (dt / 1_000_000.0).replace([np.inf, -np.inf], np.nan).fillna(method="bfill").fillna(0.0)
+C:\Users\holbo\00VS_projjects\00_HFT_project\new_era\16_binary_label_v2\13_feature_ablation.py:58: FutureWarning: Series.fillna with 'method' is deprecated and will raise in a future version. Use obj.ffill() or obj.bfill() instead.
+  inter_ms = (dt / 1_000_000.0).replace([np.inf, -np.inf], np.nan).fillna(method="bfill").fillna(0.0)
+C:\Users\holbo\00VS_projjects\00_HFT_project\new_era\16_binary_label_v2\13_feature_ablation.py:58: FutureWarning: Series.fillna with 'method' is deprecated and will raise in a future version. Use obj.ffill() or obj.bfill() instead.
+  inter_ms = (dt / 1_000_000.0).replace([np.inf, -np.inf], np.nan).fillna(method="bfill").fillna(0.0)
+C:\Users\holbo\00VS_projjects\00_HFT_project\new_era\16_binary_label_v2\13_feature_ablation.py:58: FutureWarning: Series.fillna with 'method' is deprecated and will raise in a future version. Use obj.ffill() or obj.bfill() instead.
+  inter_ms = (dt / 1_000_000.0).replace([np.inf, -np.inf], np.nan).fillna(method="bfill").fillna(0.0)
+C:\Users\holbo\00VS_projjects\00_HFT_project\new_era\16_binary_label_v2\13_feature_ablation.py:58: FutureWarning: Series.fillna with 'method' is deprecated and will raise in a future version. Use obj.ffill() or obj.bfill() instead.
+  inter_ms = (dt / 1_000_000.0).replace([np.inf, -np.inf], np.nan).fillna(method="bfill").fillna(0.0)
+C:\Users\holbo\00VS_projjects\00_HFT_project\new_era\16_binary_label_v2\13_feature_ablation.py:58: FutureWarning: Series.fillna with 'method' is deprecated and will raise in a future version. Use obj.ffill() or obj.bfill() instead.
+  inter_ms = (dt / 1_000_000.0).replace([np.inf, -np.inf], np.nan).fillna(method="bfill").fillna(0.0)
+C:\Users\holbo\00VS_projjects\00_HFT_project\new_era\16_binary_label_v2\13_feature_ablation.py:58: FutureWarning: Series.fillna with 'method' is deprecated and will raise in a future version. Use obj.ffill() or obj.bfill() instead.
+  inter_ms = (dt / 1_000_000.0).replace([np.inf, -np.inf], np.nan).fillna(method="bfill").fillna(0.0)

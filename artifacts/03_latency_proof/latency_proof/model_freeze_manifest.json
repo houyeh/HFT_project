@@ -1,0 +1,19 @@
+{
+  "source_run_dir": "artifacts\\tw_execution_aware_valcal\\20260319_185026",
+  "frozen_model_path": "artifacts\\latency_proof\\frozen_tcn_best_model.pt",
+  "freeze_reason": "Selected for latency proof benchmark and FPGA handoff.",
+  "proof_reference_delay": 0,
+  "latency_gap_0_vs_4_ticks": -9.0,
+  "hardware_profile": {
+    "feature_set": "execution_aware",
+    "window_size": 100,
+    "num_input_features": 12,
+    "total_params": 4771,
+    "trainable_params": 4771,
+    "total_macs_per_batch": 3686784,
+    "macs_per_sample": 460848.0,
+    "weight_bytes_fp32": 19084,
+    "weight_bytes_int8": 4771,
+    "compression_ratio_fp32_to_int8": 4.0
+  }
+}

@@ -1,0 +1,2 @@
+﻿experiment_id,dataset,data_symbol,eval_sample_stride,label_type,feature_count,tick_size,edge_threshold,quote_step_ticks,baseline_net_pnl_twd,model_net_pnl_twd,improvement_twd,baseline_realized_trades,model_realized_trades,baseline_max_drawdown_twd,model_max_drawdown_twd,baseline_fills,model_fills
+lt=smoothed_mid_move_3class__fc=8__w=100__H=10__thr=1,NEW3_full,TXFA6,50,smoothed_mid_move_3class,8,1.0,0.4,1.0,-4978964.999999997,-4297294.99999997,681670.000000027,9434,8590,4983330.000000001,4317424.999999982,19501,17523

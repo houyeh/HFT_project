@@ -1,0 +1,9 @@
+threshold,veto_count,veto_rate,max_veto_rate,constraints_pass,baseline_pnl,vetoed_quote_ev,after_veto_pnl,incremental_vs_baseline,negative_ev_rate_vetoed,selection_split,test_used_for_selection,model_name,objective,hls_complexity_rank
+0.3446665164335272,1,0.007462686567164179,0.05,True,1218095.0,-9315.0,1227410.0,9315.0,1.0,validation,False,calibrated_logistic_sigmoid,classification_negative_ev,1
+0.7728829566556596,0,0.0,0.05,True,1218095.0,0.0,1218095.0,-0.0,,validation,False,hist_gradient_boosting_classifier,classification_negative_ev,3
+0.4380270723475393,0,0.0,0.05,True,1218095.0,0.0,1218095.0,-0.0,,validation,False,sklearn_mlp_64_32_classifier,classification_negative_ev,4
+8005.17198721894,0,0.0,0.05,True,1218095.0,0.0,1218095.0,-0.0,,validation,False,ridge_quote_ev_regressor,regression_quote_ev,1
+9850.17834611509,0,0.0,0.05,True,1218095.0,0.0,1218095.0,-0.0,,validation,False,hist_gradient_boosting_regressor,regression_quote_ev,3
+18.437601792350545,0,0.0,0.05,True,1218095.0,0.0,1218095.0,-0.0,,validation,False,sklearn_mlp_64_32_regressor,regression_quote_ev,4
+0.9983178840408325,0,0.0,0.05,True,1218095.0,0.0,1218095.0,-0.0,,validation,False,torch_mlp_64_32_classifier_cpu,classification_negative_ev,4
+52064.1015635,0,0.0,0.05,True,1218095.0,0.0,1218095.0,-0.0,,validation,False,torch_mlp_64_32_regressor_cpu,regression_quote_ev,4

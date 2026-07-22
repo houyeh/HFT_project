@@ -1,0 +1,17 @@
+stp120 seed=0 epoch=1 val_pnl=127475.00 selected=61457 grad=1.1801
+stp120 seed=0 epoch=2 val_pnl=482665.00 selected=50030 grad=0.2444
+stp120 seed=0 epoch=3 val_pnl=799765.00 selected=52610 grad=0.0971
+stp120 seed=0 epoch=4 val_pnl=947155.00 selected=54665 grad=0.0741
+stp120 seed=0 epoch=5 val_pnl=1058705.00 selected=54175 grad=0.0641
+stp120 seed=0 epoch=6 val_pnl=1150565.00 selected=55511 grad=0.0590
+stp120 seed=0 epoch=7 val_pnl=1239575.00 selected=56117 grad=0.0574
+stp120 seed=0 epoch=8 val_pnl=1317675.00 selected=56218 grad=0.0565
+stp120 seed=0 epoch=9 val_pnl=1373115.00 selected=57343 grad=0.0544
+stp120 seed=0 epoch=10 val_pnl=1393555.00 selected=58587 grad=0.0579
+stp120 seed=0 epoch=11 val_pnl=1438410.00 selected=58170 grad=0.0574
+stp120 seed=0 epoch=12 val_pnl=1470135.00 selected=58714 grad=0.0535
+stp120 seed=0 epoch=13 val_pnl=1495065.00 selected=58692 grad=0.0554
+stp120 seed=0 epoch=14 val_pnl=1525405.00 selected=60496 grad=0.0736
+stp120 seed=0 epoch=15 val_pnl=1559510.00 selected=61050 grad=0.0654
+stp120 seed=0 epoch=16 val_pnl=1587300.00 selected=60564 grad=0.0558
+stp120 seed=0 epoch=17 val_pnl=1597870.00 selected=60726 grad=0.0693

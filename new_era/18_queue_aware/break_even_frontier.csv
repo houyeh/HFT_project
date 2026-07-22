@@ -1,0 +1,17 @@
+policy,toxic_multiplier,minimum_neutral_fill_haircut_to_stay_positive,last_positive_region,last_positive_pnl,first_negative_region,first_negative_pnl
+015_common,1.0,0.75,"haircut=0.75, toxic=1, delay=0",31505.0,"haircut=0.5, toxic=1, delay=0",-22595.0
+015_common,1.25,0.75,"haircut=0.75, toxic=1.25, delay=0",9830.0,"haircut=0.5, toxic=1.25, delay=0",-37470.0
+015_common,1.5,1.0,"haircut=1, toxic=1.5, delay=0",37045.0,"haircut=0.75, toxic=1.5, delay=0",-11845.0
+015_common,2.0,,NONE,,"haircut=1, toxic=2, delay=0",-16755.0
+016_v2_binary,1.0,0.75,"haircut=0.75, toxic=1, delay=0",91800.0,"haircut=0.5, toxic=1, delay=0",-16140.0
+016_v2_binary,1.25,0.75,"haircut=0.75, toxic=1.25, delay=0",75125.0,"haircut=0.5, toxic=1.25, delay=0",-27315.0
+016_v2_binary,1.5,0.75,"haircut=0.75, toxic=1.5, delay=0",58450.0,"haircut=0.5, toxic=1.5, delay=0",-38490.0
+016_v2_binary,2.0,0.75,"haircut=0.75, toxic=2, delay=0",25100.0,"haircut=0.5, toxic=2, delay=0",-60840.0
+no_cancel,1.0,0.75,"haircut=0.75, toxic=1, delay=0",17115.0,"haircut=0.5, toxic=1, delay=0",-59920.0
+no_cancel,1.25,1.0,"haircut=1, toxic=1.25, delay=0",30635.0,"haircut=0.75, toxic=1.25, delay=0",-9785.0
+no_cancel,1.5,,NONE,,"haircut=1, toxic=1.5, delay=0",-2515.0
+no_cancel,2.0,,NONE,,"haircut=1, toxic=2, delay=0",-68815.0
+random_v3_mean,1.0,0.75,"haircut=0.75, toxic=1, delay=0",4285.752000000003,"haircut=0.5, toxic=1, delay=0",-57292.60499999999
+random_v3_mean,1.25,,NONE,,"haircut=1, toxic=1.25, delay=0",-667.2189999999974
+random_v3_mean,1.5,,NONE,,"haircut=1, toxic=1.5, delay=0",-26380.524
+random_v3_mean,2.0,,NONE,,"haircut=1, toxic=2, delay=0",-77807.13399999999

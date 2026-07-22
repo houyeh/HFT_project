@@ -1,0 +1,10 @@
+seed,split,best_epoch,threshold_selected_on_val_for_seed,action_pnl,selected_action_count,action_pnl_positive,phase,optimizer_restarted,new3_used_for_selection,new4_used_for_selection,new5_used_for_selection
+0,val,165,0.0,1737070.0,61565,True,05f,False,False,False,False
+0,new3,165,0.0,4670290.0,134697,True,05f,False,False,False,False
+0,new4,165,0.0,1632005.0,51535,True,05f,False,False,False,False
+1,val,184,0.0,1676175.0,62119,True,05f,False,False,False,False
+1,new3,184,0.0,4632845.0,137320,True,05f,False,False,False,False
+1,new4,184,0.0,1595345.0,52599,True,05f,False,False,False,False
+2,val,157,0.0,1771525.0,61828,True,05f,False,False,False,False
+2,new3,157,0.0,4727425.0,136027,True,05f,False,False,False,False
+2,new4,157,0.0,1642680.0,51950,True,05f,False,False,False,False

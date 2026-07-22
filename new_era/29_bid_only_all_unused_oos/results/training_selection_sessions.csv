@@ -1,0 +1,10 @@
+dataset,symbol,split,session_id,label_rows,used_for_bid_only_policy
+NEW_ALL,TXFB6,test,20260127Day,410586,not_training_or_selection
+NEW_ALL,TXFB6,test,20260127Night,755735,not_training_or_selection
+NEW_ALL,TXFB6,train,20260121Day,705812,training_context
+NEW_ALL,TXFB6,train,20260122Day,944608,training_context
+NEW_ALL,TXFB6,train,20260122Night,820409,training_context
+NEW_ALL,TXFB6,train,20260123Day,182203,training_context
+NEW_ALL,TXFB6,train,20260123Night,565974,training_context
+NEW_ALL,TXFB6,train,20260126Day,373758,training_context
+NEW_ALL,TXFB6,val,20260126Night,563477,validation_selection

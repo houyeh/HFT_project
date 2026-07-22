@@ -1,0 +1,4 @@
+split,action_pnl_16feat,action_pnl_18feat,action_delta_18_minus_16,causal_fill_pnl_16feat,causal_fill_pnl_18feat,causal_fill_delta_18_minus_16,feature_enrichment_decision
+val,1651605.0,1691290.0,39685.0,138735.0,147400.0,8665.0,feature_enrichment_helps
+new3,4247555.0,4465495.0,217940.0,466395.0,500505.0,34110.0,feature_enrichment_helps
+new4,1503865.0,1583970.0,80105.0,108440.0,111490.0,3050.0,feature_enrichment_helps

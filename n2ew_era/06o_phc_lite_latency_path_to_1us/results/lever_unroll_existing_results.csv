@@ -1,0 +1,6 @@
+lever,tool_stage,latency_cycles,latency_us_100mhz,improvement_vs_v8_x,distance_to_1us_x_at_100mhz,DSP,DSP_pct,LUT,LUT_pct,FF,FF_pct,BRAM_18K,BRAM_pct,fits_budget,timing_closure_evidence
+linear inner-loop unroll factor 1,csim+csynth+cosim_existing_06L_no_P&R,8316,83.16,1.0,83.16,46,20.0,24836,46.0,14518,13.0,6,2.0,True,not_routed_in_06L_summary
+linear inner-loop unroll factor 2,csim+csynth+cosim_existing_06L_no_P&R,5036,50.36,1.6513105639396346,50.36,56,25.0,25601,48.0,16162,15.0,12,4.0,True,not_routed_in_06L_summary
+linear inner-loop unroll factor 4,csim+csynth+cosim_existing_06L_no_P&R,3724,37.24,2.2330827067669174,37.24,57,25.0,27456,51.0,17000,15.0,0,0.0,True,not_routed_in_06L_summary
+linear inner-loop unroll factor 8,csim+csynth+cosim_existing_06L_no_P&R,3068,30.68,2.710560625814863,30.68,70,31.0,30392,57.0,19704,18.0,0,0.0,True,not_routed_in_06L_summary
+linear inner-loop unroll factor 16,csim+csynth+cosim_existing_06L_no_P&R,2316,23.16,3.5906735751295336,23.16,121,55.0,36792,69.0,35774,33.0,0,0.0,True,not_routed_in_06L_summary

@@ -1,0 +1,2 @@
+model,q_total_bits,q_frac_bits,parameter_count,state_elements,state_memory_bits,estimated_mac_per_event,streaming_state_update,window_buffer_required_for_exact_window_mode,streaming_inference_plausible,resource_estimate_type
+PHC-lite v1,24,12,1203,16,384,1056,True,True,True,static_pre_hls_estimate_not_vendor_synthesis

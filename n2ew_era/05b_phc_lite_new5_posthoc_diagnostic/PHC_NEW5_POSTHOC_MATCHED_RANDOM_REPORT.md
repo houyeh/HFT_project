@@ -1,0 +1,7 @@
+# PHC NEW5 Post-hoc Matched Random Report
+
+Matched random is run for PHC-lite only, post-hoc diagnostic. Empirical p-value is the fraction of matched random trials whose PnL is greater than or equal to PHC-lite PnL.
+
+| split                                      | policy_id             |   model_total_excess_pnl_H20 |   model_selected_action_count |   random_trials |   random_mean |   random_std |   random_95p |   random_99p |   empirical_p_value_fraction_random_ge_model | empirical_p_value_wording   | beats_random_95p   | matching                                                    | post_hoc_diagnostic_only   |
+|:-------------------------------------------|:----------------------|-----------------------------:|------------------------------:|----------------:|--------------:|-------------:|-------------:|-------------:|---------------------------------------------:|:----------------------------|:-------------------|:------------------------------------------------------------|:---------------------------|
+| post_hoc_diagnostic_only_not_fresh_holdout | phc_lite_posthoc_new5 |                       582715 |                         19819 |            1000 |       -295702 |      17413.1 |      -267261 |      -254541 |                                            0 | < 0.001                     | True               | count_session_side_spread_bucket_with_session_side_fallback | True                       |

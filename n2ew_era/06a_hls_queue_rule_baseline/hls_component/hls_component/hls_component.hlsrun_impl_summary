@@ -1,0 +1,269 @@
+<ENTRY>
+{
+ "thisFile": "C:/Users\\holbo\\00VS_projjects\\00_HFT_project\\n2ew_era\\06a_hls_queue_rule_baseline\\hls_component\\hls_component\\hls_component.hlsrun_impl_summary",
+ "connectId": "",
+ "serverToken": "",
+ "timestamp": "0"
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_CmdStep",
+ "dateTimestamp": "06/08/26 18:07:54",
+ "timestampMillis": "1780913274604",
+ "buildStep": {
+  "cmdId": "6150e8d8-eb12-4e86-a345-1cc1ab907b2d",
+  "name": "vitis-run",
+  "logFile": "C:/Users\\holbo\\00VS_projjects\\00_HFT_project\\n2ew_era\\06a_hls_queue_rule_baseline\\hls_component\\hls_component\\logs\\hls_component.steps.log",
+  "commandLine": "C:/AMDDesignTools/2025.2/Vitis/bin/unwrapped/win64.o/vitis-run.exe  --mode hls --impl --config C:\\Users\\holbo\\00VS_projjects\\00_HFT_project\\n2ew_era\\06a_hls_queue_rule_baseline\\hls_component\\hls_config.cfg --work_dir hls_component ",
+  "args": [
+   "--mode",
+   "hls",
+   "--impl",
+   "--config",
+   "C:\\Users\\holbo\\00VS_projjects\\00_HFT_project\\n2ew_era\\06a_hls_queue_rule_baseline\\hls_component\\hls_config.cfg",
+   "--work_dir",
+   "hls_component"
+  ],
+  "iniFiles": [],
+  "cwd": "C:\\Users\\holbo\\00VS_projjects\\00_HFT_project\\n2ew_era\\06a_hls_queue_rule_baseline\\hls_component"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Status",
+ "dateTimestamp": "06/08/26 18:07:54",
+ "timestampMillis": "1780913274604",
+ "status": {
+  "cmdId": "6150e8d8-eb12-4e86-a345-1cc1ab907b2d",
+  "state": "CS_RUNNING"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_FlowMetaData",
+ "dateTimestamp": "06/08/26 18:08:01",
+ "timestampMillis": "1780913281642",
+ "buildSummary": {
+  "hardwarePlatform": "",
+  "hardwareDsa": "",
+  "platformDirectory": "",
+  "runtime": "",
+  "systemConfig": "",
+  "flow": "BF_RUN",
+  "target": "TT_HLS_IMPL",
+  "kernels": [
+   {
+    "base": {
+     "type": "KERNEL",
+     "name": "queue_rule_action",
+     "file": "",
+     "reports": [],
+     "uuid": ""
+    },
+    "sources": [
+     "C:/Users\\holbo\\00VS_projjects\\00_HFT_project\\n2ew_era\\06a_hls_queue_rule_baseline\\queue_rule_hls.cpp",
+     "C:/Users\\holbo\\00VS_projjects\\00_HFT_project\\n2ew_era\\06a_hls_queue_rule_baseline\\queue_rule_hls.hpp"
+    ],
+    "psSources": [],
+    "cuNames": [],
+    "type": "HLS",
+    "frequency": 0,
+    "freqUnits": ""
+   }
+  ],
+  "toolVersion": "2025.2"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_SubCmdStep",
+ "dateTimestamp": "06/08/26 18:08:01",
+ "timestampMillis": "1780913281645",
+ "buildStep": {
+  "cmdId": "f574a25b-5e8e-49d4-9485-fdf8d2321683",
+  "name": "",
+  "logFile": "C:/Users\\holbo\\00VS_projjects\\00_HFT_project\\n2ew_era\\06a_hls_queue_rule_baseline\\hls_component\\hls_component\\hls\\hls.log",
+  "commandLine": "",
+  "args": [],
+  "iniFiles": [],
+  "cwd": "C:\\Users\\holbo\\00VS_projjects\\00_HFT_project\\n2ew_era\\06a_hls_queue_rule_baseline\\hls_component"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Status",
+ "dateTimestamp": "06/08/26 18:08:01",
+ "timestampMillis": "1780913281646",
+ "status": {
+  "cmdId": "f574a25b-5e8e-49d4-9485-fdf8d2321683",
+  "state": "CS_RUNNING"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "06/08/26 18:08:01",
+ "timestampMillis": "1780913281649",
+ "report": {
+  "path": "C:/Users\\holbo\\00VS_projjects\\00_HFT_project\\n2ew_era\\06a_hls_queue_rule_baseline\\hls_component\\hls_component\\hls\\impl\\verilog",
+  "name": "",
+  "fileType": "DIR",
+  "reportType": "HLS_RTL_SYNTHESIS",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "06/08/26 18:08:01",
+ "timestampMillis": "1780913281651",
+ "report": {
+  "path": "C:/Users\\holbo\\00VS_projjects\\00_HFT_project\\n2ew_era\\06a_hls_queue_rule_baseline\\hls_component\\hls_component\\hls\\impl\\report\\verilog\\export_syn.rpt",
+  "name": "",
+  "fileType": "TEXT",
+  "reportType": "HLS_RTL_SYNTHESIS",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "06/08/26 18:08:01",
+ "timestampMillis": "1780913281652",
+ "report": {
+  "path": "C:/Users\\holbo\\00VS_projjects\\00_HFT_project\\n2ew_era\\06a_hls_queue_rule_baseline\\hls_component\\hls_component\\hls\\impl\\report\\verilog\\export_syn.xml",
+  "name": "",
+  "fileType": "XML",
+  "reportType": "HLS_RTL_SYNTHESIS",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "06/08/26 18:08:01",
+ "timestampMillis": "1780913281653",
+ "report": {
+  "path": "C:/Users\\holbo\\00VS_projjects\\00_HFT_project\\n2ew_era\\06a_hls_queue_rule_baseline\\hls_component\\hls_component\\hls\\impl\\verilog",
+  "name": "",
+  "fileType": "DIR",
+  "reportType": "HLS_PLACE_AND_ROUTE",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "06/08/26 18:08:01",
+ "timestampMillis": "1780913281654",
+ "report": {
+  "path": "C:/Users\\holbo\\00VS_projjects\\00_HFT_project\\n2ew_era\\06a_hls_queue_rule_baseline\\hls_component\\hls_component\\hls\\impl\\report\\verilog\\export_impl.rpt",
+  "name": "",
+  "fileType": "TEXT",
+  "reportType": "HLS_PLACE_AND_ROUTE",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "06/08/26 18:08:01",
+ "timestampMillis": "1780913281655",
+ "report": {
+  "path": "C:/Users\\holbo\\00VS_projjects\\00_HFT_project\\n2ew_era\\06a_hls_queue_rule_baseline\\hls_component\\hls_component\\hls\\impl\\report\\verilog\\export_impl.xml",
+  "name": "",
+  "fileType": "XML",
+  "reportType": "HLS_PLACE_AND_ROUTE",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "06/08/26 18:13:25",
+ "timestampMillis": "1780913605007",
+ "report": {
+  "path": "C:/Users\\holbo\\00VS_projjects\\00_HFT_project\\n2ew_era\\06a_hls_queue_rule_baseline\\hls_component\\hls_component\\hls",
+  "name": "",
+  "fileType": "DIR",
+  "reportType": "HLS_RTL_SYNTHESIS",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "06/08/26 18:13:25",
+ "timestampMillis": "1780913605008",
+ "report": {
+  "path": "C:/Users\\holbo\\00VS_projjects\\00_HFT_project\\n2ew_era\\06a_hls_queue_rule_baseline\\hls_component\\hls_component\\hls",
+  "name": "",
+  "fileType": "DIR",
+  "reportType": "HLS_PLACE_AND_ROUTE",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Status",
+ "dateTimestamp": "06/08/26 18:13:25",
+ "timestampMillis": "1780913605009",
+ "status": {
+  "cmdId": "f574a25b-5e8e-49d4-9485-fdf8d2321683",
+  "state": "CS_PASSED"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Status",
+ "dateTimestamp": "06/08/26 18:13:25",
+ "timestampMillis": "1780913605136",
+ "status": {
+  "cmdId": "6150e8d8-eb12-4e86-a345-1cc1ab907b2d",
+  "state": "CS_PASSED"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "06/08/26 18:13:25",
+ "timestampMillis": "1780913605136",
+ "report": {
+  "path": "",
+  "name": "",
+  "fileType": "HTML",
+  "reportType": "GLOBAL_RULECHECK_GUIDANCE",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "06/08/26 18:13:25",
+ "timestampMillis": "1780913605137",
+ "report": {
+  "path": "",
+  "name": "",
+  "fileType": "BINARY_PROTOBUF",
+  "reportType": "GLOBAL_RULECHECK_GUIDANCE",
+  "cmdId": ""
+ }
+}
+</ENTRY>

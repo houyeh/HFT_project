@@ -1,0 +1,9 @@
+{
+  "mask_seed": 20260525,
+  "action_count": 934,
+  "neutral_u_sha256": "ad4d88a74a5b340aee952640d59f3357e506bb916e9d24a789d7afa79836571d",
+  "good_u_sha256": "3c46eeaac65ddd4527d168ca56a3657485c408826b4af981eafe65f6d61f9ba1",
+  "random_v3_reference_trials": 16,
+  "random_v3_reference_seed": 20260558,
+  "fixed_mask_policy": "The same neutral_u/good_u arrays and deterministic random_v3 reference masks are used for every stress setting."
+}

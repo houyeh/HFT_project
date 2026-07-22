@@ -1,0 +1,2 @@
+symbol,position_side,close_side,entry_timestamp,exit_timestamp,entry_price,exit_price,size,holding_steps,pnl_ticks,reason
+TXFJ5,short,buy,43055683000000,43116311000000,27121.0,27122.0,1.0,10,-1.0,alpha_decay_exit

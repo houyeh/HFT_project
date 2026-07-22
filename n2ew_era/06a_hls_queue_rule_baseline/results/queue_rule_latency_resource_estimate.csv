@@ -1,0 +1,2 @@
+target_device,kernel,expected_ii,pipeline_pragmas_present,division_used,operators,resource_estimate_type,expected_resource_pressure,fpga_pnl_claim
+PYNQ-Z2 / Zynq-7020,queue_rule_action,1,True,False,"2 add/sub, 2 multiply-by-constant comparisons, branch mux",static_feasibility_estimate_not_vendor_synthesis,very_low,forbidden

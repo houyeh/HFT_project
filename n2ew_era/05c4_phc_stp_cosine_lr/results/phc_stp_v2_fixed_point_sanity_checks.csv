@@ -1,0 +1,10 @@
+split,check,computed,existing,delta,pass
+val,fp32_action_oos_matches_existing_05c4,2037925.0,2037925.0,0.0,True
+val,fp32_causal_fill_matches_existing_05c4,171835.0,171835.0,0.0,True
+val,fixed_causal_fill_not_materially_degraded,171825.0,171835.0,-10.0,True
+new3,fp32_action_oos_matches_existing_05c4,5237410.0,5237410.0,0.0,True
+new3,fp32_causal_fill_matches_existing_05c4,611095.0,611095.0,0.0,True
+new3,fixed_causal_fill_not_materially_degraded,610415.0,611095.0,-680.0,True
+new4,fp32_action_oos_matches_existing_05c4,1871685.0,1871685.0,0.0,True
+new4,fp32_causal_fill_matches_existing_05c4,129160.0,129160.0,0.0,True
+new4,fixed_causal_fill_not_materially_degraded,129940.0,129160.0,780.0,True

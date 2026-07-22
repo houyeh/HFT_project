@@ -1,0 +1,4 @@
+selected_quote_count,total_selected_quote_pnl,mean_quote_pnl,median_quote_pnl,std_quote_pnl,max_win,max_loss,positive_quote_count,negative_quote_count,top_fraction,top_quote_count,top_positive_contribution,top_positive_contribution_pct_of_total_pnl
+246,637510.0,2591.5040650406504,0.0,8570.052649921841,32335.0,-49365.0,92,34,0.01,3,95805.0,0.15027999560791203
+246,637510.0,2591.5040650406504,0.0,8570.052649921841,32335.0,-49365.0,92,34,0.05,13,279555.0,0.438510768458534
+246,637510.0,2591.5040650406504,0.0,8570.052649921841,32335.0,-49365.0,92,34,0.1,25,459125.0,0.7201847814151935

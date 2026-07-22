@@ -1,0 +1,574 @@
+<!doctype html><html><head><meta charset="utf-8"><title>Week 14 HFT FPGA Advisor Digest v2</title><style>body{font-family:Segoe UI,Arial,sans-serif;max-width:1120px;margin:36px auto;padding:0 24px;line-height:1.55;color:#17202a}h1,h2,h3{color:#111827} img{max-width:100%;border:1px solid #d6dae1;margin:12px 0 24px 0}code{background:#f3f4f6;padding:2px 4px;border-radius:3px} table{border-collapse:collapse} th,td{border:1px solid #d6dae1;padding:6px 8px}</style></head><body><p style="color:#667085;font-size:12px">Rendered with mistune.</p><h1>Week 14 HFT FPGA Advisor Digest</h1>
+<p>Source <code>Week14_HFT_FPGA_Advisor_Digest.md</code> was not found in the workspace, so this v2 digest was rebuilt from the current audited artifacts.</p>
+<hr />
+<h1>Week 14 Advisor Digest v2 Addendum</h1>
+<p>This addendum is presentation-ready but deliberately conservative.</p>
+<p>Hard boundaries:</p>
+<ul>
+<li>Do not claim real-world profitability.</li>
+<li>Do not claim FPGA improves PnL.</li>
+<li>Do not claim true queue replay.</li>
+<li>Do not claim the controller beats exact-matched random quote selection; that test is saturated.</li>
+</ul>
+<h2>Figure Index</h2>
+<h3>Baseline Mechanics</h3>
+<p><img src="figures/baseline_flowchart.png" alt="Baseline Mechanics" /></p>
+<h3>Quote Bid/Ask Mechanics</h3>
+<p><img src="figures/quote_bid_ask_diagram.png" alt="Quote Bid/Ask Mechanics" /></p>
+<h3>L1 vs L2 Book Usage</h3>
+<p><img src="figures/l1_l2_book_diagram.png" alt="L1 vs L2 Book Usage" /></p>
+<h3>ML Filtering Waterfall</h3>
+<p><img src="figures/ml_filtering_waterfall.png" alt="ML Filtering Waterfall" /></p>
+<h3>Spread Distribution</h3>
+<p><img src="figures/spread_distribution_by_split_side.png" alt="Spread Distribution" /></p>
+<h3>Rule Ablation</h3>
+<p><img src="figures/rule_ablation_pnl_bar.png" alt="Rule Ablation" /></p>
+<h3>ML vs Baseline</h3>
+<p><img src="figures/ml_vs_baseline_summary.png" alt="ML vs Baseline" /></p>
+<h3>ML Classification Metrics</h3>
+<p><img src="figures/ml_model_family_metrics.png" alt="ML Classification Metrics" /></p>
+<h3>ML Validation Threshold Curves</h3>
+<p><img src="figures/ml_validation_threshold_curves.png" alt="ML Validation Threshold Curves" /></p>
+<h3>ML Epoch Loss Curves</h3>
+<p><img src="figures/ml_epoch_loss_curves.png" alt="ML Epoch Loss Curves" /></p>
+<h3>ML Epoch Metric Curves</h3>
+<p><img src="figures/ml_epoch_metric_curves.png" alt="ML Epoch Metric Curves" /></p>
+<h3>ML Overfit Diagnostic</h3>
+<p><img src="figures/ml_overfit_diagnostic.png" alt="ML Overfit Diagnostic" /></p>
+<h3>ML Confusion Matrices</h3>
+<p><img src="figures/ml_confusion_matrices.png" alt="ML Confusion Matrices" /></p>
+<h3>ML Future Work Decision Tree</h3>
+<p><img src="figures/ml_future_work_decision_tree.png" alt="ML Future Work Decision Tree" /></p>
+<h3>Queue Stress Heatmap</h3>
+<p><img src="figures/queue_stress_heatmap_summary.png" alt="Queue Stress Heatmap" /></p>
+<h3>LOSO Robustness</h3>
+<p><img src="figures/loso_robustness_bar.png" alt="LOSO Robustness" /></p>
+<h3>LOSO Session Concentration</h3>
+<p><img src="figures/loso_session_concentration.png" alt="LOSO Session Concentration" /></p>
+<h3>Adverse Stress Grid</h3>
+<p><img src="figures/adverse_stress_grid_summary.png" alt="Adverse Stress Grid" /></p>
+<h3>Oracle Gap</h3>
+<p><img src="figures/oracle_vs_causal_gap.png" alt="Oracle Gap" /></p>
+<h3>Simulation Environment Table</h3>
+<p><img src="figures/simulation_environment_table.png" alt="Simulation Environment Table" /></p>
+<h3>Latency Path Diagram</h3>
+<p><img src="figures/latency_path_diagram.png" alt="Latency Path Diagram" /></p>
+<h2>Explanatory Modules</h2>
+<h1>Baseline Method Explanation</h1>
+<p>The final non-ML controller is <code>bid_only_spread_ge_1</code>.</p>
+<p>Decision logic:</p>
+<ul>
+<li>Start from quote-eligible rows with a valid L1 book: positive best bid, positive best ask, and non-negative spread.</li>
+<li>Construct two passive candidate actions per event: one bid quote and one ask quote.</li>
+<li>Keep a candidate only when <code>side == bid</code> and <code>spread_ticks &gt;= 1</code>.</li>
+<li>The rule does not read future returns, quote EV, toxicity labels, oracle labels, or model scores.</li>
+</ul>
+<p>Important interpretation:</p>
+<ul>
+<li>In the current quote-eligible universe, all candidate spreads are at least one tick, so <code>spread_ticks &gt;= 1</code> is saturated.</li>
+<li>The controller is therefore best described as a simple bid-side regime filter, not a fine-grained alpha model.</li>
+<li>The evidence is simulator-derived proxy robustness, not proof of real-world profitability.</li>
+</ul>
+<p>Figure: <code>figures/baseline_flowchart.png</code>.</p>
+<hr />
+<h1>Quote Bid/Ask Mechanics</h1>
+<p>A passive market maker posts limit orders instead of crossing the spread.</p>
+<ul>
+<li>Passive bid: place a buy limit order at or near the best bid. If filled, the strategy buys inventory.</li>
+<li>Passive ask: place a sell limit order at or near the best ask. If filled, the strategy sells inventory.</li>
+<li>Spread capture is the intended compensation for providing liquidity.</li>
+<li>Adverse selection is the risk that the quote is filled because informed flow is moving against it.</li>
+</ul>
+<p>Side-specific adverse examples:</p>
+<ul>
+<li>Bid adverse selection: the quote buys, then the mid price falls. The position is immediately underwater.</li>
+<li>Ask adverse selection: the quote sells, then the mid price rises. The strategy has sold too low.</li>
+</ul>
+<p>The project uses proxy quote EV and stress-adjusted fill assumptions because true exchange fills and queue position are not available.</p>
+<p>Figure: <code>figures/quote_bid_ask_diagram.png</code>.</p>
+<hr />
+<h1>L1 vs L2 Data Usage</h1>
+<p>The deployed baseline uses only L1-level information:</p>
+<ul>
+<li>best bid price</li>
+<li>best ask price</li>
+<li>spread in ticks</li>
+<li>quote side</li>
+</ul>
+<p>The rejected ML extensions used richer causal features derived from L2 or event history, such as queue imbalance, depth ratios, volatility, and event rate. Those features may still be useful for future research, but they did not pass the incremental value criteria in the residual-veto setting.</p>
+<p>This distinction matters for hardware design: the baseline maps to simple comparators, while ML/L2 policies require feature extraction, score calibration, and additional audit burden.</p>
+<p>Figure: <code>figures/l1_l2_book_diagram.png</code>.</p>
+<hr />
+<h1>ML Filtering Waterfall</h1>
+<p>This table traces the data flow used by the residual Quote-EV ML veto diagnostics.
+Counts are split-specific and are read from frozen artifacts; no model is retrained here.</p>
+<p>Pipeline meaning:</p>
+<ul>
+<li><code>raw_rows</code>: selected-symbol input rows before the local filter stage.</li>
+<li><code>valid_book_rows</code>: rows with valid top-of-book/depth after the book-validity filter.</li>
+<li><code>quote_eligible_rows</code>: rows admitted into the quote/action source universe. For NEW4, this equals the external OOS valid-book action source because NEW4 was not used for training or validation selection.</li>
+<li><code>candidate_actions</code>: passive bid/ask candidate fills generated by the fill-proxy action table.</li>
+<li><code>baseline_selected_actions</code>: candidate actions selected by <code>bid_only_spread_ge_1</code>.</li>
+<li><code>residual_ml_samples</code>: the residual EV-veto dataset restricted to the baseline-selected universe.</li>
+<li><code>negative_ev_labels</code> / <code>nonnegative_ev_labels</code>: final residual label counts using <code>quote_ev_moderate &lt; 0</code>.</li>
+</ul>
+<p><img src="figures/ml_filtering_waterfall.png" alt="ML Filtering Waterfall" /></p>
+<h2>Counts</h2>
+<table>
+<thead>
+<tr>
+  <th style="text-align:left">split</th>
+  <th style="text-align:right">raw_rows</th>
+  <th style="text-align:right">valid_book_rows</th>
+  <th style="text-align:right">quote_eligible_rows</th>
+  <th style="text-align:right">candidate_actions</th>
+  <th style="text-align:right">baseline_selected_actions</th>
+  <th style="text-align:right">residual_ml_samples</th>
+  <th style="text-align:right">negative_ev_labels</th>
+  <th style="text-align:right">nonnegative_ev_labels</th>
+  <th style="text-align:right">negative_ev_rate</th>
+  <th style="text-align:left">source_note</th>
+  <th style="text-align:right">baseline_to_candidate_rate</th>
+  <th style="text-align:right">residual_to_baseline_rate</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+  <td style="text-align:left">train</td>
+  <td style="text-align:right">3593426</td>
+  <td style="text-align:right">3593424</td>
+  <td style="text-align:right">3592764</td>
+  <td style="text-align:right">1726</td>
+  <td style="text-align:right">820</td>
+  <td style="text-align:right">820</td>
+  <td style="text-align:right">226</td>
+  <td style="text-align:right">594</td>
+  <td style="text-align:right">0.27561</td>
+  <td style="text-align:left">Historical split from 016 quote-eligible universe, then Phase 031 full-action table.</td>
+  <td style="text-align:right">0.475087</td>
+  <td style="text-align:right">1</td>
+</tr>
+<tr>
+  <td style="text-align:left">val</td>
+  <td style="text-align:right">563593</td>
+  <td style="text-align:right">563587</td>
+  <td style="text-align:right">563477</td>
+  <td style="text-align:right">262</td>
+  <td style="text-align:right">134</td>
+  <td style="text-align:right">134</td>
+  <td style="text-align:right">17</td>
+  <td style="text-align:right">117</td>
+  <td style="text-align:right">0.126866</td>
+  <td style="text-align:left">Historical split from 016 quote-eligible universe, then Phase 031 full-action table.</td>
+  <td style="text-align:right">0.51145</td>
+  <td style="text-align:right">1</td>
+</tr>
+<tr>
+  <td style="text-align:left">test</td>
+  <td style="text-align:right">1166541</td>
+  <td style="text-align:right">1166540</td>
+  <td style="text-align:right">1166321</td>
+  <td style="text-align:right">934</td>
+  <td style="text-align:right">419</td>
+  <td style="text-align:right">419</td>
+  <td style="text-align:right">16</td>
+  <td style="text-align:right">403</td>
+  <td style="text-align:right">0.0381862</td>
+  <td style="text-align:left">Historical split from 016 quote-eligible universe, then Phase 031 full-action table.</td>
+  <td style="text-align:right">0.448608</td>
+  <td style="text-align:right">1</td>
+</tr>
+<tr>
+  <td style="text-align:left">NEW4</td>
+  <td style="text-align:right">2274678</td>
+  <td style="text-align:right">2197106</td>
+  <td style="text-align:right">2197106</td>
+  <td style="text-align:right">1306</td>
+  <td style="text-align:right">714</td>
+  <td style="text-align:right">714</td>
+  <td style="text-align:right">103</td>
+  <td style="text-align:right">611</td>
+  <td style="text-align:right">0.144258</td>
+  <td style="text-align:left">External OOS NEW4 used the valid-book controller/action-source flow; no train/val quote-eligible refit or boundary tuning was applied.</td>
+  <td style="text-align:right">0.546708</td>
+  <td style="text-align:right">1</td>
+</tr>
+</tbody>
+</table>
+<h2>Source Artifacts</h2>
+<ul>
+<li>Historical raw/valid/quote-eligible counts: <code>C:\Users\holbo\00VS_projjects\00_HFT_project\new_era\16_binary_label_v2\results\filter_waterfall_by_split.csv</code>.</li>
+<li>Full candidate action universe: <code>C:\Users\holbo\00VS_projjects\00_HFT_project\new_era\31_opportunity_cost_audit\data\full_action_universe.parquet</code>.</li>
+<li>Residual baseline universe labels: <code>C:\Users\holbo\00VS_projjects\00_HFT_project\new_era\28_residual_quote_ev_veto\data\baseline_universe_quote_ev.parquet</code> and <code>C:\Users\holbo\00VS_projjects\00_HFT_project\new_era\28_residual_quote_ev_veto\data\new4_baseline_universe_quote_ev.parquet</code>.</li>
+<li>NEW4 exact selected-symbol raw/valid scan: <code>C:\Users\holbo\00VS_projjects\00_HFT_project\new_era\34_report_expansion_figures_and_methods\results\new4_raw_valid_book_counts.csv</code>.</li>
+</ul>
+<hr />
+<h1>Table Column Definitions and Blank Cell Policy</h1>
+<p>This project intentionally distinguishes missingness from zero-valued metrics.
+A blank cell or <code>NaN</code> should never be read as a hidden zero.</p>
+<table>
+<thead>
+<tr>
+  <th>Cell representation</th>
+  <th>Meaning</th>
+  <th>Typical reason</th>
+  <th>Interpretation rule</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+  <td>Empty string / blank cell</td>
+  <td>Not computed in that artifact</td>
+  <td>Metric did not belong to the table or the upstream script did not produce it</td>
+  <td>Do not compare numerically; inspect the table note/source artifact</td>
+</tr>
+<tr>
+  <td><code>NaN</code></td>
+  <td>Computation was attempted but undefined</td>
+  <td>No samples in a subgroup, one-class label vector, or division by zero denominator</td>
+  <td>Treat as undefined, not as pass/fail by itself</td>
+</tr>
+<tr>
+  <td><code>NA</code> / <code>not_applicable</code></td>
+  <td>Metric is structurally not applicable</td>
+  <td>Example: regression metric for a pure classification-only plot</td>
+  <td>Exclude from aggregate comparisons</td>
+</tr>
+<tr>
+  <td><code>source_missing</code></td>
+  <td>Required upstream source artifact or source column was absent</td>
+  <td>Placeholder reports or compatibility audits</td>
+  <td>The claim is unsupported until the source is regenerated</td>
+</tr>
+<tr>
+  <td><code>0</code> or <code>0.0</code></td>
+  <td>Computed numeric zero</td>
+  <td>Count, PnL, loss, or rate genuinely evaluated to zero</td>
+  <td>It is a real value and can be compared numerically</td>
+</tr>
+</tbody>
+</table>
+<p>For final advisor-facing tables, any ambiguous blank from older phases should be read alongside the nearest <code>status</code>, <code>note</code>, <code>source_note</code>, or report paragraph.
+New Phase 034 follow-up tables use explicit note/status columns where a source was not available or a metric is not applicable.</p>
+<hr />
+<h1>Exact Matched Random Explanation</h1>
+<p>The Phase 032 exact matched random quote baseline produced p-value <code>1.0</code> and zero variance. That is not evidence against or for the controller; it is a saturation diagnostic.</p>
+<p>Why it saturates:</p>
+<ul>
+<li>The controller selects <code>side == bid</code> and <code>spread_ticks &gt;= 1</code>.</li>
+<li>In the quote-eligible action universe, every bid action has <code>spread_ticks &gt;= 1</code>.</li>
+<li>Therefore the policy selects the entire exact candidate universe.</li>
+<li>A random selector constrained to the same exact universe and the same session/spread-bucket counts has no alternative quotes left to sample.</li>
+</ul>
+<p>Correct wording: the exact matched random test is non-informative for quote-selection skill.</p>
+<p>Forbidden wording: the baseline beat exact matched random quote selection.</p>
+<hr />
+<h1>ML Model Results Explanation</h1>
+<p>The ML workstreams tested whether residual ML could improve the conservative baseline by vetoing bad quotes inside the <code>bid_only_spread_ge_1</code> universe.</p>
+<p>Inputs and safeguards:</p>
+<ul>
+<li>Training used causal tabular features such as spread, queue imbalance, depth, volatility, event rate, and imbalance changes.</li>
+<li>Thresholds were selected on validation only.</li>
+<li>Frozen test and NEW4 were not used for model selection.</li>
+<li>ML had to beat matched random veto 95p and improve baseline PnL at low veto rates.</li>
+</ul>
+<p>Observed outcome:</p>
+<ul>
+<li>Validation sometimes showed small improvements.</li>
+<li>Frozen test produced zero useful vetoes or no improvement.</li>
+<li>NEW4 did not survive the matched-random veto hurdle.</li>
+</ul>
+<p>Conservative interpretation: residual ML did not pass the incremental-value standard. This does not prove all ML is useless; it says this residual veto framing was too narrow or unstable.</p>
+<p>Phase 034 recovered this gap by running <code>small_mlp_64_32_epoch_rerun</code> on the same residual universe with validation-only early stopping. The real epoch curves are now included as <code>figures/ml_epoch_loss_curves.png</code>, <code>figures/ml_epoch_metric_curves.png</code>, and <code>figures/ml_overfit_diagnostic.png</code>.</p>
+<p>The recovered curves improve transparency but do not revive ML: the frozen rerun still failed to improve both test and NEW4 over the non-ML baseline.</p>
+<hr />
+<h1>ML Feature Metadata</h1>
+<p>All residual ML families in Phase 28/30 used the same causal residual EV tabular feature set unless noted otherwise.</p>
+<h2>Shared Tabular Feature Set</h2>
+<ul>
+<li><code>spread_ticks</code></li>
+<li><code>queue_imbalance_calc</code></li>
+<li><code>deep_imbalance_calc</code></li>
+<li><code>top_depth</code></li>
+<li><code>depth_ratio</code></li>
+<li><code>volatility_past_50</code></li>
+<li><code>abs_return_past_50</code></li>
+<li><code>event_rate_past_50</code></li>
+<li><code>queue_imbalance_change_past</code></li>
+<li><code>normalized_spread_calc</code></li>
+</ul>
+<h2>Feature Categories</h2>
+<ul>
+<li>L2 depth features: <code>queue_imbalance_calc</code>, <code>deep_imbalance_calc</code>, <code>top_depth</code>, <code>depth_ratio</code>.</li>
+<li>Imbalance ratios: <code>queue_imbalance_calc</code>, <code>deep_imbalance_calc</code>, <code>depth_ratio</code>.</li>
+<li>Rolling/lagged features: <code>volatility_past_50</code>, <code>abs_return_past_50</code>, <code>event_rate_past_50</code>, <code>queue_imbalance_change_past</code>.</li>
+<li>Spread features: <code>spread_ticks</code>, <code>normalized_spread_calc</code>.</li>
+</ul>
+<h2>Model Family Feature Table</h2>
+<table>
+<thead>
+<tr>
+  <th>Model family</th>
+  <th>Color</th>
+  <th>Input format</th>
+  <th>Uses L2 depth</th>
+  <th>Uses imbalance ratios</th>
+  <th>Uses rolling/lagged features</th>
+  <th>Sequence window</th>
+  <th>Feature columns</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+  <td>Linear Models (Logistic)</td>
+  <td><code>#276ef1</code></td>
+  <td>Tabular</td>
+  <td>Yes</td>
+  <td>Yes</td>
+  <td>Yes</td>
+  <td>None</td>
+  <td><code>spread_ticks</code>, <code>queue_imbalance_calc</code>, <code>deep_imbalance_calc</code>, <code>top_depth</code>, <code>depth_ratio</code>, <code>volatility_past_50</code>, <code>abs_return_past_50</code>, <code>event_rate_past_50</code>, <code>queue_imbalance_change_past</code>, <code>normalized_spread_calc</code></td>
+</tr>
+<tr>
+  <td>Tree Boosting (HGB)</td>
+  <td><code>#2f9e44</code></td>
+  <td>Tabular</td>
+  <td>Yes</td>
+  <td>Yes</td>
+  <td>Yes</td>
+  <td>None</td>
+  <td><code>spread_ticks</code>, <code>queue_imbalance_calc</code>, <code>deep_imbalance_calc</code>, <code>top_depth</code>, <code>depth_ratio</code>, <code>volatility_past_50</code>, <code>abs_return_past_50</code>, <code>event_rate_past_50</code>, <code>queue_imbalance_change_past</code>, <code>normalized_spread_calc</code></td>
+</tr>
+<tr>
+  <td>Neural Networks (MLP)</td>
+  <td><code>#c43c35</code></td>
+  <td>Tabular</td>
+  <td>Yes</td>
+  <td>Yes</td>
+  <td>Yes</td>
+  <td>None</td>
+  <td><code>spread_ticks</code>, <code>queue_imbalance_calc</code>, <code>deep_imbalance_calc</code>, <code>top_depth</code>, <code>depth_ratio</code>, <code>volatility_past_50</code>, <code>abs_return_past_50</code>, <code>event_rate_past_50</code>, <code>queue_imbalance_change_past</code>, <code>normalized_spread_calc</code></td>
+</tr>
+<tr>
+  <td>Sequence Models (TCN)</td>
+  <td><code>#7a4cc2</code></td>
+  <td>Causal sequence</td>
+  <td>Yes</td>
+  <td>Yes</td>
+  <td>Yes</td>
+  <td>Default <code>50</code> rows</td>
+  <td><code>spread_ticks</code>, <code>queue_imbalance_calc</code>, <code>deep_imbalance_calc</code>, <code>top_depth</code>, <code>depth_ratio</code>, <code>volatility_past_50</code>, <code>abs_return_past_50</code>, <code>event_rate_past_50</code>, <code>queue_imbalance_change_past</code>, <code>normalized_spread_calc</code> over a past-only window</td>
+</tr>
+</tbody>
+</table>
+<h2>Model Family Notes</h2>
+<ul>
+<li>Linear Models (Logistic): calibrated logistic classifier on the shared tabular feature set.</li>
+<li>Tree Boosting (HGB): histogram gradient boosting classifier/regressor on the shared tabular feature set.</li>
+<li>Neural Networks (MLP): sklearn/PyTorch MLPs, including <code>small_mlp_64_32_epoch_rerun</code>, on the shared tabular feature set.</li>
+<li>Sequence Models (TCN): causal TCN in the exported RTX pack, using the same feature columns over a default causal window of <code>50</code> rows.</li>
+</ul>
+<h2>TCN Sequence Details</h2>
+<ul>
+<li>Script: <code>new_era/30_ml_training_adequacy_audit/export/ml_training_pack/05_tcn_sequence_training.py</code>.</li>
+<li>Default window: <code>--window 50</code>.</li>
+<li>Causal padding is used; the target row sees only historical rows in its window.</li>
+<li>The full sequence tensor is not expanded into RAM; windows are sliced dynamically by the PyTorch Dataset.</li>
+</ul>
+<p>Conservative note: richer feature use does not imply deployable value. Residual ML still failed the frozen incremental-value hurdle.</p>
+<hr />
+<h1>ML Comeback Future Work</h1>
+<p>The conservative baseline has two pain points:</p>
+<ul>
+<li>It is blunt: in this universe it is effectively <code>bid_all</code>, not fine-grained quote selection.</li>
+<li>It may miss positive-EV opportunities outside the bid-only region.</li>
+</ul>
+<p>Future ML routes should avoid repeating the residual-veto trap:</p>
+<ul>
+<li>Full-action EV model: predict stress-adjusted quote EV across bid and ask actions, not only inside the baseline universe.</li>
+<li>Dynamic regime classifier: learn when the bid-side regime is active rather than hard-coding it globally.</li>
+<li>Rolling calibration: use past-only quantile thresholds instead of static absolute scores.</li>
+<li>Sequence model research: use the exported RTX training pack for causal TCNs, while keeping validation-only policy selection.</li>
+</ul>
+<p>Any comeback must still beat strong non-ML baselines, matched random controls, and fresh OOS/walk-forward tests.</p>
+<p>Figure: <code>figures/ml_future_work_decision_tree.png</code>.</p>
+<hr />
+<h1>OOS and Stress Methodology</h1>
+<p>The report separates three types of evidence:</p>
+<ul>
+<li>Frozen historical test: the original held-out split used before later diagnostic phases burned it as pristine.</li>
+<li>External proxy OOS: NEW/NEW3/NEW4-style rebuilt datasets, with NEW/NEW1 dedup caveats.</li>
+<li>Stress tests: simulator-derived perturbations of fills, adverse losses, fees, and timing.</li>
+</ul>
+<p>The stress figures should be read as robustness diagnostics. They do not replay real exchange queue priority or acknowledge true fill events.</p>
+<hr />
+<h1>Queue-Aware Stress Explanation</h1>
+<p>Queue-aware stress is implemented as a proxy stress framework.</p>
+<ul>
+<li>Fill haircut reduces realized fills to simulate worse queue priority.</li>
+<li>Good-fill haircut preferentially removes favorable fills for pessimistic analysis.</li>
+<li>Toxic multiplier increases the penalty of adverse fills.</li>
+<li>Cancel delay shifts the action timing to mimic slower control.</li>
+</ul>
+<p>Exact proxy formula from <code>new_era/18_queue_aware/queue_stress_core.py</code>:</p>
+<ul>
+<li>Effective cancel mask: if <code>delay &lt;= 0</code>, <code>pull_eff[t] = pull[t]</code>; otherwise <code>pull_eff[t] = pull[t - delay]</code> and the first <code>delay</code> rows cannot be cancelled by that signal.</li>
+<li>A candidate fill is kept only if <code>neutral_u &lt;= neutral_fill_haircut</code>.</li>
+<li>For favorable fills, an additional pessimistic filter applies: keep only if <code>good_u &lt;= good_fill_haircut</code>.</li>
+<li>Favorable definition: bid fill is favorable when <code>future_mid_return_H_ticks &gt; 0</code>; ask fill is favorable when <code>future_mid_return_H_ticks &lt; 0</code>.</li>
+<li><code>extra_mult = max(toxic_multiplier - 1, 0)</code>.</li>
+<li>Bid adverse ticks: <code>max(0, -future_mid_return_H_ticks)</code>.</li>
+<li>Ask adverse ticks: <code>max(0, future_mid_return_H_ticks)</code>.</li>
+<li><code>toxic_penalty_ticks = extra_mult * adverse_ticks</code>.</li>
+<li>Bid fill cash update: <code>cash -= bid_price * POINT_VALUE + toxic_penalty_ticks * POINT_VALUE</code>; <code>fees += MAKER_FEE</code>; <code>inventory += 1</code>.</li>
+<li>Ask fill cash update: <code>cash += ask_price * POINT_VALUE - toxic_penalty_ticks * POINT_VALUE</code>; <code>fees += MAKER_FEE</code>; <code>inventory -= 1</code>.</li>
+<li>Session final equity: <code>cash - fees + inventory * final_mid * POINT_VALUE</code>.</li>
+</ul>
+<p>Equivalent single-fill final mark-to-market contribution:</p>
+<ul>
+<li>Bid: <code>(final_mid - bid_price) * POINT_VALUE - toxic_penalty_ticks * POINT_VALUE - MAKER_FEE</code>.</li>
+<li>Ask: <code>(ask_price - final_mid) * POINT_VALUE - toxic_penalty_ticks * POINT_VALUE - MAKER_FEE</code>.</li>
+</ul>
+<p>These stressors are useful for conservative sensitivity analysis, but they are not true queue replay. The data lacks real order IDs, acknowledgements, queue position, and exchange-level fill priority.</p>
+<hr />
+<h1>Quote EV Formula Audit</h1>
+<p><code>quote_ev_moderate</code> is a simulator-derived proxy label. It is not a true exchange queue replay label, and it does not use real queue position, order acknowledgements, or exchange fill IDs.</p>
+<h2>Code Locations</h2>
+<ul>
+<li>Historical train action EV generation: <code>C:\Users\holbo\00VS_projjects\00_HFT_project\new_era\26_robust_baseline_side_aware\baseline_utils.py</code> around line 75 (<code>actions_from_frame</code>).</li>
+<li>Historical val/test and NEW4 stress formula: <code>C:\Users\holbo\00VS_projjects\00_HFT_project\new_era\27_non_ml_final_baseline_audit\common_027.py</code> around line 185 (<code>quote_value_for_stress</code>).</li>
+<li>Residual ML dataset construction: <code>C:\Users\holbo\00VS_projjects\00_HFT_project\new_era\28_residual_quote_ev_veto\common_028.py</code> around line 194 (<code>baseline_universe</code>).</li>
+<li>Candidate action/fill-proxy trigger: <code>C:\Users\holbo\00VS_projjects\00_HFT_project\new_era\18_queue_aware\queue_stress_core.py</code> around line 60 (<code>build_action_table</code>).</li>
+</ul>
+<h2>Horizon and Fill Proxy</h2>
+<ul>
+<li>Horizon <code>H = 10</code> ticks.</li>
+<li>Historical labels store <code>label_horizon_ticks = 10</code> and <code>future_mid_return_H_ticks</code> in <code>new_era/16_binary_label_v2/outputs/binary_labels_v2.parquet</code>.</li>
+<li>NEW4 construction also uses <code>build_new4_frame(horizon_ticks=10)</code>.</li>
+<li>Bid fill-proxy candidate: next row ask price crosses the current quote, <code>ask[t+1] &lt;= bid[t]</code>.</li>
+<li>Ask fill-proxy candidate: next row bid price crosses the current quote, <code>bid[t+1] &gt;= ask[t]</code>.</li>
+</ul>
+<h2>Quote Price Assumption</h2>
+<ul>
+<li>Bid action quote price is the current best bid, <code>price = bid_px_1[t]</code>.</li>
+<li>Ask action quote price is the current best ask, <code>price = ask_px_1[t]</code>.</li>
+<li>The final mark-to-market price is the session final mid price, <code>final_mid = last(mid_price)</code> within the same session.</li>
+</ul>
+<h2>Base Formula</h2>
+<p>For an action with side-specific future markout:</p>
+<pre><code class="language-text">side_markout = future_mid_return_H_ticks                for bid
+side_markout = -future_mid_return_H_ticks               for ask
+adverse_ticks = max(0, -side_markout)
+terminal_ticks = final_mid - quote_price                for bid
+terminal_ticks = quote_price - final_mid                for ask
+eligible = neutral_u &lt;= neutral_fill_haircut
+quote_ev = terminal_ticks * POINT_VALUE - MAKER_FEE - max(toxic_multiplier - 1, 0) * adverse_ticks * POINT_VALUE
+quote_ev_stressed = quote_ev if eligible else 0
+</code></pre>
+<p>Constants used by the current proxy implementation:</p>
+<ul>
+<li><code>POINT_VALUE = 200.0</code>.</li>
+<li><code>MAKER_FEE = 15.0</code>.</li>
+<li><code>neutral_u</code> is a deterministic stable random mask keyed by event/action and side; it is fixed across stress settings for comparability.</li>
+</ul>
+<h2>Stress Parameters</h2>
+<table>
+<thead>
+<tr>
+  <th>Stress level</th>
+  <th style="text-align:right">neutral_fill_haircut</th>
+  <th style="text-align:right">toxic_multiplier</th>
+  <th style="text-align:right">cancel_delay_ticks</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+  <td>base</td>
+  <td style="text-align:right">1.00</td>
+  <td style="text-align:right">1.00</td>
+  <td style="text-align:right">0</td>
+</tr>
+<tr>
+  <td>mild</td>
+  <td style="text-align:right">0.75</td>
+  <td style="text-align:right">1.25</td>
+  <td style="text-align:right">0</td>
+</tr>
+<tr>
+  <td>moderate</td>
+  <td style="text-align:right">0.50</td>
+  <td style="text-align:right">1.50</td>
+  <td style="text-align:right">0</td>
+</tr>
+</tbody>
+</table>
+<p>The residual ML label uses the moderate setting: <code>quote_ev_moderate = quote_ev_stressed</code> under <code>neutral_fill_haircut=0.5</code>, <code>toxic_multiplier=1.5</code>, and <code>delay=0</code>.</p>
+<h2>Explicit Limitation</h2>
+<p>This formula is a proxy quote-EV label. It is useful for controlled falsification and stress tests, but it should not be described as realized exchange PnL or true queue-aware fill toxicity.</p>
+<hr />
+<h1>Oracle Upper Bound Explanation</h1>
+<p>Oracle policies use future information and are not tradable. They answer a feasibility question: is positive moderate-stress PnL mathematically available in the proxy environment?</p>
+<p>Two relevant oracle concepts:</p>
+<ul>
+<li>Perfect toxic cancel oracle: blocks fills known to be toxic using future information.</li>
+<li>Perfect quote PnL filter oracle: keeps only quotes whose realized stress-adjusted proxy EV is positive.</li>
+</ul>
+<p>A large gap between the oracle and causal policies means opportunity exists in the proxy data, but current causal rules or ML features do not capture it reliably.</p>
+<hr />
+<h1>Simulation Environment and Limitations</h1>
+<table>
+<thead>
+<tr>
+  <th>Area</th>
+  <th>Considered</th>
+  <th>Omitted</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+  <td>Market data</td>
+  <td>Best bid/ask, spread, L2-derived features for ML diagnostics</td>
+  <td>Full order-by-order queue reconstruction</td>
+</tr>
+<tr>
+  <td>Execution</td>
+  <td>Passive quote proxy and stress-adjusted quote EV</td>
+  <td>Real exchange acknowledgements and cancellations</td>
+</tr>
+<tr>
+  <td>Queue</td>
+  <td>Haircuts and delay stress proxies</td>
+  <td>True queue priority and order ID matching</td>
+</tr>
+<tr>
+  <td>Labels</td>
+  <td>Simulator-derived quote EV and toxicity proxies</td>
+  <td>Ground-truth aggressor-side exchange fills</td>
+</tr>
+<tr>
+  <td>Hardware</td>
+  <td>HLS-friendly comparator logic and latency framing</td>
+  <td>Proof that FPGA deployment improves PnL</td>
+</tr>
+</tbody>
+</table>
+<p>All profitability statements must remain proxy statements.</p>
+<p>Figure: <code>figures/simulation_environment_table.png</code>.</p>
+<hr />
+<h1>CPU vs FPGA Latency Plan</h1>
+<p>Latency should be decomposed into separate components:</p>
+<ul>
+<li>Compute latency: time to evaluate the controller once market data is available.</li>
+<li>I/O latency: time to receive data and transmit orders.</li>
+<li>Exchange/network latency: venue path, gateway, acknowledgement, and matching-engine timing.</li>
+<li>Jitter: variability in latency, often more important than average latency for risk-control systems.</li>
+</ul>
+<p>Conservative FPGA claim:</p>
+<ul>
+<li>FPGA implementation can reduce deterministic compute jitter for simple comparator logic.</li>
+<li>This supports a latency risk-control framing.</li>
+<li>It does not prove FPGA improves PnL or is necessary for production profitability.</li>
+</ul>
+<p>Figure: <code>figures/latency_path_diagram.png</code>.</p>
+<hr />
+</body></html>

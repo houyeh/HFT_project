@@ -1,0 +1,2 @@
+implementation,latency_cycles,latency_us_at_100mhz,interval,DSP,DSP_pct,LUT,LUT_pct_note,FF,FF_pct,BRAM_18K,BRAM_pct,source
+06f_manual_hls,8316,83.16,8317,46,20.9,24836,06f routed report gives 14.20%; csynth utilization varies by report context,14518,13.6,6,2.1,C:\Users\holbo\00VS_projjects\00_HFT_project\n2ew_era\06f_phc_lite_manual_hls\PHC_HLS_LATENCY_BREAKDOWN_REPORT.md

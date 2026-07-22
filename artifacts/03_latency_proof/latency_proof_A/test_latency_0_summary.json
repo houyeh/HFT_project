@@ -1,0 +1,14 @@
+{
+  "latency_steps": 0,
+  "fill_rate": 0.02830188679245283,
+  "adverse_selection_loss_ticks": 15.0,
+  "realized_trades": 3,
+  "fills": 3,
+  "quote_updates": 106,
+  "toxicity_freeze_events": 0,
+  "net_pnl_ticks": -15.0,
+  "avg_pnl_ticks": -5.0,
+  "win_rate": 0.0,
+  "avg_holding_steps": 1.6666666666666667,
+  "sharpe_like": -5.0
+}

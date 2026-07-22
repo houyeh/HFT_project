@@ -1,0 +1,8 @@
+id,name,goal,output_dir,status,key_result,verdict,use_in_slides,next_action,source_files
+015_main_baseline,Main Baseline TCN,Train mid-move 3-class risk score,new_era/15_models_playaround/015_models_playaround_result/...,completed,Test Net PnL 84980 (0.55),main_baseline_local_edge,YES,regime_diagnosis,baseline_summary_fixed.csv
+016_binary_quote_risk,Binary Quote-Risk PoC,Train side-specific fill-conditional model,new_era/016_new_binary/outputs/,completed,Test Net PnL 266045 (fails vs random+1std),label_poc_not_ready,YES,fix_if_needed,binary_vs_baselines.csv
+016_fix_if_exists,Binary Quote-Risk Fix,Fix binary model,new_era/016_new_binary/outputs_fix/,missing,MISSING,inconclusive,NO,run_if_needed,MISSING
+017_regime_auto_gate,Regime Auto-Gate,Implement causal regime selector,new_era/017_regime_auto_gate/outputs/,completed,NEW3 PnL -630960,failed_valuable_negative_result,YES,improve_stability,regime_auto_gate_report.md
+018_queue_aware_if_exists,Queue-Aware Validation,Validate with queue assumptions,new_era/018_queue_aware_validation/outputs/,pending,Audit completed (no aggressor_side),queue_validation_pending,NO,run_queue_sensitivity,queue_data_audit.md
+week13_meeting_pack,Week 13 Slides,Generate final slide results,meeting/w13/__results/,completed,Generated 12 result folders,inconclusive,YES,review_presentation,week13_output_manifest.csv
+slide_png_generation,Slide Generation,Produce PNG/HTML decks,meeting/w13/,completed,Decks generated,inconclusive,YES,present,W13_meeting.pptx

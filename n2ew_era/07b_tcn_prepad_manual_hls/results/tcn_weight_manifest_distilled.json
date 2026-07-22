@@ -1,0 +1,15 @@
+{
+  "variant": "distilled",
+  "policy_id": "tcn_prepad_distilled_16feat",
+  "seed": 1,
+  "checkpoint": "C:\\Users\\holbo\\00VS_projjects\\00_HFT_project\\n2ew_era\\07a_tcn_feedforward_phc_tradeoff\\models\\tcn_prepad_distilled_16feat_seed1_best_val.pt",
+  "header": "C:\\Users\\holbo\\00VS_projjects\\00_HFT_project\\n2ew_era\\07b_tcn_prepad_manual_hls\\hls_src\\tcn_weights_distilled.hpp",
+  "feature_dim": 16,
+  "channels": 16,
+  "seq_length": 128,
+  "seq_length_in": 252,
+  "receptive_field": 125,
+  "phase": "07b",
+  "source_training_phase": "07a",
+  "new5_used_for_selection": false
+}

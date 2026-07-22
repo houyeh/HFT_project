@@ -1,0 +1,2 @@
+﻿baseline_pnl,model_pnl,improvement_vs_baseline,baseline_pnl_flatten,model_pnl_flatten,improvement_vs_baseline_flatten,trades,maker_trades,taker_trades,ending_inventory,ending_inventory_flatten,forced_liquidation_trades,max_abs_inventory,max_drawdown
+90990.0,86400.0,-4590.0,90490.0,85900.0,-4590.0,440,440,0,-2,0,2,3,25000.0

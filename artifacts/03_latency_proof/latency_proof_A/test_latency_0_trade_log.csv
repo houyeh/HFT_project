@@ -1,0 +1,4 @@
+symbol,position_side,close_side,entry_timestamp,exit_timestamp,entry_price,exit_price,size,holding_steps,pnl_ticks,reason
+MXFJ5,short,buy,42404627000000,42404627000000,27129.0,27136.0,1.0,0,-7.0,stop_loss_exit
+MXFJ5,short,buy,42410649000000,42425221000000,27136.0,27140.0,1.0,2,-4.0,stop_loss_exit
+MXFJ5,long,sell,43162078000000,43200413000000,27129.0,27125.0,1.0,3,-4.0,stop_loss_exit

@@ -1,0 +1,10 @@
+{
+  "original_bash": "C:\\Users\\holbo\\AppData\\Local\\Microsoft\\WindowsApps\\bash.EXE",
+  "detected_windows_system32_wsl_bash": false,
+  "detected_windowsapps_wsl_bash": true,
+  "detected_wsl_bash_shim": true,
+  "path_modified": true,
+  "selected_bash": "C:\\Program Files\\Git\\bin\\bash.exe",
+  "selected_reason": "prepended Git for Windows bash because a Windows WSL bash shim was detected",
+  "post_patch_bash": "C:\\Program Files\\Git\\bin\\bash.EXE"
+}

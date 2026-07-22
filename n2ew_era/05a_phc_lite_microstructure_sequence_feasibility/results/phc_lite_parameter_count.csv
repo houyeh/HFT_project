@@ -1,0 +1,2 @@
+model,feature_dim,hidden_dim,mtl_steps,parameter_count,state_values,estimated_mac_per_event,target_under_20k_params,streaming_inference_plausible
+phc_lite,16,16,1,1203,16,1280,True,True

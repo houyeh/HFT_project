@@ -1,0 +1,7 @@
+gate,pass,rule
+Convergence closed,False,all seeds early_stop=True and best_epoch<185
+Seed stability,True,all seeds x splits action PnL > 0
+Matched random,True,val/NEW3/NEW4 all beat random 95p
+OOS improvement,True,NEW3/NEW4 action PnL >= PHC-lite v1
+Causal-fill improvement,True,val/NEW3/NEW4 sequential PnL >= PHC-lite v1
+Oracle capture improvement,True,val/NEW3/NEW4 capture ratio >= PHC-lite v1

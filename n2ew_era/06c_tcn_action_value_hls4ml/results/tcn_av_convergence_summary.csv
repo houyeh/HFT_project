@@ -1,0 +1,7 @@
+model_variant,policy_id,seed,best_epoch,best_val_pnl,final_epoch,early_stop,max_epoch_hit,convergence_closed,strict_convergence_rule,lr_at_best_epoch,lr_at_final_epoch,grad_norm_at_best_epoch,grad_norm_at_final_epoch,phase
+16feat,tcn_action_value_16feat,0,188,1581875.0,200,False,True,False,early_stop=True and best_epoch<185,2.0284708742225896e-05,1.006106692157801e-05,0.2406596215931992,0.133521821840029,06c
+16feat,tcn_action_value_16feat,1,167,1609695.0,187,True,False,True,early_stop=True and best_epoch<185,7.893269663304778e-05,2.192120284032007e-05,0.1853417154205472,0.1622587722775183,06c
+16feat,tcn_action_value_16feat,2,196,1651605.0,200,False,True,False,early_stop=True and best_epoch<185,1.1525919802101655e-05,1.006106692157801e-05,0.17383822230132,0.1325845132140737,06c
+18feat,tcn_action_value_18feat,0,183,1668145.0,200,False,True,False,early_stop=True and best_epoch<185,2.9654625589913224e-05,1.006106692157801e-05,0.1651162105171304,0.1538736584939454,06c
+18feat,tcn_action_value_18feat,1,193,1570300.0,200,False,True,False,early_stop=True and best_epoch<185,1.3903222849333503e-05,1.006106692157801e-05,0.1141495519366703,0.1122156334550757,06c
+18feat,tcn_action_value_18feat,2,179,1691290.0,199,True,False,True,early_stop=True and best_epoch<185,3.926401936765838e-05,1.0244252618962858e-05,0.1532926820218563,0.133525016178426,06c

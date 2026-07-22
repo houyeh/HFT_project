@@ -1,0 +1,105 @@
+<svg viewBox="0 0 1000 750" xmlns="http://www.w3.org/2000/svg" font-family="Noto Sans CJK TC, Arial, sans-serif">
+  <defs>
+    <marker id="arrow2" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto" markerUnits="strokeWidth">
+      <path d="M0,0 L0,6 L9,3 z" fill="#333"/>
+    </marker>
+    <marker id="arrowRed" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto" markerUnits="strokeWidth">
+      <path d="M0,0 L0,6 L9,3 z" fill="#b00020"/>
+    </marker>
+  </defs>
+  <rect x="0" y="0" width="1000" height="750" fill="#ffffff"/>
+
+  <text x="500" y="26" text-anchor="middle" font-size="17" font-weight="bold" fill="#111">原始論文架構：Parallelized Hierarchical Connectome（arXiv:2604.01295）</text>
+  <text x="500" y="44" text-anchor="middle" font-size="11" fill="#555">靈感來源論文的完整樣貌——本作品 PHC-lite 並非照搬，而是大幅簡化後的版本（紅色＝本作品移除/簡化的部分）</text>
+
+  <!-- Input -->
+  <rect x="40" y="62" width="220" height="50" rx="6" fill="#eef4ff" stroke="#3a6fc4"/>
+  <text x="150" y="82" text-anchor="middle" font-size="11" font-weight="bold">輸入＋感覺驅動遮罩</text>
+  <text x="150" y="97" text-anchor="middle" font-size="9" fill="#666">Linear Encoder + LayerNorm + Input Mask</text>
+
+  <line x1="150" y1="112" x2="150" y2="138" stroke="#333" marker-end="url(#arrow2)"/>
+
+  <!-- Multi-Transmission Loop outer box -->
+  <rect x="40" y="138" width="920" height="420" rx="10" fill="#fbfbfb" stroke="#888" stroke-dasharray="6,4"/>
+  <text x="500" y="160" text-anchor="middle" font-size="12" font-weight="bold" fill="#444">Multi-Transmission Loop（同一時間步內，訊號於下方兩層間反覆循環 k=1...M 次）</text>
+
+  <!-- Neuron Layer box -->
+  <rect x="70" y="182" width="420" height="148" rx="8" fill="#fdeaea" stroke="#c0392b"/>
+  <text x="280" y="202" text-anchor="middle" font-size="12" font-weight="bold">Neuron Layer（NL）－神經元內部動態</text>
+  <text x="280" y="217" text-anchor="middle" font-size="9" fill="#555">每個神經元獨立計算，彼此「內部」不互通</text>
+
+  <rect x="90" y="228" width="170" height="40" rx="5" fill="#ffffff" stroke="#c0392b"/>
+  <text x="175" y="244" text-anchor="middle" font-size="9" font-weight="bold">膜電位漏電積分</text>
+  <text x="175" y="257" text-anchor="middle" font-size="8" fill="#666">(Leaky Integration, V_f)</text>
+
+  <rect x="280" y="228" width="180" height="40" rx="5" fill="#ffffff" stroke="#c0392b"/>
+  <text x="370" y="244" text-anchor="middle" font-size="9" font-weight="bold">自適應發火門檻＋不反應期</text>
+  <text x="370" y="257" text-anchor="middle" font-size="8" fill="#666">(adaptive θ + refractory)</text>
+
+  <line x1="260" y1="248" x2="280" y2="248" stroke="#333" marker-end="url(#arrow2)"/>
+
+  <rect x="150" y="282" width="280" height="40" rx="5" fill="#fff" stroke="#c0392b" stroke-width="1.5"/>
+  <text x="290" y="298" text-anchor="middle" font-size="10" font-weight="bold">產生「真正的脈衝」（0 或 1，二元）</text>
+  <text x="290" y="312" text-anchor="middle" font-size="8" fill="#666">s_out = Heaviside(V_final − v_th)　（ALIF 脈衝神經元）</text>
+  <line x1="280" y1="268" x2="290" y2="282" stroke="#333" marker-end="url(#arrow2)"/>
+
+  <rect x="90" y="332" width="370" height="20" rx="4" fill="#ffe9e9" stroke="#b00020"/>
+  <text x="275" y="346" text-anchor="middle" font-size="9" fill="#b00020" font-weight="bold">✂ 移除脈衝／膜電位／發火門檻機制，改用連續 Sigmoid／Tanh 閘控</text>
+
+  <!-- Synapse Layer box -->
+  <rect x="510" y="182" width="420" height="148" rx="8" fill="#e9f7ef" stroke="#2e8b57"/>
+  <text x="720" y="202" text-anchor="middle" font-size="12" font-weight="bold">Synapse Layer（SL）－神經元之間的溝通</text>
+  <text x="720" y="217" text-anchor="middle" font-size="9" fill="#555">脈衝經「突觸」傳遞給其他神經元時的調節機制</text>
+
+  <rect x="530" y="228" width="180" height="40" rx="5" fill="#ffffff" stroke="#2e8b57"/>
+  <text x="620" y="244" text-anchor="middle" font-size="9" font-weight="bold">短期可塑性（突觸前）</text>
+  <text x="620" y="257" text-anchor="middle" font-size="8" fill="#666">(Tsodyks-Markram STP)</text>
+
+  <rect x="730" y="228" width="180" height="40" rx="5" fill="#ffffff" stroke="#2e8b57"/>
+  <text x="820" y="244" text-anchor="middle" font-size="9" font-weight="bold">分層連接體拓樸（突觸後）</text>
+  <text x="820" y="257" text-anchor="middle" font-size="8" fill="#666">(多區域 R0/R1 + Dale's Law)</text>
+
+  <line x1="710" y1="248" x2="730" y2="248" stroke="#333" marker-end="url(#arrow2)"/>
+
+  <rect x="600" y="282" width="280" height="40" rx="5" fill="#fff" stroke="#2e8b57" stroke-width="1.5"/>
+  <text x="740" y="298" text-anchor="middle" font-size="10" font-weight="bold">產生「突觸電流」，回灌給其他神經元</text>
+  <text x="740" y="312" text-anchor="middle" font-size="8" fill="#666">受 Dale's Law 與零自連結束</text>
+  <line x1="710" y1="268" x2="740" y2="282" stroke="#333" marker-end="url(#arrow2)"/>
+
+  <rect x="540" y="332" width="370" height="20" rx="4" fill="#ffe9e9" stroke="#b00020"/>
+  <text x="725" y="346" text-anchor="middle" font-size="9" fill="#b00020" font-weight="bold">✂ 移除多區域拓樸／STP／Dale's Law，改用單層全連接＋靜態權重</text>
+
+  <!-- loop arrows between NL and SL, routed through the empty center gap (x=490-510) so neither crosses a box -->
+  <line x1="490" y1="248" x2="510" y2="248" stroke="#333" stroke-width="1.5" marker-end="url(#arrow2)"/>
+  <text x="500" y="240" text-anchor="middle" font-size="7" fill="#777"> </text>
+  <polyline points="600,302 460,302" fill="none" stroke="#888" stroke-width="1.3" marker-end="url(#arrow2)"/>
+  <text x="530" y="296" text-anchor="middle" font-size="8" fill="#777">突觸電流回灌 NL，重複循環</text>
+
+  <!-- loop iteration note -->
+  <rect x="200" y="362" width="600" height="34" rx="6" fill="#fff3d6" stroke="#c98a14"/>
+  <text x="500" y="382" text-anchor="middle" font-size="9.5" font-weight="bold">同一時間步內反覆執行 k=1...M 次，直到收斂（Cauchy 判據）或達 N_max 才前進下一刻</text>
+
+  <rect x="200" y="404" width="600" height="20" rx="4" fill="#ffe9e9" stroke="#b00020"/>
+  <text x="500" y="418" text-anchor="middle" font-size="9" fill="#b00020" font-weight="bold">✂ 移除多輪內部收斂迴圈，改為每個時間步「只算一次」（single-pass）</text>
+
+  <!-- R-STDP -->
+  <rect x="200" y="448" width="600" height="40" rx="6" fill="#f3e9ff" stroke="#7d3fc4"/>
+  <text x="500" y="466" text-anchor="middle" font-size="10" font-weight="bold">獎勵調節型突觸時序依賴可塑性（R-STDP）</text>
+  <text x="500" y="480" text-anchor="middle" font-size="8" fill="#666">(Reward-Modulated STDP：推論時權重仍會在線更新)</text>
+
+  <rect x="200" y="496" width="600" height="20" rx="4" fill="#ffe9e9" stroke="#b00020"/>
+  <text x="500" y="510" text-anchor="middle" font-size="9" fill="#b00020" font-weight="bold">✂ 移除推論時的在線權重更新（R-STDP），訓練後權重固定</text>
+
+  <!-- output -->
+  <line x1="500" y1="528" x2="500" y2="554" stroke="#333" marker-end="url(#arrow2)"/>
+  <rect x="350" y="554" width="300" height="44" rx="6" fill="#e8e8e8" stroke="#555"/>
+  <text x="500" y="573" text-anchor="middle" font-size="10" font-weight="bold">最終膜電位 → 線性讀出 → 輸出 logits</text>
+  <text x="500" y="588" text-anchor="middle" font-size="8" fill="#666">(訓練／推論皆以 log-domain 平行前綴掃描求解，O(log T) 深度)</text>
+
+  <rect x="350" y="610" width="300" height="20" rx="4" fill="#ffe9e9" stroke="#b00020"/>
+  <text x="500" y="624" text-anchor="middle" font-size="9" fill="#b00020" font-weight="bold">✂ 移除平行前綴掃描訓練法，改為逐步組合邏輯＋序列遞迴</text>
+
+  <text x="40" y="680" font-size="10.5" fill="#333" font-weight="bold">小結：原始論文是「多區域、會脈衝放電、會在線學習、每刻內部反覆收斂」的生物擬真模型；</text>
+  <text x="40" y="698" font-size="10.5" fill="#333" font-weight="bold">PHC-lite 只保留「門控＋衰減＋狀態相依增益＋神經元/突觸式訊息傳遞」核心精神，其餘移除或簡化，以放入僅 220 顆 DSP 的 FPGA。</text>
+  <text x="40" y="716" font-size="9" fill="#999">資料來源：arXiv:2604.01295（Chiang, 2026）；架構元件名稱依原論文摘述，本圖為示意整理，非逐一還原所有數學細節。</text>
+</svg>

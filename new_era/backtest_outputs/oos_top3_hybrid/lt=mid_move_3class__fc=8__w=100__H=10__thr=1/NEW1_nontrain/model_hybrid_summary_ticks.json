@@ -1,0 +1,11 @@
+{
+  "realized_trades": 926,
+  "fills": 986,
+  "quote_updates": 1440072,
+  "toxicity_freeze_events": 0,
+  "net_pnl_ticks": -1005.0,
+  "avg_pnl_ticks": -1.0853131749460043,
+  "win_rate": 0.019438444924406047,
+  "avg_holding_steps": 19.711663066954642,
+  "sharpe_like": -34.74047704372243
+}

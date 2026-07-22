@@ -1,0 +1,101 @@
+{
+  "window_size": 100,
+  "train_sample_stride": 5,
+  "eval_sample_stride": 1,
+  "primary_proxy_type": "price_level_removed",
+  "primary_fill_window": 1,
+  "primary_horizon": 10,
+  "toxic_threshold_ticks": -0.5,
+  "selected_features": [
+    "obi",
+    "queue_imbalance",
+    "weighted_mid_deviation",
+    "trade_intensity_short",
+    "deep_obi",
+    "queue_imbalance_change",
+    "normalized_spread",
+    "cancel_pressure_short"
+  ],
+  "z_features": [
+    "obi_z",
+    "queue_imbalance_z",
+    "weighted_mid_deviation_z",
+    "trade_intensity_short_z",
+    "deep_obi_z",
+    "queue_imbalance_change_z",
+    "normalized_spread_z",
+    "cancel_pressure_short_z"
+  ],
+  "new_counts": {
+    "raw_lob_rows": 5323560,
+    "rows_after_feature_dropna": 5323560
+  },
+  "new3_counts": {
+    "raw_lob_rows": 5658022,
+    "rows_after_feature_dropna": 5658022
+  },
+  "new_audit_by_session": {
+    "20260121Day": {
+      "rows_before_dropna": 705922,
+      "rows_after_dropna": 705922
+    },
+    "20260122Day": {
+      "rows_before_dropna": 944718,
+      "rows_after_dropna": 944718
+    },
+    "20260122Night": {
+      "rows_before_dropna": 820521,
+      "rows_after_dropna": 820521
+    },
+    "20260123Day": {
+      "rows_before_dropna": 182313,
+      "rows_after_dropna": 182313
+    },
+    "20260123Night": {
+      "rows_before_dropna": 566084,
+      "rows_after_dropna": 566084
+    },
+    "20260126Day": {
+      "rows_before_dropna": 373868,
+      "rows_after_dropna": 373868
+    },
+    "20260126Night": {
+      "rows_before_dropna": 563593,
+      "rows_after_dropna": 563593
+    },
+    "20260127Day": {
+      "rows_before_dropna": 410696,
+      "rows_after_dropna": 410696
+    },
+    "20260127Night": {
+      "rows_before_dropna": 755845,
+      "rows_after_dropna": 755845
+    }
+  },
+  "new3_audit_by_session": {
+    "20260113": {
+      "rows_before_dropna": 1277946,
+      "rows_after_dropna": 1277946
+    },
+    "20260114": {
+      "rows_before_dropna": 910771,
+      "rows_after_dropna": 910771
+    },
+    "20260115": {
+      "rows_before_dropna": 976260,
+      "rows_after_dropna": 976260
+    },
+    "20260116": {
+      "rows_before_dropna": 976532,
+      "rows_after_dropna": 976532
+    },
+    "20260119Day": {
+      "rows_before_dropna": 1365599,
+      "rows_after_dropna": 1365599
+    },
+    "20260330": {
+      "rows_before_dropna": 150914,
+      "rows_after_dropna": 150914
+    }
+  }
+}

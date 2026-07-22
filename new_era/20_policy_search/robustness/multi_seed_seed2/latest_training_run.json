@@ -1,0 +1,7 @@
+{
+  "model_dir": "C:\\Users\\holbo\\00VS_projjects\\00_HFT_project\\new_era\\20_policy_search\\robustness\\multi_seed_seed2\\model_weighted_bce",
+  "sampling_mode": "weighted_bce",
+  "input_path": "C:\\Users\\holbo\\00VS_projjects\\00_HFT_project\\new_era\\16_binary_label_v2\\outputs\\binary_labels_v2.parquet",
+  "created_by": "C:\\Users\\holbo\\00VS_projjects\\00_HFT_project\\new_era\\16_binary_label_v2\\04_train_binary_model.py",
+  "test_evaluated": false
+}

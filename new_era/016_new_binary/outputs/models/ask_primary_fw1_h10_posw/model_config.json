@@ -1,0 +1,30 @@
+{
+  "side": "ask",
+  "config_name": "primary_fw1_h10_posw",
+  "window_size": 100,
+  "feature_count": 8,
+  "channel_list": [
+    16,
+    16,
+    16
+  ],
+  "kernel_size": 3,
+  "dropout": 0.1,
+  "epochs": 30,
+  "batch_size": 1024,
+  "lr": 0.001,
+  "seed": 42,
+  "device": "cpu",
+  "pos_weight": 31.491803278688526,
+  "train_samples": 15856,
+  "val_samples": 13314,
+  "test_samples": 25037,
+  "positive_rate_train": 0.03077699293642785,
+  "positive_rate_val": 0.026888989034099444,
+  "positive_rate_test": 0.02664057195350881,
+  "best_epoch": 30,
+  "best_val_loss": 0.9836882097380502,
+  "best_val_pr_auc": 0.1085885494716867,
+  "test_pr_auc": 0.08025443573773772,
+  "test_roc_auc": 0.7448091301087248
+}

@@ -1,0 +1,217 @@
+
+
+================================================================
+== Vitis HLS Report for 'p_anonymous_namespace_step_dataflow_fn'
+================================================================
+* Date:           Wed Jun 24 01:04:56 2026
+
+* Version:        2025.2 (Build 6295257 on Nov 14 2025)
+* Project:        hls_component
+* Solution:       hls (Vivado IP Flow Target)
+* Product family: zynq
+* Target device:  xc7z020-clg400-1
+
+
+================================================================
+== Performance Estimates
+================================================================
++ Timing: 
+    * Summary: 
+    +--------+----------+----------+------------+
+    |  Clock |  Target  | Estimated| Uncertainty|
+    +--------+----------+----------+------------+
+    |ap_clk  |  10.00 ns|  6.912 ns|     2.70 ns|
+    +--------+----------+----------+------------+
+
++ Latency: 
+    * Summary: 
+    +---------+---------+-----------+-----------+------+------+----------+
+    |  Latency (cycles) |   Latency (absolute)  |   Interval  | Pipeline |
+    |   min   |   max   |    min    |    max    |  min |  max |   Type   |
+    +---------+---------+-----------+-----------+------+------+----------+
+    |     3130|     3130|  31.300 us|  31.300 us|  3097|  3097|  dataflow|
+    +---------+---------+-----------+-----------+------+------+----------+
+
+    + Detail: 
+        * Instance: 
+        +----------------------------------------------------+-------------------------------------------------+---------+---------+-----------+-----------+------+------+---------+
+        |                                                    |                                                 |  Latency (cycles) |   Latency (absolute)  |   Interval  | Pipeline|
+        |                      Instance                      |                      Module                     |   min   |   max   |    min    |    max    |  min |  max |   Type  |
+        +----------------------------------------------------+-------------------------------------------------+---------+---------+-----------+-----------+------+------+---------+
+        |p_anonymous_namespace_fork_inputs_for_main_gain_U0  |p_anonymous_namespace_fork_inputs_for_main_gain  |       33|       33|   0.330 us|   0.330 us|    33|    33|       no|
+        |p_anonymous_namespace_main_chain_fn_U0              |p_anonymous_namespace_main_chain_fn              |     3096|     3096|  30.960 us|  30.960 us|  3096|  3096|       no|
+        |p_anonymous_namespace_gain_chain_fn_U0              |p_anonymous_namespace_gain_chain_fn              |     1524|     1524|  15.240 us|  15.240 us|  1524|  1524|       no|
+        +----------------------------------------------------+-------------------------------------------------+---------+---------+-----------+-----------+------+------+---------+
+
+        * Loop: 
+        N/A
+
+
+
+================================================================
+== Utilization Estimates
+================================================================
+* Summary: 
++-----------------+---------+-----+--------+-------+-----+
+|       Name      | BRAM_18K| DSP |   FF   |  LUT  | URAM|
++-----------------+---------+-----+--------+-------+-----+
+|DSP              |        -|    -|       -|      -|    -|
+|Expression       |        -|    -|       0|     26|    -|
+|FIFO             |        -|    -|       -|      -|    -|
+|Instance         |        5|   37|    5396|   6987|    0|
+|Memory           |        0|    -|     128|     32|    0|
+|Multiplexer      |        -|    -|       0|     36|    -|
+|Register         |        -|    -|       6|      -|    -|
++-----------------+---------+-----+--------+-------+-----+
+|Total            |        5|   37|    5530|   7081|    0|
++-----------------+---------+-----+--------+-------+-----+
+|Available        |      280|  220|  106400|  53200|    0|
++-----------------+---------+-----+--------+-------+-----+
+|Utilization (%)  |        1|   16|       5|     13|    0|
++-----------------+---------+-----+--------+-------+-----+
+
++ Detail: 
+    * Instance: 
+    +----------------------------------------------------+-------------------------------------------------+---------+----+------+------+-----+
+    |                      Instance                      |                      Module                     | BRAM_18K| DSP|  FF  |  LUT | URAM|
+    +----------------------------------------------------+-------------------------------------------------+---------+----+------+------+-----+
+    |p_anonymous_namespace_fork_inputs_for_main_gain_U0  |p_anonymous_namespace_fork_inputs_for_main_gain  |        0|   0|    14|    67|    0|
+    |p_anonymous_namespace_gain_chain_fn_U0              |p_anonymous_namespace_gain_chain_fn              |        2|   9|  1507|  1964|    0|
+    |p_anonymous_namespace_main_chain_fn_U0              |p_anonymous_namespace_main_chain_fn              |        3|  28|  3875|  4956|    0|
+    +----------------------------------------------------+-------------------------------------------------+---------+----+------+------+-----+
+    |Total                                               |                                                 |        5|  37|  5396|  6987|    0|
+    +----------------------------------------------------+-------------------------------------------------+---------+----+------+------+-----+
+
+    * DSP: 
+    N/A
+
+    * Memory: 
+    +-----------------------+--------------------------------------------------------------------------+---------+----+----+-----+------+-----+------+-------------+
+    |         Memory        |                                  Module                                  | BRAM_18K| FF | LUT| URAM| Words| Bits| Banks| W*Bits*Banks|
+    +-----------------------+--------------------------------------------------------------------------+---------+----+----+-----+------+-----+------+-------------+
+    |encoded_for_main_U     |p_anonymous_namespace_step_dataflow_fn_encoded_for_main_RAM_AUTO_1R1W     |        0|  40|  10|    0|    16|   40|     1|          640|
+    |encoded_for_gain_U     |p_anonymous_namespace_step_dataflow_fn_encoded_for_main_RAM_AUTO_1R1W     |        0|  40|  10|    0|    16|   40|     1|          640|
+    |state_prev_for_main_U  |p_anonymous_namespace_step_dataflow_fn_state_prev_for_main_RAM_AUTO_1R1W  |        0|  24|   6|    0|    16|   24|     1|          384|
+    |state_prev_for_gain_U  |p_anonymous_namespace_step_dataflow_fn_state_prev_for_main_RAM_AUTO_1R1W  |        0|  24|   6|    0|    16|   24|     1|          384|
+    +-----------------------+--------------------------------------------------------------------------+---------+----+----+-----+------+-----+------+-------------+
+    |Total                  |                                                                          |        0| 128|  32|    0|    64|  128|     4|         2048|
+    +-----------------------+--------------------------------------------------------------------------+---------+----+----+-----+------+-----+------+-------------+
+
+    * FIFO: 
+    N/A
+
+    * Expression: 
+    +---------------------------------------------------------------------+----------+----+---+----+------------+------------+
+    |                            Variable Name                            | Operation| DSP| FF| LUT| Bitwidth P0| Bitwidth P1|
+    +---------------------------------------------------------------------+----------+----+---+----+------------+------------+
+    |ap_channel_done_state_prev_for_gain                                  |       and|   0|  0|   2|           1|           1|
+    |ap_channel_done_state_prev_for_main                                  |       and|   0|  0|   2|           1|           1|
+    |ap_idle                                                              |       and|   0|  0|   2|           1|           1|
+    |ap_sync_continue                                                     |       and|   0|  0|   2|           1|           1|
+    |ap_sync_done                                                         |       and|   0|  0|   2|           1|           1|
+    |ap_sync_ready                                                        |       and|   0|  0|   2|           1|           1|
+    |p_anonymous_namespace_fork_inputs_for_main_gain_U0_ap_continue       |       and|   0|  0|   2|           1|           1|
+    |p_anonymous_namespace_fork_inputs_for_main_gain_U0_ap_start          |       and|   0|  0|   2|           1|           1|
+    |p_anonymous_namespace_main_chain_fn_U0_ap_start                      |       and|   0|  0|   2|           1|           1|
+    |ap_sync_channel_write_state_prev_for_gain                            |        or|   0|  0|   2|           1|           1|
+    |ap_sync_channel_write_state_prev_for_main                            |        or|   0|  0|   2|           1|           1|
+    |ap_sync_p_anonymous_namespace_fork_inputs_for_main_gain_U0_ap_ready  |        or|   0|  0|   2|           1|           1|
+    |ap_sync_p_anonymous_namespace_main_chain_fn_U0_ap_ready              |        or|   0|  0|   2|           1|           1|
+    +---------------------------------------------------------------------+----------+----+---+----+------------+------------+
+    |Total                                                                |          |   0|  0|  26|          13|          13|
+    +---------------------------------------------------------------------+----------+----+---+----+------------+------------+
+
+    * Multiplexer: 
+    +-------------------------------------------------------------------------+----+-----------+-----+-----------+
+    |                                   Name                                  | LUT| Input Size| Bits| Total Bits|
+    +-------------------------------------------------------------------------+----+-----------+-----+-----------+
+    |ap_sync_reg_channel_write_state_prev_for_gain                            |   9|          2|    1|          2|
+    |ap_sync_reg_channel_write_state_prev_for_main                            |   9|          2|    1|          2|
+    |ap_sync_reg_p_anonymous_namespace_fork_inputs_for_main_gain_U0_ap_ready  |   9|          2|    1|          2|
+    |ap_sync_reg_p_anonymous_namespace_main_chain_fn_U0_ap_ready              |   9|          2|    1|          2|
+    +-------------------------------------------------------------------------+----+-----------+-----+-----------+
+    |Total                                                                    |  36|          8|    4|          8|
+    +-------------------------------------------------------------------------+----+-----------+-----+-----------+
+
+    * Register: 
+    +-------------------------------------------------------------------------+---+----+-----+-----------+
+    |                                   Name                                  | FF| LUT| Bits| Const Bits|
+    +-------------------------------------------------------------------------+---+----+-----+-----------+
+    |ap_sync_done                                                             |  1|   0|    1|          0|
+    |ap_sync_ready                                                            |  1|   0|    1|          0|
+    |ap_sync_reg_channel_write_state_prev_for_gain                            |  1|   0|    1|          0|
+    |ap_sync_reg_channel_write_state_prev_for_main                            |  1|   0|    1|          0|
+    |ap_sync_reg_p_anonymous_namespace_fork_inputs_for_main_gain_U0_ap_ready  |  1|   0|    1|          0|
+    |ap_sync_reg_p_anonymous_namespace_main_chain_fn_U0_ap_ready              |  1|   0|    1|          0|
+    +-------------------------------------------------------------------------+---+----+-----+-----------+
+    |Total                                                                    |  6|   0|    6|          0|
+    +-------------------------------------------------------------------------+---+----+-----+-----------+
+
+
+
+================================================================
+== Interface
+================================================================
+* Summary: 
++-----------------------------+-----+-----+------------+---------------------------------------+--------------+
+|          RTL Ports          | Dir | Bits|  Protocol  |             Source Object             |    C Type    |
++-----------------------------+-----+-----+------------+---------------------------------------+--------------+
+|ap_clk                       |   in|    1|  ap_ctrl_hs|  (anonymous namespace)step_dataflow_fn|  return value|
+|ap_rst                       |   in|    1|  ap_ctrl_hs|  (anonymous namespace)step_dataflow_fn|  return value|
+|ap_start                     |   in|    1|  ap_ctrl_hs|  (anonymous namespace)step_dataflow_fn|  return value|
+|ap_done                      |  out|    1|  ap_ctrl_hs|  (anonymous namespace)step_dataflow_fn|  return value|
+|ap_ready                     |  out|    1|  ap_ctrl_hs|  (anonymous namespace)step_dataflow_fn|  return value|
+|ap_idle                      |  out|    1|  ap_ctrl_hs|  (anonymous namespace)step_dataflow_fn|  return value|
+|ap_continue                  |   in|    1|  ap_ctrl_hs|  (anonymous namespace)step_dataflow_fn|  return value|
+|encoded_address0             |  out|    4|   ap_memory|                                encoded|         array|
+|encoded_ce0                  |  out|    1|   ap_memory|                                encoded|         array|
+|encoded_d0                   |  out|   40|   ap_memory|                                encoded|         array|
+|encoded_q0                   |   in|   40|   ap_memory|                                encoded|         array|
+|encoded_we0                  |  out|    1|   ap_memory|                                encoded|         array|
+|encoded_address1             |  out|    4|   ap_memory|                                encoded|         array|
+|encoded_ce1                  |  out|    1|   ap_memory|                                encoded|         array|
+|encoded_d1                   |  out|   40|   ap_memory|                                encoded|         array|
+|encoded_q1                   |   in|   40|   ap_memory|                                encoded|         array|
+|encoded_we1                  |  out|    1|   ap_memory|                                encoded|         array|
+|state_prev_address0          |  out|    4|   ap_memory|                             state_prev|         array|
+|state_prev_ce0               |  out|    1|   ap_memory|                             state_prev|         array|
+|state_prev_d0                |  out|   24|   ap_memory|                             state_prev|         array|
+|state_prev_q0                |   in|   24|   ap_memory|                             state_prev|         array|
+|state_prev_we0               |  out|    1|   ap_memory|                             state_prev|         array|
+|state_prev_address1          |  out|    4|   ap_memory|                             state_prev|         array|
+|state_prev_ce1               |  out|    1|   ap_memory|                             state_prev|         array|
+|state_prev_d1                |  out|   24|   ap_memory|                             state_prev|         array|
+|state_prev_q1                |   in|   24|   ap_memory|                             state_prev|         array|
+|state_prev_we1               |  out|    1|   ap_memory|                             state_prev|         array|
+|message_out_address0         |  out|    4|   ap_memory|                            message_out|         array|
+|message_out_ce0              |  out|    1|   ap_memory|                            message_out|         array|
+|message_out_d0               |  out|   40|   ap_memory|                            message_out|         array|
+|message_out_q0               |   in|   40|   ap_memory|                            message_out|         array|
+|message_out_we0              |  out|    1|   ap_memory|                            message_out|         array|
+|message_out_address1         |  out|    4|   ap_memory|                            message_out|         array|
+|message_out_ce1              |  out|    1|   ap_memory|                            message_out|         array|
+|message_out_d1               |  out|   40|   ap_memory|                            message_out|         array|
+|message_out_q1               |   in|   40|   ap_memory|                            message_out|         array|
+|message_out_we1              |  out|    1|   ap_memory|                            message_out|         array|
+|state_temporal_out_address0  |  out|    4|   ap_memory|                     state_temporal_out|         array|
+|state_temporal_out_ce0       |  out|    1|   ap_memory|                     state_temporal_out|         array|
+|state_temporal_out_d0        |  out|   40|   ap_memory|                     state_temporal_out|         array|
+|state_temporal_out_q0        |   in|   40|   ap_memory|                     state_temporal_out|         array|
+|state_temporal_out_we0       |  out|    1|   ap_memory|                     state_temporal_out|         array|
+|state_temporal_out_address1  |  out|    4|   ap_memory|                     state_temporal_out|         array|
+|state_temporal_out_ce1       |  out|    1|   ap_memory|                     state_temporal_out|         array|
+|state_temporal_out_d1        |  out|   40|   ap_memory|                     state_temporal_out|         array|
+|state_temporal_out_q1        |   in|   40|   ap_memory|                     state_temporal_out|         array|
+|state_temporal_out_we1       |  out|    1|   ap_memory|                     state_temporal_out|         array|
+|gain_t_out_address0          |  out|    4|   ap_memory|                             gain_t_out|         array|
+|gain_t_out_ce0               |  out|    1|   ap_memory|                             gain_t_out|         array|
+|gain_t_out_d0                |  out|   40|   ap_memory|                             gain_t_out|         array|
+|gain_t_out_q0                |   in|   40|   ap_memory|                             gain_t_out|         array|
+|gain_t_out_we0               |  out|    1|   ap_memory|                             gain_t_out|         array|
+|gain_t_out_address1          |  out|    4|   ap_memory|                             gain_t_out|         array|
+|gain_t_out_ce1               |  out|    1|   ap_memory|                             gain_t_out|         array|
+|gain_t_out_d1                |  out|   40|   ap_memory|                             gain_t_out|         array|
+|gain_t_out_q1                |   in|   40|   ap_memory|                             gain_t_out|         array|
+|gain_t_out_we1               |  out|    1|   ap_memory|                             gain_t_out|         array|
++-----------------------------+-----+-----+------------+---------------------------------------+--------------+
+

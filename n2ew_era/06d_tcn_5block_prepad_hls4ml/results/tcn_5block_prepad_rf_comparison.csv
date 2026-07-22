@@ -1,0 +1,3 @@
+phase,model,dilations,internal_padding,seq_len_in,seq_len_out,receptive_field_ticks,hls4ml_issue
+06c,3-block dilated TCN,"[1, 2, 4]",ConstantPad1d,128,128,29,ConstantPad1d parser failed
+06d,5-block prepad valid-conv TCN,"[1, 2, 4, 8, 16]",none,252,128,125,prepad outside model; no ConstantPad1d

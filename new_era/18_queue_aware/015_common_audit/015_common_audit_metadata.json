@@ -1,0 +1,24 @@
+{
+  "model_dir": "C:\\Users\\holbo\\00VS_projjects\\00_HFT_project\\new_era\\15_models_playaround\\015_models_playaround_result\\lt=smoothed_mid_move_3class__fc=8__w=100__H=10__thr=1",
+  "out_dir": "C:\\Users\\holbo\\00VS_projjects\\00_HFT_project\\new_era\\18_queue_aware\\015_common_audit",
+  "trials_random_v3": 5000,
+  "common_predictions": "C:\\Users\\holbo\\00VS_projjects\\00_HFT_project\\new_era\\18_queue_aware\\015_common_audit\\015_common_predictions.parquet",
+  "selected_features": [
+    "obi_z",
+    "queue_imbalance_z",
+    "weighted_mid_deviation_z",
+    "trade_intensity_short_z",
+    "deep_obi_z",
+    "queue_imbalance_change_z",
+    "normalized_spread_z",
+    "cancel_pressure_short_z"
+  ],
+  "original_manifest_sessions": [
+    "TXFB6__20260123Day",
+    "TXFB6__20260123Night",
+    "TXFB6__20260126Day",
+    "TXFB6__20260126Night",
+    "TXFB6__20260127Day",
+    "TXFB6__20260127Night"
+  ]
+}

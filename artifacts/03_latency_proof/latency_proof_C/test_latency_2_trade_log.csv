@@ -1,0 +1,2 @@
+symbol,position_side,close_side,entry_timestamp,exit_timestamp,entry_price,exit_price,size,holding_steps,pnl_ticks,reason
+MXFJ5,short,buy,42441526000000,42447182000000,27140.0,27139.0,1.0,1,1.0,passive_bid_fill

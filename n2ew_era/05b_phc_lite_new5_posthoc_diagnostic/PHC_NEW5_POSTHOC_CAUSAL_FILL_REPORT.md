@@ -1,0 +1,9 @@
+# PHC NEW5 Post-hoc Causal-Fill Report
+
+Same proxy family as Phase 05A: H20 exit, conservative L2 fill proxy, inventory cap 1. It is not true queue replay.
+
+| split                                      | policy_id                                     |   horizon | fill_model             |   inventory_cap |   sequential_excess_pnl |   fill_count |   forced_no_quote_count |   max_abs_inventory |   max_drawdown |   win_rate |   loss_rate |   avg_trade_excess_pnl | fill_uses_future_pnl   | post_hoc_diagnostic_only   |
+|:-------------------------------------------|:----------------------------------------------|----------:|:-----------------------|----------------:|------------------------:|-------------:|------------------------:|--------------------:|---------------:|-----------:|------------:|-----------------------:|:-----------------------|:---------------------------|
+| post_hoc_diagnostic_only_not_fresh_holdout | side_by_queue_imbalance_abs_0p1               |        20 | conservative_l2_stress |               1 |                   40880 |         2248 |                       0 |                   1 |           2355 |   0.433274 |    0.566726 |                18.1851 | False                  | True                       |
+| post_hoc_diagnostic_only_not_fresh_holdout | ml_hgb_regressor_shallow_convergence_selected |        20 | conservative_l2_stress |               1 |                   59670 |         2222 |                       0 |                   1 |           1840 |   0.464446 |    0.535554 |                26.8542 | False                  | True                       |
+| post_hoc_diagnostic_only_not_fresh_holdout | phc_lite_posthoc_new5                         |        20 | conservative_l2_stress |               1 |                   68670 |         2422 |                       0 |                   1 |           2485 |   0.47853  |    0.52147  |                28.3526 | False                  | True                       |

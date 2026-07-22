@@ -1,0 +1,5 @@
+split,dataset,symbol,source_path,raw_rows,valid_book_rows,quote_eligible_rows,dropped_invalid_bid_ask,dropped_nonpositive_spread,dropped_missing_depth,dropped_session_boundary,dropped_feature_na,boundary_first_ticks,boundary_last_ticks,tick_size,new4_loaded,new4_compatibility_status,session_id
+test,NEW_ALL,TXFB6,C:\Users\holbo\00VS_projjects\00_HFT_project\new_era\16_binary_label_v2\outputs\quote_eligible_events.parquet,1166541,1166540,1166321,0,0,1,219,0,100,10,1.0,False,,
+train,NEW_ALL,TXFB6,C:\Users\holbo\00VS_projjects\00_HFT_project\new_era\16_binary_label_v2\outputs\quote_eligible_events.parquet,3593426,3593424,3592764,0,0,2,660,0,100,10,1.0,False,,
+val,NEW_ALL,TXFB6,C:\Users\holbo\00VS_projjects\00_HFT_project\new_era\16_binary_label_v2\outputs\quote_eligible_events.parquet,563593,563587,563477,0,0,6,110,0,100,10,1.0,False,,
+new4,NEW4,TXFA6,C:\Users\holbo\00VS_projjects\00_HFT_project\data\NEW4,2197106,2197080,2196640,0,0,26,440,0,100,10,1.0,True,loaded_raw_l2_5_levels,__ALL__

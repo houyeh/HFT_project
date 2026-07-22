@@ -1,0 +1,8 @@
+INFO: [SIM 2] *************** CSIM start ***************
+   Compiling ../../../../../hls_src/common/phc_step_testbench.cpp in debug mode
+   Compiling ../../../../../hls_src/lut_only/phc_step_hls.cpp in debug mode
+   Generating csim.exe
+total=25600 mismatches=0
+max_abs_diff=0.00546214 mean_abs_diff=0.000292398 tolerance=1
+INFO: [SIM 1] CSim done with 0 errors.
+INFO: [SIM 3] *************** CSIM finish ***************

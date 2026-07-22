@@ -1,0 +1,185 @@
+
+
+================================================================
+== Vitis HLS Report for 'p_anonymous_namespace_gate_candidate_dataflow'
+================================================================
+* Date:           Tue Jun 23 17:30:28 2026
+
+* Version:        2025.2 (Build 6295257 on Nov 14 2025)
+* Project:        hls_component
+* Solution:       hls (Vivado IP Flow Target)
+* Product family: zynq
+* Target device:  xc7z020-clg400-1
+
+
+================================================================
+== Performance Estimates
+================================================================
++ Timing: 
+    * Summary: 
+    +--------+----------+----------+------------+
+    |  Clock |  Target  | Estimated| Uncertainty|
+    +--------+----------+----------+------------+
+    |ap_clk  |  10.00 ns|  6.912 ns|     2.70 ns|
+    +--------+----------+----------+------------+
+
++ Latency: 
+    * Summary: 
+    +---------+---------+-----------+-----------+------+------+----------+
+    |  Latency (cycles) |   Latency (absolute)  |   Interval  | Pipeline |
+    |   min   |   max   |    min    |    max    |  min |  max |   Type   |
+    +---------+---------+-----------+-----------+------+------+----------+
+    |     1508|     1508|  15.080 us|  15.080 us|  1475|  1475|  dataflow|
+    +---------+---------+-----------+-----------+------+------+----------+
+
+    + Detail: 
+        * Instance: 
+        +----------------------------------------------------------+-------------------------------------------------------+---------+---------+-----------+-----------+------+------+---------+
+        |                                                          |                                                       |  Latency (cycles) |   Latency (absolute)  |   Interval  | Pipeline|
+        |                         Instance                         |                         Module                        |   min   |   max   |    min    |    max    |  min |  max |   Type  |
+        +----------------------------------------------------------+-------------------------------------------------------+---------+---------+-----------+-----------+------+------+---------+
+        |p_anonymous_namespace_fork_encoded_for_gate_candidate_U0  |p_anonymous_namespace_fork_encoded_for_gate_candidate  |       33|       33|   0.330 us|   0.330 us|    33|    33|       no|
+        |p_anonymous_namespace_gate_branch_U0                      |p_anonymous_namespace_gate_branch                      |     1474|     1474|  14.740 us|  14.740 us|  1474|  1474|       no|
+        |p_anonymous_namespace_candidate_branch_U0                 |p_anonymous_namespace_candidate_branch                 |     1474|     1474|  14.740 us|  14.740 us|  1474|  1474|       no|
+        +----------------------------------------------------------+-------------------------------------------------------+---------+---------+-----------+-----------+------+------+---------+
+
+        * Loop: 
+        N/A
+
+
+
+================================================================
+== Utilization Estimates
+================================================================
+* Summary: 
++-----------------+---------+-----+--------+-------+-----+
+|       Name      | BRAM_18K| DSP |   FF   |  LUT  | URAM|
++-----------------+---------+-----+--------+-------+-----+
+|DSP              |        -|    -|       -|      -|    -|
+|Expression       |        -|    -|       0|     16|    -|
+|FIFO             |        -|    -|       -|      -|    -|
+|Instance         |        2|   14|    2010|   2993|    0|
+|Memory           |        0|    -|      80|     20|    0|
+|Multiplexer      |        -|    -|       0|     18|    -|
+|Register         |        -|    -|       3|      -|    -|
++-----------------+---------+-----+--------+-------+-----+
+|Total            |        2|   14|    2093|   3047|    0|
++-----------------+---------+-----+--------+-------+-----+
+|Available        |      280|  220|  106400|  53200|    0|
++-----------------+---------+-----+--------+-------+-----+
+|Utilization (%)  |       ~0|    6|       1|      5|    0|
++-----------------+---------+-----+--------+-------+-----+
+
++ Detail: 
+    * Instance: 
+    +----------------------------------------------------------+-------------------------------------------------------+---------+----+------+------+-----+
+    |                         Instance                         |                         Module                        | BRAM_18K| DSP|  FF  |  LUT | URAM|
+    +----------------------------------------------------------+-------------------------------------------------------+---------+----+------+------+-----+
+    |p_anonymous_namespace_candidate_branch_U0                 |p_anonymous_namespace_candidate_branch                 |        1|   7|  1000|  1441|    0|
+    |p_anonymous_namespace_fork_encoded_for_gate_candidate_U0  |p_anonymous_namespace_fork_encoded_for_gate_candidate  |        0|   0|    14|    67|    0|
+    |p_anonymous_namespace_gate_branch_U0                      |p_anonymous_namespace_gate_branch                      |        1|   7|   996|  1485|    0|
+    +----------------------------------------------------------+-------------------------------------------------------+---------+----+------+------+-----+
+    |Total                                                     |                                                       |        2|  14|  2010|  2993|    0|
+    +----------------------------------------------------------+-------------------------------------------------------+---------+----+------+------+-----+
+
+    * DSP: 
+    N/A
+
+    * Memory: 
+    +-------------------------+------------------------------------------------------------------------------+---------+----+----+-----+------+-----+------+-------------+
+    |          Memory         |                                    Module                                    | BRAM_18K| FF | LUT| URAM| Words| Bits| Banks| W*Bits*Banks|
+    +-------------------------+------------------------------------------------------------------------------+---------+----+----+-----+------+-----+------+-------------+
+    |encoded_for_gate_U       |p_anonymous_namespace_gate_candidate_dataflow_encoded_for_gate_RAM_AUTO_1R1W  |        0|  40|  10|    0|    16|   40|     1|          640|
+    |encoded_for_candidate_U  |p_anonymous_namespace_gate_candidate_dataflow_encoded_for_gate_RAM_AUTO_1R1W  |        0|  40|  10|    0|    16|   40|     1|          640|
+    +-------------------------+------------------------------------------------------------------------------+---------+----+----+-----+------+-----+------+-------------+
+    |Total                    |                                                                              |        0|  80|  20|    0|    32|   80|     2|         1280|
+    +-------------------------+------------------------------------------------------------------------------+---------+----+----+-----+------+-----+------+-------------+
+
+    * FIFO: 
+    N/A
+
+    * Expression: 
+    +----------------------------------------------------------------------+----------+----+---+----+------------+------------+
+    |                             Variable Name                            | Operation| DSP| FF| LUT| Bitwidth P0| Bitwidth P1|
+    +----------------------------------------------------------------------+----------+----+---+----+------------+------------+
+    |ap_channel_done_encoded_for_candidate                                 |       and|   0|  0|   2|           1|           1|
+    |ap_channel_done_encoded_for_gate                                      |       and|   0|  0|   2|           1|           1|
+    |ap_idle                                                               |       and|   0|  0|   2|           1|           1|
+    |ap_sync_continue                                                      |       and|   0|  0|   2|           1|           1|
+    |ap_sync_done                                                          |       and|   0|  0|   2|           1|           1|
+    |p_anonymous_namespace_fork_encoded_for_gate_candidate_U0_ap_continue  |       and|   0|  0|   2|           1|           1|
+    |ap_sync_channel_write_encoded_for_candidate                           |        or|   0|  0|   2|           1|           1|
+    |ap_sync_channel_write_encoded_for_gate                                |        or|   0|  0|   2|           1|           1|
+    +----------------------------------------------------------------------+----------+----+---+----+------------+------------+
+    |Total                                                                 |          |   0|  0|  16|           8|           8|
+    +----------------------------------------------------------------------+----------+----+---+----+------------+------------+
+
+    * Multiplexer: 
+    +-------------------------------------------------+----+-----------+-----+-----------+
+    |                       Name                      | LUT| Input Size| Bits| Total Bits|
+    +-------------------------------------------------+----+-----------+-----+-----------+
+    |ap_sync_reg_channel_write_encoded_for_candidate  |   9|          2|    1|          2|
+    |ap_sync_reg_channel_write_encoded_for_gate       |   9|          2|    1|          2|
+    +-------------------------------------------------+----+-----------+-----+-----------+
+    |Total                                            |  18|          4|    2|          4|
+    +-------------------------------------------------+----+-----------+-----+-----------+
+
+    * Register: 
+    +-------------------------------------------------+---+----+-----+-----------+
+    |                       Name                      | FF| LUT| Bits| Const Bits|
+    +-------------------------------------------------+---+----+-----+-----------+
+    |ap_sync_done                                     |  1|   0|    1|          0|
+    |ap_sync_reg_channel_write_encoded_for_candidate  |  1|   0|    1|          0|
+    |ap_sync_reg_channel_write_encoded_for_gate       |  1|   0|    1|          0|
+    +-------------------------------------------------+---+----+-----+-----------+
+    |Total                                            |  3|   0|    3|          0|
+    +-------------------------------------------------+---+----+-----+-----------+
+
+
+
+================================================================
+== Interface
+================================================================
+* Summary: 
++----------------------+-----+-----+------------+----------------------------------------------+--------------+
+|       RTL Ports      | Dir | Bits|  Protocol  |                 Source Object                |    C Type    |
++----------------------+-----+-----+------------+----------------------------------------------+--------------+
+|ap_clk                |   in|    1|  ap_ctrl_hs|  (anonymous namespace)gate_candidate_dataflow|  return value|
+|ap_rst                |   in|    1|  ap_ctrl_hs|  (anonymous namespace)gate_candidate_dataflow|  return value|
+|ap_start              |   in|    1|  ap_ctrl_hs|  (anonymous namespace)gate_candidate_dataflow|  return value|
+|ap_done               |  out|    1|  ap_ctrl_hs|  (anonymous namespace)gate_candidate_dataflow|  return value|
+|ap_ready              |  out|    1|  ap_ctrl_hs|  (anonymous namespace)gate_candidate_dataflow|  return value|
+|ap_idle               |  out|    1|  ap_ctrl_hs|  (anonymous namespace)gate_candidate_dataflow|  return value|
+|ap_continue           |   in|    1|  ap_ctrl_hs|  (anonymous namespace)gate_candidate_dataflow|  return value|
+|encoded_address0      |  out|    4|   ap_memory|                                       encoded|         array|
+|encoded_ce0           |  out|    1|   ap_memory|                                       encoded|         array|
+|encoded_d0            |  out|   40|   ap_memory|                                       encoded|         array|
+|encoded_q0            |   in|   40|   ap_memory|                                       encoded|         array|
+|encoded_we0           |  out|    1|   ap_memory|                                       encoded|         array|
+|encoded_address1      |  out|    4|   ap_memory|                                       encoded|         array|
+|encoded_ce1           |  out|    1|   ap_memory|                                       encoded|         array|
+|encoded_d1            |  out|   40|   ap_memory|                                       encoded|         array|
+|encoded_q1            |   in|   40|   ap_memory|                                       encoded|         array|
+|encoded_we1           |  out|    1|   ap_memory|                                       encoded|         array|
+|gate_t_address0       |  out|    4|   ap_memory|                                        gate_t|         array|
+|gate_t_ce0            |  out|    1|   ap_memory|                                        gate_t|         array|
+|gate_t_d0             |  out|   40|   ap_memory|                                        gate_t|         array|
+|gate_t_q0             |   in|   40|   ap_memory|                                        gate_t|         array|
+|gate_t_we0            |  out|    1|   ap_memory|                                        gate_t|         array|
+|gate_t_address1       |  out|    4|   ap_memory|                                        gate_t|         array|
+|gate_t_ce1            |  out|    1|   ap_memory|                                        gate_t|         array|
+|gate_t_d1             |  out|   40|   ap_memory|                                        gate_t|         array|
+|gate_t_q1             |   in|   40|   ap_memory|                                        gate_t|         array|
+|gate_t_we1            |  out|    1|   ap_memory|                                        gate_t|         array|
+|candidate_t_address0  |  out|    4|   ap_memory|                                   candidate_t|         array|
+|candidate_t_ce0       |  out|    1|   ap_memory|                                   candidate_t|         array|
+|candidate_t_d0        |  out|   40|   ap_memory|                                   candidate_t|         array|
+|candidate_t_q0        |   in|   40|   ap_memory|                                   candidate_t|         array|
+|candidate_t_we0       |  out|    1|   ap_memory|                                   candidate_t|         array|
+|candidate_t_address1  |  out|    4|   ap_memory|                                   candidate_t|         array|
+|candidate_t_ce1       |  out|    1|   ap_memory|                                   candidate_t|         array|
+|candidate_t_d1        |  out|   40|   ap_memory|                                   candidate_t|         array|
+|candidate_t_q1        |   in|   40|   ap_memory|                                   candidate_t|         array|
+|candidate_t_we1       |  out|    1|   ap_memory|                                   candidate_t|         array|
++----------------------+-----+-----+------------+----------------------------------------------+--------------+
+

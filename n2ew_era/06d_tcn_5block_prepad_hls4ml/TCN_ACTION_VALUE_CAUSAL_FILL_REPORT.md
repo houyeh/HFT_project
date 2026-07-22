@@ -1,0 +1,9 @@
+# TCN 5-Block PrePad Causal-Fill Report
+
+Same proxy family as PHC-lite/05C4: H20 exit, conservative L2 fill, inventory cap 1. Not true queue replay. NEW5 is not used.
+
+| split   | policy_id                | model_variant   |   horizon | fill_model             |   inventory_cap |   fee_multiplier |   sequential_excess_pnl |   fill_count |   forced_no_quote_count |   max_abs_inventory |   max_drawdown |   win_rate |   loss_rate |   avg_trade_excess_pnl | fill_uses_future_pnl   | phase   | new5_used_for_selection   |
+|:--------|:-------------------------|:----------------|----------:|:-----------------------|----------------:|-----------------:|------------------------:|-------------:|------------------------:|--------------------:|---------------:|-----------:|------------:|-----------------------:|:-----------------------|:--------|:--------------------------|
+| val     | tcn_5block_prepad_18feat | 18feat          |        20 | conservative_l2_stress |               1 |                1 |                  151305 |         6593 |                       0 |                   1 |           3615 |   0.45154  |    0.54846  |                22.9493 | False                  | 06d     | False                     |
+| new3    | tcn_5block_prepad_18feat | 18feat          |        20 | conservative_l2_stress |               1 |                1 |                  441990 |        14775 |                    2369 |                   1 |           2465 |   0.493198 |    0.506734 |                29.9147 | False                  | 06d     | False                     |
+| new4    | tcn_5block_prepad_18feat | 18feat          |        20 | conservative_l2_stress |               1 |                1 |                  121000 |         4101 |                    2386 |                   1 |           2635 |   0.481102 |    0.518898 |                29.505  | False                  | 06d     | False                     |

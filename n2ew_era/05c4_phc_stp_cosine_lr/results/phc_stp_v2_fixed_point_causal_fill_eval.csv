@@ -1,0 +1,7 @@
+split,policy_id,horizon,fill_model,inventory_cap,fee_multiplier,sequential_excess_pnl,fill_count,forced_no_quote_count,max_abs_inventory,max_drawdown,win_rate,loss_rate,avg_trade_excess_pnl,fill_uses_future_pnl,phase,new5_used
+val,phc_stp_v2_cosine_lr_fp32,20,conservative_l2_stress,1,1.0,171835.0,6891,0,1,3240.0,0.46364823683064865,0.5363517631693513,24.936148599622697,False,05c4,False
+val,phc_stp_v2_cosine_lr_q24_12_emulated,20,conservative_l2_stress,1,1.0,171825.0,6905,0,1,3240.0,0.46343229543808834,0.5365677045619116,24.88414192614048,False,05c4,False
+new3,phc_stp_v2_cosine_lr_fp32,20,conservative_l2_stress,1,1.0,611095.0,17907,0,1,5370.0,0.5047746691238063,0.4952253308761937,34.126040096051824,False,05c4,False
+new3,phc_stp_v2_cosine_lr_q24_12_emulated,20,conservative_l2_stress,1,1.0,610415.0,17939,0,1,5305.0,0.5043759406878867,0.4956240593121133,34.02725904453983,False,05c4,False
+new4,phc_stp_v2_cosine_lr_fp32,20,conservative_l2_stress,1,1.0,129160.0,4237,2589,1,2695.0,0.49067736606089213,0.5093226339391078,30.483832900637243,False,05c4,False
+new4,phc_stp_v2_cosine_lr_q24_12_emulated,20,conservative_l2_stress,1,1.0,129940.0,4245,2597,1,2370.0,0.4909305064782097,0.5090694935217903,30.61012956419317,False,05c4,False

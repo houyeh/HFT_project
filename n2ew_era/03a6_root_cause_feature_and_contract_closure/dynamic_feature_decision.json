@@ -1,0 +1,8 @@
+{
+  "event_rate_past_50": "allow_rebuilt",
+  "inter_arrival_ms": "allow_rebuilt",
+  "imbalance_change_past": "allow_rebuilt",
+  "spread_change_past": "allow_rebuilt",
+  "uses_future_data": false,
+  "session_boundary_reset_required": true
+}

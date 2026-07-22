@@ -1,0 +1,35 @@
+{
+  "selection_split": "validation",
+  "test_used_for_selection": false,
+  "max_veto_rate": 0.05,
+  "selected_model": {
+    "threshold": 0.3446665164335272,
+    "veto_count": 1,
+    "veto_rate": 0.007462686567164179,
+    "max_veto_rate": 0.05,
+    "constraints_pass": true,
+    "baseline_pnl": 1218095.0,
+    "vetoed_quote_ev": -9315.0,
+    "after_veto_pnl": 1227410.0,
+    "incremental_vs_baseline": 9315.0,
+    "negative_ev_rate_vetoed": 1.0,
+    "selection_split": "validation",
+    "test_used_for_selection": false,
+    "model_name": "calibrated_logistic_sigmoid",
+    "objective": "classification_negative_ev",
+    "hls_complexity_rank": 1
+  },
+  "feature_columns": [
+    "spread_ticks",
+    "queue_imbalance_calc",
+    "deep_imbalance_calc",
+    "top_depth",
+    "depth_ratio",
+    "volatility_past_50",
+    "abs_return_past_50",
+    "event_rate_past_50",
+    "queue_imbalance_change_past",
+    "normalized_spread_calc"
+  ],
+  "local_torch_available": true
+}

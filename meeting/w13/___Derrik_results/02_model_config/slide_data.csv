@@ -1,0 +1,2 @@
+dataset_source,symbol,train_samples,val_samples,test_samples,feature_count,zscore_window,window_size,horizon,label_type,threshold_ticks,split_method
+C:\Users\holbo\00VS_projjects\00_HFT_project\data\NEW_ALL,TXFB6,718562,112698,233268,8,2000,100,5,smoothed_mid_move_3class,0.5,session-time-ordered 70/15/15

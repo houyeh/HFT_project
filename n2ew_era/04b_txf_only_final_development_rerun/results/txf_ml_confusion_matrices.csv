@@ -1,0 +1,4 @@
+split,model_id,threshold_selected_on_val,tn,fp,fn,tp,precision,recall,test_new3_new4_used_for_selection
+val,hgb_regressor_shallow,0.0,95226,19794,17521,17459,0.4686602421281508,0.49911377930245854,False
+new3,hgb_regressor_shallow,0.0,94112,19384,18774,17730,0.47771730344344454,0.48570019723865876,False
+new4,hgb_regressor_shallow,0.0,93478,19695,19565,17262,0.467083367156425,0.46873218019387947,False

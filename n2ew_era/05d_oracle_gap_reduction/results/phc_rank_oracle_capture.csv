@@ -1,0 +1,4 @@
+policy_selected_count,policy_pnl,matched_count_oracle_pnl,capture_ratio,opportunity_gap,oracle_uses_future_labels,split,policy_id,run_id
+62220,1987945.0,7746260.0,0.2566328783180528,5758315.0,True,val,phc_rank_head,phc_rank_head_lam0p3_seed0
+139116,5153205.0,18828405.0,0.27369312482921415,13675200.0,True,new3,phc_rank_head,phc_rank_head_lam0p3_seed0
+53037,1815275.0,7374675.0,0.24614983033150614,5559400.0,True,new4,phc_rank_head,phc_rank_head_lam0p3_seed0

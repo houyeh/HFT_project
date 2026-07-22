@@ -1,0 +1,4 @@
+seed,best_epoch_t0,best_val_pnl_at_threshold0,best_val_pnl_epoch_le_50,best_val_pnl_epoch_gt_50,improved_after_epoch50,max_epoch_hit
+0,75,1940435.0,1867890.0,1940435.0,True,True
+1,75,1934605.0,1876420.0,1934605.0,True,True
+2,78,2032340.0,1908595.0,2032340.0,True,True

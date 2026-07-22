@@ -1,0 +1,75 @@
+Backend: Vivado
+ClockPeriod: 5
+ClockUncertainty: 12.5%
+HLSConfig:
+  LayerName:
+    bn1:
+      Precision: ap_fixed<16,6>
+      ReuseFactor: 1
+      Trace: false
+    bn2:
+      Precision: ap_fixed<16,6>
+      ReuseFactor: 1
+      Trace: false
+    fc1:
+      Precision: ap_fixed<16,6>
+      ReuseFactor: 1
+      Trace: false
+    fc2:
+      Precision: ap_fixed<16,6>
+      ReuseFactor: 1
+      Trace: false
+    flatten_input:
+      Precision: ap_fixed<16,6>
+      ReuseFactor: 1
+      Trace: false
+    input_layer:
+      Precision: ap_fixed<16,6>
+      ReuseFactor: 1
+      Trace: false
+    output_probabilities:
+      Precision: ap_fixed<16,6>
+      ReuseFactor: 1
+      Strategy: Stable
+      Trace: false
+    output_probabilities_softmax:
+      Precision: ap_fixed<16,6>
+      ReuseFactor: 1
+      Trace: false
+    relu1:
+      Precision: ap_fixed<16,6>
+      ReuseFactor: 1
+      Trace: false
+    relu2:
+      Precision: ap_fixed<16,6>
+      ReuseFactor: 1
+      Trace: false
+  Model:
+    BitExact: null
+    BramFactor: 1000000000
+    Precision:
+      default: fixed<16,6>
+    ReuseFactor: 1
+    Strategy: Latency
+    TraceOutput: false
+IOType: io_parallel
+InputData: null
+InputShapes:
+  input_layer:
+  - 100
+  - 8
+KerasModel: !keras_model 'c:\Users\holbo\00VS_projjects\00_HFT_project\new_era\004_hls4ml_prj/keras_model.keras'
+OutputDir: c:\Users\holbo\00VS_projjects\00_HFT_project\new_era\004_hls4ml_prj
+OutputPredictions: null
+OutputShapes:
+  layer10_out:
+  - 3
+Part: xc7z020clg400-1
+ProjectName: myproject
+Stamp: ed6ebd8b
+Version: 1.0.0
+WriterConfig:
+  Namespace: null
+  TBOutputStream: both
+  WriteTar: false
+  WriteWeightsTxt: true

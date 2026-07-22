@@ -1,0 +1,2 @@
+track,method,trials,model_net_pnl,mean,std,p95,p99,empirical_p_value_random_ge_model
+015_common_universe,random_v3,5000,90845.0,56722.703,23897.78040297448,97108.50000000001,116362.95000000017,0.079

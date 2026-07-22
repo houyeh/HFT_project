@@ -1,0 +1,46 @@
+{
+  "thresholds": [
+    {
+      "target_cancel_rate": 0.05,
+      "bid_threshold": 0.024306584149599075,
+      "ask_threshold": 0.03156697750091553,
+      "selected_on": "val",
+      "is_main_claim": false
+    },
+    {
+      "target_cancel_rate": 0.075,
+      "bid_threshold": 0.019025884568691254,
+      "ask_threshold": 0.024906190112233162,
+      "selected_on": "val",
+      "is_main_claim": false
+    },
+    {
+      "target_cancel_rate": 0.1,
+      "bid_threshold": 0.015858395025134087,
+      "ask_threshold": 0.02090054750442505,
+      "selected_on": "val",
+      "is_main_claim": true
+    },
+    {
+      "target_cancel_rate": 0.125,
+      "bid_threshold": 0.013696548528969288,
+      "ask_threshold": 0.018195314332842827,
+      "selected_on": "val",
+      "is_main_claim": false
+    },
+    {
+      "target_cancel_rate": 0.15,
+      "bid_threshold": 0.012134999968111515,
+      "ask_threshold": 0.016234178096055984,
+      "selected_on": "val",
+      "is_main_claim": false
+    },
+    {
+      "target_cancel_rate": 0.2,
+      "bid_threshold": 0.010018790140748024,
+      "ask_threshold": 0.013538572937250137,
+      "selected_on": "val",
+      "is_main_claim": false
+    }
+  ]
+}

@@ -1,0 +1,4 @@
+decision_overlap,side,quote_count,total_pnl,avg_pnl,toxic_rate,positive_pnl_rate
+blocked_by_ML_only,bid,20,24525.0,1226.25,1.0,0.2
+blocked_by_both,ask,515,-3437810.0,-6675.359223300971,0.7067961165048544,0.011650485436893204
+kept_by_both,bid,399,2288065.0,5734.498746867168,0.6842105263157895,0.46115288220551376

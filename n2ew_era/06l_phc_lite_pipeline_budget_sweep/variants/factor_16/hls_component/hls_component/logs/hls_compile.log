@@ -1,0 +1,651 @@
+  **** HLS Build v2025.2 6295257
+INFO: [HLS 200-2005] Using work_dir C:/Users/holbo/00VS_projjects/00_HFT_project/n2ew_era/06l_phc_lite_pipeline_budget_sweep/variants/factor_16/hls_component/hls_component 
+INFO: [HLS 200-2176] Writing Vitis IDE component file C:/Users/holbo/00VS_projjects/00_HFT_project/n2ew_era/06l_phc_lite_pipeline_budget_sweep/variants/factor_16/hls_component/hls_component/vitis-comp.json
+INFO: [HLS 200-10] Creating and opening component 'C:/Users/holbo/00VS_projjects/00_HFT_project/n2ew_era/06l_phc_lite_pipeline_budget_sweep/variants/factor_16/hls_component/hls_component'.
+INFO: [HLS 200-1505] Using default flow_target 'vivado'
+Resolution: For help on HLS 200-1505 see docs.amd.com/access/sources/dita/topic?Doc_Version=2025.2%20English&url=ug1448-hls-guidance&resourceid=200-1505.html
+INFO: [HLS 200-2174] Applying component config ini file ../hls_config.cfg
+INFO: [HLS 200-1465] Applying config ini 'syn.file=../hls_src/phc_step_hls.cpp' from ../hls_config.cfg(8)
+INFO: [HLS 200-10] Adding design file 'C:/Users/holbo/00VS_projjects/00_HFT_project/n2ew_era/06l_phc_lite_pipeline_budget_sweep/variants/factor_16/hls_src/phc_step_hls.cpp' to the project
+INFO: [HLS 200-1465] Applying config ini 'syn.file=../hls_src/phc_step_hls.hpp' from ../hls_config.cfg(9)
+INFO: [HLS 200-10] Adding design file 'C:/Users/holbo/00VS_projjects/00_HFT_project/n2ew_era/06l_phc_lite_pipeline_budget_sweep/variants/factor_16/hls_src/phc_step_hls.hpp' to the project
+INFO: [HLS 200-1465] Applying config ini 'syn.file=../hls_src/phc_weights.hpp' from ../hls_config.cfg(10)
+INFO: [HLS 200-10] Adding design file 'C:/Users/holbo/00VS_projjects/00_HFT_project/n2ew_era/06l_phc_lite_pipeline_budget_sweep/variants/factor_16/hls_src/phc_weights.hpp' to the project
+INFO: [HLS 200-1465] Applying config ini 'tb.file=../hls_src/phc_step_testbench.cpp' from ../hls_config.cfg(11)
+INFO: [HLS 200-10] Adding test bench file 'C:/Users/holbo/00VS_projjects/00_HFT_project/n2ew_era/06l_phc_lite_pipeline_budget_sweep/variants/factor_16/hls_src/phc_step_testbench.cpp' to the project
+INFO: [HLS 200-1465] Applying config ini 'syn.top=phc_step' from ../hls_config.cfg(7)
+INFO: [HLS 200-1465] Applying config ini 'flow_target=vivado' from ../hls_config.cfg(4)
+INFO: [HLS 200-1505] Using flow_target 'vivado'
+Resolution: For help on HLS 200-1505 see docs.amd.com/access/sources/dita/topic?Doc_Version=2025.2%20English&url=ug1448-hls-guidance&resourceid=200-1505.html
+INFO: [HLS 200-1465] Applying config ini 'part=xc7z020clg400-1' from ../hls_config.cfg(1)
+INFO: [HLS 200-1611] Setting target device to 'xc7z020-clg400-1'
+INFO: [HLS 200-1465] Applying config ini 'clock=10ns' from ../hls_config.cfg(12)
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 10ns.
+INFO: [HLS 200-1465] Applying config ini 'cosim.argv=C:/Users/holbo/00VS_projjects/00_HFT_project/n2ew_era/06f_phc_lite_manual_hls/results/phc_step_test_vectors.csv C:/Users/holbo/00VS_projjects/00_HFT_project/n2ew_era/06l_phc_lite_pipeline_budget_sweep/results/factor_16/phc_step_cosim_out.csv' from ../hls_config.cfg(13)
+INFO: [HLS 200-1465] Applying config ini 'csim.argv=C:/Users/holbo/00VS_projjects/00_HFT_project/n2ew_era/06f_phc_lite_manual_hls/results/phc_step_test_vectors.csv C:/Users/holbo/00VS_projjects/00_HFT_project/n2ew_era/06l_phc_lite_pipeline_budget_sweep/results/factor_16/phc_step_csim_out.csv' from ../hls_config.cfg(14)
+INFO: [HLS 200-1465] Applying config ini 'package.output.format=ip_catalog' from ../hls_config.cfg(5)
+INFO: [HLS 200-2176] Writing Vitis IDE component file C:/Users/holbo/00VS_projjects/00_HFT_project/n2ew_era/06l_phc_lite_pipeline_budget_sweep/variants/factor_16/hls_component/hls_component/vitis-comp.json
+INFO: [HLS 200-111] Finished File checks and directory preparation: CPU user time: 1 seconds. CPU system time: 1 seconds. Elapsed time: 17.67 seconds; current allocated memory: 134.527 MB.
+INFO: [HLS 200-2191] C-Synthesis will use clang-16 as the compiler
+INFO: [HLS 200-10] Analyzing design file 'C:/Users/holbo/00VS_projjects/00_HFT_project/n2ew_era/06l_phc_lite_pipeline_budget_sweep/variants/factor_16/hls_src/phc_step_hls.cpp' ... 
+INFO: [HLS 200-111] Finished Source Code Analysis and Preprocessing: CPU user time: 1 seconds. CPU system time: 0 seconds. Elapsed time: 44.431 seconds; current allocated memory: 141.898 MB.
+INFO: [HLS 200-777] Using interface defaults for 'Vivado' flow target.
+WARNING: [HLS 200-1995] There were 174,889 instructions in the design after the 'Compile/Link' phase of compilation. See the Design Size Report for more details (C:/Users/holbo/00VS_projjects/00_HFT_project/n2ew_era/06l_phc_lite_pipeline_budget_sweep/variants/factor_16/hls_component/hls_component/hls/syn/report/csynth_design_size.rpt:2)
+INFO: [HLS 200-1995] There were 21,409 instructions in the design after the 'Unroll/Inline (step 1)' phase of compilation. See the Design Size Report for more details (C:/Users/holbo/00VS_projjects/00_HFT_project/n2ew_era/06l_phc_lite_pipeline_budget_sweep/variants/factor_16/hls_component/hls_component/hls/syn/report/csynth_design_size.rpt:2)
+INFO: [HLS 200-1995] There were 7,082 instructions in the design after the 'Unroll/Inline (step 2)' phase of compilation. See the Design Size Report for more details (C:/Users/holbo/00VS_projjects/00_HFT_project/n2ew_era/06l_phc_lite_pipeline_budget_sweep/variants/factor_16/hls_component/hls_component/hls/syn/report/csynth_design_size.rpt:2)
+INFO: [HLS 200-1995] There were 6,560 instructions in the design after the 'Unroll/Inline (step 3)' phase of compilation. See the Design Size Report for more details (C:/Users/holbo/00VS_projjects/00_HFT_project/n2ew_era/06l_phc_lite_pipeline_budget_sweep/variants/factor_16/hls_component/hls_component/hls/syn/report/csynth_design_size.rpt:2)
+INFO: [HLS 200-1995] There were 6,515 instructions in the design after the 'Unroll/Inline (step 4)' phase of compilation. See the Design Size Report for more details (C:/Users/holbo/00VS_projjects/00_HFT_project/n2ew_era/06l_phc_lite_pipeline_budget_sweep/variants/factor_16/hls_component/hls_component/hls/syn/report/csynth_design_size.rpt:2)
+INFO: [HLS 200-1995] There were 8,904 instructions in the design after the 'Array/Struct (step 1)' phase of compilation. See the Design Size Report for more details (C:/Users/holbo/00VS_projjects/00_HFT_project/n2ew_era/06l_phc_lite_pipeline_budget_sweep/variants/factor_16/hls_component/hls_component/hls/syn/report/csynth_design_size.rpt:2)
+INFO: [HLS 200-1995] There were 6,564 instructions in the design after the 'Array/Struct (step 2)' phase of compilation. See the Design Size Report for more details (C:/Users/holbo/00VS_projjects/00_HFT_project/n2ew_era/06l_phc_lite_pipeline_budget_sweep/variants/factor_16/hls_component/hls_component/hls/syn/report/csynth_design_size.rpt:2)
+INFO: [HLS 200-1995] There were 6,564 instructions in the design after the 'Array/Struct (step 3)' phase of compilation. See the Design Size Report for more details (C:/Users/holbo/00VS_projjects/00_HFT_project/n2ew_era/06l_phc_lite_pipeline_budget_sweep/variants/factor_16/hls_component/hls_component/hls/syn/report/csynth_design_size.rpt:2)
+INFO: [HLS 200-1995] There were 6,564 instructions in the design after the 'Array/Struct (step 4)' phase of compilation. See the Design Size Report for more details (C:/Users/holbo/00VS_projjects/00_HFT_project/n2ew_era/06l_phc_lite_pipeline_budget_sweep/variants/factor_16/hls_component/hls_component/hls/syn/report/csynth_design_size.rpt:2)
+INFO: [HLS 200-1995] There were 6,572 instructions in the design after the 'Array/Struct (step 5)' phase of compilation. See the Design Size Report for more details (C:/Users/holbo/00VS_projjects/00_HFT_project/n2ew_era/06l_phc_lite_pipeline_budget_sweep/variants/factor_16/hls_component/hls_component/hls/syn/report/csynth_design_size.rpt:2)
+INFO: [HLS 200-1995] There were 6,572 instructions in the design after the 'Performance (step 1)' phase of compilation. See the Design Size Report for more details (C:/Users/holbo/00VS_projjects/00_HFT_project/n2ew_era/06l_phc_lite_pipeline_budget_sweep/variants/factor_16/hls_component/hls_component/hls/syn/report/csynth_design_size.rpt:2)
+INFO: [HLS 200-1995] There were 6,564 instructions in the design after the 'Performance (step 2)' phase of compilation. See the Design Size Report for more details (C:/Users/holbo/00VS_projjects/00_HFT_project/n2ew_era/06l_phc_lite_pipeline_budget_sweep/variants/factor_16/hls_component/hls_component/hls/syn/report/csynth_design_size.rpt:2)
+INFO: [HLS 200-1995] There were 6,572 instructions in the design after the 'Performance (step 3)' phase of compilation. See the Design Size Report for more details (C:/Users/holbo/00VS_projjects/00_HFT_project/n2ew_era/06l_phc_lite_pipeline_budget_sweep/variants/factor_16/hls_component/hls_component/hls/syn/report/csynth_design_size.rpt:2)
+INFO: [HLS 200-1995] There were 6,471 instructions in the design after the 'Performance (step 4)' phase of compilation. See the Design Size Report for more details (C:/Users/holbo/00VS_projjects/00_HFT_project/n2ew_era/06l_phc_lite_pipeline_budget_sweep/variants/factor_16/hls_component/hls_component/hls/syn/report/csynth_design_size.rpt:2)
+INFO: [HLS 200-1995] There were 6,478 instructions in the design after the 'HW Transforms (step 1)' phase of compilation. See the Design Size Report for more details (C:/Users/holbo/00VS_projjects/00_HFT_project/n2ew_era/06l_phc_lite_pipeline_budget_sweep/variants/factor_16/hls_component/hls_component/hls/syn/report/csynth_design_size.rpt:2)
+INFO: [HLS 200-1995] There were 6,569 instructions in the design after the 'HW Transforms (step 2)' phase of compilation. See the Design Size Report for more details (C:/Users/holbo/00VS_projjects/00_HFT_project/n2ew_era/06l_phc_lite_pipeline_budget_sweep/variants/factor_16/hls_component/hls_component/hls/syn/report/csynth_design_size.rpt:2)
+INFO: [HLS 214-131] Inlining function '(anonymous namespace)::tanh_lut_scalar(ap_fixed<40, 16, (ap_q_mode)5, (ap_o_mode)3, 0>)' into '(anonymous namespace)::sigmoid_scalar(ap_fixed<40, 16, (ap_q_mode)5, (ap_o_mode)3, 0>)' (C:/Users/holbo/00VS_projjects/00_HFT_project/n2ew_era/06l_phc_lite_pipeline_budget_sweep/variants/factor_16/hls_src/phc_step_hls.cpp:67:30)
+INFO: [HLS 214-131] Inlining function '(anonymous namespace)::sigmoid_scalar(ap_fixed<40, 16, (ap_q_mode)5, (ap_o_mode)3, 0>)' into '(anonymous namespace)::silu_16(ap_fixed<40, 16, (ap_q_mode)5, (ap_o_mode)3, 0> const*, ap_fixed<40, 16, (ap_q_mode)5, (ap_o_mode)3, 0>*)' (C:/Users/holbo/00VS_projjects/00_HFT_project/n2ew_era/06l_phc_lite_pipeline_budget_sweep/variants/factor_16/hls_src/phc_step_hls.cpp:95:26)
+INFO: [HLS 214-131] Inlining function '(anonymous namespace)::sigmoid_scalar(ap_fixed<40, 16, (ap_q_mode)5, (ap_o_mode)3, 0>)' into '(anonymous namespace)::sigmoid_16(ap_fixed<40, 16, (ap_q_mode)5, (ap_o_mode)3, 0> const*, ap_fixed<40, 16, (ap_q_mode)5, (ap_o_mode)3, 0>*)' (C:/Users/holbo/00VS_projjects/00_HFT_project/n2ew_era/06l_phc_lite_pipeline_budget_sweep/variants/factor_16/hls_src/phc_step_hls.cpp:79:18)
+INFO: [HLS 214-131] Inlining function '(anonymous namespace)::tanh_lut_scalar(ap_fixed<40, 16, (ap_q_mode)5, (ap_o_mode)3, 0>)' into '(anonymous namespace)::tanh_scalar(ap_fixed<40, 16, (ap_q_mode)5, (ap_o_mode)3, 0>)' (C:/Users/holbo/00VS_projjects/00_HFT_project/n2ew_era/06l_phc_lite_pipeline_budget_sweep/variants/factor_16/hls_src/phc_step_hls.cpp:72:12)
+INFO: [HLS 214-131] Inlining function '(anonymous namespace)::tanh_scalar(ap_fixed<40, 16, (ap_q_mode)5, (ap_o_mode)3, 0>)' into '(anonymous namespace)::tanh_16(ap_fixed<40, 16, (ap_q_mode)5, (ap_o_mode)3, 0> const*, ap_fixed<40, 16, (ap_q_mode)5, (ap_o_mode)3, 0>*)' (C:/Users/holbo/00VS_projjects/00_HFT_project/n2ew_era/06l_phc_lite_pipeline_budget_sweep/variants/factor_16/hls_src/phc_step_hls.cpp:87:18)
+INFO: [HLS 214-131] Inlining function '(anonymous namespace)::linear_16_16_fixed(ap_fixed<24, 12, (ap_q_mode)5, (ap_o_mode)3, 0> const*, ap_fixed<24, 12, (ap_q_mode)5, (ap_o_mode)3, 0> const (*) [16], ap_fixed<24, 12, (ap_q_mode)5, (ap_o_mode)3, 0> const*, ap_fixed<40, 16, (ap_q_mode)5, (ap_o_mode)3, 0>*)' into 'phc_step(ap_fixed<24, 12, (ap_q_mode)5, (ap_o_mode)3, 0> const*, ap_fixed<24, 12, (ap_q_mode)5, (ap_o_mode)3, 0> const*, ap_fixed<24, 12, (ap_q_mode)5, (ap_o_mode)3, 0>*, ap_fixed<24, 12, (ap_q_mode)5, (ap_o_mode)3, 0>*)' (C:/Users/holbo/00VS_projjects/00_HFT_project/n2ew_era/06l_phc_lite_pipeline_budget_sweep/variants/factor_16/hls_src/phc_step_hls.cpp:236:5)
+INFO: [HLS 214-131] Inlining function '(anonymous namespace)::linear_16_2_acc(ap_fixed<40, 16, (ap_q_mode)5, (ap_o_mode)3, 0> const*, ap_fixed<24, 12, (ap_q_mode)5, (ap_o_mode)3, 0> const (*) [16], ap_fixed<24, 12, (ap_q_mode)5, (ap_o_mode)3, 0> const*, ap_fixed<40, 16, (ap_q_mode)5, (ap_o_mode)3, 0>*)' into 'phc_step(ap_fixed<24, 12, (ap_q_mode)5, (ap_o_mode)3, 0> const*, ap_fixed<24, 12, (ap_q_mode)5, (ap_o_mode)3, 0> const*, ap_fixed<24, 12, (ap_q_mode)5, (ap_o_mode)3, 0>*, ap_fixed<24, 12, (ap_q_mode)5, (ap_o_mode)3, 0>*)' (C:/Users/holbo/00VS_projjects/00_HFT_project/n2ew_era/06l_phc_lite_pipeline_budget_sweep/variants/factor_16/hls_src/phc_step_hls.cpp:269:5)
+INFO: [HLS 214-131] Inlining function '(anonymous namespace)::layernorm_16(ap_fixed<40, 16, (ap_q_mode)5, (ap_o_mode)3, 0> const*, ap_fixed<24, 12, (ap_q_mode)5, (ap_o_mode)3, 0> const*, ap_fixed<24, 12, (ap_q_mode)5, (ap_o_mode)3, 0> const*, ap_fixed<40, 16, (ap_q_mode)5, (ap_o_mode)3, 0>*)' into 'phc_step(ap_fixed<24, 12, (ap_q_mode)5, (ap_o_mode)3, 0> const*, ap_fixed<24, 12, (ap_q_mode)5, (ap_o_mode)3, 0> const*, ap_fixed<24, 12, (ap_q_mode)5, (ap_o_mode)3, 0>*, ap_fixed<24, 12, (ap_q_mode)5, (ap_o_mode)3, 0>*)' (C:/Users/holbo/00VS_projjects/00_HFT_project/n2ew_era/06l_phc_lite_pipeline_budget_sweep/variants/factor_16/hls_src/phc_step_hls.cpp:267:5)
+INFO: [HLS 214-131] Inlining function '(anonymous namespace)::silu_16(ap_fixed<40, 16, (ap_q_mode)5, (ap_o_mode)3, 0> const*, ap_fixed<40, 16, (ap_q_mode)5, (ap_o_mode)3, 0>*)' into 'phc_step(ap_fixed<24, 12, (ap_q_mode)5, (ap_o_mode)3, 0> const*, ap_fixed<24, 12, (ap_q_mode)5, (ap_o_mode)3, 0> const*, ap_fixed<24, 12, (ap_q_mode)5, (ap_o_mode)3, 0>*, ap_fixed<24, 12, (ap_q_mode)5, (ap_o_mode)3, 0>*)' (C:/Users/holbo/00VS_projjects/00_HFT_project/n2ew_era/06l_phc_lite_pipeline_budget_sweep/variants/factor_16/hls_src/phc_step_hls.cpp:238:5)
+INFO: [HLS 214-131] Inlining function '(anonymous namespace)::linear_16_16_acc(ap_fixed<40, 16, (ap_q_mode)5, (ap_o_mode)3, 0> const*, ap_fixed<24, 12, (ap_q_mode)5, (ap_o_mode)3, 0> const (*) [16], ap_fixed<24, 12, (ap_q_mode)5, (ap_o_mode)3, 0> const*, ap_fixed<40, 16, (ap_q_mode)5, (ap_o_mode)3, 0>*)' into 'phc_step(ap_fixed<24, 12, (ap_q_mode)5, (ap_o_mode)3, 0> const*, ap_fixed<24, 12, (ap_q_mode)5, (ap_o_mode)3, 0> const*, ap_fixed<24, 12, (ap_q_mode)5, (ap_o_mode)3, 0>*, ap_fixed<24, 12, (ap_q_mode)5, (ap_o_mode)3, 0>*)' (C:/Users/holbo/00VS_projjects/00_HFT_project/n2ew_era/06l_phc_lite_pipeline_budget_sweep/variants/factor_16/hls_src/phc_step_hls.cpp:240:5)
+INFO: [HLS 214-131] Inlining function '(anonymous namespace)::sigmoid_16(ap_fixed<40, 16, (ap_q_mode)5, (ap_o_mode)3, 0> const*, ap_fixed<40, 16, (ap_q_mode)5, (ap_o_mode)3, 0>*)' into 'phc_step(ap_fixed<24, 12, (ap_q_mode)5, (ap_o_mode)3, 0> const*, ap_fixed<24, 12, (ap_q_mode)5, (ap_o_mode)3, 0> const*, ap_fixed<24, 12, (ap_q_mode)5, (ap_o_mode)3, 0>*, ap_fixed<24, 12, (ap_q_mode)5, (ap_o_mode)3, 0>*)' (C:/Users/holbo/00VS_projjects/00_HFT_project/n2ew_era/06l_phc_lite_pipeline_budget_sweep/variants/factor_16/hls_src/phc_step_hls.cpp:241:5)
+INFO: [HLS 214-131] Inlining function '(anonymous namespace)::tanh_16(ap_fixed<40, 16, (ap_q_mode)5, (ap_o_mode)3, 0> const*, ap_fixed<40, 16, (ap_q_mode)5, (ap_o_mode)3, 0>*)' into 'phc_step(ap_fixed<24, 12, (ap_q_mode)5, (ap_o_mode)3, 0> const*, ap_fixed<24, 12, (ap_q_mode)5, (ap_o_mode)3, 0> const*, ap_fixed<24, 12, (ap_q_mode)5, (ap_o_mode)3, 0>*, ap_fixed<24, 12, (ap_q_mode)5, (ap_o_mode)3, 0>*)' (C:/Users/holbo/00VS_projjects/00_HFT_project/n2ew_era/06l_phc_lite_pipeline_budget_sweep/variants/factor_16/hls_src/phc_step_hls.cpp:244:5)
+INFO: [HLS 214-131] Inlining function '(anonymous namespace)::linear_16_16_fixed_no_bias(ap_fixed<24, 12, (ap_q_mode)5, (ap_o_mode)3, 0> const*, ap_fixed<24, 12, (ap_q_mode)5, (ap_o_mode)3, 0> const (*) [16], ap_fixed<40, 16, (ap_q_mode)5, (ap_o_mode)3, 0>*)' into 'phc_step(ap_fixed<24, 12, (ap_q_mode)5, (ap_o_mode)3, 0> const*, ap_fixed<24, 12, (ap_q_mode)5, (ap_o_mode)3, 0> const*, ap_fixed<24, 12, (ap_q_mode)5, (ap_o_mode)3, 0>*, ap_fixed<24, 12, (ap_q_mode)5, (ap_o_mode)3, 0>*)' (C:/Users/holbo/00VS_projjects/00_HFT_project/n2ew_era/06l_phc_lite_pipeline_budget_sweep/variants/factor_16/hls_src/phc_step_hls.cpp:253:5)
+INFO: [HLS 214-291] Loop 'VITIS_LOOP_271_2' is marked as complete unroll implied by the pipeline pragma (C:/AMDDesignTools/2025.2/Vitis/common/technology/autopilot/etc/hls_sqrt_apfixed.h:271:27)
+INFO: [HLS 214-291] Loop 'VITIS_LOOP_243_1' is marked as complete unroll implied by the pipeline pragma (C:/AMDDesignTools/2025.2/Vitis/common/technology/autopilot/etc/hls_sqrt_apfixed.h:243:27)
+INFO: [HLS 214-359] Unrolling loop 'VITIS_LOOP_169_2' (C:/Users/holbo/00VS_projjects/00_HFT_project/n2ew_era/06l_phc_lite_pipeline_budget_sweep/variants/factor_16/hls_src/phc_step_hls.cpp:169:27) in function 'phc_step': changing partial unrolling into complete unrolling since the unrolling factor (=16) is no less than the loop trip count (=16). (C:/Users/holbo/00VS_projjects/00_HFT_project/n2ew_era/06l_phc_lite_pipeline_budget_sweep/variants/factor_16/hls_src/phc_step_hls.cpp:214:0)
+INFO: [HLS 214-186] Unrolling loop 'VITIS_LOOP_169_2' (C:/Users/holbo/00VS_projjects/00_HFT_project/n2ew_era/06l_phc_lite_pipeline_budget_sweep/variants/factor_16/hls_src/phc_step_hls.cpp:169:27) in function 'phc_step' completely with a factor of 16 (C:/Users/holbo/00VS_projjects/00_HFT_project/n2ew_era/06l_phc_lite_pipeline_budget_sweep/variants/factor_16/hls_src/phc_step_hls.cpp:214:0)
+INFO: [HLS 214-359] Unrolling loop 'VITIS_LOOP_130_2' (C:/Users/holbo/00VS_projjects/00_HFT_project/n2ew_era/06l_phc_lite_pipeline_budget_sweep/variants/factor_16/hls_src/phc_step_hls.cpp:130:27) in function 'phc_step': changing partial unrolling into complete unrolling since the unrolling factor (=16) is no less than the loop trip count (=16). (C:/Users/holbo/00VS_projjects/00_HFT_project/n2ew_era/06l_phc_lite_pipeline_budget_sweep/variants/factor_16/hls_src/phc_step_hls.cpp:214:0)
+INFO: [HLS 214-186] Unrolling loop 'VITIS_LOOP_130_2' (C:/Users/holbo/00VS_projjects/00_HFT_project/n2ew_era/06l_phc_lite_pipeline_budget_sweep/variants/factor_16/hls_src/phc_step_hls.cpp:130:27) in function 'phc_step' completely with a factor of 16 (C:/Users/holbo/00VS_projjects/00_HFT_project/n2ew_era/06l_phc_lite_pipeline_budget_sweep/variants/factor_16/hls_src/phc_step_hls.cpp:214:0)
+INFO: [HLS 214-359] Unrolling loop 'VITIS_LOOP_149_2' (C:/Users/holbo/00VS_projjects/00_HFT_project/n2ew_era/06l_phc_lite_pipeline_budget_sweep/variants/factor_16/hls_src/phc_step_hls.cpp:149:27) in function 'phc_step': changing partial unrolling into complete unrolling since the unrolling factor (=16) is no less than the loop trip count (=16). (C:/Users/holbo/00VS_projjects/00_HFT_project/n2ew_era/06l_phc_lite_pipeline_budget_sweep/variants/factor_16/hls_src/phc_step_hls.cpp:214:0)
+INFO: [HLS 214-186] Unrolling loop 'VITIS_LOOP_149_2' (C:/Users/holbo/00VS_projjects/00_HFT_project/n2ew_era/06l_phc_lite_pipeline_budget_sweep/variants/factor_16/hls_src/phc_step_hls.cpp:149:27) in function 'phc_step' completely with a factor of 16 (C:/Users/holbo/00VS_projjects/00_HFT_project/n2ew_era/06l_phc_lite_pipeline_budget_sweep/variants/factor_16/hls_src/phc_step_hls.cpp:214:0)
+INFO: [HLS 214-359] Unrolling loop 'VITIS_LOOP_110_2' (C:/Users/holbo/00VS_projjects/00_HFT_project/n2ew_era/06l_phc_lite_pipeline_budget_sweep/variants/factor_16/hls_src/phc_step_hls.cpp:110:27) in function 'phc_step': changing partial unrolling into complete unrolling since the unrolling factor (=16) is no less than the loop trip count (=16). (C:/Users/holbo/00VS_projjects/00_HFT_project/n2ew_era/06l_phc_lite_pipeline_budget_sweep/variants/factor_16/hls_src/phc_step_hls.cpp:214:0)
+INFO: [HLS 214-186] Unrolling loop 'VITIS_LOOP_110_2' (C:/Users/holbo/00VS_projjects/00_HFT_project/n2ew_era/06l_phc_lite_pipeline_budget_sweep/variants/factor_16/hls_src/phc_step_hls.cpp:110:27) in function 'phc_step' completely with a factor of 16 (C:/Users/holbo/00VS_projjects/00_HFT_project/n2ew_era/06l_phc_lite_pipeline_budget_sweep/variants/factor_16/hls_src/phc_step_hls.cpp:214:0)
+INFO: [HLS 214-186] Unrolling loop 'VITIS_LOOP_271_2' (C:/AMDDesignTools/2025.2/Vitis/common/technology/autopilot/etc/hls_sqrt_apfixed.h:271:27) in function 'sqrt_fixed<49, 25>' completely with a factor of 25 (C:/AMDDesignTools/2025.2/Vitis/common/technology/autopilot/etc/hls_sqrt_apfixed.h:20:0)
+INFO: [HLS 214-186] Unrolling loop 'VITIS_LOOP_243_1' (C:/AMDDesignTools/2025.2/Vitis/common/technology/autopilot/etc/hls_sqrt_apfixed.h:243:27) in function 'sqrt_fixed<49, 25>' completely with a factor of 13 (C:/AMDDesignTools/2025.2/Vitis/common/technology/autopilot/etc/hls_sqrt_apfixed.h:20:0)
+INFO: [HLS 214-178] Inlining function 'ap_fixed<49, 25, (ap_q_mode)5, (ap_o_mode)3, 0> hls::sqrt<49, 25>(ap_fixed<49, 25, (ap_q_mode)5, (ap_o_mode)3, 0>)' into 'phc_step(ap_fixed<24, 12, (ap_q_mode)5, (ap_o_mode)3, 0> const*, ap_fixed<24, 12, (ap_q_mode)5, (ap_o_mode)3, 0> const*, ap_fixed<24, 12, (ap_q_mode)5, (ap_o_mode)3, 0>*, ap_fixed<24, 12, (ap_q_mode)5, (ap_o_mode)3, 0>*)' (C:/Users/holbo/00VS_projjects/00_HFT_project/n2ew_era/06l_phc_lite_pipeline_budget_sweep/variants/factor_16/hls_src/phc_step_hls.cpp:214:0)
+INFO: [HLS 214-248] Applying array_partition to '_ZN16phc_step_weightsL9READOUT_WE': Complete partitioning on dimension 2. (C:/Users/holbo/00VS_projjects/00_HFT_project/n2ew_era/06l_phc_lite_pipeline_budget_sweep/variants/factor_16/hls_src/phc_weights.hpp:188:0)
+INFO: [HLS 214-248] Applying array_partition to '_ZN16phc_step_weightsL9SYNAPSE_WE': Complete partitioning on dimension 2. (C:/Users/holbo/00VS_projjects/00_HFT_project/n2ew_era/06l_phc_lite_pipeline_budget_sweep/variants/factor_16/hls_src/phc_weights.hpp:159:0)
+INFO: [HLS 214-248] Applying array_partition to '_ZN16phc_step_weightsL22GAIN_FROM_PREV_STATE_WE': Complete partitioning on dimension 2. (C:/Users/holbo/00VS_projjects/00_HFT_project/n2ew_era/06l_phc_lite_pipeline_budget_sweep/variants/factor_16/hls_src/phc_weights.hpp:139:0)
+INFO: [HLS 214-248] Applying array_partition to '_ZN16phc_step_weightsL19GAIN_FROM_ENCODED_WE': Complete partitioning on dimension 2. (C:/Users/holbo/00VS_projjects/00_HFT_project/n2ew_era/06l_phc_lite_pipeline_budget_sweep/variants/factor_16/hls_src/phc_weights.hpp:116:0)
+INFO: [HLS 214-248] Applying array_partition to '_ZN16phc_step_weightsL11CANDIDATE_WE': Complete partitioning on dimension 2. (C:/Users/holbo/00VS_projjects/00_HFT_project/n2ew_era/06l_phc_lite_pipeline_budget_sweep/variants/factor_16/hls_src/phc_weights.hpp:93:0)
+INFO: [HLS 214-248] Applying array_partition to '_ZN16phc_step_weightsL6GATE_WE': Complete partitioning on dimension 2. (C:/Users/holbo/00VS_projjects/00_HFT_project/n2ew_era/06l_phc_lite_pipeline_budget_sweep/variants/factor_16/hls_src/phc_weights.hpp:70:0)
+INFO: [HLS 214-248] Applying array_partition to '_ZZN12_GLOBAL__N_115tanh_lut_scalarE8ap_fixedILi40ELi16EL9ap_q_mode5EL9ap_o_mode3ELi0EEE8TANH_LUT': Complete partitioning on dimension 1. (C:/Users/holbo/00VS_projjects/00_HFT_project/n2ew_era/06l_phc_lite_pipeline_budget_sweep/variants/factor_16/hls_src/phc_step_hls.cpp:23:0)
+INFO: [HLS 214-248] Applying array_partition to '_ZN16phc_step_weightsL12ENC_LINEAR_WE': Complete partitioning on dimension 2. (C:/Users/holbo/00VS_projjects/00_HFT_project/n2ew_era/06l_phc_lite_pipeline_budget_sweep/variants/factor_16/hls_src/phc_weights.hpp:41:0)
+INFO: [HLS 214-421] Partitioning small array 'phc_step_weights::READOUT_B' due to array size. (C:/Users/holbo/00VS_projjects/00_HFT_project/n2ew_era/06l_phc_lite_pipeline_budget_sweep/variants/factor_16/hls_src/phc_weights.hpp:194:0)
+INFO: [HLS 214-421] Partitioning small array '_ZN16phc_step_weightsL9READOUT_WE_0' due to array size.
+INFO: [HLS 214-421] Partitioning small array '_ZN16phc_step_weightsL9READOUT_WE_1' due to array size.
+INFO: [HLS 214-421] Partitioning small array '_ZN16phc_step_weightsL9READOUT_WE_2' due to array size.
+INFO: [HLS 214-421] Partitioning small array '_ZN16phc_step_weightsL9READOUT_WE_3' due to array size.
+INFO: [HLS 214-421] Partitioning small array '_ZN16phc_step_weightsL9READOUT_WE_4' due to array size.
+INFO: [HLS 214-421] Partitioning small array '_ZN16phc_step_weightsL9READOUT_WE_5' due to array size.
+INFO: [HLS 214-421] Partitioning small array '_ZN16phc_step_weightsL9READOUT_WE_6' due to array size.
+INFO: [HLS 214-421] Partitioning small array '_ZN16phc_step_weightsL9READOUT_WE_7' due to array size.
+INFO: [HLS 214-421] Partitioning small array '_ZN16phc_step_weightsL9READOUT_WE_8' due to array size.
+INFO: [HLS 214-421] Partitioning small array '_ZN16phc_step_weightsL9READOUT_WE_9' due to array size.
+INFO: [HLS 214-421] Partitioning small array '_ZN16phc_step_weightsL9READOUT_WE_10' due to array size.
+INFO: [HLS 214-421] Partitioning small array '_ZN16phc_step_weightsL9READOUT_WE_11' due to array size.
+INFO: [HLS 214-421] Partitioning small array '_ZN16phc_step_weightsL9READOUT_WE_12' due to array size.
+INFO: [HLS 214-421] Partitioning small array '_ZN16phc_step_weightsL9READOUT_WE_13' due to array size.
+INFO: [HLS 214-421] Partitioning small array '_ZN16phc_step_weightsL9READOUT_WE_14' due to array size.
+INFO: [HLS 214-421] Partitioning small array '_ZN16phc_step_weightsL9READOUT_WE_15' due to array size.
+INFO: [HLS 214-421] Partitioning small array 'readout_acc' due to array size. (C:/Users/holbo/00VS_projjects/00_HFT_project/n2ew_era/06l_phc_lite_pipeline_budget_sweep/variants/factor_16/hls_src/phc_step_hls.cpp:232:15)
+INFO: [HLS 214-248] Applying array_partition to '_ZN16phc_step_weightsL9READOUT_WE_9': Complete partitioning on dimension 1.
+INFO: [HLS 214-248] Applying array_partition to '_ZN16phc_step_weightsL9READOUT_WE_8': Complete partitioning on dimension 1.
+INFO: [HLS 214-248] Applying array_partition to '_ZN16phc_step_weightsL9READOUT_WE_7': Complete partitioning on dimension 1.
+INFO: [HLS 214-248] Applying array_partition to '_ZN16phc_step_weightsL9READOUT_WE_6': Complete partitioning on dimension 1.
+INFO: [HLS 214-248] Applying array_partition to '_ZN16phc_step_weightsL9READOUT_WE_5': Complete partitioning on dimension 1.
+INFO: [HLS 214-248] Applying array_partition to '_ZN16phc_step_weightsL9READOUT_WE_4': Complete partitioning on dimension 1.
+INFO: [HLS 214-248] Applying array_partition to '_ZN16phc_step_weightsL9READOUT_WE_3': Complete partitioning on dimension 1.
+INFO: [HLS 214-248] Applying array_partition to '_ZN16phc_step_weightsL9READOUT_WE_2': Complete partitioning on dimension 1.
+INFO: [HLS 214-248] Applying array_partition to '_ZN16phc_step_weightsL9READOUT_WE_15': Complete partitioning on dimension 1.
+INFO: [HLS 214-248] Applying array_partition to '_ZN16phc_step_weightsL9READOUT_WE_14': Complete partitioning on dimension 1.
+INFO: [HLS 214-248] Applying array_partition to '_ZN16phc_step_weightsL9READOUT_WE_13': Complete partitioning on dimension 1.
+INFO: [HLS 214-248] Applying array_partition to '_ZN16phc_step_weightsL9READOUT_WE_12': Complete partitioning on dimension 1.
+INFO: [HLS 214-248] Applying array_partition to '_ZN16phc_step_weightsL9READOUT_WE_11': Complete partitioning on dimension 1.
+INFO: [HLS 214-248] Applying array_partition to '_ZN16phc_step_weightsL9READOUT_WE_10': Complete partitioning on dimension 1.
+INFO: [HLS 214-248] Applying array_partition to '_ZN16phc_step_weightsL9READOUT_WE_1': Complete partitioning on dimension 1.
+INFO: [HLS 214-248] Applying array_partition to '_ZN16phc_step_weightsL9READOUT_WE_0': Complete partitioning on dimension 1.
+INFO: [HLS 214-248] Applying array_partition to '_ZN16phc_step_weightsL9READOUT_BE': Complete partitioning on dimension 1. (C:/Users/holbo/00VS_projjects/00_HFT_project/n2ew_era/06l_phc_lite_pipeline_budget_sweep/variants/factor_16/hls_src/phc_weights.hpp:194:0)
+INFO: [HLS 214-248] Applying array_partition to 'readout_acc': Complete partitioning on dimension 1. (C:/Users/holbo/00VS_projjects/00_HFT_project/n2ew_era/06l_phc_lite_pipeline_budget_sweep/variants/factor_16/hls_src/phc_step_hls.cpp:232:15)
+INFO: [HLS 200-111] Finished Compiling Optimization and Transform: CPU user time: 1 seconds. CPU system time: 0 seconds. Elapsed time: 12.255 seconds; current allocated memory: 143.941 MB.
+INFO: [HLS 200-111] Finished Checking Pragmas: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.002 seconds; current allocated memory: 143.941 MB.
+INFO: [HLS 200-10] Starting code transformations ...
+INFO: [HLS 200-111] Finished Standard Transforms: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.573 seconds; current allocated memory: 156.305 MB.
+INFO: [HLS 200-10] Checking synthesizability ...
+WARNING: [SYNCHK 200-120] C:/Users/holbo/00VS_projjects/00_HFT_project/n2ew_era/06l_phc_lite_pipeline_budget_sweep/variants/factor_16/hls_src/phc_step_hls.cpp:196: multiplication is assumed not to overflow by default, otherwise, please add option '-fwrapv'.
+INFO: [SYNCHK 200-10] 0 error(s), 1 warning(s).
+INFO: [HLS 200-111] Finished Checking Synthesizability: CPU user time: 1 seconds. CPU system time: 0 seconds. Elapsed time: 0.599 seconds; current allocated memory: 160.023 MB.
+INFO: [XFORM 203-401] Performing if-conversion on hyperblock from (C:/AMDDesignTools/2025.2/Vitis/common/technology/autopilot/etc/hls_sqrt_apfixed.h:21:1) to (C:/AMDDesignTools/2025.2/Vitis/common/technology/autopilot/etc/hls_sqrt_apfixed.h:349:1) in function 'sqrt_fixed<49, 25>'... converting 170 basic blocks.
+INFO: [XFORM 203-401] Performing if-conversion on hyperblock from (C:/Users/holbo/00VS_projjects/00_HFT_project/n2ew_era/06l_phc_lite_pipeline_budget_sweep/variants/factor_16/hls_src/phc_step_hls.cpp:94:1) to (C:/Users/holbo/00VS_projjects/00_HFT_project/n2ew_era/06l_phc_lite_pipeline_budget_sweep/variants/factor_16/hls_src/phc_step_hls.cpp:93:22) in function 'phc_step'... converting 6 basic blocks.
+INFO: [XFORM 203-401] Performing if-conversion on hyperblock from (C:/Users/holbo/00VS_projjects/00_HFT_project/n2ew_era/06l_phc_lite_pipeline_budget_sweep/variants/factor_16/hls_src/phc_step_hls.cpp:78:1) to (C:/Users/holbo/00VS_projjects/00_HFT_project/n2ew_era/06l_phc_lite_pipeline_budget_sweep/variants/factor_16/hls_src/phc_step_hls.cpp:77:22) in function 'phc_step'... converting 6 basic blocks.
+INFO: [XFORM 203-401] Performing if-conversion on hyperblock from (C:/Users/holbo/00VS_projjects/00_HFT_project/n2ew_era/06l_phc_lite_pipeline_budget_sweep/variants/factor_16/hls_src/phc_step_hls.cpp:86:1) to (C:/Users/holbo/00VS_projjects/00_HFT_project/n2ew_era/06l_phc_lite_pipeline_budget_sweep/variants/factor_16/hls_src/phc_step_hls.cpp:85:22) in function 'phc_step'... converting 6 basic blocks.
+INFO: [XFORM 203-401] Performing if-conversion on hyperblock from (C:/Users/holbo/00VS_projjects/00_HFT_project/n2ew_era/06l_phc_lite_pipeline_budget_sweep/variants/factor_16/hls_src/phc_step_hls.cpp:78:1) to (C:/Users/holbo/00VS_projjects/00_HFT_project/n2ew_era/06l_phc_lite_pipeline_budget_sweep/variants/factor_16/hls_src/phc_step_hls.cpp:77:22) in function 'phc_step'... converting 6 basic blocks.
+INFO: [XFORM 203-401] Performing if-conversion on hyperblock from (C:/Users/holbo/00VS_projjects/00_HFT_project/n2ew_era/06l_phc_lite_pipeline_budget_sweep/variants/factor_16/hls_src/phc_step_hls.cpp:94:1) to (C:/Users/holbo/00VS_projjects/00_HFT_project/n2ew_era/06l_phc_lite_pipeline_budget_sweep/variants/factor_16/hls_src/phc_step_hls.cpp:93:22) in function 'phc_step'... converting 6 basic blocks.
+INFO: [HLS 200-111] Finished Loop, function and other optimizations: CPU user time: 2 seconds. CPU system time: 0 seconds. Elapsed time: 2.058 seconds; current allocated memory: 189.336 MB.
+INFO: [HLS 200-111] Finished Architecture Synthesis: CPU user time: 1 seconds. CPU system time: 0 seconds. Elapsed time: 1.681 seconds; current allocated memory: 318.738 MB.
+INFO: [HLS 200-10] Starting hardware synthesis ...
+INFO: [HLS 200-10] Synthesizing 'phc_step' ...
+WARNING: [SYN 201-103] Legalizing function name 'sqrt_fixed<49, 25>' to 'sqrt_fixed_49_25_s'.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'sqrt_fixed_49_25_s' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining function 'sqrt_fixed<49, 25>'.
+INFO: [HLS 200-1470] Pipelining result : Target II = NA, Final II = 1, Depth = 29, function 'sqrt_fixed<49, 25>'
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 1 seconds. CPU system time: 0 seconds. Elapsed time: 1.517 seconds; current allocated memory: 350.789 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.193 seconds; current allocated memory: 350.789 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'phc_step_Outline_VITIS_LOOP_127_1' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.286 seconds; current allocated memory: 350.789 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.047 seconds; current allocated memory: 350.789 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'phc_step_Outline_VITIS_LOOP_77_1' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.096 seconds; current allocated memory: 350.789 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.045 seconds; current allocated memory: 350.789 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'phc_step_Outline_VITIS_LOOP_127_11' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 1 seconds. CPU system time: 0 seconds. Elapsed time: 0.15 seconds; current allocated memory: 350.789 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.06 seconds; current allocated memory: 350.789 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'phc_step_Outline_VITIS_LOOP_85_1' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.068 seconds; current allocated memory: 350.789 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.708 seconds; current allocated memory: 350.789 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'phc_step_Outline_VITIS_LOOP_246_1' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.055 seconds; current allocated memory: 350.789 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.026 seconds; current allocated memory: 350.789 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'phc_step_Outline_VITIS_LOOP_127_12' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.11 seconds; current allocated memory: 350.789 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.074 seconds; current allocated memory: 350.789 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'phc_step_Outline_VITIS_LOOP_146_1' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.145 seconds; current allocated memory: 350.789 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.064 seconds; current allocated memory: 350.789 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'phc_step_Outline_VITIS_LOOP_254_2' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.072 seconds; current allocated memory: 350.789 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.018 seconds; current allocated memory: 350.789 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'phc_step_Outline_VITIS_LOOP_77_13' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.054 seconds; current allocated memory: 350.789 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.039 seconds; current allocated memory: 350.789 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'phc_step_Outline_VITIS_LOOP_127_14' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0 seconds. CPU system time: 1 seconds. Elapsed time: 0.148 seconds; current allocated memory: 350.789 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.073 seconds; current allocated memory: 350.789 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'phc_step_Outline_VITIS_LOOP_93_1' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.098 seconds; current allocated memory: 350.789 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.054 seconds; current allocated memory: 350.789 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'phc_step_Outline_VITIS_LOOP_166_1' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 1 seconds. CPU system time: 0 seconds. Elapsed time: 0.15 seconds; current allocated memory: 350.789 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.072 seconds; current allocated memory: 350.789 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'phc_step_Outline_VITIS_LOOP_271_4' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.056 seconds; current allocated memory: 350.789 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.025 seconds; current allocated memory: 350.789 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'phc_step_Outline_VITIS_LOOP_275_5' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.027 seconds; current allocated memory: 350.789 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.023 seconds; current allocated memory: 350.789 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'phc_step' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.4 seconds; current allocated memory: 352.035 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.28 seconds; current allocated memory: 353.809 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'sqrt_fixed_49_25_s' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [RTGEN 206-104] Estimated max fanout for 'sqrt_fixed_49_25_s' is 5523 from HDL expression: ((1'b1 == ap_ce_reg) & (1'b0 == ap_block_pp0_stage0_11001))
+INFO: [RTGEN 206-100] Finished creating RTL model for 'sqrt_fixed_49_25_s'.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 1 seconds. CPU system time: 0 seconds. Elapsed time: 0.768 seconds; current allocated memory: 361.262 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'phc_step_Outline_VITIS_LOOP_127_1' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SYN 201-210] Renamed object name 'phc_step_Outline_VITIS_LOOP_127_1_p_ZN16phc_step_weightsL6GATE_WE_10_ROM_AUTO_1R' to 'phc_step_Outline_VITIS_LOOP_127_1_p_ZN16phc_step_weightsL6GATE_WE_10_ROM_AUTObkb' due to the length limit 80
+INFO: [SYN 201-210] Renamed object name 'phc_step_Outline_VITIS_LOOP_127_1_p_ZN16phc_step_weightsL6GATE_WE_11_ROM_AUTO_1R' to 'phc_step_Outline_VITIS_LOOP_127_1_p_ZN16phc_step_weightsL6GATE_WE_11_ROM_AUTOcud' due to the length limit 80
+INFO: [SYN 201-210] Renamed object name 'phc_step_Outline_VITIS_LOOP_127_1_p_ZN16phc_step_weightsL6GATE_WE_12_ROM_AUTO_1R' to 'phc_step_Outline_VITIS_LOOP_127_1_p_ZN16phc_step_weightsL6GATE_WE_12_ROM_AUTOdEe' due to the length limit 80
+INFO: [SYN 201-210] Renamed object name 'phc_step_Outline_VITIS_LOOP_127_1_p_ZN16phc_step_weightsL6GATE_WE_13_ROM_AUTO_1R' to 'phc_step_Outline_VITIS_LOOP_127_1_p_ZN16phc_step_weightsL6GATE_WE_13_ROM_AUTOeOg' due to the length limit 80
+INFO: [SYN 201-210] Renamed object name 'phc_step_Outline_VITIS_LOOP_127_1_p_ZN16phc_step_weightsL6GATE_WE_14_ROM_AUTO_1R' to 'phc_step_Outline_VITIS_LOOP_127_1_p_ZN16phc_step_weightsL6GATE_WE_14_ROM_AUTOfYi' due to the length limit 80
+INFO: [SYN 201-210] Renamed object name 'phc_step_Outline_VITIS_LOOP_127_1_p_ZN16phc_step_weightsL6GATE_WE_15_ROM_AUTO_1R' to 'phc_step_Outline_VITIS_LOOP_127_1_p_ZN16phc_step_weightsL6GATE_WE_15_ROM_AUTOg8j' due to the length limit 80
+INFO: [RTGEN 206-100] Generating core module 'mul_24s_40s_64_2_1': 2 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'mul_25s_40s_64_2_1': 2 instance(s).
+INFO: [RTGEN 206-100] Finished creating RTL model for 'phc_step_Outline_VITIS_LOOP_127_1'.
+INFO: [RTMG 210-279] Implementing memory 'phc_step_phc_step_Outline_VITIS_LOOP_127_1_phc_step_weights_GATE_B_ROM_AUTO_1R' using auto ROMs.
+INFO: [RTMG 210-279] Implementing memory 'phc_step_phc_step_Outline_VITIS_LOOP_127_1_p_ZN16phc_step_weightsL6GATE_WE_0_ROM_AUTO_1R' using auto ROMs.
+INFO: [RTMG 210-279] Implementing memory 'phc_step_phc_step_Outline_VITIS_LOOP_127_1_p_ZN16phc_step_weightsL6GATE_WE_1_ROM_AUTO_1R' using auto ROMs.
+INFO: [RTMG 210-279] Implementing memory 'phc_step_phc_step_Outline_VITIS_LOOP_127_1_p_ZN16phc_step_weightsL6GATE_WE_2_ROM_AUTO_1R' using auto ROMs.
+INFO: [RTMG 210-279] Implementing memory 'phc_step_phc_step_Outline_VITIS_LOOP_127_1_p_ZN16phc_step_weightsL6GATE_WE_3_ROM_AUTO_1R' using auto ROMs.
+INFO: [RTMG 210-279] Implementing memory 'phc_step_phc_step_Outline_VITIS_LOOP_127_1_p_ZN16phc_step_weightsL6GATE_WE_4_ROM_AUTO_1R' using auto ROMs.
+INFO: [RTMG 210-279] Implementing memory 'phc_step_phc_step_Outline_VITIS_LOOP_127_1_p_ZN16phc_step_weightsL6GATE_WE_5_ROM_AUTO_1R' using auto ROMs.
+INFO: [RTMG 210-279] Implementing memory 'phc_step_phc_step_Outline_VITIS_LOOP_127_1_p_ZN16phc_step_weightsL6GATE_WE_6_ROM_AUTO_1R' using auto ROMs.
+INFO: [RTMG 210-279] Implementing memory 'phc_step_phc_step_Outline_VITIS_LOOP_127_1_p_ZN16phc_step_weightsL6GATE_WE_7_ROM_AUTO_1R' using auto ROMs.
+INFO: [RTMG 210-279] Implementing memory 'phc_step_phc_step_Outline_VITIS_LOOP_127_1_p_ZN16phc_step_weightsL6GATE_WE_8_ROM_AUTO_1R' using auto ROMs.
+INFO: [RTMG 210-279] Implementing memory 'phc_step_phc_step_Outline_VITIS_LOOP_127_1_p_ZN16phc_step_weightsL6GATE_WE_9_ROM_AUTO_1R' using auto ROMs.
+INFO: [RTMG 210-279] Implementing memory 'phc_step_phc_step_Outline_VITIS_LOOP_127_1_p_ZN16phc_step_weightsL6GATE_WE_10_ROM_AUTObkb' using auto ROMs.
+INFO: [RTMG 210-279] Implementing memory 'phc_step_phc_step_Outline_VITIS_LOOP_127_1_p_ZN16phc_step_weightsL6GATE_WE_11_ROM_AUTOcud' using auto ROMs.
+INFO: [RTMG 210-279] Implementing memory 'phc_step_phc_step_Outline_VITIS_LOOP_127_1_p_ZN16phc_step_weightsL6GATE_WE_12_ROM_AUTOdEe' using auto ROMs.
+INFO: [RTMG 210-279] Implementing memory 'phc_step_phc_step_Outline_VITIS_LOOP_127_1_p_ZN16phc_step_weightsL6GATE_WE_13_ROM_AUTOeOg' using auto ROMs.
+INFO: [RTMG 210-279] Implementing memory 'phc_step_phc_step_Outline_VITIS_LOOP_127_1_p_ZN16phc_step_weightsL6GATE_WE_14_ROM_AUTOfYi' using auto ROMs.
+INFO: [RTMG 210-279] Implementing memory 'phc_step_phc_step_Outline_VITIS_LOOP_127_1_p_ZN16phc_step_weightsL6GATE_WE_15_ROM_AUTOg8j' using auto ROMs.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 2.524 seconds; current allocated memory: 378.809 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'phc_step_Outline_VITIS_LOOP_77_1' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [RTGEN 206-100] Generating core module 'mul_26s_40s_64_2_1': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'sparsemux_129_6_25_1_1': 2 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'sparsemux_7_2_40_1_1': 1 instance(s).
+INFO: [RTGEN 206-100] Finished creating RTL model for 'phc_step_Outline_VITIS_LOOP_77_1'.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 1 seconds. CPU system time: 0 seconds. Elapsed time: 0.304 seconds; current allocated memory: 381.680 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'phc_step_Outline_VITIS_LOOP_127_11' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SYN 201-210] Renamed object name 'phc_step_Outline_VITIS_LOOP_127_11_p_ZN16phc_step_weightsL11CANDIDATE_WE_0_ROM_AUTO_1R' to 'phc_step_Outline_VITIS_LOOP_127_11_p_ZN16phc_step_weightsL11CANDIDATE_WE_0_ROhbi' due to the length limit 80
+INFO: [SYN 201-210] Renamed object name 'phc_step_Outline_VITIS_LOOP_127_11_p_ZN16phc_step_weightsL11CANDIDATE_WE_1_ROM_AUTO_1R' to 'phc_step_Outline_VITIS_LOOP_127_11_p_ZN16phc_step_weightsL11CANDIDATE_WE_1_ROibs' due to the length limit 80
+INFO: [SYN 201-210] Renamed object name 'phc_step_Outline_VITIS_LOOP_127_11_p_ZN16phc_step_weightsL11CANDIDATE_WE_2_ROM_AUTO_1R' to 'phc_step_Outline_VITIS_LOOP_127_11_p_ZN16phc_step_weightsL11CANDIDATE_WE_2_ROjbC' due to the length limit 80
+INFO: [SYN 201-210] Renamed object name 'phc_step_Outline_VITIS_LOOP_127_11_p_ZN16phc_step_weightsL11CANDIDATE_WE_3_ROM_AUTO_1R' to 'phc_step_Outline_VITIS_LOOP_127_11_p_ZN16phc_step_weightsL11CANDIDATE_WE_3_ROkbM' due to the length limit 80
+INFO: [SYN 201-210] Renamed object name 'phc_step_Outline_VITIS_LOOP_127_11_p_ZN16phc_step_weightsL11CANDIDATE_WE_4_ROM_AUTO_1R' to 'phc_step_Outline_VITIS_LOOP_127_11_p_ZN16phc_step_weightsL11CANDIDATE_WE_4_ROlbW' due to the length limit 80
+INFO: [SYN 201-210] Renamed object name 'phc_step_Outline_VITIS_LOOP_127_11_p_ZN16phc_step_weightsL11CANDIDATE_WE_5_ROM_AUTO_1R' to 'phc_step_Outline_VITIS_LOOP_127_11_p_ZN16phc_step_weightsL11CANDIDATE_WE_5_ROmb6' due to the length limit 80
+INFO: [SYN 201-210] Renamed object name 'phc_step_Outline_VITIS_LOOP_127_11_p_ZN16phc_step_weightsL11CANDIDATE_WE_6_ROM_AUTO_1R' to 'phc_step_Outline_VITIS_LOOP_127_11_p_ZN16phc_step_weightsL11CANDIDATE_WE_6_ROncg' due to the length limit 80
+INFO: [SYN 201-210] Renamed object name 'phc_step_Outline_VITIS_LOOP_127_11_p_ZN16phc_step_weightsL11CANDIDATE_WE_7_ROM_AUTO_1R' to 'phc_step_Outline_VITIS_LOOP_127_11_p_ZN16phc_step_weightsL11CANDIDATE_WE_7_ROocq' due to the length limit 80
+INFO: [SYN 201-210] Renamed object name 'phc_step_Outline_VITIS_LOOP_127_11_p_ZN16phc_step_weightsL11CANDIDATE_WE_8_ROM_AUTO_1R' to 'phc_step_Outline_VITIS_LOOP_127_11_p_ZN16phc_step_weightsL11CANDIDATE_WE_8_ROpcA' due to the length limit 80
+INFO: [SYN 201-210] Renamed object name 'phc_step_Outline_VITIS_LOOP_127_11_p_ZN16phc_step_weightsL11CANDIDATE_WE_9_ROM_AUTO_1R' to 'phc_step_Outline_VITIS_LOOP_127_11_p_ZN16phc_step_weightsL11CANDIDATE_WE_9_ROqcK' due to the length limit 80
+INFO: [SYN 201-210] Renamed object name 'phc_step_Outline_VITIS_LOOP_127_11_p_ZN16phc_step_weightsL11CANDIDATE_WE_10_ROM_AUTO_1R' to 'phc_step_Outline_VITIS_LOOP_127_11_p_ZN16phc_step_weightsL11CANDIDATE_WE_10_RrcU' due to the length limit 80
+INFO: [SYN 201-210] Renamed object name 'phc_step_Outline_VITIS_LOOP_127_11_p_ZN16phc_step_weightsL11CANDIDATE_WE_11_ROM_AUTO_1R' to 'phc_step_Outline_VITIS_LOOP_127_11_p_ZN16phc_step_weightsL11CANDIDATE_WE_11_Rsc4' due to the length limit 80
+INFO: [SYN 201-210] Renamed object name 'phc_step_Outline_VITIS_LOOP_127_11_p_ZN16phc_step_weightsL11CANDIDATE_WE_12_ROM_AUTO_1R' to 'phc_step_Outline_VITIS_LOOP_127_11_p_ZN16phc_step_weightsL11CANDIDATE_WE_12_Rtde' due to the length limit 80
+INFO: [SYN 201-210] Renamed object name 'phc_step_Outline_VITIS_LOOP_127_11_p_ZN16phc_step_weightsL11CANDIDATE_WE_13_ROM_AUTO_1R' to 'phc_step_Outline_VITIS_LOOP_127_11_p_ZN16phc_step_weightsL11CANDIDATE_WE_13_Rudo' due to the length limit 80
+INFO: [SYN 201-210] Renamed object name 'phc_step_Outline_VITIS_LOOP_127_11_p_ZN16phc_step_weightsL11CANDIDATE_WE_14_ROM_AUTO_1R' to 'phc_step_Outline_VITIS_LOOP_127_11_p_ZN16phc_step_weightsL11CANDIDATE_WE_14_Rvdy' due to the length limit 80
+INFO: [SYN 201-210] Renamed object name 'phc_step_Outline_VITIS_LOOP_127_11_p_ZN16phc_step_weightsL11CANDIDATE_WE_15_ROM_AUTO_1R' to 'phc_step_Outline_VITIS_LOOP_127_11_p_ZN16phc_step_weightsL11CANDIDATE_WE_15_RwdI' due to the length limit 80
+INFO: [RTGEN 206-100] Generating core module 'mul_23s_40s_63_2_1': 2 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'mul_24s_40s_64_2_1': 2 instance(s).
+INFO: [RTGEN 206-100] Finished creating RTL model for 'phc_step_Outline_VITIS_LOOP_127_11'.
+INFO: [RTMG 210-279] Implementing memory 'phc_step_phc_step_Outline_VITIS_LOOP_127_11_phc_step_weights_CANDIDATE_B_ROM_AUTO_1R' using auto ROMs.
+INFO: [RTMG 210-279] Implementing memory 'phc_step_phc_step_Outline_VITIS_LOOP_127_11_p_ZN16phc_step_weightsL11CANDIDATE_WE_0_ROhbi' using auto ROMs.
+INFO: [RTMG 210-279] Implementing memory 'phc_step_phc_step_Outline_VITIS_LOOP_127_11_p_ZN16phc_step_weightsL11CANDIDATE_WE_1_ROibs' using auto ROMs.
+INFO: [RTMG 210-279] Implementing memory 'phc_step_phc_step_Outline_VITIS_LOOP_127_11_p_ZN16phc_step_weightsL11CANDIDATE_WE_2_ROjbC' using auto ROMs.
+INFO: [RTMG 210-279] Implementing memory 'phc_step_phc_step_Outline_VITIS_LOOP_127_11_p_ZN16phc_step_weightsL11CANDIDATE_WE_3_ROkbM' using auto ROMs.
+INFO: [RTMG 210-279] Implementing memory 'phc_step_phc_step_Outline_VITIS_LOOP_127_11_p_ZN16phc_step_weightsL11CANDIDATE_WE_4_ROlbW' using auto ROMs.
+INFO: [RTMG 210-279] Implementing memory 'phc_step_phc_step_Outline_VITIS_LOOP_127_11_p_ZN16phc_step_weightsL11CANDIDATE_WE_5_ROmb6' using auto ROMs.
+INFO: [RTMG 210-279] Implementing memory 'phc_step_phc_step_Outline_VITIS_LOOP_127_11_p_ZN16phc_step_weightsL11CANDIDATE_WE_6_ROncg' using auto ROMs.
+INFO: [RTMG 210-279] Implementing memory 'phc_step_phc_step_Outline_VITIS_LOOP_127_11_p_ZN16phc_step_weightsL11CANDIDATE_WE_7_ROocq' using auto ROMs.
+INFO: [RTMG 210-279] Implementing memory 'phc_step_phc_step_Outline_VITIS_LOOP_127_11_p_ZN16phc_step_weightsL11CANDIDATE_WE_8_ROpcA' using auto ROMs.
+INFO: [RTMG 210-279] Implementing memory 'phc_step_phc_step_Outline_VITIS_LOOP_127_11_p_ZN16phc_step_weightsL11CANDIDATE_WE_9_ROqcK' using auto ROMs.
+INFO: [RTMG 210-279] Implementing memory 'phc_step_phc_step_Outline_VITIS_LOOP_127_11_p_ZN16phc_step_weightsL11CANDIDATE_WE_10_RrcU' using auto ROMs.
+INFO: [RTMG 210-279] Implementing memory 'phc_step_phc_step_Outline_VITIS_LOOP_127_11_p_ZN16phc_step_weightsL11CANDIDATE_WE_11_Rsc4' using auto ROMs.
+INFO: [RTMG 210-279] Implementing memory 'phc_step_phc_step_Outline_VITIS_LOOP_127_11_p_ZN16phc_step_weightsL11CANDIDATE_WE_12_Rtde' using auto ROMs.
+INFO: [RTMG 210-279] Implementing memory 'phc_step_phc_step_Outline_VITIS_LOOP_127_11_p_ZN16phc_step_weightsL11CANDIDATE_WE_13_Rudo' using auto ROMs.
+INFO: [RTMG 210-279] Implementing memory 'phc_step_phc_step_Outline_VITIS_LOOP_127_11_p_ZN16phc_step_weightsL11CANDIDATE_WE_14_Rvdy' using auto ROMs.
+INFO: [RTMG 210-279] Implementing memory 'phc_step_phc_step_Outline_VITIS_LOOP_127_11_p_ZN16phc_step_weightsL11CANDIDATE_WE_15_RwdI' using auto ROMs.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 1.813 seconds; current allocated memory: 385.727 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'phc_step_Outline_VITIS_LOOP_85_1' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [RTGEN 206-100] Generating core module 'mul_26s_40s_64_2_1': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'sparsemux_129_6_25_1_1': 2 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'sparsemux_7_2_40_1_1': 1 instance(s).
+INFO: [RTGEN 206-100] Finished creating RTL model for 'phc_step_Outline_VITIS_LOOP_85_1'.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.426 seconds; current allocated memory: 390.953 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'phc_step_Outline_VITIS_LOOP_246_1' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [RTGEN 206-100] Generating core module 'mul_36s_24ns_60_2_1': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'mul_40s_40s_64_2_1': 1 instance(s).
+INFO: [RTGEN 206-100] Finished creating RTL model for 'phc_step_Outline_VITIS_LOOP_246_1'.
+INFO: [RTMG 210-279] Implementing memory 'phc_step_phc_step_Outline_VITIS_LOOP_246_1_phc_step_weights_DECAY_ROM_AUTO_1R' using auto ROMs.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 1.472 seconds; current allocated memory: 394.422 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'phc_step_Outline_VITIS_LOOP_127_12' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SYN 201-210] Renamed object name 'phc_step_Outline_VITIS_LOOP_127_12_phc_step_weights_GAIN_FROM_ENCODED_B_ROM_AUTO_1R' to 'phc_step_Outline_VITIS_LOOP_127_12_phc_step_weights_GAIN_FROM_ENCODED_B_ROM_AxdS' due to the length limit 80
+INFO: [SYN 201-210] Renamed object name 'phc_step_Outline_VITIS_LOOP_127_12_p_ZN16phc_step_weightsL19GAIN_FROM_ENCODED_WE_0_ROM_AUTO_1R' to 'phc_step_Outline_VITIS_LOOP_127_12_p_ZN16phc_step_weightsL19GAIN_FROM_ENCODEDyd2' due to the length limit 80
+INFO: [SYN 201-210] Renamed object name 'phc_step_Outline_VITIS_LOOP_127_12_p_ZN16phc_step_weightsL19GAIN_FROM_ENCODED_WE_1_ROM_AUTO_1R' to 'phc_step_Outline_VITIS_LOOP_127_12_p_ZN16phc_step_weightsL19GAIN_FROM_ENCODEDzec' due to the length limit 80
+INFO: [SYN 201-210] Renamed object name 'phc_step_Outline_VITIS_LOOP_127_12_p_ZN16phc_step_weightsL19GAIN_FROM_ENCODED_WE_2_ROM_AUTO_1R' to 'phc_step_Outline_VITIS_LOOP_127_12_p_ZN16phc_step_weightsL19GAIN_FROM_ENCODEDAem' due to the length limit 80
+INFO: [SYN 201-210] Renamed object name 'phc_step_Outline_VITIS_LOOP_127_12_p_ZN16phc_step_weightsL19GAIN_FROM_ENCODED_WE_3_ROM_AUTO_1R' to 'phc_step_Outline_VITIS_LOOP_127_12_p_ZN16phc_step_weightsL19GAIN_FROM_ENCODEDBew' due to the length limit 80
+INFO: [SYN 201-210] Renamed object name 'phc_step_Outline_VITIS_LOOP_127_12_p_ZN16phc_step_weightsL19GAIN_FROM_ENCODED_WE_4_ROM_AUTO_1R' to 'phc_step_Outline_VITIS_LOOP_127_12_p_ZN16phc_step_weightsL19GAIN_FROM_ENCODEDCeG' due to the length limit 80
+INFO: [SYN 201-210] Renamed object name 'phc_step_Outline_VITIS_LOOP_127_12_p_ZN16phc_step_weightsL19GAIN_FROM_ENCODED_WE_5_ROM_AUTO_1R' to 'phc_step_Outline_VITIS_LOOP_127_12_p_ZN16phc_step_weightsL19GAIN_FROM_ENCODEDDeQ' due to the length limit 80
+INFO: [SYN 201-210] Renamed object name 'phc_step_Outline_VITIS_LOOP_127_12_p_ZN16phc_step_weightsL19GAIN_FROM_ENCODED_WE_6_ROM_AUTO_1R' to 'phc_step_Outline_VITIS_LOOP_127_12_p_ZN16phc_step_weightsL19GAIN_FROM_ENCODEDEe0' due to the length limit 80
+INFO: [SYN 201-210] Renamed object name 'phc_step_Outline_VITIS_LOOP_127_12_p_ZN16phc_step_weightsL19GAIN_FROM_ENCODED_WE_7_ROM_AUTO_1R' to 'phc_step_Outline_VITIS_LOOP_127_12_p_ZN16phc_step_weightsL19GAIN_FROM_ENCODEDFfa' due to the length limit 80
+INFO: [SYN 201-210] Renamed object name 'phc_step_Outline_VITIS_LOOP_127_12_p_ZN16phc_step_weightsL19GAIN_FROM_ENCODED_WE_8_ROM_AUTO_1R' to 'phc_step_Outline_VITIS_LOOP_127_12_p_ZN16phc_step_weightsL19GAIN_FROM_ENCODEDGfk' due to the length limit 80
+INFO: [SYN 201-210] Renamed object name 'phc_step_Outline_VITIS_LOOP_127_12_p_ZN16phc_step_weightsL19GAIN_FROM_ENCODED_WE_9_ROM_AUTO_1R' to 'phc_step_Outline_VITIS_LOOP_127_12_p_ZN16phc_step_weightsL19GAIN_FROM_ENCODEDHfu' due to the length limit 80
+INFO: [SYN 201-210] Renamed object name 'phc_step_Outline_VITIS_LOOP_127_12_p_ZN16phc_step_weightsL19GAIN_FROM_ENCODED_WE_10_ROM_AUTO_1R' to 'phc_step_Outline_VITIS_LOOP_127_12_p_ZN16phc_step_weightsL19GAIN_FROM_ENCODEDIfE' due to the length limit 80
+INFO: [SYN 201-210] Renamed object name 'phc_step_Outline_VITIS_LOOP_127_12_p_ZN16phc_step_weightsL19GAIN_FROM_ENCODED_WE_11_ROM_AUTO_1R' to 'phc_step_Outline_VITIS_LOOP_127_12_p_ZN16phc_step_weightsL19GAIN_FROM_ENCODEDJfO' due to the length limit 80
+INFO: [SYN 201-210] Renamed object name 'phc_step_Outline_VITIS_LOOP_127_12_p_ZN16phc_step_weightsL19GAIN_FROM_ENCODED_WE_12_ROM_AUTO_1R' to 'phc_step_Outline_VITIS_LOOP_127_12_p_ZN16phc_step_weightsL19GAIN_FROM_ENCODEDKfY' due to the length limit 80
+INFO: [SYN 201-210] Renamed object name 'phc_step_Outline_VITIS_LOOP_127_12_p_ZN16phc_step_weightsL19GAIN_FROM_ENCODED_WE_13_ROM_AUTO_1R' to 'phc_step_Outline_VITIS_LOOP_127_12_p_ZN16phc_step_weightsL19GAIN_FROM_ENCODEDLf8' due to the length limit 80
+INFO: [SYN 201-210] Renamed object name 'phc_step_Outline_VITIS_LOOP_127_12_p_ZN16phc_step_weightsL19GAIN_FROM_ENCODED_WE_14_ROM_AUTO_1R' to 'phc_step_Outline_VITIS_LOOP_127_12_p_ZN16phc_step_weightsL19GAIN_FROM_ENCODEDMgi' due to the length limit 80
+INFO: [SYN 201-210] Renamed object name 'phc_step_Outline_VITIS_LOOP_127_12_p_ZN16phc_step_weightsL19GAIN_FROM_ENCODED_WE_15_ROM_AUTO_1R' to 'phc_step_Outline_VITIS_LOOP_127_12_p_ZN16phc_step_weightsL19GAIN_FROM_ENCODEDNgs' due to the length limit 80
+INFO: [RTGEN 206-100] Generating core module 'mul_24s_40s_64_2_1': 2 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'mul_25s_40s_64_2_1': 2 instance(s).
+INFO: [RTGEN 206-100] Finished creating RTL model for 'phc_step_Outline_VITIS_LOOP_127_12'.
+INFO: [RTMG 210-279] Implementing memory 'phc_step_phc_step_Outline_VITIS_LOOP_127_12_phc_step_weights_GAIN_FROM_ENCODED_B_ROM_AxdS' using auto ROMs.
+INFO: [RTMG 210-279] Implementing memory 'phc_step_phc_step_Outline_VITIS_LOOP_127_12_p_ZN16phc_step_weightsL19GAIN_FROM_ENCODEDyd2' using auto ROMs.
+INFO: [RTMG 210-279] Implementing memory 'phc_step_phc_step_Outline_VITIS_LOOP_127_12_p_ZN16phc_step_weightsL19GAIN_FROM_ENCODEDzec' using auto ROMs.
+INFO: [RTMG 210-279] Implementing memory 'phc_step_phc_step_Outline_VITIS_LOOP_127_12_p_ZN16phc_step_weightsL19GAIN_FROM_ENCODEDAem' using auto ROMs.
+INFO: [RTMG 210-279] Implementing memory 'phc_step_phc_step_Outline_VITIS_LOOP_127_12_p_ZN16phc_step_weightsL19GAIN_FROM_ENCODEDBew' using auto ROMs.
+INFO: [RTMG 210-279] Implementing memory 'phc_step_phc_step_Outline_VITIS_LOOP_127_12_p_ZN16phc_step_weightsL19GAIN_FROM_ENCODEDCeG' using auto ROMs.
+INFO: [RTMG 210-279] Implementing memory 'phc_step_phc_step_Outline_VITIS_LOOP_127_12_p_ZN16phc_step_weightsL19GAIN_FROM_ENCODEDDeQ' using auto ROMs.
+INFO: [RTMG 210-279] Implementing memory 'phc_step_phc_step_Outline_VITIS_LOOP_127_12_p_ZN16phc_step_weightsL19GAIN_FROM_ENCODEDEe0' using auto ROMs.
+INFO: [RTMG 210-279] Implementing memory 'phc_step_phc_step_Outline_VITIS_LOOP_127_12_p_ZN16phc_step_weightsL19GAIN_FROM_ENCODEDFfa' using auto ROMs.
+INFO: [RTMG 210-279] Implementing memory 'phc_step_phc_step_Outline_VITIS_LOOP_127_12_p_ZN16phc_step_weightsL19GAIN_FROM_ENCODEDGfk' using auto ROMs.
+INFO: [RTMG 210-279] Implementing memory 'phc_step_phc_step_Outline_VITIS_LOOP_127_12_p_ZN16phc_step_weightsL19GAIN_FROM_ENCODEDHfu' using auto ROMs.
+INFO: [RTMG 210-279] Implementing memory 'phc_step_phc_step_Outline_VITIS_LOOP_127_12_p_ZN16phc_step_weightsL19GAIN_FROM_ENCODEDIfE' using auto ROMs.
+INFO: [RTMG 210-279] Implementing memory 'phc_step_phc_step_Outline_VITIS_LOOP_127_12_p_ZN16phc_step_weightsL19GAIN_FROM_ENCODEDJfO' using auto ROMs.
+INFO: [RTMG 210-279] Implementing memory 'phc_step_phc_step_Outline_VITIS_LOOP_127_12_p_ZN16phc_step_weightsL19GAIN_FROM_ENCODEDKfY' using auto ROMs.
+INFO: [RTMG 210-279] Implementing memory 'phc_step_phc_step_Outline_VITIS_LOOP_127_12_p_ZN16phc_step_weightsL19GAIN_FROM_ENCODEDLf8' using auto ROMs.
+INFO: [RTMG 210-279] Implementing memory 'phc_step_phc_step_Outline_VITIS_LOOP_127_12_p_ZN16phc_step_weightsL19GAIN_FROM_ENCODEDMgi' using auto ROMs.
+INFO: [RTMG 210-279] Implementing memory 'phc_step_phc_step_Outline_VITIS_LOOP_127_12_p_ZN16phc_step_weightsL19GAIN_FROM_ENCODEDNgs' using auto ROMs.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 2.108 seconds; current allocated memory: 395.539 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'phc_step_Outline_VITIS_LOOP_146_1' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SYN 201-210] Renamed object name 'phc_step_Outline_VITIS_LOOP_146_1_p_ZN16phc_step_weightsL22GAIN_FROM_PREV_STATE_WE_0_ROM_AUTO_1R' to 'phc_step_Outline_VITIS_LOOP_146_1_p_ZN16phc_step_weightsL22GAIN_FROM_PREV_STAOgC' due to the length limit 80
+INFO: [SYN 201-210] Renamed object name 'phc_step_Outline_VITIS_LOOP_146_1_p_ZN16phc_step_weightsL22GAIN_FROM_PREV_STATE_WE_1_ROM_AUTO_1R' to 'phc_step_Outline_VITIS_LOOP_146_1_p_ZN16phc_step_weightsL22GAIN_FROM_PREV_STAPgM' due to the length limit 80
+INFO: [SYN 201-210] Renamed object name 'phc_step_Outline_VITIS_LOOP_146_1_p_ZN16phc_step_weightsL22GAIN_FROM_PREV_STATE_WE_2_ROM_AUTO_1R' to 'phc_step_Outline_VITIS_LOOP_146_1_p_ZN16phc_step_weightsL22GAIN_FROM_PREV_STAQgW' due to the length limit 80
+INFO: [SYN 201-210] Renamed object name 'phc_step_Outline_VITIS_LOOP_146_1_p_ZN16phc_step_weightsL22GAIN_FROM_PREV_STATE_WE_3_ROM_AUTO_1R' to 'phc_step_Outline_VITIS_LOOP_146_1_p_ZN16phc_step_weightsL22GAIN_FROM_PREV_STARg6' due to the length limit 80
+INFO: [SYN 201-210] Renamed object name 'phc_step_Outline_VITIS_LOOP_146_1_p_ZN16phc_step_weightsL22GAIN_FROM_PREV_STATE_WE_4_ROM_AUTO_1R' to 'phc_step_Outline_VITIS_LOOP_146_1_p_ZN16phc_step_weightsL22GAIN_FROM_PREV_STAShg' due to the length limit 80
+INFO: [SYN 201-210] Renamed object name 'phc_step_Outline_VITIS_LOOP_146_1_p_ZN16phc_step_weightsL22GAIN_FROM_PREV_STATE_WE_5_ROM_AUTO_1R' to 'phc_step_Outline_VITIS_LOOP_146_1_p_ZN16phc_step_weightsL22GAIN_FROM_PREV_STAThq' due to the length limit 80
+INFO: [SYN 201-210] Renamed object name 'phc_step_Outline_VITIS_LOOP_146_1_p_ZN16phc_step_weightsL22GAIN_FROM_PREV_STATE_WE_6_ROM_AUTO_1R' to 'phc_step_Outline_VITIS_LOOP_146_1_p_ZN16phc_step_weightsL22GAIN_FROM_PREV_STAUhA' due to the length limit 80
+INFO: [SYN 201-210] Renamed object name 'phc_step_Outline_VITIS_LOOP_146_1_p_ZN16phc_step_weightsL22GAIN_FROM_PREV_STATE_WE_7_ROM_AUTO_1R' to 'phc_step_Outline_VITIS_LOOP_146_1_p_ZN16phc_step_weightsL22GAIN_FROM_PREV_STAVhK' due to the length limit 80
+INFO: [SYN 201-210] Renamed object name 'phc_step_Outline_VITIS_LOOP_146_1_p_ZN16phc_step_weightsL22GAIN_FROM_PREV_STATE_WE_8_ROM_AUTO_1R' to 'phc_step_Outline_VITIS_LOOP_146_1_p_ZN16phc_step_weightsL22GAIN_FROM_PREV_STAWhU' due to the length limit 80
+INFO: [SYN 201-210] Renamed object name 'phc_step_Outline_VITIS_LOOP_146_1_p_ZN16phc_step_weightsL22GAIN_FROM_PREV_STATE_WE_9_ROM_AUTO_1R' to 'phc_step_Outline_VITIS_LOOP_146_1_p_ZN16phc_step_weightsL22GAIN_FROM_PREV_STAXh4' due to the length limit 80
+INFO: [SYN 201-210] Renamed object name 'phc_step_Outline_VITIS_LOOP_146_1_p_ZN16phc_step_weightsL22GAIN_FROM_PREV_STATE_WE_10_ROM_AUTO_1R' to 'phc_step_Outline_VITIS_LOOP_146_1_p_ZN16phc_step_weightsL22GAIN_FROM_PREV_STAYie' due to the length limit 80
+INFO: [SYN 201-210] Renamed object name 'phc_step_Outline_VITIS_LOOP_146_1_p_ZN16phc_step_weightsL22GAIN_FROM_PREV_STATE_WE_11_ROM_AUTO_1R' to 'phc_step_Outline_VITIS_LOOP_146_1_p_ZN16phc_step_weightsL22GAIN_FROM_PREV_STAZio' due to the length limit 80
+INFO: [SYN 201-210] Renamed object name 'phc_step_Outline_VITIS_LOOP_146_1_p_ZN16phc_step_weightsL22GAIN_FROM_PREV_STATE_WE_12_ROM_AUTO_1R' to 'phc_step_Outline_VITIS_LOOP_146_1_p_ZN16phc_step_weightsL22GAIN_FROM_PREV_STA0iy' due to the length limit 80
+INFO: [SYN 201-210] Renamed object name 'phc_step_Outline_VITIS_LOOP_146_1_p_ZN16phc_step_weightsL22GAIN_FROM_PREV_STATE_WE_13_ROM_AUTO_1R' to 'phc_step_Outline_VITIS_LOOP_146_1_p_ZN16phc_step_weightsL22GAIN_FROM_PREV_STA1iI' due to the length limit 80
+INFO: [SYN 201-210] Renamed object name 'phc_step_Outline_VITIS_LOOP_146_1_p_ZN16phc_step_weightsL22GAIN_FROM_PREV_STATE_WE_14_ROM_AUTO_1R' to 'phc_step_Outline_VITIS_LOOP_146_1_p_ZN16phc_step_weightsL22GAIN_FROM_PREV_STA2iS' due to the length limit 80
+INFO: [SYN 201-210] Renamed object name 'phc_step_Outline_VITIS_LOOP_146_1_p_ZN16phc_step_weightsL22GAIN_FROM_PREV_STATE_WE_15_ROM_AUTO_1R' to 'phc_step_Outline_VITIS_LOOP_146_1_p_ZN16phc_step_weightsL22GAIN_FROM_PREV_STA3i2' due to the length limit 80
+INFO: [RTGEN 206-100] Generating core module 'mul_24s_36s_60_2_1': 3 instance(s).
+INFO: [RTGEN 206-100] Finished creating RTL model for 'phc_step_Outline_VITIS_LOOP_146_1'.
+INFO: [RTMG 210-279] Implementing memory 'phc_step_phc_step_Outline_VITIS_LOOP_146_1_p_ZN16phc_step_weightsL22GAIN_FROM_PREV_STAOgC' using auto ROMs.
+INFO: [RTMG 210-279] Implementing memory 'phc_step_phc_step_Outline_VITIS_LOOP_146_1_p_ZN16phc_step_weightsL22GAIN_FROM_PREV_STAPgM' using auto ROMs.
+INFO: [RTMG 210-279] Implementing memory 'phc_step_phc_step_Outline_VITIS_LOOP_146_1_p_ZN16phc_step_weightsL22GAIN_FROM_PREV_STAQgW' using auto ROMs.
+INFO: [RTMG 210-279] Implementing memory 'phc_step_phc_step_Outline_VITIS_LOOP_146_1_p_ZN16phc_step_weightsL22GAIN_FROM_PREV_STARg6' using auto ROMs.
+INFO: [RTMG 210-279] Implementing memory 'phc_step_phc_step_Outline_VITIS_LOOP_146_1_p_ZN16phc_step_weightsL22GAIN_FROM_PREV_STAShg' using auto ROMs.
+INFO: [RTMG 210-279] Implementing memory 'phc_step_phc_step_Outline_VITIS_LOOP_146_1_p_ZN16phc_step_weightsL22GAIN_FROM_PREV_STAThq' using auto ROMs.
+INFO: [RTMG 210-279] Implementing memory 'phc_step_phc_step_Outline_VITIS_LOOP_146_1_p_ZN16phc_step_weightsL22GAIN_FROM_PREV_STAUhA' using auto ROMs.
+INFO: [RTMG 210-279] Implementing memory 'phc_step_phc_step_Outline_VITIS_LOOP_146_1_p_ZN16phc_step_weightsL22GAIN_FROM_PREV_STAVhK' using auto ROMs.
+INFO: [RTMG 210-279] Implementing memory 'phc_step_phc_step_Outline_VITIS_LOOP_146_1_p_ZN16phc_step_weightsL22GAIN_FROM_PREV_STAWhU' using auto ROMs.
+INFO: [RTMG 210-279] Implementing memory 'phc_step_phc_step_Outline_VITIS_LOOP_146_1_p_ZN16phc_step_weightsL22GAIN_FROM_PREV_STAXh4' using auto ROMs.
+INFO: [RTMG 210-279] Implementing memory 'phc_step_phc_step_Outline_VITIS_LOOP_146_1_p_ZN16phc_step_weightsL22GAIN_FROM_PREV_STAYie' using auto ROMs.
+INFO: [RTMG 210-279] Implementing memory 'phc_step_phc_step_Outline_VITIS_LOOP_146_1_p_ZN16phc_step_weightsL22GAIN_FROM_PREV_STAZio' using auto ROMs.
+INFO: [RTMG 210-279] Implementing memory 'phc_step_phc_step_Outline_VITIS_LOOP_146_1_p_ZN16phc_step_weightsL22GAIN_FROM_PREV_STA0iy' using auto ROMs.
+INFO: [RTMG 210-279] Implementing memory 'phc_step_phc_step_Outline_VITIS_LOOP_146_1_p_ZN16phc_step_weightsL22GAIN_FROM_PREV_STA1iI' using auto ROMs.
+INFO: [RTMG 210-279] Implementing memory 'phc_step_phc_step_Outline_VITIS_LOOP_146_1_p_ZN16phc_step_weightsL22GAIN_FROM_PREV_STA2iS' using auto ROMs.
+INFO: [RTMG 210-279] Implementing memory 'phc_step_phc_step_Outline_VITIS_LOOP_146_1_p_ZN16phc_step_weightsL22GAIN_FROM_PREV_STA3i2' using auto ROMs.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 3.962 seconds; current allocated memory: 400.988 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'phc_step_Outline_VITIS_LOOP_254_2' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [RTGEN 206-100] Finished creating RTL model for 'phc_step_Outline_VITIS_LOOP_254_2'.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.211 seconds; current allocated memory: 406.207 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'phc_step_Outline_VITIS_LOOP_77_13' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [RTGEN 206-100] Generating core module 'mul_26s_40s_64_2_1': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'sparsemux_129_6_25_1_1': 2 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'sparsemux_7_2_40_1_1': 1 instance(s).
+INFO: [RTGEN 206-100] Finished creating RTL model for 'phc_step_Outline_VITIS_LOOP_77_13'.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 1 seconds. CPU system time: 0 seconds. Elapsed time: 0.157 seconds; current allocated memory: 407.434 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'phc_step_Outline_VITIS_LOOP_127_14' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SYN 201-210] Renamed object name 'phc_step_Outline_VITIS_LOOP_127_14_p_ZN16phc_step_weightsL9SYNAPSE_WE_0_ROM_AUTO_1R' to 'phc_step_Outline_VITIS_LOOP_127_14_p_ZN16phc_step_weightsL9SYNAPSE_WE_0_ROM_A4jc' due to the length limit 80
+INFO: [SYN 201-210] Renamed object name 'phc_step_Outline_VITIS_LOOP_127_14_p_ZN16phc_step_weightsL9SYNAPSE_WE_1_ROM_AUTO_1R' to 'phc_step_Outline_VITIS_LOOP_127_14_p_ZN16phc_step_weightsL9SYNAPSE_WE_1_ROM_A5jm' due to the length limit 80
+INFO: [SYN 201-210] Renamed object name 'phc_step_Outline_VITIS_LOOP_127_14_p_ZN16phc_step_weightsL9SYNAPSE_WE_2_ROM_AUTO_1R' to 'phc_step_Outline_VITIS_LOOP_127_14_p_ZN16phc_step_weightsL9SYNAPSE_WE_2_ROM_A6jw' due to the length limit 80
+INFO: [SYN 201-210] Renamed object name 'phc_step_Outline_VITIS_LOOP_127_14_p_ZN16phc_step_weightsL9SYNAPSE_WE_3_ROM_AUTO_1R' to 'phc_step_Outline_VITIS_LOOP_127_14_p_ZN16phc_step_weightsL9SYNAPSE_WE_3_ROM_A7jG' due to the length limit 80
+INFO: [SYN 201-210] Renamed object name 'phc_step_Outline_VITIS_LOOP_127_14_p_ZN16phc_step_weightsL9SYNAPSE_WE_4_ROM_AUTO_1R' to 'phc_step_Outline_VITIS_LOOP_127_14_p_ZN16phc_step_weightsL9SYNAPSE_WE_4_ROM_A8jQ' due to the length limit 80
+INFO: [SYN 201-210] Renamed object name 'phc_step_Outline_VITIS_LOOP_127_14_p_ZN16phc_step_weightsL9SYNAPSE_WE_5_ROM_AUTO_1R' to 'phc_step_Outline_VITIS_LOOP_127_14_p_ZN16phc_step_weightsL9SYNAPSE_WE_5_ROM_A9j0' due to the length limit 80
+INFO: [SYN 201-210] Renamed object name 'phc_step_Outline_VITIS_LOOP_127_14_p_ZN16phc_step_weightsL9SYNAPSE_WE_6_ROM_AUTO_1R' to 'phc_step_Outline_VITIS_LOOP_127_14_p_ZN16phc_step_weightsL9SYNAPSE_WE_6_ROM_Abak' due to the length limit 80
+INFO: [SYN 201-210] Renamed object name 'phc_step_Outline_VITIS_LOOP_127_14_p_ZN16phc_step_weightsL9SYNAPSE_WE_7_ROM_AUTO_1R' to 'phc_step_Outline_VITIS_LOOP_127_14_p_ZN16phc_step_weightsL9SYNAPSE_WE_7_ROM_Abbk' due to the length limit 80
+INFO: [SYN 201-210] Renamed object name 'phc_step_Outline_VITIS_LOOP_127_14_p_ZN16phc_step_weightsL9SYNAPSE_WE_8_ROM_AUTO_1R' to 'phc_step_Outline_VITIS_LOOP_127_14_p_ZN16phc_step_weightsL9SYNAPSE_WE_8_ROM_Abck' due to the length limit 80
+INFO: [SYN 201-210] Renamed object name 'phc_step_Outline_VITIS_LOOP_127_14_p_ZN16phc_step_weightsL9SYNAPSE_WE_9_ROM_AUTO_1R' to 'phc_step_Outline_VITIS_LOOP_127_14_p_ZN16phc_step_weightsL9SYNAPSE_WE_9_ROM_Abdk' due to the length limit 80
+INFO: [SYN 201-210] Renamed object name 'phc_step_Outline_VITIS_LOOP_127_14_p_ZN16phc_step_weightsL9SYNAPSE_WE_10_ROM_AUTO_1R' to 'phc_step_Outline_VITIS_LOOP_127_14_p_ZN16phc_step_weightsL9SYNAPSE_WE_10_ROM_bek' due to the length limit 80
+INFO: [SYN 201-210] Renamed object name 'phc_step_Outline_VITIS_LOOP_127_14_p_ZN16phc_step_weightsL9SYNAPSE_WE_11_ROM_AUTO_1R' to 'phc_step_Outline_VITIS_LOOP_127_14_p_ZN16phc_step_weightsL9SYNAPSE_WE_11_ROM_bfk' due to the length limit 80
+INFO: [SYN 201-210] Renamed object name 'phc_step_Outline_VITIS_LOOP_127_14_p_ZN16phc_step_weightsL9SYNAPSE_WE_12_ROM_AUTO_1R' to 'phc_step_Outline_VITIS_LOOP_127_14_p_ZN16phc_step_weightsL9SYNAPSE_WE_12_ROM_bgk' due to the length limit 80
+INFO: [SYN 201-210] Renamed object name 'phc_step_Outline_VITIS_LOOP_127_14_p_ZN16phc_step_weightsL9SYNAPSE_WE_13_ROM_AUTO_1R' to 'phc_step_Outline_VITIS_LOOP_127_14_p_ZN16phc_step_weightsL9SYNAPSE_WE_13_ROM_bhl' due to the length limit 80
+INFO: [SYN 201-210] Renamed object name 'phc_step_Outline_VITIS_LOOP_127_14_p_ZN16phc_step_weightsL9SYNAPSE_WE_14_ROM_AUTO_1R' to 'phc_step_Outline_VITIS_LOOP_127_14_p_ZN16phc_step_weightsL9SYNAPSE_WE_14_ROM_bil' due to the length limit 80
+INFO: [SYN 201-210] Renamed object name 'phc_step_Outline_VITIS_LOOP_127_14_p_ZN16phc_step_weightsL9SYNAPSE_WE_15_ROM_AUTO_1R' to 'phc_step_Outline_VITIS_LOOP_127_14_p_ZN16phc_step_weightsL9SYNAPSE_WE_15_ROM_bjl' due to the length limit 80
+INFO: [RTGEN 206-100] Generating core module 'mul_23s_40s_63_2_1': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'mul_24s_40s_64_2_1': 3 instance(s).
+INFO: [RTGEN 206-100] Finished creating RTL model for 'phc_step_Outline_VITIS_LOOP_127_14'.
+INFO: [RTMG 210-279] Implementing memory 'phc_step_phc_step_Outline_VITIS_LOOP_127_14_phc_step_weights_SYNAPSE_B_ROM_AUTO_1R' using auto ROMs.
+INFO: [RTMG 210-279] Implementing memory 'phc_step_phc_step_Outline_VITIS_LOOP_127_14_p_ZN16phc_step_weightsL9SYNAPSE_WE_0_ROM_A4jc' using auto ROMs.
+INFO: [RTMG 210-279] Implementing memory 'phc_step_phc_step_Outline_VITIS_LOOP_127_14_p_ZN16phc_step_weightsL9SYNAPSE_WE_1_ROM_A5jm' using auto ROMs.
+INFO: [RTMG 210-279] Implementing memory 'phc_step_phc_step_Outline_VITIS_LOOP_127_14_p_ZN16phc_step_weightsL9SYNAPSE_WE_2_ROM_A6jw' using auto ROMs.
+INFO: [RTMG 210-279] Implementing memory 'phc_step_phc_step_Outline_VITIS_LOOP_127_14_p_ZN16phc_step_weightsL9SYNAPSE_WE_3_ROM_A7jG' using auto ROMs.
+INFO: [RTMG 210-279] Implementing memory 'phc_step_phc_step_Outline_VITIS_LOOP_127_14_p_ZN16phc_step_weightsL9SYNAPSE_WE_4_ROM_A8jQ' using auto ROMs.
+INFO: [RTMG 210-279] Implementing memory 'phc_step_phc_step_Outline_VITIS_LOOP_127_14_p_ZN16phc_step_weightsL9SYNAPSE_WE_5_ROM_A9j0' using auto ROMs.
+INFO: [RTMG 210-279] Implementing memory 'phc_step_phc_step_Outline_VITIS_LOOP_127_14_p_ZN16phc_step_weightsL9SYNAPSE_WE_6_ROM_Abak' using auto ROMs.
+INFO: [RTMG 210-279] Implementing memory 'phc_step_phc_step_Outline_VITIS_LOOP_127_14_p_ZN16phc_step_weightsL9SYNAPSE_WE_7_ROM_Abbk' using auto ROMs.
+INFO: [RTMG 210-279] Implementing memory 'phc_step_phc_step_Outline_VITIS_LOOP_127_14_p_ZN16phc_step_weightsL9SYNAPSE_WE_8_ROM_Abck' using auto ROMs.
+INFO: [RTMG 210-279] Implementing memory 'phc_step_phc_step_Outline_VITIS_LOOP_127_14_p_ZN16phc_step_weightsL9SYNAPSE_WE_9_ROM_Abdk' using auto ROMs.
+INFO: [RTMG 210-279] Implementing memory 'phc_step_phc_step_Outline_VITIS_LOOP_127_14_p_ZN16phc_step_weightsL9SYNAPSE_WE_10_ROM_bek' using auto ROMs.
+INFO: [RTMG 210-279] Implementing memory 'phc_step_phc_step_Outline_VITIS_LOOP_127_14_p_ZN16phc_step_weightsL9SYNAPSE_WE_11_ROM_bfk' using auto ROMs.
+INFO: [RTMG 210-279] Implementing memory 'phc_step_phc_step_Outline_VITIS_LOOP_127_14_p_ZN16phc_step_weightsL9SYNAPSE_WE_12_ROM_bgk' using auto ROMs.
+INFO: [RTMG 210-279] Implementing memory 'phc_step_phc_step_Outline_VITIS_LOOP_127_14_p_ZN16phc_step_weightsL9SYNAPSE_WE_13_ROM_bhl' using auto ROMs.
+INFO: [RTMG 210-279] Implementing memory 'phc_step_phc_step_Outline_VITIS_LOOP_127_14_p_ZN16phc_step_weightsL9SYNAPSE_WE_14_ROM_bil' using auto ROMs.
+INFO: [RTMG 210-279] Implementing memory 'phc_step_phc_step_Outline_VITIS_LOOP_127_14_p_ZN16phc_step_weightsL9SYNAPSE_WE_15_ROM_bjl' using auto ROMs.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 1.743 seconds; current allocated memory: 410.859 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'phc_step_Outline_VITIS_LOOP_93_1' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [RTGEN 206-100] Generating core module 'mul_26s_40s_64_2_1': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'mul_40s_40s_64_2_1': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'sparsemux_129_6_25_1_1': 2 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'sparsemux_7_2_40_1_1': 1 instance(s).
+INFO: [RTGEN 206-100] Finished creating RTL model for 'phc_step_Outline_VITIS_LOOP_93_1'.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.436 seconds; current allocated memory: 415.352 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'phc_step_Outline_VITIS_LOOP_166_1' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [RTGEN 206-100] Generating core module 'mul_21s_40s_60_2_1': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'mul_22s_40s_61_2_1': 3 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'mul_23s_40s_62_2_1': 3 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'mul_24s_40s_63_2_1': 2 instance(s).
+INFO: [RTGEN 206-100] Finished creating RTL model for 'phc_step_Outline_VITIS_LOOP_166_1'.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 1.485 seconds; current allocated memory: 419.254 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'phc_step_Outline_VITIS_LOOP_271_4' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [RTGEN 206-100] Finished creating RTL model for 'phc_step_Outline_VITIS_LOOP_271_4'.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.226 seconds; current allocated memory: 423.621 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'phc_step_Outline_VITIS_LOOP_275_5' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [RTGEN 206-100] Finished creating RTL model for 'phc_step_Outline_VITIS_LOOP_275_5'.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.147 seconds; current allocated memory: 425.086 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'phc_step' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [RTGEN 206-500] Setting interface mode on port 'phc_step/x_t' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'phc_step/state_prev' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'phc_step/readout' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'phc_step/state_next' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on function 'phc_step' to 'ap_ctrl_hs'.
+INFO: [RTGEN 206-104] Estimated max fanout for 'phc_step' is 5679 from HDL expression: ((1'b1 == ap_CS_fsm_state211) | (1'b1 == ap_CS_fsm_state61) | (1'b1 == ap_CS_fsm_state210) | (1'b1 == ap_CS_fsm_state209) | (1'b1 == ap_CS_fsm_state208) | (1'b1 == ap_CS_fsm_state207) | (1'b1 == ap_CS_fsm_state206) | (1'b1 == ap_CS_fsm_state205) | (1'b1 == ap_CS_fsm_state204) | (1'b1 == ap_CS_fsm_state203) | (1'b1 == ap_CS_fsm_state202) | (1'b1 == ap_CS_fsm_state201) | (1'b1 == ap_CS_fsm_state200) | (1'b1 == ap_CS_fsm_state199) | (1'b1 == ap_CS_fsm_state198) | (1'b1 == ap_CS_fsm_state197) | (1'b1 == ap_CS_fsm_state196) | (1'b1 == ap_CS_fsm_state195) | (1'b1 == ap_CS_fsm_state194) | (1'b1 == ap_CS_fsm_state193) | (1'b1 == ap_CS_fsm_state192) | (1'b1 == ap_CS_fsm_state191) | (1'b1 == ap_CS_fsm_state190) | (1'b1 == ap_CS_fsm_state189) | (1'b1 == ap_CS_fsm_state188) | (1'b1 == ap_CS_fsm_state187) | (1'b1 == ap_CS_fsm_state186) | (1'b1 == ap_CS_fsm_state185) | (1'b1 == ap_CS_fsm_state184) | (1'b1 == ap_CS_fsm_state183) | (1'b1 == ap_CS_fsm_state182) | (1'b1 == ap_CS_fsm_state60) | (1'b1 == ap_CS_fsm_state59) | (1'b1 
+    == ap_CS_fsm_state58) | (1'b1 == ap_CS_fsm_state57) | (1'b1 == ap_CS_fsm_state56) | (1'b1 == ap_CS_fsm_state55) | (1'b1 == ap_CS_fsm_state54) | (1'b1 == ap_CS_fsm_state53) | (1'b1 == ap_CS_fsm_state52) | (1'b1 == ap_CS_fsm_state51) | (1'b1 == ap_CS_fsm_state50) | (1'b1 == ap_CS_fsm_state49) | (1'b1 == ap_CS_fsm_state48) | (1'b1 == ap_CS_fsm_state47) | (1'b1 == ap_CS_fsm_state46) | (1'b1 == ap_CS_fsm_state45) | (1'b1 == ap_CS_fsm_state44) | (1'b1 == ap_CS_fsm_state43) | (1'b1 == ap_CS_fsm_state42) | (1'b1 == ap_CS_fsm_state41) | (1'b1 == ap_CS_fsm_state40) | (1'b1 == ap_CS_fsm_state39) | (1'b1 == ap_CS_fsm_state38) | (1'b1 == ap_CS_fsm_state37) | (1'b1 == ap_CS_fsm_state36) | (1'b1 == ap_CS_fsm_state35) | (1'b1 == ap_CS_fsm_state34) | (1'b1 == ap_CS_fsm_state33) | (1'b1 == ap_CS_fsm_state32))
+INFO: [RTGEN 206-100] Generating core module 'mul_22s_36s_58_2_1': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'mul_23s_36s_59_2_1': 3 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'mul_23s_40s_63_2_1': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'mul_24s_36s_60_2_1': 3 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'mul_24s_40s_64_2_1': 3 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'mul_25s_36s_61_2_1': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'mul_26s_40s_64_2_1': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'mul_40s_25ns_64_2_1': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'mul_40s_40s_64_2_1': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'mul_40s_40s_72_2_1': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'mul_41s_25ns_65_2_1': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'mul_64s_40s_88_5_1': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'mul_65s_40s_88_5_1': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'sparsemux_129_6_25_1_1': 2 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'sparsemux_7_2_40_1_1': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'udiv_49s_37ns_40_53_seq_1': 2 instance(s).
+INFO: [RTGEN 206-100] Finished creating RTL model for 'phc_step'.
+INFO: [RTMG 210-279] Implementing memory 'phc_step_phc_step_weights_ENC_LINEAR_B_ROM_AUTO_1R' using auto ROMs.
+INFO: [RTMG 210-279] Implementing memory 'phc_step_p_ZN16phc_step_weightsL12ENC_LINEAR_WE_0_ROM_AUTO_1R' using auto ROMs.
+INFO: [RTMG 210-279] Implementing memory 'phc_step_p_ZN16phc_step_weightsL12ENC_LINEAR_WE_1_ROM_AUTO_1R' using auto ROMs.
+INFO: [RTMG 210-279] Implementing memory 'phc_step_p_ZN16phc_step_weightsL12ENC_LINEAR_WE_2_ROM_AUTO_1R' using auto ROMs.
+INFO: [RTMG 210-279] Implementing memory 'phc_step_p_ZN16phc_step_weightsL12ENC_LINEAR_WE_3_ROM_AUTO_1R' using auto ROMs.
+INFO: [RTMG 210-279] Implementing memory 'phc_step_p_ZN16phc_step_weightsL12ENC_LINEAR_WE_4_ROM_AUTO_1R' using auto ROMs.
+INFO: [RTMG 210-279] Implementing memory 'phc_step_p_ZN16phc_step_weightsL12ENC_LINEAR_WE_5_ROM_AUTO_1R' using auto ROMs.
+INFO: [RTMG 210-279] Implementing memory 'phc_step_p_ZN16phc_step_weightsL12ENC_LINEAR_WE_6_ROM_AUTO_1R' using auto ROMs.
+INFO: [RTMG 210-279] Implementing memory 'phc_step_p_ZN16phc_step_weightsL12ENC_LINEAR_WE_7_ROM_AUTO_1R' using auto ROMs.
+INFO: [RTMG 210-279] Implementing memory 'phc_step_p_ZN16phc_step_weightsL12ENC_LINEAR_WE_8_ROM_AUTO_1R' using auto ROMs.
+INFO: [RTMG 210-279] Implementing memory 'phc_step_p_ZN16phc_step_weightsL12ENC_LINEAR_WE_9_ROM_AUTO_1R' using auto ROMs.
+INFO: [RTMG 210-279] Implementing memory 'phc_step_p_ZN16phc_step_weightsL12ENC_LINEAR_WE_10_ROM_AUTO_1R' using auto ROMs.
+INFO: [RTMG 210-279] Implementing memory 'phc_step_p_ZN16phc_step_weightsL12ENC_LINEAR_WE_11_ROM_AUTO_1R' using auto ROMs.
+INFO: [RTMG 210-279] Implementing memory 'phc_step_p_ZN16phc_step_weightsL12ENC_LINEAR_WE_12_ROM_AUTO_1R' using auto ROMs.
+INFO: [RTMG 210-279] Implementing memory 'phc_step_p_ZN16phc_step_weightsL12ENC_LINEAR_WE_13_ROM_AUTO_1R' using auto ROMs.
+INFO: [RTMG 210-279] Implementing memory 'phc_step_p_ZN16phc_step_weightsL12ENC_LINEAR_WE_14_ROM_AUTO_1R' using auto ROMs.
+INFO: [RTMG 210-279] Implementing memory 'phc_step_p_ZN16phc_step_weightsL12ENC_LINEAR_WE_15_ROM_AUTO_1R' using auto ROMs.
+INFO: [RTMG 210-279] Implementing memory 'phc_step_phc_step_weights_ENC_NORM_GAMMA_ROM_AUTO_1R' using auto ROMs.
+INFO: [RTMG 210-279] Implementing memory 'phc_step_phc_step_weights_ENC_NORM_BETA_ROM_AUTO_1R' using auto ROMs.
+INFO: [RTMG 210-279] Implementing memory 'phc_step_phc_step_weights_LOOP_NORM_GAMMA_ROM_AUTO_1R' using auto ROMs.
+INFO: [RTMG 210-279] Implementing memory 'phc_step_phc_step_weights_LOOP_NORM_BETA_ROM_AUTO_1R' using auto ROMs.
+INFO: [RTMG 210-278] Implementing memory 'phc_step_enc_linear_out_RAM_AUTO_1R1W' using auto RAMs.
+INFO: [RTMG 210-278] Implementing memory 'phc_step_encoded_RAM_AUTO_1R1W' using auto RAMs.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 1 seconds. CPU system time: 1 seconds. Elapsed time: 1.894 seconds; current allocated memory: 431.871 MB.
+INFO: [HLS 200-111] Finished Generating all RTL models: CPU user time: 1 seconds. CPU system time: 1 seconds. Elapsed time: 7.498 seconds; current allocated memory: 450.852 MB.
+INFO: [HLS 200-2225] Wrote inferred directives to file C:/Users/holbo/00VS_projjects/00_HFT_project/n2ew_era/06l_phc_lite_pipeline_budget_sweep/variants/factor_16/hls_component/hls_component/hls/syn/inferred_directives.ini
+INFO: [HLS 200-111] Finished Updating report files: CPU user time: 1 seconds. CPU system time: 1 seconds. Elapsed time: 4.874 seconds; current allocated memory: 469.500 MB.
+INFO: [VHDL 208-304] Generating VHDL RTL for phc_step.
+INFO: [VLOG 209-307] Generating Verilog RTL for phc_step.
+INFO: [HLS 200-790] **** Loop Constraint Status: All loop constraints were satisfied.
+INFO: [HLS 200-789] **** Estimated Fmax: 121.61 MHz
+INFO: [HLS 200-112] Total CPU user time: 16 seconds. Total CPU system time: 5 seconds. Total elapsed time: 119.347 seconds; peak allocated memory: 469.547 MB.
+INFO: [v++ 60-791] Total elapsed time: 0h 2m 5s

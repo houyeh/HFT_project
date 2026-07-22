@@ -1,0 +1,70 @@
+<!DOCTYPE html><html lang="zh-TW"><head><meta charset="UTF-8"><title>Slide 06</title>
+<style>
+* {box-sizing:border-box;margin:0;padding:0}
+body {font-family:"Noto Sans TC",sans-serif;background:#0d1117;color:#e6edf3}
+.slide {width:1280px;min-height:720px;margin:30px auto;background:linear-gradient(135deg,#161b22 0%,#0d1117 100%);border:1px solid #30363d;border-radius:16px;padding:48px 56px;display:flex;flex-direction:column;gap:20px; overflow-y:auto;}
+h1 {font-size:2rem;font-weight:700;color:#58a6ff;border-bottom:2px solid #21262d;padding-bottom:14px; flex-shrink:0;}
+h2 {font-size:1.1rem;font-weight:600;color:#79c0ff;margin-bottom:10px}
+.tag {display:inline-block;padding:3px 10px;border-radius:20px;font-size:.75rem;font-weight:600}
+.tag-blue {background:#1f4e79;color:#79c0ff}
+.tag-red {background:#5c1a1a;color:#ff7b7b}
+.tag-green {background:#0d3d21;color:#56d364}
+.tag-orange {background:#794a15;color:#e3b341}
+.grid-2 {display:grid;grid-template-columns:1fr 1fr;gap:24px}
+.grid-3 {display:grid;grid-template-columns:1fr 1fr 1fr;gap:20px}
+.card {background:#161b22;border:1px solid #30363d;border-radius:12px;padding:20px; display:flex; flex-direction:column;}
+.img-wrap {text-align:center; flex-grow:1; display:flex; align-items:center; justify-content:center; background:#0d1117; border-radius:8px; padding:10px;}
+.img-wrap img {max-width:100%; max-height:260px; border-radius:4px;}
+table {width:100%;border-collapse:collapse;font-size:.85rem}
+th {background:#21262d;color:#8b949e;padding:8px 10px;text-align:left;font-weight:600}
+td {padding:8px 10px;border-bottom:1px solid #21262d}
+tr:last-child td {border-bottom:none}
+.hl {color:#f0c27f;font-weight:700}
+.red {color:#ff7b7b} .green {color:#56d364}
+.note {font-size:.78rem;color:#8b949e;margin-top:8px;padding:8px 12px;background:#161b22;border-left:3px solid #388bfd;border-radius:4px; line-height:1.5;}
+.badge-row {display:flex;gap:10px;flex-wrap:wrap;margin-top:6px; margin-bottom:10px;}
+ul {margin-left:20px;line-height:1.6}
+li {margin-bottom:8px}
+.flowchart {display:flex; align-items:center; justify-content:center; gap:10px; background:#0d1117; padding:15px; border-radius:8px; border:1px solid #30363d;}
+.flow-box {background:#21262d; border:1px solid #58a6ff; padding:10px 15px; border-radius:6px; font-weight:bold; color:#c9d1d9; text-align:center;}
+.flow-arrow {color:#8b949e; font-weight:bold; font-size:1.2rem;}
+.caveat-box {margin-top:12px; padding:10px; border-radius:6px; background:#2d1a1a; border:1px solid #5c1a1a;}
+.caveat-box h3 {color:#ff7b7b; font-size:0.9rem; margin-bottom:4px;}
+</style>
+</head><body>
+<div class="slide">
+  <h1>Slide 06 — 目前狀態與下週計畫</h1>
+  
+  <div class="grid-2">
+    <div class="card">
+      <h2 style="color:#56d364">目前已達成 (Achieved Milestones)</h2>
+      <ul style="font-size:0.9rem;">
+        <li>TCN 在 NEW 測試集具備局部優勢：0.55/0.60 成功擊敗 Random+1Std。</li>
+        <li>靜態狀態濾網成功拯救 NEW3：Combined filter 使 NEW3 虧損大幅收斂並轉正。</li>
+        <!-- <li>016 二元標籤流程已作為概念驗證 (PoC) 證實可行，但模型尚未就緒。</li>
+        <li>017 簡易動態閾值 (Auto-gate) 實驗失敗；這顯示了更深層的狀態依賴性 (Regime dependency)。</li> -->
+        <li>已量化延遲風險，但 PnL 隨延遲呈現非單調變化。</li>
+      </ul>
+    </div>
+    
+    <div class="card">
+      <h2 style="color:#ff7b7b">目前尚未達成 (Not Achieved)</h2>
+      <ul style="font-size:0.9rem;">
+        <li>驗證集選出的閾值 (0.70) 未能擊敗 Random+1Std。</li>
+        <!-- <li>Binary 模型未能擊敗 Random+1Std，且僅觸發 77 筆交易。</li> -->
+        <li>尚未達成穩健的動態閾值選擇器 (Auto-gate selector)。</li>
+        <li>尚未完成具備排隊感知 (Queue-aware) 的真實回測。</li>
+        <!-- <li>FPGA 對於 PnL 的絕對必要性尚未被完全證實。</li> -->
+      </ul>
+    </div>
+  </div>
+
+  <div class="card" style="margin-top:0px;">
+    <h2 style="color:#58a6ff">下週核心行動計畫 (Next Steps)</h2>
+    <ol style="margin-left:20px; line-height:1.8; font-size:0.95rem;">
+      <li><strong>Queue-aware 驗證：</strong>實作成交懲罰 (Fill haircut)、優質成交懲罰 (Good-fill haircut) 與排隊逼近演算法。</li>
+      <li><strong>狀態研究 (Regime path)：</strong>短期維持靜態 Combined filter；長期需持續引入更多 Session 來訓練狀態分類器。</li>
+      <li><strong>二元標籤 (Binary path)：</strong>保留 016 作為標籤 PoC；嚴禁在測試集上進行閾值擬合。</li>
+    </ol>
+  </div>
+</div></body></html>

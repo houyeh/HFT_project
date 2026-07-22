@@ -1,0 +1,13 @@
+split,session_id,side,required_count,candidate_pool_size,unique_pnl_values,exact_sampling_method
+new3,20260113,bid,464782,1277836,66,multivariate_hypergeometric_unique_pnl_counts
+new3,20260113,ask,476028,1277836,66,multivariate_hypergeometric_unique_pnl_counts
+new3,20260114,bid,341523,910661,66,multivariate_hypergeometric_unique_pnl_counts
+new3,20260114,ask,332504,910661,66,multivariate_hypergeometric_unique_pnl_counts
+new3,20260115,bid,369328,976150,49,multivariate_hypergeometric_unique_pnl_counts
+new3,20260115,ask,358940,976150,49,multivariate_hypergeometric_unique_pnl_counts
+new3,20260116,bid,352871,976422,71,multivariate_hypergeometric_unique_pnl_counts
+new3,20260116,ask,368061,976422,71,multivariate_hypergeometric_unique_pnl_counts
+new3,20260119Day,bid,496221,1365489,64,multivariate_hypergeometric_unique_pnl_counts
+new3,20260119Day,ask,513691,1365489,64,multivariate_hypergeometric_unique_pnl_counts
+new3,20260330,bid,53389,150804,23,multivariate_hypergeometric_unique_pnl_counts
+new3,20260330,ask,58143,150804,23,multivariate_hypergeometric_unique_pnl_counts

@@ -1,0 +1,4 @@
+experiment_id,short_name,best_val_loss,best_epoch,model_test_pnl,pnl_improvement,backtest_framework,notes
+lt=mid_move_3class__fc=8__w=100__H=10__thr=1,mid_move/H=10__thr=1,1.0117774017063188,20,145675.0,54685.0,tcn_skew (original backtest),H=10 thr=1: highest raw pnl_improvement but uses older backtest framework
+lt=smoothed_mid_move_3class__fc=8__w=100__H=10__thr=1,smoothed/H=10__thr=1,1.0332769560225217,29,170625.0,79635.0,tcn_skew (original backtest),H=10 thr=1: highest raw pnl_improvement but uses older backtest framework
+lt=smoothed_mid_move_3class__fc=8__w=100__H=5__thr=0p5__expC_snapshot,smoothed/H=5__thr=0p5__expC_snapshot,0.7814035496196231,30,106865.0,50765.0,simulate_with_metrics (cancel filter),final selected: H=5 thr=0.5 for cancel filter framework

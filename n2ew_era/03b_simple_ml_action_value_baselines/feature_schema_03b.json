@@ -1,0 +1,58 @@
+{
+  "target": "excess_pnl_H20",
+  "positive_target": "positive_excess_pnl_H20",
+  "feature_columns": [
+    "spread_ticks",
+    "bid_sz_1",
+    "ask_sz_1",
+    "top_depth",
+    "queue_imbalance",
+    "deep_imbalance",
+    "volatility_past_50",
+    "event_rate_past_50",
+    "inter_arrival_ms",
+    "imbalance_change_past",
+    "spread_change_past",
+    "action_is_bid",
+    "action_is_ask",
+    "action_is_no_quote",
+    "side_sign",
+    "side_queue_imbalance",
+    "side_deep_imbalance",
+    "side_imbalance_change_past"
+  ],
+  "raw_absolute_price_features": [
+    "best_bid",
+    "best_ask",
+    "mid_price",
+    "quote_price"
+  ],
+  "absolute_price_decision": {
+    "decision": "forbid",
+    "raw_absolute_price_features": [
+      "best_bid",
+      "best_ask",
+      "mid_price",
+      "quote_price"
+    ],
+    "recommended_action": "forbid",
+    "frozen_oos_mean_spearman": {
+      "price_only": 0.002712731620530807,
+      "microstructure_only": 0.0024314907479432873,
+      "combined": 0.0012287793445992228,
+      "combined_minus_microstructure": -0.0012027114033440645
+    },
+    "rationale": "Price-only diagnostic has weak frozen-OOS rank correlation; raw absolute price levels are not reliable standalone causal features.",
+    "diagnostic_only_not_final_ml": true,
+    "test_new3_new4_used_for_tuning": false
+  },
+  "dynamic_feature_decision": {
+    "event_rate_past_50": "allow_rebuilt",
+    "inter_arrival_ms": "allow_rebuilt",
+    "imbalance_change_past": "allow_rebuilt",
+    "spread_change_past": "allow_rebuilt",
+    "uses_future_data": false,
+    "session_boundary_reset_required": true
+  },
+  "test_new3_new4_used_for_feature_selection": false
+}

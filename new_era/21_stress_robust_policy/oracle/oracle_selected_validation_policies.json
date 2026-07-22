@@ -1,0 +1,22 @@
+{
+  "best_score_policy": {
+    "policy_type": "spread_toxic",
+    "policy_id": "best_val_score_r0.4",
+    "max_spread_ticks": 99.0,
+    "bid_threshold": 0.006322531495243311,
+    "ask_threshold": 0.008607552386820316,
+    "target_cancel_rate": 0.4,
+    "selection_split": "validation",
+    "test_used_for_selection": false
+  },
+  "best_spread_score_policy": {
+    "policy_type": "spread_toxic",
+    "policy_id": "best_val_spread_score_s2_r0.4",
+    "max_spread_ticks": 2.0,
+    "bid_threshold": 0.006322531495243311,
+    "ask_threshold": 0.008607552386820316,
+    "target_cancel_rate": 0.4,
+    "selection_split": "validation",
+    "test_used_for_selection": false
+  }
+}

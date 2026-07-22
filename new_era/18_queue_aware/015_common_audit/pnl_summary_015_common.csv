@@ -1,0 +1,2 @@
+method,sessions,rows,bid_signal_rate,ask_signal_rate,cancel_count,bid_cancel_count,ask_cancel_count,trade_count,net_pnl,max_drawdown,pnl_per_trade
+015_common_universe,2,1166321,0.07642750151973599,0.10335833788468184,209688,89139,120549,577,90845.0,69730.0,157.44367417677643

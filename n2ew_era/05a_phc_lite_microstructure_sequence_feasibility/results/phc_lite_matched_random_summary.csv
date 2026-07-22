@@ -1,0 +1,4 @@
+split,policy_id,model_total_excess_pnl_H20,random_mean,random_std,random_95p,random_99p,empirical_p_value_fraction_random_ge_model,empirical_p_value_wording,beats_random_95p,n_trials,matching
+val,phc_lite,1927170.0,-959503.23,29021.523269241054,-911549.25,-897899.15,0.0,< 0.001,True,1000,count_session_side_spread_bucket_with_session_side_fallback
+new3,phc_lite,5021515.0,-2071603.16,45888.014328519384,-1993252.25,-1963273.85,0.0,< 0.001,True,1000,count_session_side_spread_bucket_with_session_side_fallback
+new4,phc_lite,1762495.0,-796093.76,27906.08580332254,-750465.75,-732423.55,0.0,< 0.001,True,1000,count_session_side_spread_bucket_with_session_side_fallback

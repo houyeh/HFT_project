@@ -1,0 +1,72 @@
+{
+  "bid": {
+    "npz_path": "C:\\Users\\holbo\\00VS_projjects\\00_HFT_project\\new_era\\016_new_binary\\outputs\\datasets\\bid_primary_fw1_h10.npz",
+    "train_stats": {
+      "split": "NEW_train",
+      "side": "bid",
+      "num_events_before_conditioning": 718556,
+      "num_samples_after_conditioning": 15643,
+      "fill_proxy_rate": 0.021770049933477698,
+      "toxic_rate": 0.03586268618551429
+    },
+    "val_stats": {
+      "split": "NEW_val",
+      "side": "bid",
+      "num_events_before_conditioning": 563484,
+      "num_samples_after_conditioning": 12603,
+      "fill_proxy_rate": 0.022366207381221116,
+      "toxic_rate": 0.03229389827818773
+    },
+    "test_stats": {
+      "split": "NEW_test",
+      "side": "bid",
+      "num_events_before_conditioning": 1166323,
+      "num_samples_after_conditioning": 24329,
+      "fill_proxy_rate": 0.020859573205707166,
+      "toxic_rate": 0.027703563648320932
+    },
+    "new3_stats": {
+      "split": "NEW3_full",
+      "side": "bid",
+      "num_events_before_conditioning": 5657368,
+      "num_samples_after_conditioning": 119809,
+      "fill_proxy_rate": 0.02117751576351406,
+      "toxic_rate": 0.03168376332328957
+    }
+  },
+  "ask": {
+    "npz_path": "C:\\Users\\holbo\\00VS_projjects\\00_HFT_project\\new_era\\016_new_binary\\outputs\\datasets\\ask_primary_fw1_h10.npz",
+    "train_stats": {
+      "split": "NEW_train",
+      "side": "ask",
+      "num_events_before_conditioning": 718556,
+      "num_samples_after_conditioning": 15856,
+      "fill_proxy_rate": 0.022066477769303993,
+      "toxic_rate": 0.03077699293642785
+    },
+    "val_stats": {
+      "split": "NEW_val",
+      "side": "ask",
+      "num_events_before_conditioning": 563484,
+      "num_samples_after_conditioning": 13314,
+      "fill_proxy_rate": 0.023628000085184318,
+      "toxic_rate": 0.026888989034099444
+    },
+    "test_stats": {
+      "split": "NEW_test",
+      "side": "ask",
+      "num_events_before_conditioning": 1166323,
+      "num_samples_after_conditioning": 25037,
+      "fill_proxy_rate": 0.02146660916401374,
+      "toxic_rate": 0.02664057195350881
+    },
+    "new3_stats": {
+      "split": "NEW3_full",
+      "side": "ask",
+      "num_events_before_conditioning": 5657368,
+      "num_samples_after_conditioning": 119183,
+      "fill_proxy_rate": 0.021066863601589998,
+      "toxic_rate": 0.032840254063079465
+    }
+  }
+}

@@ -1,0 +1,4 @@
+split,seed_selected_on_val,threshold_selected_on_val,best_epoch,action_pnl,v1_action_pnl,action_delta_vs_v1,selected_action_count,causal_fill_pnl,v1_causal_fill_pnl,causal_delta_vs_v1,causal_fill_count,causal_max_drawdown,oracle_capture_ratio,v1_oracle_capture_ratio,oracle_capture_delta_vs_v1,new3_used_for_selection,new4_used_for_selection,new5_used_for_selection
+val,2,0.0,78,2032340.0,1927170.0,105170.0,63248,174370.0,170310.0,4060.0,6742,2060.0,0.26288734471286435,0.24953418782945125,0.013353156883413098,False,False,False
+new3,2,0.0,78,5124450.0,5021515.0,102935.0,138012,582810.0,488870.0,93940.0,17486,3935.0,0.27192674541979783,0.2665173664352062,0.005409378984591651,False,False,False
+new4,2,0.0,78,1810400.0,1762495.0,47905.0,52921,117470.0,121765.0,-4295.0,3943,1940.0,0.24543087665214064,0.23905708835100326,0.006373788301137384,False,False,False

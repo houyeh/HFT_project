@@ -1,0 +1,5 @@
+﻿run_label,experiment_id,edge_threshold,cancel_threshold,macro_trend_threshold,macro_trend_lookback_ticks,inventory_stop_loss_ticks,model_net_pnl_twd,improvement_twd,model_fills,model_realized_trades,model_max_drawdown_twd,baseline_net_pnl_twd
+previous_best_mt3,lt=smoothed_mid_move_3class__fc=8__w=100__H=5__thr=0p5__expC_snapshot,0.05,0.1,3.0,2000,0.0,-540814.9999999978,2715320.000000006,1451,1383,548624.9999999971,-3256135.000000004
+run1_absasym_mt0_sl0,lt=smoothed_mid_move_3class__fc=8__w=100__H=5__thr=0p5__expC_snapshot,0.05,0.1,0.0,2000,0.0,-450419.99999999854,2805715.000000005,1128,1086,449624.99999999854,-3256135.000000004
+run2_hardstop_mt3_sl5,lt=smoothed_mid_move_3class__fc=8__w=100__H=5__thr=0p5__expC_snapshot,0.05,0.1,3.0,2000,5.0,-538300.0000000007,2717835.000000003,1440,1382,539095.0,-3256135.000000004
+run3_combo_mt0_sl5,lt=smoothed_mid_move_3class__fc=8__w=100__H=5__thr=0p5__expC_snapshot,0.05,0.1,0.0,2000,5.0,-448910.0,2807225.000000004,1134,1095,446645.0,-3256135.000000004

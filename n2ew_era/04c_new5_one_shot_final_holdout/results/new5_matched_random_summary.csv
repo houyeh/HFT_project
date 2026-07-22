@@ -1,0 +1,3 @@
+split,session_id,policy_id,model_total_excess_pnl_H20,model_selected_action_count,bid_count,ask_count,random_trials,random_mean,random_std,random_95p,random_99p,empirical_p_value_fraction_random_ge_model,empirical_p_value_wording,beats_random_95p,matching,new5_used_for_tuning
+new5_final_holdout,NEW5_20260128_TXFB6,ml_hgb_regressor_shallow_convergence_selected,15648070.0,617738,318294,299444,1000,-9247264.37,98761.9035666238,-9085989.75,-9021865.9,0.0,< 0.001,True,exact_count_side_session,False
+new5_final_holdout,NEW5_20260128_TXFB6,side_by_queue_imbalance_abs_0p1,11439805.0,672049,325153,346896,1000,-10097541.995,102906.43810493576,-9924941.5,-9848025.45,0.0,< 0.001,True,exact_count_side_session,False

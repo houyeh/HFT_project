@@ -1,0 +1,7 @@
+split,session_id,policy_id,horizon_events,fill_count,quote_level_ev_sum_moderate,quote_level_ev_sum_base,sequential_proxy_pnl_H_mid,sequential_minus_quote_ev_moderate,sequential_minus_quote_ev_base,fees_paid,final_realized_pnl,final_unrealized_pnl,final_cash,final_inventory,max_abs_inventory,max_drawdown,mark_to_market_rule
+NEW4,20260102,bid_only_spread_ge_1,10,190,3773330.0,7056750.0,-24750.0,-3798080.0,-7081500.0,2850.0,-24750.0,0.0,-24750.0,0,2,28035.0,Each fill is closed at its H-event future mid proxy; no strategy tuning.
+NEW4,20260105,bid_only_spread_ge_1,10,44,-33740.0,-78460.0,-16160.0,17580.0,62300.0,660.0,-16160.0,0.0,-16160.0,0,4,17945.0,Each fill is closed at its H-event future mid proxy; no strategy tuning.
+NEW4,20260109,bid_only_spread_ge_1,10,207,2082470.0,5308695.0,-23105.0,-2105575.0,-5331800.0,3105.0,-23105.0,0.0,-23105.0,0,1,23590.0,Each fill is closed at its H-event future mid proxy; no strategy tuning.
+NEW4,20260112,bid_only_spread_ge_1,10,273,526710.0,774805.0,-59095.0,-585805.0,-833900.0,4095.0,-59095.0,0.0,-59095.0,0,4,61235.0,Each fill is closed at its H-event future mid proxy; no strategy tuning.
+test,20260127Day,bid_only_spread_ge_1,10,120,996450.0,2500200.0,-22100.0,-1018550.0,-2522300.0,1800.0,-22100.0,0.0,-22100.0,0,1,22495.0,Each fill is closed at its H-event future mid proxy; no strategy tuning.
+test,20260127Night,bid_only_spread_ge_1,10,299,1316140.0,2774915.0,-785.0,-1316925.0,-2775700.0,4485.0,-785.0,0.0,-785.0,0,2,7215.0,Each fill is closed at its H-event future mid proxy; no strategy tuning.

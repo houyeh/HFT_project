@@ -1,0 +1,23 @@
+{
+  "experiment_id": "lt=smoothed_mid_move_3class__fc=8__w=100__H=5__thr=0p5",
+  "dataset": "NEW3_full",
+  "data_symbol": "TXFA6",
+  "eval_sample_stride": 1,
+  "regime_volatility_quantile": 0.6,
+  "regime_volatility_window": 200,
+  "regime_active_ratio": 0.5999947325607992,
+  "label_type": "smoothed_mid_move_3class",
+  "feature_count": 8,
+  "tick_size": 1.0,
+  "edge_threshold": 0.05,
+  "quote_step_ticks": 1.0,
+  "baseline_net_pnl_twd": -3259270.000000003,
+  "model_net_pnl_twd": -455170.0,
+  "improvement_twd": 2804100.000000003,
+  "baseline_realized_trades": 7558,
+  "model_realized_trades": 1139,
+  "baseline_max_drawdown_twd": 3262915.0000000023,
+  "model_max_drawdown_twd": 454905.0,
+  "baseline_fills": 8018,
+  "model_fills": 1158
+}

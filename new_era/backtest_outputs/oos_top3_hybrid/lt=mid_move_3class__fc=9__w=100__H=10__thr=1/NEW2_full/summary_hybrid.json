@@ -1,0 +1,18 @@
+{
+  "experiment_id": "lt=mid_move_3class__fc=9__w=100__H=10__thr=1",
+  "dataset": "NEW2_full",
+  "label_type": "mid_move_3class",
+  "feature_count": 9,
+  "tick_size": 1.0,
+  "edge_threshold": 0.05,
+  "quote_step_ticks": 1.0,
+  "baseline_net_pnl_twd": -941964.9999999993,
+  "model_net_pnl_twd": -256885.0,
+  "improvement_twd": 685079.9999999993,
+  "baseline_realized_trades": 2404,
+  "model_realized_trades": 931,
+  "baseline_max_drawdown_twd": 954644.9999999991,
+  "model_max_drawdown_twd": 344305.0000000007,
+  "baseline_fills": 2561,
+  "model_fills": 989
+}

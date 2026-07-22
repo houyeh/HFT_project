@@ -1,0 +1,29 @@
+{
+  "model_name": "small_mlp_64_32_epoch_rerun",
+  "feature_columns": [
+    "spread_ticks",
+    "queue_imbalance_calc",
+    "deep_imbalance_calc",
+    "top_depth",
+    "depth_ratio",
+    "volatility_past_50",
+    "abs_return_past_50",
+    "event_rate_past_50",
+    "queue_imbalance_change_past",
+    "normalized_spread_calc"
+  ],
+  "random_state": 20260734,
+  "max_epochs": 250,
+  "patience": 25,
+  "learning_rate": 0.001,
+  "train_samples": 820,
+  "val_samples": 134,
+  "best_epoch": 2,
+  "best_val_loss": 0.45406722175379144,
+  "early_stopped": true,
+  "selection_split": "validation",
+  "test_used_for_selection": false,
+  "new4_used_for_selection": false,
+  "selected_threshold": 0.38208633256731966,
+  "selected_val_veto_count": 0
+}

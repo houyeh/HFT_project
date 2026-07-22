@@ -1,0 +1,15 @@
+{
+  "phase": "06g",
+  "source_checkpoint": "C:\\Users\\holbo\\00VS_projjects\\00_HFT_project\\n2ew_era\\05f_phc_diagonal_ssm\\models\\phc_diagonal_ssm_seed2_best_val.pt",
+  "selected_policy": "C:\\Users\\holbo\\00VS_projjects\\00_HFT_project\\n2ew_era\\05f_phc_diagonal_ssm\\results\\phc_diagonal_ssm_selected_policy.json",
+  "selected_seed": 2,
+  "selected_best_epoch": 157,
+  "exported_header": "C:\\Users\\holbo\\00VS_projjects\\00_HFT_project\\n2ew_era\\06g_phc_diagonal_manual_hls\\hls_src\\phc_diag_weights.hpp",
+  "total_bits": 24,
+  "frac_bits": 12,
+  "diag_decay_export": "sigmoid(diag_decay_param) baked into DIAG_DECAY",
+  "diag_gain_export": "sigmoid(diag_gain_param) baked into DIAG_GAIN",
+  "num_saturated_total": 0,
+  "any_saturated": false,
+  "new5_used": false
+}

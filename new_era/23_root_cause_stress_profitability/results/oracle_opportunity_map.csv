@@ -1,0 +1,6 @@
+split,moderate_stress,top_fraction,top_quote_count,captured_oracle_positive_pnl,share_of_oracle_positive_pnl,total_oracle_positive_pnl,oracle_positive_quote_count,all_quote_action_count
+test_diagnostic_burned,"neutral_fill_haircut=0.5,toxic_multiplier=1.5,delay=0",0.01,10,454850.0,0.19520705208811676,2330090.0,194,934
+test_diagnostic_burned,"neutral_fill_haircut=0.5,toxic_multiplier=1.5,delay=0",0.05,47,1168545.0,0.5015020879021841,2330090.0,194,934
+test_diagnostic_burned,"neutral_fill_haircut=0.5,toxic_multiplier=1.5,delay=0",0.1,94,1742890.0,0.747992566810724,2330090.0,194,934
+test_diagnostic_burned,"neutral_fill_haircut=0.5,toxic_multiplier=1.5,delay=0",0.25,234,2330090.0,1.0,2330090.0,194,934
+test_diagnostic_burned,"neutral_fill_haircut=0.5,toxic_multiplier=1.5,delay=0",1.0,934,2330090.0,1.0,2330090.0,194,934

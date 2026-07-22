@@ -1,0 +1,8 @@
+INFO: [SIM 2] *************** CSIM start ***************
+   Compiling ../../../../../hls_src/tcn_prepad_hls_distilled.cpp in debug mode
+   Generating csim.exe
+total=200 mismatches=0
+max_abs_diff=0.571899 mean_abs_diff=0.277127 tolerance=1
+sign_agreement_readout_0=1 sign_agreement_readout_1=1 joint=1 zero_sign_convention=positive
+INFO: [SIM 1] CSim done with 0 errors.
+INFO: [SIM 3] *************** CSIM finish ***************

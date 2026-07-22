@@ -1,0 +1,20 @@
+{
+  "allowed_features": [
+    "action_side",
+    "action_slot",
+    "quote_price",
+    "best_bid",
+    "best_ask",
+    "mid_price",
+    "tick_size",
+    "spread_ticks",
+    "bid_sz_1",
+    "ask_sz_1",
+    "top_depth",
+    "queue_imbalance",
+    "deep_imbalance",
+    "volatility_past_50"
+  ],
+  "selection_split": "train/val only",
+  "test_new3_new4_used_for_feature_selection": false
+}

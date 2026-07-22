@@ -1,0 +1,43 @@
+[bid] epoch=01/20 train_loss=0.056754 val_loss=0.041209 val_pr_auc=0.009068
+[bid] epoch=02/20 train_loss=0.047171 val_loss=0.042434 val_pr_auc=0.010151
+[bid] epoch=03/20 train_loss=0.046913 val_loss=0.040828 val_pr_auc=0.011340
+[bid] epoch=04/20 train_loss=0.046779 val_loss=0.040428 val_pr_auc=0.012437
+[bid] epoch=05/20 train_loss=0.046469 val_loss=0.040065 val_pr_auc=0.015004
+[bid] epoch=06/20 train_loss=0.046143 val_loss=0.039918 val_pr_auc=0.016505
+[bid] epoch=07/20 train_loss=0.045780 val_loss=0.039273 val_pr_auc=0.020319
+[bid] epoch=08/20 train_loss=0.045495 val_loss=0.038820 val_pr_auc=0.023965
+[bid] epoch=09/20 train_loss=0.045170 val_loss=0.038755 val_pr_auc=0.026349
+[bid] epoch=10/20 train_loss=0.045023 val_loss=0.038528 val_pr_auc=0.027270
+[bid] epoch=11/20 train_loss=0.044835 val_loss=0.038929 val_pr_auc=0.029182
+[bid] epoch=12/20 train_loss=0.044748 val_loss=0.038403 val_pr_auc=0.030436
+[bid] epoch=13/20 train_loss=0.044623 val_loss=0.038425 val_pr_auc=0.030896
+[bid] epoch=14/20 train_loss=0.044483 val_loss=0.038510 val_pr_auc=0.032137
+[bid] epoch=15/20 train_loss=0.044391 val_loss=0.037864 val_pr_auc=0.031619
+[bid] epoch=16/20 train_loss=0.044360 val_loss=0.037998 val_pr_auc=0.033852
+[bid] epoch=17/20 train_loss=0.044259 val_loss=0.038129 val_pr_auc=0.033990
+[bid] epoch=18/20 train_loss=0.044177 val_loss=0.037984 val_pr_auc=0.034911
+[bid] epoch=19/20 train_loss=0.044115 val_loss=0.037899 val_pr_auc=0.034912
+[bid] epoch=20/20 train_loss=0.044061 val_loss=0.037728 val_pr_auc=0.035093
+[ask] epoch=01/20 train_loss=0.060271 val_loss=0.044187 val_pr_auc=0.009857
+[ask] epoch=02/20 train_loss=0.046807 val_loss=0.043614 val_pr_auc=0.011392
+[ask] epoch=03/20 train_loss=0.046547 val_loss=0.043275 val_pr_auc=0.013180
+[ask] epoch=04/20 train_loss=0.046297 val_loss=0.044071 val_pr_auc=0.013770
+[ask] epoch=05/20 train_loss=0.046194 val_loss=0.043508 val_pr_auc=0.015119
+[ask] epoch=06/20 train_loss=0.045900 val_loss=0.042826 val_pr_auc=0.016287
+[ask] epoch=07/20 train_loss=0.045526 val_loss=0.042120 val_pr_auc=0.022210
+[ask] epoch=08/20 train_loss=0.045167 val_loss=0.041761 val_pr_auc=0.023982
+[ask] epoch=09/20 train_loss=0.044760 val_loss=0.041444 val_pr_auc=0.028103
+[ask] epoch=10/20 train_loss=0.044653 val_loss=0.041935 val_pr_auc=0.026532
+[ask] epoch=11/20 train_loss=0.044311 val_loss=0.041158 val_pr_auc=0.031654
+[ask] epoch=12/20 train_loss=0.044219 val_loss=0.040926 val_pr_auc=0.031087
+[ask] epoch=13/20 train_loss=0.044179 val_loss=0.041116 val_pr_auc=0.032864
+[ask] epoch=14/20 train_loss=0.044052 val_loss=0.041000 val_pr_auc=0.032417
+[ask] epoch=15/20 train_loss=0.044019 val_loss=0.040655 val_pr_auc=0.034259
+[ask] epoch=16/20 train_loss=0.043906 val_loss=0.041130 val_pr_auc=0.034575
+[ask] epoch=17/20 train_loss=0.043876 val_loss=0.041310 val_pr_auc=0.034744
+[ask] epoch=18/20 train_loss=0.043807 val_loss=0.040564 val_pr_auc=0.035136
+[ask] epoch=19/20 train_loss=0.043731 val_loss=0.041161 val_pr_auc=0.035821
+[ask] epoch=20/20 train_loss=0.043666 val_loss=0.040606 val_pr_auc=0.035721
+Binary model training complete:
+- C:\Users\holbo\00VS_projjects\00_HFT_project\new_era\16_binary_label_v2\outputs\model_weighted_bce
+- Test split was not evaluated.

@@ -1,0 +1,21 @@
+[06H compile] hls_model.compile() start
+[06H compile] selected_bash=C:\Program Files\Git\bin\bash.exe
+'.' is not recognized as an internal or external command,
+operable program or batch file.
+
+
+[06H compile] exception propagated to Python
+Exception: Failed to compile project "phc_distilled_student_keras"
+Traceback (most recent call last):
+  File "C:\Users\holbo\00VS_projjects\00_HFT_project\n2ew_era\06h_phc_hls4ml_distilled_student\00_train_convert_distilled_student.py", line 500, in convert_and_build
+    hls_model.compile()
+    ~~~~~~~~~~~~~~~~~^^
+  File "C:\Users\holbo\AppData\Local\Programs\Python\Python313\Lib\site-packages\hls4ml\model\graph.py", line 802, in compile
+    self._compile()
+    ~~~~~~~~~~~~~^^
+  File "C:\Users\holbo\AppData\Local\Programs\Python\Python313\Lib\site-packages\hls4ml\model\graph.py", line 805, in _compile
+    lib_name = self.config.backend.compile(self)
+  File "C:\Users\holbo\AppData\Local\Programs\Python\Python313\Lib\site-packages\hls4ml\backends\fpga\fpga_backend.py", line 189, in compile
+    raise Exception(f'Failed to compile project "{model.config.get_project_name()}"')
+Exception: Failed to compile project "phc_distilled_student_keras"
+

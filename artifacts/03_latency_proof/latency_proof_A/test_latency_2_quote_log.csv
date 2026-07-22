@@ -1,0 +1,3 @@
+symbol,timestamp,side,action,order_price,queue_ahead,alpha_score,bid_toxicity,ask_toxicity
+TXFJ5,43207915000000,bid,place,27126.0,2.0,0.0036011056602001743,0.0,0.0
+TXFJ5,43207915000000,ask,place,27130.0,4.0,0.0036011056602001743,0.0,0.0

@@ -1,0 +1,21 @@
+{
+  "selection_split": "validation",
+  "test_used_for_selection": false,
+  "selected_rule": {
+    "rule_id": "no_recovery",
+    "kind": "none"
+  },
+  "validation_metrics": {
+    "phase031_split": "val",
+    "rule_id": "no_recovery",
+    "selection_split": "validation",
+    "test_used_for_selection": false,
+    "baseline_pnl": 1218095.0,
+    "recovered_count": 0,
+    "recovered_quote_ev": 0.0,
+    "after_recovery_pnl": 1218095.0,
+    "incremental_vs_baseline": 0.0,
+    "oracle_recall": 0.847457627118644,
+    "oracle_precision": 0.373134328358209
+  }
+}

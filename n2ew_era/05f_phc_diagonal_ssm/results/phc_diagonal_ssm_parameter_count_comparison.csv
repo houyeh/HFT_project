@@ -1,0 +1,4 @@
+model,recurrence,hidden_dim,parameter_count,feature_dim,mtl_steps,delta_vs_dense16,ratio_vs_dense16,delta_vs_dense8,ratio_vs_dense8
+phc_diagonal_ssm_hidden16,diagonal_per_channel,16,370,16,1,-1361,0.21374927787406123,-177,0.676416819012797
+phc_stp_v2_cosine_lr_dense16,dense_stp,16,1731,16,1,0,1.0,1184,3.164533820840951
+phc_stp_v2_hidden8_dense8,dense_stp,8,547,16,1,-1184,0.31600231080300406,0,1.0

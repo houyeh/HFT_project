@@ -1,0 +1,19 @@
+{
+  "decision": "forbid",
+  "raw_absolute_price_features": [
+    "best_bid",
+    "best_ask",
+    "mid_price",
+    "quote_price"
+  ],
+  "recommended_action": "forbid",
+  "frozen_oos_mean_spearman": {
+    "price_only": 0.002712731620530807,
+    "microstructure_only": 0.0024314907479432873,
+    "combined": 0.0012287793445992228,
+    "combined_minus_microstructure": -0.0012027114033440645
+  },
+  "rationale": "Price-only diagnostic has weak frozen-OOS rank correlation; raw absolute price levels are not reliable standalone causal features.",
+  "diagnostic_only_not_final_ml": true,
+  "test_new3_new4_used_for_tuning": false
+}

@@ -1,0 +1,143 @@
+
+
+================================================================
+== Vitis HLS Report for 'phc_step_Outline_VITIS_LOOP_277_2'
+================================================================
+* Date:           Tue Jun 23 17:30:30 2026
+
+* Version:        2025.2 (Build 6295257 on Nov 14 2025)
+* Project:        hls_component
+* Solution:       hls (Vivado IP Flow Target)
+* Product family: zynq
+* Target device:  xc7z020-clg400-1
+
+
+================================================================
+== Performance Estimates
+================================================================
++ Timing: 
+    * Summary: 
+    +--------+----------+----------+------------+
+    |  Clock |  Target  | Estimated| Uncertainty|
+    +--------+----------+----------+------------+
+    |ap_clk  |  10.00 ns|  5.199 ns|     2.70 ns|
+    +--------+----------+----------+------------+
+
++ Latency: 
+    * Summary: 
+    +---------+---------+----------+----------+-----+-----+---------+
+    |  Latency (cycles) |  Latency (absolute) |  Interval | Pipeline|
+    |   min   |   max   |    min   |    max   | min | max |   Type  |
+    +---------+---------+----------+----------+-----+-----+---------+
+    |       49|       49|  0.490 us|  0.490 us|   49|   49|       no|
+    +---------+---------+----------+----------+-----+-----+---------+
+
+    + Detail: 
+        * Instance: 
+        N/A
+
+        * Loop: 
+        +--------------------+---------+---------+----------+-----------+-----------+------+----------+
+        |                    |  Latency (cycles) | Iteration|  Initiation Interval  | Trip |          |
+        |      Loop Name     |   min   |   max   |  Latency |  achieved |   target  | Count| Pipelined|
+        +--------------------+---------+---------+----------+-----------+-----------+------+----------+
+        |- VITIS_LOOP_277_2  |       48|       48|         3|          -|          -|    16|        no|
+        +--------------------+---------+---------+----------+-----------+-----------+------+----------+
+
+
+
+================================================================
+== Utilization Estimates
+================================================================
+* Summary: 
++-----------------+---------+-----+--------+-------+-----+
+|       Name      | BRAM_18K| DSP |   FF   |  LUT  | URAM|
++-----------------+---------+-----+--------+-------+-----+
+|DSP              |        -|    -|       -|      -|    -|
+|Expression       |        -|    -|       0|     74|    -|
+|FIFO             |        -|    -|       -|      -|    -|
+|Instance         |        -|    -|       -|      -|    -|
+|Memory           |        -|    -|       -|      -|    -|
+|Multiplexer      |        -|    -|       0|     34|    -|
+|Register         |        -|    -|      54|      -|    -|
++-----------------+---------+-----+--------+-------+-----+
+|Total            |        0|    0|      54|    108|    0|
++-----------------+---------+-----+--------+-------+-----+
+|Available        |      280|  220|  106400|  53200|    0|
++-----------------+---------+-----+--------+-------+-----+
+|Utilization (%)  |        0|    0|      ~0|     ~0|    0|
++-----------------+---------+-----+--------+-------+-----+
+
++ Detail: 
+    * Instance: 
+    N/A
+
+    * DSP: 
+    N/A
+
+    * Memory: 
+    N/A
+
+    * FIFO: 
+    N/A
+
+    * Expression: 
+    +---------------------+----------+----+---+----+------------+------------+
+    |    Variable Name    | Operation| DSP| FF| LUT| Bitwidth P0| Bitwidth P1|
+    +---------------------+----------+----+---+----+------------+------------+
+    |add_ln277_fu_89_p2   |         +|   0|  0|  13|           5|           1|
+    |add_ln279_fu_106_p2  |         +|   0|  0|  47|          40|          40|
+    |icmp_ln277_fu_83_p2  |      icmp|   0|  0|  14|           5|           6|
+    +---------------------+----------+----+---+----+------------+------------+
+    |Total                |          |   0|  0|  74|          50|          47|
+    +---------------------+----------+----+---+----+------------+------------+
+
+    * Multiplexer: 
+    +-----------+----+-----------+-----+-----------+
+    |    Name   | LUT| Input Size| Bits| Total Bits|
+    +-----------+----+-----------+-----+-----------+
+    |ap_NS_fsm  |  25|          5|    1|          5|
+    |i_fu_32    |   9|          2|    5|         10|
+    +-----------+----+-----------+-----+-----------+
+    |Total      |  34|          7|    6|         15|
+    +-----------+----+-----------+-----+-----------+
+
+    * Register: 
+    +--------------------+----+----+-----+-----------+
+    |        Name        | FF | LUT| Bits| Const Bits|
+    +--------------------+----+----+-----+-----------+
+    |add_ln279_reg_137   |  40|   0|   40|          0|
+    |ap_CS_fsm           |   4|   0|    4|          0|
+    |i_fu_32             |   5|   0|    5|          0|
+    |zext_ln277_reg_122  |   5|   0|   64|         59|
+    +--------------------+----+----+-----+-----------+
+    |Total               |  54|   0|  113|         59|
+    +--------------------+----+----+-----+-----------+
+
+
+
+================================================================
+== Interface
+================================================================
+* Summary: 
++--------------------------+-----+-----+------------+-----------------------------------+--------------+
+|         RTL Ports        | Dir | Bits|  Protocol  |           Source Object           |    C Type    |
++--------------------------+-----+-----+------------+-----------------------------------+--------------+
+|ap_clk                    |   in|    1|  ap_ctrl_hs|  phc_step_Outline_VITIS_LOOP_277_2|  return value|
+|ap_rst                    |   in|    1|  ap_ctrl_hs|  phc_step_Outline_VITIS_LOOP_277_2|  return value|
+|ap_start                  |   in|    1|  ap_ctrl_hs|  phc_step_Outline_VITIS_LOOP_277_2|  return value|
+|ap_done                   |  out|    1|  ap_ctrl_hs|  phc_step_Outline_VITIS_LOOP_277_2|  return value|
+|ap_idle                   |  out|    1|  ap_ctrl_hs|  phc_step_Outline_VITIS_LOOP_277_2|  return value|
+|ap_ready                  |  out|    1|  ap_ctrl_hs|  phc_step_Outline_VITIS_LOOP_277_2|  return value|
+|gain_encoded_address0     |  out|    4|   ap_memory|                       gain_encoded|         array|
+|gain_encoded_ce0          |  out|    1|   ap_memory|                       gain_encoded|         array|
+|gain_encoded_q0           |   in|   40|   ap_memory|                       gain_encoded|         array|
+|gain_prev_state_address0  |  out|    4|   ap_memory|                    gain_prev_state|         array|
+|gain_prev_state_ce0       |  out|    1|   ap_memory|                    gain_prev_state|         array|
+|gain_prev_state_q0        |   in|   40|   ap_memory|                    gain_prev_state|         array|
+|gain_pre_address0         |  out|    4|   ap_memory|                           gain_pre|         array|
+|gain_pre_ce0              |  out|    1|   ap_memory|                           gain_pre|         array|
+|gain_pre_we0              |  out|    1|   ap_memory|                           gain_pre|         array|
+|gain_pre_d0               |  out|   40|   ap_memory|                           gain_pre|         array|
++--------------------------+-----+-----+------------+-----------------------------------+--------------+
+

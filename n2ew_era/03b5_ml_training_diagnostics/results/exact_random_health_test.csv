@@ -1,0 +1,5 @@
+split,session_id,side,required_count,candidate_pool_size,unique_pnl_values,exact_sampling_method
+test,20260127Day,bid,148537,410586,32,multivariate_hypergeometric_unique_pnl_counts
+test,20260127Day,ask,159548,410586,32,multivariate_hypergeometric_unique_pnl_counts
+test,20260127Night,bid,279993,755735,31,multivariate_hypergeometric_unique_pnl_counts
+test,20260127Night,ask,282431,755735,31,multivariate_hypergeometric_unique_pnl_counts

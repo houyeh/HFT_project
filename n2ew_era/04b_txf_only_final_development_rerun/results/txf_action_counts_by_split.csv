@@ -1,0 +1,5 @@
+split,sessions,source_rows,action_rows
+new3,6,5656822,16970466
+new4,4,2196280,6588840
+train,3,2470559,7411677
+val,6,2655369,7966107

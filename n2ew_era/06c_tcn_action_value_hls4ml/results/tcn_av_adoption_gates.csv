@@ -1,0 +1,13 @@
+model_variant,policy_id,gate,pass,rule
+16feat,tcn_action_value_16feat,Convergence closed,False,all seeds early_stop=True and best_epoch<185
+16feat,tcn_action_value_16feat,Seed stability,True,all seeds x splits action PnL > 0
+16feat,tcn_action_value_16feat,Matched random,True,val/NEW3/NEW4 all beat random 95p
+16feat,tcn_action_value_16feat,Action PnL improvement over PHC-lite v1,False,val/NEW3/NEW4 action PnL >= PHC-lite v1
+16feat,tcn_action_value_16feat,Causal-fill improvement over PHC-lite v1,False,val/NEW3/NEW4 sequential PnL >= PHC-lite v1
+16feat,tcn_action_value_16feat,Oracle capture improvement over PHC-lite v1,False,val/NEW3/NEW4 capture ratio >= PHC-lite v1
+18feat,tcn_action_value_18feat,Convergence closed,False,all seeds early_stop=True and best_epoch<185
+18feat,tcn_action_value_18feat,Seed stability,True,all seeds x splits action PnL > 0
+18feat,tcn_action_value_18feat,Matched random,True,val/NEW3/NEW4 all beat random 95p
+18feat,tcn_action_value_18feat,Action PnL improvement over PHC-lite v1,False,val/NEW3/NEW4 action PnL >= PHC-lite v1
+18feat,tcn_action_value_18feat,Causal-fill improvement over PHC-lite v1,False,val/NEW3/NEW4 sequential PnL >= PHC-lite v1
+18feat,tcn_action_value_18feat,Oracle capture improvement over PHC-lite v1,False,val/NEW3/NEW4 capture ratio >= PHC-lite v1

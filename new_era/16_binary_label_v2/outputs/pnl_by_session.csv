@@ -1,0 +1,3 @@
+method,seed,dataset,symbol,split,session_id,rows,bid_signal_rate,ask_signal_rate,any_side_signal_rate,trade_count,gross_pnl,net_pnl,fee,max_drawdown,avg_pnl_per_fill,net_cancel_value,missed_toxic_pnl_avoided,missed_profitable_pnl,realized_bid_pnl,realized_ask_pnl,bid_fill_count,ask_fill_count
+model_frozen_val_threshold,,NEW_ALL,TXFB6,test,20260127Day,410586,0.14304189621662697,0.15265255025743693,0.2520957850486865,143,43500.0,41355.0,2145.0,69390.0,289.1958041958042,16500.0,16800.0,300.0,86700.0,-43830.0,71,72
+model_frozen_val_threshold,,NEW_ALL,TXFB6,test,20260127Night,755735,0.15005127458699147,0.1304928314819348,0.245396865303314,331,96200.0,91235.0,4965.0,31900.0,275.6344410876133,15600.0,16500.0,900.0,51700.0,33580.0,164,167

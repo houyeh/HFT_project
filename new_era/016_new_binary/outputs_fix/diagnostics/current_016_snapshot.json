@@ -1,0 +1,11 @@
+{
+  "best_threshold_bid": 0.4,
+  "best_threshold_ask": 0.2,
+  "new_net_pnl": 266045.0,
+  "trade_count": 77,
+  "random_mean": 251104.75,
+  "random_std": 20931.07877505361,
+  "random_mean_plus_1std": 272035.8287750536,
+  "beats_random_plus_1std": false,
+  "smoothed_baseline_net_pnl": 84980.0
+}

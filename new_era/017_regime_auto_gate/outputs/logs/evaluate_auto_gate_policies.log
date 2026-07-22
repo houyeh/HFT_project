@@ -1,0 +1,7 @@
+2026-05-21 04:17:08,791 INFO Evaluating auto-gate candidates on NEW validation set...
+2026-05-21 04:59:11,217 INFO Saved validation selection table: 567 rows
+2026-05-21 04:59:11,218 INFO Selected policy: volatility_risk_off params={"spread_min": 1.5, "vol_quantile": 0.7, "vol_threshold": 0.1729132438508252, "vol_w": 100} thr=0.70
+2026-05-21 05:00:08,764 INFO Saved auto-gate test results to C:\Users\holbo\00VS_projjects\00_HFT_project\new_era\017_regime_auto_gate\outputs\backtests\auto_gate_test_results.csv
+2026-05-21 05:00:08,779 INFO Saved comparison table to C:\Users\holbo\00VS_projjects\00_HFT_project\new_era\017_regime_auto_gate\outputs\comparison\auto_gate_vs_static.csv
+2026-05-21 05:11:42,252 INFO Saved EWMA ablation to C:\Users\holbo\00VS_projjects\00_HFT_project\new_era\017_regime_auto_gate\outputs\comparison\ewma_gate_ablation.csv
+2026-05-21 05:11:47,583 INFO Auto-gate evaluation complete.

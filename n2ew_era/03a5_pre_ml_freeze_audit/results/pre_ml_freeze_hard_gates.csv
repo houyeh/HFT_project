@@ -1,0 +1,7 @@
+gate,pass
+excess_label_formula,True
+feature_causality,True
+split_duplicate_independence,True
+feature_schema_freeze,True
+baseline_hurdle_freeze,True
+evaluation_contract_freeze,True

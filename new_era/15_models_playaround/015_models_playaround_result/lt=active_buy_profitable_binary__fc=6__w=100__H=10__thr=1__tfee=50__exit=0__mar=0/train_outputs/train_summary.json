@@ -1,0 +1,27 @@
+{
+  "best_epoch": 5,
+  "best_val_acc": 0.8620156360359482,
+  "best_val_loss": 0.6053279310832789,
+  "class_distribution_test": {
+    "0": 148576,
+    "1": 2572
+  },
+  "class_distribution_train": {
+    "0": 331318,
+    "1": 5767
+  },
+  "class_distribution_val": {
+    "0": 80490,
+    "1": 1628
+  },
+  "device": "cpu",
+  "num_classes": 2,
+  "num_inputs": 6,
+  "num_parameters": 4370,
+  "num_test_samples": 151148,
+  "num_test_sessions": 1,
+  "num_train_samples": 337085,
+  "num_train_sessions": 4,
+  "num_val_samples": 82118,
+  "num_val_sessions": 1
+}

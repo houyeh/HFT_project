@@ -1,0 +1,247 @@
+<ENTRY>
+{
+ "thisFile": "C:/Users\\holbo\\00VS_projjects\\00_HFT_project\\n2ew_era\\06n_phc_lite_branch_dataflow\\hls_component\\hls_component\\hls_component.hlscompile_summary",
+ "connectId": "",
+ "serverToken": "",
+ "timestamp": "0"
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_CmdStep",
+ "dateTimestamp": "06/23/26 17:29:06",
+ "timestampMillis": "1782206946237",
+ "buildStep": {
+  "cmdId": "cb4ca38f-a721-4a5f-90f1-2fb5557125a2",
+  "name": "v++",
+  "logFile": "C:/Users\\holbo\\00VS_projjects\\00_HFT_project\\n2ew_era\\06n_phc_lite_branch_dataflow\\hls_component\\hls_component\\logs\\hls_component.steps.log",
+  "commandLine": "C:/AMDDesignTools/2025.2/Vitis/bin/unwrapped/win64.o/v++.exe  -c --mode hls --config C:\\Users\\holbo\\00VS_projjects\\00_HFT_project\\n2ew_era\\06n_phc_lite_branch_dataflow\\hls_component\\hls_component\\..\\hls_config.cfg --work_dir C:/Users/holbo/00VS_projjects/00_HFT_project/n2ew_era/06n_phc_lite_branch_dataflow/hls_component/hls_component ",
+  "args": [
+   "-c",
+   "--mode",
+   "hls",
+   "--config",
+   "C:\\Users\\holbo\\00VS_projjects\\00_HFT_project\\n2ew_era\\06n_phc_lite_branch_dataflow\\hls_component\\hls_component\\..\\hls_config.cfg",
+   "--work_dir",
+   "C:/Users/holbo/00VS_projjects/00_HFT_project/n2ew_era/06n_phc_lite_branch_dataflow/hls_component/hls_component"
+  ],
+  "iniFiles": [
+   {
+    "path": "C:/Users\\holbo\\00VS_projjects\\00_HFT_project\\n2ew_era\\06n_phc_lite_branch_dataflow\\hls_component\\hls_config.cfg",
+    "content": "part=xc7z020clg400-1\n\n[hls]\nflow_target=vivado\npackage.output.format=ip_catalog\npackage.output.syn=false\nsyn.top=phc_step\nsyn.file=../hls_src/phc_step_hls.cpp\nsyn.file=../hls_src/phc_step_hls.hpp\nsyn.file=../hls_src/phc_weights.hpp\ntb.file=../hls_src/phc_step_testbench.cpp\nclock=10ns\ncosim.argv=C:/Users/holbo/00VS_projjects/00_HFT_project/n2ew_era/06f_phc_lite_manual_hls/results/phc_step_test_vectors.csv C:/Users/holbo/00VS_projjects/00_HFT_project/n2ew_era/06n_phc_lite_branch_dataflow/results/phc_step_cosim_out.csv\ncsim.argv=C:/Users/holbo/00VS_projjects/00_HFT_project/n2ew_era/06f_phc_lite_manual_hls/results/phc_step_test_vectors.csv C:/Users/holbo/00VS_projjects/00_HFT_project/n2ew_era/06n_phc_lite_branch_dataflow/results/phc_step_csim_out.csv"
+   }
+  ],
+  "cwd": "C:\\Users\\holbo\\00VS_projjects\\00_HFT_project\\n2ew_era\\06n_phc_lite_branch_dataflow\\hls_component\\hls_component"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Status",
+ "dateTimestamp": "06/23/26 17:29:06",
+ "timestampMillis": "1782206946238",
+ "status": {
+  "cmdId": "cb4ca38f-a721-4a5f-90f1-2fb5557125a2",
+  "state": "CS_RUNNING"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_FlowMetaData",
+ "dateTimestamp": "06/23/26 17:29:11",
+ "timestampMillis": "1782206951276",
+ "buildSummary": {
+  "hardwarePlatform": "",
+  "hardwareDsa": "",
+  "platformDirectory": "",
+  "runtime": "",
+  "systemConfig": "",
+  "flow": "BF_COMPILE",
+  "target": "TT_HW",
+  "kernels": [
+   {
+    "base": {
+     "type": "KERNEL",
+     "name": "phc_step",
+     "file": "",
+     "reports": [],
+     "uuid": ""
+    },
+    "sources": [
+     "C:/Users\\holbo\\00VS_projjects\\00_HFT_project\\n2ew_era\\06n_phc_lite_branch_dataflow\\hls_src\\phc_step_hls.cpp",
+     "C:/Users\\holbo\\00VS_projjects\\00_HFT_project\\n2ew_era\\06n_phc_lite_branch_dataflow\\hls_src\\phc_step_hls.hpp",
+     "C:/Users\\holbo\\00VS_projjects\\00_HFT_project\\n2ew_era\\06n_phc_lite_branch_dataflow\\hls_src\\phc_weights.hpp"
+    ],
+    "psSources": [],
+    "cuNames": [],
+    "type": "HLS",
+    "frequency": 0,
+    "freqUnits": ""
+   }
+  ],
+  "toolVersion": "2025.2"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_SubCmdStep",
+ "dateTimestamp": "06/23/26 17:29:11",
+ "timestampMillis": "1782206951279",
+ "buildStep": {
+  "cmdId": "34dd450a-2a4b-4e76-bed9-2386f5433fb0",
+  "name": "",
+  "logFile": "C:/Users\\holbo\\00VS_projjects\\00_HFT_project\\n2ew_era\\06n_phc_lite_branch_dataflow\\hls_component\\hls_component\\hls\\hls.log",
+  "commandLine": "",
+  "args": [],
+  "iniFiles": [],
+  "cwd": "C:\\Users\\holbo\\00VS_projjects\\00_HFT_project\\n2ew_era\\06n_phc_lite_branch_dataflow\\hls_component\\hls_component"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Status",
+ "dateTimestamp": "06/23/26 17:29:11",
+ "timestampMillis": "1782206951280",
+ "status": {
+  "cmdId": "34dd450a-2a4b-4e76-bed9-2386f5433fb0",
+  "state": "CS_RUNNING"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "06/23/26 17:29:11",
+ "timestampMillis": "1782206951280",
+ "report": {
+  "path": "C:/Users\\holbo\\00VS_projjects\\00_HFT_project\\n2ew_era\\06n_phc_lite_branch_dataflow\\hls_component\\hls_component\\hls\\hls_data.json",
+  "name": "",
+  "fileType": "JSON",
+  "reportType": "HLS_SYNTHESIS",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "06/23/26 17:29:11",
+ "timestampMillis": "1782206951281",
+ "report": {
+  "path": "C:/Users\\holbo\\00VS_projjects\\00_HFT_project\\n2ew_era\\06n_phc_lite_branch_dataflow\\hls_component\\hls_component\\hls\\syn\\report\\csynth.rpt",
+  "name": "",
+  "fileType": "TEXT",
+  "reportType": "HLS_SYNTHESIS",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "06/23/26 17:29:11",
+ "timestampMillis": "1782206951281",
+ "report": {
+  "path": "C:/Users\\holbo\\00VS_projjects\\00_HFT_project\\n2ew_era\\06n_phc_lite_branch_dataflow\\hls_component\\hls_component\\hls\\syn\\report\\csynth.xml",
+  "name": "",
+  "fileType": "XML",
+  "reportType": "HLS_SYNTHESIS",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "06/23/26 17:30:50",
+ "timestampMillis": "1782207050148",
+ "report": {
+  "path": "C:/Users\\holbo\\00VS_projjects\\00_HFT_project\\n2ew_era\\06n_phc_lite_branch_dataflow\\hls_component\\hls_component\\hls",
+  "name": "",
+  "fileType": "DIR",
+  "reportType": "HLS_DATAFLOW",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "06/23/26 17:30:50",
+ "timestampMillis": "1782207050149",
+ "report": {
+  "path": "C:/Users\\holbo\\00VS_projjects\\00_HFT_project\\n2ew_era\\06n_phc_lite_branch_dataflow\\hls_component\\hls_component\\hls",
+  "name": "",
+  "fileType": "DIR",
+  "reportType": "HLS_FUNCTION_CALL_GRAPH",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "06/23/26 17:30:50",
+ "timestampMillis": "1782207050150",
+ "report": {
+  "path": "C:/Users\\holbo\\00VS_projjects\\00_HFT_project\\n2ew_era\\06n_phc_lite_branch_dataflow\\hls_component\\hls_component\\hls",
+  "name": "",
+  "fileType": "DIR",
+  "reportType": "HLS_SCHEDULE",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Status",
+ "dateTimestamp": "06/23/26 17:30:50",
+ "timestampMillis": "1782207050150",
+ "status": {
+  "cmdId": "34dd450a-2a4b-4e76-bed9-2386f5433fb0",
+  "state": "CS_PASSED"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Status",
+ "dateTimestamp": "06/23/26 17:30:51",
+ "timestampMillis": "1782207051163",
+ "status": {
+  "cmdId": "cb4ca38f-a721-4a5f-90f1-2fb5557125a2",
+  "state": "CS_PASSED"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "06/23/26 17:30:51",
+ "timestampMillis": "1782207051194",
+ "report": {
+  "path": "C:/Users\\holbo\\00VS_projjects\\00_HFT_project\\n2ew_era\\06n_phc_lite_branch_dataflow\\hls_component\\hls_component\\reports\\v++_compile_hls_component_guidance.html",
+  "name": "",
+  "fileType": "HTML",
+  "reportType": "GLOBAL_RULECHECK_GUIDANCE",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "06/23/26 17:30:51",
+ "timestampMillis": "1782207051196",
+ "report": {
+  "path": "C:/Users\\holbo\\00VS_projjects\\00_HFT_project\\n2ew_era\\06n_phc_lite_branch_dataflow\\hls_component\\hls_component\\reports\\.db\\v++_compile_hls_component_guidance.pb3",
+  "name": "",
+  "fileType": "BINARY_PROTOBUF",
+  "reportType": "GLOBAL_RULECHECK_GUIDANCE",
+  "cmdId": ""
+ }
+}
+</ENTRY>

@@ -1,0 +1,17 @@
+split,policy_id,model_variant,session_id,session_excess_pnl_H20,selected_action_count,state_count
+val,tcn_5block_prepad_18feat,18feat,NEW1_20260123Day_TXFB6,158670.0,4303,5688
+val,tcn_5block_prepad_18feat,18feat,NEW1_20260123Night_TXFB6,281830.0,12658,17680
+val,tcn_5block_prepad_18feat,18feat,NEW1_20260126Day_TXFB6,258380.0,8969,11674
+val,tcn_5block_prepad_18feat,18feat,NEW1_20260126Night_TXFB6,351690.0,12794,17602
+val,tcn_5block_prepad_18feat,18feat,NEW1_20260127Day_TXFB6,265855.0,9624,12825
+val,tcn_5block_prepad_18feat,18feat,NEW1_20260127Night_TXFB6,401665.0,13190,17491
+new3,tcn_5block_prepad_18feat,18feat,NEW3_20260113_TXFA6,1123900.0,30341,39926
+new3,tcn_5block_prepad_18feat,18feat,NEW3_20260114_TXFA6,685855.0,21603,28452
+new3,tcn_5block_prepad_18feat,18feat,NEW3_20260115_TXFA6,807160.0,23356,30498
+new3,tcn_5block_prepad_18feat,18feat,NEW3_20260116_TXFA6,720750.0,23271,30507
+new3,tcn_5block_prepad_18feat,18feat,NEW3_20260119Day_TXFA6,1070400.0,32680,42665
+new3,tcn_5block_prepad_18feat,18feat,NEW3_20260330_TXFA6,92065.0,3529,4706
+new4,tcn_5block_prepad_18feat,18feat,NEW4_20260102_TXFA6,258140.0,11404,15685
+new4,tcn_5block_prepad_18feat,18feat,NEW4_20260105_TXFA6,49160.0,1536,2041
+new4,tcn_5block_prepad_18feat,18feat,NEW4_20260109_TXFA6,518710.0,15247,20131
+new4,tcn_5block_prepad_18feat,18feat,NEW4_20260112_TXFA6,777390.0,23334,30763

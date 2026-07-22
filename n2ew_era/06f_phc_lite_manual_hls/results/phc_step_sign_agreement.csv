@@ -1,0 +1,4 @@
+channel,total_rows,agree_rows,disagree_rows,sign_agreement_pct
+readout_0,25600,25595,5,99.98046875
+readout_1,25600,25589,11,99.95703125
+joint_readout_0_1,25600,25584,16,99.9375

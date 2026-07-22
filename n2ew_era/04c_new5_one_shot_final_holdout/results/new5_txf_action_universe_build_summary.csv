@@ -1,0 +1,3 @@
+source_group,session,product_id,raw_txf_rows,source_rows_after_valid_book_boundary,action_rows,bid_actions,ask_actions,no_quote_actions,malformed_info_time_rows_dropped,new5_scope
+NEW5,20260128,TXF,3190,0,0,0,0,0,0,20260128_only
+NEW5,20260128,TXFB6,845793,815912,2447736,815912,815912,815912,0,20260128_only

@@ -1,0 +1,26 @@
+{
+  "selection_file": "C:\\Users\\holbo\\00VS_projjects\\00_HFT_project\\new_era\\21_stress_robust_policy\\search\\selected_stress_robust_policy.json",
+  "selection_split": "validation",
+  "test_used_for_selection": false,
+  "stress_locked": {
+    "base": {
+      "neutral_fill_haircut": 1.0,
+      "good_fill_haircut": 1.0,
+      "toxic_multiplier": 1.0,
+      "cancel_delay_ticks": 0
+    },
+    "mild": {
+      "neutral_fill_haircut": 0.75,
+      "good_fill_haircut": 1.0,
+      "toxic_multiplier": 1.25,
+      "cancel_delay_ticks": 0
+    },
+    "moderate": {
+      "neutral_fill_haircut": 0.5,
+      "good_fill_haircut": 1.0,
+      "toxic_multiplier": 1.5,
+      "cancel_delay_ticks": 0
+    }
+  },
+  "decision_status": "Fail"
+}

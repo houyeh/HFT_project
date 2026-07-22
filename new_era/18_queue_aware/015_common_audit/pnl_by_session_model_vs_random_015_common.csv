@@ -1,0 +1,3 @@
+track,session_id,model_net_pnl,model_share_of_total_pnl,random_v3_mean,random_v3_p95,random_v3_p99,model_beats_random_v3_mean,model_beats_random_v3_p95,model_beats_random_v3_p99
+015_common_universe,20260127Day,23815.0,0.2621498156200121,-16644.059,14526.250000000004,29550.85000000002,True,True,False
+015_common_universe,20260127Night,67030.0,0.7378501843799878,73366.762,97776.0,108370.75000000001,False,False,False

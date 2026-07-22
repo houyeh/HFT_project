@@ -1,0 +1,2 @@
+selected_threshold,test_signal_rate,test_trade_count,test_net_pnl,test_max_drawdown,test_net_cancel_value,test_vs_baseline_improvement,test_vs_random_improvement,notes
+0.7,0.050923322004369255,584,63440.0,82760.0,14800.0,7340.0,10230.6015625,"random_same_signal_rate_mean=53209.40, std=19569.30, signal_rate=0.050923"

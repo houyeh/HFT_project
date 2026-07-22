@@ -1,0 +1,92 @@
+
+****** vitis-run v2025.2 (64-bit)
+  **** SW Build 6295257 on 2025-11-13-08:29:27
+  **** Start of session at: Mon Jun 29 22:16:29 2026
+    ** Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+    ** Copyright 2022-2025 Advanced Micro Devices, Inc. All Rights Reserved.
+
+  **** HLS Build v2025.2 6295257
+Sourcing Tcl script 'C:/Users/holbo/00VS_projjects/00_HFT_project/n2ew_era/06h_phc_hls4ml_distilled_student/hls4ml_prj/phc_distilled_student_keras_clamped32/build_prj.tcl'
+INFO: [HLS 200-1510] Running: open_project phc_distilled_student_keras_clamped32_prj 
+WARNING: [HLS 200-2182] The 'phc_distilled_student_keras_clamped32_prj' project will not automatically appear within Vitis IDE workspaces and is meant only for TCL batch use.  Please use open_component instead of open_project/open_solution to generate Vitis IDE compatible component files and directory structure.
+Resolution: For help on HLS 200-2182 see docs.amd.com/access/sources/dita/topic?Doc_Version=2025.2%20English&url=ug1448-hls-guidance&resourceid=200-2182.html
+INFO: [HLS 200-10] Creating and opening solution 'C:/Users/holbo/00VS_projjects/00_HFT_project/n2ew_era/06h_phc_hls4ml_distilled_student/hls4ml_prj/phc_distilled_student_keras_clamped32/phc_distilled_student_keras_clamped32_prj'.
+INFO: [HLS 200-1510] Running: set_top phc_distilled_student_keras_clamped32 
+INFO: [HLS 200-1510] Running: add_files firmware/phc_distilled_student_keras_clamped32.cpp -cflags -std=c++0x 
+INFO: [HLS 200-10] Adding design file 'firmware/phc_distilled_student_keras_clamped32.cpp' to the project
+INFO: [HLS 200-1510] Running: add_files -tb phc_distilled_student_keras_clamped32_test.cpp -cflags -std=c++0x 
+INFO: [HLS 200-10] Adding test bench file 'phc_distilled_student_keras_clamped32_test.cpp' to the project
+INFO: [HLS 200-1510] Running: add_files -tb firmware/weights 
+INFO: [HLS 200-10] Adding test bench file 'firmware/weights' to the project
+INFO: [HLS 200-1510] Running: add_files -tb tb_data 
+INFO: [HLS 200-10] Adding test bench file 'tb_data' to the project
+INFO: [HLS 200-1510] Running: open_solution solution1 
+INFO: [HLS 200-10] Creating and opening solution 'C:/Users/holbo/00VS_projjects/00_HFT_project/n2ew_era/06h_phc_hls4ml_distilled_student/hls4ml_prj/phc_distilled_student_keras_clamped32/phc_distilled_student_keras_clamped32_prj/solution1'.
+INFO: [HLS 200-1505] Using default flow_target 'vivado'
+Resolution: For help on HLS 200-1505 see docs.amd.com/access/sources/dita/topic?Doc_Version=2025.2%20English&url=ug1448-hls-guidance&resourceid=200-1505.html
+INFO: [HLS 200-1510] Running: config_array_partition -maximum_size 4096 
+ERROR: [HLS 200-101] config_array_partition: Unknown option '-maximum_size'.
+ERROR: [HLS 200-101] config_array_partition: Unknown option '4096'.
+syn.array_partition.complete_threshold=syn.array_partition.throughput_driven=
+INFO: [HLS 200-1510] Running: config_compile -name_max_length 80 
+INFO: [XFORM 203-1161] The maximum of name length is set to 80.
+INFO: [HLS 200-1510] Running: set_part xc7z020clg400-1 
+INFO: [HLS 200-1611] Setting target device to 'xc7z020-clg400-1'
+INFO: [XFORM 203-1161] The maximum of name length is set to 80.
+INFO: [HLS 200-1510] Running: config_schedule -enable_dsp_full_reg=false 
+INFO: [HLS 200-1510] Running: create_clock -period 10 -name default 
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 10ns.
+INFO: [HLS 200-1510] Running: set_clock_uncertainty 27% default 
+INFO: [SYN 201-201] Setting up clock 'default' with an uncertainty of 2.7ns.
+***** C SIMULATION *****
+INFO: [HLS 200-1510] Running: csim_design 
+INFO: [SIM 211-2] *************** CSIM start ***************
+INFO: [HLS 200-2191] C-Simulation will use clang-16 as the compiler
+INFO: [HLS 200-2036] Building debug C Simulation binaries
+   Compiling ../../../../phc_distilled_student_keras_clamped32_test.cpp in debug mode
+In file included from ../../../../phc_distilled_student_keras_clamped32_test.cpp:10:
+In file included from ../../../../firmware/phc_distilled_student_keras_clamped32.h:4:
+In file included from C:/AMDDesignTools/2025.2/Vitis/include\ap_fixed.h:9:
+In file included from C:/AMDDesignTools/2025.2/Vitis/include\etc/ap_common.h:668:
+In file included from C:/AMDDesignTools/2025.2/Vitis/include\etc/ap_private.h:68:
+In file included from C:/AMDDesignTools/2025.2/Vitis/include\hls_half.h:26:
+In file included from C:/AMDDesignTools/2025.2/Vitis/include/etc/hls_half_fpo.h:19:
+In file included from C:/AMDDesignTools/2025.2/Vitis/include\hls_fpo.h:140:
+In file included from C:/AMDDesignTools/2025.2/Vitis/include/floating_point_v7_1_bitacc_cmodel.h:150:
+C:/AMDDesignTools/2025.2/Vitis/include\gmp.h:58:9: warning: '__GMP_LIBGMP_DLL' macro redefined [-Wmacro-redefined]
+#define __GMP_LIBGMP_DLL  0
+        ^
+C:/AMDDesignTools/2025.2/Vitis/include/floating_point_v7_1_bitacc_cmodel.h:142:9: note: previous definition is here
+#define __GMP_LIBGMP_DLL 1
+        ^
+1 warning generated.
+mingw32-make: *** No rule to make target '../../../../firmware/phc_distilled_student_keras_clamped32.cpp', needed by 'obj/phc_distilled_student_keras_clamped32.o'.  Stop.
+ERROR: [SIM 211-100] 'csim_design' failed: compilation error(s).
+INFO: [SIM 211-3] *************** CSIM finish ***************
+INFO: [HLS 200-2161] Finished Command csim_design Elapsed time: 00:00:04; Allocated memory: 0.387 MB.
+CSIM Failed
+    while executing
+"source C:/Users/holbo/00VS_projjects/00_HFT_project/n2ew_era/06h_phc_hls4ml_distilled_student/hls4ml_prj/phc_distilled_student_keras_clamped32/build_p..."
+    ("uplevel" body line 1)
+    invoked from within
+"uplevel \#0 [list source $tclfile] "
+
+INFO: [HLS 200-112] Total CPU user time: 1 seconds. Total CPU system time: 1 seconds. Total elapsed time: 7.216 seconds; peak allocated memory: 133.688 MB.
+INFO: [vitis-run 60-1662] Stopping dispatch session having empty uuid.
+[06H build] keras_distilled_student_clamped32_settings64fix hls_model.build(csim=True, synth=True) start
+[06H build] compile_success=False
+[06H build] selected_vitis_run=C:\AMDDesignTools\2025.2\Vitis\bin\vitis-run.bat
+
+[06H build] exception propagated to Python
+Exception: Build failed for phc_distilled_student_keras_clamped32. See logs for details.
+Traceback (most recent call last):
+  File "C:\Users\holbo\00VS_projjects\00_HFT_project\n2ew_era\06h_phc_hls4ml_distilled_student\00_train_convert_distilled_student.py", line 679, in build_hls_model
+    hls_model.build(csim=True, synth=True)
+    ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\holbo\00VS_projjects\00_HFT_project\.venv\Lib\site-packages\hls4ml\model\graph.py", line 1010, in build
+    return self.config.backend.build(self, **kwargs)
+           ~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^
+  File "C:\Users\holbo\00VS_projjects\00_HFT_project\.venv\Lib\site-packages\hls4ml\backends\vitis\vitis_backend.py", line 159, in build
+    raise Exception(f'Build failed for {model.config.get_project_name()}. See logs for details.')
+Exception: Build failed for phc_distilled_student_keras_clamped32. See logs for details.
+

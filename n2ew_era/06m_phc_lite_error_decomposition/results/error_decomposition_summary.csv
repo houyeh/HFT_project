@@ -1,0 +1,5 @@
+label,source,path,total_rows,diff_dimensions_per_row,mismatches,max_abs_diff,mean_abs_diff,real_csim_run
+06f_original_cosim_combined,existing_06f_cosim_csv,C:\Users\holbo\00VS_projjects\00_HFT_project\n2ew_era\06f_phc_lite_manual_hls\results\phc_step_cosim_out.csv,25600,18,0,0.007252753,0.0003725533494163028,False
+06f_original_csim_combined,existing_06f_csim_csv,C:\Users\holbo\00VS_projjects\00_HFT_project\n2ew_era\06f_phc_lite_manual_hls\results\phc_step_csim_out.csv,25600,18,0,0.007252753,0.0003725533494163028,False
+only_lut_error_csim,phase_06m_vitis_csim,C:\Users\holbo\00VS_projjects\00_HFT_project\n2ew_era\06m_phc_lite_error_decomposition\results\phc_step_only_lut_error_csim_out.csv,25600,18,0,0.005462141831,0.00029239815720343113,True
+only_quant_error_csim,phase_06m_vitis_csim,C:\Users\holbo\00VS_projjects\00_HFT_project\n2ew_era\06m_phc_lite_error_decomposition\results\phc_step_only_quant_error_csim_out.csv,25600,18,0,0.0064746145,0.00025021811458088213,True

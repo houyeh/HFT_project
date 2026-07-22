@@ -1,0 +1,10 @@
+split,policy_id,horizon,state_count,selected_action_count,bid_count,ask_count,total_excess_pnl,max_drawdown,selection_rate
+test,no_quote,20,1166321,0,0,0,0.0,0.0,0.0
+test,old_bid_only_spread_ge_1,20,1166321,1166321,1166321,0,-15960815.0,10975210.0,1.0
+test,side_by_queue_imbalance_abs_0p1,20,1166321,972497,480551,491946,16335715.0,44890.0,0.8338159048838184
+new4,no_quote,20,2196640,0,0,0,0.0,0.0,0.0
+new4,old_bid_only_spread_ge_1,20,2196640,2196640,2196640,0,-31885900.0,15031755.0,1.0
+new4,side_by_queue_imbalance_abs_0p1,20,2196640,1799777,887768,912009,29901050.0,85710.0,0.8193317976545997
+new3,no_quote,20,5657362,0,0,0,0.0,0.0,0.0
+new3,old_bid_only_spread_ge_1,20,5657362,5657362,5657362,0,-82854631.0,20007015.0,1.0
+new3,side_by_queue_imbalance_abs_0p1,20,5657362,4632107,2292063,2340044,86732392.0,115340.0,0.8187750757331774

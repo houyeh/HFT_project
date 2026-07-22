@@ -1,0 +1,13 @@
+seed,epochs,train_stride,side,split,positive_rate,pr_auc,roc_auc,loss,test_evaluated,model_dir
+0,3,10,bid,train_natural,0.0080313123749022,0.0094995233176629,0.5465959959148408,0.0470998168571018,False,C:\Users\holbo\00VS_projjects\00_HFT_project\new_era\20_policy_search\robustness\multi_seed_seed0\model_weighted_bce
+0,3,10,bid,val,0.0068728278349527,0.0079068130289538,0.539871182907868,0.0416724701904981,False,C:\Users\holbo\00VS_projjects\00_HFT_project\new_era\20_policy_search\robustness\multi_seed_seed0\model_weighted_bce
+0,3,10,ask,train_natural,0.0080480152775883,0.0102299351205461,0.5584652917462098,0.0470692694837946,False,C:\Users\holbo\00VS_projjects\00_HFT_project\new_era\20_policy_search\robustness\multi_seed_seed0\model_weighted_bce
+0,3,10,ask,val,0.0074514801784947,0.0095301213453908,0.5598652529061432,0.0440839167539841,False,C:\Users\holbo\00VS_projjects\00_HFT_project\new_era\20_policy_search\robustness\multi_seed_seed0\model_weighted_bce
+1,3,10,bid,train_natural,0.0080313123749022,0.0107158389923139,0.5739751069331007,0.0467691425864928,False,C:\Users\holbo\00VS_projjects\00_HFT_project\new_era\20_policy_search\robustness\multi_seed_seed1\model_weighted_bce
+1,3,10,bid,val,0.0068728278349527,0.0090192496356258,0.5687014178597425,0.0413316731885818,False,C:\Users\holbo\00VS_projjects\00_HFT_project\new_era\20_policy_search\robustness\multi_seed_seed1\model_weighted_bce
+1,3,10,ask,train_natural,0.0080480152775883,0.0104776418938966,0.5597222477526274,0.0469499586330528,False,C:\Users\holbo\00VS_projjects\00_HFT_project\new_era\20_policy_search\robustness\multi_seed_seed1\model_weighted_bce
+1,3,10,ask,val,0.0074514801784947,0.0096694333266454,0.5610535475183059,0.0440587902878496,False,C:\Users\holbo\00VS_projjects\00_HFT_project\new_era\20_policy_search\robustness\multi_seed_seed1\model_weighted_bce
+2,3,10,bid,train_natural,0.0080313123749022,0.0104068378674567,0.5611967746771258,0.0470276305994103,False,C:\Users\holbo\00VS_projjects\00_HFT_project\new_era\20_policy_search\robustness\multi_seed_seed2\model_weighted_bce
+2,3,10,bid,val,0.0068728278349527,0.0086769549718246,0.5585671757026336,0.0413631005074944,False,C:\Users\holbo\00VS_projjects\00_HFT_project\new_era\20_policy_search\robustness\multi_seed_seed2\model_weighted_bce
+2,3,10,ask,train_natural,0.0080480152775883,0.0100423870681088,0.5567787070728759,0.0469955445623557,False,C:\Users\holbo\00VS_projjects\00_HFT_project\new_era\20_policy_search\robustness\multi_seed_seed2\model_weighted_bce
+2,3,10,ask,val,0.0074514801784947,0.0094084960273257,0.5593347855664443,0.044047369256596,False,C:\Users\holbo\00VS_projjects\00_HFT_project\new_era\20_policy_search\robustness\multi_seed_seed2\model_weighted_bce

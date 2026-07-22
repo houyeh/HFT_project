@@ -1,0 +1,4 @@
+split,policy_id,horizon,state_count,selected_action_count,selection_rate,bid_count,ask_count,no_quote_count,total_excess_pnl_H20,avg_selected_excess,win_rate,negative_rate,max_drawdown,positive_session_count,session_count,seed_selected_on_val,threshold_selected_on_val,new3_used_for_selection,new4_used_for_selection,new5_used_for_selection
+val,phc_dale,20,82960,63237,0.7622589199614271,31811,31426,19723,1890990.0,29.903221215427678,0.47064218732703955,0.5293103720922877,16175.0,6,6,2,0.0,False,False,False
+new3,phc_dale,20,176754,136429,0.771858062618102,69316,67113,40325,4970380.0,36.43199026599916,0.5037785221617105,0.4962141480183832,4025.0,6,6,2,0.0,False,False,False
+new4,phc_dale,20,68620,52331,0.7626202273389683,26794,25537,16289,1716350.0,32.79795914467524,0.4917353003000134,0.5082455905677323,5120.0,4,4,2,0.0,False,False,False

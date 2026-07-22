@@ -1,0 +1,20 @@
+{
+  "phase": "06e",
+  "source_checkpoint": "C:\\Users\\holbo\\00VS_projjects\\00_HFT_project\\n2ew_era\\05c4_phc_stp_cosine_lr\\models\\phc_stp_v2_seed2_best_val.pt",
+  "migrated_model": "C:\\Users\\holbo\\00VS_projjects\\00_HFT_project\\n2ew_era\\06e_phc_stp_step_hls4ml\\models\\phc_stp_step_hls_seed2.pt",
+  "feature_dim": 16,
+  "hidden_dim": 16,
+  "input_dim": 32,
+  "output_dim": 18,
+  "source_parameter_count": 1731,
+  "step_parameter_count": 1714,
+  "buffer_count": 17,
+  "fixed_input_selector_parameters": 1024,
+  "fixed_output_pack_parameters": 306,
+  "decay_min": 0.8940098285675049,
+  "decay_max": 0.9036372303962708,
+  "alpha_raw_value_used_for_equivalence": 0.5916999578475952,
+  "alpha_sigmoid_value_not_used": 0.6437550783157349,
+  "alpha_note": "05C2 source applies raw alpha directly; sigmoid(alpha) is intentionally not used.",
+  "new5_used": false
+}

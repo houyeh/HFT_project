@@ -1,0 +1,11 @@
+claim,status,evidence,safe_wording
+HLS-friendly deterministic comparator logic,ALLOWED,Decision is side==bid and spread_ticks>=1; no floating point model or dynamic state needed.,The controller is HLS-friendly comparator logic under this proxy dataset.
+No future columns in decision logic,ALLOWED,future-token audit pass=True; current-row mismatch pass=True; boundary pass=True.,Decision logic is audited as not using quote_ev/future columns.
+External OOS proxy robustness,ALLOWED_WITH_PROXY_CAVEAT,Frozen test and NEW4 remain positive under the base proxy; Phase 033 extends checks to all rebuilt unused OOS and flags NEW/NEW1 duplication risk.,"The rule shows simulator-derived proxy robustness, with duplicate-data caveats."
+Phase 032 delay table as true execution-delay proxy,FORBIDDEN_AS_WRITTEN,Phase 032 delay grid only lagged decision features and did not recalculate delayed-entry EV; Phase 033 supplies corrected execution_delay_proxy_grid.csv.,Treat the Phase 032 delay table as lagged-book timing-artifact stress only.
+Exact-matched random quote-selection edge,FORBIDDEN,Exact matched random saturated=True; selected count equals candidate universe count for side=bid and spread>=1.,The exact-matched random quote baseline is non-informative due to saturation.
+Broader regime-vs-random diagnostic,ALLOWED_DIAGNOSTIC,Corrected Phase 033 broader random baselines available=True.,Use broader all-valid-action random controls only as diagnostic evidence of side/regime behavior.
+NEW and NEW1 as independent OOS,FORBIDDEN_IF_DEDUP_FLAGS_DUPLICATE,Corrected Phase 033 dedup audit available=True; it must be checked before summing OOS PnL.,Do not sum NEW and NEW1 as independent OOS if dedup flags likely duplication.
+Real-world profitability,FORBIDDEN,"Data lacks true queue priority, aggressor side, and exchange order-level replay.",Do not claim real-world profitability.
+FPGA PnL necessity,FORBIDDEN,Latency sensitivity is not proof that FPGA deployment is necessary for production PnL.,Frame FPGA only as a risk-control/latency candidate.
+True queue priority replay,FORBIDDEN,"The evaluation uses simulator-derived quote EV, not order-id queue replay.",Do not claim true exchange queue priority replay.

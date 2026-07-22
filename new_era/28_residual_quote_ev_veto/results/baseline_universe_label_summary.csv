@@ -1,0 +1,5 @@
+split,baseline_quote_count,quote_ev_sum_moderate,negative_ev_rate_moderate,side_set
+train,820,-1586875.0,0.275609756097561,bid
+val,134,1218095.0,0.12686567164179105,bid
+test,419,2312590.0,0.03818615751789976,bid
+external_oos_new4,714,6348770.0,0.14425770308123248,bid

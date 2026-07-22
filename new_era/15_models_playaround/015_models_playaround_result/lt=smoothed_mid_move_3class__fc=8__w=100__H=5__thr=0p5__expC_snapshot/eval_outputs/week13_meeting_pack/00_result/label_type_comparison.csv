@@ -1,0 +1,9 @@
+label_type,best_val_loss,test_macro_f1,model_test_pnl,pnl_improvement,label_type_short,selection_verdict
+smoothed_mid_move_3class,1.0134,0.2983,101991.0,17979.0,smoothed_mid_move_3class,SELECTED: highest mean pnl_improvement
+mid_move_3class,1.0073,0.2961,106956.25,15966.25,mid_move_3class,"runner-up; no smoothing, slightly lower pnl_improvement"
+adverse_bid_fill_binary,0.2244,0.5,90990.0,0.0,adverse_bid_fill_binary,"REJECTED: zero improvement, model rarely signals"
+adverse_ask_fill_binary,0.1234,0.5,90990.0,0.0,adverse_ask_fill_binary,"REJECTED: zero improvement, model rarely signals"
+toxic_bid_binary,0.6971,0.4993,90990.0,0.0,toxic_bid_binary,"REJECTED: near-random F1, zero improvement"
+toxic_ask_binary,0.6903,0.502,90305.0,-685.0,toxic_ask_binary,"REJECTED: near-random F1, zero or negative improvement"
+active_sell_profitable_binary,0.5594,0.5469,80608.75,-10381.25,active_sell_profitable_binary,REJECTED: mean pnl_improvement negative
+active_buy_profitable_binary,0.5904,0.5536,79193.75,-11796.25,active_buy_profitable_binary,REJECTED: mean pnl_improvement negative

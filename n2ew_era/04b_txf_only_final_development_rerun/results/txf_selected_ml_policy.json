@@ -1,0 +1,10 @@
+{
+  "policy_id": "ml_hgb_regressor_shallow",
+  "model_id": "hgb_regressor_shallow",
+  "threshold": 0.0,
+  "selection_split": "val",
+  "validation_total_excess_pnl_H20": 54381630.0,
+  "validation_selected_action_count": 1968250,
+  "test_new3_new4_used_for_selection": false,
+  "new5_used": false
+}

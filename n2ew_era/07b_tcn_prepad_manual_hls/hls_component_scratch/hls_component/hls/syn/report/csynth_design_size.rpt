@@ -1,0 +1,76 @@
+================================================================
+== Design Size Report
+================================================================
+
+* Total Instructions per Compilation Phase
++---------------+----------------------------+--------------+----------------------------------------------------------------------------------------+
+| Phase         | Step                       | Instructions | Description                                                                            |
++---------------+----------------------------+--------------+----------------------------------------------------------------------------------------+
+| Compile/Link  |                            | 11,960       | After all functions are compiled and linked into a single design                       |
+|               |                            |              |                                                                                        |
+| Unroll/Inline |                            |              | After user unroll and inline pragmas are applied                                       |
+|               | (1) unroll                 | 11,805       | user unroll pragmas are applied                                                        |
+|               | (2) simplification         |  3,589       | simplification of applied user unroll pragmas                                          |
+|               | (3) inline                 |  3,522       | user inline pragmas are applied                                                        |
+|               | (4) simplification         |  3,490       | simplification of applied user inline pragmas                                          |
+|               |                            |              |                                                                                        |
+| Array/Struct  |                            |              | After user array partition and struct aggregate/disaggregate pragmas are applied       |
+|               | (1) array partition        |  3,451       | user array partition pragmas are applied                                               |
+|               | (2) simplification         |  3,451       | simplification of applied user array partition & struct aggregate/disaggregate pragmas |
+|               | (3) aggregate/disaggregate |  3,467       | user struct aggregate/disaggregate pragmas are applied                                 |
+|               | (4) array reshape          |  3,483       | apply array reshape pragmas                                                            |
+|               | (5) access patterns        |  3,514       | array access pattern optmizations                                                      |
+|               |                            |              |                                                                                        |
+| Performance   |                            |              | After transformations are applied to meet performance pragma targets                   |
+|               | (1) loop simplification    |  3,482       | loop and instruction simplification                                                    |
+|               | (2) parallelization        |  3,451       | loops are unrolled or pipelined to meet performance targets                            |
+|               | (3) array partition        | 16,558       | arrays are partitioned to meet performance targets                                     |
+|               | (4) simplification         |  3,636       | simplification of design after performance transformations                             |
+|               |                            |              |                                                                                        |
+| HW Transforms |                            |              | After hardware transfomations                                                          |
+|               | (1) lowering               |  3,636       | initial conversion to HW specific instructions                                         |
+|               | (2) optimizations          |  3,821       | high level synthesis optimizations                                                     |
++---------------+----------------------------+--------------+----------------------------------------------------------------------------------------+
+
+* Instructions per Function for each Compilation Phase
++-------------------------------------+-----------------------------+-----------------+---------------+--------------+-------------+---------------+
+| Function                            | Location                    | Compile/Link    | Unroll/Inline | Array/Struct | Performance | HW Transforms |
++-------------------------------------+-----------------------------+-----------------+---------------+--------------+-------------+---------------+
+| + tcn_prepad_infer                  | tcn_prepad_hls_impl.hpp:134 | 11,960          | 3,490         | 3,514        | 3,636       | 3,821         |
+|    copy_and_prepad<252>             | tcn_prepad_hls_impl.hpp:21  |    96           |  120          |  122         |   90        |   95          |
+|  + tcn_block<252, 1>                | tcn_prepad_hls_impl.hpp:94  | 2,128           |  613          |  618         |  612        |  645          |
+|   + conv1_relu<252, 1>              | tcn_prepad_hls_impl.hpp:41  |   843           |  300          |  303         |  300        |  316          |
+|      relu_acc                       | tcn_prepad_hls_impl.hpp:15  |   134           |               |              |             |               |
+|   + conv2_relu_residual<252, 1>     | tcn_prepad_hls_impl.hpp:66  | 1,275           |  308          |  311         |  308        |  324          |
+|      relu_acc                       | tcn_prepad_hls_impl.hpp:15  |   268 (2 calls) |               |              |             |               |
+|  + tcn_block<248, 2>                | tcn_prepad_hls_impl.hpp:94  | 2,128           |  615          |  620         |  614        |  647          |
+|   + conv1_relu<248, 2>              | tcn_prepad_hls_impl.hpp:41  |   843           |  301          |  304         |  301        |  317          |
+|      relu_acc                       | tcn_prepad_hls_impl.hpp:15  |   134           |               |              |             |               |
+|   + conv2_relu_residual<248, 2>     | tcn_prepad_hls_impl.hpp:66  | 1,275           |  309          |  312         |  309        |  325          |
+|      relu_acc                       | tcn_prepad_hls_impl.hpp:15  |   268 (2 calls) |               |              |             |               |
+|  + tcn_block<240, 4>                | tcn_prepad_hls_impl.hpp:94  | 2,128           |  615          |  620         |  614        |  647          |
+|   + conv1_relu<240, 4>              | tcn_prepad_hls_impl.hpp:41  |   843           |  301          |  304         |  301        |  317          |
+|      relu_acc                       | tcn_prepad_hls_impl.hpp:15  |   134           |               |              |             |               |
+|   + conv2_relu_residual<240, 4>     | tcn_prepad_hls_impl.hpp:66  | 1,275           |  309          |  312         |  309        |  325          |
+|      relu_acc                       | tcn_prepad_hls_impl.hpp:15  |   268 (2 calls) |               |              |             |               |
+|  + tcn_block<224, 8>                | tcn_prepad_hls_impl.hpp:94  | 2,128           |  615          |  620         |  614        |  647          |
+|   + conv1_relu<224, 8>              | tcn_prepad_hls_impl.hpp:41  |   843           |  301          |  304         |  301        |  317          |
+|      relu_acc                       | tcn_prepad_hls_impl.hpp:15  |   134           |               |              |             |               |
+|   + conv2_relu_residual<224, 8>     | tcn_prepad_hls_impl.hpp:66  | 1,275           |  309          |  312         |  309        |  325          |
+|      relu_acc                       | tcn_prepad_hls_impl.hpp:15  |   268 (2 calls) |               |              |             |               |
+|  + tcn_block<192, 16>               | tcn_prepad_hls_impl.hpp:94  | 2,128           |  615          |  620         |  614        |  647          |
+|   + conv1_relu<192, 16>             | tcn_prepad_hls_impl.hpp:41  |   843           |  301          |  304         |  301        |  317          |
+|      relu_acc                       | tcn_prepad_hls_impl.hpp:15  |   134           |               |              |             |               |
+|   + conv2_relu_residual<192, 16>... | tcn_prepad_hls_impl.hpp:66  | 1,275           |  309          |  312         |  309        |  325          |
+|      relu_acc                       | tcn_prepad_hls_impl.hpp:15  |   268 (2 calls) |               |              |             |               |
+|    global_average_readout           | tcn_prepad_hls_impl.hpp:105 | 1,172           |  275          |  276         |  274        |  287          |
++-------------------------------------+-----------------------------+-----------------+---------------+--------------+-------------+---------------+
+
+* Design Size Message Settings
++---------------------------------------------+--------+------------------------------------------------------------------+
+| Message Setting                             | Value  | Description                                                      |
++---------------------------------------------+--------+------------------------------------------------------------------+
+| config_compile -design_size_maximum_warning | 100000 | Show a warning when total design instructions exceeds this value |
++---------------------------------------------+--------+------------------------------------------------------------------+
+
+

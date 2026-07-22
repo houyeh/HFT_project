@@ -1,0 +1,19 @@
+model_variant,policy_id,hls4ml_attempted,cpp_project_generated,hls4ml_convertible,hls4ml_compile_success,vivado_synthesis_run,input_shape,precision,reuse_factor,strategy,constantpad1d_layers_present,parsed_layer_count,hls4ml_version,error
+18feat,tcn_5block_prepad_18feat,True,False,False,False,False,"1,18,252","ap_fixed<16,6>",1,Latency,False,0,1.3.0,"TraceError: symbolically traced variables cannot be used as inputs to control flow
+Traceback (most recent call last):
+  File ""C:\Users\holbo\00VS_projjects\00_HFT_project\n2ew_era\06d_tcn_5block_prepad_hls4ml\common_06d.py"", line 1113, in hls4ml_conversion
+    cfg = hls4ml.utils.config_from_pytorch_model(
+        model,
+    ...<2 lines>...
+        granularity=""name"",
+    )
+  File ""C:\Users\holbo\AppData\Local\Programs\Python\Python313\Lib\site-packages\hls4ml\utils\config.py"", line 380, in config_from_pytorch_model
+    ) = parse_pytorch_model(config, verbose=False)
+        ~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^
+  File ""C:\Users\holbo\AppData\Local\Programs\Python\Python313\Lib\site-packages\hls4ml\converters\pytorch_to_hls.py"", line 145, in parse_pytorch_model
+    traced_model = tracer.trace(model)
+  File ""C:\Users\holbo\AppData\Local\Programs\Python\Python313\Lib\site-packages\torch\fx\_symbolic_trace.py"", line 868, in trace
+    (self.create_arg(fn(*args)),),
+                     ~~^^^^^^^
+torch.fx.proxy.TraceError: symbolically traced variables cannot be used as inputs to control flow
+"

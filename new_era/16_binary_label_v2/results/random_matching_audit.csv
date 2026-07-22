@@ -1,0 +1,3 @@
+session_id,rows,model_bid_cancel_count,model_ask_cancel_count,random_bid_cancel_count_per_trial,random_ask_cancel_count_per_trial,bid_ask_cancel_ratio,bid_fill_events,ask_fill_events
+20260127Day,410586,58731,62677,58731,62677,0.9370422962171131,120,169
+20260127Night,755735,113399,98618,113399,98618,1.1498813604007383,299,346

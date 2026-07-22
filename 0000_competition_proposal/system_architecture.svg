@@ -1,0 +1,136 @@
+<svg viewBox="0 0 1360 1040" xmlns="http://www.w3.org/2000/svg" font-family="Noto Sans CJK TC, Arial, sans-serif">
+  <defs>
+    <marker id="ar" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto" markerUnits="strokeWidth">
+      <path d="M0,0 L0,6 L9,3 z" fill="#333"/>
+    </marker>
+    <marker id="arGrey" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto" markerUnits="strokeWidth">
+      <path d="M0,0 L0,6 L9,3 z" fill="#888"/>
+    </marker>
+    <marker id="arRed" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto" markerUnits="strokeWidth">
+      <path d="M0,0 L0,6 L9,3 z" fill="#a33"/>
+    </marker>
+  </defs>
+  <rect x="0" y="0" width="1360" height="1040" fill="#ffffff"/>
+
+  <text x="680" y="26" text-anchor="middle" font-size="17" font-weight="bold" fill="#111">圖：PHC-lite 系統架構圖（軟體訓練／驗證鏈／硬體部署現況）</text>
+
+  <!-- ============ SOFTWARE SIDE ============ -->
+  <rect x="30" y="50" width="1300" height="262" rx="10" fill="#fcfcfd" stroke="#3a6fc4" stroke-width="1.3"/>
+  <text x="50" y="74" font-size="13" font-weight="bold" fill="#1c3f73">軟體端（Host／訓練與前處理）</text>
+
+  <!-- Row 1: software pipeline -->
+  <rect x="50" y="92" width="300" height="72" rx="6" fill="#eef4ff" stroke="#3a6fc4"/>
+  <text x="200" y="118" text-anchor="middle" font-size="11" font-weight="bold">歷史行情資料</text>
+  <text x="200" y="135" text-anchor="middle" font-size="9.5" fill="#555">(market feature history)</text>
+
+  <rect x="370" y="92" width="300" height="72" rx="6" fill="#eef4ff" stroke="#3a6fc4"/>
+  <text x="520" y="118" text-anchor="middle" font-size="11" font-weight="bold">PyTorch 模型訓練</text>
+  <text x="520" y="135" text-anchor="middle" font-size="9.5" fill="#555">(PHC-lite 浮點版)</text>
+
+  <rect x="690" y="92" width="300" height="72" rx="6" fill="#eef4ff" stroke="#3a6fc4"/>
+  <text x="840" y="113" text-anchor="middle" font-size="11" font-weight="bold">量化前處理</text>
+  <text x="840" y="130" text-anchor="middle" font-size="9.5" fill="#555">ap_fixed&lt;24,12&gt; 等</text>
+  <text x="840" y="145" text-anchor="middle" font-size="9.5" fill="#555">定點數轉換</text>
+
+  <rect x="1010" y="92" width="300" height="72" rx="6" fill="#eef4ff" stroke="#3a6fc4"/>
+  <text x="1160" y="113" text-anchor="middle" font-size="11" font-weight="bold">測試向量產生</text>
+  <text x="1160" y="130" text-anchor="middle" font-size="9.5" fill="#555">(200 序列 × 128 步</text>
+  <text x="1160" y="145" text-anchor="middle" font-size="9.5" fill="#555">≈ 25,600 組)</text>
+
+  <line x1="350" y1="128" x2="370" y2="128" stroke="#333" marker-end="url(#ar)"/>
+  <line x1="670" y1="128" x2="690" y2="128" stroke="#333" marker-end="url(#ar)"/>
+  <line x1="990" y1="128" x2="1010" y2="128" stroke="#333" marker-end="url(#ar)"/>
+
+  <!-- converging arrows into verification chain -->
+  <polyline points="520,164 520,184 200,184 200,212" fill="none" stroke="#888" stroke-width="1.2" marker-end="url(#arGrey)"/>
+  <polyline points="840,164 840,212" fill="none" stroke="#888" stroke-width="1.2" marker-end="url(#arGrey)"/>
+  <polyline points="1160,164 1160,184 350,184 350,212" fill="none" stroke="#888" stroke-width="1.2" marker-end="url(#arGrey)"/>
+  <text x="700" y="180" text-anchor="middle" font-size="8.5" fill="#777">模型／量化規格／測試向量 → 共同進入下方驗證鏈</text>
+
+  <text x="200" y="206" text-anchor="middle" font-size="11.5" font-weight="bold" fill="#444">驗證鏈（工具實際輸出紀錄，逐層追蹤）</text>
+
+  <!-- Row 2: verification chain -->
+  <rect x="50" y="212" width="300" height="66" rx="6" fill="#fff3d6" stroke="#c98a14"/>
+  <text x="200" y="234" text-anchor="middle" font-size="11" font-weight="bold">C 模擬 (csim)</text>
+  <text x="200" y="250" text-anchor="middle" font-size="9.5" fill="#555">0 mismatch</text>
+
+  <rect x="370" y="212" width="300" height="66" rx="6" fill="#fff3d6" stroke="#c98a14"/>
+  <text x="520" y="234" text-anchor="middle" font-size="11" font-weight="bold">C/RTL 共模擬 (cosim)</text>
+  <text x="520" y="250" text-anchor="middle" font-size="9.5" fill="#555">bit-exact</text>
+
+  <rect x="690" y="212" width="300" height="66" rx="6" fill="#fff3d6" stroke="#c98a14"/>
+  <text x="840" y="234" text-anchor="middle" font-size="11" font-weight="bold">Vitis HLS 合成 (csynth)</text>
+  <text x="840" y="250" text-anchor="middle" font-size="9.5" fill="#555">v1 → v8 收斂</text>
+
+  <rect x="1010" y="212" width="300" height="66" rx="6" fill="#fff3d6" stroke="#c98a14"/>
+  <text x="1160" y="230" text-anchor="middle" font-size="11" font-weight="bold">Vivado P&amp;R</text>
+  <text x="1160" y="246" text-anchor="middle" font-size="9.5" fill="#555">WNS = +0.020ns</text>
+  <text x="1160" y="261" text-anchor="middle" font-size="9.5" fill="#555">時序達標</text>
+
+  <line x1="350" y1="245" x2="370" y2="245" stroke="#333" marker-end="url(#ar)"/>
+  <line x1="670" y1="245" x2="690" y2="245" stroke="#333" marker-end="url(#ar)"/>
+  <line x1="990" y1="245" x2="1010" y2="245" stroke="#333" marker-end="url(#ar)"/>
+
+  <!-- down to hardware -->
+  <line x1="1160" y1="278" x2="1160" y2="296" stroke="#333" stroke-width="1.5"/>
+  <polyline points="1160,296 700,296 700,350" fill="none" stroke="#333" stroke-width="1.5" marker-end="url(#ar)"/>
+  <text x="990" y="312" text-anchor="middle" font-size="10" fill="#333" font-weight="bold">已驗證之 HLS IP</text>
+
+  <!-- ============ HARDWARE SIDE ============ -->
+  <rect x="30" y="350" width="1300" height="620" rx="10" fill="#fcfcfd" stroke="#3a6fc4" stroke-width="1.3"/>
+  <text x="50" y="374" font-size="13" font-weight="bold" fill="#1c3f73">硬體端（AMD/Xilinx Zynq-7020）</text>
+
+  <rect x="50" y="392" width="1020" height="560" rx="10" fill="none" stroke="#a33" stroke-width="2"/>
+  <text x="70" y="414" font-size="12" font-weight="bold" fill="#a33">Zynq-7020（單晶片，PS + PL）</text>
+
+  <!-- PS box: clearly framed as a Phase-3 test harness, not the production data path -->
+  <rect x="70" y="450" width="300" height="240" rx="8" fill="#f0f0f0" stroke="#888" stroke-width="1.3" stroke-dasharray="6,4"/>
+  <text x="220" y="474" text-anchor="middle" font-size="11.5" font-weight="bold" fill="#444">PS（ARM Cortex-A9）</text>
+  <text x="220" y="492" text-anchor="middle" font-size="10" fill="#555">Phase 3 測試主機</text>
+  <text x="220" y="508" text-anchor="middle" font-size="9.5" fill="#555">【規劃中，尚未實作】</text>
+  <line x1="100" y1="518" x2="340" y2="518" stroke="#bbb" stroke-width="1"/>
+  <text x="220" y="536" text-anchor="middle" font-size="9.5" fill="#666">功能：透過 PYNQ Python API</text>
+  <text x="220" y="551" text-anchor="middle" font-size="9.5" fill="#666">經 AXI 驅動測試向量、讀回 readout</text>
+  <text x="220" y="572" text-anchor="middle" font-size="9.5" fill="#a33" font-weight="bold">※僅用於上板驗證實測延遲，</text>
+  <text x="220" y="587" text-anchor="middle" font-size="9.5" fill="#a33" font-weight="bold">非正式部署時的資料路徑</text>
+
+  <!-- PL box -->
+  <rect x="420" y="450" width="620" height="320" rx="8" fill="#eaf3ff" stroke="#2f6fb0" stroke-width="1.3"/>
+  <text x="440" y="474" font-size="12" font-weight="bold" fill="#1c4d80">PL（可程式邏輯）</text>
+
+  <rect x="520" y="520" width="420" height="170" rx="6" fill="#ffffff" stroke="#2f6fb0" stroke-width="1.6"/>
+  <text x="730" y="546" text-anchor="middle" font-size="11.5" font-weight="bold">PHC-lite HLS IP</text>
+  <text x="730" y="563" text-anchor="middle" font-size="10" fill="#555">（單步推論核心）</text>
+  <line x1="560" y1="575" x2="900" y2="575" stroke="#ddd" stroke-width="1"/>
+  <text x="730" y="598" text-anchor="middle" font-size="10" fill="#555">LUT 14.20% ／ FF 7.72%</text>
+  <text x="730" y="616" text-anchor="middle" font-size="10" fill="#555">DSP 21.36% ／ BRAM 2.14%</text>
+  <text x="730" y="638" text-anchor="middle" font-size="9" fill="#888">（post-route 實測值）</text>
+
+  <!-- PS -> PL (test vectors via AXI, planned) -->
+  <line x1="370" y1="605" x2="520" y2="605" stroke="#888" stroke-width="1.4" stroke-dasharray="5,3" marker-end="url(#arGrey)"/>
+  <text x="445" y="595" text-anchor="middle" font-size="8.5" fill="#777">測試向量</text>
+  <text x="445" y="624" text-anchor="middle" font-size="8.5" fill="#777">x_t, state_prev</text>
+  <text x="445" y="638" text-anchor="middle" font-size="8.5" fill="#777">(AXI，規劃中)</text>
+
+  <!-- recurrent feedback loop, fully inside PL box -->
+  <path d="M 900 520 C 850 478, 610 478, 560 520" fill="none" stroke="#a33" stroke-width="1.6" stroke-dasharray="6,4" marker-end="url(#arRed)"/>
+  <text x="730" y="486" text-anchor="middle" font-size="9" fill="#a33">回授路徑：state_next → state_prev（下一時間步）</text>
+  <text x="730" y="500" text-anchor="middle" font-size="9" fill="#a33">跨時間步遞迴依賴，II = Latency</text>
+
+  <!-- PHC-lite IP -> downstream (outside Zynq, outside scope) -->
+  <line x1="940" y1="605" x2="1280" y2="605" stroke="#333" stroke-width="1.5" marker-end="url(#ar)"/>
+  <text x="1110" y="595" text-anchor="middle" font-size="8.5" fill="#555">訊號分數, state_next</text>
+
+  <rect x="1080" y="555" width="200" height="100" rx="8" fill="#f0f0f0" stroke="#888" stroke-width="1.3" stroke-dasharray="6,4"/>
+  <text x="1180" y="585" text-anchor="middle" font-size="10" font-weight="bold" fill="#444">下游風控／</text>
+  <text x="1180" y="600" text-anchor="middle" font-size="10" font-weight="bold" fill="#444">造市決策邏輯</text>
+  <text x="1180" y="618" text-anchor="middle" font-size="9" fill="#777">（本作品範圍外）</text>
+
+  <!-- legend -->
+  <rect x="50" y="930" width="14" height="14" fill="#fff3d6" stroke="#c98a14"/>
+  <text x="70" y="941" font-size="9.5">已驗證完成（軟體／HLS／P&amp;R）</text>
+  <rect x="320" y="930" width="14" height="14" fill="#f0f0f0" stroke="#888" stroke-dasharray="4,3"/>
+  <text x="340" y="941" font-size="9.5">規劃中／尚未實作（僅 Phase 3 上板驗證用，非正式部署路徑）</text>
+  <line x1="760" y1="937" x2="790" y2="937" stroke="#a33" stroke-width="1.6" stroke-dasharray="6,4"/>
+  <text x="800" y="941" font-size="9.5">跨時間步回授路徑（II = Latency）</text>
+</svg>

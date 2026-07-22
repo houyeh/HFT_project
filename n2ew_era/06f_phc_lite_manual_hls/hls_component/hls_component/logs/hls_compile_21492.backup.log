@@ -1,0 +1,259 @@
+  **** HLS Build v2025.2 6295257
+INFO: [HLS 200-2005] Using work_dir C:/Users/holbo/00VS_projjects/00_HFT_project/n2ew_era/06f_phc_lite_manual_hls/hls_component/hls_component 
+INFO: [HLS 200-2176] Writing Vitis IDE component file C:/Users/holbo/00VS_projjects/00_HFT_project/n2ew_era/06f_phc_lite_manual_hls/hls_component/hls_component/vitis-comp.json
+INFO: [HLS 200-10] Creating and opening component 'C:/Users/holbo/00VS_projjects/00_HFT_project/n2ew_era/06f_phc_lite_manual_hls/hls_component/hls_component'.
+INFO: [HLS 200-1505] Using default flow_target 'vivado'
+Resolution: For help on HLS 200-1505 see docs.amd.com/access/sources/dita/topic?Doc_Version=2025.2%20English&url=ug1448-hls-guidance&resourceid=200-1505.html
+INFO: [HLS 200-2174] Applying component config ini file hls_config.cfg
+INFO: [HLS 200-1465] Applying config ini 'syn.file=../hls_src/phc_step_hls.cpp' from hls_config.cfg(8)
+INFO: [HLS 200-10] Adding design file 'C:/Users/holbo/00VS_projjects/00_HFT_project/n2ew_era/06f_phc_lite_manual_hls/hls_src/phc_step_hls.cpp' to the project
+INFO: [HLS 200-1465] Applying config ini 'syn.file=../hls_src/phc_step_hls.hpp' from hls_config.cfg(9)
+INFO: [HLS 200-10] Adding design file 'C:/Users/holbo/00VS_projjects/00_HFT_project/n2ew_era/06f_phc_lite_manual_hls/hls_src/phc_step_hls.hpp' to the project
+INFO: [HLS 200-1465] Applying config ini 'syn.file=../hls_src/phc_weights.hpp' from hls_config.cfg(10)
+INFO: [HLS 200-10] Adding design file 'C:/Users/holbo/00VS_projjects/00_HFT_project/n2ew_era/06f_phc_lite_manual_hls/hls_src/phc_weights.hpp' to the project
+INFO: [HLS 200-1465] Applying config ini 'tb.file=../hls_src/phc_step_testbench.cpp' from hls_config.cfg(11)
+INFO: [HLS 200-10] Adding test bench file 'C:/Users/holbo/00VS_projjects/00_HFT_project/n2ew_era/06f_phc_lite_manual_hls/hls_src/phc_step_testbench.cpp' to the project
+INFO: [HLS 200-1465] Applying config ini 'syn.top=phc_step' from hls_config.cfg(7)
+INFO: [HLS 200-1465] Applying config ini 'flow_target=vivado' from hls_config.cfg(4)
+INFO: [HLS 200-1505] Using flow_target 'vivado'
+Resolution: For help on HLS 200-1505 see docs.amd.com/access/sources/dita/topic?Doc_Version=2025.2%20English&url=ug1448-hls-guidance&resourceid=200-1505.html
+INFO: [HLS 200-1465] Applying config ini 'part=xc7z020clg400-1' from hls_config.cfg(1)
+INFO: [HLS 200-1611] Setting target device to 'xc7z020-clg400-1'
+INFO: [HLS 200-1465] Applying config ini 'clock=10ns' from hls_config.cfg(12)
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 10ns.
+INFO: [HLS 200-1465] Applying config ini 'cosim.argv=C:/Users/holbo/00VS_projjects/00_HFT_project/n2ew_era/06f_phc_lite_manual_hls/results/phc_step_test_vectors.csv C:/Users/holbo/00VS_projjects/00_HFT_project/n2ew_era/06f_phc_lite_manual_hls/results/phc_step_cosim_out.csv' from hls_config.cfg(13)
+INFO: [HLS 200-1465] Applying config ini 'csim.argv=C:/Users/holbo/00VS_projjects/00_HFT_project/n2ew_era/06f_phc_lite_manual_hls/results/phc_step_test_vectors.csv C:/Users/holbo/00VS_projjects/00_HFT_project/n2ew_era/06f_phc_lite_manual_hls/results/phc_step_csim_out.csv' from hls_config.cfg(14)
+INFO: [HLS 200-1465] Applying config ini 'package.output.format=ip_catalog' from hls_config.cfg(5)
+INFO: [HLS 200-2176] Writing Vitis IDE component file C:/Users/holbo/00VS_projjects/00_HFT_project/n2ew_era/06f_phc_lite_manual_hls/hls_component/hls_component/vitis-comp.json
+INFO: [HLS 200-111] Finished File checks and directory preparation: CPU user time: 1 seconds. CPU system time: 1 seconds. Elapsed time: 8.178 seconds; current allocated memory: 134.965 MB.
+INFO: [HLS 200-2191] C-Synthesis will use clang-16 as the compiler
+INFO: [HLS 200-10] Analyzing design file '../hls_src/phc_step_hls.cpp' ... 
+INFO: [HLS 200-111] Finished Source Code Analysis and Preprocessing: CPU user time: 1 seconds. CPU system time: 0 seconds. Elapsed time: 41.875 seconds; current allocated memory: 142.430 MB.
+INFO: [HLS 200-777] Using interface defaults for 'Vivado' flow target.
+WARNING: [HLS 200-1995] There were 174,927 instructions in the design after the 'Compile/Link' phase of compilation. See the Design Size Report for more details (C:/Users/holbo/00VS_projjects/00_HFT_project/n2ew_era/06f_phc_lite_manual_hls/hls_component/hls_component/hls/syn/report/csynth_design_size.rpt:2)
+WARNING: [HLS 200-1995] There were 112,692 instructions in the design after the 'Unroll/Inline (step 1)' phase of compilation. See the Design Size Report for more details (C:/Users/holbo/00VS_projjects/00_HFT_project/n2ew_era/06f_phc_lite_manual_hls/hls_component/hls_component/hls/syn/report/csynth_design_size.rpt:2)
+INFO: [HLS 200-1995] There were 29,509 instructions in the design after the 'Unroll/Inline (step 2)' phase of compilation. See the Design Size Report for more details (C:/Users/holbo/00VS_projjects/00_HFT_project/n2ew_era/06f_phc_lite_manual_hls/hls_component/hls_component/hls/syn/report/csynth_design_size.rpt:2)
+INFO: [HLS 200-1995] There were 22,186 instructions in the design after the 'Unroll/Inline (step 3)' phase of compilation. See the Design Size Report for more details (C:/Users/holbo/00VS_projjects/00_HFT_project/n2ew_era/06f_phc_lite_manual_hls/hls_component/hls_component/hls/syn/report/csynth_design_size.rpt:2)
+INFO: [HLS 200-1995] There were 21,616 instructions in the design after the 'Unroll/Inline (step 4)' phase of compilation. See the Design Size Report for more details (C:/Users/holbo/00VS_projjects/00_HFT_project/n2ew_era/06f_phc_lite_manual_hls/hls_component/hls_component/hls/syn/report/csynth_design_size.rpt:2)
+INFO: [HLS 200-1995] There were 31,479 instructions in the design after the 'Array/Struct (step 1)' phase of compilation. See the Design Size Report for more details (C:/Users/holbo/00VS_projjects/00_HFT_project/n2ew_era/06f_phc_lite_manual_hls/hls_component/hls_component/hls/syn/report/csynth_design_size.rpt:2)
+INFO: [HLS 200-1995] There were 20,382 instructions in the design after the 'Array/Struct (step 2)' phase of compilation. See the Design Size Report for more details (C:/Users/holbo/00VS_projjects/00_HFT_project/n2ew_era/06f_phc_lite_manual_hls/hls_component/hls_component/hls/syn/report/csynth_design_size.rpt:2)
+INFO: [HLS 200-1995] There were 20,382 instructions in the design after the 'Array/Struct (step 3)' phase of compilation. See the Design Size Report for more details (C:/Users/holbo/00VS_projjects/00_HFT_project/n2ew_era/06f_phc_lite_manual_hls/hls_component/hls_component/hls/syn/report/csynth_design_size.rpt:2)
+INFO: [HLS 200-1995] There were 20,382 instructions in the design after the 'Array/Struct (step 4)' phase of compilation. See the Design Size Report for more details (C:/Users/holbo/00VS_projjects/00_HFT_project/n2ew_era/06f_phc_lite_manual_hls/hls_component/hls_component/hls/syn/report/csynth_design_size.rpt:2)
+INFO: [HLS 200-1995] There were 20,382 instructions in the design after the 'Array/Struct (step 5)' phase of compilation. See the Design Size Report for more details (C:/Users/holbo/00VS_projjects/00_HFT_project/n2ew_era/06f_phc_lite_manual_hls/hls_component/hls_component/hls/syn/report/csynth_design_size.rpt:2)
+INFO: [HLS 200-1995] There were 20,382 instructions in the design after the 'Performance (step 1)' phase of compilation. See the Design Size Report for more details (C:/Users/holbo/00VS_projjects/00_HFT_project/n2ew_era/06f_phc_lite_manual_hls/hls_component/hls_component/hls/syn/report/csynth_design_size.rpt:2)
+INFO: [HLS 200-1995] There were 20,382 instructions in the design after the 'Performance (step 2)' phase of compilation. See the Design Size Report for more details (C:/Users/holbo/00VS_projjects/00_HFT_project/n2ew_era/06f_phc_lite_manual_hls/hls_component/hls_component/hls/syn/report/csynth_design_size.rpt:2)
+INFO: [HLS 200-1995] There were 20,382 instructions in the design after the 'Performance (step 3)' phase of compilation. See the Design Size Report for more details (C:/Users/holbo/00VS_projjects/00_HFT_project/n2ew_era/06f_phc_lite_manual_hls/hls_component/hls_component/hls/syn/report/csynth_design_size.rpt:2)
+INFO: [HLS 200-1995] There were 20,317 instructions in the design after the 'Performance (step 4)' phase of compilation. See the Design Size Report for more details (C:/Users/holbo/00VS_projjects/00_HFT_project/n2ew_era/06f_phc_lite_manual_hls/hls_component/hls_component/hls/syn/report/csynth_design_size.rpt:2)
+INFO: [HLS 200-1995] There were 20,385 instructions in the design after the 'HW Transforms' phase of compilation. See the Design Size Report for more details (C:/Users/holbo/00VS_projjects/00_HFT_project/n2ew_era/06f_phc_lite_manual_hls/hls_component/hls_component/hls/syn/report/csynth_design_size.rpt:2)
+INFO: [HLS 200-1995] There were 20,383 instructions in the design after the 'HW Transforms (step 2)' phase of compilation. See the Design Size Report for more details (C:/Users/holbo/00VS_projjects/00_HFT_project/n2ew_era/06f_phc_lite_manual_hls/hls_component/hls_component/hls/syn/report/csynth_design_size.rpt:2)
+WARNING: [HLS 214-275] In loop 'VITIS_LOOP_148_1 (../hls_src/phc_step_hls.cpp:148:23)', partially UNROLL (../hls_src/phc_step_hls.cpp:149:1) is converted into complete unroll due to PIPELINE pragma above (../hls_src/phc_step_hls.cpp:220:1) as a pipelined region cannot contain loops that are not fully unrolled (../hls_src/phc_step_hls.cpp:148:23)
+WARNING: [HLS 214-275] In loop 'VITIS_LOOP_129_1 (../hls_src/phc_step_hls.cpp:129:23)', partially UNROLL (../hls_src/phc_step_hls.cpp:130:1) is converted into complete unroll due to PIPELINE pragma above (../hls_src/phc_step_hls.cpp:220:1) as a pipelined region cannot contain loops that are not fully unrolled (../hls_src/phc_step_hls.cpp:129:23)
+WARNING: [HLS 214-275] In loop 'VITIS_LOOP_191_1 (../hls_src/phc_step_hls.cpp:191:23)', partially UNROLL (../hls_src/phc_step_hls.cpp:192:1) is converted into complete unroll due to PIPELINE pragma above (../hls_src/phc_step_hls.cpp:220:1) as a pipelined region cannot contain loops that are not fully unrolled (../hls_src/phc_step_hls.cpp:191:23)
+WARNING: [HLS 214-275] In loop 'VITIS_LOOP_198_2 (../hls_src/phc_step_hls.cpp:198:23)', partially UNROLL (../hls_src/phc_step_hls.cpp:199:1) is converted into complete unroll due to PIPELINE pragma above (../hls_src/phc_step_hls.cpp:220:1) as a pipelined region cannot contain loops that are not fully unrolled (../hls_src/phc_step_hls.cpp:198:23)
+WARNING: [HLS 214-275] In loop 'VITIS_LOOP_206_3 (../hls_src/phc_step_hls.cpp:206:23)', partially UNROLL (../hls_src/phc_step_hls.cpp:207:1) is converted into complete unroll due to PIPELINE pragma above (../hls_src/phc_step_hls.cpp:220:1) as a pipelined region cannot contain loops that are not fully unrolled (../hls_src/phc_step_hls.cpp:206:23)
+WARNING: [HLS 214-275] In loop 'VITIS_LOOP_108_1 (../hls_src/phc_step_hls.cpp:108:23)', partially UNROLL (../hls_src/phc_step_hls.cpp:109:1) is converted into complete unroll due to PIPELINE pragma above (../hls_src/phc_step_hls.cpp:220:1) as a pipelined region cannot contain loops that are not fully unrolled (../hls_src/phc_step_hls.cpp:108:23)
+WARNING: [HLS 214-275] In loop 'VITIS_LOOP_252_1 (../hls_src/phc_step_hls.cpp:252:23)', partially UNROLL (../hls_src/phc_step_hls.cpp:253:1) is converted into complete unroll due to PIPELINE pragma above (../hls_src/phc_step_hls.cpp:220:1) as a pipelined region cannot contain loops that are not fully unrolled (../hls_src/phc_step_hls.cpp:252:23)
+WARNING: [HLS 214-275] In loop 'VITIS_LOOP_260_2 (../hls_src/phc_step_hls.cpp:260:23)', partially UNROLL (../hls_src/phc_step_hls.cpp:261:1) is converted into complete unroll due to PIPELINE pragma above (../hls_src/phc_step_hls.cpp:220:1) as a pipelined region cannot contain loops that are not fully unrolled (../hls_src/phc_step_hls.cpp:260:23)
+WARNING: [HLS 214-275] In loop 'VITIS_LOOP_269_3 (../hls_src/phc_step_hls.cpp:269:23)', partially UNROLL (../hls_src/phc_step_hls.cpp:270:1) is converted into complete unroll due to PIPELINE pragma above (../hls_src/phc_step_hls.cpp:220:1) as a pipelined region cannot contain loops that are not fully unrolled (../hls_src/phc_step_hls.cpp:269:23)
+WARNING: [HLS 214-275] In loop 'VITIS_LOOP_281_5 (../hls_src/phc_step_hls.cpp:281:23)', partially UNROLL (../hls_src/phc_step_hls.cpp:282:1) is converted into complete unroll due to PIPELINE pragma above (../hls_src/phc_step_hls.cpp:220:1) as a pipelined region cannot contain loops that are not fully unrolled (../hls_src/phc_step_hls.cpp:281:23)
+INFO: [HLS 214-131] Inlining function '(anonymous namespace)::tanh_lut_scalar(ap_fixed<40, 16, (ap_q_mode)5, (ap_o_mode)3, 0>)' into '(anonymous namespace)::sigmoid_scalar(ap_fixed<40, 16, (ap_q_mode)5, (ap_o_mode)3, 0>)' (../hls_src/phc_step_hls.cpp:62:30)
+INFO: [HLS 214-131] Inlining function '(anonymous namespace)::sigmoid_scalar(ap_fixed<40, 16, (ap_q_mode)5, (ap_o_mode)3, 0>)' into '(anonymous namespace)::silu_16(ap_fixed<40, 16, (ap_q_mode)5, (ap_o_mode)3, 0> const*, ap_fixed<40, 16, (ap_q_mode)5, (ap_o_mode)3, 0>*)' (../hls_src/phc_step_hls.cpp:93:26)
+INFO: [HLS 214-131] Inlining function '(anonymous namespace)::sigmoid_scalar(ap_fixed<40, 16, (ap_q_mode)5, (ap_o_mode)3, 0>)' into '(anonymous namespace)::sigmoid_16(ap_fixed<40, 16, (ap_q_mode)5, (ap_o_mode)3, 0> const*, ap_fixed<40, 16, (ap_q_mode)5, (ap_o_mode)3, 0>*)' (../hls_src/phc_step_hls.cpp:75:18)
+INFO: [HLS 214-131] Inlining function '(anonymous namespace)::tanh_lut_scalar(ap_fixed<40, 16, (ap_q_mode)5, (ap_o_mode)3, 0>)' into '(anonymous namespace)::tanh_scalar(ap_fixed<40, 16, (ap_q_mode)5, (ap_o_mode)3, 0>)' (../hls_src/phc_step_hls.cpp:67:12)
+INFO: [HLS 214-131] Inlining function '(anonymous namespace)::tanh_scalar(ap_fixed<40, 16, (ap_q_mode)5, (ap_o_mode)3, 0>)' into '(anonymous namespace)::tanh_16(ap_fixed<40, 16, (ap_q_mode)5, (ap_o_mode)3, 0> const*, ap_fixed<40, 16, (ap_q_mode)5, (ap_o_mode)3, 0>*)' (../hls_src/phc_step_hls.cpp:84:18)
+INFO: [HLS 214-131] Inlining function '(anonymous namespace)::linear_16_16_fixed(ap_fixed<24, 12, (ap_q_mode)5, (ap_o_mode)3, 0> const*, ap_fixed<24, 12, (ap_q_mode)5, (ap_o_mode)3, 0> const (*) [16], ap_fixed<24, 12, (ap_q_mode)5, (ap_o_mode)3, 0> const*, ap_fixed<40, 16, (ap_q_mode)5, (ap_o_mode)3, 0>*)' into 'phc_step(ap_fixed<24, 12, (ap_q_mode)5, (ap_o_mode)3, 0> const*, ap_fixed<24, 12, (ap_q_mode)5, (ap_o_mode)3, 0> const*, ap_fixed<24, 12, (ap_q_mode)5, (ap_o_mode)3, 0>*, ap_fixed<24, 12, (ap_q_mode)5, (ap_o_mode)3, 0>*)' (../hls_src/phc_step_hls.cpp:242:5)
+INFO: [HLS 214-131] Inlining function '(anonymous namespace)::linear_16_2_acc(ap_fixed<40, 16, (ap_q_mode)5, (ap_o_mode)3, 0> const*, ap_fixed<24, 12, (ap_q_mode)5, (ap_o_mode)3, 0> const (*) [16], ap_fixed<24, 12, (ap_q_mode)5, (ap_o_mode)3, 0> const*, ap_fixed<40, 16, (ap_q_mode)5, (ap_o_mode)3, 0>*)' into 'phc_step(ap_fixed<24, 12, (ap_q_mode)5, (ap_o_mode)3, 0> const*, ap_fixed<24, 12, (ap_q_mode)5, (ap_o_mode)3, 0> const*, ap_fixed<24, 12, (ap_q_mode)5, (ap_o_mode)3, 0>*, ap_fixed<24, 12, (ap_q_mode)5, (ap_o_mode)3, 0>*)' (../hls_src/phc_step_hls.cpp:275:5)
+INFO: [HLS 214-131] Inlining function '(anonymous namespace)::layernorm_16(ap_fixed<40, 16, (ap_q_mode)5, (ap_o_mode)3, 0> const*, ap_fixed<24, 12, (ap_q_mode)5, (ap_o_mode)3, 0> const*, ap_fixed<24, 12, (ap_q_mode)5, (ap_o_mode)3, 0> const*, ap_fixed<40, 16, (ap_q_mode)5, (ap_o_mode)3, 0>*)' into 'phc_step(ap_fixed<24, 12, (ap_q_mode)5, (ap_o_mode)3, 0> const*, ap_fixed<24, 12, (ap_q_mode)5, (ap_o_mode)3, 0> const*, ap_fixed<24, 12, (ap_q_mode)5, (ap_o_mode)3, 0>*, ap_fixed<24, 12, (ap_q_mode)5, (ap_o_mode)3, 0>*)' (../hls_src/phc_step_hls.cpp:273:5)
+INFO: [HLS 214-131] Inlining function '(anonymous namespace)::silu_16(ap_fixed<40, 16, (ap_q_mode)5, (ap_o_mode)3, 0> const*, ap_fixed<40, 16, (ap_q_mode)5, (ap_o_mode)3, 0>*)' into 'phc_step(ap_fixed<24, 12, (ap_q_mode)5, (ap_o_mode)3, 0> const*, ap_fixed<24, 12, (ap_q_mode)5, (ap_o_mode)3, 0> const*, ap_fixed<24, 12, (ap_q_mode)5, (ap_o_mode)3, 0>*, ap_fixed<24, 12, (ap_q_mode)5, (ap_o_mode)3, 0>*)' (../hls_src/phc_step_hls.cpp:244:5)
+INFO: [HLS 214-131] Inlining function '(anonymous namespace)::linear_16_16_acc(ap_fixed<40, 16, (ap_q_mode)5, (ap_o_mode)3, 0> const*, ap_fixed<24, 12, (ap_q_mode)5, (ap_o_mode)3, 0> const (*) [16], ap_fixed<24, 12, (ap_q_mode)5, (ap_o_mode)3, 0> const*, ap_fixed<40, 16, (ap_q_mode)5, (ap_o_mode)3, 0>*)' into 'phc_step(ap_fixed<24, 12, (ap_q_mode)5, (ap_o_mode)3, 0> const*, ap_fixed<24, 12, (ap_q_mode)5, (ap_o_mode)3, 0> const*, ap_fixed<24, 12, (ap_q_mode)5, (ap_o_mode)3, 0>*, ap_fixed<24, 12, (ap_q_mode)5, (ap_o_mode)3, 0>*)' (../hls_src/phc_step_hls.cpp:246:5)
+INFO: [HLS 214-131] Inlining function '(anonymous namespace)::sigmoid_16(ap_fixed<40, 16, (ap_q_mode)5, (ap_o_mode)3, 0> const*, ap_fixed<40, 16, (ap_q_mode)5, (ap_o_mode)3, 0>*)' into 'phc_step(ap_fixed<24, 12, (ap_q_mode)5, (ap_o_mode)3, 0> const*, ap_fixed<24, 12, (ap_q_mode)5, (ap_o_mode)3, 0> const*, ap_fixed<24, 12, (ap_q_mode)5, (ap_o_mode)3, 0>*, ap_fixed<24, 12, (ap_q_mode)5, (ap_o_mode)3, 0>*)' (../hls_src/phc_step_hls.cpp:247:5)
+INFO: [HLS 214-131] Inlining function '(anonymous namespace)::tanh_16(ap_fixed<40, 16, (ap_q_mode)5, (ap_o_mode)3, 0> const*, ap_fixed<40, 16, (ap_q_mode)5, (ap_o_mode)3, 0>*)' into 'phc_step(ap_fixed<24, 12, (ap_q_mode)5, (ap_o_mode)3, 0> const*, ap_fixed<24, 12, (ap_q_mode)5, (ap_o_mode)3, 0> const*, ap_fixed<24, 12, (ap_q_mode)5, (ap_o_mode)3, 0>*, ap_fixed<24, 12, (ap_q_mode)5, (ap_o_mode)3, 0>*)' (../hls_src/phc_step_hls.cpp:250:5)
+INFO: [HLS 214-131] Inlining function '(anonymous namespace)::linear_16_16_fixed_no_bias(ap_fixed<24, 12, (ap_q_mode)5, (ap_o_mode)3, 0> const*, ap_fixed<24, 12, (ap_q_mode)5, (ap_o_mode)3, 0> const (*) [16], ap_fixed<40, 16, (ap_q_mode)5, (ap_o_mode)3, 0>*)' into 'phc_step(ap_fixed<24, 12, (ap_q_mode)5, (ap_o_mode)3, 0> const*, ap_fixed<24, 12, (ap_q_mode)5, (ap_o_mode)3, 0> const*, ap_fixed<24, 12, (ap_q_mode)5, (ap_o_mode)3, 0>*, ap_fixed<24, 12, (ap_q_mode)5, (ap_o_mode)3, 0>*)' (../hls_src/phc_step_hls.cpp:259:5)
+INFO: [HLS 214-291] Loop 'VITIS_LOOP_281_5' is marked as complete unroll implied by the pipeline pragma (../hls_src/phc_step_hls.cpp:281:23)
+INFO: [HLS 214-291] Loop 'VITIS_LOOP_277_4' is marked as complete unroll implied by the pipeline pragma (../hls_src/phc_step_hls.cpp:277:23)
+INFO: [HLS 214-291] Loop 'VITIS_LOOP_169_1' is marked as complete unroll implied by the pipeline pragma (../hls_src/phc_step_hls.cpp:169:23)
+INFO: [HLS 214-291] Loop 'VITIS_LOOP_172_2' is marked as complete unroll implied by the pipeline pragma (../hls_src/phc_step_hls.cpp:172:27)
+INFO: [HLS 214-291] Loop 'VITIS_LOOP_206_3' is marked as complete unroll implied by the pipeline pragma (../hls_src/phc_step_hls.cpp:206:23)
+INFO: [HLS 214-291] Loop 'VITIS_LOOP_198_2' is marked as complete unroll implied by the pipeline pragma (../hls_src/phc_step_hls.cpp:198:23)
+INFO: [HLS 214-291] Loop 'VITIS_LOOP_191_1' is marked as complete unroll implied by the pipeline pragma (../hls_src/phc_step_hls.cpp:191:23)
+INFO: [HLS 214-291] Loop 'VITIS_LOOP_269_3' is marked as complete unroll implied by the pipeline pragma (../hls_src/phc_step_hls.cpp:269:23)
+INFO: [HLS 214-291] Loop 'VITIS_LOOP_92_1' is marked as complete unroll implied by the pipeline pragma (../hls_src/phc_step_hls.cpp:92:22)
+INFO: [HLS 214-291] Loop 'VITIS_LOOP_129_1' is marked as complete unroll implied by the pipeline pragma (../hls_src/phc_step_hls.cpp:129:23)
+INFO: [HLS 214-291] Loop 'VITIS_LOOP_132_2' is marked as complete unroll implied by the pipeline pragma (../hls_src/phc_step_hls.cpp:132:27)
+INFO: [HLS 214-291] Loop 'VITIS_LOOP_74_1' is marked as complete unroll implied by the pipeline pragma (../hls_src/phc_step_hls.cpp:74:22)
+INFO: [HLS 214-291] Loop 'VITIS_LOOP_260_2' is marked as complete unroll implied by the pipeline pragma (../hls_src/phc_step_hls.cpp:260:23)
+INFO: [HLS 214-291] Loop 'VITIS_LOOP_148_1' is marked as complete unroll implied by the pipeline pragma (../hls_src/phc_step_hls.cpp:148:23)
+INFO: [HLS 214-291] Loop 'VITIS_LOOP_151_2' is marked as complete unroll implied by the pipeline pragma (../hls_src/phc_step_hls.cpp:151:27)
+INFO: [HLS 214-291] Loop 'VITIS_LOOP_252_1' is marked as complete unroll implied by the pipeline pragma (../hls_src/phc_step_hls.cpp:252:23)
+INFO: [HLS 214-291] Loop 'VITIS_LOOP_83_1' is marked as complete unroll implied by the pipeline pragma (../hls_src/phc_step_hls.cpp:83:22)
+INFO: [HLS 214-291] Loop 'VITIS_LOOP_108_1' is marked as complete unroll implied by the pipeline pragma (../hls_src/phc_step_hls.cpp:108:23)
+INFO: [HLS 214-291] Loop 'VITIS_LOOP_111_2' is marked as complete unroll implied by the pipeline pragma (../hls_src/phc_step_hls.cpp:111:27)
+INFO: [HLS 214-291] Loop 'VITIS_LOOP_271_2' is marked as complete unroll implied by the pipeline pragma (C:/AMDDesignTools/2025.2/Vitis/common/technology/autopilot/etc/hls_sqrt_apfixed.h:271:27)
+INFO: [HLS 214-291] Loop 'VITIS_LOOP_243_1' is marked as complete unroll implied by the pipeline pragma (C:/AMDDesignTools/2025.2/Vitis/common/technology/autopilot/etc/hls_sqrt_apfixed.h:243:27)
+INFO: [HLS 214-186] Unrolling loop 'VITIS_LOOP_281_5' (../hls_src/phc_step_hls.cpp:281:23) in function 'phc_step' completely with a factor of 16 (../hls_src/phc_step_hls.cpp:219:0)
+INFO: [HLS 214-186] Unrolling loop 'VITIS_LOOP_277_4' (../hls_src/phc_step_hls.cpp:277:23) in function 'phc_step' completely with a factor of 2 (../hls_src/phc_step_hls.cpp:219:0)
+INFO: [HLS 214-186] Unrolling loop 'VITIS_LOOP_169_1' (../hls_src/phc_step_hls.cpp:169:23) in function 'phc_step' completely with a factor of 2 (../hls_src/phc_step_hls.cpp:219:0)
+INFO: [HLS 214-186] Unrolling loop 'VITIS_LOOP_172_2' (../hls_src/phc_step_hls.cpp:172:27) in function 'phc_step' completely with a factor of 16 (../hls_src/phc_step_hls.cpp:219:0)
+INFO: [HLS 214-186] Unrolling loop 'VITIS_LOOP_206_3' (../hls_src/phc_step_hls.cpp:206:23) in function 'phc_step' completely with a factor of 16 (../hls_src/phc_step_hls.cpp:219:0)
+INFO: [HLS 214-186] Unrolling loop 'VITIS_LOOP_198_2' (../hls_src/phc_step_hls.cpp:198:23) in function 'phc_step' completely with a factor of 16 (../hls_src/phc_step_hls.cpp:219:0)
+INFO: [HLS 214-186] Unrolling loop 'VITIS_LOOP_191_1' (../hls_src/phc_step_hls.cpp:191:23) in function 'phc_step' completely with a factor of 16 (../hls_src/phc_step_hls.cpp:219:0)
+INFO: [HLS 214-186] Unrolling loop 'VITIS_LOOP_269_3' (../hls_src/phc_step_hls.cpp:269:23) in function 'phc_step' completely with a factor of 16 (../hls_src/phc_step_hls.cpp:219:0)
+INFO: [HLS 214-186] Unrolling loop 'VITIS_LOOP_92_1' (../hls_src/phc_step_hls.cpp:92:22) in function 'phc_step' completely with a factor of 16 (../hls_src/phc_step_hls.cpp:219:0)
+INFO: [HLS 214-186] Unrolling loop 'VITIS_LOOP_129_1' (../hls_src/phc_step_hls.cpp:129:23) in function 'phc_step' completely with a factor of 16 (../hls_src/phc_step_hls.cpp:219:0)
+INFO: [HLS 214-186] Unrolling loop 'VITIS_LOOP_132_2' (../hls_src/phc_step_hls.cpp:132:27) in function 'phc_step' completely with a factor of 16 (../hls_src/phc_step_hls.cpp:219:0)
+INFO: [HLS 214-186] Unrolling loop 'VITIS_LOOP_74_1' (../hls_src/phc_step_hls.cpp:74:22) in function 'phc_step' completely with a factor of 16 (../hls_src/phc_step_hls.cpp:219:0)
+INFO: [HLS 214-186] Unrolling loop 'VITIS_LOOP_260_2' (../hls_src/phc_step_hls.cpp:260:23) in function 'phc_step' completely with a factor of 16 (../hls_src/phc_step_hls.cpp:219:0)
+INFO: [HLS 214-186] Unrolling loop 'VITIS_LOOP_148_1' (../hls_src/phc_step_hls.cpp:148:23) in function 'phc_step' completely with a factor of 16 (../hls_src/phc_step_hls.cpp:219:0)
+INFO: [HLS 214-186] Unrolling loop 'VITIS_LOOP_151_2' (../hls_src/phc_step_hls.cpp:151:27) in function 'phc_step' completely with a factor of 16 (../hls_src/phc_step_hls.cpp:219:0)
+INFO: [HLS 214-186] Unrolling loop 'VITIS_LOOP_252_1' (../hls_src/phc_step_hls.cpp:252:23) in function 'phc_step' completely with a factor of 16 (../hls_src/phc_step_hls.cpp:219:0)
+INFO: [HLS 214-186] Unrolling loop 'VITIS_LOOP_83_1' (../hls_src/phc_step_hls.cpp:83:22) in function 'phc_step' completely with a factor of 16 (../hls_src/phc_step_hls.cpp:219:0)
+INFO: [HLS 214-186] Unrolling loop 'VITIS_LOOP_108_1' (../hls_src/phc_step_hls.cpp:108:23) in function 'phc_step' completely with a factor of 16 (../hls_src/phc_step_hls.cpp:219:0)
+INFO: [HLS 214-186] Unrolling loop 'VITIS_LOOP_111_2' (../hls_src/phc_step_hls.cpp:111:27) in function 'phc_step' completely with a factor of 16 (../hls_src/phc_step_hls.cpp:219:0)
+INFO: [HLS 214-186] Unrolling loop 'VITIS_LOOP_271_2' (C:/AMDDesignTools/2025.2/Vitis/common/technology/autopilot/etc/hls_sqrt_apfixed.h:271:27) in function 'sqrt_fixed<49, 25>' completely with a factor of 25 (C:/AMDDesignTools/2025.2/Vitis/common/technology/autopilot/etc/hls_sqrt_apfixed.h:20:0)
+INFO: [HLS 214-186] Unrolling loop 'VITIS_LOOP_243_1' (C:/AMDDesignTools/2025.2/Vitis/common/technology/autopilot/etc/hls_sqrt_apfixed.h:243:27) in function 'sqrt_fixed<49, 25>' completely with a factor of 13 (C:/AMDDesignTools/2025.2/Vitis/common/technology/autopilot/etc/hls_sqrt_apfixed.h:20:0)
+INFO: [HLS 214-178] Inlining function 'ap_fixed<49, 25, (ap_q_mode)5, (ap_o_mode)3, 0> hls::sqrt<49, 25>(ap_fixed<49, 25, (ap_q_mode)5, (ap_o_mode)3, 0>)' into 'phc_step(ap_fixed<24, 12, (ap_q_mode)5, (ap_o_mode)3, 0> const*, ap_fixed<24, 12, (ap_q_mode)5, (ap_o_mode)3, 0> const*, ap_fixed<24, 12, (ap_q_mode)5, (ap_o_mode)3, 0>*, ap_fixed<24, 12, (ap_q_mode)5, (ap_o_mode)3, 0>*)' (../hls_src/phc_step_hls.cpp:219:0)
+INFO: [HLS 214-248] Applying array_partition to '_ZZN12_GLOBAL__N_115tanh_lut_scalarE8ap_fixedILi40ELi16EL9ap_q_mode5EL9ap_o_mode3ELi0EEE8TANH_LUT': Complete partitioning on dimension 1. (../hls_src/phc_step_hls.cpp:18:0)
+INFO: [HLS 214-248] Applying array_partition to 'enc_linear_out': Complete partitioning on dimension 1. (../hls_src/phc_step_hls.cpp:222:15)
+INFO: [HLS 214-248] Applying array_partition to 'encoded': Complete partitioning on dimension 1. (../hls_src/phc_step_hls.cpp:224:15)
+INFO: [HLS 214-248] Applying array_partition to 'gate_pre': Complete partitioning on dimension 1. (../hls_src/phc_step_hls.cpp:225:15)
+INFO: [HLS 214-248] Applying array_partition to 'gate_t': Complete partitioning on dimension 1. (../hls_src/phc_step_hls.cpp:226:15)
+INFO: [HLS 214-248] Applying array_partition to 'candidate_pre': Complete partitioning on dimension 1. (../hls_src/phc_step_hls.cpp:227:15)
+INFO: [HLS 214-248] Applying array_partition to 'state_temporal': Complete partitioning on dimension 1. (../hls_src/phc_step_hls.cpp:229:15)
+INFO: [HLS 214-248] Applying array_partition to 'gain_encoded': Complete partitioning on dimension 1. (../hls_src/phc_step_hls.cpp:230:15)
+INFO: [HLS 214-248] Applying array_partition to 'gain_prev_state': Complete partitioning on dimension 1. (../hls_src/phc_step_hls.cpp:231:15)
+INFO: [HLS 214-248] Applying array_partition to 'gain_t': Complete partitioning on dimension 1. (../hls_src/phc_step_hls.cpp:233:15)
+INFO: [HLS 214-248] Applying array_partition to 'message_pre': Complete partitioning on dimension 1. (../hls_src/phc_step_hls.cpp:234:15)
+INFO: [HLS 214-248] Applying array_partition to 'x_t': Complete partitioning on dimension 1. (../hls_src/phc_step_hls.cpp:219:0)
+INFO: [HLS 214-248] Applying array_partition to 'state_prev': Complete partitioning on dimension 1. (../hls_src/phc_step_hls.cpp:219:0)
+INFO: [HLS 200-111] Finished Compiling Optimization and Transform: CPU user time: 1 seconds. CPU system time: 0 seconds. Elapsed time: 31.456 seconds; current allocated memory: 145.906 MB.
+INFO: [HLS 200-111] Finished Checking Pragmas: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.004 seconds; current allocated memory: 145.906 MB.
+INFO: [HLS 200-10] Starting code transformations ...
+INFO: [HLS 200-111] Finished Standard Transforms: CPU user time: 1 seconds. CPU system time: 0 seconds. Elapsed time: 2.182 seconds; current allocated memory: 186.258 MB.
+INFO: [HLS 200-10] Checking synthesizability ...
+WARNING: [SYNCHK 200-120] ../hls_src/phc_step_hls.cpp:201: multiplication is assumed not to overflow by default, otherwise, please add option '-fwrapv'.
+INFO: [SYNCHK 200-10] 0 error(s), 1 warning(s).
+INFO: [HLS 200-111] Finished Checking Synthesizability: CPU user time: 3 seconds. CPU system time: 0 seconds. Elapsed time: 2.764 seconds; current allocated memory: 189.883 MB.
+INFO: [XFORM 203-401] Performing if-conversion on hyperblock from (C:/AMDDesignTools/2025.2/Vitis/common/technology/autopilot/etc/hls_sqrt_apfixed.h:21:1) to (C:/AMDDesignTools/2025.2/Vitis/common/technology/autopilot/etc/hls_sqrt_apfixed.h:349:1) in function 'sqrt_fixed<49, 25>'... converting 170 basic blocks.
+INFO: [XFORM 203-401] Performing if-conversion on hyperblock from (../hls_src/phc_step_hls.cpp:220:1) to (../hls_src/phc_step_hls.cpp:285:1) in function 'phc_step'... converting 401 basic blocks.
+INFO: [XFORM 203-11] Balancing expressions in function 'phc_step' (../hls_src/phc_step_hls.cpp:112:17)...58 expression(s) balanced.
+INFO: [HLS 200-111] Finished Loop, function and other optimizations: CPU user time: 7 seconds. CPU system time: 0 seconds. Elapsed time: 9.693 seconds; current allocated memory: 254.402 MB.
+INFO: [HLS 200-111] Finished Architecture Synthesis: CPU user time: 21 seconds. CPU system time: 1 seconds. Elapsed time: 26.516 seconds; current allocated memory: 290.270 MB.
+INFO: [HLS 200-10] Starting hardware synthesis ...
+INFO: [HLS 200-10] Synthesizing 'phc_step' ...
+WARNING: [SYN 201-103] Legalizing function name 'sqrt_fixed<49, 25>' to 'sqrt_fixed_49_25_s'.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'sqrt_fixed_49_25_s' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining function 'sqrt_fixed<49, 25>'.
+INFO: [HLS 200-1470] Pipelining result : Target II = 99, Final II = 1, Depth = 29, function 'sqrt_fixed<49, 25>'
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 1 seconds. CPU system time: 0 seconds. Elapsed time: 1.017 seconds; current allocated memory: 318.176 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.234 seconds; current allocated memory: 318.176 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'phc_step' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining function 'phc_step'.
+WARNING: [HLS 200-448] Lower bound of II is 8 due to multiple 'store' operation ('state_next_addr_write_ln283', ../hls_src/phc_step_hls.cpp:283) of variable 'trunc_ln1', ../hls_src/phc_step_hls.cpp:283 24 bit on array 'state_next', 'store' operation ('state_next_addr_1_write_ln283', ../hls_src/phc_step_hls.cpp:283) of variable 'trunc_ln283_1', ../hls_src/phc_step_hls.cpp:283 24 bit on array 'state_next', 'store' operation ('state_next_addr_2_write_ln283', ../hls_src/phc_step_hls.cpp:283) of variable 'trunc_ln283_2', ../hls_src/phc_step_hls.cpp:283 24 bit on array 'state_next', 'store' operation ('state_next_addr_3_write_ln283', ../hls_src/phc_step_hls.cpp:283) of variable 'trunc_ln283_3', ../hls_src/phc_step_hls.cpp:283 24 bit on array 'state_next', 'store' operation ('state_next_addr_4_write_ln283', ../hls_src/phc_step_hls.cpp:283) of variable 'trunc_ln283_4', ../hls_src/phc_step_hls.cpp:283 24 bit on array 'state_next', 'store' operation ('state_next_addr_5_write_ln283', ../hls_src/phc_step_hls.cpp:283) of variable 'trunc_ln283_5', ../hls_src/phc_step_hls.cpp:283 24 bit on array 'state_next', 'store' operation ('state_next_addr_6_write_ln283', ../hls_src/phc_step_hls.cpp:283) of variable 'trunc_ln283_6', ../hls_src/phc_step_hls.cpp:283 24 bit on array 'state_next', 'store' operation ('state_next_addr_7_write_ln283', ../hls_src/phc_step_hls.cpp:283) of variable 'trunc_ln283_7', ../hls_src/phc_step_hls.cpp:283 24 bit on array 'state_next', 'store' operation ('state_next_addr_8_write_ln283', ../hls_src/phc_step_hls.cpp:283) of variable 'trunc_ln283_8', ../hls_src/phc_step_hls.cpp:283 24 bit on array 'state_next', 'store' operation ('state_next_addr_9_write_ln283', ../hls_src/phc_step_hls.cpp:283) of variable 'trunc_ln283_9', ../hls_src/phc_step_hls.cpp:283 24 bit on array 'state_next', 'store' operation ('state_next_addr_10_write_ln283', ../hls_src/phc_step_hls.cpp:283) of variable 'trunc_ln283_10', ../hls_src/phc_step_hls.cpp:283 24 bit on array 'state_next', 'store' operation ('state_next_addr_11_write_ln283', ../hls_src/phc_step_hls.cpp:283) of variable 'trunc_ln283_11', ../hls_src/phc_step_hls.cpp:283 24 bit on array 'state_next', 'store' operation ('state_next_addr_12_write_ln283', ../hls_src/phc_step_hls.cpp:283) of variable 'trunc_ln283_s', ../hls_src/phc_step_hls.cpp:283 24 bit on array 'state_next', 'store' operation ('state_next_addr_13_write_ln283', ../hls_src/phc_step_hls.cpp:283) of variable 'trunc_ln283_12', ../hls_src/phc_step_hls.cpp:283 24 bit on array 'state_next', 'store' operation ('state_next_addr_14_write_ln283', ../hls_src/phc_step_hls.cpp:283) of variable 'trunc_ln283_13', ../hls_src/phc_step_hls.cpp:283 24 bit on array 'state_next', 'store' operation ('state_next_addr_15_write_ln283', ../hls_src/phc_step_hls.cpp:283) of variable 'trunc_ln283_14', ../hls_src/phc_step_hls.cpp:283 24 bit on array 'state_next' accessing core:RAM:state_next
+INFO: [SCHED 204-61] Unable to satisfy pipeline directive for function 'phc_step': unable to pipeline.
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 14 seconds. CPU system time: 0 seconds. Elapsed time: 17.242 seconds; current allocated memory: 459.895 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 28 seconds. CPU system time: 1 seconds. Elapsed time: 34.181 seconds; current allocated memory: 459.895 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'sqrt_fixed_49_25_s' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [RTGEN 206-104] Estimated max fanout for 'sqrt_fixed_49_25_s' is 5523 from HDL expression: ((1'b1 == ap_ce_reg) & (1'b0 == ap_block_pp0_stage0_11001))
+INFO: [RTGEN 206-100] Finished creating RTL model for 'sqrt_fixed_49_25_s'.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 5 seconds. CPU system time: 0 seconds. Elapsed time: 5.222 seconds; current allocated memory: 459.895 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'phc_step' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [RTGEN 206-500] Setting interface mode on port 'phc_step/x_t_0' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'phc_step/x_t_1' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'phc_step/x_t_2' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'phc_step/x_t_3' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'phc_step/x_t_4' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'phc_step/x_t_5' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'phc_step/x_t_6' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'phc_step/x_t_7' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'phc_step/x_t_8' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'phc_step/x_t_9' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'phc_step/x_t_10' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'phc_step/x_t_11' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'phc_step/x_t_12' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'phc_step/x_t_13' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'phc_step/x_t_14' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'phc_step/x_t_15' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'phc_step/state_prev_0' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'phc_step/state_prev_1' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'phc_step/state_prev_2' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'phc_step/state_prev_3' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'phc_step/state_prev_4' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'phc_step/state_prev_5' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'phc_step/state_prev_6' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'phc_step/state_prev_7' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'phc_step/state_prev_8' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'phc_step/state_prev_9' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'phc_step/state_prev_10' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'phc_step/state_prev_11' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'phc_step/state_prev_12' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'phc_step/state_prev_13' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'phc_step/state_prev_14' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'phc_step/state_prev_15' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'phc_step/readout' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'phc_step/state_next' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on function 'phc_step' to 'ap_ctrl_hs'.
+INFO: [RTGEN 206-104] Estimated max fanout for 'phc_step' is 10101 from HDL expression: (1'b1 == ap_CS_fsm_state136)
+INFO: [RTGEN 206-100] Generating core module 'mul_26s_40s_64_2_1': 25 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'mul_36s_17s_52_2_1': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'mul_36s_18s_53_2_1': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'mul_36s_19s_54_2_1': 2 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'mul_36s_20s_55_2_1': 3 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'mul_36s_21s_56_2_1': 4 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'mul_36s_22s_57_2_1': 10 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'mul_36s_23s_58_2_1': 11 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'mul_36s_24ns_59_2_1': 5 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'mul_36s_24s_59_2_1': 8 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'mul_36s_25ns_60_2_1': 5 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'mul_36s_25s_60_2_1': 2 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'mul_40s_18s_57_2_1': 2 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'mul_40s_19s_58_2_1': 2 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'mul_40s_20s_59_2_1': 4 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'mul_40s_21s_60_2_1': 6 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'mul_40s_22s_61_2_1': 14 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'mul_40s_23s_62_2_1': 19 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'mul_40s_24ns_60_2_1': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'mul_40s_24ns_63_2_1': 6 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'mul_40s_24s_60_2_1': 2 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'mul_40s_24s_63_2_1': 13 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'mul_40s_25ns_64_2_1': 15 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'mul_40s_25s_64_2_1': 4 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'mul_40s_40s_64_2_1': 16 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'mul_40s_40s_72_2_1': 2 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'mul_41s_26ns_65_2_1': 16 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'mul_64s_40s_88_5_1': 15 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'mul_65s_40s_88_5_1': 16 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'sparsemux_129_6_25_1_1': 160 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'sparsemux_7_2_40_1_1': 80 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'udiv_49s_37ns_40_53_1': 2 instance(s).
+INFO: [RTGEN 206-100] Finished creating RTL model for 'phc_step'.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 13 seconds. CPU system time: 1 seconds. Elapsed time: 16.208 seconds; current allocated memory: 664.121 MB.
+INFO: [HLS 200-111] Finished Generating all RTL models: CPU user time: 16 seconds. CPU system time: 24 seconds. Elapsed time: 50.117 seconds; current allocated memory: 1.011 GB.
+INFO: [HLS 200-2225] Wrote inferred directives to file C:/Users/holbo/00VS_projjects/00_HFT_project/n2ew_era/06f_phc_lite_manual_hls/hls_component/hls_component/hls/syn/inferred_directives.ini
+INFO: [HLS 200-111] Finished Updating report files: CPU user time: 3 seconds. CPU system time: 1 seconds. Elapsed time: 4.345 seconds; current allocated memory: 1.011 GB.
+INFO: [VHDL 208-304] Generating VHDL RTL for phc_step.
+INFO: [VLOG 209-307] Generating Verilog RTL for phc_step.
+INFO: [HLS 200-789] **** Estimated Fmax: 108.99 MHz
+INFO: [HLS 200-112] Total CPU user time: 115 seconds. Total CPU system time: 29 seconds. Total elapsed time: 251.617 seconds; peak allocated memory: 1.011 GB.
+INFO: [v++ 60-791] Total elapsed time: 0h 4m 16s
