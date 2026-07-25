@@ -1,0 +1,20 @@
+split,source_group,session_id,timestamp_column,timestamp_unit,parser_source,min_nonzero_adjacent_diff_us,same_timestamp_rate,midnight_unwrap_applied,midnight_shifted_row_count,event_index_order_negative_timestamp_count
+new3,NEW3,NEW3_20260113_TXFA6,timestamp_us,microseconds_from_info_time_time_of_day,Phase 04A.1 interprets info_time as hour:minute:second:millisecond:flag,1000.0,0.7003760531248411,False,0,0
+new3,NEW3,NEW3_20260114_TXFA6,timestamp_us,microseconds_from_info_time_time_of_day,Phase 04A.1 interprets info_time as hour:minute:second:millisecond:flag,1000.0,0.6903686701736275,False,0,0
+new3,NEW3,NEW3_20260115_TXFA6,timestamp_us,microseconds_from_info_time_time_of_day,Phase 04A.1 interprets info_time as hour:minute:second:millisecond:flag,1000.0,0.6877248199135503,False,0,0
+new3,NEW3,NEW3_20260116_TXFA6,timestamp_us,microseconds_from_info_time_time_of_day,Phase 04A.1 interprets info_time as hour:minute:second:millisecond:flag,1000.0,0.6851221563178881,False,0,0
+new3,NEW3,NEW3_20260119Day_TXFA6,timestamp_us,microseconds_from_info_time_time_of_day,Phase 04A.1 interprets info_time as hour:minute:second:millisecond:flag,1000.0,0.7112827175665997,False,0,0
+new3,NEW3,NEW3_20260330_TXFA6,timestamp_us,microseconds_from_info_time_time_of_day,Phase 04A.1 interprets info_time as hour:minute:second:millisecond:flag,1000.0,0.6230252201203612,False,0,0
+new4,NEW4,NEW4_20260102_TXFA6,timestamp_us,microseconds_from_info_time_time_of_day,Phase 04A.1 interprets info_time as hour:minute:second:millisecond:flag,1000.0,0.6660498192285091,False,0,0
+new4,NEW4,NEW4_20260105_TXFA6,timestamp_us,microseconds_from_info_time_time_of_day,Phase 04A.1 interprets info_time as hour:minute:second:millisecond:flag,1000.0,0.6897400235369637,False,0,0
+new4,NEW4,NEW4_20260109_TXFA6,timestamp_us,microseconds_from_info_time_time_of_day,Phase 04A.1 interprets info_time as hour:minute:second:millisecond:flag,1000.0,0.7061507730178661,False,0,0
+new4,NEW4,NEW4_20260112_TXFA6,timestamp_us,microseconds_from_info_time_time_of_day,Phase 04A.1 interprets info_time as hour:minute:second:millisecond:flag,1000.0,0.6994857491678846,False,0,0
+train,NEW2,NEW2_20260121Day_TXFB6,timestamp_us,microseconds_from_info_time_time_of_day,Phase 04A.1 interprets info_time as hour:minute:second:millisecond:flag,1000.0,0.6367062904462245,False,0,0
+train,NEW2,NEW2_20260122Day_TXFB6,timestamp_us,microseconds_from_info_time_time_of_day,Phase 04A.1 interprets info_time as hour:minute:second:millisecond:flag,1000.0,0.699985283483516,False,0,0
+train,NEW2,NEW2_20260122Night_TXFB6,timestamp_us,microseconds_from_info_time_time_of_day,Phase 04A.1 interprets info_time as hour:minute:second:millisecond:flag,1000.0,0.6065135715661487,True,104106,1
+val,NEW1,NEW1_20260123Day_TXFB6,timestamp_us,microseconds_from_info_time_time_of_day,Phase 04A.1 interprets info_time as hour:minute:second:millisecond:flag,1000.0,0.7115895712528554,False,0,0
+val,NEW1,NEW1_20260123Night_TXFB6,timestamp_us,microseconds_from_info_time_time_of_day,Phase 04A.1 interprets info_time as hour:minute:second:millisecond:flag,1000.0,0.614323102125351,True,60096,1
+val,NEW1,NEW1_20260126Day_TXFB6,timestamp_us,microseconds_from_info_time_time_of_day,Phase 04A.1 interprets info_time as hour:minute:second:millisecond:flag,1000.0,0.6989752908338173,False,0,0
+val,NEW1,NEW1_20260126Night_TXFB6,timestamp_us,microseconds_from_info_time_time_of_day,Phase 04A.1 interprets info_time as hour:minute:second:millisecond:flag,1000.0,0.6264000170398271,True,29240,1
+val,NEW1,NEW1_20260127Day_TXFB6,timestamp_us,microseconds_from_info_time_time_of_day,Phase 04A.1 interprets info_time as hour:minute:second:millisecond:flag,1000.0,0.6779156871581871,False,0,0
+val,NEW1,NEW1_20260127Night_TXFB6,timestamp_us,microseconds_from_info_time_time_of_day,Phase 04A.1 interprets info_time as hour:minute:second:millisecond:flag,1000.0,0.6785359579864957,False,0,1

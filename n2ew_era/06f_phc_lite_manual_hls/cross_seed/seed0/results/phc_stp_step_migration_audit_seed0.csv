@@ -1,0 +1,2 @@
+seed,source_checkpoint,migrated_model,feature_dim,hidden_dim,input_dim,output_dim,source_parameter_count,step_parameter_count,buffer_count,fixed_input_selector_parameters,fixed_output_pack_parameters,decay_min,decay_max,alpha_raw_value_used,alpha_sigmoid_value_not_used,new5_used
+0,n2ew_era/05c4_phc_stp_cosine_lr/models/phc_stp_v2_seed0_best_val.pt,n2ew_era/06f_phc_lite_manual_hls/cross_seed/seed0/models/phc_stp_step_hls_seed0.pt,16,16,32,18,1731,1714,17,1024,306,0.892509937286377,0.9043971300125122,0.5426652431488037,0.632432222366333,False

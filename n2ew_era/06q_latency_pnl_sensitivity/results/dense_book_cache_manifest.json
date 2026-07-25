@@ -1,0 +1,173 @@
+[
+  {
+    "split": "val",
+    "cache_path": "C:\\Users\\holbo\\00VS_projjects\\00_HFT_project\\n2ew_era\\06q_latency_pnl_sensitivity\\results\\dense_book_cache_val.npz",
+    "cache_size_bytes": 79665846,
+    "session_count": 6,
+    "dense_event_count": 2655369,
+    "sessions": [
+      {
+        "split": "val",
+        "session_id": "NEW1_20260123Day_TXFB6",
+        "source_group": "NEW1",
+        "dense_event_count": 182113,
+        "interval_count": 182112,
+        "same_timestamp_rate": 0.7115895712528554,
+        "min_nonzero_dt_us": 1000.0
+      },
+      {
+        "split": "val",
+        "session_id": "NEW1_20260123Night_TXFB6",
+        "source_group": "NEW1",
+        "dense_event_count": 565884,
+        "interval_count": 565883,
+        "same_timestamp_rate": 0.614323102125351,
+        "min_nonzero_dt_us": 1000.0
+      },
+      {
+        "split": "val",
+        "session_id": "NEW1_20260126Day_TXFB6",
+        "source_group": "NEW1",
+        "dense_event_count": 373668,
+        "interval_count": 373667,
+        "same_timestamp_rate": 0.6989752908338173,
+        "min_nonzero_dt_us": 1000.0
+      },
+      {
+        "split": "val",
+        "session_id": "NEW1_20260126Night_TXFB6",
+        "source_group": "NEW1",
+        "dense_event_count": 563387,
+        "interval_count": 563386,
+        "same_timestamp_rate": 0.6264000170398271,
+        "min_nonzero_dt_us": 1000.0
+      },
+      {
+        "split": "val",
+        "session_id": "NEW1_20260127Day_TXFB6",
+        "source_group": "NEW1",
+        "dense_event_count": 410496,
+        "interval_count": 410495,
+        "same_timestamp_rate": 0.6779156871581871,
+        "min_nonzero_dt_us": 1000.0
+      },
+      {
+        "split": "val",
+        "session_id": "NEW1_20260127Night_TXFB6",
+        "source_group": "NEW1",
+        "dense_event_count": 559821,
+        "interval_count": 559820,
+        "same_timestamp_rate": 0.6785359579864957,
+        "min_nonzero_dt_us": 1000.0
+      }
+    ]
+  },
+  {
+    "split": "new3",
+    "cache_path": "C:\\Users\\holbo\\00VS_projjects\\00_HFT_project\\n2ew_era\\06q_latency_pnl_sensitivity\\results\\dense_book_cache_new3.npz",
+    "cache_size_bytes": 169709436,
+    "session_count": 6,
+    "dense_event_count": 5656822,
+    "sessions": [
+      {
+        "split": "new3",
+        "session_id": "NEW3_20260113_TXFA6",
+        "source_group": "NEW3",
+        "dense_event_count": 1277746,
+        "interval_count": 1277745,
+        "same_timestamp_rate": 0.7003760531248411,
+        "min_nonzero_dt_us": 1000.0
+      },
+      {
+        "split": "new3",
+        "session_id": "NEW3_20260114_TXFA6",
+        "source_group": "NEW3",
+        "dense_event_count": 910571,
+        "interval_count": 910570,
+        "same_timestamp_rate": 0.6903686701736275,
+        "min_nonzero_dt_us": 1000.0
+      },
+      {
+        "split": "new3",
+        "session_id": "NEW3_20260115_TXFA6",
+        "source_group": "NEW3",
+        "dense_event_count": 976060,
+        "interval_count": 976059,
+        "same_timestamp_rate": 0.6877248199135503,
+        "min_nonzero_dt_us": 1000.0
+      },
+      {
+        "split": "new3",
+        "session_id": "NEW3_20260116_TXFA6",
+        "source_group": "NEW3",
+        "dense_event_count": 976332,
+        "interval_count": 976331,
+        "same_timestamp_rate": 0.6851221563178881,
+        "min_nonzero_dt_us": 1000.0
+      },
+      {
+        "split": "new3",
+        "session_id": "NEW3_20260119Day_TXFA6",
+        "source_group": "NEW3",
+        "dense_event_count": 1365399,
+        "interval_count": 1365398,
+        "same_timestamp_rate": 0.7112827175665997,
+        "min_nonzero_dt_us": 1000.0
+      },
+      {
+        "split": "new3",
+        "session_id": "NEW3_20260330_TXFA6",
+        "source_group": "NEW3",
+        "dense_event_count": 150714,
+        "interval_count": 150713,
+        "same_timestamp_rate": 0.6230252201203612,
+        "min_nonzero_dt_us": 1000.0
+      }
+    ]
+  },
+  {
+    "split": "new4",
+    "cache_path": "C:\\Users\\holbo\\00VS_projjects\\00_HFT_project\\n2ew_era\\06q_latency_pnl_sensitivity\\results\\dense_book_cache_new4.npz",
+    "cache_size_bytes": 65892280,
+    "session_count": 4,
+    "dense_event_count": 2196280,
+    "sessions": [
+      {
+        "split": "new4",
+        "session_id": "NEW4_20260102_TXFA6",
+        "source_group": "NEW4",
+        "dense_event_count": 502016,
+        "interval_count": 502015,
+        "same_timestamp_rate": 0.6660498192285091,
+        "min_nonzero_dt_us": 1000.0
+      },
+      {
+        "split": "new4",
+        "session_id": "NEW4_20260105_TXFA6",
+        "source_group": "NEW4",
+        "dense_event_count": 65430,
+        "interval_count": 65429,
+        "same_timestamp_rate": 0.6897400235369637,
+        "min_nonzero_dt_us": 1000.0
+      },
+      {
+        "split": "new4",
+        "session_id": "NEW4_20260109_TXFA6",
+        "source_group": "NEW4",
+        "dense_event_count": 644294,
+        "interval_count": 644293,
+        "same_timestamp_rate": 0.7061507730178661,
+        "min_nonzero_dt_us": 1000.0
+      },
+      {
+        "split": "new4",
+        "session_id": "NEW4_20260112_TXFA6",
+        "source_group": "NEW4",
+        "dense_event_count": 984540,
+        "interval_count": 984539,
+        "same_timestamp_rate": 0.6994857491678846,
+        "min_nonzero_dt_us": 1000.0
+      }
+    ]
+  }
+]

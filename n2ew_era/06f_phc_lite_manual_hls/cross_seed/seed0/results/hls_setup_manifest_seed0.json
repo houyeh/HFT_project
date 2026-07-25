@@ -1,0 +1,37 @@
+{
+  "seed": 0,
+  "base_hls_source_dir": "n2ew_era/06f_phc_lite_manual_hls/hls_src",
+  "hls_src": "n2ew_era/06f_phc_lite_manual_hls/cross_seed/seed0/hls_src",
+  "hls_component": "n2ew_era/06f_phc_lite_manual_hls/cross_seed/seed0/hls_component",
+  "hls_config": "n2ew_era/06f_phc_lite_manual_hls/cross_seed/seed0/hls_component/hls_config.cfg",
+  "csynth_tcl": "n2ew_era/06f_phc_lite_manual_hls/cross_seed/seed0/hls_component/run_csynth_only.tcl",
+  "settings_copied_from_seed2": {
+    "part": "xc7z020clg400-1",
+    "flow_target": "vivado",
+    "syn_top": "phc_step",
+    "clock": "10ns",
+    "package_output_format": "ip_catalog",
+    "package_output_syn": false
+  },
+  "copied_files": [
+    {
+      "file": "phc_step_hls.cpp",
+      "base_sha256": "46de14771a5c9670460e1412300ca58092905cfb2a108891990c72e6122c20b1",
+      "seed_sha256": "46de14771a5c9670460e1412300ca58092905cfb2a108891990c72e6122c20b1",
+      "matches_base": true
+    },
+    {
+      "file": "phc_step_hls.hpp",
+      "base_sha256": "55b74a88cfdb02df4f44e5d11ee508c864715007f9fe9b2c95b3171d5ca4033f",
+      "seed_sha256": "55b74a88cfdb02df4f44e5d11ee508c864715007f9fe9b2c95b3171d5ca4033f",
+      "matches_base": true
+    },
+    {
+      "file": "phc_step_testbench.cpp",
+      "base_sha256": "af87ebe446dfbc38785fbc1b05f88a0a2a00d0f94eb3fd41100bf590518d7da1",
+      "seed_sha256": "af87ebe446dfbc38785fbc1b05f88a0a2a00d0f94eb3fd41100bf590518d7da1",
+      "matches_base": true
+    }
+  ],
+  "new5_used": false
+}

@@ -1,0 +1,19 @@
+{
+  "source_checkpoint": "C:\\Users\\holbo\\00VS_projjects\\00_HFT_project\\n2ew_era\\05c4_phc_stp_cosine_lr\\models\\phc_stp_v2_seed0_best_val.pt",
+  "source_phase": "05c4",
+  "source_seed": 0,
+  "source_best_epoch": 167,
+  "feature_dim": 16,
+  "hidden_dim": 16,
+  "input_dim": 32,
+  "output_dim": 18,
+  "mtl_steps": 1,
+  "dropout": 0.0,
+  "phase": "06f_cross_seed",
+  "new5_used": false,
+  "new_training": false,
+  "alpha_source_formula": "raw PHCLiteSTP.alpha, because source step uses z + self.alpha * message",
+  "alpha_raw_value": 0.5426652431488037,
+  "alpha_sigmoid_value_prompt_reference": 0.632432222366333,
+  "decay_formula": "sigmoid(PHCLiteSTP.decay_param)"
+}

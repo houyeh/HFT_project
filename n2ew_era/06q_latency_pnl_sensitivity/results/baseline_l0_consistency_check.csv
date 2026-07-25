@@ -1,0 +1,10 @@
+split,policy_id,sequential_excess_pnl,fill_count,existing_l0_sequential_excess_pnl,existing_l0_fill_count,delta_existing_l0_pnl,delta_existing_l0_fill_count
+val,side_by_queue_imbalance_abs_0p1,103260.0,6416,103260.0,6416,0.0,0
+val,ml_hgb_regressor_shallow_convergence_selected,142435.0,6231,142435.0,6231,0.0,0
+val,phc_stp_v2_cosine_lr,171835.0,6891,171835.0,6891,0.0,0
+new3,side_by_queue_imbalance_abs_0p1,303700.0,13821,303700.0,13821,0.0,0
+new3,ml_hgb_regressor_shallow_convergence_selected,411090.0,13955,411090.0,13955,0.0,0
+new3,phc_stp_v2_cosine_lr,611095.0,17907,611095.0,17907,0.0,0
+new4,side_by_queue_imbalance_abs_0p1,72415.0,3820,72415.0,3820,0.0,0
+new4,ml_hgb_regressor_shallow_convergence_selected,97680.0,3629,97680.0,3629,0.0,0
+new4,phc_stp_v2_cosine_lr,129160.0,4237,129160.0,4237,0.0,0

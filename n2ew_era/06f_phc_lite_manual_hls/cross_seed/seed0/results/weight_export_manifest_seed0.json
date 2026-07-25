@@ -1,0 +1,12 @@
+{
+  "seed": 0,
+  "source_checkpoint": "n2ew_era/05c4_phc_stp_cosine_lr/models/phc_stp_v2_seed0_best_val.pt",
+  "step_checkpoint": "n2ew_era/06f_phc_lite_manual_hls/cross_seed/seed0/models/phc_stp_step_hls_seed0.pt",
+  "exported_header": "n2ew_era/06f_phc_lite_manual_hls/cross_seed/seed0/hls_src/phc_weights.hpp",
+  "total_bits": 24,
+  "frac_bits": 12,
+  "alpha_scalar_raw": 0.5426652431488037,
+  "any_saturated": false,
+  "num_saturated_total": 0,
+  "new5_used": false
+}
