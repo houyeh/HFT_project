@@ -1,214 +1,119 @@
-status: open
+status: mixed
 
-# AUDIT: 06L unroll-16 P&R timing handoff
+# AUDIT: 06L unroll-16 routed P&R timing
 
-## Scope
+Updated: 2026-07-26 Asia/Taipei. This update incorporates the 2026-07-25
+100/95 MHz routed attempts plus the 90 MHz fallback routed run from this pass.
 
-This audit attempts to promote the 06L unroll-16 PHC-lite latency result
-from HLS/cosim evidence to Vivado routed timing evidence.
+## Scope and Guardrails
 
-Guardrails honored:
+This audit promotes the 06L unroll-16 PHC-lite latency claim only as far as
+the routed evidence supports.
 
 - Frozen 06F v8 artifacts were not modified.
-- The 06L work was copied into an independent workspace:
-  `n2ew_era/06l_phc_lite_pipeline_budget_sweep/pnr_unroll16_100mhz/`.
-- The 06L design uses the same top/interface/part/clock as 06F v8:
-  `phc_step`, `xc7z020clg400-1`, `clock=10ns`.
-- The only source-level design difference versus 06F v8 is the existing 06L
-  unroll-16 linear-loop pragma set (`UNROLL factor=16` plus matching cyclic
-  weight partition).
+- PHC-lite HLS C source and generated RTL were not edited for the P&R closure
+  attempts. The 90 MHz workspace is a copied implementation workspace with the
+  clock relaxed to 11.111 ns; the rerun also copies the original HLS `.dat`
+  ROM initialization files so the direct Vivado flow has the same RTL data
+  inputs as the 100/95 MHz direct runs.
+- Interface, top module, target part, and unroll-16 source configuration remain
+  aligned with 06L/06F comparability requirements. The implementation attempts
+  change only Vivado implementation strategy/directives or clock period.
 - No NEW5 data was loaded or used.
 
-## Completed Verification
+## Verified Before P&R
 
 | Item | 06F v8 frozen baseline | 06L unroll-16 copied workspace |
 |---|---|---|
-| HLS latency | 8316 cycles / 83.160 us (`n2ew_era/06f_phc_lite_manual_hls/hls_component/hls_component/hls/syn/report/phc_step_csynth.rpt`) | 2316 cycles / 23.160 us (`n2ew_era/06l_phc_lite_pipeline_budget_sweep/pnr_unroll16_100mhz/hls_component/hls_component/hls/syn/report/phc_step_csynth.rpt`) |
-| HLS interval | 8317 cycles (`n2ew_era/06f_phc_lite_manual_hls/hls_component/hls_component/hls/syn/report/phc_step_csynth.rpt`) | 2317 cycles (`n2ew_era/06l_phc_lite_pipeline_budget_sweep/pnr_unroll16_100mhz/hls_component/hls_component/hls/syn/report/phc_step_csynth.rpt`) |
-| HLS estimated clock | 7.147 ns (`n2ew_era/06f_phc_lite_manual_hls/hls_component/hls_component/hls/syn/report/phc_step_csynth.rpt`) | 8.223 ns (`n2ew_era/06l_phc_lite_pipeline_budget_sweep/pnr_unroll16_100mhz/hls_component/hls_component/hls/syn/report/phc_step_csynth.rpt`) |
-| RTL cosim | Verilog PASS, existing 06F evidence (`n2ew_era/06f_phc_lite_manual_hls/hls_component/hls_component/reports/hls_cosim.rpt`) | Verilog PASS; `total=25600 mismatches=0`, `max_abs_diff=0.00725275`, `mean_abs_diff=0.000372553`, `tolerance=1` (`n2ew_era/06l_phc_lite_pipeline_budget_sweep/pnr_unroll16_100mhz/hls_component/hls_component/logs/hls_run_cosim.log`) |
-| RTL cosim latency | 8316 cycles (`n2ew_era/06f_phc_lite_manual_hls/hls_component/hls_component/reports/hls_cosim.rpt`) | 2316 cycles (`n2ew_era/06l_phc_lite_pipeline_budget_sweep/pnr_unroll16_100mhz/hls_component/hls_component/reports/hls_cosim.rpt`) |
+| HLS latency | 8316 cycles / 83.160 us<br>`n2ew_era/06f_phc_lite_manual_hls/hls_component/hls_component/hls/syn/report/phc_step_csynth.rpt` | 2316 cycles / 23.160 us at 100 MHz<br>`n2ew_era/06l_phc_lite_pipeline_budget_sweep/variants/factor_16/hls_component/hls_component/hls/syn/report/phc_step_csynth.rpt` |
+| HLS interval | 8317 cycles<br>`n2ew_era/06f_phc_lite_manual_hls/hls_component/hls_component/hls/syn/report/phc_step_csynth.rpt` | 2317 cycles<br>`n2ew_era/06l_phc_lite_pipeline_budget_sweep/variants/factor_16/hls_component/hls_component/hls/syn/report/phc_step_csynth.rpt` |
+| HLS estimated clock | 7.147 ns<br>`n2ew_era/06f_phc_lite_manual_hls/hls_component/hls_component/hls/syn/report/phc_step_csynth.rpt` | 8.223 ns<br>`n2ew_era/06l_phc_lite_pipeline_budget_sweep/variants/factor_16/hls_component/hls_component/hls/syn/report/phc_step_csynth.rpt` |
+| RTL cosim | Verilog PASS, existing 06F evidence<br>`n2ew_era/06f_phc_lite_manual_hls/hls_component/hls_component/reports/hls_cosim.rpt` | Verilog PASS, 2316-cycle latency, `total=25600 mismatches=0`<br>`n2ew_era/06l_phc_lite_pipeline_budget_sweep/pnr_unroll16_100mhz/hls_component/hls_component/reports/hls_cosim.rpt`<br>`n2ew_era/06l_phc_lite_pipeline_budget_sweep/pnr_unroll16_100mhz/hls_component/hls_component/logs/hls_run_cosim.log` |
 
-06L csynth was run from:
+The 2316-cycle / 23.160 us number is therefore valid as a csynth plus RTL
+cosim result. It is not a routed 100 MHz timing-met result.
 
-```powershell
-subst P: "C:\Users\holbo\00VS_projjects\00_HFT_project\n2ew_era\06l_phc_lite_pipeline_budget_sweep\pnr_unroll16_100mhz"
-cd P:\hls_component
-& "C:\AMDDesignTools\2025.2\Vitis\bin\vitis-run.bat" --mode hls --tcl run_csynth_only.tcl
-subst P: /D
-```
+## Routed Timing Attempts
 
-06L cosim was then run from:
+All WNS/TNS/failing-endpoint numbers below come from routed timing summary
+reports generated after `route_design`. The direct Vivado scripts use
+`report_timing_summary -routable_nets -report_unconstrained` for the routed
+summary.
 
-```powershell
-subst P: "C:\Users\holbo\00VS_projjects\00_HFT_project\n2ew_era\06l_phc_lite_pipeline_budget_sweep\pnr_unroll16_100mhz"
-cd P:\hls_component
-& "C:\AMDDesignTools\2025.2\Vitis\bin\vitis-run.bat" --mode hls --cosim --config hls_config.cfg --work_dir hls_component
-subst P: /D
-```
+| Design / attempt | Clock | Implementation setting | WNS | TNS | Failing endpoints | Latency interpretation | Routed evidence |
+|---|---:|---|---:|---:|---:|---|---|
+| 06F v8 frozen baseline | 100.000 MHz / 10.000 ns | Vitis/Vivado packaged 06F v8 implementation | +0.020 ns<br>`n2ew_era/06f_phc_lite_manual_hls/hls_component/hls_component/hls/impl/verilog/project.runs/impl_1/bd_0_wrapper_timing_summary_routed.rpt` | 0.000 ns<br>`n2ew_era/06f_phc_lite_manual_hls/hls_component/hls_component/hls/impl/verilog/project.runs/impl_1/bd_0_wrapper_timing_summary_routed.rpt` | 0<br>`n2ew_era/06f_phc_lite_manual_hls/hls_component/hls_component/hls/impl/verilog/project.runs/impl_1/bd_0_wrapper_timing_summary_routed.rpt` | 8316 cycles / 83.160 us, routed timing met | Timing: `n2ew_era/06f_phc_lite_manual_hls/hls_component/hls_component/hls/impl/verilog/project.runs/impl_1/bd_0_wrapper_timing_summary_routed.rpt`<br>Util: `n2ew_era/06f_phc_lite_manual_hls/hls_component/hls_component/reports/hls_impl_pnr.rpt` |
+| 06L unroll-16 100 MHz baseline | 100.000 MHz / 10.000 ns | Direct Vivado non-project flow from HLS RTL; default `place_design`, `phys_opt_design`, `route_design` | -0.235 ns<br>`n2ew_era/06l_phc_lite_pipeline_budget_sweep/pnr_unroll16_100mhz/hls_component/hls_component/hls/impl/verilog/direct_phc_step_reports/phc_step_timing_summary_routed.rpt` | -13.737 ns<br>`n2ew_era/06l_phc_lite_pipeline_budget_sweep/pnr_unroll16_100mhz/hls_component/hls_component/hls/impl/verilog/direct_phc_step_reports/phc_step_timing_summary_routed.rpt` | 144<br>`n2ew_era/06l_phc_lite_pipeline_budget_sweep/pnr_unroll16_100mhz/hls_component/hls_component/hls/impl/verilog/direct_phc_step_reports/phc_step_timing_summary_routed.rpt` | 2316 cycles / 23.160 us remains csynth/cosim only; routed timing failed | Timing: `n2ew_era/06l_phc_lite_pipeline_budget_sweep/pnr_unroll16_100mhz/hls_component/hls_component/hls/impl/verilog/direct_phc_step_reports/phc_step_timing_summary_routed.rpt`<br>Util: `n2ew_era/06l_phc_lite_pipeline_budget_sweep/pnr_unroll16_100mhz/hls_component/hls_component/hls/impl/verilog/direct_phc_step_reports/phc_step_utilization_routed.rpt` |
+| 06L unroll-16 100 MHz aggressive physical optimization | 100.000 MHz / 10.000 ns | `place_design -directive ExtraNetDelay_high`, `phys_opt_design -directive AggressiveExplore`, `route_design -directive AggressiveExplore` | -0.159 ns<br>`n2ew_era/06l_phc_lite_pipeline_budget_sweep/pnr_unroll16_100mhz/hls_component/hls_component/hls/impl/verilog/direct_phc_step_reports_aggressive_explore_100mhz/phc_step_timing_summary_routed.rpt` | -13.956 ns<br>`n2ew_era/06l_phc_lite_pipeline_budget_sweep/pnr_unroll16_100mhz/hls_component/hls_component/hls/impl/verilog/direct_phc_step_reports_aggressive_explore_100mhz/phc_step_timing_summary_routed.rpt` | 96<br>`n2ew_era/06l_phc_lite_pipeline_budget_sweep/pnr_unroll16_100mhz/hls_component/hls_component/hls/impl/verilog/direct_phc_step_reports_aggressive_explore_100mhz/phc_step_timing_summary_routed.rpt` | Best 100 MHz routed attempt, but still timing failed | Timing: `n2ew_era/06l_phc_lite_pipeline_budget_sweep/pnr_unroll16_100mhz/hls_component/hls_component/hls/impl/verilog/direct_phc_step_reports_aggressive_explore_100mhz/phc_step_timing_summary_routed.rpt`<br>Util: `n2ew_era/06l_phc_lite_pipeline_budget_sweep/pnr_unroll16_100mhz/hls_component/hls_component/hls/impl/verilog/direct_phc_step_reports_aggressive_explore_100mhz/phc_step_utilization_routed.rpt` |
+| 06L unroll-16 100 MHz fanout/replication attempt | 100.000 MHz / 10.000 ns | Attempted `REGISTER_DUPLICATION` on `ap_CS_fsm_reg[9]`; Vivado reported the property does not exist. `MAX_FANOUT=16` plus forced replication created `ap_CS_fsm_reg[9]_replica_9`, but timing worsened. | -0.383 ns<br>`n2ew_era/06l_phc_lite_pipeline_budget_sweep/pnr_unroll16_100mhz/hls_component/hls_component/hls/impl/verilog/direct_phc_step_reports_fanout_dup_100mhz/phc_step_timing_summary_routed.rpt` | -53.903 ns<br>`n2ew_era/06l_phc_lite_pipeline_budget_sweep/pnr_unroll16_100mhz/hls_component/hls_component/hls/impl/verilog/direct_phc_step_reports_fanout_dup_100mhz/phc_step_timing_summary_routed.rpt` | 240<br>`n2ew_era/06l_phc_lite_pipeline_budget_sweep/pnr_unroll16_100mhz/hls_component/hls_component/hls/impl/verilog/direct_phc_step_reports_fanout_dup_100mhz/phc_step_timing_summary_routed.rpt` | 2316 cycles / 23.160 us is not routed timing met | Timing: `n2ew_era/06l_phc_lite_pipeline_budget_sweep/pnr_unroll16_100mhz/hls_component/hls_component/hls/impl/verilog/direct_phc_step_reports_fanout_dup_100mhz/phc_step_timing_summary_routed.rpt`<br>Util: `n2ew_era/06l_phc_lite_pipeline_budget_sweep/pnr_unroll16_100mhz/hls_component/hls_component/hls/impl/verilog/direct_phc_step_reports_fanout_dup_100mhz/phc_step_utilization_routed.rpt`<br>Log: `n2ew_era/06l_phc_lite_pipeline_budget_sweep/pnr_unroll16_100mhz/results/vivado_impl_strategy_fanout_dup_100mhz_retry2.log` |
+| 06L unroll-16 95 MHz baseline | 95.003 MHz / 10.526 ns | Direct Vivado non-project flow, relaxed clock only | -0.033 ns<br>`n2ew_era/06l_phc_lite_pipeline_budget_sweep/pnr_unroll16_100mhz/hls_component/hls_component/hls/impl/verilog/direct_phc_step_reports_baseline_95mhz/phc_step_timing_summary_routed.rpt` | -1.578 ns<br>`n2ew_era/06l_phc_lite_pipeline_budget_sweep/pnr_unroll16_100mhz/hls_component/hls_component/hls/impl/verilog/direct_phc_step_reports_baseline_95mhz/phc_step_timing_summary_routed.rpt` | 48<br>`n2ew_era/06l_phc_lite_pipeline_budget_sweep/pnr_unroll16_100mhz/hls_component/hls_component/hls/impl/verilog/direct_phc_step_reports_baseline_95mhz/phc_step_timing_summary_routed.rpt` | 2316 cycles / 24.378 us at this period, but not timing met | Timing: `n2ew_era/06l_phc_lite_pipeline_budget_sweep/pnr_unroll16_100mhz/hls_component/hls_component/hls/impl/verilog/direct_phc_step_reports_baseline_95mhz/phc_step_timing_summary_routed.rpt`<br>Util: `n2ew_era/06l_phc_lite_pipeline_budget_sweep/pnr_unroll16_100mhz/hls_component/hls_component/hls/impl/verilog/direct_phc_step_reports_baseline_95mhz/phc_step_utilization_routed.rpt` |
+| 06L unroll-16 90 MHz baseline | 90.001 MHz / 11.111 ns | Separate 90 MHz copied workspace; direct Vivado non-project flow, relaxed clock only. Clean rerun includes 106 copied `.dat` ROM init files and has no `$readmem` missing-file warning. | +0.151 ns<br>`n2ew_era/06l_phc_lite_pipeline_budget_sweep/pnr_unroll16_90mhz/hls_component/hls_component/hls/impl/verilog/direct_phc_step_reports_baseline_90mhz/phc_step_timing_summary_routed.rpt` | 0.000 ns<br>`n2ew_era/06l_phc_lite_pipeline_budget_sweep/pnr_unroll16_90mhz/hls_component/hls_component/hls/impl/verilog/direct_phc_step_reports_baseline_90mhz/phc_step_timing_summary_routed.rpt` | 0<br>`n2ew_era/06l_phc_lite_pipeline_budget_sweep/pnr_unroll16_90mhz/hls_component/hls_component/hls/impl/verilog/direct_phc_step_reports_baseline_90mhz/phc_step_timing_summary_routed.rpt` | 2316 cycles / 25.733 us, routed timing met | Timing: `n2ew_era/06l_phc_lite_pipeline_budget_sweep/pnr_unroll16_90mhz/hls_component/hls_component/hls/impl/verilog/direct_phc_step_reports_baseline_90mhz/phc_step_timing_summary_routed.rpt`<br>Util: `n2ew_era/06l_phc_lite_pipeline_budget_sweep/pnr_unroll16_90mhz/hls_component/hls_component/hls/impl/verilog/direct_phc_step_reports_baseline_90mhz/phc_step_utilization_routed.rpt`<br>Route: `n2ew_era/06l_phc_lite_pipeline_budget_sweep/pnr_unroll16_90mhz/hls_component/hls_component/hls/impl/verilog/direct_phc_step_reports_baseline_90mhz/phc_step_route_status.rpt` |
 
-## Post-Route Status
+## Routed Utilization
 
-100 MHz implementation/P&R was attempted but did not reach routed timing.
-Therefore the 06L unroll-16 result is not yet upgraded to a routed
-post-implementation latency/timing claim.
+06F values are from Vitis HLS packaged P&R resource summary. 06L values are
+from Vivado routed utilization reports in the direct out-of-context flow; those
+reports label BRAM as `Block RAM Tile`.
 
-| Metric | 06F v8 routed baseline | 06L unroll-16 100 MHz P&R attempt |
-|---|---|---|
-| WNS | +0.020 ns (`n2ew_era/06f_phc_lite_manual_hls/hls_component/hls_component/hls/impl/verilog/project.runs/impl_1/bd_0_wrapper_timing_summary_routed.rpt`) | not produced; latest implementation stopped before project creation (`n2ew_era/06l_phc_lite_pipeline_budget_sweep/pnr_unroll16_100mhz/hls_component/hls_component/logs/hls_run_impl.log`; `n2ew_era/06l_phc_lite_pipeline_budget_sweep/pnr_unroll16_100mhz/hls_component/hls_component/hls/impl/verilog/vivado.log`) |
-| TNS | 0.000 ns (`n2ew_era/06f_phc_lite_manual_hls/hls_component/hls_component/hls/impl/verilog/project.runs/impl_1/bd_0_wrapper_timing_summary_routed.rpt`) | not produced; latest implementation stopped before project creation (`n2ew_era/06l_phc_lite_pipeline_budget_sweep/pnr_unroll16_100mhz/hls_component/hls_component/logs/hls_run_impl.log`; `n2ew_era/06l_phc_lite_pipeline_budget_sweep/pnr_unroll16_100mhz/hls_component/hls_component/hls/impl/verilog/vivado.log`) |
-| LUT | 7555 (`n2ew_era/06f_phc_lite_manual_hls/hls_component/hls_component/reports/hls_impl_pnr.rpt`) | not produced post-route; csynth estimate is 36792 (`n2ew_era/06l_phc_lite_pipeline_budget_sweep/pnr_unroll16_100mhz/hls_component/hls_component/hls/syn/report/phc_step_csynth.rpt`) |
-| FF | 8217 (`n2ew_era/06f_phc_lite_manual_hls/hls_component/hls_component/reports/hls_impl_pnr.rpt`) | not produced post-route; csynth estimate is 35774 (`n2ew_era/06l_phc_lite_pipeline_budget_sweep/pnr_unroll16_100mhz/hls_component/hls_component/hls/syn/report/phc_step_csynth.rpt`) |
-| DSP | 47 (`n2ew_era/06f_phc_lite_manual_hls/hls_component/hls_component/reports/hls_impl_pnr.rpt`) | not produced post-route; csynth estimate is 121 (`n2ew_era/06l_phc_lite_pipeline_budget_sweep/pnr_unroll16_100mhz/hls_component/hls_component/hls/syn/report/phc_step_csynth.rpt`) |
-| BRAM | 6 (`n2ew_era/06f_phc_lite_manual_hls/hls_component/hls_component/reports/hls_impl_pnr.rpt`) | not produced post-route; csynth estimate is 0 (`n2ew_era/06l_phc_lite_pipeline_budget_sweep/pnr_unroll16_100mhz/hls_component/hls_component/hls/syn/report/phc_step_csynth.rpt`) |
+| Design / attempt | LUT | FF | DSP | BRAM |
+|---|---:|---:|---:|---:|
+| 06F v8 frozen baseline | 7555<br>`n2ew_era/06f_phc_lite_manual_hls/hls_component/hls_component/reports/hls_impl_pnr.rpt` | 8217<br>`n2ew_era/06f_phc_lite_manual_hls/hls_component/hls_component/reports/hls_impl_pnr.rpt` | 47<br>`n2ew_era/06f_phc_lite_manual_hls/hls_component/hls_component/reports/hls_impl_pnr.rpt` | 6<br>`n2ew_era/06f_phc_lite_manual_hls/hls_component/hls_component/reports/hls_impl_pnr.rpt` |
+| 06L 100 MHz baseline | 14818<br>`n2ew_era/06l_phc_lite_pipeline_budget_sweep/pnr_unroll16_100mhz/hls_component/hls_component/hls/impl/verilog/direct_phc_step_reports/phc_step_utilization_routed.rpt` | 19809<br>`n2ew_era/06l_phc_lite_pipeline_budget_sweep/pnr_unroll16_100mhz/hls_component/hls_component/hls/impl/verilog/direct_phc_step_reports/phc_step_utilization_routed.rpt` | 125<br>`n2ew_era/06l_phc_lite_pipeline_budget_sweep/pnr_unroll16_100mhz/hls_component/hls_component/hls/impl/verilog/direct_phc_step_reports/phc_step_utilization_routed.rpt` | 0 Block RAM Tile<br>`n2ew_era/06l_phc_lite_pipeline_budget_sweep/pnr_unroll16_100mhz/hls_component/hls_component/hls/impl/verilog/direct_phc_step_reports/phc_step_utilization_routed.rpt` |
+| 06L 100 MHz aggressive physical optimization | 14870<br>`n2ew_era/06l_phc_lite_pipeline_budget_sweep/pnr_unroll16_100mhz/hls_component/hls_component/hls/impl/verilog/direct_phc_step_reports_aggressive_explore_100mhz/phc_step_utilization_routed.rpt` | 19836<br>`n2ew_era/06l_phc_lite_pipeline_budget_sweep/pnr_unroll16_100mhz/hls_component/hls_component/hls/impl/verilog/direct_phc_step_reports_aggressive_explore_100mhz/phc_step_utilization_routed.rpt` | 125<br>`n2ew_era/06l_phc_lite_pipeline_budget_sweep/pnr_unroll16_100mhz/hls_component/hls_component/hls/impl/verilog/direct_phc_step_reports_aggressive_explore_100mhz/phc_step_utilization_routed.rpt` | 0 Block RAM Tile<br>`n2ew_era/06l_phc_lite_pipeline_budget_sweep/pnr_unroll16_100mhz/hls_component/hls_component/hls/impl/verilog/direct_phc_step_reports_aggressive_explore_100mhz/phc_step_utilization_routed.rpt` |
+| 06L 100 MHz fanout/replication attempt | 14826<br>`n2ew_era/06l_phc_lite_pipeline_budget_sweep/pnr_unroll16_100mhz/hls_component/hls_component/hls/impl/verilog/direct_phc_step_reports_fanout_dup_100mhz/phc_step_utilization_routed.rpt` | 19834<br>`n2ew_era/06l_phc_lite_pipeline_budget_sweep/pnr_unroll16_100mhz/hls_component/hls_component/hls/impl/verilog/direct_phc_step_reports_fanout_dup_100mhz/phc_step_utilization_routed.rpt` | 125<br>`n2ew_era/06l_phc_lite_pipeline_budget_sweep/pnr_unroll16_100mhz/hls_component/hls_component/hls/impl/verilog/direct_phc_step_reports_fanout_dup_100mhz/phc_step_utilization_routed.rpt` | 0 Block RAM Tile<br>`n2ew_era/06l_phc_lite_pipeline_budget_sweep/pnr_unroll16_100mhz/hls_component/hls_component/hls/impl/verilog/direct_phc_step_reports_fanout_dup_100mhz/phc_step_utilization_routed.rpt` |
+| 06L 95 MHz baseline | 14822<br>`n2ew_era/06l_phc_lite_pipeline_budget_sweep/pnr_unroll16_100mhz/hls_component/hls_component/hls/impl/verilog/direct_phc_step_reports_baseline_95mhz/phc_step_utilization_routed.rpt` | 19801<br>`n2ew_era/06l_phc_lite_pipeline_budget_sweep/pnr_unroll16_100mhz/hls_component/hls_component/hls/impl/verilog/direct_phc_step_reports_baseline_95mhz/phc_step_utilization_routed.rpt` | 125<br>`n2ew_era/06l_phc_lite_pipeline_budget_sweep/pnr_unroll16_100mhz/hls_component/hls_component/hls/impl/verilog/direct_phc_step_reports_baseline_95mhz/phc_step_utilization_routed.rpt` | 0 Block RAM Tile<br>`n2ew_era/06l_phc_lite_pipeline_budget_sweep/pnr_unroll16_100mhz/hls_component/hls_component/hls/impl/verilog/direct_phc_step_reports_baseline_95mhz/phc_step_utilization_routed.rpt` |
+| 06L 90 MHz baseline | 14826<br>`n2ew_era/06l_phc_lite_pipeline_budget_sweep/pnr_unroll16_90mhz/hls_component/hls_component/hls/impl/verilog/direct_phc_step_reports_baseline_90mhz/phc_step_utilization_routed.rpt` | 19805<br>`n2ew_era/06l_phc_lite_pipeline_budget_sweep/pnr_unroll16_90mhz/hls_component/hls_component/hls/impl/verilog/direct_phc_step_reports_baseline_90mhz/phc_step_utilization_routed.rpt` | 125<br>`n2ew_era/06l_phc_lite_pipeline_budget_sweep/pnr_unroll16_90mhz/hls_component/hls_component/hls/impl/verilog/direct_phc_step_reports_baseline_90mhz/phc_step_utilization_routed.rpt` | 0 Block RAM Tile<br>`n2ew_era/06l_phc_lite_pipeline_budget_sweep/pnr_unroll16_90mhz/hls_component/hls_component/hls/impl/verilog/direct_phc_step_reports_baseline_90mhz/phc_step_utilization_routed.rpt` |
 
-The 100 MHz implementation attempt passed the earlier HLS/IP packaging
-blocker after setting a local Tcl package path, then failed inside Vivado's
-synthesis run launcher:
+## Critical Path Diagnosis From Failed 100 MHz Baseline
 
-```text
-P:\hls_component\hls_component\hls\impl\verilog\project.runs\bd_0_hls_inst_0_synth_1\rundef.js(122, 5) JavaScript runtime error: Access denied
-```
+The 100 MHz baseline failure was dominated by one repeated high-fanout path
+shape, not by 144 independent unrelated bottlenecks:
 
-Evidence:
+- Source:
+  `grp_phc_step_Outline_VITIS_LOOP_127_11_fu_2060/ap_CS_fsm_reg[9]`
+- Destination family:
+  `mul_24s_40s_64_2_1_U289/buff0_reg__0/PCIN[x]`
+- Data path delay: 8.751 ns
+- Logic delay / route delay: 5.033 ns / 3.718 ns
+- Logic levels: 5 (`DSP48E1=1`, `LUT5=2`, `LUT6=2`)
+- Evidence:
+  `n2ew_era/06l_phc_lite_pipeline_budget_sweep/pnr_unroll16_100mhz/hls_component/hls_component/hls/impl/verilog/direct_phc_step_reports/phc_step_timing_paths_routed.rpt`
 
-- Top-level implementation log:
-  `n2ew_era/06l_phc_lite_pipeline_budget_sweep/pnr_unroll16_100mhz/results/vitis_hls_impl_unroll16_100mhz_pdrive_tcllibpath_full.log`
-- Vitis HLS implementation log:
-  `n2ew_era/06l_phc_lite_pipeline_budget_sweep/pnr_unroll16_100mhz/hls_component/hls_component/logs/hls_run_impl.log`
-- Vivado sub-run log:
-  `n2ew_era/06l_phc_lite_pipeline_budget_sweep/pnr_unroll16_100mhz/hls_component/hls_component/hls/impl/verilog/project.runs/bd_0_hls_inst_0_synth_1/runme.log`
+The implementation-only fanout attempt did replicate the FSM net, but did not
+solve timing:
 
-This is an environment/tool execution failure, not a reported timing failure.
-No 90 MHz rerun was started because there is no 100 MHz routed WNS<0 result.
+- `REGISTER_DUPLICATION` could not be applied because Vivado reported the
+  property does not exist.
+- `MAX_FANOUT=16` was accepted, and physical optimization created
+  `ap_CS_fsm_reg[9]_replica_9`.
+- Routed timing worsened to WNS=-0.383 ns / TNS=-53.903 ns.
+- Evidence log:
+  `n2ew_era/06l_phc_lite_pipeline_budget_sweep/pnr_unroll16_100mhz/results/vivado_impl_strategy_fanout_dup_100mhz_retry2.log`
 
-### User-run update: 2026-07-22 23:59 to 2026-07-23 00:00
+## Scripts and Logs
 
-The pasted user-run log shows this command was launched from inside
-`pnr_unroll16_100mhz/hls_component/hls_component`:
-
-```powershell
-& "C:\AMDDesignTools\2025.2\Vitis\bin\vitis-run.bat" --mode hls --impl --config C:\Users\holbo\00VS_projjects\00_HFT_project\n2ew_era\06l_phc_lite_pipeline_budget_sweep\pnr_unroll16_100mhz\hls_component\hls_component\..\hls_config.cfg --work_dir .
-```
-
-This run advanced past the previous IP packaging/TclStore blocker:
-
-```text
-INFO: Created IP C:/Users/holbo/00VS_projjects/00_HFT_project/n2ew_era/06l_phc_lite_pipeline_budget_sweep/pnr_unroll16_100mhz/hls_component/hls_component/hls/impl/ip/component.xml
-INFO: Created IP archive C:/Users/holbo/00VS_projjects/00_HFT_project/n2ew_era/06l_phc_lite_pipeline_budget_sweep/pnr_unroll16_100mhz/hls_component/hls_component/hls/impl/ip/xilinx_com_hls_phc_step_1_0.zip
-```
-
-Vivado then started RTL evaluation and failed at the first project creation
-step, before synth/place/route:
-
-```text
-# create_project $vivado_proj_name $vivado_proj_dir -part $target_device -force
-ERROR: [Project 1-161] Failed to remove the directory 'C:/Users/holbo/00VS_projjects/00_HFT_project/n2ew_era/06l_phc_lite_pipeline_budget_sweep/pnr_unroll16_100mhz/hls_component/hls_component/hls/impl/verilog/project.runs'. The directory might be in use by some other process.
-```
-
-Evidence is now in the project logs:
-
-- `n2ew_era/06l_phc_lite_pipeline_budget_sweep/pnr_unroll16_100mhz/hls_component/hls_component/logs/hls_run_impl.log`
-- `n2ew_era/06l_phc_lite_pipeline_budget_sweep/pnr_unroll16_100mhz/hls_component/hls_component/hls/impl/verilog/vivado.log`
-
-This second failure is also an environment/workspace lock failure, not a
-timing failure. It means the 06L IP package exists, but no 100 MHz routed
-WNS/TNS or post-route utilization report has been produced yet.
-
-## Handoff Commands For Next User-Run P&R
-
-Run this outside the Codex sandbox, preferably from a normal local PowerShell
-with permissions to execute Vivado-generated JavaScript run launchers. If
-Windows Controlled Folder Access, antivirus, or corporate policy blocks
-Vivado run scripts, run the shell as Administrator or allow-list:
-
-- `C:\AMDDesignTools\2025.2\Vivado\bin\vivado.bat`
-- `C:\AMDDesignTools\2025.2\Vitis\bin\vitis-run.bat`
-- the workspace directory under
-  `C:\Users\holbo\00VS_projjects\00_HFT_project\n2ew_era\06l_phc_lite_pipeline_budget_sweep\pnr_unroll16_100mhz`
-
-Before retrying, close Vitis IDE/Vivado windows that may be holding file
-handles under `hls/impl/verilog`. Confirm there are no live Vitis/Vivado
-subprocesses using:
-
-```powershell
-Get-Process | Where-Object { $_.ProcessName -match "vitis|vivado|xsim|xelab|xvlog|xsc|vitis-run|java" } | Select-Object Id,ProcessName,Path,StartTime
-```
-
-If the same workspace is reused, remove only generated Vivado implementation
-project directories under the 06L copied workspace after all Vitis/Vivado
-processes are closed. Do not run this against the frozen 06F directory.
-
-```powershell
-$impl = "C:\Users\holbo\00VS_projjects\00_HFT_project\n2ew_era\06l_phc_lite_pipeline_budget_sweep\pnr_unroll16_100mhz\hls_component\hls_component\hls\impl\verilog"
-foreach ($name in "project.runs","project.cache","project.gen","project.hw","project.ip_user_files","project.srcs",".Xil") {
-    $p = Join-Path $impl $name
-    if (Test-Path -LiteralPath $p) {
-        Remove-Item -LiteralPath $p -Recurse -Force
-    }
-}
-```
-
-Then rerun the implementation from the same directory layout that successfully
-parsed the config and packaged the IP:
-
-```powershell
-cd C:\Users\holbo\00VS_projjects\00_HFT_project\n2ew_era\06l_phc_lite_pipeline_budget_sweep\pnr_unroll16_100mhz\hls_component\hls_component
-& "C:\AMDDesignTools\2025.2\Vitis\bin\vitis-run.bat" --mode hls --impl --config C:\Users\holbo\00VS_projjects\00_HFT_project\n2ew_era\06l_phc_lite_pipeline_budget_sweep\pnr_unroll16_100mhz\hls_component\hls_component\..\hls_config.cfg --work_dir . *> ..\..\results\vitis_hls_impl_unroll16_100mhz_user_retry_clean.log
-$LASTEXITCODE
-```
-
-The previous `subst P:` form is still available as an alternate route if long
-paths or Windows path handling reappear:
-
-```powershell
-cd C:\Users\holbo\00VS_projjects\00_HFT_project
-subst P: "C:\Users\holbo\00VS_projjects\00_HFT_project\n2ew_era\06l_phc_lite_pipeline_budget_sweep\pnr_unroll16_100mhz"
-$env:TCLLIBPATH = "C:/AMDDesignTools/2025.2/Vivado/data/XilinxTclStore/support/appinit C:/AMDDesignTools/2025.2/Vivado/data/XilinxTclStore/tclapp/xilinx/xsim C:/AMDDesignTools/2025.2/Vivado/data/XilinxTclStore/tclapp/xilinx C:/AMDDesignTools/2025.2/Vivado/data/XilinxTclStore/tclapp C:/AMDDesignTools/2025.2/Vivado/data/XilinxTclStore/support"
-cd P:\hls_component
-& "C:\AMDDesignTools\2025.2\Vitis\bin\vitis-run.bat" --mode hls --impl --config hls_config.cfg --work_dir hls_component *> P:\results\vitis_hls_impl_unroll16_100mhz_user_run.log
-$LASTEXITCODE
-cd C:\Users\holbo\00VS_projjects\00_HFT_project
-subst P: /D
-```
-
-If the run succeeds, collect these files:
-
-- `n2ew_era/06l_phc_lite_pipeline_budget_sweep/pnr_unroll16_100mhz/hls_component/hls_component/reports/hls_impl_pnr.rpt`
-- `n2ew_era/06l_phc_lite_pipeline_budget_sweep/pnr_unroll16_100mhz/hls_component/hls_component/hls/impl/verilog/project.runs/impl_1/bd_0_wrapper_timing_summary_routed.rpt`
-- `n2ew_era/06l_phc_lite_pipeline_budget_sweep/pnr_unroll16_100mhz/hls_component/hls_component/hls/impl/verilog/report/phc_step_utilization_routed.rpt`
-- `n2ew_era/06l_phc_lite_pipeline_budget_sweep/pnr_unroll16_100mhz/hls_component/hls_component/hls/impl/verilog/report/phc_step_timing_routed.rpt`
-- `n2ew_era/06l_phc_lite_pipeline_budget_sweep/pnr_unroll16_100mhz/hls_component/hls_component/hls/impl/verilog/report/phc_step_timing_paths_routed.rpt`
-
-Useful extraction commands after a successful run:
-
-```powershell
-Select-String -Path n2ew_era\06l_phc_lite_pipeline_budget_sweep\pnr_unroll16_100mhz\hls_component\hls_component\hls\impl\verilog\project.runs\impl_1\bd_0_wrapper_timing_summary_routed.rpt -Pattern "WNS\(ns\)|ap_clk|All user specified timing constraints"
-Select-String -Path n2ew_era\06l_phc_lite_pipeline_budget_sweep\pnr_unroll16_100mhz\hls_component\hls_component\reports\hls_impl_pnr.rpt -Pattern "LUT:|FF:|DSP:|BRAM:|CP achieved post-implementation|Timing"
-```
-
-If 100 MHz completes with `WNS < 0`, do not change this 100 MHz run. Make a
-separate 90 MHz copy and change only the HLS clock line to `clock=11.111ns`:
-
-```powershell
-cd C:\Users\holbo\00VS_projjects\00_HFT_project
-Copy-Item -Recurse n2ew_era\06l_phc_lite_pipeline_budget_sweep\pnr_unroll16_100mhz n2ew_era\06l_phc_lite_pipeline_budget_sweep\pnr_unroll16_90mhz
-(Get-Content n2ew_era\06l_phc_lite_pipeline_budget_sweep\pnr_unroll16_90mhz\hls_component\hls_config.cfg) -replace "clock=10ns","clock=11.111ns" | Set-Content n2ew_era\06l_phc_lite_pipeline_budget_sweep\pnr_unroll16_90mhz\hls_component\hls_config.cfg
-```
-
-Then rerun the same implementation command with `subst P:` pointing at
-`pnr_unroll16_90mhz`.
+| Run | Script / log evidence |
+|---|---|
+| 100 MHz baseline direct P&R | Script: `n2ew_era/06l_phc_lite_pipeline_budget_sweep/pnr_unroll16_100mhz/hls_component/hls_component/hls/impl/verilog/run_direct_phc_step_pnr.tcl`<br>Log: `n2ew_era/06l_phc_lite_pipeline_budget_sweep/pnr_unroll16_100mhz/results/vivado_direct_phc_step_pnr_unroll16_100mhz_tcllibpath.log` |
+| 100 MHz aggressive physical optimization | Script: `n2ew_era/06l_phc_lite_pipeline_budget_sweep/pnr_unroll16_100mhz/hls_component/hls_component/hls/impl/verilog/run_direct_phc_step_impl_strategy_from_synth.tcl`<br>Log: `n2ew_era/06l_phc_lite_pipeline_budget_sweep/pnr_unroll16_100mhz/results/vivado_impl_strategy_aggressive_explore_100mhz.log` |
+| 100 MHz fanout/replication attempt | Script: `n2ew_era/06l_phc_lite_pipeline_budget_sweep/pnr_unroll16_100mhz/hls_component/hls_component/hls/impl/verilog/run_direct_phc_step_impl_strategy_from_synth.tcl`<br>Log: `n2ew_era/06l_phc_lite_pipeline_budget_sweep/pnr_unroll16_100mhz/results/vivado_impl_strategy_fanout_dup_100mhz_retry2.log` |
+| 95 MHz baseline | Script: `n2ew_era/06l_phc_lite_pipeline_budget_sweep/pnr_unroll16_100mhz/hls_component/hls_component/hls/impl/verilog/run_direct_phc_step_pnr_custom_clock.tcl`<br>Log: `n2ew_era/06l_phc_lite_pipeline_budget_sweep/pnr_unroll16_100mhz/results/vivado_direct_phc_step_pnr_95mhz_retry.log` |
+| 90 MHz baseline | Script: `n2ew_era/06l_phc_lite_pipeline_budget_sweep/pnr_unroll16_90mhz/hls_component/hls_component/hls/impl/verilog/run_direct_phc_step_pnr_custom_clock.tcl`<br>Clean log: `n2ew_era/06l_phc_lite_pipeline_budget_sweep/pnr_unroll16_90mhz/results/vivado_direct_phc_step_pnr_90mhz_with_dat.log`<br>Exit code: `n2ew_era/06l_phc_lite_pipeline_budget_sweep/pnr_unroll16_90mhz/results/vivado_direct_phc_step_pnr_90mhz_with_dat.exitcode.txt` |
 
 ## Honest Conclusion
 
-The 06L unroll-16 design is verified at csynth and RTL cosim level in the
-independent workspace: latency is 2316 cycles / 23.160 us at 100 MHz, and
-cosim reports `total=25600 mismatches=0`.
+The unroll-16 design has a real routed timing-met result, but not at 100 MHz.
+The strongest supported claim is now:
 
-The requested routed 100 MHz timing evidence is still open. The run did not
-fail timing. The first Codex-run attempt failed in a Vivado run-launch
-permission error; the later user-run attempt packaged the IP successfully, then
-failed when Vivado could not remove a locked `project.runs` directory. Until a
-clean user-run P&R produces routed WNS/TNS and post-route utilization reports,
-the 23.16 us number must be described as csynth/cosim latency, not as
-post-route-equivalent evidence.
+`2316 cycles / 25.733 us at 90.001 MHz, routed timing met with WNS=+0.151 ns,
+TNS=0.000 ns, and 0 failing endpoints.`
+
+The 23.160 us number remains a csynth plus RTL cosim result at 100 MHz. It
+must not be described as post-route timing-met evidence, because all three
+100 MHz routed attempts still fail timing. The 95 MHz baseline is a useful
+near miss (WNS=-0.033 ns), but it also must not be claimed as timing met.
+
+Compared with the frozen 06F v8 routed baseline of 8316 cycles / 83.160 us at
+100 MHz, the 90 MHz unroll-16 routed result is still materially lower latency:
+25.733 us versus 83.160 us. The cost is higher routed resource use, especially
+DSPs (125 versus 47) and LUT/FF usage (about 14.8k/19.8k versus 7.6k/8.2k).

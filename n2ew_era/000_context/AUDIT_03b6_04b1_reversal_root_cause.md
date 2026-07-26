@@ -1,11 +1,13 @@
 status: mixed
 # Audit: 03B6 vs 04B1 Reversal Root Cause
 
+Primary report location: `n2ew_era/03b6_hgb_convergence_closure/AUDIT_03b6_04b1_reversal_root_cause.md`. A synchronized context copy is also written to `n2ew_era/000_context/AUDIT_03b6_04b1_reversal_root_cause.md`.
+
 This audit did not train or tune any model. It loaded the frozen 03B6 and 04B1 HGB model objects and their frozen validation-selected thresholds, recomputed development-only diagnostics on NEW1/NEW2-derived artifacts, and read existing frozen NEW3/NEW4 diagnostic CSVs only for posthoc comparison.
 
 Hard boundary: no NEW5 path was loaded. The script hard-stops on any file path containing `NEW5`.
 
-Runtime compatibility note: the final script was run under Python 3.13.7 with the project venv's sklearn 1.8.0, while the frozen HGB joblib objects were saved by sklearn 1.7.2. sklearn emitted `InconsistentVersionWarning`; predictions completed, and the recomputed 04B1 TXF validation policy total matched the frozen 04B1 validation total. Treat this as residual model-persistence risk, not as missing feature importance.
+Runtime compatibility note: the final script was run under Python 3.13.9 with sklearn 1.7.2. The frozen HGB joblib objects loaded and predictions completed; the recomputed 04B1 TXF validation policy total matched the frozen 04B1 validation total. Treat sklearn/joblib persistence as residual risk if the runtime changes.
 
 ## Frozen Objects Used
 

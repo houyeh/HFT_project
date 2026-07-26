@@ -12,6 +12,7 @@ from typing import Any
 import joblib
 import numpy as np
 import pandas as pd
+import sklearn
 from sklearn.metrics import average_precision_score, mean_absolute_error, mean_squared_error, roc_auc_score
 
 
@@ -24,6 +25,7 @@ PHASE03B = PROJECT_ROOT / "n2ew_era" / "03b_simple_ml_action_value_baselines"
 PHASE03B6 = PROJECT_ROOT / "n2ew_era" / "03b6_hgb_convergence_closure"
 PHASE04B = PROJECT_ROOT / "n2ew_era" / "04b_txf_only_final_development_rerun"
 PHASE04B1 = PROJECT_ROOT / "n2ew_era" / "04b1_ml_completion_patch"
+PHASE_AUDIT_PATH = PHASE03B6 / "AUDIT_03b6_04b1_reversal_root_cause.md"
 
 if str(PHASE03B) not in sys.path:
     sys.path.insert(0, str(PHASE03B))
@@ -1012,15 +1014,25 @@ def write_report(
         "from the frozen artifacts without rebuilding historical intermediates."
     )
 
+    runtime_note = (
+        f"Runtime compatibility note: the final script was run under Python {sys.version.split()[0]} "
+        f"with sklearn {sklearn.__version__}. The frozen HGB joblib objects loaded and predictions "
+        "completed; the recomputed 04B1 TXF validation policy total matched the frozen 04B1 validation "
+        "total. Treat sklearn/joblib persistence as residual risk if the runtime changes."
+    )
+
     lines = [
         f"status: {conclusion_status}",
         "# Audit: 03B6 vs 04B1 Reversal Root Cause",
+        "",
+        f"Primary report location: `{PHASE_AUDIT_PATH.relative_to(PROJECT_ROOT).as_posix()}`. "
+        f"A synchronized context copy is also written to `{AUDIT_PATH.relative_to(PROJECT_ROOT).as_posix()}`.",
         "",
         "This audit did not train or tune any model. It loaded the frozen 03B6 and 04B1 HGB model objects and their frozen validation-selected thresholds, recomputed development-only diagnostics on NEW1/NEW2-derived artifacts, and read existing frozen NEW3/NEW4 diagnostic CSVs only for posthoc comparison.",
         "",
         "Hard boundary: no NEW5 path was loaded. The script hard-stops on any file path containing `NEW5`.",
         "",
-        "Runtime compatibility note: the final script was run under Python 3.13.7 with the project venv's sklearn 1.8.0, while the frozen HGB joblib objects were saved by sklearn 1.7.2. sklearn emitted `InconsistentVersionWarning`; predictions completed, and the recomputed 04B1 TXF validation policy total matched the frozen 04B1 validation total. Treat this as residual model-persistence risk, not as missing feature importance.",
+        runtime_note,
         "",
         "## Frozen Objects Used",
         "",
@@ -1117,7 +1129,9 @@ def write_report(
         "",
         "No NEW5 data was loaded, and no NEW3/NEW4 number was used for selection or tuning in this audit.",
     ]
-    AUDIT_PATH.write_text("\n".join(lines) + "\n", encoding="utf-8")
+    report_text = "\n".join(lines) + "\n"
+    AUDIT_PATH.write_text(report_text, encoding="utf-8")
+    PHASE_AUDIT_PATH.write_text(report_text, encoding="utf-8")
 
 
 def main() -> None:
@@ -1129,6 +1143,7 @@ def main() -> None:
     queue_contrast = queue_rule_development_contrast(loaded)
     posthoc = posthoc_new3_new4_diagnostics()
     write_report(stats, symbol_counts, family_stats, importance, pred, txf_policy, overlap, bins, queue_contrast, posthoc)
+    print(f"wrote {PHASE_AUDIT_PATH}")
     print(f"wrote {AUDIT_PATH}")
     print(f"wrote CSV diagnostics under {RESULTS}")
 
