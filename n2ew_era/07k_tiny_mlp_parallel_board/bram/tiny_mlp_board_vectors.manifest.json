@@ -1,0 +1,13 @@
+{
+  "source": "C:\\Users\\holbo\\00VS_projjects\\00_HFT_project\\n2ew_era\\07j_tiny_mlp_parallel_hls\\results\\tiny_mlp_q28_test_vectors.csv",
+  "output": "C:\\Users\\holbo\\00VS_projjects\\00_HFT_project\\n2ew_era\\07k_tiny_mlp_parallel_board\\bram\\tiny_mlp_board_vectors.mem",
+  "rows": 4096,
+  "packed_width_bits": 570,
+  "hex_digits_per_row": 143,
+  "layout_lsb_to_msb": [
+    "x0_q..x15_q: 16 x signed 28-bit",
+    "logit0_q..logit2_q: 3 x signed 40-bit",
+    "action: unsigned 2-bit"
+  ],
+  "sha256": "2ea8be47ed78ba8106c92790d32e61367ee27ee76af7ccda984aa675af83dbc8"
+}

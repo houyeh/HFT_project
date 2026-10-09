@@ -1,0 +1,2 @@
+horizon,seed,loss_mode,epoch,train_loss,val_loss,val_accuracy,val_macro_precision,val_macro_recall,val_macro_f1,elapsed_seconds,phase,max_epochs,patience,current_lr,fast_exact_final_step,fast_equiv_max_abs_diff
+50,0,raw,1,1.0445585238737574,1.056393080396649,0.45847672612141355,0.469267442282499,0.446044221817258,0.43330718616571534,1185.018619298935,08a_stage1_v3_k50_speedprobe,1,10,0.001,False,0.0

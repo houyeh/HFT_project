@@ -1,0 +1,7 @@
+target_frequency_mhz=100
+target_clock_period_ns=10.000
+hd_clk_src=BUFGCTRL_X0Y0
+wns_ns=2.316
+achieved_period_ns=7.684
+derived_latency_cycles=8
+derived_latency_us=0.08

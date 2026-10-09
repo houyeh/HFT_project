@@ -26,6 +26,7 @@ data/
 trash/
 tmp*/
 temp/
+_backups/
 
 # Binary/model/data artifacts that should be regenerated from scripts.
 *.zip

@@ -1,0 +1,2 @@
+phase,horizon,seed,loss_mode,best_epoch,final_epoch,max_epochs,patience,best_epoch_distance_to_max,early_stop,max_epoch_hit,convergence_closed,convergence_status,checkpoint
+08a_stage1_v3_hidden64_capacity,50,1,raw,21,31,120,10,99,True,False,True,convergence_closed,models_seed1\phc_fi2010_h50_seed1_raw_v3_hidden64_capacity.pt

@@ -1,0 +1,11 @@
+ticker,event_definition,active_seconds,peak_second_count,peak_threshold_events_per_second,peak_includes_0930_0935,peak_0930_0935_second_count,peak_includes_1555_1600,peak_1555_1600_second_count,max_events_per_second
+AAPL,any_l2_update,21031,2114,48.0,True,46,True,71,584
+AAPL,top_of_book_price_change,12692,1379,11.0,True,83,True,34,184
+MSFT,any_l2_update,21715,2213,50.0,True,78,True,121,1222
+MSFT,top_of_book_price_change,1494,324,4.0,True,58,True,6,20
+INTC,any_l2_update,21534,2199,45.0,True,106,True,100,1510
+INTC,top_of_book_price_change,1142,218,4.0,True,55,True,4,44
+AMZN,any_l2_update,19034,1954,35.0,True,9,True,69,358
+AMZN,top_of_book_price_change,7803,999,7.0,True,23,True,29,222
+GOOG,any_l2_update,16101,1677,21.0,True,19,True,51,311
+GOOG,top_of_book_price_change,6587,756,7.0,True,19,True,28,195

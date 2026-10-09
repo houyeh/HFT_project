@@ -1,0 +1,44 @@
+{
+  "status": "stage_c_v3diag_vectors_generated",
+  "session_id": "NEW4_20260112_TXFA6",
+  "source_group": "NEW4",
+  "split": "new4",
+  "peak_count_1s": 1469,
+  "row_count": 4096,
+  "feedback_mode": "hls_v3diag_dut_state_feedback",
+  "features_path": "C:\\Users\\holbo\\00VS_projjects\\00_HFT_project\\n2ew_era\\06s2_pynq_z2_wrapper_bringup\\results\\demo_replay_input_features.csv",
+  "features_sha256": "ee644144d9905b012bab0704e567dbcdedc9b14dc3ab3d7eb1dacf1c3ae7cf2a",
+  "csim_output_path": "C:\\Users\\holbo\\00VS_projjects\\00_HFT_project\\n2ew_era\\06s2_pynq_z2_wrapper_bringup\\results_v3_diag\\demo_replay_v3diag_hls_csim_sequential_out.csv",
+  "csim_output_sha256": "842c048b9ba89ccf4d3c03029d410e5fac66395eb27348dfa1e4f98595e9ce19",
+  "legacy_readout_mem_path": "C:\\Users\\holbo\\00VS_projjects\\00_HFT_project\\n2ew_era\\06s2_pynq_z2_wrapper_bringup\\bram\\demo_replay_x_readout_q24_12.mem",
+  "legacy_readout_mem_sha256": "619bd8168c62f04b70e256e2fa189b57c625d5c19cdaec0e13c8581166cf1fde",
+  "new_old_readout_differing_lines": 4096,
+  "comparison_rows": 4096,
+  "outputs": [
+    {
+      "path": "C:\\Users\\holbo\\00VS_projjects\\00_HFT_project\\n2ew_era\\06s2_pynq_z2_wrapper_bringup\\bram_v3_diag\\demo_replay_x_readout_q24_12.mem",
+      "size_bytes": 450560,
+      "sha256": "aaf1574341f0c46c4b845931bac245c221e4e44bd5dca9c65357e5394b601260"
+    },
+    {
+      "path": "C:\\Users\\holbo\\00VS_projjects\\00_HFT_project\\n2ew_era\\06s2_pynq_z2_wrapper_bringup\\bram_v3_diag\\demo_replay_x_readout_q24_12.coe",
+      "size_bytes": 454720,
+      "sha256": "322fbcbc0ccc472c3fb79ca4deafe8b7f439c46e5be536d2fe9199e94974dc86"
+    },
+    {
+      "path": "C:\\Users\\holbo\\00VS_projjects\\00_HFT_project\\n2ew_era\\06s2_pynq_z2_wrapper_bringup\\bram_v3_diag\\demo_replay_expected_state_q24_12.mem",
+      "size_bytes": 401408,
+      "sha256": "f4456108115f9d9079ec27920c980347ff106043adaec10bd76ec9de5473d280"
+    },
+    {
+      "path": "C:\\Users\\holbo\\00VS_projjects\\00_HFT_project\\n2ew_era\\06s2_pynq_z2_wrapper_bringup\\bram_v3_diag\\demo_replay_expected_state_q24_12.coe",
+      "size_bytes": 405568,
+      "sha256": "c0b09660cbc2e0ea45f244dc5e202e8b0f057c454fe77f5ec2f28730b92e1f16"
+    },
+    {
+      "path": "C:\\Users\\holbo\\00VS_projjects\\00_HFT_project\\n2ew_era\\06s2_pynq_z2_wrapper_bringup\\bram_v3_diag\\BRAM_VECTOR_PACKING.md",
+      "size_bytes": 641,
+      "sha256": "280052b6e7412543a1f539272a84c73a35cc9425a4eb6203215802c3c3e4cc35"
+    }
+  ]
+}

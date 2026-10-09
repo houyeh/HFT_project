@@ -1,0 +1,2 @@
+model,feature_dim,hidden_dim,num_classes,trainable_parameters,batch_size,torch_threads,phase
+PHC-lite FI-2010 classifier,40,64,3,23876,512,2,08a_stage1_v3_hidden64_capacity

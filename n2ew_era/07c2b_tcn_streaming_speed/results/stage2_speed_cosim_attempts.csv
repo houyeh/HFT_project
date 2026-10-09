@@ -1,0 +1,3 @@
+name,variant,unroll,timeout_budget_seconds,attempted_event_calls,total_rtl_transactions,completed_transactions_at_timeout,final_compare_report,accepted_as_cosim_pass,cosim_timeout_log
+scratch_shared_u4,scratch,4,7200,1008,1012,132,missing_timeout,False,artifacts/scratch_shared_u4/cosim_1008_timeout_xsim.log
+distilled_shared_u4,distilled,4,7200,1008,1012,177,missing_timeout,False,artifacts/distilled_shared_u4/cosim_1008_timeout_xsim.log

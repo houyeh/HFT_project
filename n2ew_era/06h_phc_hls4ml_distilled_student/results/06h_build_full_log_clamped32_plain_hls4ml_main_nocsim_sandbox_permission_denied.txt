@@ -1,0 +1,43 @@
+[06H upgrade build] keras_distilled_student_clamped32_plain_hls4ml_main_nocsim hls_model.build(csim=False, synth=True) start
+[06H upgrade build] python_executable=C:\Users\holbo\00VS_projjects\00_HFT_project\.h6\Scripts\python.exe
+[06H upgrade build] tensorflow=2.21.0
+[06H upgrade build] keras=3.15.1
+[06H upgrade build] hls4ml=1.4.0.dev32+gb90fb067
+[06H upgrade build] settings64_applied=True
+[06H upgrade build] post_patch_vitis_run=C:\AMDDesignTools\2025.2\Vitis\bin\vitis-run.BAT
+[06H upgrade build] post_patch_clang_tidy=
+
+****** vitis-run v2025.2 (64-bit)
+  **** SW Build 6295257 on 2025-11-13-08:29:27
+  **** Start of session at: Mon Aug 17 11:22:11 2026
+    ** Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+    ** Copyright 2022-2025 Advanced Micro Devices, Inc. All Rights Reserved.
+
+  **** HLS Build v2025.2 6295257
+Sourcing Tcl script 'C:/Users/holbo/00VS_projjects/00_HFT_project/n2ew_era/06h_phc_hls4ml_distilled_student/hls4ml_prj/phc_distilled_student_keras_clamped32_plain_hls4ml_main/build_prj.tcl'
+INFO: [HLS 200-1510] Running: open_project phc_distilled_student_keras_clamped32_plain_hls4ml_main_prj 
+WARNING: [HLS 200-2182] The 'phc_distilled_student_keras_clamped32_plain_hls4ml_main_prj' project will not automatically appear within Vitis IDE workspaces and is meant only for TCL batch use.  Please use open_component instead of open_project/open_solution to generate Vitis IDE compatible component files and directory structure.
+Resolution: For help on HLS 200-2182 see docs.amd.com/access/sources/dita/topic?Doc_Version=2025.2%20English&url=ug1448-hls-guidance&resourceid=200-2182.html
+can't create directory "C:/Users/holbo/00_HFT_project": permission denied
+    while executing
+"source C:/Users/holbo/00VS_projjects/00_HFT_project/n2ew_era/06h_phc_hls4ml_distilled_student/hls4ml_prj/phc_distilled_student_keras_clamped32_plain_h..."
+    ("uplevel" body line 1)
+    invoked from within
+"uplevel \#0 [list source $tclfile] "
+
+INFO: [HLS 200-112] Total CPU user time: 0 seconds. Total CPU system time: 1 seconds. Total elapsed time: 1.147 seconds; peak allocated memory: 30.719 MB.
+INFO: [vitis-run 60-1662] Stopping dispatch session having empty uuid.
+
+[06H upgrade build] exception propagated to Python
+Exception: Build failed for phc_distilled_student_keras_clamped32_plain_hls4ml_main. See logs for details.
+Traceback (most recent call last):
+  File "C:\Users\holbo\00VS_projjects\00_HFT_project\n2ew_era\06h_phc_hls4ml_distilled_student\03_build_clamped32_plain_upgrade_nocsim.py", line 547, in main
+    hls_model.build(csim=False, synth=True)
+    ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\holbo\00VS_projjects\00_HFT_project\.h6\Lib\site-packages\hls4ml\model\graph.py", line 1010, in build
+    return self.config.backend.build(self, **kwargs)
+           ~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^
+  File "C:\Users\holbo\00VS_projjects\00_HFT_project\.h6\Lib\site-packages\hls4ml\backends\vitis\vitis_backend.py", line 159, in build
+    raise Exception(f'Build failed for {model.config.get_project_name()}. See logs for details.')
+Exception: Build failed for phc_distilled_student_keras_clamped32_plain_hls4ml_main. See logs for details.
+

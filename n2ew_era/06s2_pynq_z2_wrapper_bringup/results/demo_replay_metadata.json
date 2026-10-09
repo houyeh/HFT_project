@@ -1,0 +1,25 @@
+{
+  "selected_window": {
+    "path": "C:\\Users\\holbo\\00VS_projjects\\00_HFT_project\\n2ew_era\\04b_txf_only_final_development_rerun\\data\\txf_only_action_universe.parquet\\split=new4\\part-NEW4_20260112_TXFA6.parquet",
+    "split": "new4",
+    "source_group": "NEW4",
+    "session_id": "NEW4_20260112_TXFA6",
+    "symbol": "TXFA6",
+    "event_rows": 984540,
+    "peak_idx": 479855,
+    "peak_count_1s": 1469,
+    "peak_event_rate_per_sec": 1469.0,
+    "segment_start": 477807,
+    "segment_end": 481903,
+    "segment_duration_us": 14563000.0,
+    "segment_event_rate_per_sec": 281.26072924534776,
+    "median_event_rate_past_50": 131.00633066212754,
+    "p99_event_rate_past_50": 270.23121341290135,
+    "calm_idx": 29918,
+    "calm_count_1s": 1,
+    "calm_event_rate_per_sec": 1.0,
+    "calm_start": 27870,
+    "calm_end": 31966
+  },
+  "cpu_sample_seed": 20260806
+}

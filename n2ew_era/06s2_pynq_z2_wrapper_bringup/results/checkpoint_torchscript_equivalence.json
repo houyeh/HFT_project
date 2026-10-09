@@ -1,0 +1,12 @@
+{
+  "status": "pass",
+  "eager_checkpoint": "n2ew_era\\06e_phc_stp_step_hls4ml\\models\\phc_stp_step_hls_seed2.pt",
+  "torchscript_checkpoint": "n2ew_era\\06f_phc_lite_manual_hls\\models\\phc_stp_step_hls_seed2_torchscript.pt",
+  "fixed_input_count": 5,
+  "output_dim": 18,
+  "max_abs_diff": 0.0,
+  "mean_abs_diff": 0.0,
+  "tolerance": 1e-06,
+  "per_sample_csv": "n2ew_era\\06s2_pynq_z2_wrapper_bringup\\results\\checkpoint_torchscript_equivalence.csv",
+  "new5_used": false
+}

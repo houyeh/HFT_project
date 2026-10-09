@@ -1,0 +1,3 @@
+variant,attempted_event_calls,total_rtl_transactions,completed_transactions_at_timeout,timeout_budget_seconds,final_compare_report,accepted_as_cosim_pass,cosim_timeout_log
+scratch,1008,1012,78,3600,missing_timeout,False,artifacts\shortpath_scratch_shared_u1\cosim_1008_timeout_xsim.log
+distilled,1008,1012,55,3600,missing_timeout,False,artifacts\shortpath_distilled_shared_u1\cosim_1008_timeout_xsim.log

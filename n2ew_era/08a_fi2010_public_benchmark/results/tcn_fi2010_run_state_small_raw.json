@@ -1,0 +1,24 @@
+{
+  "phase": "08a_tcn_scratch",
+  "start_time": "2026-08-05 12:47:36",
+  "wall_clock_budget_hours": 6.0,
+  "cpu_count": 8,
+  "torch_threads": 2,
+  "device": "cpu",
+  "horizons_order": [
+    50
+  ],
+  "seeds": [
+    0
+  ],
+  "channels": 8,
+  "loss_mode": "raw_cross_entropy",
+  "input_output_bias": false,
+  "output_suffix": "_small_raw",
+  "budget_exhausted": false,
+  "stopped_before_next_combo": "",
+  "new5_used": false,
+  "last_completed_combo": "h50_seed0",
+  "last_completed_time": "2026-08-05 13:10:35",
+  "completed_all_requested": true
+}

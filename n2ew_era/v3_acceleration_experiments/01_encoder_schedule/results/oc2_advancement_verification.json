@@ -1,0 +1,45 @@
+{
+  "variant": "oc2",
+  "tool": "Vitis HLS 2025.2 build 6295257",
+  "part": "xc7z020-clg400-1",
+  "target_clock_ns": 10.0,
+  "csim": {
+    "independent_vectors": 25600,
+    "closed_loop_replay_vectors": 4096,
+    "bit_exact_to_baseline": true
+  },
+  "cosim": {
+    "rtl": "Verilog",
+    "simulator": "xsim",
+    "vectors": 1000,
+    "status": "pass",
+    "mismatches": 0,
+    "csv_rows_bit_exact_to_csim": true,
+    "latency_cycles_min_avg_max": [370, 370, 370],
+    "interval_cycles_min_avg_max": [371, 371, 371],
+    "total_execution_cycles": 370999,
+    "max_abs_diff_vs_float": 0.00153518,
+    "mean_abs_diff_vs_float": 0.000338227
+  },
+  "core_ooc_route": {
+    "status": "timing_met",
+    "frequency_mhz": 100.0,
+    "wns_ns": 0.384,
+    "tns_ns": 0.0,
+    "setup_failing_endpoints": 0,
+    "post_synthesis_period_ns": 9.259,
+    "post_implementation_period_ns": 9.616,
+    "lut": 11892,
+    "ff": 13724,
+    "dsp": 213,
+    "bram_18k": 0
+  },
+  "derived_core_latency_us": 3.7,
+  "verification_tier": "core_ooc_routed_pnr_met_after_1000_vector_cosim",
+  "frozen_source_hashes_match_manifest": true,
+  "limitations": [
+    "Core out-of-context implementation only; wrapper and board resources are excluded.",
+    "Latency is derived from RTL-simulated cycles and the routed 100 MHz target, not measured by an on-silicon counter.",
+    "PnL and model-selection results were not rerun because this experiment changes scheduling only."
+  ]
+}

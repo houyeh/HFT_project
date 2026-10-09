@@ -1,0 +1,2 @@
+scope,stage,rows,compared_values,max_abs_diff,mean_abs_diff,rmse,sign_agreement_readout_0,sign_agreement_readout_1,sign_agreement_joint,valid_alignment_errors
+readout,final,1,2,0.088306446875,0.0612430625,0.066956250479,1,1,1,0

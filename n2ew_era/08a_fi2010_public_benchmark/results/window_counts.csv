@@ -1,0 +1,5 @@
+split,num_events,num_windows
+train_cf7_all_snapshots,254750,254651
+train_fit_head_80pct,203800,203701
+validation_tail_20pct,50950,50851
+test_cf7_cf8_cf9_concat,139587,139488

@@ -1,0 +1,13 @@
+objective,width,seed,candidate_id,parameter_count,best_epoch,epochs_run,best_val_loss,early_stopped,wall_seconds
+direct_action,4,0,tiny_mlp_direct_action_h4_seed0,83,197,200,0.7545955777168274,False,29.494767299853265
+direct_action,4,1,tiny_mlp_direct_action_h4_seed1,83,185,200,0.7350531816482544,False,38818.83116649999
+direct_action,4,2,tiny_mlp_direct_action_h4_seed2,83,196,200,0.7502182126045227,False,29.92880590003915
+direct_action,8,0,tiny_mlp_direct_action_h8_seed0,163,152,172,0.718424379825592,True,42.81855179998092
+direct_action,8,1,tiny_mlp_direct_action_h8_seed1,163,185,200,0.699892520904541,False,75.31339589995332
+direct_action,8,2,tiny_mlp_direct_action_h8_seed2,163,149,169,0.7052353024482727,True,72.45209269993939
+score_regression,4,0,tiny_mlp_score_regression_h4_seed0,78,200,200,1520.5101318359375,False,39.535846600076184
+score_regression,4,1,tiny_mlp_score_regression_h4_seed1,78,198,200,1525.14697265625,False,43.6587404999882
+score_regression,4,2,tiny_mlp_score_regression_h4_seed2,78,200,200,1220.7369384765625,False,34.41281250002794
+score_regression,8,0,tiny_mlp_score_regression_h8_seed0,154,200,200,1353.0035400390625,False,66.59571929997765
+score_regression,8,1,tiny_mlp_score_regression_h8_seed1,154,200,200,1349.2841796875,False,77.30004039988853
+score_regression,8,2,tiny_mlp_score_regression_h8_seed2,154,200,200,1327.885986328125,False,69.29514249996282

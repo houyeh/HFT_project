@@ -1,10 +1,10 @@
-model,split,action_pnl,causal_fill_pnl,selected_action_count,win_rate,matched_random_pass,estimated_latency_us,latency_source,action_delta_vs_phc,causal_delta_vs_phc,latency_speedup_vs_phc
-PHC-lite v1 teacher,val,1927170.0,170310.0,63766,0.4694508045039676,True,83.16,06F routed PHC step baseline at 100MHz,0.0,0.0,1.0
-tcn_prepad_scratch_16feat,val,1920890.0,172195.0,61837,0.4703332955997218,,32.656,"pre-synthesis MAC estimate only, not csynth/cosim",-6280.0,1885.0,2.546545810877021
-tcn_prepad_distilled_16feat,val,1971550.0,173650.0,61114,0.4747521026278757,,32.656,"pre-synthesis MAC estimate only, not csynth/cosim",44380.0,3340.0,2.546545810877021
-PHC-lite v1 teacher,new3,5021515.0,488870.0,138261,0.5010451248001967,True,83.16,06F routed PHC step baseline at 100MHz,0.0,0.0,1.0
-tcn_prepad_scratch_16feat,new3,5005925.0,565260.0,137866,0.5028143269551594,,32.656,"pre-synthesis MAC estimate only, not csynth/cosim",-15590.0,76390.0,2.546545810877021
-tcn_prepad_distilled_16feat,new3,5091230.0,587795.0,134699,0.50696738654333,,32.656,"pre-synthesis MAC estimate only, not csynth/cosim",69715.0,98925.0,2.546545810877021
-PHC-lite v1 teacher,new4,1762495.0,121765.0,53169,0.4906054279749478,True,83.16,06F routed PHC step baseline at 100MHz,0.0,0.0,1.0
-tcn_prepad_scratch_16feat,new4,1795280.0,126915.0,52789,0.4943454128701055,,32.656,"pre-synthesis MAC estimate only, not csynth/cosim",32785.0,5150.0,2.546545810877021
-tcn_prepad_distilled_16feat,new4,1814455.0,133720.0,51604,0.4973064103557864,,32.656,"pre-synthesis MAC estimate only, not csynth/cosim",51960.0,11955.0,2.546545810877021
+model,split,action_pnl,causal_fill_pnl,selected_action_count,win_rate,matched_random_pass,empirical_p_value_fraction_random_ge_model,empirical_p_value_wording,matched_random_source,estimated_latency_us,latency_source,action_delta_vs_phc,causal_delta_vs_phc,latency_speedup_vs_phc
+PHC-lite v1 teacher,val,1927170.0,170310.0,63766,0.4694508045039676,True,0.0,< 0.001,selected_policy_matched_random_summary,83.16,06F routed PHC step baseline at 100MHz,0.0,0.0,1.0
+tcn_prepad_scratch_16feat,val,1920890.0,172195.0,61837,0.4703332955997218,True,0.0,< 0.001,selected_policy_matched_random_summary,32.656,"pre-synthesis MAC estimate only, not HLS-verified",-6280.0,1885.0,2.546545810877021
+tcn_prepad_distilled_16feat,val,1971550.0,173650.0,61114,0.4747521026278757,True,0.0,< 0.001,selected_policy_matched_random_summary,32.656,"pre-synthesis MAC estimate only, not HLS-verified",44380.0,3340.0,2.546545810877021
+PHC-lite v1 teacher,new3,5021515.0,488870.0,138261,0.5010451248001967,True,0.0,< 0.001,selected_policy_matched_random_summary,83.16,06F routed PHC step baseline at 100MHz,0.0,0.0,1.0
+tcn_prepad_scratch_16feat,new3,5005925.0,565260.0,137866,0.5028143269551594,True,0.0,< 0.001,selected_policy_matched_random_summary,32.656,"pre-synthesis MAC estimate only, not HLS-verified",-15590.0,76390.0,2.546545810877021
+tcn_prepad_distilled_16feat,new3,5091230.0,587795.0,134699,0.50696738654333,True,0.0,< 0.001,selected_policy_matched_random_summary,32.656,"pre-synthesis MAC estimate only, not HLS-verified",69715.0,98925.0,2.546545810877021
+PHC-lite v1 teacher,new4,1762495.0,121765.0,53169,0.4906054279749478,True,0.0,< 0.001,selected_policy_matched_random_summary,83.16,06F routed PHC step baseline at 100MHz,0.0,0.0,1.0
+tcn_prepad_scratch_16feat,new4,1795280.0,126915.0,52789,0.4943454128701055,True,0.0,< 0.001,selected_policy_matched_random_summary,32.656,"pre-synthesis MAC estimate only, not HLS-verified",32785.0,5150.0,2.546545810877021
+tcn_prepad_distilled_16feat,new4,1814455.0,133720.0,51604,0.4973064103557864,True,0.0,< 0.001,selected_policy_matched_random_summary,32.656,"pre-synthesis MAC estimate only, not HLS-verified",51960.0,11955.0,2.546545810877021

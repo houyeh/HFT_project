@@ -1,0 +1,21 @@
+﻿"preflight_time","available_memory_mb","id","process_name","cpu_delta_5s","working_set_mb","path"
+"2026-08-06T03:31:55+08:00","16834","18192","iCloudPhotos","3.969","159.6","C:\Program Files\WindowsApps\AppleInc.iCloud_15.9.60.0_x64__nzyj5cx40ttqa\iCloud\iCloudPhotos.exe"
+"2026-08-06T03:31:55+08:00","16834","23084","vitis_hls","1.281","91.9","C:\AMDDesignTools\2025.2\Vitis\bin\unwrapped\win64.o\vitis_hls.exe"
+"2026-08-06T03:31:55+08:00","16834","22108","MicrosoftStartFeedProvider","0.391","54.6","C:\Program Files\WindowsApps\Microsoft.StartExperiencesApp_1.380.2.0_x64__8wekyb3d8bbwe\MicrosoftStartFeedProvider\MicrosoftStartFeedProvider.exe"
+"2026-08-06T03:31:55+08:00","16834","10640","powershell","0.172","110.3","C:\Windows\System32\WindowsPowerShell\v1.0\powershell.exe"
+"2026-08-06T03:31:55+08:00","16834","16700","ChatGPT","0.094","348.3","C:\Program Files\WindowsApps\OpenAI.Codex_26.727.6591.0_x64__2p2nqsd0c76g0\app\ChatGPT.exe"
+"2026-08-06T03:31:55+08:00","16834","17508","iCloudHome","0.078","162.4","C:\Program Files\WindowsApps\AppleInc.iCloud_15.9.60.0_x64__nzyj5cx40ttqa\iCloud\iCloudHome.exe"
+"2026-08-06T03:31:55+08:00","16834","8928","taskhostw","0.047","22","C:\Windows\system32\taskhostw.exe"
+"2026-08-06T03:31:55+08:00","16834","8984","sihost","0.047","50.8","C:\Windows\system32\sihost.exe"
+"2026-08-06T03:31:55+08:00","16834","8572","explorer","0.031","380.3","C:\Windows\Explorer.EXE"
+"2026-08-06T03:31:55+08:00","16834","11188","ChatGPT","0.016","42","C:\Program Files\WindowsApps\OpenAI.Codex_26.727.6591.0_x64__2p2nqsd0c76g0\app\ChatGPT.exe"
+"2026-08-06T03:31:55+08:00","16834","16164","WidgetService","0.016","24.9","C:\Program Files\WindowsApps\Microsoft.WidgetsPlatformRuntime_1.6.19.0_x64__8wekyb3d8bbwe\WidgetService\WidgetService.exe"
+"2026-08-06T03:31:55+08:00","16834","3680","claude","0.016","253","C:\Program Files\WindowsApps\Claude_1.25927.0.0_x64__pzs8sxrjxfjjc\app\Claude.exe"
+"2026-08-06T03:31:55+08:00","16834","20872","tailscale-ipn","0.016","83.1","C:\Program Files\Tailscale\tailscale-ipn.exe"
+"2026-08-06T03:31:55+08:00","16834","4916","codex","0.016","242.2","C:\Program Files\WindowsApps\OpenAI.Codex_26.727.6591.0_x64__2p2nqsd0c76g0\app\resources\codex.exe"
+"2026-08-06T03:31:55+08:00","16834","4328","svchost","","27.2",
+"2026-08-06T03:31:55+08:00","16834","3328","svchost","","11.6",
+"2026-08-06T03:31:55+08:00","16834","3560","svchost","","24",
+"2026-08-06T03:31:55+08:00","16834","4548","svchost","","9",
+"2026-08-06T03:31:55+08:00","16834","4408","svchost","","33.7",
+"2026-08-06T03:31:55+08:00","16834","3408","svchost","","12",

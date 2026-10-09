@@ -1,0 +1,335 @@
+{
+  "val": {
+    "label": "val",
+    "n_sessions": 6,
+    "n_phc_wins": 6,
+    "n_phc_losses": 0,
+    "n_ties": 0,
+    "session_ids": [
+      "NEW1_20260123Day_TXFB6",
+      "NEW1_20260123Night_TXFB6",
+      "NEW1_20260126Day_TXFB6",
+      "NEW1_20260126Night_TXFB6",
+      "NEW1_20260127Day_TXFB6",
+      "NEW1_20260127Night_TXFB6"
+    ],
+    "phc_session_pnl": [
+      175470.0,
+      330295.0,
+      282455.0,
+      390950.0,
+      293345.0,
+      454655.0
+    ],
+    "simple_rule_session_pnl": [
+      104135.0,
+      236585.0,
+      166970.0,
+      222075.0,
+      182925.0,
+      324455.0
+    ],
+    "diffs": [
+      71335.0,
+      93710.0,
+      115485.0,
+      168875.0,
+      110420.0,
+      130200.0
+    ],
+    "total_phc_pnl": 1927170.0,
+    "total_simple_pnl": 1237145.0,
+    "total_advantage": 690025.0,
+    "sign_test_binomial": {
+      "n_wins": 6,
+      "n_trials_nonzero": 6,
+      "p_value_two_sided": 0.03125
+    },
+    "wilcoxon_signed_rank_exact": {
+      "statistic": 21.0,
+      "p_value_one_sided_greater": 0.015625
+    },
+    "exact_sign_flip_permutation_test": {
+      "n": 6,
+      "observed_sum_diff": 690025.0,
+      "n_permutations_enumerated": 64,
+      "p_value_two_sided_exact": 0.03125
+    }
+  },
+  "new3": {
+    "label": "new3",
+    "n_sessions": 6,
+    "n_phc_wins": 6,
+    "n_phc_losses": 0,
+    "n_ties": 0,
+    "session_ids": [
+      "NEW3_20260113_TXFA6",
+      "NEW3_20260114_TXFA6",
+      "NEW3_20260115_TXFA6",
+      "NEW3_20260116_TXFA6",
+      "NEW3_20260119Day_TXFA6",
+      "NEW3_20260330_TXFA6"
+    ],
+    "phc_session_pnl": [
+      1192170.0,
+      765855.0,
+      873560.0,
+      835900.0,
+      1250445.0,
+      103585.0
+    ],
+    "simple_rule_session_pnl": [
+      667105.0,
+      463375.0,
+      522855.0,
+      473980.0,
+      755985.0,
+      71470.0
+    ],
+    "diffs": [
+      525065.0,
+      302480.0,
+      350705.0,
+      361920.0,
+      494460.0,
+      32115.0
+    ],
+    "total_phc_pnl": 5021515.0,
+    "total_simple_pnl": 2954770.0,
+    "total_advantage": 2066745.0,
+    "sign_test_binomial": {
+      "n_wins": 6,
+      "n_trials_nonzero": 6,
+      "p_value_two_sided": 0.03125
+    },
+    "wilcoxon_signed_rank_exact": {
+      "statistic": 21.0,
+      "p_value_one_sided_greater": 0.015625
+    },
+    "exact_sign_flip_permutation_test": {
+      "n": 6,
+      "observed_sum_diff": 2066745.0,
+      "n_permutations_enumerated": 64,
+      "p_value_two_sided_exact": 0.03125
+    }
+  },
+  "new4": {
+    "label": "new4",
+    "n_sessions": 4,
+    "n_phc_wins": 4,
+    "n_phc_losses": 0,
+    "n_ties": 0,
+    "session_ids": [
+      "NEW4_20260102_TXFA6",
+      "NEW4_20260105_TXFA6",
+      "NEW4_20260109_TXFA6",
+      "NEW4_20260112_TXFA6"
+    ],
+    "phc_session_pnl": [
+      304140.0,
+      50955.0,
+      558530.0,
+      848870.0
+    ],
+    "simple_rule_session_pnl": [
+      183220.0,
+      37830.0,
+      301890.0,
+      480970.0
+    ],
+    "diffs": [
+      120920.0,
+      13125.0,
+      256640.0,
+      367900.0
+    ],
+    "total_phc_pnl": 1762495.0,
+    "total_simple_pnl": 1003910.0,
+    "total_advantage": 758585.0,
+    "sign_test_binomial": {
+      "n_wins": 4,
+      "n_trials_nonzero": 4,
+      "p_value_two_sided": 0.125
+    },
+    "wilcoxon_signed_rank_exact": {
+      "statistic": 10.0,
+      "p_value_one_sided_greater": 0.0625
+    },
+    "exact_sign_flip_permutation_test": {
+      "n": 4,
+      "observed_sum_diff": 758585.0,
+      "n_permutations_enumerated": 16,
+      "p_value_two_sided_exact": 0.125
+    }
+  },
+  "pooled_oos_new3_new4": {
+    "label": "pooled_oos_new3_new4",
+    "n_sessions": 10,
+    "n_phc_wins": 10,
+    "n_phc_losses": 0,
+    "n_ties": 0,
+    "session_ids": [
+      "NEW3_20260113_TXFA6",
+      "NEW3_20260114_TXFA6",
+      "NEW3_20260115_TXFA6",
+      "NEW3_20260116_TXFA6",
+      "NEW3_20260119Day_TXFA6",
+      "NEW3_20260330_TXFA6",
+      "NEW4_20260102_TXFA6",
+      "NEW4_20260105_TXFA6",
+      "NEW4_20260109_TXFA6",
+      "NEW4_20260112_TXFA6"
+    ],
+    "phc_session_pnl": [
+      1192170.0,
+      765855.0,
+      873560.0,
+      835900.0,
+      1250445.0,
+      103585.0,
+      304140.0,
+      50955.0,
+      558530.0,
+      848870.0
+    ],
+    "simple_rule_session_pnl": [
+      667105.0,
+      463375.0,
+      522855.0,
+      473980.0,
+      755985.0,
+      71470.0,
+      183220.0,
+      37830.0,
+      301890.0,
+      480970.0
+    ],
+    "diffs": [
+      525065.0,
+      302480.0,
+      350705.0,
+      361920.0,
+      494460.0,
+      32115.0,
+      120920.0,
+      13125.0,
+      256640.0,
+      367900.0
+    ],
+    "total_phc_pnl": 6784010.0,
+    "total_simple_pnl": 3958680.0,
+    "total_advantage": 2825330.0,
+    "sign_test_binomial": {
+      "n_wins": 10,
+      "n_trials_nonzero": 10,
+      "p_value_two_sided": 0.001953125
+    },
+    "wilcoxon_signed_rank_exact": {
+      "statistic": 55.0,
+      "p_value_one_sided_greater": 0.0009765625
+    },
+    "exact_sign_flip_permutation_test": {
+      "n": 10,
+      "observed_sum_diff": 2825330.0,
+      "n_permutations_enumerated": 1024,
+      "p_value_two_sided_exact": 0.001953125
+    }
+  },
+  "pooled_all_val_new3_new4": {
+    "label": "pooled_all_val_new3_new4",
+    "n_sessions": 16,
+    "n_phc_wins": 16,
+    "n_phc_losses": 0,
+    "n_ties": 0,
+    "session_ids": [
+      "NEW1_20260123Day_TXFB6",
+      "NEW1_20260123Night_TXFB6",
+      "NEW1_20260126Day_TXFB6",
+      "NEW1_20260126Night_TXFB6",
+      "NEW1_20260127Day_TXFB6",
+      "NEW1_20260127Night_TXFB6",
+      "NEW3_20260113_TXFA6",
+      "NEW3_20260114_TXFA6",
+      "NEW3_20260115_TXFA6",
+      "NEW3_20260116_TXFA6",
+      "NEW3_20260119Day_TXFA6",
+      "NEW3_20260330_TXFA6",
+      "NEW4_20260102_TXFA6",
+      "NEW4_20260105_TXFA6",
+      "NEW4_20260109_TXFA6",
+      "NEW4_20260112_TXFA6"
+    ],
+    "phc_session_pnl": [
+      175470.0,
+      330295.0,
+      282455.0,
+      390950.0,
+      293345.0,
+      454655.0,
+      1192170.0,
+      765855.0,
+      873560.0,
+      835900.0,
+      1250445.0,
+      103585.0,
+      304140.0,
+      50955.0,
+      558530.0,
+      848870.0
+    ],
+    "simple_rule_session_pnl": [
+      104135.0,
+      236585.0,
+      166970.0,
+      222075.0,
+      182925.0,
+      324455.0,
+      667105.0,
+      463375.0,
+      522855.0,
+      473980.0,
+      755985.0,
+      71470.0,
+      183220.0,
+      37830.0,
+      301890.0,
+      480970.0
+    ],
+    "diffs": [
+      71335.0,
+      93710.0,
+      115485.0,
+      168875.0,
+      110420.0,
+      130200.0,
+      525065.0,
+      302480.0,
+      350705.0,
+      361920.0,
+      494460.0,
+      32115.0,
+      120920.0,
+      13125.0,
+      256640.0,
+      367900.0
+    ],
+    "total_phc_pnl": 8711180.0,
+    "total_simple_pnl": 5195825.0,
+    "total_advantage": 3515355.0,
+    "sign_test_binomial": {
+      "n_wins": 16,
+      "n_trials_nonzero": 16,
+      "p_value_two_sided": 3.0517578125e-05
+    },
+    "wilcoxon_signed_rank_exact": {
+      "statistic": 136.0,
+      "p_value_one_sided_greater": 1.52587890625e-05
+    },
+    "exact_sign_flip_permutation_test": {
+      "n": 16,
+      "observed_sum_diff": 3515355.0,
+      "n_permutations_enumerated": 65536,
+      "p_value_two_sided_exact": 3.0517578125e-05
+    }
+  }
+}

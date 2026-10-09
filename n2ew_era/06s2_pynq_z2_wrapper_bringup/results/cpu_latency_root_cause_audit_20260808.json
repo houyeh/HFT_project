@@ -1,0 +1,336 @@
+{
+  "status": "cpu_latency_root_cause_audit_completed",
+  "new5_used": false,
+  "checkpoint_equivalence": {
+    "status": "pass",
+    "eager_checkpoint": "n2ew_era\\06e_phc_stp_step_hls4ml\\models\\phc_stp_step_hls_seed2.pt",
+    "torchscript_checkpoint": "n2ew_era\\06f_phc_lite_manual_hls\\models\\phc_stp_step_hls_seed2_torchscript.pt",
+    "fixed_input_count": 5,
+    "output_dim": 18,
+    "max_abs_diff": 0.0,
+    "mean_abs_diff": 0.0,
+    "tolerance": 1e-06,
+    "per_sample_csv": "n2ew_era\\06s2_pynq_z2_wrapper_bringup\\results\\checkpoint_torchscript_equivalence.csv",
+    "new5_used": false
+  },
+  "snapshots": {
+    "before_cpp": {
+      "label": "before_cpp",
+      "captured_at_unix": 1786161172.4827008,
+      "cpu_load_counter": {
+        "returncode": 0,
+        "stdout": "{\"CookedValue\":33.583771733984754}",
+        "stderr": "",
+        "parsed": {
+          "CookedValue": 33.583771733984754
+        }
+      },
+      "top_processes": {
+        "returncode": 0,
+        "stdout": "[{\"ProcessName\":\"Taskmgr\",\"Id\":5620,\"CPU\":3611.1875,\"WorkingSet64\":224018432},{\"ProcessName\":\"ChatGPT\",\"Id\":16700,\"CPU\":2290.9375,\"WorkingSet64\":305278976},{\"ProcessName\":\"iCloudHome\",\"Id\":17508,\"CPU\":1733.34375,\"WorkingSet64\":120410112},{\"ProcessName\":\"OneDrive.Sync.Service\",\"Id\":6988,\"CPU\":1678.828125,\"WorkingSet64\":90353664},{\"ProcessName\":\"explorer\",\"Id\":8572,\"CPU\":1611.96875,\"WorkingSet64\":318885888},{\"ProcessName\":\"codex\",\"Id\":4916,\"CPU\":1420.609375,\"WorkingSet64\":222437376},{\"ProcessName\":\"claude\",\"Id\":3680,\"CPU\":977.265625,\"WorkingSet64\":242483200},{\"ProcessName\":\"msedge\",\"Id\":13200,\"CPU\":531.328125,\"WorkingSet64\":442875904},{\"ProcessName\":\"SpotifyLauncher\",\"Id\":27340,\"CPU\":217.546875,\"WorkingSet64\":43126784},{\"ProcessName\":\"msedge\",\"Id\":4544,\"CPU\":150.0625,\"WorkingSet64\":77869056},{\"ProcessName\":\"MicrosoftSecurityApp\",\"Id\":20756,\"CPU\":112.015625,\"WorkingSet64\":155922432},{\"ProcessName\":\"ipf_helper\",\"Id\":7996,\"CPU\":84.4375,\"WorkingSet64\":11489280}]",
+        "stderr": "",
+        "parsed": [
+          {
+            "ProcessName": "Taskmgr",
+            "Id": 5620,
+            "CPU": 3611.1875,
+            "WorkingSet64": 224018432
+          },
+          {
+            "ProcessName": "ChatGPT",
+            "Id": 16700,
+            "CPU": 2290.9375,
+            "WorkingSet64": 305278976
+          },
+          {
+            "ProcessName": "iCloudHome",
+            "Id": 17508,
+            "CPU": 1733.34375,
+            "WorkingSet64": 120410112
+          },
+          {
+            "ProcessName": "OneDrive.Sync.Service",
+            "Id": 6988,
+            "CPU": 1678.828125,
+            "WorkingSet64": 90353664
+          },
+          {
+            "ProcessName": "explorer",
+            "Id": 8572,
+            "CPU": 1611.96875,
+            "WorkingSet64": 318885888
+          },
+          {
+            "ProcessName": "codex",
+            "Id": 4916,
+            "CPU": 1420.609375,
+            "WorkingSet64": 222437376
+          },
+          {
+            "ProcessName": "claude",
+            "Id": 3680,
+            "CPU": 977.265625,
+            "WorkingSet64": 242483200
+          },
+          {
+            "ProcessName": "msedge",
+            "Id": 13200,
+            "CPU": 531.328125,
+            "WorkingSet64": 442875904
+          },
+          {
+            "ProcessName": "SpotifyLauncher",
+            "Id": 27340,
+            "CPU": 217.546875,
+            "WorkingSet64": 43126784
+          },
+          {
+            "ProcessName": "msedge",
+            "Id": 4544,
+            "CPU": 150.0625,
+            "WorkingSet64": 77869056
+          },
+          {
+            "ProcessName": "MicrosoftSecurityApp",
+            "Id": 20756,
+            "CPU": 112.015625,
+            "WorkingSet64": 155922432
+          },
+          {
+            "ProcessName": "ipf_helper",
+            "Id": 7996,
+            "CPU": 84.4375,
+            "WorkingSet64": 11489280
+          }
+        ]
+      }
+    },
+    "after_cpp_before_python": {
+      "label": "after_cpp_before_python",
+      "captured_at_unix": 1786161181.3406925,
+      "cpu_load_counter": {
+        "returncode": 0,
+        "stdout": "{\"CookedValue\":35.477935430098348}",
+        "stderr": "",
+        "parsed": {
+          "CookedValue": 35.47793543009835
+        }
+      },
+      "top_processes": {
+        "returncode": 0,
+        "stdout": "[{\"ProcessName\":\"Taskmgr\",\"Id\":5620,\"CPU\":3611.8125,\"WorkingSet64\":224026624},{\"ProcessName\":\"ChatGPT\",\"Id\":16700,\"CPU\":2291.078125,\"WorkingSet64\":303886336},{\"ProcessName\":\"iCloudHome\",\"Id\":17508,\"CPU\":1733.359375,\"WorkingSet64\":120410112},{\"ProcessName\":\"OneDrive.Sync.Service\",\"Id\":6988,\"CPU\":1679.09375,\"WorkingSet64\":90726400},{\"ProcessName\":\"explorer\",\"Id\":8572,\"CPU\":1612,\"WorkingSet64\":318898176},{\"ProcessName\":\"codex\",\"Id\":4916,\"CPU\":1420.625,\"WorkingSet64\":222232576},{\"ProcessName\":\"claude\",\"Id\":3680,\"CPU\":977.296875,\"WorkingSet64\":242810880},{\"ProcessName\":\"msedge\",\"Id\":13200,\"CPU\":531.34375,\"WorkingSet64\":442875904},{\"ProcessName\":\"SpotifyLauncher\",\"Id\":27340,\"CPU\":217.578125,\"WorkingSet64\":43126784},{\"ProcessName\":\"msedge\",\"Id\":4544,\"CPU\":150.0625,\"WorkingSet64\":77869056},{\"ProcessName\":\"MicrosoftSecurityApp\",\"Id\":20756,\"CPU\":112.015625,\"WorkingSet64\":155938816},{\"ProcessName\":\"ipf_helper\",\"Id\":7996,\"CPU\":84.453125,\"WorkingSet64\":11489280}]",
+        "stderr": "",
+        "parsed": [
+          {
+            "ProcessName": "Taskmgr",
+            "Id": 5620,
+            "CPU": 3611.8125,
+            "WorkingSet64": 224026624
+          },
+          {
+            "ProcessName": "ChatGPT",
+            "Id": 16700,
+            "CPU": 2291.078125,
+            "WorkingSet64": 303886336
+          },
+          {
+            "ProcessName": "iCloudHome",
+            "Id": 17508,
+            "CPU": 1733.359375,
+            "WorkingSet64": 120410112
+          },
+          {
+            "ProcessName": "OneDrive.Sync.Service",
+            "Id": 6988,
+            "CPU": 1679.09375,
+            "WorkingSet64": 90726400
+          },
+          {
+            "ProcessName": "explorer",
+            "Id": 8572,
+            "CPU": 1612,
+            "WorkingSet64": 318898176
+          },
+          {
+            "ProcessName": "codex",
+            "Id": 4916,
+            "CPU": 1420.625,
+            "WorkingSet64": 222232576
+          },
+          {
+            "ProcessName": "claude",
+            "Id": 3680,
+            "CPU": 977.296875,
+            "WorkingSet64": 242810880
+          },
+          {
+            "ProcessName": "msedge",
+            "Id": 13200,
+            "CPU": 531.34375,
+            "WorkingSet64": 442875904
+          },
+          {
+            "ProcessName": "SpotifyLauncher",
+            "Id": 27340,
+            "CPU": 217.578125,
+            "WorkingSet64": 43126784
+          },
+          {
+            "ProcessName": "msedge",
+            "Id": 4544,
+            "CPU": 150.0625,
+            "WorkingSet64": 77869056
+          },
+          {
+            "ProcessName": "MicrosoftSecurityApp",
+            "Id": 20756,
+            "CPU": 112.015625,
+            "WorkingSet64": 155938816
+          },
+          {
+            "ProcessName": "ipf_helper",
+            "Id": 7996,
+            "CPU": 84.453125,
+            "WorkingSet64": 11489280
+          }
+        ]
+      }
+    },
+    "after_python": {
+      "label": "after_python",
+      "captured_at_unix": 1786161188.4031506,
+      "cpu_load_counter": {
+        "returncode": 0,
+        "stdout": "{\"CookedValue\":27.451780188871787}",
+        "stderr": "",
+        "parsed": {
+          "CookedValue": 27.451780188871787
+        }
+      },
+      "top_processes": {
+        "returncode": 0,
+        "stdout": "[{\"ProcessName\":\"Taskmgr\",\"Id\":5620,\"CPU\":3612.296875,\"WorkingSet64\":224026624},{\"ProcessName\":\"ChatGPT\",\"Id\":16700,\"CPU\":2291.34375,\"WorkingSet64\":286183424},{\"ProcessName\":\"iCloudHome\",\"Id\":17508,\"CPU\":1733.359375,\"WorkingSet64\":120410112},{\"ProcessName\":\"OneDrive.Sync.Service\",\"Id\":6988,\"CPU\":1679.28125,\"WorkingSet64\":90730496},{\"ProcessName\":\"explorer\",\"Id\":8572,\"CPU\":1612.0625,\"WorkingSet64\":318881792},{\"ProcessName\":\"codex\",\"Id\":4916,\"CPU\":1420.640625,\"WorkingSet64\":222232576},{\"ProcessName\":\"claude\",\"Id\":3680,\"CPU\":977.359375,\"WorkingSet64\":243331072},{\"ProcessName\":\"msedge\",\"Id\":13200,\"CPU\":531.359375,\"WorkingSet64\":442908672},{\"ProcessName\":\"SpotifyLauncher\",\"Id\":27340,\"CPU\":217.578125,\"WorkingSet64\":43126784},{\"ProcessName\":\"msedge\",\"Id\":4544,\"CPU\":150.0625,\"WorkingSet64\":77869056},{\"ProcessName\":\"MicrosoftSecurityApp\",\"Id\":20756,\"CPU\":112.03125,\"WorkingSet64\":155840512},{\"ProcessName\":\"ipf_helper\",\"Id\":7996,\"CPU\":84.453125,\"WorkingSet64\":11489280}]",
+        "stderr": "",
+        "parsed": [
+          {
+            "ProcessName": "Taskmgr",
+            "Id": 5620,
+            "CPU": 3612.296875,
+            "WorkingSet64": 224026624
+          },
+          {
+            "ProcessName": "ChatGPT",
+            "Id": 16700,
+            "CPU": 2291.34375,
+            "WorkingSet64": 286183424
+          },
+          {
+            "ProcessName": "iCloudHome",
+            "Id": 17508,
+            "CPU": 1733.359375,
+            "WorkingSet64": 120410112
+          },
+          {
+            "ProcessName": "OneDrive.Sync.Service",
+            "Id": 6988,
+            "CPU": 1679.28125,
+            "WorkingSet64": 90730496
+          },
+          {
+            "ProcessName": "explorer",
+            "Id": 8572,
+            "CPU": 1612.0625,
+            "WorkingSet64": 318881792
+          },
+          {
+            "ProcessName": "codex",
+            "Id": 4916,
+            "CPU": 1420.640625,
+            "WorkingSet64": 222232576
+          },
+          {
+            "ProcessName": "claude",
+            "Id": 3680,
+            "CPU": 977.359375,
+            "WorkingSet64": 243331072
+          },
+          {
+            "ProcessName": "msedge",
+            "Id": 13200,
+            "CPU": 531.359375,
+            "WorkingSet64": 442908672
+          },
+          {
+            "ProcessName": "SpotifyLauncher",
+            "Id": 27340,
+            "CPU": 217.578125,
+            "WorkingSet64": 43126784
+          },
+          {
+            "ProcessName": "msedge",
+            "Id": 4544,
+            "CPU": 150.0625,
+            "WorkingSet64": 77869056
+          },
+          {
+            "ProcessName": "MicrosoftSecurityApp",
+            "Id": 20756,
+            "CPU": 112.03125,
+            "WorkingSet64": 155840512
+          },
+          {
+            "ProcessName": "ipf_helper",
+            "Id": 7996,
+            "CPU": 84.453125,
+            "WorkingSet64": 11489280
+          }
+        ]
+      }
+    }
+  },
+  "cpp_baseline": {
+    "device": "CPU",
+    "model": "PHC-lite step model (TorchScript float32)",
+    "backend": "libtorch_cpp",
+    "batch_size": 1,
+    "warmup_iters": 100,
+    "timing_iters": 10000,
+    "mean_us": 72.2071,
+    "median_us": 48.9,
+    "p99_us": 543.9,
+    "min_us": 31.3,
+    "torch_no_grad": true,
+    "new5_used": false,
+    "torch_num_threads": 8,
+    "torch_num_interop_threads": 8,
+    "hardware_concurrency": 8,
+    "cpu": "Intel64 Family 6 Model 189 Stepping 1, GenuineIntel",
+    "torchscript_model": "C:\\Users\\holbo\\00VS_projjects\\00_HFT_project\\n2ew_era\\06f_phc_lite_manual_hls\\models\\phc_stp_step_hls_seed2_torchscript.pt",
+    "raw_latency_csv": "n2ew_era\\06s2_pynq_z2_wrapper_bringup\\results\\cpu_baseline_timing_libtorch_controlled_20260808.csv",
+    "returncode": 0,
+    "log_path": "n2ew_era\\06s2_pynq_z2_wrapper_bringup\\results\\cpu_baseline_timing_libtorch_controlled_20260808.log"
+  },
+  "python_parity": {
+    "status": "cpu_trace_constant_forward_parity_controlled_completed",
+    "device": "CPU",
+    "backend": "python_torchscript_trace",
+    "model": "PHC-lite step model (TorchScript float32)",
+    "batch_size": 1,
+    "input": "torch.zeros(1, 32)",
+    "warmup_iters": 100,
+    "timing_iters": 10000,
+    "timed_region": "timed_model(x_cat) forward only",
+    "torch_threads": 8,
+    "torch_interop_threads": 8,
+    "torch_version": "2.12.1+cpu",
+    "step_model_checkpoint": "n2ew_era\\06e_phc_stp_step_hls4ml\\models\\phc_stp_step_hls_seed2.pt",
+    "raw_latency_csv": "n2ew_era\\06s2_pynq_z2_wrapper_bringup\\results\\cpu_trace_constant_forward_parity_controlled_20260808.csv",
+    "new5_used": false,
+    "mean_us": 66.69618,
+    "median_us": 43.3,
+    "p99_us": 457.0070000000002,
+    "min_us": 28.9,
+    "max_us": 2410.0,
+    "std_us": 111.54287223936633
+  }
+}

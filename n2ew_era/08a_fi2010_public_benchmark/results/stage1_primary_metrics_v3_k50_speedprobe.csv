@@ -1,0 +1,3 @@
+model,phase,split,horizon,primary_loss_mode,n_seeds,accuracy_mean,accuracy_std,macro_precision_mean,macro_precision_std,macro_recall_mean,macro_recall_std,macro_f1_mean,macro_f1_std,trainable_parameters,verification_level
+PHC-lite FI-2010,08a_stage1_v3_k50_speedprobe,val,50,raw,1,0.45847672612141355,0.0,0.469267442282499,0.0,0.446044221817258,0.0,0.43330718616571534,0.0,2132,stage1_v3_true_recurrent_software_measured
+PHC-lite FI-2010,08a_stage1_v3_k50_speedprobe,test,50,raw,1,0.533407891718284,0.0,0.5048603337967937,0.0,0.5008185034299008,0.0,0.5017842274798068,0.0,2132,stage1_v3_true_recurrent_software_measured

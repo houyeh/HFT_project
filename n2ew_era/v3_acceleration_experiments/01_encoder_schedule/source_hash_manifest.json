@@ -1,0 +1,51 @@
+{
+  "experiment": "01_encoder_schedule",
+  "tool": {
+    "name": "Vitis HLS",
+    "version": "2025.2",
+    "build": "6295257",
+    "part": "xc7z020-clg400-1",
+    "target_clock_ns": 10.0
+  },
+  "frozen_source_root": "n2ew_era/06u_phc_latency_breakthrough/variants/v3_diagonal16_unroll8_localpart_100mhz/hls_src",
+  "frozen_sources": {
+    "phc_diag_step_hls.cpp": "5AD20129443BB5718EEB7A754A933CBCAF7D3885CBC31F14EA6A56B9DFD306AD",
+    "phc_diag_step_hls.hpp": "AB6EA4F410A39507BE87AA0C8AE28765808572B2971C469498D8FA5C88F5EF1B",
+    "phc_diag_step_testbench.cpp": "8907A52B452F0002F1761C5355E79201797A76C2749062F98113E39B4410A0AF",
+    "phc_diag_weights.hpp": "60C29F2C4898AE4747E563648EB37E2C198027AAEB1AC13C9990960DF616CA5A"
+  },
+  "variant_cpp_sha256": {
+    "baseline": "5AD20129443BB5718EEB7A754A933CBCAF7D3885CBC31F14EA6A56B9DFD306AD",
+    "oc2": "4C682EF3FC186C5B48AFFCFE400F74A6FC9C5EAD2B1FDBC17168ECFA06A117B1",
+    "oc4": "A8BC1773C3365ADF903B3C6CC6F9A1AFCA57FA09C989B2F60E969A69D06FD526"
+  },
+  "model_provenance": {
+    "checkpoint": "n2ew_era/05f_phc_diagonal_ssm/models/phc_diagonal_ssm_seed2_best_val.pt",
+    "checkpoint_sha256": "E0CC36854AB036467EEA5E52BBF4CF23312B37344360ABA2FFA68623E165B242",
+    "selected_policy": "n2ew_era/05f_phc_diagonal_ssm/results/phc_diagonal_ssm_selected_policy.json",
+    "selected_policy_sha256": "2DB39BE2E6965CD186AE03D291371EF90073BB503680EBCCEFD61FEE6F4404CA",
+    "seed": 2,
+    "best_epoch": 157,
+    "threshold": 0.0,
+    "selection_split": "val",
+    "new3_used_for_selection": false,
+    "new4_used_for_selection": false,
+    "new5_used_for_selection": false
+  },
+  "test_inputs": {
+    "independent_vectors": {
+      "path": "n2ew_era/06u_phc_latency_breakthrough/results/v3_diagonal16_unroll8_localpart_100mhz/phc_diag_step_test_vectors.csv",
+      "rows": 25600,
+      "sha256": "C40930AF43C0060A55FC981AC0FF48FBB83411D464457E9EB899018212829CC3"
+    },
+    "closed_loop_replay": {
+      "path": "n2ew_era/06s2_pynq_z2_wrapper_bringup/results/demo_replay_input_features.csv",
+      "rows": 4096,
+      "sha256": "EE644144D9905B012BAB0704E567DBCDEDC9B14DC3AB3D7EB1DACF1C3AE7CF2A"
+    }
+  },
+  "bit_exact_output_sha256": {
+    "independent": "99F66AB6A019F5F179C3D4C9FB6BA95A78E182A743891A0F5EA7E9FF2E98D4FE",
+    "closed_loop_replay": "842C048B9BA89CCF4D3C03029D410E5FAC66395EB27348DFA1E4F98595E9CE19"
+  }
+}

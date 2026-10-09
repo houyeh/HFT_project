@@ -1,0 +1,3 @@
+candidate,adder_structure,csim_status,csim_vectors,csim_mismatches,csynth_latency_cycles,csynth_interval_cycles,csynth_estimated_clock_ns,csynth_dsp,csynth_lut,csynth_ff,csynth_bram18k,cosim_status,cosim_vectors,cosim_mismatches,cosim_latency_cycles,cosim_interval_cycles,routed_status,routed_clock_mhz,routed_wns_ns,routed_tns_ns,routed_lut,routed_ff,routed_dsp,routed_bram18k,derived_latency_us,verification_tier
+linear_chain,serial_8_term_accumulation,pass,25600,0,77,,25.506,50,11172,8640,0,not_run,0,,, ,not_run,,,,,,,,,csynth_only_timing_failed_estimate
+balanced_tree,explicit_16_to_8_to_4_to_2_to_1_and_8_to_4_to_2_to_1,pass,25600,0,18,19,8.248,184,18856,20598,0,pass,25600,0,18,19,met,100,0.331,0.000,8760,9052,96,0,0.180,core_level_routed

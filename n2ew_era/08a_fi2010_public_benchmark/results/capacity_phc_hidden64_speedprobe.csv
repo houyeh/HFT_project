@@ -1,0 +1,2 @@
+timestamp,cpu_count,torch_threads,hidden_dim,batch_size,trainable_parameters,single_batch_forward_backward_seconds,samples_per_second,train_windows_estimate,val_windows_estimate,batches_per_epoch_estimate,estimated_train_epoch_seconds,estimated_train_epoch_hours,estimated_60epoch_train_hours
+2026-08-05 13:11:53,8,2,64,512,23876,1.1047547000925988,463.4512982448366,203701,50851,398,439.6923706368543,0.12213676962134842,7.328206177280905

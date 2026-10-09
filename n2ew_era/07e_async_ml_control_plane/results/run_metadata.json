@@ -1,0 +1,61 @@
+{
+  "intervals_s": [
+    1,
+    2,
+    5,
+    10,
+    30,
+    60
+  ],
+  "modes": [
+    "enable",
+    "threshold",
+    "direction",
+    "combined"
+  ],
+  "sources": [
+    "phc",
+    "nonml"
+  ],
+  "aggregations": [
+    "mean",
+    "last"
+  ],
+  "q_grid": [
+    0.25,
+    0.5,
+    0.75
+  ],
+  "static_theta_grid": [
+    0.02,
+    0.05,
+    0.075,
+    0.1,
+    0.125,
+    0.15,
+    0.2,
+    0.25,
+    0.3,
+    0.4
+  ],
+  "selected_static_theta": 0.25,
+  "phc_threshold": 0.0,
+  "nonml_train_normalization": {
+    "volatility_past_50": {
+      "mean": 5731.955542468499,
+      "std": 4633.858884603334
+    },
+    "event_rate_past_50": {
+      "mean": 152.0363920656644,
+      "std": 49.14408467367982
+    }
+  },
+  "fill_salt": "05c3_stp_v2_conservative_l2_stress",
+  "matched_random_trials": 100,
+  "selection_split": "val",
+  "oos_diagnostic_splits": [
+    "new3",
+    "new4"
+  ],
+  "new5_used": false
+}

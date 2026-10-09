@@ -1,0 +1,26 @@
+[
+  {
+    "variant": "scratch",
+    "source_stage0_script": "C:\\Users\\holbo\\00VS_projjects\\00_HFT_project\\n2ew_era\\07c_tcn_streaming_manual_hls\\01_stage0_streaming_python_validation.py",
+    "source_checkpoint": "C:\\Users\\holbo\\00VS_projjects\\00_HFT_project\\n2ew_era\\07a_tcn_feedforward_phc_tradeoff\\models\\tcn_prepad_scratch_16feat_seed2_best_val.pt",
+    "source_07b_test_vectors": "C:\\Users\\holbo\\00VS_projjects\\00_HFT_project\\n2ew_era\\07b_tcn_prepad_manual_hls\\results\\tcn_prepad_scratch_test_vectors.csv",
+    "stage1_test_vectors": "C:\\Users\\holbo\\00VS_projjects\\00_HFT_project\\n2ew_era\\07c_tcn_streaming_manual_hls\\results\\stage1_block0_scratch_test_vectors.csv",
+    "sample_count": 200,
+    "input_events_per_sample": 252,
+    "valid_block0_outputs_per_sample": 248,
+    "channels": 16,
+    "new5_used": false
+  },
+  {
+    "variant": "distilled",
+    "source_stage0_script": "C:\\Users\\holbo\\00VS_projjects\\00_HFT_project\\n2ew_era\\07c_tcn_streaming_manual_hls\\01_stage0_streaming_python_validation.py",
+    "source_checkpoint": "C:\\Users\\holbo\\00VS_projjects\\00_HFT_project\\n2ew_era\\07a_tcn_feedforward_phc_tradeoff\\models\\tcn_prepad_distilled_16feat_seed1_best_val.pt",
+    "source_07b_test_vectors": "C:\\Users\\holbo\\00VS_projjects\\00_HFT_project\\n2ew_era\\07b_tcn_prepad_manual_hls\\results\\tcn_prepad_distilled_test_vectors.csv",
+    "stage1_test_vectors": "C:\\Users\\holbo\\00VS_projjects\\00_HFT_project\\n2ew_era\\07c_tcn_streaming_manual_hls\\results\\stage1_block0_distilled_test_vectors.csv",
+    "sample_count": 200,
+    "input_events_per_sample": 252,
+    "valid_block0_outputs_per_sample": 248,
+    "channels": 16,
+    "new5_used": false
+  }
+]

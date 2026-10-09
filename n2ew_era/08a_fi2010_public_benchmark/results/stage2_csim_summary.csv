@@ -1,0 +1,2 @@
+status,row_count,pass_rows,mismatches,max_abs_diff,mean_abs_diff_all_outputs,joint_sign_agreement,zero_sign_convention,source_csv,sign_agreement_logit_0,sign_agreement_logit_1,sign_agreement_logit_2
+pass,25600,25600,0,0.0079038175,0.0009986988776327205,0.9998046875,0 -> positive,results\fi2010_phc_stage2_csim_out.csv,1.0,0.9998828125,0.999921875

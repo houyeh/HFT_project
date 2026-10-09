@@ -1,0 +1,2 @@
+split_source,row_count,window_length,feature_dim,readout_dim,fast_full_window_max_abs_diff,csv_path,csv_size_bytes,new5_used
+validation_tail_of_train_cf7,25600,100,40,3,0.0,results\fi2010_phc_stage2_test_vectors.csv,19302491,False

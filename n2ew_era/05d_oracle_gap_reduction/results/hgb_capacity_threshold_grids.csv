@@ -1,0 +1,7 @@
+split,capacity_id,max_iter,threshold_selected_on_val,validation_policy_pnl_04b1,validation_selected_action_count_04b1,hgb_n_iter_04b1,threshold_source_path,threshold_source_row_type,threshold_source_split
+val,hgb_iter_40,40,-1.1014724969863892,53366940.0,1983267,40,C:\Users\holbo\00VS_projjects\00_HFT_project\n2ew_era\04b1_ml_completion_patch\results\txf_hgb_iteration_sweep.csv,validation_sweep,val
+val,hgb_iter_80,80,0.2531732097268104,54382565.0,1984327,80,C:\Users\holbo\00VS_projjects\00_HFT_project\n2ew_era\04b1_ml_completion_patch\results\txf_hgb_iteration_sweep.csv,validation_sweep,val
+val,hgb_iter_120,120,0.2241944037377834,54550215.0,1980301,98,C:\Users\holbo\00VS_projjects\00_HFT_project\n2ew_era\04b1_ml_completion_patch\results\txf_hgb_iteration_sweep.csv,validation_sweep,val
+val,hgb_iter_160,160,0.2241944037377834,54550215.0,1980301,98,C:\Users\holbo\00VS_projjects\00_HFT_project\n2ew_era\04b1_ml_completion_patch\results\txf_hgb_iteration_sweep.csv,validation_sweep,val
+val,hgb_iter_240,240,0.2241944037377834,54550215.0,1980301,98,C:\Users\holbo\00VS_projjects\00_HFT_project\n2ew_era\04b1_ml_completion_patch\results\txf_hgb_iteration_sweep.csv,validation_sweep,val
+val,hgb_iter_320,320,0.2241944037377834,54550215.0,1980301,98,C:\Users\holbo\00VS_projjects\00_HFT_project\n2ew_era\04b1_ml_completion_patch\results\txf_hgb_iteration_sweep.csv,validation_sweep,val

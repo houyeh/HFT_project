@@ -1,0 +1,6 @@
+ticker,level,zip_path,zip_size_bytes,zip_sha256,zip_member_count,source_url
+AAPL,10,data\raw\LOBSTER_SampleFile_AAPL_2012-06-21_10.zip,7318779,326839316d67d7819ca0541ffdf73cdb044d6ae4105cce0ef9c615e8848e9d43,3,https://php.lobsterdata.com/info/sample/LOBSTER_SampleFile_AAPL_2012-06-21_10.zip
+AMZN,10,data\raw\LOBSTER_SampleFile_AMZN_2012-06-21_10.zip,4814504,5cff62a609b27aef82285382ad646c4c2facc0a692a60bedda633de64c4aa54f,3,https://php.lobsterdata.com/info/sample/LOBSTER_SampleFile_AMZN_2012-06-21_10.zip
+GOOG,10,data\raw\LOBSTER_SampleFile_GOOG_2012-06-21_10.zip,2812466,2fa66b61c7c4d4cd3f19180aaa7f5937a26355f81b2ac8e4a84e36550e8dde4a,3,https://php.lobsterdata.com/info/sample/LOBSTER_SampleFile_GOOG_2012-06-21_10.zip
+INTC,10,data\raw\LOBSTER_SampleFile_INTC_2012-06-21_10.zip,8266754,327121717467df0050654ba8a76e490d4dfe5a454a166294ace59b7e0877dff6,3,https://php.lobsterdata.com/info/sample/LOBSTER_SampleFile_INTC_2012-06-21_10.zip
+MSFT,10,data\raw\LOBSTER_SampleFile_MSFT_2012-06-21_10.zip,8956947,0825e00ec83cb8ac8b53fd1efb7f2138b7848659e625c49621ebd9b55757be4c,3,https://php.lobsterdata.com/info/sample/LOBSTER_SampleFile_MSFT_2012-06-21_10.zip

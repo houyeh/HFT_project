@@ -33,45 +33,45 @@
             <header size="7" col0="Function" col1="Location" col2="Compile/Link" col3="Unroll/Inline" col4="Array/Struct" col5="Performance" col6="HW Transforms"/>
             <rows>
                 <row id="0" col0="tcn_prepad_infer" col1="tcn_prepad_hls_impl.hpp:134" col2="11960" col3="3490" col4="3514" col5="3636" col6="3821">
-                    <row id="7" col0="copy_and_prepad&lt;252&gt;" col1="tcn_prepad_hls_impl.hpp:21" col2="96" col3="120" col4="122" col5="90" col6="95"/>
+                    <row id="6" col0="copy_and_prepad&lt;252&gt;" col1="tcn_prepad_hls_impl.hpp:21" col2="96" col3="120" col4="122" col5="90" col6="95"/>
                     <row id="4" col0="tcn_block&lt;252, 1&gt;" col1="tcn_prepad_hls_impl.hpp:94" col2="2128" col3="613" col4="618" col5="612" col6="645">
-                        <row id="12" col0="conv1_relu&lt;252, 1&gt;" col1="tcn_prepad_hls_impl.hpp:41" col2="843" col3="300" col4="303" col5="300" col6="316">
-                            <row id="13" col0="relu_acc" col1="tcn_prepad_hls_impl.hpp:15" col2="134" col3="" col4="" col5="" col6=""/>
+                        <row id="13" col0="conv1_relu&lt;252, 1&gt;" col1="tcn_prepad_hls_impl.hpp:41" col2="843" col3="300" col4="303" col5="300" col6="316">
+                            <row id="7" col0="relu_acc" col1="tcn_prepad_hls_impl.hpp:15" col2="134" col3="" col4="" col5="" col6=""/>
                         </row>
-                        <row id="17" col0="conv2_relu_residual&lt;252, 1&gt;" col1="tcn_prepad_hls_impl.hpp:66" col2="1275" col3="308" col4="311" col5="308" col6="324">
-                            <row id="13" col0="relu_acc" col1="tcn_prepad_hls_impl.hpp:15" col2="268" col2_disp="  268 (2 calls)" col3="" col4="" col5="" col6=""/>
+                        <row id="8" col0="conv2_relu_residual&lt;252, 1&gt;" col1="tcn_prepad_hls_impl.hpp:66" col2="1275" col3="308" col4="311" col5="308" col6="324">
+                            <row id="7" col0="relu_acc" col1="tcn_prepad_hls_impl.hpp:15" col2="268" col2_disp="  268 (2 calls)" col3="" col4="" col5="" col6=""/>
                         </row>
                     </row>
-                    <row id="10" col0="tcn_block&lt;248, 2&gt;" col1="tcn_prepad_hls_impl.hpp:94" col2="2128" col3="615" col4="620" col5="614" col6="647">
-                        <row id="2" col0="conv1_relu&lt;248, 2&gt;" col1="tcn_prepad_hls_impl.hpp:41" col2="843" col3="301" col4="304" col5="301" col6="317">
-                            <row id="13" col0="relu_acc" col1="tcn_prepad_hls_impl.hpp:15" col2="134" col3="" col4="" col5="" col6=""/>
+                    <row id="2" col0="tcn_block&lt;248, 2&gt;" col1="tcn_prepad_hls_impl.hpp:94" col2="2128" col3="615" col4="620" col5="614" col6="647">
+                        <row id="12" col0="conv1_relu&lt;248, 2&gt;" col1="tcn_prepad_hls_impl.hpp:41" col2="843" col3="301" col4="304" col5="301" col6="317">
+                            <row id="7" col0="relu_acc" col1="tcn_prepad_hls_impl.hpp:15" col2="134" col3="" col4="" col5="" col6=""/>
                         </row>
                         <row id="18" col0="conv2_relu_residual&lt;248, 2&gt;" col1="tcn_prepad_hls_impl.hpp:66" col2="1275" col3="309" col4="312" col5="309" col6="325">
-                            <row id="13" col0="relu_acc" col1="tcn_prepad_hls_impl.hpp:15" col2="268" col2_disp="  268 (2 calls)" col3="" col4="" col5="" col6=""/>
+                            <row id="7" col0="relu_acc" col1="tcn_prepad_hls_impl.hpp:15" col2="268" col2_disp="  268 (2 calls)" col3="" col4="" col5="" col6=""/>
                         </row>
                     </row>
-                    <row id="16" col0="tcn_block&lt;240, 4&gt;" col1="tcn_prepad_hls_impl.hpp:94" col2="2128" col3="615" col4="620" col5="614" col6="647">
-                        <row id="11" col0="conv1_relu&lt;240, 4&gt;" col1="tcn_prepad_hls_impl.hpp:41" col2="843" col3="301" col4="304" col5="301" col6="317">
-                            <row id="13" col0="relu_acc" col1="tcn_prepad_hls_impl.hpp:15" col2="134" col3="" col4="" col5="" col6=""/>
+                    <row id="14" col0="tcn_block&lt;240, 4&gt;" col1="tcn_prepad_hls_impl.hpp:94" col2="2128" col3="615" col4="620" col5="614" col6="647">
+                        <row id="10" col0="conv1_relu&lt;240, 4&gt;" col1="tcn_prepad_hls_impl.hpp:41" col2="843" col3="301" col4="304" col5="301" col6="317">
+                            <row id="7" col0="relu_acc" col1="tcn_prepad_hls_impl.hpp:15" col2="134" col3="" col4="" col5="" col6=""/>
                         </row>
-                        <row id="5" col0="conv2_relu_residual&lt;240, 4&gt;" col1="tcn_prepad_hls_impl.hpp:66" col2="1275" col3="309" col4="312" col5="309" col6="325">
-                            <row id="13" col0="relu_acc" col1="tcn_prepad_hls_impl.hpp:15" col2="268" col2_disp="  268 (2 calls)" col3="" col4="" col5="" col6=""/>
-                        </row>
-                    </row>
-                    <row id="6" col0="tcn_block&lt;224, 8&gt;" col1="tcn_prepad_hls_impl.hpp:94" col2="2128" col3="615" col4="620" col5="614" col6="647">
-                        <row id="3" col0="conv1_relu&lt;224, 8&gt;" col1="tcn_prepad_hls_impl.hpp:41" col2="843" col3="301" col4="304" col5="301" col6="317">
-                            <row id="13" col0="relu_acc" col1="tcn_prepad_hls_impl.hpp:15" col2="134" col3="" col4="" col5="" col6=""/>
-                        </row>
-                        <row id="15" col0="conv2_relu_residual&lt;224, 8&gt;" col1="tcn_prepad_hls_impl.hpp:66" col2="1275" col3="309" col4="312" col5="309" col6="325">
-                            <row id="13" col0="relu_acc" col1="tcn_prepad_hls_impl.hpp:15" col2="268" col2_disp="  268 (2 calls)" col3="" col4="" col5="" col6=""/>
+                        <row id="16" col0="conv2_relu_residual&lt;240, 4&gt;" col1="tcn_prepad_hls_impl.hpp:66" col2="1275" col3="309" col4="312" col5="309" col6="325">
+                            <row id="7" col0="relu_acc" col1="tcn_prepad_hls_impl.hpp:15" col2="268" col2_disp="  268 (2 calls)" col3="" col4="" col5="" col6=""/>
                         </row>
                     </row>
-                    <row id="8" col0="tcn_block&lt;192, 16&gt;" col1="tcn_prepad_hls_impl.hpp:94" col2="2128" col3="615" col4="620" col5="614" col6="647">
-                        <row id="14" col0="conv1_relu&lt;192, 16&gt;" col1="tcn_prepad_hls_impl.hpp:41" col2="843" col3="301" col4="304" col5="301" col6="317">
-                            <row id="13" col0="relu_acc" col1="tcn_prepad_hls_impl.hpp:15" col2="134" col3="" col4="" col5="" col6=""/>
+                    <row id="3" col0="tcn_block&lt;224, 8&gt;" col1="tcn_prepad_hls_impl.hpp:94" col2="2128" col3="615" col4="620" col5="614" col6="647">
+                        <row id="9" col0="conv1_relu&lt;224, 8&gt;" col1="tcn_prepad_hls_impl.hpp:41" col2="843" col3="301" col4="304" col5="301" col6="317">
+                            <row id="7" col0="relu_acc" col1="tcn_prepad_hls_impl.hpp:15" col2="134" col3="" col4="" col5="" col6=""/>
                         </row>
-                        <row id="9" col0="conv2_relu_residual&lt;192, 16&gt;" col1="tcn_prepad_hls_impl.hpp:66" col2="1275" col3="309" col4="312" col5="309" col6="325">
-                            <row id="13" col0="relu_acc" col1="tcn_prepad_hls_impl.hpp:15" col2="268" col2_disp="  268 (2 calls)" col3="" col4="" col5="" col6=""/>
+                        <row id="11" col0="conv2_relu_residual&lt;224, 8&gt;" col1="tcn_prepad_hls_impl.hpp:66" col2="1275" col3="309" col4="312" col5="309" col6="325">
+                            <row id="7" col0="relu_acc" col1="tcn_prepad_hls_impl.hpp:15" col2="268" col2_disp="  268 (2 calls)" col3="" col4="" col5="" col6=""/>
+                        </row>
+                    </row>
+                    <row id="15" col0="tcn_block&lt;192, 16&gt;" col1="tcn_prepad_hls_impl.hpp:94" col2="2128" col3="615" col4="620" col5="614" col6="647">
+                        <row id="5" col0="conv1_relu&lt;192, 16&gt;" col1="tcn_prepad_hls_impl.hpp:41" col2="843" col3="301" col4="304" col5="301" col6="317">
+                            <row id="7" col0="relu_acc" col1="tcn_prepad_hls_impl.hpp:15" col2="134" col3="" col4="" col5="" col6=""/>
+                        </row>
+                        <row id="17" col0="conv2_relu_residual&lt;192, 16&gt;" col1="tcn_prepad_hls_impl.hpp:66" col2="1275" col3="309" col4="312" col5="309" col6="325">
+                            <row id="7" col0="relu_acc" col1="tcn_prepad_hls_impl.hpp:15" col2="268" col2_disp="  268 (2 calls)" col3="" col4="" col5="" col6=""/>
                         </row>
                     </row>
                     <row id="1" col0="global_average_readout" col1="tcn_prepad_hls_impl.hpp:105" col2="1172" col3="275" col4="276" col5="274" col6="287"/>

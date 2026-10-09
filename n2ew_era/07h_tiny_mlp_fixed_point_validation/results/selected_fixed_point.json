@@ -1,0 +1,16 @@
+{
+  "status": "no_format_cleared_gate",
+  "format": "ap_fixed_24_12",
+  "total_bits": 24,
+  "integer_bits": 12,
+  "fractional_bits": 12,
+  "accumulator": "ap_fixed<40,16>",
+  "rounding": "AP_TRN",
+  "overflow": "AP_WRAP",
+  "selection_split": "val",
+  "val_min_action_agreement": 0.999,
+  "val_min_pnl_retention": 0.99,
+  "new3_used_for_selection": false,
+  "new4_used_for_selection": false,
+  "new5_used": false
+}

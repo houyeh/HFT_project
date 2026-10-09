@@ -1,0 +1,438 @@
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved. Copyright 2022-2025 Advanced Micro Devices, Inc. All Rights Reserved.
+------------------------------------------------------------------------------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2025.2 (win64) Build 6299465 Fri Nov 14 19:35:11 GMT 2025
+| Date         : Sun Aug  9 12:37:49 2026
+| Host         : holb running 64-bit major release  (build 9200)
+| Command      : report_timing_summary -file n2ew_era/06s2_pynq_z2_wrapper_bringup/tcl/../results/hdmi_numeric_test_regpipe_bufio_timing_summary_routed.rpt
+| Design       : pynq_z2_hdmi_numeric_test_top_regpipe_bufio
+| Device       : 7z020-clg400
+| Speed File   : -1  PRODUCTION 1.12 2019-11-22
+| Design State : Routed
+------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+Timing Summary Report
+
+------------------------------------------------------------------------------------------------
+| Timer Settings
+| --------------
+------------------------------------------------------------------------------------------------
+
+  Enable Multi Corner Analysis               :  Yes
+  Enable Pessimism Removal                   :  Yes
+  Pessimism Removal Resolution               :  Nearest Common Node
+  Enable Input Delay Default Clock           :  No
+  Enable Preset / Clear Arcs                 :  No
+  Disable Flight Delays                      :  No
+  Ignore I/O Paths                           :  No
+  Timing Early Launch at Borrowing Latches   :  No
+  Borrow Time for Max Delay Exceptions       :  Yes
+  Merge Timing Exceptions                    :  Yes
+  Inter-SLR Compensation                     :  Conservative
+
+  Corner  Analyze    Analyze    
+  Name    Max Paths  Min Paths  
+  ------  ---------  ---------  
+  Slow    Yes        Yes        
+  Fast    Yes        Yes        
+
+
+------------------------------------------------------------------------------------------------
+| Report Methodology
+| ------------------
+------------------------------------------------------------------------------------------------
+
+No report available as report_methodology has not been run prior. Run report_methodology on the current design for the summary of methodology violations.
+
+
+
+check_timing report
+
+Table of Contents
+-----------------
+1. checking no_clock (0)
+2. checking constant_clock (0)
+3. checking pulse_width_clock (0)
+4. checking unconstrained_internal_endpoints (0)
+5. checking no_input_delay (2)
+6. checking no_output_delay (6)
+7. checking multiple_clock (0)
+8. checking generated_clocks (0)
+9. checking loops (0)
+10. checking partial_input_delay (0)
+11. checking partial_output_delay (0)
+12. checking latch_loops (0)
+
+1. checking no_clock (0)
+------------------------
+ There are 0 register/latch pins with no clock.
+
+
+2. checking constant_clock (0)
+------------------------------
+ There are 0 register/latch pins with constant_clock.
+
+
+3. checking pulse_width_clock (0)
+---------------------------------
+ There are 0 register/latch pins which need pulse_width check
+
+
+4. checking unconstrained_internal_endpoints (0)
+------------------------------------------------
+ There are 0 pins that are not constrained for maximum delay.
+
+ There are 0 pins that are not constrained for maximum delay due to constant clock.
+
+
+5. checking no_input_delay (2)
+------------------------------
+ There are 2 input ports with no input delay specified. (HIGH)
+
+ There are 0 input ports with no input delay but user has a false path constraint.
+
+
+6. checking no_output_delay (6)
+-------------------------------
+ There are 6 ports with no output delay specified. (HIGH)
+
+ There are 0 ports with no output delay but user has a false path constraint
+
+ There are 0 ports with no output delay but with a timing clock defined on it or propagating through it
+
+
+7. checking multiple_clock (0)
+------------------------------
+ There are 0 register/latch pins with multiple clocks.
+
+
+8. checking generated_clocks (0)
+--------------------------------
+ There are 0 generated clocks that are not connected to a clock source.
+
+
+9. checking loops (0)
+---------------------
+ There are 0 combinational loops in the design.
+
+
+10. checking partial_input_delay (0)
+------------------------------------
+ There are 0 input ports with partial input delay specified.
+
+
+11. checking partial_output_delay (0)
+-------------------------------------
+ There are 0 ports with partial output delay specified.
+
+
+12. checking latch_loops (0)
+----------------------------
+ There are 0 combinational latch loops in the design through latch input
+
+
+
+------------------------------------------------------------------------------------------------
+| Design Timing Summary
+| ---------------------
+------------------------------------------------------------------------------------------------
+
+    WNS(ns)      TNS(ns)  TNS Failing Endpoints  TNS Total Endpoints      WHS(ns)      THS(ns)  THS Failing Endpoints  THS Total Endpoints     WPWS(ns)     TPWS(ns)  TPWS Failing Endpoints  TPWS Total Endpoints  
+    -------      -------  ---------------------  -------------------      -------      -------  ---------------------  -------------------     --------     --------  ----------------------  --------------------  
+     26.731        0.000                      0                  165        0.122        0.000                      0                  165        2.000        0.000                       0                   108  
+
+
+All user specified timing constraints are met.
+
+
+------------------------------------------------------------------------------------------------
+| Clock Summary
+| -------------
+------------------------------------------------------------------------------------------------
+
+Clock             Waveform(ns)         Period(ns)      Frequency(MHz)
+-----             ------------         ----------      --------------
+sysclk_125mhz     {0.000 4.000}        8.000           125.000         
+  clk_serial_raw  {0.000 4.000}        8.000           125.000         
+    pixel_clk     {0.000 16.000}       40.000          25.000          
+  clkfb           {0.000 4.000}        8.000           125.000         
+
+
+------------------------------------------------------------------------------------------------
+| Intra Clock Table
+| -----------------
+------------------------------------------------------------------------------------------------
+
+Clock                 WNS(ns)      TNS(ns)  TNS Failing Endpoints  TNS Total Endpoints      WHS(ns)      THS(ns)  THS Failing Endpoints  THS Total Endpoints     WPWS(ns)     TPWS(ns)  TPWS Failing Endpoints  TPWS Total Endpoints  
+-----                 -------      -------  ---------------------  -------------------      -------      -------  ---------------------  -------------------     --------     --------  ----------------------  --------------------  
+sysclk_125mhz                                                                                                                                                       2.000        0.000                       0                     1  
+  clk_serial_raw                                                                                                                                                    6.333        0.000                       0                    11  
+    pixel_clk          26.731        0.000                      0                  165        0.122        0.000                      0                  165       15.020        0.000                       0                    93  
+  clkfb                                                                                                                                                             5.845        0.000                       0                     3  
+
+
+------------------------------------------------------------------------------------------------
+| Inter Clock Table
+| -----------------
+------------------------------------------------------------------------------------------------
+
+From Clock    To Clock          WNS(ns)      TNS(ns)  TNS Failing Endpoints  TNS Total Endpoints      WHS(ns)      THS(ns)  THS Failing Endpoints  THS Total Endpoints  
+----------    --------          -------      -------  ---------------------  -------------------      -------      -------  ---------------------  -------------------  
+
+
+------------------------------------------------------------------------------------------------
+| Other Path Groups Table
+| -----------------------
+------------------------------------------------------------------------------------------------
+
+Path Group    From Clock    To Clock          WNS(ns)      TNS(ns)  TNS Failing Endpoints  TNS Total Endpoints      WHS(ns)      THS(ns)  THS Failing Endpoints  THS Total Endpoints  
+----------    ----------    --------          -------      -------  ---------------------  -------------------      -------      -------  ---------------------  -------------------  
+
+
+------------------------------------------------------------------------------------------------
+| Timing Details
+| --------------
+------------------------------------------------------------------------------------------------
+
+
+---------------------------------------------------------------------------------------------------
+From Clock:  sysclk_125mhz
+  To Clock:  sysclk_125mhz
+
+Setup :           NA  Failing Endpoints,  Worst Slack           NA  ,  Total Violation           NA
+Hold  :           NA  Failing Endpoints,  Worst Slack           NA  ,  Total Violation           NA
+PW    :            0  Failing Endpoints,  Worst Slack        2.000ns,  Total Violation        0.000ns
+---------------------------------------------------------------------------------------------------
+
+
+Pulse Width Checks
+--------------------------------------------------------------------------------------
+Clock Name:         sysclk_125mhz
+Waveform(ns):       { 0.000 4.000 }
+Period(ns):         8.000
+Sources:            { sysclk }
+
+Check Type        Corner  Lib Pin            Reference Pin  Required(ns)  Actual(ns)  Slack(ns)  Location         Pin
+Min Period        n/a     MMCME2_ADV/CLKIN1  n/a            1.249         8.000       6.751      MMCME2_ADV_X1Y2  u_hdmi_clock/u_mmcm/CLKIN1
+Max Period        n/a     MMCME2_ADV/CLKIN1  n/a            100.000       8.000       92.000     MMCME2_ADV_X1Y2  u_hdmi_clock/u_mmcm/CLKIN1
+Low Pulse Width   Slow    MMCME2_ADV/CLKIN1  n/a            2.000         4.000       2.000      MMCME2_ADV_X1Y2  u_hdmi_clock/u_mmcm/CLKIN1
+High Pulse Width  Slow    MMCME2_ADV/CLKIN1  n/a            2.000         4.000       2.000      MMCME2_ADV_X1Y2  u_hdmi_clock/u_mmcm/CLKIN1
+
+
+
+---------------------------------------------------------------------------------------------------
+From Clock:  clk_serial_raw
+  To Clock:  clk_serial_raw
+
+Setup :           NA  Failing Endpoints,  Worst Slack           NA  ,  Total Violation           NA
+Hold  :           NA  Failing Endpoints,  Worst Slack           NA  ,  Total Violation           NA
+PW    :            0  Failing Endpoints,  Worst Slack        6.333ns,  Total Violation        0.000ns
+---------------------------------------------------------------------------------------------------
+
+
+Pulse Width Checks
+--------------------------------------------------------------------------------------
+Clock Name:         clk_serial_raw
+Waveform(ns):       { 0.000 4.000 }
+Period(ns):         8.000
+Sources:            { u_hdmi_clock/u_mmcm/CLKOUT0 }
+
+Check Type  Corner  Lib Pin             Reference Pin  Required(ns)  Actual(ns)  Slack(ns)  Location         Pin
+Min Period  n/a     OSERDESE2/CLK       n/a            1.667         8.000       6.333      OLOGIC_X1Y128    u_rgb2dvi/u_rgb2dvi/ClockSerializer/SerializerMaster/CLK
+Max Period  n/a     MMCME2_ADV/CLKOUT0  n/a            213.360       8.000       205.360    MMCME2_ADV_X1Y2  u_hdmi_clock/u_mmcm/CLKOUT0
+
+
+
+---------------------------------------------------------------------------------------------------
+From Clock:  pixel_clk
+  To Clock:  pixel_clk
+
+Setup :            0  Failing Endpoints,  Worst Slack       26.731ns,  Total Violation        0.000ns
+Hold  :            0  Failing Endpoints,  Worst Slack        0.122ns,  Total Violation        0.000ns
+PW    :            0  Failing Endpoints,  Worst Slack       15.020ns,  Total Violation        0.000ns
+---------------------------------------------------------------------------------------------------
+
+
+Max Delay Paths
+--------------------------------------------------------------------------------------
+Slack (MET) :             26.731ns  (required time - arrival time)
+  Source:                 u_timing/v_count_reg[1]/C
+                            (rising edge-triggered cell FDRE clocked by pixel_clk  {rise@0.000ns fall@16.000ns period=40.000ns})
+  Destination:            dvi_packed_color_reg[16]/D
+                            (rising edge-triggered cell FDRE clocked by pixel_clk  {rise@0.000ns fall@16.000ns period=40.000ns})
+  Path Group:             pixel_clk
+  Path Type:              Setup (Max at Slow Process Corner)
+  Requirement:            40.000ns  (pixel_clk rise@40.000ns - pixel_clk rise@0.000ns)
+  Data Path Delay:        13.258ns  (logic 1.988ns (14.994%)  route 11.270ns (85.006%))
+  Logic Levels:           10  (LUT2=1 LUT4=1 LUT5=1 LUT6=7)
+  Clock Path Skew:        0.029ns (DCD - SCD + CPR)
+    Destination Clock Delay (DCD):    -2.584ns = ( 37.416 - 40.000 ) 
+    Source Clock Delay      (SCD):    -2.124ns
+    Clock Pessimism Removal (CPR):    0.489ns
+  Clock Uncertainty:      0.069ns  ((TSJ^2 + DJ^2)^1/2) / 2 + PE
+    Total System Jitter     (TSJ):    0.071ns
+    Discrete Jitter          (DJ):    0.118ns
+    Phase Error              (PE):    0.000ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock pixel_clk rise edge)
+                                                      0.000     0.000 r  
+    H16                                               0.000     0.000 r  sysclk (IN)
+                         net (fo=0)                   0.000     0.000    sysclk
+    H16                  IBUF (Prop_ibuf_I_O)         1.451     1.451 r  sysclk_IBUF_inst/O
+                         net (fo=1, routed)           1.285     2.736    u_hdmi_clock/sysclk_IBUF
+    MMCME2_ADV_X1Y2      MMCME2_ADV (Prop_mmcme2_adv_CLKIN1_CLKOUT0)
+                                                     -7.759    -5.023 r  u_hdmi_clock/u_mmcm/CLKOUT0
+                         net (fo=2, routed)           1.063    -3.960    u_hdmi_clock/clk_serial_raw
+    BUFR_X1Y9            BUFR (Prop_bufr_I_O)         1.031    -2.929 r  u_hdmi_clock/u_pixel_buf/O
+                         net (fo=93, routed)          0.805    -2.124    u_timing/pixel_clk
+    SLICE_X108Y123       FDRE                                         r  u_timing/v_count_reg[1]/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X108Y123       FDRE (Prop_fdre_C_Q)         0.518    -1.606 r  u_timing/v_count_reg[1]/Q
+                         net (fo=70, routed)          2.647     1.041    u_timing/v_count[1]
+    SLICE_X98Y122        LUT2 (Prop_lut2_I1_O)        0.124     1.165 r  u_timing/v_count[5]_i_2/O
+                         net (fo=18, routed)          1.732     2.897    u_timing/v_count[5]_i_2_n_0
+    SLICE_X106Y124       LUT6 (Prop_lut6_I1_O)        0.124     3.021 f  u_timing/dvi_packed_color[16]_i_409/O
+                         net (fo=2, routed)           0.680     3.701    u_timing/dvi_packed_color[16]_i_409_n_0
+    SLICE_X106Y124       LUT5 (Prop_lut5_I2_O)        0.124     3.825 r  u_timing/dvi_packed_color[16]_i_202/O
+                         net (fo=22, routed)          0.966     4.791    u_timing/dvi_packed_color[16]_i_202_n_0
+    SLICE_X105Y124       LUT4 (Prop_lut4_I1_O)        0.152     4.943 r  u_timing/dvi_packed_color[16]_i_400/O
+                         net (fo=4, routed)           1.546     6.490    u_timing/dvi_packed_color[16]_i_400_n_0
+    SLICE_X107Y119       LUT6 (Prop_lut6_I4_O)        0.326     6.816 f  u_timing/dvi_packed_color[16]_i_197/O
+                         net (fo=3, routed)           1.147     7.963    u_timing/dvi_packed_color[16]_i_197_n_0
+    SLICE_X107Y115       LUT6 (Prop_lut6_I1_O)        0.124     8.087 f  u_timing/dvi_packed_color[16]_i_207/O
+                         net (fo=1, routed)           0.670     8.757    u_timing/dvi_packed_color[16]_i_207_n_0
+    SLICE_X107Y115       LUT6 (Prop_lut6_I4_O)        0.124     8.881 f  u_timing/dvi_packed_color[16]_i_63/O
+                         net (fo=1, routed)           0.608     9.489    u_timing/dvi_packed_color[16]_i_63_n_0
+    SLICE_X103Y118       LUT6 (Prop_lut6_I5_O)        0.124     9.613 f  u_timing/dvi_packed_color[16]_i_15/O
+                         net (fo=2, routed)           0.582    10.195    u_timing/dvi_packed_color[16]_i_15_n_0
+    SLICE_X103Y119       LUT6 (Prop_lut6_I5_O)        0.124    10.319 r  u_timing/dvi_packed_color[16]_i_4/O
+                         net (fo=1, routed)           0.691    11.010    u_timing/dvi_packed_color[16]_i_4_n_0
+    SLICE_X105Y122       LUT6 (Prop_lut6_I3_O)        0.124    11.134 r  u_timing/dvi_packed_color[16]_i_1/O
+                         net (fo=1, routed)           0.000    11.134    u_timing_n_31
+    SLICE_X105Y122       FDRE                                         r  dvi_packed_color_reg[16]/D
+  -------------------------------------------------------------------    -------------------
+
+                         (clock pixel_clk rise edge)
+                                                     40.000    40.000 r  
+    H16                                               0.000    40.000 r  sysclk (IN)
+                         net (fo=0)                   0.000    40.000    sysclk
+    H16                  IBUF (Prop_ibuf_I_O)         1.380    41.380 r  sysclk_IBUF_inst/O
+                         net (fo=1, routed)           1.162    42.542    u_hdmi_clock/sysclk_IBUF
+    MMCME2_ADV_X1Y2      MMCME2_ADV (Prop_mmcme2_adv_CLKIN1_CLKOUT0)
+                                                     -7.814    34.728 r  u_hdmi_clock/u_mmcm/CLKOUT0
+                         net (fo=2, routed)           0.960    35.688    u_hdmi_clock/clk_serial_raw
+    BUFR_X1Y9            BUFR (Prop_bufr_I_O)         0.918    36.606 r  u_hdmi_clock/u_pixel_buf/O
+                         net (fo=93, routed)          0.810    37.416    pixel_clk
+    SLICE_X105Y122       FDRE                                         r  dvi_packed_color_reg[16]/C
+                         clock pessimism              0.489    37.905    
+                         clock uncertainty           -0.069    37.836    
+    SLICE_X105Y122       FDRE (Setup_fdre_C_D)        0.029    37.865    dvi_packed_color_reg[16]
+  -------------------------------------------------------------------
+                         required time                         37.865    
+                         arrival time                         -11.134    
+  -------------------------------------------------------------------
+                         slack                                 26.731    
+
+
+
+
+
+Min Delay Paths
+--------------------------------------------------------------------------------------
+Slack (MET) :             0.122ns  (arrival time - required time)
+  Source:                 u_rgb2dvi/u_rgb2dvi/LockLostReset/SyncAsyncx/oSyncStages_reg[0]/C
+                            (rising edge-triggered cell FDPE clocked by pixel_clk  {rise@0.000ns fall@16.000ns period=40.000ns})
+  Destination:            u_rgb2dvi/u_rgb2dvi/LockLostReset/SyncAsyncx/oSyncStages_reg[1]/D
+                            (rising edge-triggered cell FDPE clocked by pixel_clk  {rise@0.000ns fall@16.000ns period=40.000ns})
+  Path Group:             pixel_clk
+  Path Type:              Hold (Min at Fast Process Corner)
+  Requirement:            0.000ns  (pixel_clk rise@0.000ns - pixel_clk rise@0.000ns)
+  Data Path Delay:        0.197ns  (logic 0.141ns (71.611%)  route 0.056ns (28.389%))
+  Logic Levels:           0  
+  Clock Path Skew:        0.000ns (DCD - SCD - CPR)
+    Destination Clock Delay (DCD):    -1.401ns
+    Source Clock Delay      (SCD):    -1.068ns
+    Clock Pessimism Removal (CPR):    -0.333ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock pixel_clk rise edge)
+                                                      0.000     0.000 r  
+    H16                                               0.000     0.000 r  sysclk (IN)
+                         net (fo=0)                   0.000     0.000    sysclk
+    H16                  IBUF (Prop_ibuf_I_O)         0.219     0.219 r  sysclk_IBUF_inst/O
+                         net (fo=1, routed)           0.440     0.659    u_hdmi_clock/sysclk_IBUF
+    MMCME2_ADV_X1Y2      MMCME2_ADV (Prop_mmcme2_adv_CLKIN1_CLKOUT0)
+                                                     -2.613    -1.954 r  u_hdmi_clock/u_mmcm/CLKOUT0
+                         net (fo=2, routed)           0.363    -1.591    u_hdmi_clock/clk_serial_raw
+    BUFR_X1Y9            BUFR (Prop_bufr_I_O)         0.270    -1.321 r  u_hdmi_clock/u_pixel_buf/O
+                         net (fo=93, routed)          0.253    -1.068    u_rgb2dvi/u_rgb2dvi/LockLostReset/SyncAsyncx/pixel_clk
+    SLICE_X113Y122       FDPE                                         r  u_rgb2dvi/u_rgb2dvi/LockLostReset/SyncAsyncx/oSyncStages_reg[0]/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X113Y122       FDPE (Prop_fdpe_C_Q)         0.141    -0.927 r  u_rgb2dvi/u_rgb2dvi/LockLostReset/SyncAsyncx/oSyncStages_reg[0]/Q
+                         net (fo=1, routed)           0.056    -0.871    u_rgb2dvi/u_rgb2dvi/LockLostReset/SyncAsyncx/oSyncStages[0]
+    SLICE_X113Y122       FDPE                                         r  u_rgb2dvi/u_rgb2dvi/LockLostReset/SyncAsyncx/oSyncStages_reg[1]/D
+  -------------------------------------------------------------------    -------------------
+
+                         (clock pixel_clk rise edge)
+                                                      0.000     0.000 r  
+    H16                                               0.000     0.000 r  sysclk (IN)
+                         net (fo=0)                   0.000     0.000    sysclk
+    H16                  IBUF (Prop_ibuf_I_O)         0.406     0.406 r  sysclk_IBUF_inst/O
+                         net (fo=1, routed)           0.480     0.886    u_hdmi_clock/sysclk_IBUF
+    MMCME2_ADV_X1Y2      MMCME2_ADV (Prop_mmcme2_adv_CLKIN1_CLKOUT0)
+                                                     -3.407    -2.521 r  u_hdmi_clock/u_mmcm/CLKOUT0
+                         net (fo=2, routed)           0.402    -2.119    u_hdmi_clock/clk_serial_raw
+    BUFR_X1Y9            BUFR (Prop_bufr_I_O)         0.431    -1.688 r  u_hdmi_clock/u_pixel_buf/O
+                         net (fo=93, routed)          0.287    -1.401    u_rgb2dvi/u_rgb2dvi/LockLostReset/SyncAsyncx/pixel_clk
+    SLICE_X113Y122       FDPE                                         r  u_rgb2dvi/u_rgb2dvi/LockLostReset/SyncAsyncx/oSyncStages_reg[1]/C
+                         clock pessimism              0.333    -1.068    
+    SLICE_X113Y122       FDPE (Hold_fdpe_C_D)         0.075    -0.993    u_rgb2dvi/u_rgb2dvi/LockLostReset/SyncAsyncx/oSyncStages_reg[1]
+  -------------------------------------------------------------------
+                         required time                          0.993    
+                         arrival time                          -0.871    
+  -------------------------------------------------------------------
+                         slack                                  0.122    
+
+
+
+
+
+Pulse Width Checks
+--------------------------------------------------------------------------------------
+Clock Name:         pixel_clk
+Waveform(ns):       { 0.000 16.000 }
+Period(ns):         40.000
+Sources:            { u_hdmi_clock/u_pixel_buf/O }
+
+Check Type        Corner  Lib Pin           Reference Pin  Required(ns)  Actual(ns)  Slack(ns)  Location        Pin
+Min Period        n/a     OSERDESE2/CLKDIV  n/a            1.667         40.000      38.333     OLOGIC_X1Y128   u_rgb2dvi/u_rgb2dvi/ClockSerializer/SerializerMaster/CLKDIV
+Low Pulse Width   Slow    SRL16E/CLK        n/a            0.980         24.000      23.020     SLICE_X112Y123  u_rgb2dvi/u_rgb2dvi/DataEncoders[0].DataEncoder/pC0_1_reg_srl2/CLK
+High Pulse Width  Slow    SRL16E/CLK        n/a            0.980         16.000      15.020     SLICE_X112Y123  u_rgb2dvi/u_rgb2dvi/DataEncoders[0].DataEncoder/pC0_1_reg_srl2/CLK
+
+
+
+---------------------------------------------------------------------------------------------------
+From Clock:  clkfb
+  To Clock:  clkfb
+
+Setup :           NA  Failing Endpoints,  Worst Slack           NA  ,  Total Violation           NA
+Hold  :           NA  Failing Endpoints,  Worst Slack           NA  ,  Total Violation           NA
+PW    :            0  Failing Endpoints,  Worst Slack        5.845ns,  Total Violation        0.000ns
+---------------------------------------------------------------------------------------------------
+
+
+Pulse Width Checks
+--------------------------------------------------------------------------------------
+Clock Name:         clkfb
+Waveform(ns):       { 0.000 4.000 }
+Period(ns):         8.000
+Sources:            { u_hdmi_clock/u_mmcm/CLKFBOUT }
+
+Check Type  Corner  Lib Pin             Reference Pin  Required(ns)  Actual(ns)  Slack(ns)  Location         Pin
+Min Period  n/a     BUFG/I              n/a            2.155         8.000       5.845      BUFGCTRL_X0Y16   u_hdmi_clock/u_clkfb_buf/I
+Max Period  n/a     MMCME2_ADV/CLKFBIN  n/a            100.000       8.000       92.000     MMCME2_ADV_X1Y2  u_hdmi_clock/u_mmcm/CLKFBIN
+
+
+

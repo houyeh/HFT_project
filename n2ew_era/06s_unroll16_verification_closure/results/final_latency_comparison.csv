@@ -1,0 +1,11 @@
+implementation,source,verification_level,mean_us,median_us,p99_us,max_us,jitter_p99_minus_median_us,deadline_miss_rate_gt_83p16_pct,deadline_miss_rate_gt_25p733_pct,concurrency,round
+FPGA PHC v8 baseline,n2ew_era/06f_phc_lite_manual_hls/PHC_HLS_SYNTHESIS_REPORT.md,routed_pnr_met_plus_csim_cosim,83.16,83.16,83.16,83.16,0.0,0.0,100.0,,
+FPGA PHC unroll16 seed2 @90MHz,n2ew_era/06l_phc_lite_pipeline_budget_sweep/AUDIT_unroll16_pnr_timing.md,routed_pnr_met_06l_full_cosim_plus_06s_cosim1000,25.733,25.733,25.733,25.733,0.0,0.0,0.0,,
+CPU LibTorch C++ N=1,n2ew_era/06s_unroll16_verification_closure/results/cpu/cpu_concurrent_benchmark_06s_summary.csv,host_benchmark,898.6778099999999,73.6,21019.38200000001,332993.1,20945.78200000001,41.13,100.0,1,1
+CPU LibTorch C++ N=1,n2ew_era/06s_unroll16_verification_closure/results/cpu/cpu_concurrent_benchmark_06s_summary.csv,host_benchmark,992.1510599999999,96.7,20191.72600000013,306264.2,20095.02600000013,71.09,100.0,1,2
+CPU LibTorch C++ N=4,n2ew_era/06s_unroll16_verification_closure/results/cpu/cpu_concurrent_benchmark_06s_summary.csv,host_benchmark,110.187375,83.4,646.3180000000036,18518.2,562.9180000000036,50.3775,100.0,4,1
+CPU LibTorch C++ N=4,n2ew_era/06s_unroll16_verification_closure/results/cpu/cpu_concurrent_benchmark_06s_summary.csv,host_benchmark,242.0649,87.8,6299.416000000003,81096.2,6211.616000000003,59.8125,100.0,4,2
+CPU LibTorch C++ N=8,n2ew_era/06f_phc_lite_manual_hls/results/cpu_concurrent_benchmark_summary.csv,host_benchmark,79.867154,63.8,202.6,32380.6,138.8,8.3812,100.0,8,1
+CPU LibTorch C++ N=8,n2ew_era/06f_phc_lite_manual_hls/results/cpu_concurrent_benchmark_summary.csv,host_benchmark,90.1404,69.9,220.2,26408.2,150.29999999999998,9.375,100.0,8,2
+CPU LibTorch C++ N=16,n2ew_era/06s_unroll16_verification_closure/results/cpu/cpu_concurrent_benchmark_06s_summary.csv,host_benchmark,1226.4278225,66.8,35629.52500000021,462182.1,35562.72500000021,25.868125,100.0,16,1
+CPU LibTorch C++ N=16,n2ew_era/06s_unroll16_verification_closure/results/cpu/cpu_concurrent_benchmark_06s_summary.csv,host_benchmark,1282.259014375,79.5,28999.447000000135,262372.3,28919.947000000135,40.2325,100.0,16,2

@@ -1,0 +1,3 @@
+model,phase,split,horizon,primary_loss_mode,n_seeds,accuracy_mean,accuracy_std,macro_precision_mean,macro_precision_std,macro_recall_mean,macro_recall_std,macro_f1_mean,macro_f1_std,trainable_parameters,verification_level
+PHC-lite FI-2010,08a_stage1_v3_hidden64_capacity,val,50,raw,1,0.6002241843818213,0.0,0.5968043711162677,0.0,0.5955210096198384,0.0,0.5955624694885067,0.0,23876,stage1_v3_true_recurrent_software_measured
+PHC-lite FI-2010,08a_stage1_v3_hidden64_capacity,test,50,raw,1,0.6558270245469144,0.0,0.6364737777356723,0.0,0.6417918857996555,0.0,0.6387084417376688,0.0,23876,stage1_v3_true_recurrent_software_measured

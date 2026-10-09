@@ -1,0 +1,2 @@
+horizon,seed,loss_mode,epoch,train_loss,val_loss,val_accuracy,val_macro_precision,val_macro_recall,val_macro_f1,elapsed_seconds,phase,max_epochs,patience,current_lr,fast_exact_final_step,fast_equiv_max_abs_diff
+10,0,raw,1,1.0844738214826053,1.0419008706195552,0.6009911309512104,0.30041835938377126,0.3259846425659992,0.27262318863844054,942.2776501178741,08a_stage1_v3_bench,1,10,0.001,False,0.0

@@ -1,0 +1,40 @@
+{
+  "status": "ready",
+  "scope": "software visualization only; no RTL/bitstream/threshold/checkpoint changes; no FPGA readback",
+  "source_csv": "n2ew_era\\06s2_pynq_z2_wrapper_bringup\\results\\demo_replay_seed2_90_hls_csim_sequential_out.csv",
+  "bram_mem": "n2ew_era\\06s2_pynq_z2_wrapper_bringup\\bram\\demo_replay_x_readout_q24_12.mem",
+  "bram_manifest": "n2ew_era\\06s2_pynq_z2_wrapper_bringup\\results\\bram_expected_from_hls_csim_manifest.json",
+  "replay_csv": "n2ew_era\\06s2_pynq_z2_wrapper_bringup\\results\\demo_replay_input_features.csv",
+  "metadata_json": "n2ew_era\\06s2_pynq_z2_wrapper_bringup\\results\\demo_replay_metadata.json",
+  "row_count": 4096,
+  "fpga_latency_us": 25.733,
+  "fpga_playback_total_us": 105376.63500000001,
+  "fpga_playback_total_ms": 105.37663500000001,
+  "source_vs_bram_readout_lsb_match_count": 4096,
+  "source_vs_bram_readout_lsb_mismatch_count": 0,
+  "source_vs_bram_decision_match_rate": 1.0,
+  "max_source_grid_residual_lsb": 2.0480001694522798e-07,
+  "decision_counts": {
+    "bid": 1430,
+    "ask": 1701,
+    "no_quote": 965
+  },
+  "decision_rates": {
+    "bid": 0.34912109375,
+    "ask": 0.415283203125,
+    "no_quote": 0.235595703125
+  },
+  "timestamp_first_us": 36063805000.0,
+  "timestamp_last_us": 36078368000.0,
+  "timestamp_rel_last_us": 14563000.0,
+  "session_id": "NEW4_20260112_TXFA6",
+  "symbol": "TXFA6",
+  "source_group": "NEW4",
+  "bram_manifest_source": {
+    "status": "updated_from_hls_csim",
+    "csim_output": "n2ew_era\\06s2_pynq_z2_wrapper_bringup\\results\\demo_replay_seed2_90_hls_csim_sequential_out.csv",
+    "row_count": 4096,
+    "max_abs_diff_vs_python_ref": 0.02173280716,
+    "source": "HLS CSim DUT output; input feature packing uses AP_TRN bit-drop semantics (floor for negative values) to match ap_fixed casts"
+  }
+}

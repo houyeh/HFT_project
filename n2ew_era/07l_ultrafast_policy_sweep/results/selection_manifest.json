@@ -1,0 +1,22 @@
+{
+  "status": "complete",
+  "threshold": 0.0,
+  "boundary_weight_scale": 6.112879753112793,
+  "feature_selection": "ANOVA F score against frozen PHC actions on train only",
+  "candidate_selection": "maximum corrected sequential excess PnL on val within each family",
+  "champions": [
+    {
+      "family": "qat_mlp",
+      "candidate_id": "qat_h8_q12_6",
+      "corrected_sequential_excess_pnl": 136990.0
+    },
+    {
+      "family": "lut_policy",
+      "candidate_id": "lut_score_mean_f2_b16",
+      "corrected_sequential_excess_pnl": 109805.0
+    }
+  ],
+  "new3_used_for_selection": false,
+  "new4_used_for_selection": false,
+  "new5_used": false
+}

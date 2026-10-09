@@ -1,0 +1,5 @@
+policy_id,session_code,session_id,start_inventory,end_inventory,fill_count,forced_count,terminal_event_fill,same_index_close_scheduled
+phc_eventwise_reference,0,NEW4_20260102_TXFA6,0,0,1484,0,0,0
+phc_eventwise_reference,1,NEW4_20260105_TXFA6,0,1,235,0,1,1
+phc_eventwise_reference,2,NEW4_20260109_TXFA6,1,1,1087,1091,0,0
+phc_eventwise_reference,3,NEW4_20260112_TXFA6,1,1,1431,1498,0,0

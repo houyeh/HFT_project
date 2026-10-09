@@ -1,0 +1,27 @@
+{
+  "teacher": "05c4_phc_stp_cosine_lr seed2 frozen score cache from 07D",
+  "fit_split": "train",
+  "selection_split": "val",
+  "oos_diagnostic_splits": [
+    "new3",
+    "new4"
+  ],
+  "new5_used": false,
+  "budgets_per_output": [
+    2,
+    4,
+    6,
+    8,
+    12,
+    16
+  ],
+  "variants": [
+    "base_uniform",
+    "base_boundary_weighted",
+    "interaction_boundary_weighted"
+  ],
+  "ridge_alpha": 1.0,
+  "boundary_weight_gain": 4.0,
+  "phc_threshold": 0.0,
+  "static_queue_theta": 0.25
+}

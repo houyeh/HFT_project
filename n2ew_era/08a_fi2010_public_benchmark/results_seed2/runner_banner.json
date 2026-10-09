@@ -1,0 +1,43 @@
+{
+  "seed": 2,
+  "resolved_RESULTS": "C:\\Users\\holbo\\00VS_projjects\\00_HFT_project\\n2ew_era\\08a_fi2010_public_benchmark\\results_seed2",
+  "resolved_MODELS": "C:\\Users\\holbo\\00VS_projjects\\00_HFT_project\\n2ew_era\\08a_fi2010_public_benchmark\\models_seed2",
+  "shared_results_untouched": "C:\\Users\\holbo\\00VS_projjects\\00_HFT_project\\n2ew_era\\08a_fi2010_public_benchmark\\results",
+  "fixed_recipe": {
+    "max_epochs": 120,
+    "patience": 10,
+    "batch_size": 512,
+    "eval_batch_size": 1024,
+    "lr": 0.001,
+    "hidden_dim": 64,
+    "torch_threads": 2,
+    "device": "cpu",
+    "output_suffix": "_v3_hidden64_capacity",
+    "phase_label": "08a_stage1_v3_hidden64_capacity"
+  },
+  "argv": [
+    "--seeds",
+    "2",
+    "--max-epochs",
+    "120",
+    "--patience",
+    "10",
+    "--batch-size",
+    "512",
+    "--eval-batch-size",
+    "1024",
+    "--lr",
+    "0.001",
+    "--hidden-dim",
+    "64",
+    "--torch-threads",
+    "2",
+    "--device",
+    "cpu",
+    "--output-suffix",
+    "_v3_hidden64_capacity",
+    "--phase-label",
+    "08a_stage1_v3_hidden64_capacity"
+  ],
+  "started_iso": "2026-10-02T15:44:42-05:00"
+}

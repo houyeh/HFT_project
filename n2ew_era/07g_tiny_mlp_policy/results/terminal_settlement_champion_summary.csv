@@ -1,0 +1,4 @@
+split,policy_id,objective,width,seed,parameter_count,legacy_sequential_excess_pnl,corrected_sequential_excess_pnl,pnl_correction,legacy_forced_no_quote_count,corrected_forced_no_quote_count,corrected_terminal_immediate_settlement_count,corrected_final_inventory,phc_eventwise_reference,queue_theta_val_tuned,tiny_mlp_direct_action_h8_seed1,retention_vs_phc_pct,delta_vs_static
+val,tiny_mlp_direct_action_h8_seed1,direct_action,8.0,1.0,163.0,139400.0,139400.0,0.0,0,0,0,0,171835.0,113850.0,139400.0,81.12433439054907,25550.0
+new3,tiny_mlp_direct_action_h8_seed1,direct_action,8.0,1.0,163.0,406195.0,471655.0,65460.0,2056,0,1,0,611095.0,350955.0,471655.0,77.18194388761158,120700.0
+new4,tiny_mlp_direct_action_h8_seed1,direct_action,8.0,1.0,163.0,94770.0,153970.0,59200.0,2199,0,1,0,219310.0,115875.0,153970.0,70.20655692854864,38095.0

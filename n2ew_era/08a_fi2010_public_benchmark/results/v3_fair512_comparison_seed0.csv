@@ -1,0 +1,4 @@
+run,batch,epochs,status,val macro-F1,test macro-F1,source
+v2 k=50 seed0 raw baseline,512,15 / 25,convergence_closed,36.65%,42.44%,results/stage1_metrics_v2.csv
+v3 speedprobe k=50 seed0 raw,128,1 / 1,1_epoch_speedprobe_not_converged,43.33%,50.18%,results/stage1_metrics_v3_k50_speedprobe.csv
+v3 fair512 k=50 seed0 raw,512,22 / 30,partial_wall_clock_stop_not_converged,57.22%,62.31%,results/stage1_metrics_v3_fair512.csv

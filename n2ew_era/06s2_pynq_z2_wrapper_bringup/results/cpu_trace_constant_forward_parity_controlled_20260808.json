@@ -1,0 +1,23 @@
+{
+  "status": "cpu_trace_constant_forward_parity_controlled_completed",
+  "device": "CPU",
+  "backend": "python_torchscript_trace",
+  "model": "PHC-lite step model (TorchScript float32)",
+  "batch_size": 1,
+  "input": "torch.zeros(1, 32)",
+  "warmup_iters": 100,
+  "timing_iters": 10000,
+  "timed_region": "timed_model(x_cat) forward only",
+  "torch_threads": 8,
+  "torch_interop_threads": 8,
+  "torch_version": "2.12.1+cpu",
+  "step_model_checkpoint": "n2ew_era\\06e_phc_stp_step_hls4ml\\models\\phc_stp_step_hls_seed2.pt",
+  "raw_latency_csv": "n2ew_era\\06s2_pynq_z2_wrapper_bringup\\results\\cpu_trace_constant_forward_parity_controlled_20260808.csv",
+  "new5_used": false,
+  "mean_us": 66.69618,
+  "median_us": 43.3,
+  "p99_us": 457.0070000000002,
+  "min_us": 28.9,
+  "max_us": 2410.0,
+  "std_us": 111.54287223936633
+}

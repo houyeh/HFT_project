@@ -1,0 +1,20 @@
+{
+  "source_checkpoint": "n2ew_era/05e_phc_hidden8_ablation/models/phc_stp_v2_seed1_best_val.pt",
+  "source_phase": "05e",
+  "source_seed": 1,
+  "source_best_epoch": 196,
+  "feature_dim": 16,
+  "hidden_dim": 8,
+  "input_dim": 24,
+  "output_dim": 10,
+  "mtl_steps": 1,
+  "dropout": 0.0,
+  "phase": "06u_v2_hidden8_unroll8",
+  "new5_used": false,
+  "new_training": false,
+  "seed_selection_rule": "median val action_pnl among 05E hidden8 seeds",
+  "alpha_source_formula": "raw PHCLiteSTP.alpha, because source step uses z + self.alpha * message",
+  "alpha_raw_value": 0.44473060965538025,
+  "decay_formula": "sigmoid(PHCLiteSTP.decay_param)",
+  "step_checkpoint": "n2ew_era/06u_phc_latency_breakthrough/variants/v2_hidden8_unroll8_100mhz/models/phc_stp_step_hls_hidden8_seed1.pt"
+}

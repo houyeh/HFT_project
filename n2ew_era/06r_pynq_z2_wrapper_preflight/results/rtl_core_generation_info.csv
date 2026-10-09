@@ -1,0 +1,3 @@
+design,rtl_path,hls_syn_clock_ns,hls_syn_latency_cycles,hls_syn_mem,hls_syn_dsp,hls_syn_ff,hls_syn_lut
+06f_v8_frozen_100mhz,n2ew_era\06f_phc_lite_manual_hls\hls_component\hls_component\hls\impl\verilog\phc_step.v,7.147000,8316,6,0,14518,24836
+06l_unroll16_90mhz,n2ew_era\06l_phc_lite_pipeline_budget_sweep\pnr_unroll16_90mhz\hls_component\hls_component\hls\impl\verilog\phc_step.v,8.222700,2316,0,0,35774,36792

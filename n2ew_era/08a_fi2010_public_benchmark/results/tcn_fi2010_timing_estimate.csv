@@ -1,0 +1,2 @@
+timestamp,cpu_count,torch_threads,device,timing_horizon,timing_seed,train_samples,train_seconds,train_samples_per_second,eval_samples,eval_seconds,eval_samples_per_second,estimated_epoch_seconds,estimated_combo_seconds_max_epochs,estimated_all_15_seconds_max_epochs,max_epochs,patience
+2026-08-05 02:22:34,8,2,cpu,50,0,24576,40.16821160004474,611.8270896574501,12288,3.125023999949917,3932.129801306144,345.8710148919116,20787.734798764126,311816.0219814619,60,10

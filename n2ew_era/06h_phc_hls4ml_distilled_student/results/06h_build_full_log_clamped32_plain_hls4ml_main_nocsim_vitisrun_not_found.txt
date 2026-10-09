@@ -1,0 +1,24 @@
+[06H upgrade build] keras_distilled_student_clamped32_plain_hls4ml_main_nocsim hls_model.build(csim=False, synth=True) start
+[06H upgrade build] python_executable=C:\Users\holbo\00VS_projjects\00_HFT_project\.h6\Scripts\python.exe
+[06H upgrade build] tensorflow=2.21.0
+[06H upgrade build] keras=3.15.1
+[06H upgrade build] hls4ml=1.4.0.dev32+gb90fb067
+[06H upgrade build] settings64_applied=True
+[06H upgrade build] post_patch_vitis_run=
+[06H upgrade build] post_patch_clang_tidy=
+'vitis-run' is not recognized as an internal or external command,
+operable program or batch file.
+
+[06H upgrade build] exception propagated to Python
+Exception: Build failed for phc_distilled_student_keras_clamped32_plain_hls4ml_main. See logs for details.
+Traceback (most recent call last):
+  File "C:\Users\holbo\00VS_projjects\00_HFT_project\n2ew_era\06h_phc_hls4ml_distilled_student\03_build_clamped32_plain_upgrade_nocsim.py", line 528, in main
+    hls_model.build(csim=False, synth=True)
+    ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\holbo\00VS_projjects\00_HFT_project\.h6\Lib\site-packages\hls4ml\model\graph.py", line 1010, in build
+    return self.config.backend.build(self, **kwargs)
+           ~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^
+  File "C:\Users\holbo\00VS_projjects\00_HFT_project\.h6\Lib\site-packages\hls4ml\backends\vitis\vitis_backend.py", line 159, in build
+    raise Exception(f'Build failed for {model.config.get_project_name()}. See logs for details.')
+Exception: Build failed for phc_distilled_student_keras_clamped32_plain_hls4ml_main. See logs for details.
+

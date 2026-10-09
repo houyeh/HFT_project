@@ -1,0 +1,31 @@
+metric,lobster_any_l2,txf_06p,txf_note
+all_event_flow: same_timestamp_rate,0.0739847123558937,0.6787408532129297,TXF same-timestamp rate is a 1ms-resolution batch indicator.
+all_event_flow: min_nonzero_dt_us,0.169,1000.0,
+all_event_flow: p50_dt_us,145.432,0.0,
+all_event_flow: p90_dt_us,113249.48660000002,34000.0,
+all_event_flow: p99_dt_us,1044330.7839999979,414000.0,
+all_event_flow: p999_dt_us,2877536.011328028,1442000.0,
+all_event_flow: P(dt < 23.16us),0.28703155830220456,N/A below 1ms timestamp resolution,N/A expected for sub-1ms TXF thresholds.
+all_event_flow: P(dt < 25.733us),0.2987396102527175,N/A below 1ms timestamp resolution,N/A expected for sub-1ms TXF thresholds.
+all_event_flow: P(dt < 51.0us),0.3725443007691196,N/A below 1ms timestamp resolution,N/A expected for sub-1ms TXF thresholds.
+all_event_flow: P(dt < 74.54us),0.4166671798868231,N/A below 1ms timestamp resolution,N/A expected for sub-1ms TXF thresholds.
+all_event_flow: P(dt < 83.16us),0.4342017807949859,N/A below 1ms timestamp resolution,N/A expected for sub-1ms TXF thresholds.
+all_event_flow: P(dt < 636.7us),0.6317743284119468,N/A below 1ms timestamp resolution,N/A expected for sub-1ms TXF thresholds.
+all_event_flow: P(dt < 646.318us),0.6351956908456526,N/A below 1ms timestamp resolution,N/A expected for sub-1ms TXF thresholds.
+all_event_flow: P(dt < 1000.0us),0.6731300823599916,0.6787408532129297,N/A expected for sub-1ms TXF thresholds.
+all_event_flow: P(dt < 6299.416us),0.7738504065887993,0.8500225479429827,N/A expected for sub-1ms TXF thresholds.
+peak10_all_event_flow: same_timestamp_rate,0.0874448926557579,0.719999352092363,TXF same-timestamp rate is a 1ms-resolution batch indicator.
+peak10_all_event_flow: min_nonzero_dt_us,0.169,1000.0,
+peak10_all_event_flow: p50_dt_us,46.121,0.0,
+peak10_all_event_flow: p90_dt_us,6748.320599999998,9000.0,
+peak10_all_event_flow: p99_dt_us,218382.8394399999,109000.0,
+peak10_all_event_flow: p999_dt_us,997843.3004439875,340000.0,
+peak10_all_event_flow: P(dt < 23.16us),0.4027477488705155,N/A below 1ms timestamp resolution,N/A expected for sub-1ms TXF thresholds.
+peak10_all_event_flow: P(dt < 25.733us),0.4189396394172592,N/A below 1ms timestamp resolution,N/A expected for sub-1ms TXF thresholds.
+peak10_all_event_flow: P(dt < 51.0us),0.5105599460967155,N/A below 1ms timestamp resolution,N/A expected for sub-1ms TXF thresholds.
+peak10_all_event_flow: P(dt < 74.54us),0.5596469913782083,N/A below 1ms timestamp resolution,N/A expected for sub-1ms TXF thresholds.
+peak10_all_event_flow: P(dt < 83.16us),0.5765400105651723,N/A below 1ms timestamp resolution,N/A expected for sub-1ms TXF thresholds.
+peak10_all_event_flow: P(dt < 636.7us),0.7689483633229317,N/A below 1ms timestamp resolution,N/A expected for sub-1ms TXF thresholds.
+peak10_all_event_flow: P(dt < 646.318us),0.7716901622485646,N/A below 1ms timestamp resolution,N/A expected for sub-1ms TXF thresholds.
+peak10_all_event_flow: P(dt < 1000.0us),0.8087414338884739,0.719999352092363,N/A expected for sub-1ms TXF thresholds.
+peak10_all_event_flow: P(dt < 6299.416us),0.897581347405221,0.9014616628002567,N/A expected for sub-1ms TXF thresholds.

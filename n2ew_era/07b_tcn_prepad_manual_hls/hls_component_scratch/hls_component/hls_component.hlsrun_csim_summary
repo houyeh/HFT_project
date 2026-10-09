@@ -9,34 +9,34 @@
 <ENTRY>
 {
  "type": "ET_CmdStep",
- "dateTimestamp": "06/24/26 12:43:57",
- "timestampMillis": "1782276237340",
+ "dateTimestamp": "07/28/26 14:09:10",
+ "timestampMillis": "1785218950882",
  "buildStep": {
-  "cmdId": "581cd69c-f206-4565-b728-126f41e31061",
+  "cmdId": "9556a082-7e5d-49a3-8f18-6d639d580710",
   "name": "vitis-run",
   "logFile": "C:/Users\\holbo\\00VS_projjects\\00_HFT_project\\n2ew_era\\07b_tcn_prepad_manual_hls\\hls_component_scratch\\hls_component\\logs\\hls_component.steps.log",
-  "commandLine": "C:/AMDDesignTools/2025.2/Vitis/bin/unwrapped/win64.o/vitis-run.exe  --mode hls --csim --config C:\\Users\\holbo\\00VS_projjects\\00_HFT_project\\n2ew_era\\07b_tcn_prepad_manual_hls\\hls_component_scratch\\hls_component\\..\\hls_config.cfg --work_dir C:/Users/holbo/00VS_projjects/00_HFT_project/n2ew_era/07b_tcn_prepad_manual_hls/hls_component_scratch/hls_component ",
+  "commandLine": "C:/AMDDesignTools/2025.2/Vitis/bin/unwrapped/win64.o/vitis-run.exe  --mode hls --csim --config hls_config.cfg --work_dir hls_component ",
   "args": [
    "--mode",
    "hls",
    "--csim",
    "--config",
-   "C:\\Users\\holbo\\00VS_projjects\\00_HFT_project\\n2ew_era\\07b_tcn_prepad_manual_hls\\hls_component_scratch\\hls_component\\..\\hls_config.cfg",
+   "hls_config.cfg",
    "--work_dir",
-   "C:/Users/holbo/00VS_projjects/00_HFT_project/n2ew_era/07b_tcn_prepad_manual_hls/hls_component_scratch/hls_component"
+   "hls_component"
   ],
   "iniFiles": [],
-  "cwd": "C:\\Users\\holbo\\00VS_projjects\\00_HFT_project\\n2ew_era\\07b_tcn_prepad_manual_hls\\hls_component_scratch\\hls_component"
+  "cwd": "C:\\Users\\holbo\\00VS_projjects\\00_HFT_project\\n2ew_era\\07b_tcn_prepad_manual_hls\\hls_component_scratch"
  }
 }
 </ENTRY>
 <ENTRY>
 {
  "type": "ET_Status",
- "dateTimestamp": "06/24/26 12:43:57",
- "timestampMillis": "1782276237341",
+ "dateTimestamp": "07/28/26 14:09:10",
+ "timestampMillis": "1785218950885",
  "status": {
-  "cmdId": "581cd69c-f206-4565-b728-126f41e31061",
+  "cmdId": "9556a082-7e5d-49a3-8f18-6d639d580710",
   "state": "CS_RUNNING"
  }
 }
@@ -44,8 +44,8 @@
 <ENTRY>
 {
  "type": "ET_FlowMetaData",
- "dateTimestamp": "06/24/26 12:44:02",
- "timestampMillis": "1782276242777",
+ "dateTimestamp": "07/28/26 14:10:10",
+ "timestampMillis": "1785219010759",
  "buildSummary": {
   "hardwarePlatform": "",
   "hardwareDsa": "",
@@ -83,77 +83,27 @@
 <ENTRY>
 {
  "type": "ET_SubCmdStep",
- "dateTimestamp": "06/24/26 12:44:02",
- "timestampMillis": "1782276242780",
+ "dateTimestamp": "07/28/26 14:10:10",
+ "timestampMillis": "1785219010763",
  "buildStep": {
-  "cmdId": "1f659a7e-c313-4f32-91b3-eb4561af8a50",
+  "cmdId": "bd8f2156-3d09-4ae3-a9de-2687520aed82",
   "name": "",
   "logFile": "C:/Users\\holbo\\00VS_projjects\\00_HFT_project\\n2ew_era\\07b_tcn_prepad_manual_hls\\hls_component_scratch\\hls_component\\hls\\hls.log",
   "commandLine": "",
   "args": [],
   "iniFiles": [],
-  "cwd": "C:\\Users\\holbo\\00VS_projjects\\00_HFT_project\\n2ew_era\\07b_tcn_prepad_manual_hls\\hls_component_scratch\\hls_component"
+  "cwd": "C:\\Users\\holbo\\00VS_projjects\\00_HFT_project\\n2ew_era\\07b_tcn_prepad_manual_hls\\hls_component_scratch"
  }
 }
 </ENTRY>
 <ENTRY>
 {
  "type": "ET_Status",
- "dateTimestamp": "06/24/26 12:44:02",
- "timestampMillis": "1782276242782",
+ "dateTimestamp": "07/28/26 14:10:10",
+ "timestampMillis": "1785219010764",
  "status": {
-  "cmdId": "1f659a7e-c313-4f32-91b3-eb4561af8a50",
+  "cmdId": "bd8f2156-3d09-4ae3-a9de-2687520aed82",
   "state": "CS_RUNNING"
- }
-}
-</ENTRY>
-<ENTRY>
-{
- "type": "ET_Status",
- "dateTimestamp": "06/24/26 12:53:25",
- "timestampMillis": "1782276805535",
- "status": {
-  "cmdId": "1f659a7e-c313-4f32-91b3-eb4561af8a50",
-  "state": "CS_PASSED"
- }
-}
-</ENTRY>
-<ENTRY>
-{
- "type": "ET_Status",
- "dateTimestamp": "06/24/26 12:53:25",
- "timestampMillis": "1782276805632",
- "status": {
-  "cmdId": "581cd69c-f206-4565-b728-126f41e31061",
-  "state": "CS_PASSED"
- }
-}
-</ENTRY>
-<ENTRY>
-{
- "type": "ET_Report",
- "dateTimestamp": "06/24/26 12:53:25",
- "timestampMillis": "1782276805634",
- "report": {
-  "path": "",
-  "name": "",
-  "fileType": "HTML",
-  "reportType": "GLOBAL_RULECHECK_GUIDANCE",
-  "cmdId": ""
- }
-}
-</ENTRY>
-<ENTRY>
-{
- "type": "ET_Report",
- "dateTimestamp": "06/24/26 12:53:25",
- "timestampMillis": "1782276805634",
- "report": {
-  "path": "",
-  "name": "",
-  "fileType": "BINARY_PROTOBUF",
-  "reportType": "GLOBAL_RULECHECK_GUIDANCE",
-  "cmdId": ""
  }
 }
 </ENTRY>

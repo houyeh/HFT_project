@@ -1,0 +1,7 @@
+split,student_policy_id,comparator,session_count,corrected_total_difference,mean_session_difference,bootstrap_ci_low,bootstrap_ci_high,bootstrap_probability_difference_le_zero,n_bootstrap
+val,tiny_mlp_direct_action_h8_seed1,queue_theta_val_tuned,6,25550.0,4258.333333333333,2203.854166666667,6373.333333333333,0.0,10000
+val,tiny_mlp_direct_action_h8_seed1,phc_eventwise_reference,6,-32435.0,-5405.833333333333,-7885.0,-2813.3333333333335,1.0,10000
+new3,tiny_mlp_direct_action_h8_seed1,queue_theta_val_tuned,6,120700.0,20116.666666666668,11196.666666666666,28625.0,0.0,10000
+new3,tiny_mlp_direct_action_h8_seed1,phc_eventwise_reference,6,-139440.0,-23240.0,-31799.166666666668,-13552.5,1.0,10000
+new4,tiny_mlp_direct_action_h8_seed1,queue_theta_val_tuned,4,38095.0,9523.75,840.0,19683.75,0.0195,10000
+new4,tiny_mlp_direct_action_h8_seed1,phc_eventwise_reference,4,-65340.0,-16335.0,-30032.5,-2637.5,1.0,10000

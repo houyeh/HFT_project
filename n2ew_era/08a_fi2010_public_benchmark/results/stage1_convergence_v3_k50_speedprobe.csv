@@ -1,0 +1,2 @@
+phase,horizon,seed,loss_mode,best_epoch,final_epoch,max_epochs,patience,best_epoch_distance_to_max,early_stop,max_epoch_hit,convergence_closed,convergence_status,checkpoint
+08a_stage1_v3_k50_speedprobe,50,0,raw,1,1,1,10,0,False,True,False,max_epoch_boundary_not_closed,models\phc_fi2010_h50_seed0_raw_v3_k50_speedprobe.pt

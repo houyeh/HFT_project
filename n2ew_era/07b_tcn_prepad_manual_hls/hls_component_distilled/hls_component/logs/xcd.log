@@ -188,3 +188,28 @@
 06/24/26 11:53:37: Socket received request to stop server.
 06/24/26 11:53:37: Dispatch Server: do_await_stop
 06/24/26 11:53:37: SERVER: destructor for server bound to port 56833
+07/28/26 15:52:14: Running xcd server. This server was built by gradle.
+07/28/26 15:52:14: Server was asked to start on port: '64600'
+07/28/26 15:52:14: Server is using token UUID: 'a3afbadb-515f-4035-acaa-b13118007635'
+07/28/26 15:52:14: SESSION_MGR: creating session with session uuid: '6d04a3e9-ade5-4ab9-8d63-1f78fcd2ec76' and name 'default'
+07/28/26 15:52:14: Attempting to start server on port '64600'
+07/28/26 15:52:14: Running Dispatch Server
+07/28/26 15:52:14: Version 2.2.0
+07/28/26 15:52:16: Dispatch Server: Accepted socket connection from client
+07/28/26 15:52:16: Starting Socket connection
+07/28/26 15:52:16: EXCHANGE_TOKEN received, server token: a3afbadb-515f-4035-acaa-b13118007635, passed token: a3afbadb-515f-4035-acaa-b13118007635
+07/28/26 15:52:17: DISPATCH_HANDLER: Adding handler from function makeHandler in library xv_system_diagram
+07/28/26 15:52:17: SESSION_MGR: creating session with session uuid: '211e9619-10b6-4af9-81e4-1412252078ba' and name 'v++_compile_hls_component'
+07/28/26 15:52:17: KERNEL_SVC: creating session with uuid: '211e9619-10b6-4af9-81e4-1412252078ba' and name 'v++_compile_hls_component'
+07/28/26 15:52:17: GUIDANCE_SMGR: creating guidance session with uuid: '211e9619-10b6-4af9-81e4-1412252078ba' and name 'v++_compile_hls_component'
+07/28/26 15:52:17: SYSTEM_DIAGRAM: creating session with uuid: '211e9619-10b6-4af9-81e4-1412252078ba' and name 'v++_compile_hls_component'
+07/28/26 15:52:58: Dispatch Server: Accepted socket connection from client
+07/28/26 15:52:58: Starting Socket connection
+07/28/26 15:56:02: SESSION_MGR: closing session for UUID '211e9619-10b6-4af9-81e4-1412252078ba' with name 'v++_compile_hls_component'
+07/28/26 15:56:02: KERNEL_SVC: closing session for UUID '211e9619-10b6-4af9-81e4-1412252078ba' with name 'v++_compile_hls_component'
+07/28/26 15:56:02: GUIDANCE_SMGR: closing session for UUID '211e9619-10b6-4af9-81e4-1412252078ba' with name 'v++_compile_hls_component'
+07/28/26 15:56:02: SYSTEM_DIAGRAM: closing session for UUID '211e9619-10b6-4af9-81e4-1412252078ba' with name 'v++_compile_hls_component'
+07/28/26 15:56:02: STOP_SERVER received, server token: a3afbadb-515f-4035-acaa-b13118007635, passed token: a3afbadb-515f-4035-acaa-b13118007635
+07/28/26 15:56:02: Socket received request to stop server.
+07/28/26 15:56:02: Dispatch Server: do_await_stop
+07/28/26 15:56:02: SERVER: destructor for server bound to port 64600

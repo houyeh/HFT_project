@@ -1,0 +1,26 @@
+[
+  {
+    "variant": "scratch",
+    "short_root": "C:\\tmp\\07c2_tcn_streaming_closure_shortpath\\scratch",
+    "component": "C:\\tmp\\07c2_tcn_streaming_closure_shortpath\\scratch\\hls_component_stage2_resource_scratch_shared_u1",
+    "hls_config": "C:\\tmp\\07c2_tcn_streaming_closure_shortpath\\scratch\\hls_component_stage2_resource_scratch_shared_u1\\hls_config.cfg",
+    "csynth_tcl": "C:\\tmp\\07c2_tcn_streaming_closure_shortpath\\scratch\\hls_component_stage2_resource_scratch_shared_u1\\run_csynth_only.tcl",
+    "subset_vectors": "C:\\tmp\\07c2_tcn_streaming_closure_shortpath\\scratch\\results\\stage2_streaming_scratch_test_vectors_first4_windows.csv",
+    "tb_summary": "C:\\tmp\\07c2_tcn_streaming_closure_shortpath\\scratch\\results\\stage2_closure_scratch_shared_u1_event1008_tb_summary.csv",
+    "streaming_top_event_vectors": 1008,
+    "readout_decision_rows": 4,
+    "new5_used": false
+  },
+  {
+    "variant": "distilled",
+    "short_root": "C:\\tmp\\07c2_tcn_streaming_closure_shortpath\\distilled",
+    "component": "C:\\tmp\\07c2_tcn_streaming_closure_shortpath\\distilled\\hls_component_stage2_resource_distilled_shared_u1",
+    "hls_config": "C:\\tmp\\07c2_tcn_streaming_closure_shortpath\\distilled\\hls_component_stage2_resource_distilled_shared_u1\\hls_config.cfg",
+    "csynth_tcl": "C:\\tmp\\07c2_tcn_streaming_closure_shortpath\\distilled\\hls_component_stage2_resource_distilled_shared_u1\\run_csynth_only.tcl",
+    "subset_vectors": "C:\\tmp\\07c2_tcn_streaming_closure_shortpath\\distilled\\results\\stage2_streaming_distilled_test_vectors_first4_windows.csv",
+    "tb_summary": "C:\\tmp\\07c2_tcn_streaming_closure_shortpath\\distilled\\results\\stage2_closure_distilled_shared_u1_event1008_tb_summary.csv",
+    "streaming_top_event_vectors": 1008,
+    "readout_decision_rows": 4,
+    "new5_used": false
+  }
+]

@@ -4,40 +4,40 @@ INFO: [HLS 200-2176] Writing Vitis IDE component file C:/Users/holbo/00VS_projje
 INFO: [HLS 200-10] Creating and opening component 'C:/Users/holbo/00VS_projjects/00_HFT_project/n2ew_era/07b_tcn_prepad_manual_hls/hls_component_scratch/hls_component'.
 INFO: [HLS 200-1505] Using default flow_target 'vivado'
 Resolution: For help on HLS 200-1505 see docs.amd.com/access/sources/dita/topic?Doc_Version=2025.2%20English&url=ug1448-hls-guidance&resourceid=200-1505.html
-INFO: [HLS 200-2174] Applying component config ini file ../hls_config.cfg
-INFO: [HLS 200-1465] Applying config ini 'syn.file=C:/Users/holbo/00VS_projjects/00_HFT_project/n2ew_era/07b_tcn_prepad_manual_hls/hls_src/tcn_prepad_hls_scratch.cpp' from ../hls_config.cfg(8)
+INFO: [HLS 200-2174] Applying component config ini file hls_config.cfg
+INFO: [HLS 200-1465] Applying config ini 'syn.file=C:/Users/holbo/00VS_projjects/00_HFT_project/n2ew_era/07b_tcn_prepad_manual_hls/hls_src/tcn_prepad_hls_scratch.cpp' from hls_config.cfg(8)
 INFO: [HLS 200-10] Adding design file 'C:/Users/holbo/00VS_projjects/00_HFT_project/n2ew_era/07b_tcn_prepad_manual_hls/hls_src/tcn_prepad_hls_scratch.cpp' to the project
-INFO: [HLS 200-1465] Applying config ini 'syn.file=C:/Users/holbo/00VS_projjects/00_HFT_project/n2ew_era/07b_tcn_prepad_manual_hls/hls_src/tcn_prepad_hls.hpp' from ../hls_config.cfg(9)
+INFO: [HLS 200-1465] Applying config ini 'syn.file=C:/Users/holbo/00VS_projjects/00_HFT_project/n2ew_era/07b_tcn_prepad_manual_hls/hls_src/tcn_prepad_hls.hpp' from hls_config.cfg(9)
 INFO: [HLS 200-10] Adding design file 'C:/Users/holbo/00VS_projjects/00_HFT_project/n2ew_era/07b_tcn_prepad_manual_hls/hls_src/tcn_prepad_hls.hpp' to the project
-INFO: [HLS 200-1465] Applying config ini 'syn.file=C:/Users/holbo/00VS_projjects/00_HFT_project/n2ew_era/07b_tcn_prepad_manual_hls/hls_src/tcn_prepad_hls_impl.hpp' from ../hls_config.cfg(10)
+INFO: [HLS 200-1465] Applying config ini 'syn.file=C:/Users/holbo/00VS_projjects/00_HFT_project/n2ew_era/07b_tcn_prepad_manual_hls/hls_src/tcn_prepad_hls_impl.hpp' from hls_config.cfg(10)
 INFO: [HLS 200-10] Adding design file 'C:/Users/holbo/00VS_projjects/00_HFT_project/n2ew_era/07b_tcn_prepad_manual_hls/hls_src/tcn_prepad_hls_impl.hpp' to the project
-INFO: [HLS 200-1465] Applying config ini 'syn.file=C:/Users/holbo/00VS_projjects/00_HFT_project/n2ew_era/07b_tcn_prepad_manual_hls/hls_src/tcn_weights_scratch.hpp' from ../hls_config.cfg(11)
+INFO: [HLS 200-1465] Applying config ini 'syn.file=C:/Users/holbo/00VS_projjects/00_HFT_project/n2ew_era/07b_tcn_prepad_manual_hls/hls_src/tcn_weights_scratch.hpp' from hls_config.cfg(11)
 INFO: [HLS 200-10] Adding design file 'C:/Users/holbo/00VS_projjects/00_HFT_project/n2ew_era/07b_tcn_prepad_manual_hls/hls_src/tcn_weights_scratch.hpp' to the project
-INFO: [HLS 200-1465] Applying config ini 'tb.file=C:/Users/holbo/00VS_projjects/00_HFT_project/n2ew_era/07b_tcn_prepad_manual_hls/hls_src/tcn_prepad_testbench.cpp' from ../hls_config.cfg(12)
+INFO: [HLS 200-1465] Applying config ini 'tb.file=C:/Users/holbo/00VS_projjects/00_HFT_project/n2ew_era/07b_tcn_prepad_manual_hls/hls_src/tcn_prepad_testbench.cpp' from hls_config.cfg(12)
 INFO: [HLS 200-10] Adding test bench file 'C:/Users/holbo/00VS_projjects/00_HFT_project/n2ew_era/07b_tcn_prepad_manual_hls/hls_src/tcn_prepad_testbench.cpp' to the project
-INFO: [HLS 200-1465] Applying config ini 'syn.top=tcn_prepad_infer' from ../hls_config.cfg(7)
-INFO: [HLS 200-1465] Applying config ini 'flow_target=vivado' from ../hls_config.cfg(4)
+INFO: [HLS 200-1465] Applying config ini 'syn.top=tcn_prepad_infer' from hls_config.cfg(7)
+INFO: [HLS 200-1465] Applying config ini 'flow_target=vivado' from hls_config.cfg(4)
 INFO: [HLS 200-1505] Using flow_target 'vivado'
 Resolution: For help on HLS 200-1505 see docs.amd.com/access/sources/dita/topic?Doc_Version=2025.2%20English&url=ug1448-hls-guidance&resourceid=200-1505.html
-INFO: [HLS 200-1465] Applying config ini 'part=xc7z020clg400-1' from ../hls_config.cfg(1)
+INFO: [HLS 200-1465] Applying config ini 'part=xc7z020clg400-1' from hls_config.cfg(1)
 INFO: [HLS 200-1611] Setting target device to 'xc7z020-clg400-1'
-INFO: [HLS 200-1465] Applying config ini 'clock=10ns' from ../hls_config.cfg(13)
+INFO: [HLS 200-1465] Applying config ini 'clock=10ns' from hls_config.cfg(13)
 INFO: [SYN 201-201] Setting up clock 'default' with a period of 10ns.
-INFO: [HLS 200-1465] Applying config ini 'cosim.argv=C:/Users/holbo/00VS_projjects/00_HFT_project/n2ew_era/07b_tcn_prepad_manual_hls/results/tcn_prepad_scratch_test_vectors.csv C:/Users/holbo/00VS_projjects/00_HFT_project/n2ew_era/07b_tcn_prepad_manual_hls/results/tcn_prepad_scratch_cosim_out.csv' from ../hls_config.cfg(15)
-INFO: [HLS 200-1465] Applying config ini 'csim.argv=C:/Users/holbo/00VS_projjects/00_HFT_project/n2ew_era/07b_tcn_prepad_manual_hls/results/tcn_prepad_scratch_test_vectors.csv C:/Users/holbo/00VS_projjects/00_HFT_project/n2ew_era/07b_tcn_prepad_manual_hls/results/tcn_prepad_scratch_csim_out.csv' from ../hls_config.cfg(14)
-INFO: [HLS 200-1465] Applying config ini 'package.output.format=ip_catalog' from ../hls_config.cfg(5)
+INFO: [HLS 200-1465] Applying config ini 'cosim.argv=C:/Users/holbo/00VS_projjects/00_HFT_project/n2ew_era/07b_tcn_prepad_manual_hls/results/tcn_prepad_scratch_test_vectors.csv C:/Users/holbo/00VS_projjects/00_HFT_project/n2ew_era/07b_tcn_prepad_manual_hls/results/tcn_prepad_scratch_cosim_out.csv' from hls_config.cfg(15)
+INFO: [HLS 200-1465] Applying config ini 'csim.argv=C:/Users/holbo/00VS_projjects/00_HFT_project/n2ew_era/07b_tcn_prepad_manual_hls/results/tcn_prepad_scratch_test_vectors.csv C:/Users/holbo/00VS_projjects/00_HFT_project/n2ew_era/07b_tcn_prepad_manual_hls/results/tcn_prepad_scratch_csim_out.csv' from hls_config.cfg(14)
+INFO: [HLS 200-1465] Applying config ini 'package.output.format=ip_catalog' from hls_config.cfg(5)
 INFO: [HLS 200-2176] Writing Vitis IDE component file C:/Users/holbo/00VS_projjects/00_HFT_project/n2ew_era/07b_tcn_prepad_manual_hls/hls_component_scratch/hls_component/vitis-comp.json
-INFO: [HLS 200-111] Finished File checks and directory preparation: CPU user time: 2 seconds. CPU system time: 1 seconds. Elapsed time: 5.668 seconds; current allocated memory: 136.391 MB.
+INFO: [HLS 200-111] Finished File checks and directory preparation: CPU user time: 1 seconds. CPU system time: 3 seconds. Elapsed time: 24.74 seconds; current allocated memory: 134.410 MB.
 INFO: [HLS 200-2191] C-Synthesis will use clang-16 as the compiler
-INFO: [HLS 200-10] Analyzing design file 'C:/Users/holbo/00VS_projjects/00_HFT_project/n2ew_era/07b_tcn_prepad_manual_hls/hls_src/tcn_prepad_hls_scratch.cpp' ... 
-INFO: [HLS 200-111] Finished Source Code Analysis and Preprocessing: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 15.755 seconds; current allocated memory: 139.273 MB.
+INFO: [HLS 200-10] Analyzing design file '../hls_src/tcn_prepad_hls_scratch.cpp' ... 
+INFO: [HLS 200-111] Finished Source Code Analysis and Preprocessing: CPU user time: 1 seconds. CPU system time: 0 seconds. Elapsed time: 29.252 seconds; current allocated memory: 137.145 MB.
 INFO: [HLS 200-777] Using interface defaults for 'Vivado' flow target.
 INFO: [HLS 200-1995] There were 11,960 instructions in the design after the 'Compile/Link' phase of compilation. See the Design Size Report for more details (C:/Users/holbo/00VS_projjects/00_HFT_project/n2ew_era/07b_tcn_prepad_manual_hls/hls_component_scratch/hls_component/hls/syn/report/csynth_design_size.rpt:2)
-INFO: [HLS 200-1995] There were 11,805 instructions in the design after the 'Unroll/Inline (step 1)' phase of compilation. See the Design Size Report for more details (C:/Users/holbo/00VS_projjects/00_HFT_project/n2ew_era/07b_tcn_prepad_manual_hls/hls_component_scratch/hls_component/hls/syn/report/csynth_design_size.rpt:2)
+INFO: [HLS 200-1995] There were 11,805 instructions in the design after the 'Unroll/Inline' phase of compilation. See the Design Size Report for more details (C:/Users/holbo/00VS_projjects/00_HFT_project/n2ew_era/07b_tcn_prepad_manual_hls/hls_component_scratch/hls_component/hls/syn/report/csynth_design_size.rpt:2)
 INFO: [HLS 200-1995] There were 3,589 instructions in the design after the 'Unroll/Inline (step 2)' phase of compilation. See the Design Size Report for more details (C:/Users/holbo/00VS_projjects/00_HFT_project/n2ew_era/07b_tcn_prepad_manual_hls/hls_component_scratch/hls_component/hls/syn/report/csynth_design_size.rpt:2)
 INFO: [HLS 200-1995] There were 3,522 instructions in the design after the 'Unroll/Inline (step 3)' phase of compilation. See the Design Size Report for more details (C:/Users/holbo/00VS_projjects/00_HFT_project/n2ew_era/07b_tcn_prepad_manual_hls/hls_component_scratch/hls_component/hls/syn/report/csynth_design_size.rpt:2)
 INFO: [HLS 200-1995] There were 3,490 instructions in the design after the 'Unroll/Inline (step 4)' phase of compilation. See the Design Size Report for more details (C:/Users/holbo/00VS_projjects/00_HFT_project/n2ew_era/07b_tcn_prepad_manual_hls/hls_component_scratch/hls_component/hls/syn/report/csynth_design_size.rpt:2)
-INFO: [HLS 200-1995] There were 3,451 instructions in the design after the 'Array/Struct' phase of compilation. See the Design Size Report for more details (C:/Users/holbo/00VS_projjects/00_HFT_project/n2ew_era/07b_tcn_prepad_manual_hls/hls_component_scratch/hls_component/hls/syn/report/csynth_design_size.rpt:2)
+INFO: [HLS 200-1995] There were 3,451 instructions in the design after the 'Array/Struct (step 1)' phase of compilation. See the Design Size Report for more details (C:/Users/holbo/00VS_projjects/00_HFT_project/n2ew_era/07b_tcn_prepad_manual_hls/hls_component_scratch/hls_component/hls/syn/report/csynth_design_size.rpt:2)
 INFO: [HLS 200-1995] There were 3,451 instructions in the design after the 'Array/Struct (step 2)' phase of compilation. See the Design Size Report for more details (C:/Users/holbo/00VS_projjects/00_HFT_project/n2ew_era/07b_tcn_prepad_manual_hls/hls_component_scratch/hls_component/hls/syn/report/csynth_design_size.rpt:2)
 INFO: [HLS 200-1995] There were 3,467 instructions in the design after the 'Array/Struct (step 3)' phase of compilation. See the Design Size Report for more details (C:/Users/holbo/00VS_projjects/00_HFT_project/n2ew_era/07b_tcn_prepad_manual_hls/hls_component_scratch/hls_component/hls/syn/report/csynth_design_size.rpt:2)
 INFO: [HLS 200-1995] There were 3,483 instructions in the design after the 'Array/Struct (step 4)' phase of compilation. See the Design Size Report for more details (C:/Users/holbo/00VS_projjects/00_HFT_project/n2ew_era/07b_tcn_prepad_manual_hls/hls_component_scratch/hls_component/hls/syn/report/csynth_design_size.rpt:2)
@@ -48,64 +48,64 @@ INFO: [HLS 200-1995] There were 16,558 instructions in the design after the 'Per
 INFO: [HLS 200-1995] There were 3,636 instructions in the design after the 'Performance (step 4)' phase of compilation. See the Design Size Report for more details (C:/Users/holbo/00VS_projjects/00_HFT_project/n2ew_era/07b_tcn_prepad_manual_hls/hls_component_scratch/hls_component/hls/syn/report/csynth_design_size.rpt:2)
 INFO: [HLS 200-1995] There were 3,636 instructions in the design after the 'HW Transforms (step 1)' phase of compilation. See the Design Size Report for more details (C:/Users/holbo/00VS_projjects/00_HFT_project/n2ew_era/07b_tcn_prepad_manual_hls/hls_component_scratch/hls_component/hls/syn/report/csynth_design_size.rpt:2)
 INFO: [HLS 200-1995] There were 3,821 instructions in the design after the 'HW Transforms (step 2)' phase of compilation. See the Design Size Report for more details (C:/Users/holbo/00VS_projjects/00_HFT_project/n2ew_era/07b_tcn_prepad_manual_hls/hls_component_scratch/hls_component/hls/syn/report/csynth_design_size.rpt:2)
-INFO: [HLS 214-131] Inlining function '(anonymous namespace)::relu_acc(ap_fixed<40, 16, (ap_q_mode)5, (ap_o_mode)3, 0>)' into 'void (anonymous namespace)::conv1_relu<252, 1>(ap_fixed<24, 12, (ap_q_mode)5, (ap_o_mode)3, 0> const (*) [16], ap_fixed<24, 12, (ap_q_mode)5, (ap_o_mode)3, 0> (*) [16], int)' (C:/Users/holbo/00VS_projjects/00_HFT_project/n2ew_era/07b_tcn_prepad_manual_hls/hls_src/tcn_prepad_hls_impl.hpp:60:39)
-INFO: [HLS 214-131] Inlining function '(anonymous namespace)::relu_acc(ap_fixed<40, 16, (ap_q_mode)5, (ap_o_mode)3, 0>)' into 'void (anonymous namespace)::conv2_relu_residual<252, 1>(ap_fixed<24, 12, (ap_q_mode)5, (ap_o_mode)3, 0> const (*) [16], ap_fixed<24, 12, (ap_q_mode)5, (ap_o_mode)3, 0> const (*) [16], ap_fixed<24, 12, (ap_q_mode)5, (ap_o_mode)3, 0> (*) [16], int)' (C:/Users/holbo/00VS_projjects/00_HFT_project/n2ew_era/07b_tcn_prepad_manual_hls/hls_src/tcn_prepad_hls_impl.hpp:88:39)
-INFO: [HLS 214-131] Inlining function '(anonymous namespace)::relu_acc(ap_fixed<40, 16, (ap_q_mode)5, (ap_o_mode)3, 0>)' into 'void (anonymous namespace)::conv1_relu<248, 2>(ap_fixed<24, 12, (ap_q_mode)5, (ap_o_mode)3, 0> const (*) [16], ap_fixed<24, 12, (ap_q_mode)5, (ap_o_mode)3, 0> (*) [16], int)' (C:/Users/holbo/00VS_projjects/00_HFT_project/n2ew_era/07b_tcn_prepad_manual_hls/hls_src/tcn_prepad_hls_impl.hpp:60:39)
-INFO: [HLS 214-131] Inlining function '(anonymous namespace)::relu_acc(ap_fixed<40, 16, (ap_q_mode)5, (ap_o_mode)3, 0>)' into 'void (anonymous namespace)::conv2_relu_residual<248, 2>(ap_fixed<24, 12, (ap_q_mode)5, (ap_o_mode)3, 0> const (*) [16], ap_fixed<24, 12, (ap_q_mode)5, (ap_o_mode)3, 0> const (*) [16], ap_fixed<24, 12, (ap_q_mode)5, (ap_o_mode)3, 0> (*) [16], int)' (C:/Users/holbo/00VS_projjects/00_HFT_project/n2ew_era/07b_tcn_prepad_manual_hls/hls_src/tcn_prepad_hls_impl.hpp:88:39)
-INFO: [HLS 214-131] Inlining function '(anonymous namespace)::relu_acc(ap_fixed<40, 16, (ap_q_mode)5, (ap_o_mode)3, 0>)' into 'void (anonymous namespace)::conv1_relu<240, 4>(ap_fixed<24, 12, (ap_q_mode)5, (ap_o_mode)3, 0> const (*) [16], ap_fixed<24, 12, (ap_q_mode)5, (ap_o_mode)3, 0> (*) [16], int)' (C:/Users/holbo/00VS_projjects/00_HFT_project/n2ew_era/07b_tcn_prepad_manual_hls/hls_src/tcn_prepad_hls_impl.hpp:60:39)
-INFO: [HLS 214-131] Inlining function '(anonymous namespace)::relu_acc(ap_fixed<40, 16, (ap_q_mode)5, (ap_o_mode)3, 0>)' into 'void (anonymous namespace)::conv2_relu_residual<240, 4>(ap_fixed<24, 12, (ap_q_mode)5, (ap_o_mode)3, 0> const (*) [16], ap_fixed<24, 12, (ap_q_mode)5, (ap_o_mode)3, 0> const (*) [16], ap_fixed<24, 12, (ap_q_mode)5, (ap_o_mode)3, 0> (*) [16], int)' (C:/Users/holbo/00VS_projjects/00_HFT_project/n2ew_era/07b_tcn_prepad_manual_hls/hls_src/tcn_prepad_hls_impl.hpp:88:39)
-INFO: [HLS 214-131] Inlining function '(anonymous namespace)::relu_acc(ap_fixed<40, 16, (ap_q_mode)5, (ap_o_mode)3, 0>)' into 'void (anonymous namespace)::conv1_relu<224, 8>(ap_fixed<24, 12, (ap_q_mode)5, (ap_o_mode)3, 0> const (*) [16], ap_fixed<24, 12, (ap_q_mode)5, (ap_o_mode)3, 0> (*) [16], int)' (C:/Users/holbo/00VS_projjects/00_HFT_project/n2ew_era/07b_tcn_prepad_manual_hls/hls_src/tcn_prepad_hls_impl.hpp:60:39)
-INFO: [HLS 214-131] Inlining function '(anonymous namespace)::relu_acc(ap_fixed<40, 16, (ap_q_mode)5, (ap_o_mode)3, 0>)' into 'void (anonymous namespace)::conv2_relu_residual<224, 8>(ap_fixed<24, 12, (ap_q_mode)5, (ap_o_mode)3, 0> const (*) [16], ap_fixed<24, 12, (ap_q_mode)5, (ap_o_mode)3, 0> const (*) [16], ap_fixed<24, 12, (ap_q_mode)5, (ap_o_mode)3, 0> (*) [16], int)' (C:/Users/holbo/00VS_projjects/00_HFT_project/n2ew_era/07b_tcn_prepad_manual_hls/hls_src/tcn_prepad_hls_impl.hpp:88:39)
-INFO: [HLS 214-131] Inlining function '(anonymous namespace)::relu_acc(ap_fixed<40, 16, (ap_q_mode)5, (ap_o_mode)3, 0>)' into 'void (anonymous namespace)::conv1_relu<192, 16>(ap_fixed<24, 12, (ap_q_mode)5, (ap_o_mode)3, 0> const (*) [16], ap_fixed<24, 12, (ap_q_mode)5, (ap_o_mode)3, 0> (*) [16], int)' (C:/Users/holbo/00VS_projjects/00_HFT_project/n2ew_era/07b_tcn_prepad_manual_hls/hls_src/tcn_prepad_hls_impl.hpp:60:39)
-INFO: [HLS 214-131] Inlining function '(anonymous namespace)::relu_acc(ap_fixed<40, 16, (ap_q_mode)5, (ap_o_mode)3, 0>)' into 'void (anonymous namespace)::conv2_relu_residual<192, 16>(ap_fixed<24, 12, (ap_q_mode)5, (ap_o_mode)3, 0> const (*) [16], ap_fixed<24, 12, (ap_q_mode)5, (ap_o_mode)3, 0> const (*) [16], ap_fixed<24, 12, (ap_q_mode)5, (ap_o_mode)3, 0> (*) [16], int)' (C:/Users/holbo/00VS_projjects/00_HFT_project/n2ew_era/07b_tcn_prepad_manual_hls/hls_src/tcn_prepad_hls_impl.hpp:88:39)
-INFO: [HLS 214-359] Unrolling loop 'VITIS_LOOP_123_4' (C:/Users/holbo/00VS_projjects/00_HFT_project/n2ew_era/07b_tcn_prepad_manual_hls/hls_src/tcn_prepad_hls_impl.hpp:123:27) in function '(anonymous namespace)::global_average_readout': changing partial unrolling into complete unrolling since the unrolling factor (=16) is no less than the loop trip count (=16). (C:/Users/holbo/00VS_projjects/00_HFT_project/n2ew_era/07b_tcn_prepad_manual_hls/hls_src/tcn_prepad_hls_impl.hpp:108:0)
-INFO: [HLS 214-186] Unrolling loop 'VITIS_LOOP_123_4' (C:/Users/holbo/00VS_projjects/00_HFT_project/n2ew_era/07b_tcn_prepad_manual_hls/hls_src/tcn_prepad_hls_impl.hpp:123:27) in function '(anonymous namespace)::global_average_readout' completely with a factor of 16 (C:/Users/holbo/00VS_projjects/00_HFT_project/n2ew_era/07b_tcn_prepad_manual_hls/hls_src/tcn_prepad_hls_impl.hpp:108:0)
-INFO: [HLS 214-359] Unrolling loop 'VITIS_LOOP_80_4' (C:/Users/holbo/00VS_projjects/00_HFT_project/n2ew_era/07b_tcn_prepad_manual_hls/hls_src/tcn_prepad_hls_impl.hpp:80:34) in function '(anonymous namespace)::conv2_relu_residual<192, 16>': changing partial unrolling into complete unrolling since the unrolling factor (=16) is no less than the loop trip count (=16). (C:/Users/holbo/00VS_projjects/00_HFT_project/n2ew_era/07b_tcn_prepad_manual_hls/hls_src/tcn_prepad_hls_impl.hpp:71:0)
-INFO: [HLS 214-186] Unrolling loop 'VITIS_LOOP_80_4' (C:/Users/holbo/00VS_projjects/00_HFT_project/n2ew_era/07b_tcn_prepad_manual_hls/hls_src/tcn_prepad_hls_impl.hpp:80:34) in function '(anonymous namespace)::conv2_relu_residual<192, 16>' completely with a factor of 16 (C:/Users/holbo/00VS_projjects/00_HFT_project/n2ew_era/07b_tcn_prepad_manual_hls/hls_src/tcn_prepad_hls_impl.hpp:71:0)
-INFO: [HLS 214-359] Unrolling loop 'VITIS_LOOP_54_4' (C:/Users/holbo/00VS_projjects/00_HFT_project/n2ew_era/07b_tcn_prepad_manual_hls/hls_src/tcn_prepad_hls_impl.hpp:54:34) in function '(anonymous namespace)::conv1_relu<192, 16>': changing partial unrolling into complete unrolling since the unrolling factor (=16) is no less than the loop trip count (=16). (C:/Users/holbo/00VS_projjects/00_HFT_project/n2ew_era/07b_tcn_prepad_manual_hls/hls_src/tcn_prepad_hls_impl.hpp:45:0)
-INFO: [HLS 214-186] Unrolling loop 'VITIS_LOOP_54_4' (C:/Users/holbo/00VS_projjects/00_HFT_project/n2ew_era/07b_tcn_prepad_manual_hls/hls_src/tcn_prepad_hls_impl.hpp:54:34) in function '(anonymous namespace)::conv1_relu<192, 16>' completely with a factor of 16 (C:/Users/holbo/00VS_projjects/00_HFT_project/n2ew_era/07b_tcn_prepad_manual_hls/hls_src/tcn_prepad_hls_impl.hpp:45:0)
-INFO: [HLS 214-359] Unrolling loop 'VITIS_LOOP_80_4' (C:/Users/holbo/00VS_projjects/00_HFT_project/n2ew_era/07b_tcn_prepad_manual_hls/hls_src/tcn_prepad_hls_impl.hpp:80:34) in function '(anonymous namespace)::conv2_relu_residual<224, 8>': changing partial unrolling into complete unrolling since the unrolling factor (=16) is no less than the loop trip count (=16). (C:/Users/holbo/00VS_projjects/00_HFT_project/n2ew_era/07b_tcn_prepad_manual_hls/hls_src/tcn_prepad_hls_impl.hpp:71:0)
-INFO: [HLS 214-186] Unrolling loop 'VITIS_LOOP_80_4' (C:/Users/holbo/00VS_projjects/00_HFT_project/n2ew_era/07b_tcn_prepad_manual_hls/hls_src/tcn_prepad_hls_impl.hpp:80:34) in function '(anonymous namespace)::conv2_relu_residual<224, 8>' completely with a factor of 16 (C:/Users/holbo/00VS_projjects/00_HFT_project/n2ew_era/07b_tcn_prepad_manual_hls/hls_src/tcn_prepad_hls_impl.hpp:71:0)
-INFO: [HLS 214-359] Unrolling loop 'VITIS_LOOP_54_4' (C:/Users/holbo/00VS_projjects/00_HFT_project/n2ew_era/07b_tcn_prepad_manual_hls/hls_src/tcn_prepad_hls_impl.hpp:54:34) in function '(anonymous namespace)::conv1_relu<224, 8>': changing partial unrolling into complete unrolling since the unrolling factor (=16) is no less than the loop trip count (=16). (C:/Users/holbo/00VS_projjects/00_HFT_project/n2ew_era/07b_tcn_prepad_manual_hls/hls_src/tcn_prepad_hls_impl.hpp:45:0)
-INFO: [HLS 214-186] Unrolling loop 'VITIS_LOOP_54_4' (C:/Users/holbo/00VS_projjects/00_HFT_project/n2ew_era/07b_tcn_prepad_manual_hls/hls_src/tcn_prepad_hls_impl.hpp:54:34) in function '(anonymous namespace)::conv1_relu<224, 8>' completely with a factor of 16 (C:/Users/holbo/00VS_projjects/00_HFT_project/n2ew_era/07b_tcn_prepad_manual_hls/hls_src/tcn_prepad_hls_impl.hpp:45:0)
-INFO: [HLS 214-359] Unrolling loop 'VITIS_LOOP_80_4' (C:/Users/holbo/00VS_projjects/00_HFT_project/n2ew_era/07b_tcn_prepad_manual_hls/hls_src/tcn_prepad_hls_impl.hpp:80:34) in function '(anonymous namespace)::conv2_relu_residual<240, 4>': changing partial unrolling into complete unrolling since the unrolling factor (=16) is no less than the loop trip count (=16). (C:/Users/holbo/00VS_projjects/00_HFT_project/n2ew_era/07b_tcn_prepad_manual_hls/hls_src/tcn_prepad_hls_impl.hpp:71:0)
-INFO: [HLS 214-186] Unrolling loop 'VITIS_LOOP_80_4' (C:/Users/holbo/00VS_projjects/00_HFT_project/n2ew_era/07b_tcn_prepad_manual_hls/hls_src/tcn_prepad_hls_impl.hpp:80:34) in function '(anonymous namespace)::conv2_relu_residual<240, 4>' completely with a factor of 16 (C:/Users/holbo/00VS_projjects/00_HFT_project/n2ew_era/07b_tcn_prepad_manual_hls/hls_src/tcn_prepad_hls_impl.hpp:71:0)
-INFO: [HLS 214-359] Unrolling loop 'VITIS_LOOP_54_4' (C:/Users/holbo/00VS_projjects/00_HFT_project/n2ew_era/07b_tcn_prepad_manual_hls/hls_src/tcn_prepad_hls_impl.hpp:54:34) in function '(anonymous namespace)::conv1_relu<240, 4>': changing partial unrolling into complete unrolling since the unrolling factor (=16) is no less than the loop trip count (=16). (C:/Users/holbo/00VS_projjects/00_HFT_project/n2ew_era/07b_tcn_prepad_manual_hls/hls_src/tcn_prepad_hls_impl.hpp:45:0)
-INFO: [HLS 214-186] Unrolling loop 'VITIS_LOOP_54_4' (C:/Users/holbo/00VS_projjects/00_HFT_project/n2ew_era/07b_tcn_prepad_manual_hls/hls_src/tcn_prepad_hls_impl.hpp:54:34) in function '(anonymous namespace)::conv1_relu<240, 4>' completely with a factor of 16 (C:/Users/holbo/00VS_projjects/00_HFT_project/n2ew_era/07b_tcn_prepad_manual_hls/hls_src/tcn_prepad_hls_impl.hpp:45:0)
-INFO: [HLS 214-359] Unrolling loop 'VITIS_LOOP_80_4' (C:/Users/holbo/00VS_projjects/00_HFT_project/n2ew_era/07b_tcn_prepad_manual_hls/hls_src/tcn_prepad_hls_impl.hpp:80:34) in function '(anonymous namespace)::conv2_relu_residual<248, 2>': changing partial unrolling into complete unrolling since the unrolling factor (=16) is no less than the loop trip count (=16). (C:/Users/holbo/00VS_projjects/00_HFT_project/n2ew_era/07b_tcn_prepad_manual_hls/hls_src/tcn_prepad_hls_impl.hpp:71:0)
-INFO: [HLS 214-186] Unrolling loop 'VITIS_LOOP_80_4' (C:/Users/holbo/00VS_projjects/00_HFT_project/n2ew_era/07b_tcn_prepad_manual_hls/hls_src/tcn_prepad_hls_impl.hpp:80:34) in function '(anonymous namespace)::conv2_relu_residual<248, 2>' completely with a factor of 16 (C:/Users/holbo/00VS_projjects/00_HFT_project/n2ew_era/07b_tcn_prepad_manual_hls/hls_src/tcn_prepad_hls_impl.hpp:71:0)
-INFO: [HLS 214-359] Unrolling loop 'VITIS_LOOP_54_4' (C:/Users/holbo/00VS_projjects/00_HFT_project/n2ew_era/07b_tcn_prepad_manual_hls/hls_src/tcn_prepad_hls_impl.hpp:54:34) in function '(anonymous namespace)::conv1_relu<248, 2>': changing partial unrolling into complete unrolling since the unrolling factor (=16) is no less than the loop trip count (=16). (C:/Users/holbo/00VS_projjects/00_HFT_project/n2ew_era/07b_tcn_prepad_manual_hls/hls_src/tcn_prepad_hls_impl.hpp:45:0)
-INFO: [HLS 214-186] Unrolling loop 'VITIS_LOOP_54_4' (C:/Users/holbo/00VS_projjects/00_HFT_project/n2ew_era/07b_tcn_prepad_manual_hls/hls_src/tcn_prepad_hls_impl.hpp:54:34) in function '(anonymous namespace)::conv1_relu<248, 2>' completely with a factor of 16 (C:/Users/holbo/00VS_projjects/00_HFT_project/n2ew_era/07b_tcn_prepad_manual_hls/hls_src/tcn_prepad_hls_impl.hpp:45:0)
-INFO: [HLS 214-359] Unrolling loop 'VITIS_LOOP_80_4' (C:/Users/holbo/00VS_projjects/00_HFT_project/n2ew_era/07b_tcn_prepad_manual_hls/hls_src/tcn_prepad_hls_impl.hpp:80:34) in function '(anonymous namespace)::conv2_relu_residual<252, 1>': changing partial unrolling into complete unrolling since the unrolling factor (=16) is no less than the loop trip count (=16). (C:/Users/holbo/00VS_projjects/00_HFT_project/n2ew_era/07b_tcn_prepad_manual_hls/hls_src/tcn_prepad_hls_impl.hpp:71:0)
-INFO: [HLS 214-186] Unrolling loop 'VITIS_LOOP_80_4' (C:/Users/holbo/00VS_projjects/00_HFT_project/n2ew_era/07b_tcn_prepad_manual_hls/hls_src/tcn_prepad_hls_impl.hpp:80:34) in function '(anonymous namespace)::conv2_relu_residual<252, 1>' completely with a factor of 16 (C:/Users/holbo/00VS_projjects/00_HFT_project/n2ew_era/07b_tcn_prepad_manual_hls/hls_src/tcn_prepad_hls_impl.hpp:71:0)
-INFO: [HLS 214-359] Unrolling loop 'VITIS_LOOP_54_4' (C:/Users/holbo/00VS_projjects/00_HFT_project/n2ew_era/07b_tcn_prepad_manual_hls/hls_src/tcn_prepad_hls_impl.hpp:54:34) in function '(anonymous namespace)::conv1_relu<252, 1>': changing partial unrolling into complete unrolling since the unrolling factor (=16) is no less than the loop trip count (=16). (C:/Users/holbo/00VS_projjects/00_HFT_project/n2ew_era/07b_tcn_prepad_manual_hls/hls_src/tcn_prepad_hls_impl.hpp:45:0)
-INFO: [HLS 214-186] Unrolling loop 'VITIS_LOOP_54_4' (C:/Users/holbo/00VS_projjects/00_HFT_project/n2ew_era/07b_tcn_prepad_manual_hls/hls_src/tcn_prepad_hls_impl.hpp:54:34) in function '(anonymous namespace)::conv1_relu<252, 1>' completely with a factor of 16 (C:/Users/holbo/00VS_projjects/00_HFT_project/n2ew_era/07b_tcn_prepad_manual_hls/hls_src/tcn_prepad_hls_impl.hpp:45:0)
-INFO: [HLS 214-359] Unrolling loop 'VITIS_LOOP_28_2' (C:/Users/holbo/00VS_projjects/00_HFT_project/n2ew_era/07b_tcn_prepad_manual_hls/hls_src/tcn_prepad_hls_impl.hpp:28:26) in function '(anonymous namespace)::copy_and_prepad<252>': changing partial unrolling into complete unrolling since the unrolling factor (=16) is no less than the loop trip count (=16). (C:/Users/holbo/00VS_projjects/00_HFT_project/n2ew_era/07b_tcn_prepad_manual_hls/hls_src/tcn_prepad_hls_impl.hpp:24:0)
-INFO: [HLS 214-186] Unrolling loop 'VITIS_LOOP_28_2' (C:/Users/holbo/00VS_projjects/00_HFT_project/n2ew_era/07b_tcn_prepad_manual_hls/hls_src/tcn_prepad_hls_impl.hpp:28:26) in function '(anonymous namespace)::copy_and_prepad<252>' completely with a factor of 16 (C:/Users/holbo/00VS_projjects/00_HFT_project/n2ew_era/07b_tcn_prepad_manual_hls/hls_src/tcn_prepad_hls_impl.hpp:24:0)
+INFO: [HLS 214-131] Inlining function '(anonymous namespace)::relu_acc(ap_fixed<40, 16, (ap_q_mode)5, (ap_o_mode)3, 0>)' into 'void (anonymous namespace)::conv1_relu<252, 1>(ap_fixed<24, 12, (ap_q_mode)5, (ap_o_mode)3, 0> const (*) [16], ap_fixed<24, 12, (ap_q_mode)5, (ap_o_mode)3, 0> (*) [16], int)' (../hls_src/tcn_prepad_hls_impl.hpp:60:39)
+INFO: [HLS 214-131] Inlining function '(anonymous namespace)::relu_acc(ap_fixed<40, 16, (ap_q_mode)5, (ap_o_mode)3, 0>)' into 'void (anonymous namespace)::conv2_relu_residual<252, 1>(ap_fixed<24, 12, (ap_q_mode)5, (ap_o_mode)3, 0> const (*) [16], ap_fixed<24, 12, (ap_q_mode)5, (ap_o_mode)3, 0> const (*) [16], ap_fixed<24, 12, (ap_q_mode)5, (ap_o_mode)3, 0> (*) [16], int)' (../hls_src/tcn_prepad_hls_impl.hpp:88:39)
+INFO: [HLS 214-131] Inlining function '(anonymous namespace)::relu_acc(ap_fixed<40, 16, (ap_q_mode)5, (ap_o_mode)3, 0>)' into 'void (anonymous namespace)::conv1_relu<248, 2>(ap_fixed<24, 12, (ap_q_mode)5, (ap_o_mode)3, 0> const (*) [16], ap_fixed<24, 12, (ap_q_mode)5, (ap_o_mode)3, 0> (*) [16], int)' (../hls_src/tcn_prepad_hls_impl.hpp:60:39)
+INFO: [HLS 214-131] Inlining function '(anonymous namespace)::relu_acc(ap_fixed<40, 16, (ap_q_mode)5, (ap_o_mode)3, 0>)' into 'void (anonymous namespace)::conv2_relu_residual<248, 2>(ap_fixed<24, 12, (ap_q_mode)5, (ap_o_mode)3, 0> const (*) [16], ap_fixed<24, 12, (ap_q_mode)5, (ap_o_mode)3, 0> const (*) [16], ap_fixed<24, 12, (ap_q_mode)5, (ap_o_mode)3, 0> (*) [16], int)' (../hls_src/tcn_prepad_hls_impl.hpp:88:39)
+INFO: [HLS 214-131] Inlining function '(anonymous namespace)::relu_acc(ap_fixed<40, 16, (ap_q_mode)5, (ap_o_mode)3, 0>)' into 'void (anonymous namespace)::conv1_relu<240, 4>(ap_fixed<24, 12, (ap_q_mode)5, (ap_o_mode)3, 0> const (*) [16], ap_fixed<24, 12, (ap_q_mode)5, (ap_o_mode)3, 0> (*) [16], int)' (../hls_src/tcn_prepad_hls_impl.hpp:60:39)
+INFO: [HLS 214-131] Inlining function '(anonymous namespace)::relu_acc(ap_fixed<40, 16, (ap_q_mode)5, (ap_o_mode)3, 0>)' into 'void (anonymous namespace)::conv2_relu_residual<240, 4>(ap_fixed<24, 12, (ap_q_mode)5, (ap_o_mode)3, 0> const (*) [16], ap_fixed<24, 12, (ap_q_mode)5, (ap_o_mode)3, 0> const (*) [16], ap_fixed<24, 12, (ap_q_mode)5, (ap_o_mode)3, 0> (*) [16], int)' (../hls_src/tcn_prepad_hls_impl.hpp:88:39)
+INFO: [HLS 214-131] Inlining function '(anonymous namespace)::relu_acc(ap_fixed<40, 16, (ap_q_mode)5, (ap_o_mode)3, 0>)' into 'void (anonymous namespace)::conv1_relu<224, 8>(ap_fixed<24, 12, (ap_q_mode)5, (ap_o_mode)3, 0> const (*) [16], ap_fixed<24, 12, (ap_q_mode)5, (ap_o_mode)3, 0> (*) [16], int)' (../hls_src/tcn_prepad_hls_impl.hpp:60:39)
+INFO: [HLS 214-131] Inlining function '(anonymous namespace)::relu_acc(ap_fixed<40, 16, (ap_q_mode)5, (ap_o_mode)3, 0>)' into 'void (anonymous namespace)::conv2_relu_residual<224, 8>(ap_fixed<24, 12, (ap_q_mode)5, (ap_o_mode)3, 0> const (*) [16], ap_fixed<24, 12, (ap_q_mode)5, (ap_o_mode)3, 0> const (*) [16], ap_fixed<24, 12, (ap_q_mode)5, (ap_o_mode)3, 0> (*) [16], int)' (../hls_src/tcn_prepad_hls_impl.hpp:88:39)
+INFO: [HLS 214-131] Inlining function '(anonymous namespace)::relu_acc(ap_fixed<40, 16, (ap_q_mode)5, (ap_o_mode)3, 0>)' into 'void (anonymous namespace)::conv1_relu<192, 16>(ap_fixed<24, 12, (ap_q_mode)5, (ap_o_mode)3, 0> const (*) [16], ap_fixed<24, 12, (ap_q_mode)5, (ap_o_mode)3, 0> (*) [16], int)' (../hls_src/tcn_prepad_hls_impl.hpp:60:39)
+INFO: [HLS 214-131] Inlining function '(anonymous namespace)::relu_acc(ap_fixed<40, 16, (ap_q_mode)5, (ap_o_mode)3, 0>)' into 'void (anonymous namespace)::conv2_relu_residual<192, 16>(ap_fixed<24, 12, (ap_q_mode)5, (ap_o_mode)3, 0> const (*) [16], ap_fixed<24, 12, (ap_q_mode)5, (ap_o_mode)3, 0> const (*) [16], ap_fixed<24, 12, (ap_q_mode)5, (ap_o_mode)3, 0> (*) [16], int)' (../hls_src/tcn_prepad_hls_impl.hpp:88:39)
+INFO: [HLS 214-359] Unrolling loop 'VITIS_LOOP_123_4' (../hls_src/tcn_prepad_hls_impl.hpp:123:27) in function '(anonymous namespace)::global_average_readout': changing partial unrolling into complete unrolling since the unrolling factor (=16) is no less than the loop trip count (=16). (../hls_src/tcn_prepad_hls_impl.hpp:108:0)
+INFO: [HLS 214-186] Unrolling loop 'VITIS_LOOP_123_4' (../hls_src/tcn_prepad_hls_impl.hpp:123:27) in function '(anonymous namespace)::global_average_readout' completely with a factor of 16 (../hls_src/tcn_prepad_hls_impl.hpp:108:0)
+INFO: [HLS 214-359] Unrolling loop 'VITIS_LOOP_80_4' (../hls_src/tcn_prepad_hls_impl.hpp:80:34) in function '(anonymous namespace)::conv2_relu_residual<192, 16>': changing partial unrolling into complete unrolling since the unrolling factor (=16) is no less than the loop trip count (=16). (../hls_src/tcn_prepad_hls_impl.hpp:71:0)
+INFO: [HLS 214-186] Unrolling loop 'VITIS_LOOP_80_4' (../hls_src/tcn_prepad_hls_impl.hpp:80:34) in function '(anonymous namespace)::conv2_relu_residual<192, 16>' completely with a factor of 16 (../hls_src/tcn_prepad_hls_impl.hpp:71:0)
+INFO: [HLS 214-359] Unrolling loop 'VITIS_LOOP_54_4' (../hls_src/tcn_prepad_hls_impl.hpp:54:34) in function '(anonymous namespace)::conv1_relu<192, 16>': changing partial unrolling into complete unrolling since the unrolling factor (=16) is no less than the loop trip count (=16). (../hls_src/tcn_prepad_hls_impl.hpp:45:0)
+INFO: [HLS 214-186] Unrolling loop 'VITIS_LOOP_54_4' (../hls_src/tcn_prepad_hls_impl.hpp:54:34) in function '(anonymous namespace)::conv1_relu<192, 16>' completely with a factor of 16 (../hls_src/tcn_prepad_hls_impl.hpp:45:0)
+INFO: [HLS 214-359] Unrolling loop 'VITIS_LOOP_80_4' (../hls_src/tcn_prepad_hls_impl.hpp:80:34) in function '(anonymous namespace)::conv2_relu_residual<224, 8>': changing partial unrolling into complete unrolling since the unrolling factor (=16) is no less than the loop trip count (=16). (../hls_src/tcn_prepad_hls_impl.hpp:71:0)
+INFO: [HLS 214-186] Unrolling loop 'VITIS_LOOP_80_4' (../hls_src/tcn_prepad_hls_impl.hpp:80:34) in function '(anonymous namespace)::conv2_relu_residual<224, 8>' completely with a factor of 16 (../hls_src/tcn_prepad_hls_impl.hpp:71:0)
+INFO: [HLS 214-359] Unrolling loop 'VITIS_LOOP_54_4' (../hls_src/tcn_prepad_hls_impl.hpp:54:34) in function '(anonymous namespace)::conv1_relu<224, 8>': changing partial unrolling into complete unrolling since the unrolling factor (=16) is no less than the loop trip count (=16). (../hls_src/tcn_prepad_hls_impl.hpp:45:0)
+INFO: [HLS 214-186] Unrolling loop 'VITIS_LOOP_54_4' (../hls_src/tcn_prepad_hls_impl.hpp:54:34) in function '(anonymous namespace)::conv1_relu<224, 8>' completely with a factor of 16 (../hls_src/tcn_prepad_hls_impl.hpp:45:0)
+INFO: [HLS 214-359] Unrolling loop 'VITIS_LOOP_80_4' (../hls_src/tcn_prepad_hls_impl.hpp:80:34) in function '(anonymous namespace)::conv2_relu_residual<240, 4>': changing partial unrolling into complete unrolling since the unrolling factor (=16) is no less than the loop trip count (=16). (../hls_src/tcn_prepad_hls_impl.hpp:71:0)
+INFO: [HLS 214-186] Unrolling loop 'VITIS_LOOP_80_4' (../hls_src/tcn_prepad_hls_impl.hpp:80:34) in function '(anonymous namespace)::conv2_relu_residual<240, 4>' completely with a factor of 16 (../hls_src/tcn_prepad_hls_impl.hpp:71:0)
+INFO: [HLS 214-359] Unrolling loop 'VITIS_LOOP_54_4' (../hls_src/tcn_prepad_hls_impl.hpp:54:34) in function '(anonymous namespace)::conv1_relu<240, 4>': changing partial unrolling into complete unrolling since the unrolling factor (=16) is no less than the loop trip count (=16). (../hls_src/tcn_prepad_hls_impl.hpp:45:0)
+INFO: [HLS 214-186] Unrolling loop 'VITIS_LOOP_54_4' (../hls_src/tcn_prepad_hls_impl.hpp:54:34) in function '(anonymous namespace)::conv1_relu<240, 4>' completely with a factor of 16 (../hls_src/tcn_prepad_hls_impl.hpp:45:0)
+INFO: [HLS 214-359] Unrolling loop 'VITIS_LOOP_80_4' (../hls_src/tcn_prepad_hls_impl.hpp:80:34) in function '(anonymous namespace)::conv2_relu_residual<248, 2>': changing partial unrolling into complete unrolling since the unrolling factor (=16) is no less than the loop trip count (=16). (../hls_src/tcn_prepad_hls_impl.hpp:71:0)
+INFO: [HLS 214-186] Unrolling loop 'VITIS_LOOP_80_4' (../hls_src/tcn_prepad_hls_impl.hpp:80:34) in function '(anonymous namespace)::conv2_relu_residual<248, 2>' completely with a factor of 16 (../hls_src/tcn_prepad_hls_impl.hpp:71:0)
+INFO: [HLS 214-359] Unrolling loop 'VITIS_LOOP_54_4' (../hls_src/tcn_prepad_hls_impl.hpp:54:34) in function '(anonymous namespace)::conv1_relu<248, 2>': changing partial unrolling into complete unrolling since the unrolling factor (=16) is no less than the loop trip count (=16). (../hls_src/tcn_prepad_hls_impl.hpp:45:0)
+INFO: [HLS 214-186] Unrolling loop 'VITIS_LOOP_54_4' (../hls_src/tcn_prepad_hls_impl.hpp:54:34) in function '(anonymous namespace)::conv1_relu<248, 2>' completely with a factor of 16 (../hls_src/tcn_prepad_hls_impl.hpp:45:0)
+INFO: [HLS 214-359] Unrolling loop 'VITIS_LOOP_80_4' (../hls_src/tcn_prepad_hls_impl.hpp:80:34) in function '(anonymous namespace)::conv2_relu_residual<252, 1>': changing partial unrolling into complete unrolling since the unrolling factor (=16) is no less than the loop trip count (=16). (../hls_src/tcn_prepad_hls_impl.hpp:71:0)
+INFO: [HLS 214-186] Unrolling loop 'VITIS_LOOP_80_4' (../hls_src/tcn_prepad_hls_impl.hpp:80:34) in function '(anonymous namespace)::conv2_relu_residual<252, 1>' completely with a factor of 16 (../hls_src/tcn_prepad_hls_impl.hpp:71:0)
+INFO: [HLS 214-359] Unrolling loop 'VITIS_LOOP_54_4' (../hls_src/tcn_prepad_hls_impl.hpp:54:34) in function '(anonymous namespace)::conv1_relu<252, 1>': changing partial unrolling into complete unrolling since the unrolling factor (=16) is no less than the loop trip count (=16). (../hls_src/tcn_prepad_hls_impl.hpp:45:0)
+INFO: [HLS 214-186] Unrolling loop 'VITIS_LOOP_54_4' (../hls_src/tcn_prepad_hls_impl.hpp:54:34) in function '(anonymous namespace)::conv1_relu<252, 1>' completely with a factor of 16 (../hls_src/tcn_prepad_hls_impl.hpp:45:0)
+INFO: [HLS 214-359] Unrolling loop 'VITIS_LOOP_28_2' (../hls_src/tcn_prepad_hls_impl.hpp:28:26) in function '(anonymous namespace)::copy_and_prepad<252>': changing partial unrolling into complete unrolling since the unrolling factor (=16) is no less than the loop trip count (=16). (../hls_src/tcn_prepad_hls_impl.hpp:24:0)
+INFO: [HLS 214-186] Unrolling loop 'VITIS_LOOP_28_2' (../hls_src/tcn_prepad_hls_impl.hpp:28:26) in function '(anonymous namespace)::copy_and_prepad<252>' completely with a factor of 16 (../hls_src/tcn_prepad_hls_impl.hpp:24:0)
 INFO: [HLS 214-241] Aggregating bram variable 'x' with compact=bit mode in 24-bits
-INFO: [HLS 214-421] Partitioning small array 'tcn_weights::FC_B' due to array size. (C:/Users/holbo/00VS_projjects/00_HFT_project/n2ew_era/07b_tcn_prepad_manual_hls/hls_src/tcn_weights_scratch.hpp:2933:0)
-INFO: [HLS 214-449] Partitioning array 'tcn_weights::FC_W' dimension 2 due to constant index. (C:/Users/holbo/00VS_projjects/00_HFT_project/n2ew_era/07b_tcn_prepad_manual_hls/hls_src/tcn_weights_scratch.hpp:2929:0)
-INFO: [HLS 214-449] Partitioning array 'tcn_weights::CONV2_B' dimension 1 due to constant index. (C:/Users/holbo/00VS_projjects/00_HFT_project/n2ew_era/07b_tcn_prepad_manual_hls/hls_src/tcn_weights_scratch.hpp:2922:0)
-INFO: [HLS 214-449] Partitioning array 'tcn_weights::CONV2_W' dimension 1 due to constant index. (C:/Users/holbo/00VS_projjects/00_HFT_project/n2ew_era/07b_tcn_prepad_manual_hls/hls_src/tcn_weights_scratch.hpp:1470:0)
-INFO: [HLS 214-449] Partitioning array 'tcn_weights::CONV2_W' dimension 3 due to constant index. (C:/Users/holbo/00VS_projjects/00_HFT_project/n2ew_era/07b_tcn_prepad_manual_hls/hls_src/tcn_weights_scratch.hpp:1470:0)
-INFO: [HLS 214-449] Partitioning array 'tcn_weights::CONV1_B' dimension 1 due to constant index. (C:/Users/holbo/00VS_projjects/00_HFT_project/n2ew_era/07b_tcn_prepad_manual_hls/hls_src/tcn_weights_scratch.hpp:1463:0)
-INFO: [HLS 214-449] Partitioning array 'tcn_weights::CONV1_W' dimension 1 due to constant index. (C:/Users/holbo/00VS_projjects/00_HFT_project/n2ew_era/07b_tcn_prepad_manual_hls/hls_src/tcn_weights_scratch.hpp:11:0)
-INFO: [HLS 214-449] Partitioning array 'tcn_weights::CONV1_W' dimension 3 due to constant index. (C:/Users/holbo/00VS_projjects/00_HFT_project/n2ew_era/07b_tcn_prepad_manual_hls/hls_src/tcn_weights_scratch.hpp:11:0)
-INFO: [HLS 214-248] Applying array_partition to '_ZN11tcn_weightsL7CONV2_WE': Complete partitioning on dimension 1. Complete partitioning on dimension 3. (C:/Users/holbo/00VS_projjects/00_HFT_project/n2ew_era/07b_tcn_prepad_manual_hls/hls_src/tcn_weights_scratch.hpp:1470:0)
-INFO: [HLS 214-248] Applying array_partition to '_ZN11tcn_weightsL7CONV2_BE': Complete partitioning on dimension 1. (C:/Users/holbo/00VS_projjects/00_HFT_project/n2ew_era/07b_tcn_prepad_manual_hls/hls_src/tcn_weights_scratch.hpp:2922:0)
-INFO: [HLS 214-248] Applying array_partition to '_ZN11tcn_weightsL7CONV1_WE': Complete partitioning on dimension 1. Complete partitioning on dimension 3. (C:/Users/holbo/00VS_projjects/00_HFT_project/n2ew_era/07b_tcn_prepad_manual_hls/hls_src/tcn_weights_scratch.hpp:11:0)
-INFO: [HLS 214-248] Applying array_partition to '_ZN11tcn_weightsL7CONV1_BE': Complete partitioning on dimension 1. (C:/Users/holbo/00VS_projjects/00_HFT_project/n2ew_era/07b_tcn_prepad_manual_hls/hls_src/tcn_weights_scratch.hpp:1463:0)
-INFO: [HLS 214-248] Applying array_partition to '_ZN11tcn_weightsL4FC_WE': Complete partitioning on dimension 2. (C:/Users/holbo/00VS_projjects/00_HFT_project/n2ew_era/07b_tcn_prepad_manual_hls/hls_src/tcn_weights_scratch.hpp:2929:0)
-INFO: [HLS 214-248] Applying array_partition to '_ZN11tcn_weightsL4FC_BE': Complete partitioning on dimension 1. (C:/Users/holbo/00VS_projjects/00_HFT_project/n2ew_era/07b_tcn_prepad_manual_hls/hls_src/tcn_weights_scratch.hpp:2933:0)
-INFO: [HLS 200-111] Finished Compiling Optimization and Transform: CPU user time: 0 seconds. CPU system time: 1 seconds. Elapsed time: 42.206 seconds; current allocated memory: 143.676 MB.
-INFO: [HLS 200-111] Finished Checking Pragmas: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.001 seconds; current allocated memory: 143.676 MB.
+INFO: [HLS 214-421] Partitioning small array 'tcn_weights::FC_B' due to array size. (../hls_src/tcn_weights_scratch.hpp:2933:0)
+INFO: [HLS 214-449] Partitioning array 'tcn_weights::FC_W' dimension 2 due to constant index. (../hls_src/tcn_weights_scratch.hpp:2929:0)
+INFO: [HLS 214-449] Partitioning array 'tcn_weights::CONV2_B' dimension 1 due to constant index. (../hls_src/tcn_weights_scratch.hpp:2922:0)
+INFO: [HLS 214-449] Partitioning array 'tcn_weights::CONV2_W' dimension 1 due to constant index. (../hls_src/tcn_weights_scratch.hpp:1470:0)
+INFO: [HLS 214-449] Partitioning array 'tcn_weights::CONV2_W' dimension 3 due to constant index. (../hls_src/tcn_weights_scratch.hpp:1470:0)
+INFO: [HLS 214-449] Partitioning array 'tcn_weights::CONV1_B' dimension 1 due to constant index. (../hls_src/tcn_weights_scratch.hpp:1463:0)
+INFO: [HLS 214-449] Partitioning array 'tcn_weights::CONV1_W' dimension 1 due to constant index. (../hls_src/tcn_weights_scratch.hpp:11:0)
+INFO: [HLS 214-449] Partitioning array 'tcn_weights::CONV1_W' dimension 3 due to constant index. (../hls_src/tcn_weights_scratch.hpp:11:0)
+INFO: [HLS 214-248] Applying array_partition to '_ZN11tcn_weightsL7CONV2_WE': Complete partitioning on dimension 1. Complete partitioning on dimension 3. (../hls_src/tcn_weights_scratch.hpp:1470:0)
+INFO: [HLS 214-248] Applying array_partition to '_ZN11tcn_weightsL7CONV2_BE': Complete partitioning on dimension 1. (../hls_src/tcn_weights_scratch.hpp:2922:0)
+INFO: [HLS 214-248] Applying array_partition to '_ZN11tcn_weightsL7CONV1_WE': Complete partitioning on dimension 1. Complete partitioning on dimension 3. (../hls_src/tcn_weights_scratch.hpp:11:0)
+INFO: [HLS 214-248] Applying array_partition to '_ZN11tcn_weightsL7CONV1_BE': Complete partitioning on dimension 1. (../hls_src/tcn_weights_scratch.hpp:1463:0)
+INFO: [HLS 214-248] Applying array_partition to '_ZN11tcn_weightsL4FC_WE': Complete partitioning on dimension 2. (../hls_src/tcn_weights_scratch.hpp:2929:0)
+INFO: [HLS 214-248] Applying array_partition to '_ZN11tcn_weightsL4FC_BE': Complete partitioning on dimension 1. (../hls_src/tcn_weights_scratch.hpp:2933:0)
+INFO: [HLS 200-111] Finished Compiling Optimization and Transform: CPU user time: 1 seconds. CPU system time: 1 seconds. Elapsed time: 29.473 seconds; current allocated memory: 141.270 MB.
+INFO: [HLS 200-111] Finished Checking Pragmas: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.013 seconds; current allocated memory: 141.270 MB.
 INFO: [HLS 200-10] Starting code transformations ...
-INFO: [HLS 200-111] Finished Standard Transforms: CPU user time: 1 seconds. CPU system time: 0 seconds. Elapsed time: 0.643 seconds; current allocated memory: 152.758 MB.
+INFO: [HLS 200-111] Finished Standard Transforms: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.813 seconds; current allocated memory: 150.465 MB.
 INFO: [HLS 200-10] Checking synthesizability ...
-INFO: [HLS 200-111] Finished Checking Synthesizability: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.539 seconds; current allocated memory: 159.086 MB.
-INFO: [XFORM 203-401] Performing if-conversion on hyperblock from (C:/Users/holbo/00VS_projjects/00_HFT_project/n2ew_era/07b_tcn_prepad_manual_hls/hls_src/tcn_prepad_hls_impl.hpp:27:1) to (C:/Users/holbo/00VS_projjects/00_HFT_project/n2ew_era/07b_tcn_prepad_manual_hls/hls_src/tcn_prepad_hls_impl.hpp:26:22) in function '(anonymous namespace)::copy_and_prepad<252>'... converting 3 basic blocks.
-INFO: [HLS 200-111] Finished Loop, function and other optimizations: CPU user time: 2 seconds. CPU system time: 0 seconds. Elapsed time: 1.97 seconds; current allocated memory: 183.555 MB.
-INFO: [HLS 200-111] Finished Architecture Synthesis: CPU user time: 1 seconds. CPU system time: 0 seconds. Elapsed time: 2.031 seconds; current allocated memory: 335.559 MB.
+INFO: [HLS 200-111] Finished Checking Synthesizability: CPU user time: 1 seconds. CPU system time: 0 seconds. Elapsed time: 0.804 seconds; current allocated memory: 156.398 MB.
+INFO: [XFORM 203-401] Performing if-conversion on hyperblock from (../hls_src/tcn_prepad_hls_impl.hpp:27:1) to (../hls_src/tcn_prepad_hls_impl.hpp:26:22) in function '(anonymous namespace)::copy_and_prepad<252>'... converting 3 basic blocks.
+INFO: [HLS 200-111] Finished Loop, function and other optimizations: CPU user time: 2 seconds. CPU system time: 0 seconds. Elapsed time: 2.732 seconds; current allocated memory: 181.176 MB.
+INFO: [HLS 200-111] Finished Architecture Synthesis: CPU user time: 2 seconds. CPU system time: 0 seconds. Elapsed time: 3.142 seconds; current allocated memory: 334.164 MB.
 INFO: [HLS 200-10] Starting hardware synthesis ...
 INFO: [HLS 200-10] Synthesizing 'tcn_prepad_infer' ...
 WARNING: [SYN 201-103] Legalizing function name '(anonymous namespace)copy_and_prepad<252>' to 'p_anonymous_namespace_copy_and_prepad_252_s'.
@@ -130,222 +130,222 @@ INFO: [HLS 200-42] -- Implementing module 'p_anonymous_namespace_copy_and_prepad
 INFO: [HLS 200-10] ----------------------------------------------------------------
 INFO: [SCHED 204-11] Starting scheduling ...
 INFO: [SCHED 204-11] Finished scheduling.
-INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 1.393 seconds; current allocated memory: 340.656 MB.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.701 seconds; current allocated memory: 339.254 MB.
 INFO: [BIND 205-100] Starting micro-architecture generation ...
 INFO: [BIND 205-101] Performing variable lifetime analysis.
 INFO: [BIND 205-101] Exploring resource sharing.
 INFO: [BIND 205-101] Binding ...
 INFO: [BIND 205-100] Finished micro-architecture generation.
-INFO: [HLS 200-111] Finished Binding: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.064 seconds; current allocated memory: 341.953 MB.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.107 seconds; current allocated memory: 340.531 MB.
 INFO: [HLS 200-10] ----------------------------------------------------------------
 INFO: [HLS 200-42] -- Implementing module 'p_anonymous_namespace_conv1_relu_252_1_9' 
 INFO: [HLS 200-10] ----------------------------------------------------------------
 INFO: [SCHED 204-11] Starting scheduling ...
 INFO: [SCHED 204-11] Finished scheduling.
-INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.321 seconds; current allocated memory: 344.242 MB.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.351 seconds; current allocated memory: 342.742 MB.
 INFO: [BIND 205-100] Starting micro-architecture generation ...
 INFO: [BIND 205-101] Performing variable lifetime analysis.
 INFO: [BIND 205-101] Exploring resource sharing.
 INFO: [BIND 205-101] Binding ...
 INFO: [BIND 205-100] Finished micro-architecture generation.
-INFO: [HLS 200-111] Finished Binding: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 1.079 seconds; current allocated memory: 344.461 MB.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.132 seconds; current allocated memory: 343.012 MB.
 INFO: [HLS 200-10] ----------------------------------------------------------------
 INFO: [HLS 200-42] -- Implementing module 'p_anonymous_namespace_conv2_relu_residual_252_1_8' 
 INFO: [HLS 200-10] ----------------------------------------------------------------
 INFO: [SCHED 204-11] Starting scheduling ...
 INFO: [SCHED 204-11] Finished scheduling.
-INFO: [HLS 200-111] Finished Scheduling: CPU user time: 1 seconds. CPU system time: 0 seconds. Elapsed time: 0.237 seconds; current allocated memory: 346.934 MB.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.408 seconds; current allocated memory: 345.086 MB.
 INFO: [BIND 205-100] Starting micro-architecture generation ...
 INFO: [BIND 205-101] Performing variable lifetime analysis.
 INFO: [BIND 205-101] Exploring resource sharing.
 INFO: [BIND 205-101] Binding ...
 INFO: [BIND 205-100] Finished micro-architecture generation.
-INFO: [HLS 200-111] Finished Binding: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.07 seconds; current allocated memory: 346.996 MB.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.15 seconds; current allocated memory: 345.207 MB.
 INFO: [HLS 200-10] ----------------------------------------------------------------
 INFO: [HLS 200-42] -- Implementing module 'p_anonymous_namespace_tcn_block_252_1_s' 
 INFO: [HLS 200-10] ----------------------------------------------------------------
 INFO: [SCHED 204-11] Starting scheduling ...
 INFO: [SCHED 204-11] Finished scheduling.
-INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.109 seconds; current allocated memory: 347.094 MB.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.171 seconds; current allocated memory: 345.273 MB.
 INFO: [BIND 205-100] Starting micro-architecture generation ...
 INFO: [BIND 205-101] Performing variable lifetime analysis.
 INFO: [BIND 205-101] Exploring resource sharing.
 INFO: [BIND 205-101] Binding ...
 INFO: [BIND 205-100] Finished micro-architecture generation.
-INFO: [HLS 200-111] Finished Binding: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.019 seconds; current allocated memory: 347.172 MB.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 1 seconds. CPU system time: 0 seconds. Elapsed time: 0.036 seconds; current allocated memory: 345.355 MB.
 INFO: [HLS 200-10] ----------------------------------------------------------------
 INFO: [HLS 200-42] -- Implementing module 'p_anonymous_namespace_conv1_relu_248_2_11' 
 INFO: [HLS 200-10] ----------------------------------------------------------------
 INFO: [SCHED 204-11] Starting scheduling ...
 INFO: [SCHED 204-11] Finished scheduling.
-INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.177 seconds; current allocated memory: 348.961 MB.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.261 seconds; current allocated memory: 347.730 MB.
 INFO: [BIND 205-100] Starting micro-architecture generation ...
 INFO: [BIND 205-101] Performing variable lifetime analysis.
 INFO: [BIND 205-101] Exploring resource sharing.
 INFO: [BIND 205-101] Binding ...
 INFO: [BIND 205-100] Finished micro-architecture generation.
-INFO: [HLS 200-111] Finished Binding: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.079 seconds; current allocated memory: 349.074 MB.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.182 seconds; current allocated memory: 347.730 MB.
 INFO: [HLS 200-10] ----------------------------------------------------------------
 INFO: [HLS 200-42] -- Implementing module 'p_anonymous_namespace_conv2_relu_residual_248_2_10' 
 INFO: [HLS 200-10] ----------------------------------------------------------------
 INFO: [SCHED 204-11] Starting scheduling ...
 INFO: [SCHED 204-11] Finished scheduling.
-INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.214 seconds; current allocated memory: 351.469 MB.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.446 seconds; current allocated memory: 349.863 MB.
 INFO: [BIND 205-100] Starting micro-architecture generation ...
 INFO: [BIND 205-101] Performing variable lifetime analysis.
 INFO: [BIND 205-101] Exploring resource sharing.
 INFO: [BIND 205-101] Binding ...
 INFO: [BIND 205-100] Finished micro-architecture generation.
-INFO: [HLS 200-111] Finished Binding: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.096 seconds; current allocated memory: 351.746 MB.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.163 seconds; current allocated memory: 350.250 MB.
 INFO: [HLS 200-10] ----------------------------------------------------------------
 INFO: [HLS 200-42] -- Implementing module 'p_anonymous_namespace_tcn_block_248_2_s' 
 INFO: [HLS 200-10] ----------------------------------------------------------------
 INFO: [SCHED 204-11] Starting scheduling ...
 INFO: [SCHED 204-11] Finished scheduling.
-INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.107 seconds; current allocated memory: 351.953 MB.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.181 seconds; current allocated memory: 350.273 MB.
 INFO: [BIND 205-100] Starting micro-architecture generation ...
 INFO: [BIND 205-101] Performing variable lifetime analysis.
 INFO: [BIND 205-101] Exploring resource sharing.
 INFO: [BIND 205-101] Binding ...
 INFO: [BIND 205-100] Finished micro-architecture generation.
-INFO: [HLS 200-111] Finished Binding: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.02 seconds; current allocated memory: 352.000 MB.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.043 seconds; current allocated memory: 350.523 MB.
 INFO: [HLS 200-10] ----------------------------------------------------------------
 INFO: [HLS 200-42] -- Implementing module 'p_anonymous_namespace_conv1_relu_240_4_13' 
 INFO: [HLS 200-10] ----------------------------------------------------------------
 INFO: [SCHED 204-11] Starting scheduling ...
 INFO: [SCHED 204-11] Finished scheduling.
-INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.172 seconds; current allocated memory: 353.938 MB.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.265 seconds; current allocated memory: 352.621 MB.
 INFO: [BIND 205-100] Starting micro-architecture generation ...
 INFO: [BIND 205-101] Performing variable lifetime analysis.
 INFO: [BIND 205-101] Exploring resource sharing.
 INFO: [BIND 205-101] Binding ...
 INFO: [BIND 205-100] Finished micro-architecture generation.
-INFO: [HLS 200-111] Finished Binding: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.09 seconds; current allocated memory: 354.215 MB.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 1 seconds. CPU system time: 0 seconds. Elapsed time: 0.16 seconds; current allocated memory: 352.961 MB.
 INFO: [HLS 200-10] ----------------------------------------------------------------
 INFO: [HLS 200-42] -- Implementing module 'p_anonymous_namespace_conv2_relu_residual_240_4_12' 
 INFO: [HLS 200-10] ----------------------------------------------------------------
 INFO: [SCHED 204-11] Starting scheduling ...
 INFO: [SCHED 204-11] Finished scheduling.
-INFO: [HLS 200-111] Finished Scheduling: CPU user time: 1 seconds. CPU system time: 0 seconds. Elapsed time: 0.331 seconds; current allocated memory: 356.504 MB.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.392 seconds; current allocated memory: 355.004 MB.
 INFO: [BIND 205-100] Starting micro-architecture generation ...
 INFO: [BIND 205-101] Performing variable lifetime analysis.
 INFO: [BIND 205-101] Exploring resource sharing.
 INFO: [BIND 205-101] Binding ...
 INFO: [BIND 205-100] Finished micro-architecture generation.
-INFO: [HLS 200-111] Finished Binding: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.113 seconds; current allocated memory: 356.617 MB.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.132 seconds; current allocated memory: 355.008 MB.
 INFO: [HLS 200-10] ----------------------------------------------------------------
 INFO: [HLS 200-42] -- Implementing module 'p_anonymous_namespace_tcn_block_240_4_s' 
 INFO: [HLS 200-10] ----------------------------------------------------------------
 INFO: [SCHED 204-11] Starting scheduling ...
 INFO: [SCHED 204-11] Finished scheduling.
-INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.132 seconds; current allocated memory: 356.727 MB.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0 seconds. CPU system time: 1 seconds. Elapsed time: 0.147 seconds; current allocated memory: 355.082 MB.
 INFO: [BIND 205-100] Starting micro-architecture generation ...
 INFO: [BIND 205-101] Performing variable lifetime analysis.
 INFO: [BIND 205-101] Exploring resource sharing.
 INFO: [BIND 205-101] Binding ...
 INFO: [BIND 205-100] Finished micro-architecture generation.
-INFO: [HLS 200-111] Finished Binding: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.026 seconds; current allocated memory: 356.992 MB.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.031 seconds; current allocated memory: 355.246 MB.
 INFO: [HLS 200-10] ----------------------------------------------------------------
 INFO: [HLS 200-42] -- Implementing module 'p_anonymous_namespace_conv1_relu_224_8_15' 
 INFO: [HLS 200-10] ----------------------------------------------------------------
 INFO: [SCHED 204-11] Starting scheduling ...
 INFO: [SCHED 204-11] Finished scheduling.
-INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.207 seconds; current allocated memory: 359.086 MB.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.318 seconds; current allocated memory: 357.242 MB.
 INFO: [BIND 205-100] Starting micro-architecture generation ...
 INFO: [BIND 205-101] Performing variable lifetime analysis.
 INFO: [BIND 205-101] Exploring resource sharing.
 INFO: [BIND 205-101] Binding ...
 INFO: [BIND 205-100] Finished micro-architecture generation.
-INFO: [HLS 200-111] Finished Binding: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.108 seconds; current allocated memory: 359.340 MB.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.135 seconds; current allocated memory: 357.586 MB.
 INFO: [HLS 200-10] ----------------------------------------------------------------
 INFO: [HLS 200-42] -- Implementing module 'p_anonymous_namespace_conv2_relu_residual_224_8_14' 
 INFO: [HLS 200-10] ----------------------------------------------------------------
 INFO: [SCHED 204-11] Starting scheduling ...
 INFO: [SCHED 204-11] Finished scheduling.
-INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.492 seconds; current allocated memory: 361.434 MB.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.38 seconds; current allocated memory: 359.836 MB.
 INFO: [BIND 205-100] Starting micro-architecture generation ...
 INFO: [BIND 205-101] Performing variable lifetime analysis.
 INFO: [BIND 205-101] Exploring resource sharing.
 INFO: [BIND 205-101] Binding ...
 INFO: [BIND 205-100] Finished micro-architecture generation.
-INFO: [HLS 200-111] Finished Binding: CPU user time: 1 seconds. CPU system time: 0 seconds. Elapsed time: 0.141 seconds; current allocated memory: 361.594 MB.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.144 seconds; current allocated memory: 360.148 MB.
 INFO: [HLS 200-10] ----------------------------------------------------------------
 INFO: [HLS 200-42] -- Implementing module 'p_anonymous_namespace_tcn_block_224_8_s' 
 INFO: [HLS 200-10] ----------------------------------------------------------------
 INFO: [SCHED 204-11] Starting scheduling ...
 INFO: [SCHED 204-11] Finished scheduling.
-INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.124 seconds; current allocated memory: 361.605 MB.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 1 seconds. CPU system time: 0 seconds. Elapsed time: 0.142 seconds; current allocated memory: 360.332 MB.
 INFO: [BIND 205-100] Starting micro-architecture generation ...
 INFO: [BIND 205-101] Performing variable lifetime analysis.
 INFO: [BIND 205-101] Exploring resource sharing.
 INFO: [BIND 205-101] Binding ...
 INFO: [BIND 205-100] Finished micro-architecture generation.
-INFO: [HLS 200-111] Finished Binding: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.029 seconds; current allocated memory: 361.750 MB.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.042 seconds; current allocated memory: 360.398 MB.
 INFO: [HLS 200-10] ----------------------------------------------------------------
 INFO: [HLS 200-42] -- Implementing module 'p_anonymous_namespace_conv1_relu_192_16_17' 
 INFO: [HLS 200-10] ----------------------------------------------------------------
 INFO: [SCHED 204-11] Starting scheduling ...
 INFO: [SCHED 204-11] Finished scheduling.
-INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.236 seconds; current allocated memory: 363.797 MB.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.265 seconds; current allocated memory: 362.129 MB.
 INFO: [BIND 205-100] Starting micro-architecture generation ...
 INFO: [BIND 205-101] Performing variable lifetime analysis.
 INFO: [BIND 205-101] Exploring resource sharing.
 INFO: [BIND 205-101] Binding ...
 INFO: [BIND 205-100] Finished micro-architecture generation.
-INFO: [HLS 200-111] Finished Binding: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.107 seconds; current allocated memory: 364.070 MB.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.123 seconds; current allocated memory: 362.328 MB.
 INFO: [HLS 200-10] ----------------------------------------------------------------
 INFO: [HLS 200-42] -- Implementing module 'p_anonymous_namespace_conv2_relu_residual_192_16_16' 
 INFO: [HLS 200-10] ----------------------------------------------------------------
 INFO: [SCHED 204-11] Starting scheduling ...
 INFO: [SCHED 204-11] Finished scheduling.
-INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.389 seconds; current allocated memory: 366.023 MB.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.371 seconds; current allocated memory: 364.367 MB.
 INFO: [BIND 205-100] Starting micro-architecture generation ...
 INFO: [BIND 205-101] Performing variable lifetime analysis.
 INFO: [BIND 205-101] Exploring resource sharing.
 INFO: [BIND 205-101] Binding ...
 INFO: [BIND 205-100] Finished micro-architecture generation.
-INFO: [HLS 200-111] Finished Binding: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.122 seconds; current allocated memory: 366.125 MB.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.137 seconds; current allocated memory: 364.746 MB.
 INFO: [HLS 200-10] ----------------------------------------------------------------
 INFO: [HLS 200-42] -- Implementing module 'p_anonymous_namespace_tcn_block_192_16_s' 
 INFO: [HLS 200-10] ----------------------------------------------------------------
 INFO: [SCHED 204-11] Starting scheduling ...
 INFO: [SCHED 204-11] Finished scheduling.
-INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.124 seconds; current allocated memory: 366.234 MB.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.148 seconds; current allocated memory: 364.867 MB.
 INFO: [BIND 205-100] Starting micro-architecture generation ...
 INFO: [BIND 205-101] Performing variable lifetime analysis.
 INFO: [BIND 205-101] Exploring resource sharing.
 INFO: [BIND 205-101] Binding ...
 INFO: [BIND 205-100] Finished micro-architecture generation.
-INFO: [HLS 200-111] Finished Binding: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.045 seconds; current allocated memory: 366.504 MB.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.039 seconds; current allocated memory: 365.055 MB.
 INFO: [HLS 200-10] ----------------------------------------------------------------
 INFO: [HLS 200-42] -- Implementing module 'p_anonymous_namespace_global_average_readout' 
 INFO: [HLS 200-10] ----------------------------------------------------------------
 INFO: [SCHED 204-11] Starting scheduling ...
 INFO: [SCHED 204-11] Finished scheduling.
-INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.304 seconds; current allocated memory: 368.133 MB.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.261 seconds; current allocated memory: 366.641 MB.
 INFO: [BIND 205-100] Starting micro-architecture generation ...
 INFO: [BIND 205-101] Performing variable lifetime analysis.
 INFO: [BIND 205-101] Exploring resource sharing.
 INFO: [BIND 205-101] Binding ...
 INFO: [BIND 205-100] Finished micro-architecture generation.
-INFO: [HLS 200-111] Finished Binding: CPU user time: 1 seconds. CPU system time: 0 seconds. Elapsed time: 0.293 seconds; current allocated memory: 368.430 MB.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 1 seconds. CPU system time: 0 seconds. Elapsed time: 0.1 seconds; current allocated memory: 366.992 MB.
 INFO: [HLS 200-10] ----------------------------------------------------------------
 INFO: [HLS 200-42] -- Implementing module 'tcn_prepad_infer' 
 INFO: [HLS 200-10] ----------------------------------------------------------------
 INFO: [SCHED 204-11] Starting scheduling ...
 INFO: [SCHED 204-11] Finished scheduling.
-INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.193 seconds; current allocated memory: 368.539 MB.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.123 seconds; current allocated memory: 367.043 MB.
 INFO: [BIND 205-100] Starting micro-architecture generation ...
 INFO: [BIND 205-101] Performing variable lifetime analysis.
 INFO: [BIND 205-101] Exploring resource sharing.
 INFO: [BIND 205-101] Binding ...
 INFO: [BIND 205-100] Finished micro-architecture generation.
-INFO: [HLS 200-111] Finished Binding: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.132 seconds; current allocated memory: 369.059 MB.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.092 seconds; current allocated memory: 367.531 MB.
 INFO: [HLS 200-10] ----------------------------------------------------------------
 INFO: [HLS 200-10] -- Generating RTL for module 'p_anonymous_namespace_copy_and_prepad_252_s' 
 INFO: [HLS 200-10] ----------------------------------------------------------------
 INFO: [RTGEN 206-100] Finished creating RTL model for 'p_anonymous_namespace_copy_and_prepad_252_s'.
-INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.278 seconds; current allocated memory: 370.867 MB.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.257 seconds; current allocated memory: 369.266 MB.
 INFO: [HLS 200-10] ----------------------------------------------------------------
 INFO: [HLS 200-10] -- Generating RTL for module 'p_anonymous_namespace_conv1_relu_252_1_9' 
 INFO: [HLS 200-10] ----------------------------------------------------------------
@@ -388,7 +388,7 @@ INFO: [RTMG 210-279] Implementing memory 'tcn_prepad_infer_p_anonymous_namespace
 INFO: [RTMG 210-279] Implementing memory 'tcn_prepad_infer_p_anonymous_namespace_conv1_relu_252_1_9_p_ZN11tcn_weightsL7CONV1_WE_0_13_ROMpcA' using auto ROMs.
 INFO: [RTMG 210-279] Implementing memory 'tcn_prepad_infer_p_anonymous_namespace_conv1_relu_252_1_9_p_ZN11tcn_weightsL7CONV1_WE_0_14_ROMqcK' using auto ROMs.
 INFO: [RTMG 210-279] Implementing memory 'tcn_prepad_infer_p_anonymous_namespace_conv1_relu_252_1_9_p_ZN11tcn_weightsL7CONV1_WE_0_15_ROMrcU' using auto ROMs.
-INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.968 seconds; current allocated memory: 376.445 MB.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 2.046 seconds; current allocated memory: 375.000 MB.
 INFO: [HLS 200-10] ----------------------------------------------------------------
 INFO: [HLS 200-10] -- Generating RTL for module 'p_anonymous_namespace_conv2_relu_residual_252_1_8' 
 INFO: [HLS 200-10] ----------------------------------------------------------------
@@ -430,7 +430,7 @@ INFO: [RTMG 210-279] Implementing memory 'tcn_prepad_infer_p_anonymous_namespace
 INFO: [RTMG 210-279] Implementing memory 'tcn_prepad_infer_p_anonymous_namespace_conv2_relu_residual_252_1_8_p_ZN11tcn_weightsL7CONV2_WEGfk' using auto ROMs.
 INFO: [RTMG 210-279] Implementing memory 'tcn_prepad_infer_p_anonymous_namespace_conv2_relu_residual_252_1_8_p_ZN11tcn_weightsL7CONV2_WEHfu' using auto ROMs.
 INFO: [RTMG 210-279] Implementing memory 'tcn_prepad_infer_p_anonymous_namespace_conv2_relu_residual_252_1_8_p_ZN11tcn_weightsL7CONV2_WEIfE' using auto ROMs.
-INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0 seconds. CPU system time: 1 seconds. Elapsed time: 1.987 seconds; current allocated memory: 383.848 MB.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0 seconds. CPU system time: 1 seconds. Elapsed time: 1.997 seconds; current allocated memory: 381.938 MB.
 INFO: [HLS 200-10] ----------------------------------------------------------------
 INFO: [HLS 200-10] -- Generating RTL for module 'p_anonymous_namespace_tcn_block_252_1_s' 
 INFO: [HLS 200-10] ----------------------------------------------------------------
@@ -440,7 +440,7 @@ INFO: [RTGEN 206-100] Generating core module 'mul_36s_25s_61_2_1': 2 instance(s)
 INFO: [RTGEN 206-100] Generating core module 'mul_36s_26s_62_2_1': 1 instance(s).
 INFO: [RTGEN 206-100] Finished creating RTL model for 'p_anonymous_namespace_tcn_block_252_1_s'.
 INFO: [RTMG 210-278] Implementing memory 'tcn_prepad_infer_p_anonymous_namespace_tcn_block_252_1_s_tmp_RAM_AUTO_1R1W' using auto RAMs.
-INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.353 seconds; current allocated memory: 390.152 MB.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 1 seconds. CPU system time: 1 seconds. Elapsed time: 1.776 seconds; current allocated memory: 388.258 MB.
 INFO: [HLS 200-10] ----------------------------------------------------------------
 INFO: [HLS 200-10] -- Generating RTL for module 'p_anonymous_namespace_conv1_relu_248_2_11' 
 INFO: [HLS 200-10] ----------------------------------------------------------------
@@ -482,7 +482,7 @@ INFO: [RTMG 210-279] Implementing memory 'tcn_prepad_infer_p_anonymous_namespace
 INFO: [RTMG 210-279] Implementing memory 'tcn_prepad_infer_p_anonymous_namespace_conv1_relu_248_2_11_p_ZN11tcn_weightsL7CONV1_WE_1_13_ROXh4' using auto ROMs.
 INFO: [RTMG 210-279] Implementing memory 'tcn_prepad_infer_p_anonymous_namespace_conv1_relu_248_2_11_p_ZN11tcn_weightsL7CONV1_WE_1_14_ROYie' using auto ROMs.
 INFO: [RTMG 210-279] Implementing memory 'tcn_prepad_infer_p_anonymous_namespace_conv1_relu_248_2_11_p_ZN11tcn_weightsL7CONV1_WE_1_15_ROZio' using auto ROMs.
-INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 1 seconds. CPU system time: 0 seconds. Elapsed time: 2.221 seconds; current allocated memory: 391.902 MB.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 2.166 seconds; current allocated memory: 389.719 MB.
 INFO: [HLS 200-10] ----------------------------------------------------------------
 INFO: [HLS 200-10] -- Generating RTL for module 'p_anonymous_namespace_conv2_relu_residual_248_2_10' 
 INFO: [HLS 200-10] ----------------------------------------------------------------
@@ -523,7 +523,7 @@ INFO: [RTMG 210-279] Implementing memory 'tcn_prepad_infer_p_anonymous_namespace
 INFO: [RTMG 210-279] Implementing memory 'tcn_prepad_infer_p_anonymous_namespace_conv2_relu_residual_248_2_10_p_ZN11tcn_weightsL7CONV2_Wbek' using auto ROMs.
 INFO: [RTMG 210-279] Implementing memory 'tcn_prepad_infer_p_anonymous_namespace_conv2_relu_residual_248_2_10_p_ZN11tcn_weightsL7CONV2_Wbfk' using auto ROMs.
 INFO: [RTMG 210-279] Implementing memory 'tcn_prepad_infer_p_anonymous_namespace_conv2_relu_residual_248_2_10_p_ZN11tcn_weightsL7CONV2_Wbgk' using auto ROMs.
-INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 2.073 seconds; current allocated memory: 398.941 MB.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0 seconds. CPU system time: 1 seconds. Elapsed time: 2.109 seconds; current allocated memory: 397.094 MB.
 INFO: [HLS 200-10] ----------------------------------------------------------------
 INFO: [HLS 200-10] -- Generating RTL for module 'p_anonymous_namespace_tcn_block_248_2_s' 
 INFO: [HLS 200-10] ----------------------------------------------------------------
@@ -532,7 +532,7 @@ INFO: [RTGEN 206-100] Generating core module 'mul_36s_25s_61_2_1': 2 instance(s)
 INFO: [RTGEN 206-100] Generating core module 'mul_36s_26s_62_2_1': 1 instance(s).
 INFO: [RTGEN 206-100] Finished creating RTL model for 'p_anonymous_namespace_tcn_block_248_2_s'.
 INFO: [RTMG 210-278] Implementing memory 'tcn_prepad_infer_p_anonymous_namespace_tcn_block_248_2_s_tmp_RAM_AUTO_1R1W' using auto RAMs.
-INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.503 seconds; current allocated memory: 405.309 MB.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 1 seconds. CPU system time: 1 seconds. Elapsed time: 1.618 seconds; current allocated memory: 403.598 MB.
 INFO: [HLS 200-10] ----------------------------------------------------------------
 INFO: [HLS 200-10] -- Generating RTL for module 'p_anonymous_namespace_conv1_relu_240_4_13' 
 INFO: [HLS 200-10] ----------------------------------------------------------------
@@ -574,7 +574,7 @@ INFO: [RTMG 210-279] Implementing memory 'tcn_prepad_infer_p_anonymous_namespace
 INFO: [RTMG 210-279] Implementing memory 'tcn_prepad_infer_p_anonymous_namespace_conv1_relu_240_4_13_p_ZN11tcn_weightsL7CONV1_WE_2_13_RObvn' using auto ROMs.
 INFO: [RTMG 210-279] Implementing memory 'tcn_prepad_infer_p_anonymous_namespace_conv1_relu_240_4_13_p_ZN11tcn_weightsL7CONV1_WE_2_14_RObwn' using auto ROMs.
 INFO: [RTMG 210-279] Implementing memory 'tcn_prepad_infer_p_anonymous_namespace_conv1_relu_240_4_13_p_ZN11tcn_weightsL7CONV1_WE_2_15_RObxn' using auto ROMs.
-INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 1 seconds. CPU system time: 0 seconds. Elapsed time: 3.388 seconds; current allocated memory: 406.715 MB.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 2.388 seconds; current allocated memory: 405.344 MB.
 INFO: [HLS 200-10] ----------------------------------------------------------------
 INFO: [HLS 200-10] -- Generating RTL for module 'p_anonymous_namespace_conv2_relu_residual_240_4_12' 
 INFO: [HLS 200-10] ----------------------------------------------------------------
@@ -615,7 +615,7 @@ INFO: [RTMG 210-279] Implementing memory 'tcn_prepad_infer_p_anonymous_namespace
 INFO: [RTMG 210-279] Implementing memory 'tcn_prepad_infer_p_anonymous_namespace_conv2_relu_residual_240_4_12_p_ZN11tcn_weightsL7CONV2_WbMq' using auto ROMs.
 INFO: [RTMG 210-279] Implementing memory 'tcn_prepad_infer_p_anonymous_namespace_conv2_relu_residual_240_4_12_p_ZN11tcn_weightsL7CONV2_WbNq' using auto ROMs.
 INFO: [RTMG 210-279] Implementing memory 'tcn_prepad_infer_p_anonymous_namespace_conv2_relu_residual_240_4_12_p_ZN11tcn_weightsL7CONV2_WbOq' using auto ROMs.
-INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 3.95 seconds; current allocated memory: 414.203 MB.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 3.809 seconds; current allocated memory: 412.309 MB.
 INFO: [HLS 200-10] ----------------------------------------------------------------
 INFO: [HLS 200-10] -- Generating RTL for module 'p_anonymous_namespace_tcn_block_240_4_s' 
 INFO: [HLS 200-10] ----------------------------------------------------------------
@@ -624,7 +624,7 @@ INFO: [RTGEN 206-100] Generating core module 'mul_36s_24s_60_2_1': 2 instance(s)
 INFO: [RTGEN 206-100] Generating core module 'mul_36s_25s_61_2_1': 2 instance(s).
 INFO: [RTGEN 206-100] Finished creating RTL model for 'p_anonymous_namespace_tcn_block_240_4_s'.
 INFO: [RTMG 210-278] Implementing memory 'tcn_prepad_infer_p_anonymous_namespace_tcn_block_240_4_s_tmp_RAM_AUTO_1R1W' using auto RAMs.
-INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.358 seconds; current allocated memory: 420.484 MB.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 1 seconds. CPU system time: 1 seconds. Elapsed time: 1.358 seconds; current allocated memory: 418.535 MB.
 INFO: [HLS 200-10] ----------------------------------------------------------------
 INFO: [HLS 200-10] -- Generating RTL for module 'p_anonymous_namespace_conv1_relu_224_8_15' 
 INFO: [HLS 200-10] ----------------------------------------------------------------
@@ -667,7 +667,7 @@ INFO: [RTMG 210-279] Implementing memory 'tcn_prepad_infer_p_anonymous_namespace
 INFO: [RTMG 210-279] Implementing memory 'tcn_prepad_infer_p_anonymous_namespace_conv1_relu_224_8_15_p_ZN11tcn_weightsL7CONV1_WE_3_13_ROb3s' using auto ROMs.
 INFO: [RTMG 210-279] Implementing memory 'tcn_prepad_infer_p_anonymous_namespace_conv1_relu_224_8_15_p_ZN11tcn_weightsL7CONV1_WE_3_14_ROb4t' using auto ROMs.
 INFO: [RTMG 210-279] Implementing memory 'tcn_prepad_infer_p_anonymous_namespace_conv1_relu_224_8_15_p_ZN11tcn_weightsL7CONV1_WE_3_15_ROb5t' using auto ROMs.
-INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 3.665 seconds; current allocated memory: 422.551 MB.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 2.624 seconds; current allocated memory: 420.742 MB.
 INFO: [HLS 200-10] ----------------------------------------------------------------
 INFO: [HLS 200-10] -- Generating RTL for module 'p_anonymous_namespace_conv2_relu_residual_224_8_14' 
 INFO: [HLS 200-10] ----------------------------------------------------------------
@@ -709,7 +709,7 @@ INFO: [RTMG 210-279] Implementing memory 'tcn_prepad_infer_p_anonymous_namespace
 INFO: [RTMG 210-279] Implementing memory 'tcn_prepad_infer_p_anonymous_namespace_conv2_relu_residual_224_8_14_p_ZN11tcn_weightsL7CONV2_Wckv' using auto ROMs.
 INFO: [RTMG 210-279] Implementing memory 'tcn_prepad_infer_p_anonymous_namespace_conv2_relu_residual_224_8_14_p_ZN11tcn_weightsL7CONV2_Wclv' using auto ROMs.
 INFO: [RTMG 210-279] Implementing memory 'tcn_prepad_infer_p_anonymous_namespace_conv2_relu_residual_224_8_14_p_ZN11tcn_weightsL7CONV2_Wcmv' using auto ROMs.
-INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 1 seconds. CPU system time: 0 seconds. Elapsed time: 2.144 seconds; current allocated memory: 429.320 MB.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0 seconds. CPU system time: 1 seconds. Elapsed time: 2.221 seconds; current allocated memory: 428.262 MB.
 INFO: [HLS 200-10] ----------------------------------------------------------------
 INFO: [HLS 200-10] -- Generating RTL for module 'p_anonymous_namespace_tcn_block_224_8_s' 
 INFO: [HLS 200-10] ----------------------------------------------------------------
@@ -719,7 +719,7 @@ INFO: [RTGEN 206-100] Generating core module 'mul_36s_25s_61_2_1': 2 instance(s)
 INFO: [RTGEN 206-100] Generating core module 'mul_36s_26s_62_2_1': 1 instance(s).
 INFO: [RTGEN 206-100] Finished creating RTL model for 'p_anonymous_namespace_tcn_block_224_8_s'.
 INFO: [RTMG 210-278] Implementing memory 'tcn_prepad_infer_p_anonymous_namespace_tcn_block_224_8_s_tmp_RAM_AUTO_1R1W' using auto RAMs.
-INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 1.858 seconds; current allocated memory: 435.625 MB.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 1 seconds. CPU system time: 1 seconds. Elapsed time: 1.417 seconds; current allocated memory: 434.723 MB.
 INFO: [HLS 200-10] ----------------------------------------------------------------
 INFO: [HLS 200-10] -- Generating RTL for module 'p_anonymous_namespace_conv1_relu_192_16_17' 
 INFO: [HLS 200-10] ----------------------------------------------------------------
@@ -761,7 +761,7 @@ INFO: [RTMG 210-279] Implementing memory 'tcn_prepad_infer_p_anonymous_namespace
 INFO: [RTMG 210-279] Implementing memory 'tcn_prepad_infer_p_anonymous_namespace_conv1_relu_192_16_17_p_ZN11tcn_weightsL7CONV1_WE_4_13_RcBy' using auto ROMs.
 INFO: [RTMG 210-279] Implementing memory 'tcn_prepad_infer_p_anonymous_namespace_conv1_relu_192_16_17_p_ZN11tcn_weightsL7CONV1_WE_4_14_RcCy' using auto ROMs.
 INFO: [RTMG 210-279] Implementing memory 'tcn_prepad_infer_p_anonymous_namespace_conv1_relu_192_16_17_p_ZN11tcn_weightsL7CONV1_WE_4_15_RcDy' using auto ROMs.
-INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 2.194 seconds; current allocated memory: 437.457 MB.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 2.208 seconds; current allocated memory: 437.043 MB.
 INFO: [HLS 200-10] ----------------------------------------------------------------
 INFO: [HLS 200-10] -- Generating RTL for module 'p_anonymous_namespace_conv2_relu_residual_192_16_16' 
 INFO: [HLS 200-10] ----------------------------------------------------------------
@@ -803,7 +803,7 @@ INFO: [RTMG 210-279] Implementing memory 'tcn_prepad_infer_p_anonymous_namespace
 INFO: [RTMG 210-279] Implementing memory 'tcn_prepad_infer_p_anonymous_namespace_conv2_relu_residual_192_16_16_p_ZN11tcn_weightsL7CONV2_cSB' using auto ROMs.
 INFO: [RTMG 210-279] Implementing memory 'tcn_prepad_infer_p_anonymous_namespace_conv2_relu_residual_192_16_16_p_ZN11tcn_weightsL7CONV2_cTB' using auto ROMs.
 INFO: [RTMG 210-279] Implementing memory 'tcn_prepad_infer_p_anonymous_namespace_conv2_relu_residual_192_16_16_p_ZN11tcn_weightsL7CONV2_cUB' using auto ROMs.
-INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 3.973 seconds; current allocated memory: 444.562 MB.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 1 seconds. CPU system time: 1 seconds. Elapsed time: 3.89 seconds; current allocated memory: 444.207 MB.
 INFO: [HLS 200-10] ----------------------------------------------------------------
 INFO: [HLS 200-10] -- Generating RTL for module 'p_anonymous_namespace_tcn_block_192_16_s' 
 INFO: [HLS 200-10] ----------------------------------------------------------------
@@ -812,7 +812,7 @@ INFO: [RTGEN 206-100] Generating core module 'mul_36s_24s_60_2_1': 2 instance(s)
 INFO: [RTGEN 206-100] Generating core module 'mul_36s_25s_61_2_1': 2 instance(s).
 INFO: [RTGEN 206-100] Finished creating RTL model for 'p_anonymous_namespace_tcn_block_192_16_s'.
 INFO: [RTMG 210-278] Implementing memory 'tcn_prepad_infer_p_anonymous_namespace_tcn_block_192_16_s_tmp_RAM_AUTO_1R1W' using auto RAMs.
-INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.51 seconds; current allocated memory: 451.500 MB.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 1.868 seconds; current allocated memory: 450.824 MB.
 INFO: [HLS 200-10] ----------------------------------------------------------------
 INFO: [HLS 200-10] -- Generating RTL for module 'p_anonymous_namespace_global_average_readout' 
 INFO: [HLS 200-10] ----------------------------------------------------------------
@@ -852,7 +852,7 @@ INFO: [RTMG 210-279] Implementing memory 'tcn_prepad_infer_p_anonymous_namespace
 INFO: [RTMG 210-279] Implementing memory 'tcn_prepad_infer_p_anonymous_namespace_global_average_readout_p_ZN11tcn_weightsL4FC_WE_14_ROM_c9D' using auto ROMs.
 INFO: [RTMG 210-279] Implementing memory 'tcn_prepad_infer_p_anonymous_namespace_global_average_readout_p_ZN11tcn_weightsL4FC_WE_15_ROM_daE' using auto ROMs.
 INFO: [RTMG 210-278] Implementing memory 'tcn_prepad_infer_p_anonymous_namespace_global_average_readout_pooled_RAM_AUTO_1R1W' using auto RAMs.
-INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 1.611 seconds; current allocated memory: 453.301 MB.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 2.271 seconds; current allocated memory: 452.645 MB.
 INFO: [HLS 200-10] ----------------------------------------------------------------
 INFO: [HLS 200-10] -- Generating RTL for module 'tcn_prepad_infer' 
 INFO: [HLS 200-10] ----------------------------------------------------------------
@@ -870,13 +870,13 @@ INFO: [RTMG 210-278] Implementing memory 'tcn_prepad_infer_buf2_RAM_AUTO_1R1W' u
 INFO: [RTMG 210-278] Implementing memory 'tcn_prepad_infer_buf3_RAM_AUTO_1R1W' using auto RAMs.
 INFO: [RTMG 210-278] Implementing memory 'tcn_prepad_infer_buf4_RAM_AUTO_1R1W' using auto RAMs.
 INFO: [RTMG 210-278] Implementing memory 'tcn_prepad_infer_buf5_RAM_AUTO_1R1W' using auto RAMs.
-INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 1 seconds. CPU system time: 0 seconds. Elapsed time: 1.849 seconds; current allocated memory: 459.156 MB.
-INFO: [HLS 200-111] Finished Generating all RTL models: CPU user time: 1 seconds. CPU system time: 2 seconds. Elapsed time: 12.858 seconds; current allocated memory: 463.988 MB.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 1 seconds. CPU system time: 1 seconds. Elapsed time: 1.868 seconds; current allocated memory: 458.551 MB.
+INFO: [HLS 200-111] Finished Generating all RTL models: CPU user time: 1 seconds. CPU system time: 3 seconds. Elapsed time: 12.199 seconds; current allocated memory: 463.988 MB.
 INFO: [HLS 200-2225] Wrote inferred directives to file C:/Users/holbo/00VS_projjects/00_HFT_project/n2ew_era/07b_tcn_prepad_manual_hls/hls_component_scratch/hls_component/hls/syn/inferred_directives.ini
-INFO: [HLS 200-111] Finished Updating report files: CPU user time: 1 seconds. CPU system time: 1 seconds. Elapsed time: 6.567 seconds; current allocated memory: 478.754 MB.
+INFO: [HLS 200-111] Finished Updating report files: CPU user time: 2 seconds. CPU system time: 1 seconds. Elapsed time: 14.039 seconds; current allocated memory: 477.734 MB.
 INFO: [VHDL 208-304] Generating VHDL RTL for tcn_prepad_infer.
 INFO: [VLOG 209-307] Generating Verilog RTL for tcn_prepad_infer.
 INFO: [HLS 200-790] **** Loop Constraint Status: All loop constraints were satisfied.
 INFO: [HLS 200-789] **** Estimated Fmax: 121.61 MHz
-INFO: [HLS 200-112] Total CPU user time: 16 seconds. Total CPU system time: 6 seconds. Total elapsed time: 133.646 seconds; peak allocated memory: 478.824 MB.
-INFO: [v++ 60-791] Total elapsed time: 0h 2m 21s
+INFO: [HLS 200-112] Total CPU user time: 21 seconds. Total CPU system time: 18 seconds. Total elapsed time: 164.541 seconds; peak allocated memory: 477.797 MB.
+INFO: [v++ 60-791] Total elapsed time: 0h 3m 8s

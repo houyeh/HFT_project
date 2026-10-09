@@ -1,0 +1,19 @@
+{
+  "python_executable": "C:\\Users\\holbo\\00VS_projjects\\00_HFT_project\\.h6\\Scripts\\python.exe",
+  "python_version": "3.13.9 | packaged by Anaconda, Inc. | (main, Oct 21 2025, 19:09:58) [MSC v.1929 64 bit (AMD64)]",
+  "tensorflow_version": "2.21.0",
+  "keras_version": "3.15.1",
+  "hls4ml_version": "1.4.0.dev32+gb90fb067",
+  "hls4ml_file": "C:\\Users\\holbo\\00VS_projjects\\00_HFT_project\\.h6\\Lib\\site-packages\\hls4ml\\__init__.py",
+  "original_vitis_run": "",
+  "vitis_bin_prepended": true,
+  "vitis_bin_path": "C:\\AMDDesignTools\\2025.2\\Vitis\\bin",
+  "settings64_path": "C:\\AMDDesignTools\\2025.2\\Vitis\\settings64.bat",
+  "settings64_found": true,
+  "settings64_applied": true,
+  "settings64_env_keys_applied": 71,
+  "path_modified": true,
+  "post_patch_vitis_run": "C:\\AMDDesignTools\\2025.2\\Vitis\\bin\\vitis-run.BAT",
+  "post_patch_clang": "",
+  "post_patch_clang_tidy": ""
+}

@@ -1,0 +1,2 @@
+model,feature_dim,hidden_dim,num_classes,trainable_parameters
+PHC-lite FI-2010 classifier,40,64,3,23876

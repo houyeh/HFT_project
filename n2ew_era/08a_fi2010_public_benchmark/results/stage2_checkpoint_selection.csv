@@ -1,0 +1,4 @@
+rank_by_test_macro_f1_for_k50_raw,selected_for_stage2,horizon,seed,loss_mode,val_macro_f1,test_macro_f1,checkpoint,selection_rule
+0,False,50,2,raw,0.301905791546986,0.3727425429850299,models\phc_fi2010_h50_seed2_raw_v2.pt,k=50 raw primary horizon; median seed by Stage 1 v2 test macro F1
+1,True,50,1,raw,0.3745797869692153,0.4243949145879136,models\phc_fi2010_h50_seed1_raw_v2.pt,k=50 raw primary horizon; median seed by Stage 1 v2 test macro F1
+2,False,50,0,raw,0.3664875958866683,0.42444378780540254,models\phc_fi2010_h50_seed0_raw_v2.pt,k=50 raw primary horizon; median seed by Stage 1 v2 test macro F1

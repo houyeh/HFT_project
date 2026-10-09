@@ -1,0 +1,5 @@
+policy_id,session_code,session_id,start_inventory,end_inventory,fill_count,forced_count,terminal_event_fill,same_index_close_scheduled
+queue_theta_val_tuned,0,NEW4_20260102_TXFA6,0,0,1036,0,0,0
+queue_theta_val_tuned,1,NEW4_20260105_TXFA6,0,0,140,0,0,0
+queue_theta_val_tuned,2,NEW4_20260109_TXFA6,0,0,1521,0,0,0
+queue_theta_val_tuned,3,NEW4_20260112_TXFA6,0,0,1978,0,0,0

@@ -1,6 +1,7 @@
 from __future__ import annotations
 
 import csv
+from datetime import datetime
 import re
 from pathlib import Path
 
@@ -18,6 +19,7 @@ RESOURCE_BUDGET = {
     "FF": 106400,
     "BRAM_18K": 280,
 }
+EXPECTED_CSIM_ROWS = 200
 
 
 def md_table(df: pd.DataFrame) -> str:
@@ -51,8 +53,15 @@ def parse_csim(path: Path | None) -> dict[str, object]:
     total = int(len(df))
     failed = int((df["pass"] == 0).sum()) if "pass" in df.columns else -1
     readout_cols = [c for c in df.columns if c.startswith("abs_diff_readout_")]
-    max_abs = float(df[readout_cols].max().max()) if readout_cols else float("nan")
-    mean_abs = float(df[readout_cols].to_numpy(dtype=float).mean()) if readout_cols else float("nan")
+    if readout_cols:
+        diff_values = df[readout_cols].to_numpy(dtype=float)
+        max_abs = float(diff_values.max())
+        mean_abs = float(diff_values.mean())
+        rmse = float((diff_values ** 2).mean() ** 0.5)
+    else:
+        max_abs = float("nan")
+        mean_abs = float("nan")
+        rmse = float("nan")
     sign_rows = []
     for idx in [0, 1]:
         ref = df[f"ref_readout_{idx}"].to_numpy(dtype=float)
@@ -60,12 +69,24 @@ def parse_csim(path: Path | None) -> dict[str, object]:
         agree = ((ref >= 0) == (dut >= 0)).mean()
         sign_rows.append(float(agree))
     joint = float((((df["ref_readout_0"] >= 0) == (df["dut_readout_0"] >= 0)) & ((df["ref_readout_1"] >= 0) == (df["dut_readout_1"] >= 0))).mean())
+    complete = total == EXPECTED_CSIM_ROWS
+    if failed == 0 and complete:
+        status = "pass"
+    elif failed == 0:
+        status = "partial_pass"
+    else:
+        status = "fail"
     return {
-        "csim_status": "pass" if failed == 0 else "fail",
+        "csim_status": status,
+        "csim_output_csv": str(path),
+        "csim_output_mtime_local": datetime.fromtimestamp(path.stat().st_mtime).isoformat(timespec="seconds"),
         "csim_rows": total,
+        "csim_expected_rows": EXPECTED_CSIM_ROWS,
+        "csim_complete_expected_rows": complete,
         "csim_failed_rows": failed,
         "csim_max_abs_diff_readout": max_abs,
         "csim_mean_abs_diff_readout": mean_abs,
+        "csim_rmse_readout": rmse,
         "sign_agreement_readout_0": sign_rows[0],
         "sign_agreement_readout_1": sign_rows[1],
         "sign_agreement_joint": joint,
@@ -76,16 +97,29 @@ def parse_csynth(path: Path | None) -> dict[str, object]:
     if path is None or not path.exists():
         return {"csynth_status": "missing"}
     text = path.read_text(errors="ignore")
-    out: dict[str, object] = {"csynth_status": "present", "csynth_report": str(path)}
-    latency_match = re.search(r"\|\s*Latency\s*\(cycles\)\s*\|\s*min\s*\|\s*max\s*\|.*?\n\|\s*([0-9]+)\s*\|\s*([0-9]+)\s*\|", text, re.S)
-    if latency_match:
-        out["latency_min_cycles"] = int(latency_match.group(1))
-        out["latency_max_cycles"] = int(latency_match.group(2))
-        out["latency_us_100mhz"] = float(out["latency_max_cycles"]) * 0.01
-    interval_match = re.search(r"\|\s*Interval\s*\(cycles\)\s*\|\s*min\s*\|\s*max\s*\|.*?\n\|\s*([0-9]+)\s*\|\s*([0-9]+)\s*\|", text, re.S)
-    if interval_match:
-        out["ii_min_cycles"] = int(interval_match.group(1))
-        out["ii_max_cycles"] = int(interval_match.group(2))
+    out: dict[str, object] = {
+        "csynth_status": "present",
+        "csynth_report": str(path),
+        "csynth_report_mtime_local": datetime.fromtimestamp(path.stat().st_mtime).isoformat(timespec="seconds"),
+    }
+    latency_section_match = re.search(
+        r"\+ Latency:\s*\* Summary:\s*(.*?)(?:\+ Detail:|== Utilization Estimates)",
+        text,
+        re.S,
+    )
+    if latency_section_match:
+        for line in latency_section_match.group(1).splitlines():
+            cells = [c.strip() for c in line.strip().strip("|").split("|")]
+            if len(cells) >= 7 and cells[0].isdigit() and cells[1].isdigit():
+                out["latency_min_cycles"] = int(cells[0])
+                out["latency_max_cycles"] = int(cells[1])
+                out["latency_absolute_min_reported"] = cells[2]
+                out["latency_absolute_max_reported"] = cells[3]
+                out["ii_min_cycles"] = int(cells[4])
+                out["ii_max_cycles"] = int(cells[5])
+                out["pipeline_type"] = cells[6]
+                out["latency_us_100mhz"] = float(out["latency_max_cycles"]) * 0.01
+                break
     util_section = text.split("== Utilization Estimates", 1)
     if len(util_section) > 1:
         for line in util_section[1].splitlines():
@@ -130,7 +164,7 @@ def main() -> None:
             "mac_estimate_latency_us": MAC_ESTIMATE_US,
             "phc_pnr_latency_us": V8_PHC_LATENCY_US,
             "verification_level_mac_estimate": "pre_synthesis_macs_only",
-            "verification_level_tcn_hls": "csim/csynth if reports are present",
+            "verification_level_tcn_hls": "csim_and_csynth_reports_parsed_no_cosim_or_pnr",
             "verification_level_phc": "P&R_routed_timing_verified",
         }
         row.update(parse_csim(csim_csv))

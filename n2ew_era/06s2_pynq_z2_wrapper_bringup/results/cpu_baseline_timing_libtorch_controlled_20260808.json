@@ -1,0 +1,20 @@
+{
+  "device": "CPU",
+  "model": "PHC-lite step model (TorchScript float32)",
+  "backend": "libtorch_cpp",
+  "batch_size": 1,
+  "warmup_iters": 100,
+  "timing_iters": 10000,
+  "mean_us": 72.2071,
+  "median_us": 48.9,
+  "p99_us": 543.9,
+  "min_us": 31.3,
+  "torch_no_grad": true,
+  "new5_used": false,
+  "torch_num_threads": 8,
+  "torch_num_interop_threads": 8,
+  "hardware_concurrency": 8,
+  "cpu": "Intel64 Family 6 Model 189 Stepping 1, GenuineIntel",
+  "torchscript_model": "C:\\Users\\holbo\\00VS_projjects\\00_HFT_project\\n2ew_era\\06f_phc_lite_manual_hls\\models\\phc_stp_step_hls_seed2_torchscript.pt",
+  "raw_latency_csv": "C:\\Users\\holbo\\00VS_projjects\\00_HFT_project\\n2ew_era\\06s2_pynq_z2_wrapper_bringup\\results\\cpu_baseline_timing_libtorch_controlled_20260808.csv"
+}

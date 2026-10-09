@@ -1,0 +1,24 @@
+{
+  "seed": 1,
+  "variant": "v2_hidden8_unroll8_100mhz",
+  "hls_src": "n2ew_era/06u_phc_latency_breakthrough/variants/v2_hidden8_unroll8_100mhz/hls_src",
+  "hls_component": "n2ew_era/06u_phc_latency_breakthrough/variants/v2_hidden8_unroll8_100mhz/hls_component",
+  "hls_config": "n2ew_era/06u_phc_latency_breakthrough/variants/v2_hidden8_unroll8_100mhz/hls_component/hls_config.cfg",
+  "csynth_tcl": "n2ew_era/06u_phc_latency_breakthrough/variants/v2_hidden8_unroll8_100mhz/hls_component/run_csynth_only.tcl",
+  "settings": {
+    "part": "xc7z020clg400-1",
+    "clock": "10ns",
+    "flow_target": "vivado",
+    "syn_top": "phc_step",
+    "feature_dim": 16,
+    "hidden_dim": 8,
+    "unroll_factor": 8
+  },
+  "source_hashes": {
+    "phc_step_hls.cpp": "96a40801a88cfcca651b572130f7b4152b82288315d597a79775456dbdf0e6ac",
+    "phc_step_hls.hpp": "797cb660de3397691d6b0654c74260a80c9ba858dbd21c25ba5ab272decebb40",
+    "phc_step_testbench.cpp": "3e7a8b3618e68a07b0aea198e23d45c60d5067be680629b91846b72c8d2f3acd",
+    "phc_weights.hpp": "65776834d1dcef2e73f7a28709d99718333090b2b53650abb8327339257855b9"
+  },
+  "new5_used": false
+}

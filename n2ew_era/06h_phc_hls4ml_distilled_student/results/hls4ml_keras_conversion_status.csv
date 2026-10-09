@@ -91,3 +91,15 @@ Traceback (most recent call last):
     raise Exception(f'Build failed for {model.config.get_project_name()}. See logs for details.')
 Exception: Build failed for phc_distilled_student_keras_clamped32_plain. See logs for details.
 ",0,0.0,,True,True,False,True,clamped32_plain_width_only,,,,,True,True,"fixed<32,16>",1.0,C:\Users\holbo\00VS_projjects\00_HFT_project\n2ew_era\06h_phc_hls4ml_distilled_student\hls4ml_prj\phc_distilled_student_keras_clamped32_plain\phc_distilled_student_keras_clamped32_plain_prj\solution1\.autopilot\db\autopilot.flow.log,,,
+keras_distilled_student_clamped32_plain_hls4ml_main_nocsim,True,False,True,False,C:\Users\holbo\00VS_projjects\00_HFT_project\n2ew_era\06h_phc_hls4ml_distilled_student\hls4ml_prj\phc_distilled_student_keras_clamped32_plain_hls4ml_main,"ap_fixed<16,6>",1,Latency,Vitis,xc7z020clg400-1,10,,,,C:\Users\holbo\00VS_projjects\00_HFT_project\n2ew_era\06h_phc_hls4ml_distilled_student\results\06h_build_full_log_clamped32_plain_hls4ml_main_nocsim.txt,,,,,,,,"Exception: Build failed for phc_distilled_student_keras_clamped32_plain_hls4ml_main. See logs for details.
+Traceback (most recent call last):
+  File ""C:\Users\holbo\00VS_projjects\00_HFT_project\n2ew_era\06h_phc_hls4ml_distilled_student\03_build_clamped32_plain_upgrade_nocsim.py"", line 547, in main
+    hls_model.build(csim=False, synth=True)
+    ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^
+  File ""C:\Users\holbo\00VS_projjects\00_HFT_project\.h6\Lib\site-packages\hls4ml\model\graph.py"", line 1010, in build
+    return self.config.backend.build(self, **kwargs)
+           ~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^
+  File ""C:\Users\holbo\00VS_projjects\00_HFT_project\.h6\Lib\site-packages\hls4ml\backends\vitis\vitis_backend.py"", line 159, in build
+    raise Exception(f'Build failed for {model.config.get_project_name()}. See logs for details.')
+Exception: Build failed for phc_distilled_student_keras_clamped32_plain_hls4ml_main. See logs for details.
+",0,0,,True,True,False,True,,,,,,,,"fixed<32,16>",1,C:\Users\holbo\00VS_projjects\00_HFT_project\n2ew_era\06h_phc_hls4ml_distilled_student\hls4ml_prj\phc_distilled_student_keras_clamped32_plain_hls4ml_main\phc_distilled_student_keras_clamped32_plain_hls4ml_main_prj\solution1\.autopilot\db\autopilot.flow.log,,,

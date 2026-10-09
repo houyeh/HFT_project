@@ -1,0 +1,16 @@
+split,config,input_overflow_count,w1_overflow_count,b1_overflow_count,w2_overflow_count,b2_overflow_count,hidden_acc_overflow_count,hidden_cast_overflow_count,output_acc_overflow_count,output_cast_overflow_count,total_overflow_count
+val,data24_12_weight18_5_accargmax,0,0,0,0,0,0,0,0,0,0
+val,data24_12_weight20_6_accargmax,0,0,0,0,0,0,0,0,0,0
+val,uniform24_12_accargmax,0,0,0,0,0,0,0,0,0,0
+val,uniform28_14_accargmax,0,0,0,0,0,0,0,0,0,0
+val,uniform32_16_accargmax,0,0,0,0,0,0,0,0,0,0
+new3,data24_12_weight18_5_accargmax,0,0,0,0,0,0,0,0,0,0
+new3,data24_12_weight20_6_accargmax,0,0,0,0,0,0,0,0,0,0
+new3,uniform24_12_accargmax,0,0,0,0,0,0,0,0,0,0
+new3,uniform28_14_accargmax,0,0,0,0,0,0,0,0,0,0
+new3,uniform32_16_accargmax,0,0,0,0,0,0,0,0,0,0
+new4,data24_12_weight18_5_accargmax,0,0,0,0,0,0,0,0,0,0
+new4,data24_12_weight20_6_accargmax,0,0,0,0,0,0,0,0,0,0
+new4,uniform24_12_accargmax,0,0,0,0,0,0,0,0,0,0
+new4,uniform28_14_accargmax,0,0,0,0,0,0,0,0,0,0
+new4,uniform32_16_accargmax,0,0,0,0,0,0,0,0,0,0

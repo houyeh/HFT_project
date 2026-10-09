@@ -1,0 +1,3 @@
+variant,old_07c2b_clock_mhz,new_07c2d_clock_mhz,old_07c2b_timing_met,new_07c2d_timing_met,old_wns_ns,new_wns_ns,delta_wns_ns,old_routed_lut_pct,new_routed_lut_pct,delta_routed_lut_pct,old_routed_ff_pct,new_routed_ff_pct,delta_routed_ff_pct,old_routed_dsp_pct,new_routed_dsp_pct,delta_routed_dsp_pct,old_routed_bram_18k_pct,new_routed_bram_18k_pct,delta_routed_bram_18k_pct
+scratch,100.0,100.0,True,False,0.203,-0.15,-0.353,35.36,31.39,-3.969999999999999,16.09,14.45,-1.6400000000000006,44.55,51.36,6.810000000000002,23.57,23.57,0.0
+distilled,100.0,100.0,True,True,0.153,0.187,0.034,35.19,32.0,-3.1899999999999977,16.01,14.44,-1.570000000000002,41.82,49.09,7.270000000000003,23.57,23.57,0.0

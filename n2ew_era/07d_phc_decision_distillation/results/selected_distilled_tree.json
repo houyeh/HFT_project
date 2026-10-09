@@ -1,0 +1,17 @@
+{
+  "policy_id": "phc_stp_v2_distilled_tree_current_t_depth8",
+  "variant": "current_t",
+  "depth": 8,
+  "leaf_nodes": 251,
+  "selected_on": "val_causal_sequential_excess_pnl",
+  "fit_split": "train",
+  "selection_split": "val",
+  "new3_used_for_selection": false,
+  "new4_used_for_selection": false,
+  "new5_used_for_selection": false,
+  "threshold_source": "05c4_selected_policy_threshold",
+  "threshold": 0.0,
+  "val_causal_sequential_excess_pnl": 143555.0,
+  "val_causal_pnl_retention_vs_phc": 0.8354235167457154,
+  "val_causal_advantage_retention_vs_simple_to_phc": 0.587604812249362
+}

@@ -1,0 +1,7 @@
+{
+  "status": "updated_from_hls_csim",
+  "csim_output": "n2ew_era\\06s2_pynq_z2_wrapper_bringup\\results\\demo_replay_seed2_90_hls_csim_sequential_out.csv",
+  "row_count": 4096,
+  "max_abs_diff_vs_python_ref": 0.02173280716,
+  "source": "HLS CSim DUT output; input feature packing uses AP_TRN bit-drop semantics (floor for negative values) to match ap_fixed casts"
+}

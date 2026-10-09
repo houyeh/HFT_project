@@ -4,7 +4,7 @@
 == Synthesis Summary Report of 'tcn_prepad_infer'
 ================================================================
 + General Information: 
-    * Date:           Wed Jun 24 13:16:44 2026
+    * Date:           Tue Jul 28 15:51:08 2026
     * Version:        2025.2 (Build 6295257 on Nov 14 2025)
     * Project:        hls_component
     * Solution:       hls (Vivado IP Flow Target)

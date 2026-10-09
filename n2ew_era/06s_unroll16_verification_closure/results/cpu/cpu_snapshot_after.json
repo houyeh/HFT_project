@@ -1,0 +1,23 @@
+{
+  "label": "after",
+  "captured_at_unix": 1785248451.0462341,
+  "platform": "Windows-11-10.0.26200-SP0",
+  "processor": "Intel64 Family 6 Model 189 Stepping 1, GenuineIntel",
+  "python": "3.13.7 (tags/v3.13.7:bcee1c3, Aug 14 2025, 14:15:11) [MSC v.1944 64 bit (AMD64)]",
+  "os_cpu_count": 8,
+  "wmic_cpu": {
+    "returncode": 0,
+    "stdout": "{\"Name\":\"Intel(R) Core(TM) Ultra 7 258V\",\"NumberOfCores\":8,\"NumberOfLogicalProcessors\":8,\"MaxClockSpeed\":2200}\n",
+    "stderr": ""
+  },
+  "load_counter": {
+    "returncode": 0,
+    "stdout": "{\"CookedValue\":94.7687179166176}\n",
+    "stderr": ""
+  },
+  "top_processes": {
+    "returncode": 0,
+    "stdout": "[{\"ProcessName\":\"python\",\"Id\":30464,\"CPU\":268600.890625,\"WorkingSet64\":28061696},{\"ProcessName\":\"python\",\"Id\":16908,\"CPU\":268393.859375,\"WorkingSet64\":27766784},{\"ProcessName\":\"iCloudPhotos\",\"Id\":33692,\"CPU\":178236.609375,\"WorkingSet64\":24834048},{\"ProcessName\":\"Codex\",\"Id\":22984,\"CPU\":30528.484375,\"WorkingSet64\":447549440},{\"ProcessName\":\"Codex\",\"Id\":10252,\"CPU\":15060.03125,\"WorkingSet64\":749993984},{\"ProcessName\":\"Codex\",\"Id\":23376,\"CPU\":14132.3125,\"WorkingSet64\":213942272},{\"ProcessName\":\"audiodg\",\"Id\":26392,\"CPU\":10210.296875,\"WorkingSet64\":39301120},{\"ProcessName\":\"iCloudHome\",\"Id\":6508,\"CPU\":7166.65625,\"WorkingSet64\":53579776},{\"ProcessName\":\"claude\",\"Id\":36256,\"CPU\":6699.21875,\"WorkingSet64\":191401984},{\"ProcessName\":\"claude\",\"Id\":21612,\"CPU\":4396.40625,\"WorkingSet64\":738766848},{\"ProcessName\":\"codex\",\"Id\":24420,\"CPU\":4354.515625,\"WorkingSet64\":236322816},{\"ProcessName\":\"explorer\",\"Id\":7204,\"CPU\":3319.546875,\"WorkingSet64\":442556416},{\"ProcessName\":\"OneDrive.Sync.Service\",\"Id\":46476,\"CPU\":2584.953125,\"WorkingSet64\":1076367360},{\"ProcessName\":\"Code\",\"Id\":39516,\"CPU\":2092.390625,\"WorkingSet64\":334106624},{\"ProcessName\":\"claude\",\"Id\":39492,\"CPU\":1483.84375,\"WorkingSet64\":302919680}]\n",
+    "stderr": ""
+  }
+}

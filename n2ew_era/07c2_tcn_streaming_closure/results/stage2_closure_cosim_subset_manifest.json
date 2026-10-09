@@ -1,0 +1,24 @@
+[
+  {
+    "variant": "scratch",
+    "source_full_vectors": "C:\\Users\\holbo\\00VS_projjects\\00_HFT_project\\n2ew_era\\07c2_tcn_streaming_closure\\results\\stage2_streaming_scratch_test_vectors.csv",
+    "subset_vectors": "C:\\Users\\holbo\\00VS_projjects\\00_HFT_project\\n2ew_era\\07c2_tcn_streaming_closure\\results\\stage2_streaming_scratch_test_vectors_first4_windows.csv",
+    "window_rows": 4,
+    "streaming_top_event_vectors": 1008,
+    "readout_decision_rows": 4,
+    "tb_summary": "C:\\Users\\holbo\\00VS_projjects\\00_HFT_project\\n2ew_era\\07c2_tcn_streaming_closure\\results\\stage2_closure_scratch_shared_u1_event1008_tb_summary.csv",
+    "hls_config": "C:\\Users\\holbo\\00VS_projjects\\00_HFT_project\\n2ew_era\\07c2_tcn_streaming_closure\\hls_component_stage2_resource_scratch_shared_u1\\hls_config.cfg",
+    "new5_used": false
+  },
+  {
+    "variant": "distilled",
+    "source_full_vectors": "C:\\Users\\holbo\\00VS_projjects\\00_HFT_project\\n2ew_era\\07c2_tcn_streaming_closure\\results\\stage2_streaming_distilled_test_vectors.csv",
+    "subset_vectors": "C:\\Users\\holbo\\00VS_projjects\\00_HFT_project\\n2ew_era\\07c2_tcn_streaming_closure\\results\\stage2_streaming_distilled_test_vectors_first4_windows.csv",
+    "window_rows": 4,
+    "streaming_top_event_vectors": 1008,
+    "readout_decision_rows": 4,
+    "tb_summary": "C:\\Users\\holbo\\00VS_projjects\\00_HFT_project\\n2ew_era\\07c2_tcn_streaming_closure\\results\\stage2_closure_distilled_shared_u1_event1008_tb_summary.csv",
+    "hls_config": "C:\\Users\\holbo\\00VS_projjects\\00_HFT_project\\n2ew_era\\07c2_tcn_streaming_closure\\hls_component_stage2_resource_distilled_shared_u1\\hls_config.cfg",
+    "new5_used": false
+  }
+]

@@ -1,0 +1,5 @@
+model,metric,split_count,positive_delta_count,delta_sum,delta_mean,exact_sign_test_two_sided_p,exact_split_bootstrap_mean_ci95_low,exact_split_bootstrap_mean_ci95_high,formal_readout,new5_used
+tcn_prepad_scratch_16feat,action_pnl_delta_vs_phc,3,1,10915.0,3638.3333333333335,1.0,-13572.833333333332,24320.91666666664,sign_test_does_not_reject_equal_median_at_5pct,False
+tcn_prepad_scratch_16feat,causal_fill_delta_vs_phc,3,3,83425.0,27808.333333333332,0.25,2592.416666666667,60954.66666666661,sign_test_does_not_reject_equal_median_at_5pct,False
+tcn_prepad_distilled_16feat,action_pnl_delta_vs_phc,3,3,166055.0,55351.666666666664,0.25,46022.33333333333,65868.08333333331,sign_test_does_not_reject_equal_median_at_5pct,False
+tcn_prepad_distilled_16feat,causal_fill_delta_vs_phc,3,3,114220.0,38073.333333333336,0.25,5206.583333333334,80081.49999999994,sign_test_does_not_reject_equal_median_at_5pct,False

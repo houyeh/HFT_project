@@ -35,13 +35,21 @@ MAX_DRAWDOWN = 2_000_000.0
 FEE_MULTIPLIERS = [1.0, 2.0, 3.0, 5.0]
 SPREAD_LABELS = ["<=1", "(1,2]", "(2,3]", ">3"]
 
+# 這個腳本的目標是：
+# 1. 讀入 Phase 02 的基準策略結果；
+# 2. 依據 session、spread bucket、選中數量，建立 matched-random 的隨機基準；
+# 3. 計算每個策略相對於基準策略與隨機基準的超額 PnL；
+# 4. 依照嚴格規則挑選候選策略，並輸出報告與 CSV/JSON 結果。
+
 
 def ensure_dirs() -> None:
+    # 建立輸出目錄，確保後續 CSV、JSON、報告檔都能成功寫入。
     ROOT.mkdir(parents=True, exist_ok=True)
     RESULTS.mkdir(parents=True, exist_ok=True)
 
 
 def json_sanitize(value: Any) -> Any:
+    # 將 numpy 類型與 NaN 值轉成 JSON 可安全寫入的格式，避免輸出時發生錯誤。
     if isinstance(value, dict):
         return {str(k): json_sanitize(v) for k, v in value.items()}
     if isinstance(value, list):
@@ -60,23 +68,30 @@ def json_sanitize(value: Any) -> Any:
 
 
 def write_json(path: Path, payload: dict[str, Any]) -> None:
+    # 把資料結構轉成 JSON 檔，方便後續做選中候選策略的匯出。
     path.write_text(json.dumps(json_sanitize(payload), indent=2), encoding="utf-8")
 
 
 def write_markdown(path: Path, lines: list[str]) -> None:
+    # 把整理好的文字段落寫成 Markdown 報告，方便直接閱讀與分享。
     path.write_text("\n".join(lines) + "\n", encoding="utf-8")
 
 
 def spread_bucket(spread: pd.Series) -> pd.Series:
+    # 把 spread 依照固定區間分成 4 個 bucket，方便後續分析不同流動性環境下的策略表現。
     values = pd.to_numeric(spread, errors="coerce")
     return pd.cut(values, bins=[-np.inf, 1.0, 2.0, 3.0, np.inf], labels=SPREAD_LABELS).astype(str)
 
 
 def policy_lookup() -> dict[str, dict[str, Any]]:
+    # 依照 policy_id 建立一個快速查找表，方便後續讀取策略設定。
     return {p["policy_id"]: p for p in policy_catalog()}
 
 
 def population_and_selection_stats(splits: list[str], policies: list[dict[str, Any]]) -> tuple[pd.DataFrame, pd.DataFrame]:
+    # 這個函式會統計兩類資料：
+    # - population stats：每個 side / session / spread bucket / horizon 的候選池統計量；
+    # - selection stats：每個 policy 在這些群組中被選中的次數。
     pop_rows: list[dict[str, Any]] = []
     sel_rows: list[dict[str, Any]] = []
 
@@ -86,11 +101,13 @@ def population_and_selection_stats(splits: list[str], policies: list[dict[str, A
         sel_acc: dict[tuple[str, str, str, str], int] = {}
 
         for frame in iter_event_frames(split, horizons=HORIZONS):
+            # 先把每個事件樣本映射到 spread bucket，方便以 session + spread bucket 分組。
             buckets = spread_bucket(frame["spread_ticks"]).to_numpy(dtype=object)
             sessions = frame["session_id"].astype(str).to_numpy(dtype=object)
             group_base = pd.DataFrame({"session_id": sessions, "spread_bucket": buckets})
 
             for side, side_col in [("bid", "bid_pnl_H"), ("ask", "ask_pnl_H")]:
+                # 計算每個 group 的候選池平均值與方差，作為後續 matched-random 的基準分布來源。
                 for horizon in HORIZONS:
                     values = np.nan_to_num(frame[f"{side_col}{horizon}"].to_numpy(dtype=float), nan=0.0)
                     tmp = group_base.copy()
@@ -109,6 +126,7 @@ def population_and_selection_stats(splits: list[str], policies: list[dict[str, A
                         target["sumsq"] += float(row["sumsq_value"])
 
             group_df = group_base
+            # 依序評估所有 policy，統計每個 policy 在各 group 中選中的數量。
             for policy in policies:
                 decision = policy_decision(policy, frame)
                 for side_name, decision_value in [("bid", 1), ("ask", 2)]:
@@ -155,6 +173,9 @@ def population_and_selection_stats(splits: list[str], policies: list[dict[str, A
 
 
 def matched_random_summary(grid: pd.DataFrame, pop: pd.DataFrame, selected: pd.DataFrame) -> pd.DataFrame:
+    # 這個函式會用 finite-population 的方式，對每個 policy 生成一組 matched-random 的模擬 PnL 分布。
+    # 這裡的核心想法是：如果一個政策只是隨機地在相同群組中選中相同數量的 quotes，
+    # 它平均會得到多少 PnL？若實際策略明顯高於這個基準，就代表它有真正的優勢。
     rng = np.random.default_rng(RANDOM_SEED)
     pop_idx = pop.set_index(["split", "side", "session_id", "spread_bucket", "horizon"]).to_dict(orient="index")
     rows: list[dict[str, Any]] = []
@@ -173,6 +194,7 @@ def matched_random_summary(grid: pd.DataFrame, pop: pd.DataFrame, selected: pd.D
             continue
 
         groups = selected_lookup.get((split, policy_id), pd.DataFrame())
+        # 逐一檢查這個 policy 在各個 group 的選中數量，並推導該 policy 的隨機基準分布。
         mean_total = 0.0
         var_total = 0.0
         saturated_groups = 0
@@ -254,6 +276,8 @@ def summary_row(row: Any, draws: np.ndarray, reason: str, saturated_groups: int,
 
 
 def add_excess_columns(grid: pd.DataFrame, random_summary: pd.DataFrame) -> pd.DataFrame:
+    # 將超額 PnL、matched-random 比較結果，以及最終是否符合入選條件的欄位，加入主表格中。
+    # 這一步的目的是把所有判斷依據整合成一張完整的策略評估表。
     out = grid.copy()
     refs = out.pivot_table(index=["split", "horizon"], columns="policy_id", values=["total_pnl", "avg_pnl_per_selected_action"], aggfunc="first")
 
@@ -301,6 +325,14 @@ def add_excess_columns(grid: pd.DataFrame, random_summary: pd.DataFrame) -> pd.D
     out["passes_positive_pnl"] = out["total_pnl"].astype(float) > 0.0
     out["passes_drawdown"] = out["max_drawdown"].astype(float) <= MAX_DRAWDOWN
     out["selection_split_only"] = out["split"].astype(str) == STRICT_SELECTION_SPLIT
+    # 最終入選條件：
+    # - 必須來自 validation；
+    # - 不能是 select-all 類型策略；
+    # - 選中率必須低於 95%；
+    # - 至少要有 1000 個 action；
+    # - 總 PnL 必須為正；
+    # - 最大回撤不能太大；
+    # - 並且要勝過 matched-random 的平均值。
     out["eligible_for_final_selection"] = (
         out["selection_split_only"]
         & ~out["excluded_select_all_policy"]
@@ -315,6 +347,8 @@ def add_excess_columns(grid: pd.DataFrame, random_summary: pd.DataFrame) -> pd.D
 
 
 def fee_sensitivity(strict_grid: pd.DataFrame) -> pd.DataFrame:
+    # 這個函式用來檢查不同 maker fee 水平下，策略的 PnL 會如何變化。
+    # 主要是把總 PnL 扣掉額外的交易成本，觀察策略在更高費率下是否仍然可行。
     rows: list[dict[str, Any]] = []
     for row in strict_grid.itertuples(index=False):
         selected_count = int(row.selected_action_count)
@@ -340,6 +374,8 @@ def fee_sensitivity(strict_grid: pd.DataFrame) -> pd.DataFrame:
 
 
 def select_strict_candidates(strict_grid: pd.DataFrame) -> dict[str, Any]:
+    # 依照嚴格規則篩選出可進一步壓力測試的候選策略，並保留前 3 名作為最終候選。
+    # 這一步相當於把「合格但不一定最好」的策略，縮成一個可進一步驗證的 shortlist。
     eligible = strict_grid[strict_grid["eligible_for_final_selection"]].copy()
     eligible_count = int(len(eligible))
     if eligible.empty:
@@ -378,6 +414,8 @@ def select_strict_candidates(strict_grid: pd.DataFrame) -> dict[str, Any]:
 
 
 def write_report(strict_grid: pd.DataFrame, random_summary: pd.DataFrame, selected_payload: dict[str, Any]) -> None:
+    # 生成一份可閱讀的 Markdown 報告，匯總診斷結果、超額 PnL、matched-random 比較與最終候選策略。
+    # 這份報告是給人直接看懂結果用的，而不是給模型或程式再處理的中間檔。
     val = strict_grid[strict_grid["split"].astype(str) == STRICT_SELECTION_SPLIT].copy()
     top_diag = val.sort_values("total_pnl", ascending=False).head(12)
     eligible = val[val["eligible_for_final_selection"]].copy()
@@ -451,6 +489,12 @@ def write_report(strict_grid: pd.DataFrame, random_summary: pd.DataFrame, select
 
 
 def main() -> None:
+    # 主流程：
+    # 1. 讀入 Phase 02 的基準結果；
+    # 2. 建構 matched-random 統計；
+    # 3. 計算超額 PnL 與各種篩選指標；
+    # 4. 做嚴格篩選；
+    # 5. 輸出 CSV、JSON 與報告檔。
     ensure_dirs()
     grid = pd.read_csv(PHASE02_RESULTS / "baseline_grid_all_splits.csv")
     policies = policy_catalog()

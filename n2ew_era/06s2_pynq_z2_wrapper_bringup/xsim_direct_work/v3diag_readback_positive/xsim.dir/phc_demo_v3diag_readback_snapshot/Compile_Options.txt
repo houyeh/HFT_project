@@ -1,0 +1,1 @@
+-debug "typical" "xil_defaultlib.tb_pynq_z2_phc_demo_wrapper_v3diag_readback" -s "phc_demo_v3diag_readback_snapshot" 

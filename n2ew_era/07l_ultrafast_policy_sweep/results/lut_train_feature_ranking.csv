@@ -1,0 +1,17 @@
+rank,feature_index,feature_name,train_f_score
+1,4,queue_imbalance,19559.165523903856
+2,11,log1p_bid_sz_1,6600.981066814958
+3,12,log1p_ask_sz_1,6097.786154390819
+4,1,bid_sz_1,2900.310562683216
+5,9,imbalance_change_past,2323.273974108908
+6,2,ask_sz_1,2263.085511976293
+7,5,deep_imbalance,2121.0893181119036
+8,3,top_depth,228.658963531048
+9,13,log1p_top_depth,214.11272828721778
+10,0,spread_ticks,126.16070649473131
+11,6,volatility_past_50,18.037011379080642
+12,15,zscore_volatility_past_50_by_train_stats,18.037010857319867
+13,10,spread_change_past,14.704644626015654
+14,7,event_rate_past_50,3.863326679170656
+15,8,inter_arrival_ms,2.2094703058600342
+16,14,clipped_inter_arrival_ms,2.1570387593791125

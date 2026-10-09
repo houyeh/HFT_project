@@ -1,0 +1,73 @@
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved. Copyright 2022-2025 Advanced Micro Devices, Inc. All Rights Reserved.
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2025.2 (win64) Build 6299465 Fri Nov 14 19:35:11 GMT 2025
+| Date         : Wed Oct  7 13:44:42 2026
+| Host         : holb running 64-bit major release  (build 9200)
+| Command      : report_utilization -hierarchical -file C:/Users/holbo/00VS_projjects/00_HFT_project/n2ew_era/07j_tiny_mlp_parallel_hls/pnr_100mhz/output/utilization_routed.rpt
+| Design       : tiny_mlp_parallel
+| Device       : xc7z020clg400-1
+| Speed File   : -1
+| Design State : Routed
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+Utilization Design Information
+
+Table of Contents
+-----------------
+1. Utilization by Hierarchy
+
+1. Utilization by Hierarchy
+---------------------------
+
++---------------------------+------------------------------------------+------------+------------+---------+------+------+--------+--------+------------+
+|          Instance         |                  Module                  | Total LUTs | Logic LUTs | LUTRAMs | SRLs |  FFs | RAMB36 | RAMB18 | DSP Blocks |
++---------------------------+------------------------------------------+------------+------------+---------+------+------+--------+--------+------------+
+| tiny_mlp_parallel         |                                    (top) |       8760 |       8760 |       0 |    0 | 9052 |      0 |      0 |         96 |
+|   (tiny_mlp_parallel)     |                                    (top) |       4348 |       4348 |       0 |    0 | 7371 |      0 |      0 |          0 |
+|   mul_28s_10ns_38_3_1_U3  |    tiny_mlp_parallel_mul_28s_10ns_38_3_1 |         70 |         70 |       0 |    0 |   20 |      0 |      0 |          1 |
+|   mul_28s_10ns_38_3_1_U4  |  tiny_mlp_parallel_mul_28s_10ns_38_3_1_0 |         92 |         92 |       0 |    0 |   14 |      0 |      0 |          1 |
+|   mul_28s_10ns_38_3_1_U5  |  tiny_mlp_parallel_mul_28s_10ns_38_3_1_1 |         51 |         51 |       0 |    0 |   18 |      0 |      0 |          1 |
+|   mul_28s_10s_38_3_1_U48  |     tiny_mlp_parallel_mul_28s_10s_38_3_1 |         52 |         52 |       0 |    0 |   18 |      0 |      0 |          1 |
+|   mul_28s_11ns_39_3_1_U11 |  tiny_mlp_parallel_mul_28s_11ns_39_3_1_3 |         90 |         90 |       0 |    0 |   19 |      0 |      0 |          1 |
+|   mul_28s_11ns_39_3_1_U12 |  tiny_mlp_parallel_mul_28s_11ns_39_3_1_4 |         83 |         83 |       0 |    0 |   18 |      0 |      0 |          1 |
+|   mul_28s_11ns_39_3_1_U14 |  tiny_mlp_parallel_mul_28s_11ns_39_3_1_6 |         78 |         78 |       0 |    0 |   18 |      0 |      0 |          1 |
+|   mul_28s_11ns_39_3_1_U6  |  tiny_mlp_parallel_mul_28s_11ns_39_3_1_8 |         95 |         95 |       0 |    0 |   21 |      0 |      0 |          1 |
+|   mul_28s_11ns_39_3_1_U7  |  tiny_mlp_parallel_mul_28s_11ns_39_3_1_9 |         68 |         68 |       0 |    0 |   19 |      0 |      0 |          1 |
+|   mul_28s_11ns_39_3_1_U8  | tiny_mlp_parallel_mul_28s_11ns_39_3_1_10 |        103 |        103 |       0 |    0 |   18 |      0 |      0 |          1 |
+|   mul_28s_11ns_39_3_1_U9  | tiny_mlp_parallel_mul_28s_11ns_39_3_1_11 |        109 |        109 |       0 |    0 |   18 |      0 |      0 |          1 |
+|   mul_28s_11s_39_3_1_U51  |  tiny_mlp_parallel_mul_28s_11s_39_3_1_12 |         54 |         54 |       0 |    0 |   19 |      0 |      0 |          1 |
+|   mul_28s_11s_39_3_1_U52  |  tiny_mlp_parallel_mul_28s_11s_39_3_1_13 |         57 |         57 |       0 |    0 |   19 |      0 |      0 |          1 |
+|   mul_28s_11s_39_3_1_U54  |  tiny_mlp_parallel_mul_28s_11s_39_3_1_15 |         57 |         57 |       0 |    0 |   20 |      0 |      0 |          1 |
+|   mul_28s_12ns_40_3_1_U16 |    tiny_mlp_parallel_mul_28s_12ns_40_3_1 |         59 |         59 |       0 |    0 |   18 |      0 |      0 |          1 |
+|   mul_28s_12ns_40_3_1_U17 | tiny_mlp_parallel_mul_28s_12ns_40_3_1_19 |         62 |         62 |       0 |    0 |   20 |      0 |      0 |          1 |
+|   mul_28s_12ns_40_3_1_U19 | tiny_mlp_parallel_mul_28s_12ns_40_3_1_21 |        105 |        105 |       0 |    0 |   19 |      0 |      0 |          1 |
+|   mul_28s_12s_40_3_1_U58  |     tiny_mlp_parallel_mul_28s_12s_40_3_1 |         82 |         82 |       0 |    0 |   23 |      0 |      0 |          1 |
+|   mul_28s_12s_40_3_1_U60  |  tiny_mlp_parallel_mul_28s_12s_40_3_1_23 |         70 |         70 |       0 |    0 |   20 |      0 |      0 |          1 |
+|   mul_28s_12s_40_3_1_U61  |  tiny_mlp_parallel_mul_28s_12s_40_3_1_24 |         61 |         61 |       0 |    0 |   20 |      0 |      0 |          1 |
+|   mul_28s_13ns_41_3_1_U20 |    tiny_mlp_parallel_mul_28s_13ns_41_3_1 |        120 |        120 |       0 |    0 |   30 |      0 |      0 |          1 |
+|   mul_28s_13ns_41_3_1_U21 | tiny_mlp_parallel_mul_28s_13ns_41_3_1_29 |         75 |         75 |       0 |    0 |   21 |      0 |      0 |          1 |
+|   mul_28s_13ns_41_3_1_U22 | tiny_mlp_parallel_mul_28s_13ns_41_3_1_30 |         60 |         60 |       0 |    0 |   21 |      0 |      0 |          1 |
+|   mul_28s_13ns_41_3_1_U23 | tiny_mlp_parallel_mul_28s_13ns_41_3_1_31 |         56 |         56 |       0 |    0 |   21 |      0 |      0 |          1 |
+|   mul_28s_13ns_41_3_1_U24 | tiny_mlp_parallel_mul_28s_13ns_41_3_1_32 |         87 |         87 |       0 |    0 |   21 |      0 |      0 |          1 |
+|   mul_28s_13ns_41_3_1_U30 | tiny_mlp_parallel_mul_28s_13ns_41_3_1_38 |         92 |         92 |       0 |    0 |   20 |      0 |      0 |          1 |
+|   mul_28s_13s_41_3_1_U66  |     tiny_mlp_parallel_mul_28s_13s_41_3_1 |        102 |        102 |       0 |    0 |   23 |      0 |      0 |          1 |
+|   mul_28s_13s_41_3_1_U67  |  tiny_mlp_parallel_mul_28s_13s_41_3_1_42 |         97 |         97 |       0 |    0 |   24 |      0 |      0 |          1 |
+|   mul_28s_14ns_42_3_1_U34 |    tiny_mlp_parallel_mul_28s_14ns_42_3_1 |         97 |         97 |       0 |    0 |   28 |      0 |      0 |          1 |
+|   mul_28s_14ns_42_3_1_U35 | tiny_mlp_parallel_mul_28s_14ns_42_3_1_51 |         73 |         73 |       0 |    0 |   24 |      0 |      0 |          1 |
+|   mul_28s_14ns_42_3_1_U36 | tiny_mlp_parallel_mul_28s_14ns_42_3_1_52 |         66 |         66 |       0 |    0 |   22 |      0 |      0 |          1 |
+|   mul_28s_14ns_42_3_1_U37 | tiny_mlp_parallel_mul_28s_14ns_42_3_1_53 |         64 |         64 |       0 |    0 |   22 |      0 |      0 |          1 |
+|   mul_28s_14s_42_3_1_U76  |     tiny_mlp_parallel_mul_28s_14s_42_3_1 |         65 |         65 |       0 |    0 |   22 |      0 |      0 |          1 |
+|   mul_28s_15ns_43_3_1_U40 |    tiny_mlp_parallel_mul_28s_15ns_43_3_1 |         83 |         83 |       0 |    0 |   23 |      0 |      0 |          1 |
+|   mul_28s_15ns_43_3_1_U41 | tiny_mlp_parallel_mul_28s_15ns_43_3_1_62 |         79 |         79 |       0 |    0 |   23 |      0 |      0 |          1 |
+|   mul_28s_15ns_43_3_1_U42 | tiny_mlp_parallel_mul_28s_15ns_43_3_1_63 |         69 |         69 |       0 |    0 |   25 |      0 |      0 |          1 |
+|   mul_28s_15s_43_3_1_U83  |     tiny_mlp_parallel_mul_28s_15s_43_3_1 |         63 |         63 |       0 |    0 |   23 |      0 |      0 |          1 |
+|   mul_28s_15s_43_3_1_U84  |  tiny_mlp_parallel_mul_28s_15s_43_3_1_64 |         65 |         65 |       0 |    0 |   22 |      0 |      0 |          1 |
+|   mul_28s_15s_43_3_1_U85  |  tiny_mlp_parallel_mul_28s_15s_43_3_1_65 |         74 |         74 |       0 |    0 |   22 |      0 |      0 |          1 |
+|   mul_28s_17ns_44_3_1_U43 |    tiny_mlp_parallel_mul_28s_17ns_44_3_1 |        118 |        118 |       0 |    0 |   32 |      0 |      0 |          1 |
+|   mul_28s_17s_44_3_1_U89  |     tiny_mlp_parallel_mul_28s_17s_44_3_1 |         91 |         91 |       0 |    0 |   24 |      0 |      0 |          1 |
+|   mul_28s_18s_44_3_1_U88  |     tiny_mlp_parallel_mul_28s_18s_44_3_1 |         96 |         96 |       0 |    0 |   26 |      0 |      0 |          1 |
+|   mul_28s_18s_44_3_1_U90  |  tiny_mlp_parallel_mul_28s_18s_44_3_1_71 |         72 |         72 |       0 |    0 |   24 |      0 |      0 |          1 |
++---------------------------+------------------------------------------+------------+------------+---------+------+------+--------+--------+------------+
+* Note: The sum of lower-level cells may be larger than their parent cells total, due to cross-hierarchy LUT combining
+
+

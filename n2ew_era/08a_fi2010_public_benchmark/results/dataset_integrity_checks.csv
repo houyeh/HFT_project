@@ -1,0 +1,4 @@
+check,expected,observed,status
+official_zip_size_bytes,1864361899,1864361899,pass
+official_zip_sha256,cea93692a270724fa91e8f124da641db727d757e5e0f0bb85067709e9932f664,cea93692a270724fa91e8f124da641db727d757e5e0f0bb85067709e9932f664,pass
+published_total_representations,394337,394337,pass

@@ -1,0 +1,10 @@
+{
+  "phase": "06s",
+  "purpose": "seed2 unroll16 1000-row cosim fallback after full 25,600-row cosim timeout",
+  "source_seed_dir": "n2ew_era/06s_unroll16_verification_closure/seed2",
+  "subset_dir": "n2ew_era/06s_unroll16_verification_closure/seed2_cosim1000",
+  "rows": 1000,
+  "clock_period_ns": "11.111",
+  "vectors": "n2ew_era/06s_unroll16_verification_closure/seed2_cosim1000/results/phc_step_test_vectors_seed2_first1000.csv",
+  "new5_used": false
+}

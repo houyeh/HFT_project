@@ -1,0 +1,5 @@
+policy_id,session_code,session_id,start_inventory,end_inventory,fill_count,forced_count,terminal_event_fill,same_index_close_scheduled
+tiny_mlp_direct_action_h8_seed1,0,NEW4_20260102_TXFA6,0,0,1266,0,0,0
+tiny_mlp_direct_action_h8_seed1,1,NEW4_20260105_TXFA6,0,1,178,0,1,1
+tiny_mlp_direct_action_h8_seed1,2,NEW4_20260109_TXFA6,1,1,959,914,0,0
+tiny_mlp_direct_action_h8_seed1,3,NEW4_20260112_TXFA6,1,1,1240,1285,0,0

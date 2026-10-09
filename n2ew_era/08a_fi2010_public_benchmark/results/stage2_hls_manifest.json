@@ -1,0 +1,20 @@
+{
+  "phase": "08a_stage2_hls_feasibility",
+  "status": "prepared_for_csim_csynth",
+  "selected_checkpoint": "models\\phc_fi2010_h50_seed1_raw_v2.pt",
+  "selected_checkpoint_copy": "models\\phc_fi2010_h50_seed1_raw_v2.pt",
+  "selection_rule": "k=50 raw primary horizon; median seed by Stage 1 v2 test macro F1",
+  "horizon": 50,
+  "seed": 1,
+  "loss_mode": "raw",
+  "best_epoch": 28,
+  "feature_dim": 40,
+  "hidden_dim": 16,
+  "num_classes": 3,
+  "trainable_parameters": 2115,
+  "new5_used": false,
+  "quantization": "Q24.12",
+  "any_weight_saturated": false,
+  "num_weight_saturated": 0,
+  "stage2_scope": "csim_and_csynth_only; no cosim, no P&R, no bitstream, no board work"
+}

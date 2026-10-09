@@ -70,23 +70,23 @@
 <SummaryOfViolations>
 <IssueType>Timing Violation</IssueType>
 <ViolationType>-</ViolationType>
-<SourceLocation>C:/Users/holbo/00VS_projjects/00_HFT_project/n2ew_era/07b_tcn_prepad_manual_hls/hls_src/tcn_prepad_hls_impl.hpp:73</SourceLocation>
+<SourceLocation>../hls_src/tcn_prepad_hls_impl.hpp:73</SourceLocation>
 <SummaryOfLoopViolations>
 <VITIS_LOOP_73_1>
 <Name>VITIS_LOOP_73_1</Name>
 <IssueType>-</IssueType>
 <ViolationType>-</ViolationType>
-<SourceLocation>C:/Users/holbo/00VS_projjects/00_HFT_project/n2ew_era/07b_tcn_prepad_manual_hls/hls_src/tcn_prepad_hls_impl.hpp:83</SourceLocation>
+<SourceLocation>../hls_src/tcn_prepad_hls_impl.hpp:83</SourceLocation>
 <VITIS_LOOP_75_2>
 <Name>VITIS_LOOP_75_2</Name>
 <IssueType>-</IssueType>
 <ViolationType>-</ViolationType>
-<SourceLocation>C:/Users/holbo/00VS_projjects/00_HFT_project/n2ew_era/07b_tcn_prepad_manual_hls/hls_src/tcn_prepad_hls_impl.hpp:75</SourceLocation>
+<SourceLocation>../hls_src/tcn_prepad_hls_impl.hpp:75</SourceLocation>
 <VITIS_LOOP_78_3>
 <Name>VITIS_LOOP_78_3</Name>
 <IssueType>-</IssueType>
 <ViolationType>-</ViolationType>
-<SourceLocation>C:/Users/holbo/00VS_projjects/00_HFT_project/n2ew_era/07b_tcn_prepad_manual_hls/hls_src/tcn_prepad_hls_impl.hpp:78</SourceLocation>
+<SourceLocation>../hls_src/tcn_prepad_hls_impl.hpp:78</SourceLocation>
 </VITIS_LOOP_78_3>
 </VITIS_LOOP_75_2>
 </VITIS_LOOP_73_1>

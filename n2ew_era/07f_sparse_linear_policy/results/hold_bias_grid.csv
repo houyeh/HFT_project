@@ -1,0 +1,10 @@
+target_train_hold_rate,hold_bias_delta,grid_source
+0.1,-0.25262782214047247,train_margin_quantile
+0.15,-0.22681777166860195,train_margin_quantile
+0.2,-0.1795344128553462,train_margin_quantile
+0.25,-0.11708380346617255,train_margin_quantile
+0.3,-0.0473199687105354,train_margin_quantile
+0.35,-0.0006149927063674454,train_margin_quantile
+0.3726196336502837,0.0,original
+0.4,0.03404727806397251,train_margin_quantile
+0.5,0.18093264439913193,train_margin_quantile

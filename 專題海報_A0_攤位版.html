@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="utf-8">
+<title>專題海報 A0｜攤位展示版</title>
+<style>
+  @page { size:841mm 1189mm; margin:0; }
+  *{margin:0;padding:0;box-sizing:border-box;}
+  body{
+    width:841mm;height:1189mm;background:#fff;color:#15202b;
+    font-family:"Microsoft JhengHei","微軟正黑體","Noto Sans TC",sans-serif;
+    padding:18mm 16mm 12mm;display:flex;flex-direction:column;gap:5mm;
+  }
+  .num{font-family:"Times New Roman",Georgia,serif;font-variant-numeric:tabular-nums;}
+
+  header{border-bottom:2mm solid #15202b;padding-bottom:4.5mm;}
+  h1{font-size:17.5mm;line-height:1.16;}
+  h1 em{font-style:normal;color:#0b5c9e;}
+  .lead{margin-top:3.5mm;font-size:7mm;line-height:1.45;color:#2d3c49;max-width:720mm;}
+  .lead b{color:#0b5c9e;}
+  .who{margin-top:3mm;font-size:5.6mm;color:#5d6b78;}
+  .who b{color:#15202b;}
+
+  .panel{border:0.55mm solid #b9c3cc;border-radius:1.6mm;padding:5mm 5.5mm 4.5mm;display:flex;flex-direction:column;background:#fff;}
+  .panel > h2{font-size:7mm;margin-bottom:3.5mm;padding-bottom:2mm;border-bottom:0.55mm solid #15202b;display:flex;align-items:baseline;gap:3mm;}
+  .n{display:inline-flex;align-items:center;justify-content:center;min-width:8.5mm;height:8.5mm;
+     background:#15202b;color:#fff;border-radius:50%;font-size:5.2mm;font-weight:700;flex:none;}
+  .panel h2 small{font-size:4.9mm;color:#7c8a96;font-weight:400;margin-left:auto;}
+  .panel p,.panel li{font-size:5.3mm;line-height:1.5;}
+  .panel p+p{margin-top:2.6mm;}
+  ul{list-style:none;} li{padding-left:5mm;position:relative;margin-bottom:2.2mm;}
+  li::before{content:"▪";position:absolute;left:0;color:#0b5c9e;}
+  .hl{background:linear-gradient(transparent 60%,#ffe8a3 60%);}
+  b{color:#15202b;}
+
+  .row{display:grid;gap:5mm;}
+  .c3{grid-template-columns:1fr 1fr 1.18fr;}
+  .c2{grid-template-columns:1fr 1.05fr;}
+
+  table{width:100%;border-collapse:collapse;font-size:5.1mm;margin-top:1mm;}
+  th{background:#15202b;color:#fff;padding:2.3mm 2.4mm;text-align:left;font-size:4.9mm;font-weight:600;}
+  td{padding:2.2mm 2.4mm;border-bottom:0.3mm solid #dde3e8;}
+  tr:last-child td{border-bottom:none;}
+  td.n2{text-align:right;font-family:"Times New Roman",serif;font-variant-numeric:tabular-nums;}
+  .good{color:#0b5c9e;font-weight:700;}
+  .bad{color:#a01b36;font-weight:700;}
+
+  .note{margin-top:auto;padding-top:3mm;font-size:4.5mm;color:#4c5a66;line-height:1.42;border-top:0.35mm dashed #b9c3cc;}
+  .note b{color:#a01b36;}
+
+  .demo{background:#0b5c9e;color:#fff;border-radius:1.6mm;padding:5mm 6mm;display:grid;grid-template-columns:auto 1fr;gap:6mm;align-items:center;}
+  .demo .tag{font-size:6.4mm;font-weight:700;letter-spacing:1.2mm;border:0.7mm solid #fff;border-radius:1.2mm;padding:3mm 4mm;white-space:nowrap;}
+  .demo p{font-size:5.6mm;line-height:1.5;}
+  .demo b{color:#ffd166;}
+
+  footer{border-top:1.2mm solid #15202b;padding-top:3.5mm;display:grid;grid-template-columns:1.45fr 1fr;gap:7mm;}
+  footer h3{font-size:5.8mm;margin-bottom:2mm;}
+  footer p,footer li{font-size:4.5mm;line-height:1.45;color:#4c5a66;}
+  footer li{margin-bottom:1.2mm;}
+</style>
+</head>
+<body>
+
+<header>
+  <h1>在一塊最入門的 FPGA 上，把會「記住過去」的神經網路<br>推到<em>它跑得動的極限</em>——然後量出極限在哪裡</h1>
+  <p class="lead">本專題把一顆處理<b>金融委託簿</b>資料的<b>遞迴神經網路推論核心</b>，從 PyTorch 模型一路做到<b>實體晶片</b>，中間不使用任何自動轉換工具。量測的對象不是「它有多快」，而是<b>「再快一倍要付出什麼，以及什麼時候就再也快不了」</b>。</p>
+  <p class="who">平台　<b>PYNQ-Z2</b>（Xilinx Zynq-7020：53,200 LUT／220 DSP／280 BRAM，該系列中資源最少的等級之一）　｜　姓名　<b>＿＿＿＿＿</b>　｜　指導教授　<b>＿＿＿＿＿</b></p>
+</header>
+
+<!-- 1 系統全貌 -->
+<div class="panel">
+  <h2><span class="n">1</span>系統全貌：桌上這塊板子在做什麼<small>離線重播真實市場事件，逐筆比對晶片輸出與軟體答案</small></h2>
+  <svg viewBox="0 0 1180 340" style="width:100%;height:auto">
+    <defs>
+      <marker id="a" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+        <path d="M0,0 L10,5 L0,10 z" fill="#15202b"/></marker>
+      <marker id="ab" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+        <path d="M0,0 L10,5 L0,10 z" fill="#0b5c9e"/></marker>
+    </defs>
+
+    <!-- offline / PC side -->
+    <rect x="8" y="46" width="248" height="176" rx="6" fill="#f3f6f8" stroke="#9fadb9" stroke-width="1.6" stroke-dasharray="7 5"/>
+    <text x="132" y="36" font-size="19" text-anchor="middle" fill="#5d6b78">離線準備（PC）</text>
+    <rect x="26" y="66" width="212" height="44" rx="4" fill="#fff" stroke="#15202b" stroke-width="1.6"/>
+    <text x="132" y="86" font-size="18" text-anchor="middle">台指期逐筆 L2 委託簿</text>
+    <text x="132" y="104" font-size="15" text-anchor="middle" fill="#5d6b78">約 1,300 萬筆可報價事件</text>
+    <rect x="26" y="124" width="212" height="44" rx="4" fill="#fff" stroke="#15202b" stroke-width="1.6"/>
+    <text x="132" y="144" font-size="18" text-anchor="middle">16 維因果特徵</text>
+    <text x="132" y="162" font-size="15" text-anchor="middle" fill="#5d6b78">僅用決策時點前的資訊</text>
+    <rect x="26" y="182" width="212" height="30" rx="4" fill="#fff" stroke="#15202b" stroke-width="1.6"/>
+    <text x="132" y="202" font-size="17" text-anchor="middle">PyTorch 訓練 → 定點量化</text>
+
+    <!-- arrows into chip -->
+    <line x1="256" y1="100" x2="330" y2="100" stroke="#15202b" stroke-width="2.4" marker-end="url(#a)"/>
+    <text x="293" y="90" font-size="14" text-anchor="middle" fill="#5d6b78">4,096 筆</text>
+    <line x1="256" y1="197" x2="330" y2="197" stroke="#15202b" stroke-width="2.4" marker-end="url(#a)"/>
+    <text x="293" y="188" font-size="14" text-anchor="middle" fill="#5d6b78">權重</text>
+
+    <!-- FPGA -->
+    <rect x="336" y="24" width="500" height="292" rx="8" fill="#eaf2fa" stroke="#0b5c9e" stroke-width="2.6"/>
+    <text x="586" y="18" font-size="20" text-anchor="middle" fill="#0b5c9e" font-weight="700">FPGA 晶片（Zynq-7020）</text>
+
+    <rect x="356" y="44" width="150" height="54" rx="4" fill="#fff" stroke="#15202b" stroke-width="1.6"/>
+    <text x="431" y="66" font-size="17" text-anchor="middle">BRAM 重播記憶體</text>
+    <text x="431" y="86" font-size="14" text-anchor="middle" fill="#5d6b78">4,096 筆事件 + 預期答案</text>
+
+    <rect x="356" y="116" width="150" height="48" rx="4" fill="#fff" stroke="#15202b" stroke-width="1.6"/>
+    <text x="431" y="137" font-size="17" text-anchor="middle">控制狀態機</text>
+    <text x="431" y="155" font-size="14" text-anchor="middle" fill="#5d6b78">逐筆餵入</text>
+
+    <!-- core -->
+    <rect x="546" y="60" width="188" height="118" rx="6" fill="#0b5c9e" stroke="#0b5c9e" stroke-width="2"/>
+    <text x="640" y="88" font-size="20" text-anchor="middle" fill="#fff" font-weight="700">PHC-lite 推論核心</text>
+    <text x="640" y="110" font-size="15" text-anchor="middle" fill="#cfe3f5">1,731 參數・16 維狀態</text>
+    <text x="640" y="131" font-size="15" text-anchor="middle" fill="#cfe3f5">純定點 ap_fixed&lt;24,12&gt;</text>
+    <text x="640" y="152" font-size="15" text-anchor="middle" fill="#ffd166" font-weight="700">手刻 HLS，無自動轉換</text>
+    <text x="640" y="170" font-size="14" text-anchor="middle" fill="#cfe3f5">530 週期 / 5.300 µs</text>
+
+    <!-- feedback loop -->
+    <path d="M546,150 C512,150 512,196 546,196 L720,196 C756,196 756,150 734,150"
+          fill="none" stroke="#a01b36" stroke-width="3" marker-end="url(#a)"/>
+    <text x="640" y="214" font-size="16" text-anchor="middle" fill="#a01b36" font-weight="700">狀態回授（O(1)，放在暫存器，不用 BRAM）</text>
+    <text x="640" y="232" font-size="14" text-anchor="middle" fill="#a01b36">↑ 模型有效性的來源，也是無法跨事件管線化的原因</text>
+
+    <line x1="506" y1="71" x2="546" y2="90" stroke="#15202b" stroke-width="2.2" marker-end="url(#a)"/>
+    <line x1="506" y1="140" x2="546" y2="120" stroke="#15202b" stroke-width="2.2" marker-end="url(#a)"/>
+
+    <!-- comparator -->
+    <rect x="356" y="246" width="378" height="50" rx="4" fill="#fff" stroke="#a01b36" stroke-width="2"/>
+    <text x="545" y="266" font-size="18" text-anchor="middle" fill="#a01b36" font-weight="700">逐筆比對電路（零容差）</text>
+    <text x="545" y="286" font-size="15" text-anchor="middle" fill="#5d6b78">晶片輸出 vs 軟體參考答案　→　任一筆不符即 fail</text>
+    <line x1="640" y1="178" x2="640" y2="246" stroke="#15202b" stroke-width="2.2" marker-end="url(#a)"/>
+    <line x1="431" y1="98" x2="431" y2="246" stroke="#9fadb9" stroke-width="2" stroke-dasharray="5 4" marker-end="url(#a)"/>
+
+    <!-- outputs -->
+    <line x1="836" y1="119" x2="906" y2="119" stroke="#0b5c9e" stroke-width="2.6" marker-end="url(#ab)"/>
+    <rect x="912" y="78" width="256" height="84" rx="5" fill="#fff" stroke="#0b5c9e" stroke-width="2"/>
+    <text x="1040" y="104" font-size="19" text-anchor="middle" fill="#0b5c9e" font-weight="700">報價決策</text>
+    <text x="1040" y="128" font-size="17" text-anchor="middle">掛買單　／　掛賣單　／　不報價</text>
+    <text x="1040" y="150" font-size="14" text-anchor="middle" fill="#5d6b78">每一筆市場事件輸出一個決策</text>
+
+    <line x1="734" y1="271" x2="906" y2="271" stroke="#a01b36" stroke-width="2.6" marker-end="url(#a)"/>
+    <rect x="912" y="246" width="256" height="50" rx="5" fill="#fff" stroke="#a01b36" stroke-width="2"/>
+    <text x="1040" y="267" font-size="18" text-anchor="middle" fill="#a01b36" font-weight="700">LED：done / pass / fail</text>
+    <text x="1040" y="287" font-size="14" text-anchor="middle" fill="#5d6b78">板子上亮的就是這個</text>
+  </svg>
+</div>
+
+<!-- demo band -->
+<div class="demo">
+  <div class="tag">現場 DEMO</div>
+  <p>桌上的板子正在重播<b>真實市場中事件最密集的 4,096 筆</b>（峰值 1,469 事件／秒），每一筆都把晶片算出來的分數跟電腦算的答案<b>逐位元比對</b>。整輪跑完約 <b>22 毫秒</b>，所以 LED 一直是亮的。<br>想確認它不是「一律放行」？我們在第 17 筆刻意注入一個已知錯誤——<b>板子抓得到，fail 會亮。</b></p>
+</div>
+
+<!-- 2 3 4 -->
+<div class="row c3" style="flex:1">
+
+  <div class="panel">
+    <h2><span class="n">2</span>模型是什麼<small>PHC-lite</small></h2>
+    <p>簡化自一個生物啟發的<b>脈衝狀態空間模型 PHC</b>。原模型的脈衝動態、多區域拓樸、時間步內多輪收斂、推論期線上更新，在資源受限的 FPGA 上<span class="hl">不是資源爆炸就是引入不確定的執行時間</span>，全部移除。</p>
+    <p>保留三個<b>可被定點電路直接實現</b>的機制：</p>
+    <ul>
+      <li><b>閘控</b>　一個 Sigmoid 決定當前輸入有多少進入狀態</li>
+      <li><b>衰減</b>　舊狀態乘上 0–1 係數後與新資訊合併</li>
+      <li><b>狀態相依增益</b>　由當前狀態調節交互項強度</li>
+    </ul>
+    <p style="margin-top:1mm">單步推論展開為<b>九個固定順序的運算</b>，第四步的輸出就是下一時間步的狀態輸入。</p>
+    <div class="note"><b>這條回授是整個專題的核心張力。</b> 切斷它，訊號在三個樣本外切分上分別崩潰 <b>−80／−190／−78 萬元</b>；但留著它，起始間隔就趨近延遲本身，推論無法跨事件管線化。<br><b>模型有效性的來源，正是硬體最昂貴的部分。</b></div>
+  </div>
+
+  <div class="panel">
+    <h2><span class="n">3</span>怎麼做到的<small>量化與高階合成</small></h2>
+    <p><b>自動化工具鏈不能用。</b> hls4ml 對<b>五個模型變體</b>的轉換全部止於 Python 端模型解析，沒有一個產生出 C++ 專案。阻擋點是二維 LayerNorm、非標準 padding、含控制流的 forward——<span class="hl">三者都跟遞迴無關，前饋模型同樣被擋</span>。</p>
+    <p>所以全程<b>手刻 Vitis HLS</b>。第一版的 DSP 用量是 <b class="num">2,636%</b>，經八輪優化收斂到布局繞線後 <b class="num">21.36%</b>。</p>
+    <p><b>影響最大的一個決定</b>：`tanh` 若交給工具預設處理，會被合成為雙精度浮點核心、<b>單次呼叫約耗 2,048 顆 DSP</b>——而整塊晶片只有 220 顆。改成 <b>65 點分段線性查表</b>後，合成結果中再也沒有浮點硬體。</p>
+    <p><b>為什麼是 65 點？</b> 誤差分解顯示，65 點的查表誤差已經和 Q24.12 的量化誤差同一量級（45.8% vs 54.2%）。再加點數只會把查表誤差壓到量化地板以下，<b>買不到東西</b>。</p>
+    <div class="note">重尾分布的委託簿特徵在<b>訓練階段</b>就以對數與截尾壓縮動態範圍——<b>讓量化成為訓練時的約束，而不是事後補救</b>。這是定點化能收斂的前提。</div>
+  </div>
+
+  <div class="panel">
+    <h2><span class="n">4</span>多快？代價是什麼<small>五點全數通過布局繞線</small></h2>
+    <svg viewBox="0 0 520 360" style="width:100%;height:auto">
+      <line x1="58" y1="300" x2="500" y2="300" stroke="#15202b" stroke-width="2"/>
+      <line x1="58" y1="300" x2="58" y2="16" stroke="#15202b" stroke-width="2"/>
+      <text x="282" y="330" font-size="15" text-anchor="middle">單筆推論延遲（µs，對數刻度）　←　更快</text>
+      <text x="-158" y="20" font-size="15" text-anchor="middle" transform="rotate(-90)">樣本外任務價值</text>
+      <line x1="58" y1="62" x2="500" y2="62" stroke="#e6ebef" stroke-width="1"/>
+      <line x1="58" y1="152" x2="500" y2="152" stroke="#e6ebef" stroke-width="1"/>
+      <line x1="58" y1="238" x2="500" y2="238" stroke="#e6ebef" stroke-width="1"/>
+
+      <line x1="462" y1="62" x2="248" y2="62" stroke="#2a9d8f" stroke-width="7" stroke-linecap="round" opacity=".3"/>
+      <text x="356" y="46" font-size="15" text-anchor="middle" fill="#1d7268" font-weight="700">前 3.72× 免費</text>
+      <text x="356" y="30" font-size="12.5" text-anchor="middle" fill="#1d7268">同一組權重，任務品質不變</text>
+
+      <path d="M248,62 L156,152 L100,238" fill="none" stroke="#a01b36" stroke-width="3.4" stroke-dasharray="8 5"/>
+      <text x="218" y="116" font-size="14" fill="#a01b36" font-weight="700">−3.92%</text>
+      <text x="138" y="206" font-size="14" fill="#a01b36" font-weight="700">−6.06%</text>
+
+      <circle cx="462" cy="62" r="11" fill="#15202b"/>
+      <circle cx="356" cy="62" r="19" fill="#15202b" opacity=".85"/>
+      <circle cx="248" cy="62" r="22" fill="#15202b" opacity=".85"/>
+      <circle cx="156" cy="152" r="20" fill="#15202b" opacity=".85"/>
+      <circle cx="100" cy="238" r="27" fill="#0b5c9e"/>
+
+      <text x="462" y="90" font-size="13.5" text-anchor="middle">83.160</text>
+      <text x="356" y="94" font-size="13.5" text-anchor="middle">25.733</text>
+      <text x="356" y="110" font-size="12" text-anchor="middle" fill="#0b5c9e" font-weight="700">已上板</text>
+      <text x="248" y="96" font-size="13.5" text-anchor="middle">22.360</text>
+      <text x="156" y="186" font-size="13.5" text-anchor="middle">12.020</text>
+      <text x="100" y="278" font-size="14.5" text-anchor="middle" font-weight="700" fill="#0b5c9e">5.300</text>
+      <text x="100" y="294" font-size="12" text-anchor="middle" fill="#0b5c9e" font-weight="700">已上板</text>
+
+      <circle cx="68" cy="238" r="10" fill="none" stroke="#9fadb9" stroke-width="2.6" stroke-dasharray="4 4"/>
+      <rect x="4" y="150" width="112" height="42" rx="4" fill="#fff4e0" stroke="#e09f3e" stroke-width="1.5"/>
+      <text x="60" y="167" font-size="13" text-anchor="middle" fill="#8a5d10" font-weight="700">需 452 顆 DSP</text>
+      <text x="60" y="183" font-size="13" text-anchor="middle" fill="#8a5d10">只有 220 顆</text>
+      <text x="68" y="266" font-size="13" text-anchor="middle" fill="#5d6b78">3.830</text>
+      <text x="500" y="352" font-size="11.5" text-anchor="end" fill="#7c8a96">圓面積 ∝ DSP 使用率</text>
+    </svg>
+    <p style="margin-top:2mm"><b>能耗同步改善 12.5×</b>（29.69 → 2.38 µJ）。而且<b>最快的那個點並不是最耗電的</b>——對角化把矩陣乘法退化為逐元素運算，實際切換活動反而下降。</p>
+    <div class="note"><b>這就是本專題交付的東西：不是一個速度數字，是一條有標價的曲線。</b> 再往下的 3.830 µs 已通過 25,600 向量協同模擬，功能完全正確，擋住它的只有 DSP 數量——<b>所以這是元件的邊界，不是設計的邊界；換一塊 DSP 多的晶片就能繼續走。</b></div>
+  </div>
+</div>
+
+<!-- 5 6 -->
+<div class="row c2">
+  <div class="panel">
+    <h2><span class="n">5</span>為什麼用遞迴？不是因為它比較準<small>完全配對的條件下比較</small></h2>
+    <p>同元件、同時脈 100 MHz、同定點格式、<b>同一個訊號來源模型</b>、兩邊都通過布局繞線與協同模擬：</p>
+    <table>
+      <tr><th>項目</th><th style="text-align:right">遞迴 PHC</th><th style="text-align:right">前饋 TCN</th></tr>
+      <tr><td>單筆延遲</td><td class="n2 good">22.360 µs</td><td class="n2">74.38 µs</td></tr>
+      <tr><td>BRAM 用量</td><td class="n2 good">0.00%</td><td class="n2 bad">23.57%</td></tr>
+      <tr><td>DSP</td><td class="n2">68.64%</td><td class="n2 good">49.09%</td></tr>
+      <tr><td>公開基準預測能力</td><td class="n2">67.58%</td><td class="n2">67.58%</td></tr>
+    </table>
+    <p style="margin-top:3mm"><b>兩種架構的預測能力完全相同。</b>差別全在硬體：遞迴狀態只有 16 個數值（384 bits），<span class="hl">可以整個放進暫存器</span>；前饋必須保留整個時間窗，只能放 BRAM——而<b>每塊 BRAM 只有兩個存取埠</b>，讀取因此被排隊。</p>
+    <p><b>證據</b>：前饋側把運算展開因子從 1 提高到 4，每事件週期數只降 <b>2.22 倍</b>而不是理想的 4 倍。次線性正是「卡在記憶體埠」的特徵。</p>
+    <div class="note"><b>所以選遞迴是資源決定，不是準確率決定</b>——而正是省下來的這份餘裕，讓它能被一路優化到 5.300 µs。<br>⚠️ 前饋側另有一個更快的 50.36 µs 設計點，其完整協同模擬因模擬器記憶體耗盡（17–19 GB，對照遞迴的 34 MB）未能完成。<b>若補完，差距會縮到 2.25×——此比值不是架構上限。</b></div>
+  </div>
+
+  <div class="panel">
+    <h2><span class="n">6</span>怎麼知道是對的<small>四級驗證 ＋ 被丟掉的設計點</small></h2>
+    <p>每一個數字都標明來自哪一級：<b>C 合成估計 → RTL 協同模擬 → 布局繞線時序 → 實體晶片</b>。混用等級視為嚴重錯誤。</p>
+    <table>
+      <tr><th>上板版本</th><th style="text-align:right">延遲</th><th>晶片 vs 軟體</th><th style="text-align:right">決策改變</th></tr>
+      <tr><td>訊號品質最佳版</td><td class="n2">25.733 µs</td><td>4,096 筆中 27 筆差 1 個量化單位</td><td class="n2 good">0 筆</td></tr>
+      <tr><td>延遲最低版</td><td class="n2 good">5.300 µs</td><td><b>4,096 筆完全相同</b></td><td class="n2 good">0 筆</td></tr>
+    </table>
+    <p style="margin-top:3mm"><b>最後一欄才是關鍵。</b>數值差一點點不要緊——只要三選一的決策沒變，硬體與軟體的行為就是等價的。</p>
+    <div class="note"><b>最能說明紀律的是被丟掉的四個設計點。</b> 兩個無 local partition 的版本 C 模擬 25,600 向量全過，協同模擬卻有 268／657 筆不符；另兩個在 111／125 MHz <b>時序明明是收斂的</b>，各有 429 筆不符。四個看起來更快的點全部捨棄——<b>只看 C 合成或只看時序報告，會把它們全部誤認為成功。</b></div>
+  </div>
+</div>
+
+<footer>
+  <div>
+    <h3>結論</h3>
+    <p><b>一、</b>在最入門等級的 FPGA 上，從模型到實體晶片的完整驗證鏈走得完，而且邊界可以被量成一個<b>可外推的數字</b>——不是「這個設計做不到更快」，而是「這塊晶片只能到這裡」。<br>
+       <b>二、</b>在固定大小的元件上，架構選擇的決定因素是<b>狀態能不能放進暫存器</b>，而不是預測準確率。<br>
+       <b>三、</b>自動化高階合成工具鏈在這個規模不可用，手動實作是必要條件而非偏好——這解釋了本專題全部硬體工作量的來源。</p>
+  </div>
+  <div>
+    <h3>誠實揭露</h3>
+    <ul>
+      <li>產出為推論核心（IP），不含網路介面、行情解碼與訂單管理，不與端到端交易系統比較。</li>
+      <li>延遲由布局繞線靜態時序與協同模擬週期數<b>推導</b>而得，未實作晶片內週期計數器；功耗為工具估計值。</li>
+      <li>前饋側的加速線未達同等驗證層級，故不宣稱前饋架構無法更快。</li>
+      <li>模型在公開基準上仍落後 DeepLOB 13.85 個百分點；四個方向的診斷顯示<b>單純放大參數不會改善</b>，但這不等於調校過的大模型不可能更好。</li>
+    </ul>
+  </div>
+</footer>
+
+</body>
+</html>

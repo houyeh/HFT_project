@@ -1,0 +1,3 @@
+implementation,latency_definition,verification_level,latency_us,interval_us,timing_met,wns_ns,routed_lut_pct,routed_ff_pct,routed_dsp_pct,routed_bram_pct,directly_rankable_against_phc
+07C2 streaming TCN scratch shared_u1,streaming per-event top call; one readout after warmup/window,csim+csynth+P&R_met; cosim1008_timeout,165.1,165.11,True,0.683,25.55,14.03,37.27,23.57,False
+07C2 streaming TCN distilled shared_u1,streaming per-event top call; one readout after warmup/window,csim+csynth+P&R_met; cosim1008_timeout,165.1,165.11,True,0.482,25.69,14.11,38.18,23.57,False

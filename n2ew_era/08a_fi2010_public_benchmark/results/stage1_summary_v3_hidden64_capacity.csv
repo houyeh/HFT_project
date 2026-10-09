@@ -1,0 +1,3 @@
+split,loss_mode,horizon,n_seeds,accuracy_mean,accuracy_std,macro_precision_mean,macro_precision_std,macro_recall_mean,macro_recall_std,macro_f1_mean,macro_f1_std
+val,raw,50,1,0.6051208432479204,0.0,0.6016835227552751,0.0,0.6006681819759668,0.0,0.6007386336671173,0.0
+test,raw,50,1,0.6611751548520303,0.0,0.6419456900236188,0.0,0.6480323717495836,0.0,0.644308073793732,0.0

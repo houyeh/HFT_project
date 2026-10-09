@@ -1,0 +1,38 @@
+[
+  {
+    "variant": "scratch",
+    "rows": 49600,
+    "timesteps": 248,
+    "first_quarter_mean_rmse": 9.190395645978976e-05,
+    "last_quarter_mean_rmse": 0.0006379398214067806,
+    "last_over_first_quarter_rmse": 6.941374952512462,
+    "post10_rmse_min": 9.190395645978975e-05,
+    "post10_rmse_median": 0.0006128966216882629,
+    "post10_rmse_max": 0.0006668863181495523,
+    "post10_rmse_slope_per_timestep": 3.425883000687267e-06,
+    "late_median_over_steady_median": 6.9469765183532575,
+    "max_rmse_timestep": 244,
+    "classification": "bounded_steady_offset",
+    "stage2_gate_pass": true,
+    "gate_basis": "post10_max<0.01 and abs(post10_linear_slope)<1e-5; diagnostic only, no model tuning",
+    "source_csim": "C:\\Users\\holbo\\00VS_projjects\\00_HFT_project\\n2ew_era\\07c_tcn_streaming_manual_hls\\results\\stage1_block0_scratch_csim_out.csv"
+  },
+  {
+    "variant": "distilled",
+    "rows": 49600,
+    "timesteps": 248,
+    "first_quarter_mean_rmse": 0.00013302885480619318,
+    "last_quarter_mean_rmse": 0.0008315933118871038,
+    "last_over_first_quarter_rmse": 6.251225067663958,
+    "post10_rmse_min": 0.00013302885480619318,
+    "post10_rmse_median": 0.0007899466157477591,
+    "post10_rmse_max": 0.0008914885190092823,
+    "post10_rmse_slope_per_timestep": 4.3910907113235675e-06,
+    "late_median_over_steady_median": 6.25354312986396,
+    "max_rmse_timestep": 244,
+    "classification": "bounded_steady_offset",
+    "stage2_gate_pass": true,
+    "gate_basis": "post10_max<0.01 and abs(post10_linear_slope)<1e-5; diagnostic only, no model tuning",
+    "source_csim": "C:\\Users\\holbo\\00VS_projjects\\00_HFT_project\\n2ew_era\\07c_tcn_streaming_manual_hls\\results\\stage1_block0_distilled_csim_out.csv"
+  }
+]

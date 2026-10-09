@@ -1,0 +1,2 @@
+seed,source_checkpoint,migrated_model,feature_dim,hidden_dim,input_dim,output_dim,source_parameter_count,step_parameter_count,buffer_count,decay_min,decay_max,alpha_raw_value_used,new5_used
+1,n2ew_era/05e_phc_hidden8_ablation/models/phc_stp_v2_seed1_best_val.pt,n2ew_era/06u_phc_latency_breakthrough/variants/v2_hidden8_unroll8_100mhz/models/phc_stp_step_hls_hidden8_seed1.pt,16,8,24,10,547,538,9,0.8895851373672485,0.9139835834503174,0.44473060965538025,False

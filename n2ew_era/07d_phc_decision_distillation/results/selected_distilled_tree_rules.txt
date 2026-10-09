@@ -1,0 +1,756 @@
+Selected policy_id: phc_stp_v2_distilled_tree_current_t_depth8
+Variant: current_t
+Depth: 8
+Targets: [teacher_bid_score, teacher_ask_score]
+|-- t__queue_imbalance <= -0.22040
+|  |-- t__imbalance_change_past <= 0.15210
+|  |  |-- t__queue_imbalance <= -1.12305
+|  |  |  |-- t__imbalance_change_past <= -1.33350
+|  |  |  |  |-- t__spread_change_past <= -1.00394
+|  |  |  |  |  |-- t__spread_ticks <= -1.14404
+|  |  |  |  |  |  |-- t__inter_arrival_ms <= -0.00307
+|  |  |  |  |  |  |  |-- t__log1p_ask_sz_1 <= 2.57910
+|  |  |  |  |  |  |  |  |-- value: [25.90569, -55.88587]
+|  |  |  |  |  |  |  |-- t__log1p_ask_sz_1 >  2.57910
+|  |  |  |  |  |  |  |  |-- value: [-95.85951, 70.34934]
+|  |  |  |  |  |  |-- t__inter_arrival_ms >  -0.00307
+|  |  |  |  |  |  |  |-- t__imbalance_change_past <= -4.54883
+|  |  |  |  |  |  |  |  |-- value: [-78.22089, 42.99699]
+|  |  |  |  |  |  |  |-- t__imbalance_change_past >  -4.54883
+|  |  |  |  |  |  |  |  |-- value: [-10.32764, -17.68274]
+|  |  |  |  |  |-- t__spread_ticks >  -1.14404
+|  |  |  |  |  |  |-- t__top_depth <= -0.24115
+|  |  |  |  |  |  |  |-- t__clipped_inter_arrival_ms <= 0.33850
+|  |  |  |  |  |  |  |  |-- value: [-16.56998, -11.93618]
+|  |  |  |  |  |  |  |-- t__clipped_inter_arrival_ms >  0.33850
+|  |  |  |  |  |  |  |  |-- value: [-35.33958, 6.00651]
+|  |  |  |  |  |  |-- t__top_depth >  -0.24115
+|  |  |  |  |  |  |  |-- t__clipped_inter_arrival_ms <= 0.66870
+|  |  |  |  |  |  |  |  |-- value: [-35.48309, 6.15675]
+|  |  |  |  |  |  |  |-- t__clipped_inter_arrival_ms >  0.66870
+|  |  |  |  |  |  |  |  |-- value: [-55.83897, 25.97111]
+|  |  |  |  |-- t__spread_change_past >  -1.00394
+|  |  |  |  |  |-- t__bid_sz_1 <= -0.66846
+|  |  |  |  |  |  |-- t__spread_change_past <= 0.80466
+|  |  |  |  |  |  |  |-- t__deep_imbalance <= -1.86621
+|  |  |  |  |  |  |  |  |-- value: [-139.64833, 108.53777]
+|  |  |  |  |  |  |  |-- t__deep_imbalance >  -1.86621
+|  |  |  |  |  |  |  |  |-- value: [-82.87386, 51.23694]
+|  |  |  |  |  |  |-- t__spread_change_past >  0.80466
+|  |  |  |  |  |  |  |-- t__spread_change_past <= 2.61328
+|  |  |  |  |  |  |  |  |-- value: [-53.39414, 26.11504]
+|  |  |  |  |  |  |  |-- t__spread_change_past >  2.61328
+|  |  |  |  |  |  |  |  |-- value: [-71.12695, 42.44173]
+|  |  |  |  |  |-- t__bid_sz_1 >  -0.66846
+|  |  |  |  |  |  |-- t__log1p_top_depth <= 1.72363
+|  |  |  |  |  |  |  |-- t__spread_ticks <= 0.00366
+|  |  |  |  |  |  |  |  |-- value: [-51.08076, 24.68113]
+|  |  |  |  |  |  |  |-- t__spread_ticks >  0.00366
+|  |  |  |  |  |  |  |  |-- value: [-35.13615, 6.52942]
+|  |  |  |  |  |  |-- t__log1p_top_depth >  1.72363
+|  |  |  |  |  |  |  |-- t__imbalance_change_past <= -3.42578
+|  |  |  |  |  |  |  |  |-- value: [-30.12421, 1.19306]
+|  |  |  |  |  |  |  |-- t__imbalance_change_past >  -3.42578
+|  |  |  |  |  |  |  |  |-- value: [-4.72928, -24.11929]
+|  |  |  |-- t__imbalance_change_past >  -1.33350
+|  |  |  |  |-- t__log1p_bid_sz_1 <= -0.30096
+|  |  |  |  |  |-- t__imbalance_change_past <= -0.03502
+|  |  |  |  |  |  |-- t__spread_change_past <= -1.00394
+|  |  |  |  |  |  |  |-- t__volatility_past_50 <= 1.15820
+|  |  |  |  |  |  |  |  |-- value: [-44.34794, 17.26916]
+|  |  |  |  |  |  |  |-- t__volatility_past_50 >  1.15820
+|  |  |  |  |  |  |  |  |-- value: [-14.57599, -15.27232]
+|  |  |  |  |  |  |-- t__spread_change_past >  -1.00394
+|  |  |  |  |  |  |  |-- t__deep_imbalance <= -0.50830
+|  |  |  |  |  |  |  |  |-- value: [-108.78330, 78.13597]
+|  |  |  |  |  |  |  |-- t__deep_imbalance >  -0.50830
+|  |  |  |  |  |  |  |  |-- value: [-92.66259, 62.58182]
+|  |  |  |  |  |-- t__imbalance_change_past >  -0.03502
+|  |  |  |  |  |  |-- t__log1p_bid_sz_1 <= -0.92993
+|  |  |  |  |  |  |  |-- t__deep_imbalance <= -0.57983
+|  |  |  |  |  |  |  |  |-- value: [-88.28603, 57.59492]
+|  |  |  |  |  |  |  |-- t__deep_imbalance >  -0.57983
+|  |  |  |  |  |  |  |  |-- value: [-71.50407, 41.04804]
+|  |  |  |  |  |  |-- t__log1p_bid_sz_1 >  -0.92993
+|  |  |  |  |  |  |  |-- t__spread_ticks <= -1.14404
+|  |  |  |  |  |  |  |  |-- value: [-39.46149, 14.63451]
+|  |  |  |  |  |  |  |-- t__spread_ticks >  -1.14404
+|  |  |  |  |  |  |  |  |-- value: [-62.32609, 32.51196]
+|  |  |  |  |-- t__log1p_bid_sz_1 >  -0.30096
+|  |  |  |  |  |-- t__imbalance_change_past <= -0.08289
+|  |  |  |  |  |  |-- t__top_depth <= 2.00146
+|  |  |  |  |  |  |  |-- t__spread_ticks <= -1.14404
+|  |  |  |  |  |  |  |  |-- value: [-25.67747, -2.36740]
+|  |  |  |  |  |  |  |-- t__spread_ticks >  -1.14404
+|  |  |  |  |  |  |  |  |-- value: [-77.78740, 47.34968]
+|  |  |  |  |  |  |-- t__top_depth >  2.00146
+|  |  |  |  |  |  |  |-- t__event_rate_past_50 <= 0.94434
+|  |  |  |  |  |  |  |  |-- value: [-33.26017, 3.34894]
+|  |  |  |  |  |  |  |-- t__event_rate_past_50 >  0.94434
+|  |  |  |  |  |  |  |  |-- value: [-61.84726, 33.76346]
+|  |  |  |  |  |-- t__imbalance_change_past >  -0.08289
+|  |  |  |  |  |  |-- t__spread_ticks <= 0.00366
+|  |  |  |  |  |  |  |-- t__queue_imbalance <= -1.63184
+|  |  |  |  |  |  |  |  |-- value: [-29.31162, 3.61855]
+|  |  |  |  |  |  |  |-- t__queue_imbalance >  -1.63184
+|  |  |  |  |  |  |  |  |-- value: [-9.39797, -19.06949]
+|  |  |  |  |  |  |-- t__spread_ticks >  0.00366
+|  |  |  |  |  |  |  |-- t__zscore_volatility_past_50_by_train_stats <= 0.70557
+|  |  |  |  |  |  |  |  |-- value: [-43.45230, 11.89212]
+|  |  |  |  |  |  |  |-- t__zscore_volatility_past_50_by_train_stats >  0.70557
+|  |  |  |  |  |  |  |  |-- value: [-30.17839, 1.99715]
+|  |  |-- t__queue_imbalance >  -1.12305
+|  |  |  |-- t__imbalance_change_past <= -0.19824
+|  |  |  |  |-- t__imbalance_change_past <= -1.44043
+|  |  |  |  |  |-- t__spread_change_past <= -1.00394
+|  |  |  |  |  |  |-- t__imbalance_change_past <= -5.08594
+|  |  |  |  |  |  |  |-- value: [-167.82549, 120.58586]
+|  |  |  |  |  |  |-- t__imbalance_change_past >  -5.08594
+|  |  |  |  |  |  |  |-- t__spread_ticks <= -1.14404
+|  |  |  |  |  |  |  |  |-- value: [27.10246, -53.99420]
+|  |  |  |  |  |  |  |-- t__spread_ticks >  -1.14404
+|  |  |  |  |  |  |  |  |-- value: [5.99673, -33.22094]
+|  |  |  |  |  |-- t__spread_change_past >  -1.00394
+|  |  |  |  |  |  |-- t__spread_change_past <= 0.80466
+|  |  |  |  |  |  |  |-- t__zscore_volatility_past_50_by_train_stats <= 2.55762
+|  |  |  |  |  |  |  |  |-- value: [-63.92244, 31.89427]
+|  |  |  |  |  |  |  |-- t__zscore_volatility_past_50_by_train_stats >  2.55762
+|  |  |  |  |  |  |  |  |-- value: [7.99531, -43.68142]
+|  |  |  |  |  |  |-- t__spread_change_past >  0.80466
+|  |  |  |  |  |  |  |-- t__log1p_bid_sz_1 <= 0.16254
+|  |  |  |  |  |  |  |  |-- value: [-30.10397, 1.30502]
+|  |  |  |  |  |  |  |-- t__log1p_bid_sz_1 >  0.16254
+|  |  |  |  |  |  |  |  |-- value: [-12.76675, -16.76214]
+|  |  |  |  |-- t__imbalance_change_past >  -1.44043
+|  |  |  |  |  |-- t__spread_change_past <= 0.80466
+|  |  |  |  |  |  |-- t__bid_sz_1 <= -0.09435
+|  |  |  |  |  |  |  |-- t__spread_change_past <= -1.00394
+|  |  |  |  |  |  |  |  |-- value: [-8.33883, -17.72181]
+|  |  |  |  |  |  |  |-- t__spread_change_past >  -1.00394
+|  |  |  |  |  |  |  |  |-- value: [-73.06802, 43.01505]
+|  |  |  |  |  |  |-- t__bid_sz_1 >  -0.09435
+|  |  |  |  |  |  |  |-- t__log1p_bid_sz_1 <= 0.83569
+|  |  |  |  |  |  |  |  |-- value: [-58.79169, 30.63733]
+|  |  |  |  |  |  |  |-- t__log1p_bid_sz_1 >  0.83569
+|  |  |  |  |  |  |  |  |-- value: [-43.99359, 14.23234]
+|  |  |  |  |  |-- t__spread_change_past >  0.80466
+|  |  |  |  |  |  |-- t__log1p_bid_sz_1 <= 0.53040
+|  |  |  |  |  |  |  |-- t__queue_imbalance <= -0.67896
+|  |  |  |  |  |  |  |  |-- value: [-47.25197, 17.38628]
+|  |  |  |  |  |  |  |-- t__queue_imbalance >  -0.67896
+|  |  |  |  |  |  |  |  |-- value: [-33.47335, 1.79021]
+|  |  |  |  |  |  |-- t__log1p_bid_sz_1 >  0.53040
+|  |  |  |  |  |  |  |-- t__volatility_past_50 <= 2.26172
+|  |  |  |  |  |  |  |  |-- value: [-8.53739, -21.83488]
+|  |  |  |  |  |  |  |-- t__volatility_past_50 >  2.26172
+|  |  |  |  |  |  |  |  |-- value: [25.83782, -58.73610]
+|  |  |  |-- t__imbalance_change_past >  -0.19824
+|  |  |  |  |-- t__log1p_bid_sz_1 <= 0.16254
+|  |  |  |  |  |-- t__queue_imbalance <= -0.65234
+|  |  |  |  |  |  |-- t__deep_imbalance <= 0.27319
+|  |  |  |  |  |  |  |-- t__volatility_past_50 <= 0.15411
+|  |  |  |  |  |  |  |  |-- value: [-57.75646, 27.28878]
+|  |  |  |  |  |  |  |-- t__volatility_past_50 >  0.15411
+|  |  |  |  |  |  |  |  |-- value: [-48.21150, 19.74584]
+|  |  |  |  |  |  |-- t__deep_imbalance >  0.27319
+|  |  |  |  |  |  |  |-- t__spread_ticks <= -1.14404
+|  |  |  |  |  |  |  |  |-- value: [-19.72405, -7.00855]
+|  |  |  |  |  |  |  |-- t__spread_ticks >  -1.14404
+|  |  |  |  |  |  |  |  |-- value: [-42.84420, 13.42619]
+|  |  |  |  |  |-- t__queue_imbalance >  -0.65234
+|  |  |  |  |  |  |-- t__deep_imbalance <= 0.32520
+|  |  |  |  |  |  |  |-- t__queue_imbalance <= -0.37061
+|  |  |  |  |  |  |  |  |-- value: [-40.70795, 10.72042]
+|  |  |  |  |  |  |  |-- t__queue_imbalance >  -0.37061
+|  |  |  |  |  |  |  |  |-- value: [-32.57230, 1.39735]
+|  |  |  |  |  |  |-- t__deep_imbalance >  0.32520
+|  |  |  |  |  |  |  |-- t__spread_ticks <= 0.00366
+|  |  |  |  |  |  |  |  |-- value: [-16.95736, -14.16347]
+|  |  |  |  |  |  |  |-- t__spread_ticks >  0.00366
+|  |  |  |  |  |  |  |  |-- value: [-34.58302, 4.45299]
+|  |  |  |  |-- t__log1p_bid_sz_1 >  0.16254
+|  |  |  |  |  |-- t__spread_ticks <= -1.14404
+|  |  |  |  |  |  |-- t__volatility_past_50 <= 1.17871
+|  |  |  |  |  |  |  |-- t__event_rate_past_50 <= 0.65601
+|  |  |  |  |  |  |  |  |-- value: [-15.89883, -9.86494]
+|  |  |  |  |  |  |  |-- t__event_rate_past_50 >  0.65601
+|  |  |  |  |  |  |  |  |-- value: [29.56606, -49.79297]
+|  |  |  |  |  |  |-- t__volatility_past_50 >  1.17871
+|  |  |  |  |  |  |  |-- t__event_rate_past_50 <= 0.11279
+|  |  |  |  |  |  |  |  |-- value: [49.11361, -78.85376]
+|  |  |  |  |  |  |  |-- t__event_rate_past_50 >  0.11279
+|  |  |  |  |  |  |  |  |-- value: [-8.86583, -17.75915]
+|  |  |  |  |  |-- t__spread_ticks >  -1.14404
+|  |  |  |  |  |  |-- t__log1p_bid_sz_1 <= 0.83569
+|  |  |  |  |  |  |  |-- t__imbalance_change_past <= -0.05793
+|  |  |  |  |  |  |  |  |-- value: [-60.57639, 28.34596]
+|  |  |  |  |  |  |  |-- t__imbalance_change_past >  -0.05793
+|  |  |  |  |  |  |  |  |-- value: [-27.50670, -3.96889]
+|  |  |  |  |  |  |-- t__log1p_bid_sz_1 >  0.83569
+|  |  |  |  |  |  |  |-- t__zscore_volatility_past_50_by_train_stats <= 2.25195
+|  |  |  |  |  |  |  |  |-- value: [-18.77955, -11.94395]
+|  |  |  |  |  |  |  |-- t__zscore_volatility_past_50_by_train_stats >  2.25195
+|  |  |  |  |  |  |  |  |-- value: [30.84930, -58.87625]
+|  |-- t__imbalance_change_past >  0.15210
+|  |  |-- t__queue_imbalance <= -1.02588
+|  |  |  |-- t__log1p_bid_sz_1 <= -0.92993
+|  |  |  |  |-- t__imbalance_change_past <= 0.37817
+|  |  |  |  |  |-- t__event_rate_past_50 <= -1.37354
+|  |  |  |  |  |  |-- t__deep_imbalance <= -1.63330
+|  |  |  |  |  |  |  |-- t__spread_ticks <= -0.57007
+|  |  |  |  |  |  |  |  |-- value: [-68.12649, 26.31900]
+|  |  |  |  |  |  |  |-- t__spread_ticks >  -0.57007
+|  |  |  |  |  |  |  |  |-- value: [-67.75120, 38.65987]
+|  |  |  |  |  |  |-- t__deep_imbalance >  -1.63330
+|  |  |  |  |  |  |  |-- t__zscore_volatility_past_50_by_train_stats <= 0.95483
+|  |  |  |  |  |  |  |  |-- value: [-20.49032, -12.89830]
+|  |  |  |  |  |  |  |-- t__zscore_volatility_past_50_by_train_stats >  0.95483
+|  |  |  |  |  |  |  |  |-- value: [-2.64544, -26.42175]
+|  |  |  |  |  |-- t__event_rate_past_50 >  -1.37354
+|  |  |  |  |  |  |-- t__spread_ticks <= -1.14404
+|  |  |  |  |  |  |  |-- t__zscore_volatility_past_50_by_train_stats <= 0.73804
+|  |  |  |  |  |  |  |  |-- value: [-68.42320, 40.38501]
+|  |  |  |  |  |  |  |-- t__zscore_volatility_past_50_by_train_stats >  0.73804
+|  |  |  |  |  |  |  |  |-- value: [-42.36766, 9.58328]
+|  |  |  |  |  |  |-- t__spread_ticks >  -1.14404
+|  |  |  |  |  |  |  |-- t__deep_imbalance <= 1.86426
+|  |  |  |  |  |  |  |  |-- value: [-46.12859, 14.21167]
+|  |  |  |  |  |  |  |-- t__deep_imbalance >  1.86426
+|  |  |  |  |  |  |  |  |-- value: [12.14636, -46.38452]
+|  |  |  |  |-- t__imbalance_change_past >  0.37817
+|  |  |  |  |  |-- t__clipped_inter_arrival_ms <= -0.15503
+|  |  |  |  |  |  |-- t__deep_imbalance <= -0.33691
+|  |  |  |  |  |  |  |-- t__event_rate_past_50 <= 1.79980
+|  |  |  |  |  |  |  |  |-- value: [-32.36382, 1.62809]
+|  |  |  |  |  |  |  |-- t__event_rate_past_50 >  1.79980
+|  |  |  |  |  |  |  |  |-- value: [-6.48196, -22.35341]
+|  |  |  |  |  |  |-- t__deep_imbalance >  -0.33691
+|  |  |  |  |  |  |  |-- t__event_rate_past_50 <= -1.16260
+|  |  |  |  |  |  |  |  |-- value: [-2.50093, -26.63211]
+|  |  |  |  |  |  |  |-- t__event_rate_past_50 >  -1.16260
+|  |  |  |  |  |  |  |  |-- value: [-22.45438, -6.58740]
+|  |  |  |  |  |-- t__clipped_inter_arrival_ms >  -0.15503
+|  |  |  |  |  |  |-- t__volatility_past_50 <= -0.54938
+|  |  |  |  |  |  |  |-- t__event_rate_past_50 <= -0.04366
+|  |  |  |  |  |  |  |  |-- value: [-38.74413, 9.33969]
+|  |  |  |  |  |  |  |-- t__event_rate_past_50 >  -0.04366
+|  |  |  |  |  |  |  |  |-- value: [-62.48611, 33.66592]
+|  |  |  |  |  |  |-- t__volatility_past_50 >  -0.54938
+|  |  |  |  |  |  |  |-- t__zscore_volatility_past_50_by_train_stats <= 0.13910
+|  |  |  |  |  |  |  |  |-- value: [37.43430, -67.43722]
+|  |  |  |  |  |  |  |-- t__zscore_volatility_past_50_by_train_stats >  0.13910
+|  |  |  |  |  |  |  |  |-- value: [-32.77153, 3.41302]
+|  |  |  |-- t__log1p_bid_sz_1 >  -0.92993
+|  |  |  |  |-- t__spread_ticks <= -1.14404
+|  |  |  |  |  |-- t__deep_imbalance <= -0.28967
+|  |  |  |  |  |  |-- t__imbalance_change_past <= 0.18652
+|  |  |  |  |  |  |  |-- t__volatility_past_50 <= 0.16028
+|  |  |  |  |  |  |  |  |-- value: [-53.14061, 43.37938]
+|  |  |  |  |  |  |  |-- t__volatility_past_50 >  0.16028
+|  |  |  |  |  |  |  |  |-- value: [-7.76426, -17.88113]
+|  |  |  |  |  |  |-- t__imbalance_change_past >  0.18652
+|  |  |  |  |  |  |  |-- t__queue_imbalance <= -1.85742
+|  |  |  |  |  |  |  |  |-- value: [-56.74466, 23.90637]
+|  |  |  |  |  |  |  |-- t__queue_imbalance >  -1.85742
+|  |  |  |  |  |  |  |  |-- value: [2.52159, -33.12051]
+|  |  |  |  |  |-- t__deep_imbalance >  -0.28967
+|  |  |  |  |  |  |-- t__log1p_top_depth <= 1.72363
+|  |  |  |  |  |  |  |-- t__zscore_volatility_past_50_by_train_stats <= 0.73389
+|  |  |  |  |  |  |  |  |-- value: [-0.93014, -30.28821]
+|  |  |  |  |  |  |  |-- t__zscore_volatility_past_50_by_train_stats >  0.73389
+|  |  |  |  |  |  |  |  |-- value: [33.63418, -66.00617]
+|  |  |  |  |  |  |-- t__log1p_top_depth >  1.72363
+|  |  |  |  |  |  |  |-- t__queue_imbalance <= -1.23633
+|  |  |  |  |  |  |  |  |-- value: [35.63172, -67.63317]
+|  |  |  |  |  |  |  |-- t__queue_imbalance >  -1.23633
+|  |  |  |  |  |  |  |  |-- value: [79.62052, -101.42261]
+|  |  |  |  |-- t__spread_ticks >  -1.14404
+|  |  |  |  |  |-- t__queue_imbalance <= -1.75684
+|  |  |  |  |  |  |-- t__event_rate_past_50 <= -1.70557
+|  |  |  |  |  |  |  |-- t__zscore_volatility_past_50_by_train_stats <= 1.07031
+|  |  |  |  |  |  |  |  |-- value: [24.51097, -61.96179]
+|  |  |  |  |  |  |  |-- t__zscore_volatility_past_50_by_train_stats >  1.07031
+|  |  |  |  |  |  |  |  |-- value: [-14.82431, -20.29487]
+|  |  |  |  |  |  |-- t__event_rate_past_50 >  -1.70557
+|  |  |  |  |  |  |  |-- t__queue_imbalance <= -1.91211
+|  |  |  |  |  |  |  |  |-- value: [-56.97080, 27.26109]
+|  |  |  |  |  |  |  |-- t__queue_imbalance >  -1.91211
+|  |  |  |  |  |  |  |  |-- value: [-41.21956, 8.82933]
+|  |  |  |  |  |-- t__queue_imbalance >  -1.75684
+|  |  |  |  |  |  |-- t__zscore_volatility_past_50_by_train_stats <= 1.13916
+|  |  |  |  |  |  |  |-- t__deep_imbalance <= -2.54102
+|  |  |  |  |  |  |  |  |-- value: [-69.92446, 49.85133]
+|  |  |  |  |  |  |  |-- t__deep_imbalance >  -2.54102
+|  |  |  |  |  |  |  |  |-- value: [-22.55090, -7.26518]
+|  |  |  |  |  |  |-- t__zscore_volatility_past_50_by_train_stats >  1.13916
+|  |  |  |  |  |  |  |-- t__spread_ticks <= 5.16797
+|  |  |  |  |  |  |  |  |-- value: [-6.52013, -23.05564]
+|  |  |  |  |  |  |  |-- t__spread_ticks >  5.16797
+|  |  |  |  |  |  |  |  |-- value: [-133.01575, 87.71670]
+|  |  |-- t__queue_imbalance >  -1.02588
+|  |  |  |-- t__queue_imbalance <= -0.68604
+|  |  |  |  |-- t__spread_change_past <= 0.80466
+|  |  |  |  |  |-- t__spread_change_past <= -1.00394
+|  |  |  |  |  |  |-- t__log1p_ask_sz_1 <= 1.15063
+|  |  |  |  |  |  |  |-- t__volatility_past_50 <= 1.31470
+|  |  |  |  |  |  |  |  |-- value: [-76.39526, 43.82440]
+|  |  |  |  |  |  |  |-- t__volatility_past_50 >  1.31470
+|  |  |  |  |  |  |  |  |-- value: [-25.14241, -3.67578]
+|  |  |  |  |  |  |-- t__log1p_ask_sz_1 >  1.15063
+|  |  |  |  |  |  |  |-- value: [7.72511, -43.53905]
+|  |  |  |  |  |-- t__spread_change_past >  -1.00394
+|  |  |  |  |  |  |-- t__zscore_volatility_past_50_by_train_stats <= 0.13788
+|  |  |  |  |  |  |  |-- t__queue_imbalance <= -0.85864
+|  |  |  |  |  |  |  |  |-- value: [-19.63337, -10.68977]
+|  |  |  |  |  |  |  |-- t__queue_imbalance >  -0.85864
+|  |  |  |  |  |  |  |  |-- value: [-11.08217, -18.42197]
+|  |  |  |  |  |  |-- t__zscore_volatility_past_50_by_train_stats >  0.13788
+|  |  |  |  |  |  |  |-- t__log1p_ask_sz_1 <= 2.27637
+|  |  |  |  |  |  |  |  |-- value: [-2.98499, -25.74485]
+|  |  |  |  |  |  |  |-- t__log1p_ask_sz_1 >  2.27637
+|  |  |  |  |  |  |  |  |-- value: [44.71285, -68.79772]
+|  |  |  |  |-- t__spread_change_past >  0.80466
+|  |  |  |  |  |-- t__imbalance_change_past <= 1.74561
+|  |  |  |  |  |  |-- t__deep_imbalance <= -2.42383
+|  |  |  |  |  |  |  |-- value: [36.72102, -68.14278]
+|  |  |  |  |  |  |-- t__deep_imbalance >  -2.42383
+|  |  |  |  |  |  |  |-- t__event_rate_past_50 <= 0.34033
+|  |  |  |  |  |  |  |  |-- value: [-44.95570, 9.20559]
+|  |  |  |  |  |  |  |-- t__event_rate_past_50 >  0.34033
+|  |  |  |  |  |  |  |  |-- value: [-61.04522, 27.63877]
+|  |  |  |  |  |-- t__imbalance_change_past >  1.74561
+|  |  |  |  |  |  |-- t__spread_ticks <= 1.15161
+|  |  |  |  |  |  |  |-- t__queue_imbalance <= -0.84180
+|  |  |  |  |  |  |  |  |-- value: [38.51466, -65.06313]
+|  |  |  |  |  |  |  |-- t__queue_imbalance >  -0.84180
+|  |  |  |  |  |  |  |  |-- value: [14.69245, -48.93812]
+|  |  |  |  |  |  |-- t__spread_ticks >  1.15161
+|  |  |  |  |  |  |  |-- t__top_depth <= 1.31128
+|  |  |  |  |  |  |  |  |-- value: [-41.98354, 7.50945]
+|  |  |  |  |  |  |  |-- t__top_depth >  1.31128
+|  |  |  |  |  |  |  |  |-- value: [-7.43277, -24.65744]
+|  |  |  |-- t__queue_imbalance >  -0.68604
+|  |  |  |  |-- t__spread_change_past <= 0.80466
+|  |  |  |  |  |-- t__volatility_past_50 <= 0.13739
+|  |  |  |  |  |  |-- t__deep_imbalance <= -1.96436
+|  |  |  |  |  |  |  |-- t__imbalance_change_past <= 0.39282
+|  |  |  |  |  |  |  |  |-- value: [-60.62812, 31.74971]
+|  |  |  |  |  |  |  |-- t__imbalance_change_past >  0.39282
+|  |  |  |  |  |  |  |  |-- value: [40.74945, -70.41244]
+|  |  |  |  |  |  |-- t__deep_imbalance >  -1.96436
+|  |  |  |  |  |  |  |-- t__queue_imbalance <= -0.41003
+|  |  |  |  |  |  |  |  |-- value: [-2.79821, -26.65221]
+|  |  |  |  |  |  |  |-- t__queue_imbalance >  -0.41003
+|  |  |  |  |  |  |  |  |-- value: [3.89391, -33.71561]
+|  |  |  |  |  |-- t__volatility_past_50 >  0.13739
+|  |  |  |  |  |  |-- t__spread_change_past <= -1.00394
+|  |  |  |  |  |  |  |-- t__deep_imbalance <= -0.75208
+|  |  |  |  |  |  |  |  |-- value: [-19.17687, -16.38123]
+|  |  |  |  |  |  |  |-- t__deep_imbalance >  -0.75208
+|  |  |  |  |  |  |  |  |-- value: [-67.32591, 32.74487]
+|  |  |  |  |  |  |-- t__spread_change_past >  -1.00394
+|  |  |  |  |  |  |  |-- t__clipped_inter_arrival_ms <= -0.17590
+|  |  |  |  |  |  |  |  |-- value: [11.49228, -40.17618]
+|  |  |  |  |  |  |  |-- t__clipped_inter_arrival_ms >  -0.17590
+|  |  |  |  |  |  |  |  |-- value: [1.71666, -31.04644]
+|  |  |  |  |-- t__spread_change_past >  0.80466
+|  |  |  |  |  |-- t__volatility_past_50 <= 0.14056
+|  |  |  |  |  |  |-- t__event_rate_past_50 <= 0.06033
+|  |  |  |  |  |  |  |-- t__event_rate_past_50 <= -0.06876
+|  |  |  |  |  |  |  |  |-- value: [-31.33755, -0.75977]
+|  |  |  |  |  |  |  |-- t__event_rate_past_50 >  -0.06876
+|  |  |  |  |  |  |  |  |-- value: [6.91305, -39.72605]
+|  |  |  |  |  |  |-- t__event_rate_past_50 >  0.06033
+|  |  |  |  |  |  |  |-- t__event_rate_past_50 <= 1.60889
+|  |  |  |  |  |  |  |  |-- value: [-50.04198, 18.23351]
+|  |  |  |  |  |  |  |-- t__event_rate_past_50 >  1.60889
+|  |  |  |  |  |  |  |  |-- value: [-16.41753, -13.54920]
+|  |  |  |  |  |-- t__volatility_past_50 >  0.14056
+|  |  |  |  |  |  |-- t__event_rate_past_50 <= 1.17969
+|  |  |  |  |  |  |  |-- t__zscore_volatility_past_50_by_train_stats <= 1.17090
+|  |  |  |  |  |  |  |  |-- value: [-18.32717, -12.71981]
+|  |  |  |  |  |  |  |-- t__zscore_volatility_past_50_by_train_stats >  1.17090
+|  |  |  |  |  |  |  |  |-- value: [-50.84861, 20.84842]
+|  |  |  |  |  |  |-- t__event_rate_past_50 >  1.17969
+|  |  |  |  |  |  |  |-- t__deep_imbalance <= -0.39258
+|  |  |  |  |  |  |  |  |-- value: [37.13147, -59.74412]
+|  |  |  |  |  |  |  |-- t__deep_imbalance >  -0.39258
+|  |  |  |  |  |  |  |  |-- value: [-9.38457, -25.82435]
+|-- t__queue_imbalance >  -0.22040
+|  |-- t__queue_imbalance <= 0.78711
+|  |  |-- t__imbalance_change_past <= -0.11896
+|  |  |  |-- t__spread_change_past <= -1.00394
+|  |  |  |  |-- t__spread_ticks <= -1.14404
+|  |  |  |  |  |-- t__zscore_volatility_past_50_by_train_stats <= 1.34131
+|  |  |  |  |  |  |-- t__clipped_inter_arrival_ms <= 0.44312
+|  |  |  |  |  |  |  |-- t__deep_imbalance <= -0.94360
+|  |  |  |  |  |  |  |  |-- value: [35.55913, -60.78294]
+|  |  |  |  |  |  |  |-- t__deep_imbalance >  -0.94360
+|  |  |  |  |  |  |  |  |-- value: [64.03431, -88.16609]
+|  |  |  |  |  |  |-- t__clipped_inter_arrival_ms >  0.44312
+|  |  |  |  |  |  |  |-- t__deep_imbalance <= 0.33313
+|  |  |  |  |  |  |  |  |-- value: [44.38596, -68.04560]
+|  |  |  |  |  |  |  |-- t__deep_imbalance >  0.33313
+|  |  |  |  |  |  |  |  |-- value: [-6.87951, -18.27558]
+|  |  |  |  |  |-- t__zscore_volatility_past_50_by_train_stats >  1.34131
+|  |  |  |  |  |  |-- t__event_rate_past_50 <= -0.55115
+|  |  |  |  |  |  |  |-- t__volatility_past_50 <= 2.63574
+|  |  |  |  |  |  |  |  |-- value: [49.22911, -73.46949]
+|  |  |  |  |  |  |  |-- t__volatility_past_50 >  2.63574
+|  |  |  |  |  |  |  |  |-- value: [6.00637, -30.53812]
+|  |  |  |  |  |  |-- t__event_rate_past_50 >  -0.55115
+|  |  |  |  |  |  |  |-- t__zscore_volatility_past_50_by_train_stats <= 1.66895
+|  |  |  |  |  |  |  |  |-- value: [-30.99011, 3.59305]
+|  |  |  |  |  |  |  |-- t__zscore_volatility_past_50_by_train_stats >  1.66895
+|  |  |  |  |  |  |  |  |-- value: [7.13905, -31.94330]
+|  |  |  |  |-- t__spread_ticks >  -1.14404
+|  |  |  |  |  |-- t__spread_ticks <= 2.29932
+|  |  |  |  |  |  |-- t__volatility_past_50 <= 0.15302
+|  |  |  |  |  |  |  |-- t__imbalance_change_past <= -1.70752
+|  |  |  |  |  |  |  |  |-- value: [42.59654, -67.04495]
+|  |  |  |  |  |  |  |-- t__imbalance_change_past >  -1.70752
+|  |  |  |  |  |  |  |  |-- value: [11.19097, -36.20267]
+|  |  |  |  |  |  |-- t__volatility_past_50 >  0.15302
+|  |  |  |  |  |  |  |-- t__deep_imbalance <= -0.88257
+|  |  |  |  |  |  |  |  |-- value: [52.46890, -80.38923]
+|  |  |  |  |  |  |  |-- t__deep_imbalance >  -0.88257
+|  |  |  |  |  |  |  |  |-- value: [20.95227, -45.85666]
+|  |  |  |  |  |-- t__spread_ticks >  2.29932
+|  |  |  |  |  |  |-- t__clipped_inter_arrival_ms <= -0.14246
+|  |  |  |  |  |  |  |-- t__imbalance_change_past <= -2.90527
+|  |  |  |  |  |  |  |  |-- value: [14.68899, -39.75126]
+|  |  |  |  |  |  |  |-- t__imbalance_change_past >  -2.90527
+|  |  |  |  |  |  |  |  |-- value: [-24.11296, -6.88142]
+|  |  |  |  |  |  |-- t__clipped_inter_arrival_ms >  -0.14246
+|  |  |  |  |  |  |  |-- value: [-58.75341, 25.13018]
+|  |  |  |-- t__spread_change_past >  -1.00394
+|  |  |  |  |-- t__spread_change_past <= 0.80466
+|  |  |  |  |  |-- t__queue_imbalance <= 0.16132
+|  |  |  |  |  |  |-- t__inter_arrival_ms <= -0.00307
+|  |  |  |  |  |  |  |-- t__volatility_past_50 <= 2.40430
+|  |  |  |  |  |  |  |  |-- value: [-50.77570, 21.52992]
+|  |  |  |  |  |  |  |-- t__volatility_past_50 >  2.40430
+|  |  |  |  |  |  |  |  |-- value: [-0.50433, -32.74786]
+|  |  |  |  |  |  |-- t__inter_arrival_ms >  -0.00307
+|  |  |  |  |  |  |  |-- t__clipped_inter_arrival_ms <= 0.25067
+|  |  |  |  |  |  |  |  |-- value: [-34.59454, 5.14974]
+|  |  |  |  |  |  |  |-- t__clipped_inter_arrival_ms >  0.25067
+|  |  |  |  |  |  |  |  |-- value: [-42.59981, 11.55500]
+|  |  |  |  |  |-- t__queue_imbalance >  0.16132
+|  |  |  |  |  |  |-- t__clipped_inter_arrival_ms <= -0.17590
+|  |  |  |  |  |  |  |-- t__spread_ticks <= 0.00366
+|  |  |  |  |  |  |  |  |-- value: [-44.68748, 15.52270]
+|  |  |  |  |  |  |  |-- t__spread_ticks >  0.00366
+|  |  |  |  |  |  |  |  |-- value: [-33.78216, 6.39512]
+|  |  |  |  |  |  |-- t__clipped_inter_arrival_ms >  -0.17590
+|  |  |  |  |  |  |  |-- t__imbalance_change_past <= -0.42590
+|  |  |  |  |  |  |  |  |-- value: [-29.31898, -0.59495]
+|  |  |  |  |  |  |  |-- t__imbalance_change_past >  -0.42590
+|  |  |  |  |  |  |  |  |-- value: [-19.24140, -8.89880]
+|  |  |  |  |-- t__spread_change_past >  0.80466
+|  |  |  |  |  |-- t__spread_ticks <= 1.15161
+|  |  |  |  |  |  |-- t__imbalance_change_past <= -0.75513
+|  |  |  |  |  |  |  |-- t__log1p_bid_sz_1 <= 2.47266
+|  |  |  |  |  |  |  |  |-- value: [-12.81715, -15.50685]
+|  |  |  |  |  |  |  |-- t__log1p_bid_sz_1 >  2.47266
+|  |  |  |  |  |  |  |  |-- value: [-67.14709, 42.25955]
+|  |  |  |  |  |  |-- t__imbalance_change_past >  -0.75513
+|  |  |  |  |  |  |  |-- t__event_rate_past_50 <= 0.37012
+|  |  |  |  |  |  |  |  |-- value: [-53.86827, 22.76420]
+|  |  |  |  |  |  |  |-- t__event_rate_past_50 >  0.37012
+|  |  |  |  |  |  |  |  |-- value: [-7.43442, -24.49580]
+|  |  |  |  |  |-- t__spread_ticks >  1.15161
+|  |  |  |  |  |  |-- t__queue_imbalance <= 0.26733
+|  |  |  |  |  |  |  |-- t__event_rate_past_50 <= -0.52856
+|  |  |  |  |  |  |  |  |-- value: [-18.91495, -11.04423]
+|  |  |  |  |  |  |  |-- t__event_rate_past_50 >  -0.52856
+|  |  |  |  |  |  |  |  |-- value: [-0.97181, -28.42725]
+|  |  |  |  |  |  |-- t__queue_imbalance >  0.26733
+|  |  |  |  |  |  |  |-- t__deep_imbalance <= 0.07762
+|  |  |  |  |  |  |  |  |-- value: [17.37785, -46.47671]
+|  |  |  |  |  |  |  |-- t__deep_imbalance >  0.07762
+|  |  |  |  |  |  |  |  |-- value: [2.62980, -32.08007]
+|  |  |-- t__imbalance_change_past >  -0.11896
+|  |  |  |-- t__imbalance_change_past <= 0.18512
+|  |  |  |  |-- t__queue_imbalance <= 0.28198
+|  |  |  |  |  |-- t__deep_imbalance <= 0.04735
+|  |  |  |  |  |  |-- t__spread_ticks <= 0.00366
+|  |  |  |  |  |  |  |-- t__log1p_ask_sz_1 <= 1.75488
+|  |  |  |  |  |  |  |  |-- value: [-22.68366, -8.65198]
+|  |  |  |  |  |  |  |-- t__log1p_ask_sz_1 >  1.75488
+|  |  |  |  |  |  |  |  |-- value: [48.92990, -80.21305]
+|  |  |  |  |  |  |-- t__spread_ticks >  0.00366
+|  |  |  |  |  |  |  |-- t__bid_sz_1 <= -0.38141
+|  |  |  |  |  |  |  |  |-- value: [-21.05799, -10.12332]
+|  |  |  |  |  |  |  |-- t__bid_sz_1 >  -0.38141
+|  |  |  |  |  |  |  |  |-- value: [-11.82988, -18.93025]
+|  |  |  |  |  |-- t__deep_imbalance >  0.04735
+|  |  |  |  |  |  |-- t__spread_ticks <= 0.00366
+|  |  |  |  |  |  |  |-- t__deep_imbalance <= 1.20605
+|  |  |  |  |  |  |  |  |-- value: [-5.21033, -25.01803]
+|  |  |  |  |  |  |  |-- t__deep_imbalance >  1.20605
+|  |  |  |  |  |  |  |  |-- value: [6.84921, -35.05748]
+|  |  |  |  |  |  |-- t__spread_ticks >  0.00366
+|  |  |  |  |  |  |  |-- t__deep_imbalance <= 1.20117
+|  |  |  |  |  |  |  |  |-- value: [-13.93087, -16.06509]
+|  |  |  |  |  |  |  |-- t__deep_imbalance >  1.20117
+|  |  |  |  |  |  |  |  |-- value: [-6.24956, -25.56618]
+|  |  |  |  |-- t__queue_imbalance >  0.28198
+|  |  |  |  |  |-- t__log1p_ask_sz_1 <= 0.75684
+|  |  |  |  |  |  |-- t__queue_imbalance <= 0.46021
+|  |  |  |  |  |  |  |-- t__spread_ticks <= -1.14404
+|  |  |  |  |  |  |  |  |-- value: [-22.89701, -9.98993]
+|  |  |  |  |  |  |  |-- t__spread_ticks >  -1.14404
+|  |  |  |  |  |  |  |  |-- value: [-0.56903, -30.49478]
+|  |  |  |  |  |  |-- t__queue_imbalance >  0.46021
+|  |  |  |  |  |  |  |-- t__deep_imbalance <= 0.58154
+|  |  |  |  |  |  |  |  |-- value: [4.56058, -35.28105]
+|  |  |  |  |  |  |  |-- t__deep_imbalance >  0.58154
+|  |  |  |  |  |  |  |  |-- value: [12.95109, -43.84381]
+|  |  |  |  |  |-- t__log1p_ask_sz_1 >  0.75684
+|  |  |  |  |  |  |-- t__ask_sz_1 <= 1.91357
+|  |  |  |  |  |  |  |-- t__spread_ticks <= 0.00366
+|  |  |  |  |  |  |  |  |-- value: [-24.87390, -6.38749]
+|  |  |  |  |  |  |  |-- t__spread_ticks >  0.00366
+|  |  |  |  |  |  |  |  |-- value: [-6.49957, -22.77311]
+|  |  |  |  |  |  |-- t__ask_sz_1 >  1.91357
+|  |  |  |  |  |  |  |-- t__volatility_past_50 <= 1.34082
+|  |  |  |  |  |  |  |  |-- value: [-27.64507, -5.16852]
+|  |  |  |  |  |  |  |-- t__volatility_past_50 >  1.34082
+|  |  |  |  |  |  |  |  |-- value: [78.26015, -112.82495]
+|  |  |  |-- t__imbalance_change_past >  0.18512
+|  |  |  |  |-- t__spread_change_past <= -1.00394
+|  |  |  |  |  |-- t__top_depth <= -0.84497
+|  |  |  |  |  |  |-- t__volatility_past_50 <= 1.50830
+|  |  |  |  |  |  |  |-- t__imbalance_change_past <= 2.25977
+|  |  |  |  |  |  |  |  |-- value: [-61.21393, 26.03099]
+|  |  |  |  |  |  |  |-- t__imbalance_change_past >  2.25977
+|  |  |  |  |  |  |  |  |-- value: [-73.46175, 41.70522]
+|  |  |  |  |  |  |-- t__volatility_past_50 >  1.50830
+|  |  |  |  |  |  |  |-- t__deep_imbalance <= 0.16797
+|  |  |  |  |  |  |  |  |-- value: [-52.76104, 20.97007]
+|  |  |  |  |  |  |  |-- t__deep_imbalance >  0.16797
+|  |  |  |  |  |  |  |  |-- value: [-38.50403, 5.61631]
+|  |  |  |  |  |-- t__top_depth >  -0.84497
+|  |  |  |  |  |  |-- t__volatility_past_50 <= 1.18604
+|  |  |  |  |  |  |  |-- t__imbalance_change_past <= 0.70557
+|  |  |  |  |  |  |  |  |-- value: [5.20418, -34.09140]
+|  |  |  |  |  |  |  |-- t__imbalance_change_past >  0.70557
+|  |  |  |  |  |  |  |  |-- value: [-48.45461, 15.63517]
+|  |  |  |  |  |  |-- t__volatility_past_50 >  1.18604
+|  |  |  |  |  |  |  |-- t__ask_sz_1 <= -0.12915
+|  |  |  |  |  |  |  |  |-- value: [-6.49573, -23.15661]
+|  |  |  |  |  |  |  |-- t__ask_sz_1 >  -0.12915
+|  |  |  |  |  |  |  |  |-- value: [25.26646, -64.39320]
+|  |  |  |  |-- t__spread_change_past >  -1.00394
+|  |  |  |  |  |-- t__spread_change_past <= 0.80466
+|  |  |  |  |  |  |-- t__queue_imbalance <= 0.27795
+|  |  |  |  |  |  |  |-- t__ask_sz_1 <= 0.32458
+|  |  |  |  |  |  |  |  |-- value: [20.28654, -49.43463]
+|  |  |  |  |  |  |  |-- t__ask_sz_1 >  0.32458
+|  |  |  |  |  |  |  |  |-- value: [11.85920, -41.76068]
+|  |  |  |  |  |  |-- t__queue_imbalance >  0.27795
+|  |  |  |  |  |  |  |-- t__log1p_ask_sz_1 <= 0.75684
+|  |  |  |  |  |  |  |  |-- value: [33.22506, -63.01525]
+|  |  |  |  |  |  |  |-- t__log1p_ask_sz_1 >  0.75684
+|  |  |  |  |  |  |  |  |-- value: [18.84257, -48.74453]
+|  |  |  |  |  |-- t__spread_change_past >  0.80466
+|  |  |  |  |  |  |-- t__spread_ticks <= 1.15161
+|  |  |  |  |  |  |  |-- t__volatility_past_50 <= 2.44629
+|  |  |  |  |  |  |  |  |-- value: [-5.81908, -26.90742]
+|  |  |  |  |  |  |  |-- t__volatility_past_50 >  2.44629
+|  |  |  |  |  |  |  |  |-- value: [43.81510, -81.88787]
+|  |  |  |  |  |  |-- t__spread_ticks >  1.15161
+|  |  |  |  |  |  |  |-- t__event_rate_past_50 <= -1.36133
+|  |  |  |  |  |  |  |  |-- value: [2.70137, -34.14435]
+|  |  |  |  |  |  |  |-- t__event_rate_past_50 >  -1.36133
+|  |  |  |  |  |  |  |  |-- value: [-17.99665, -11.61210]
+|  |-- t__queue_imbalance >  0.78711
+|  |  |-- t__imbalance_change_past <= -0.14587
+|  |  |  |-- t__queue_imbalance <= 1.18311
+|  |  |  |  |-- t__clipped_inter_arrival_ms <= -0.16754
+|  |  |  |  |  |-- t__spread_change_past <= 0.80466
+|  |  |  |  |  |  |-- t__spread_change_past <= -1.00394
+|  |  |  |  |  |  |  |-- t__volatility_past_50 <= 0.44354
+|  |  |  |  |  |  |  |  |-- value: [19.45373, -43.32103]
+|  |  |  |  |  |  |  |-- t__volatility_past_50 >  0.44354
+|  |  |  |  |  |  |  |  |-- value: [62.58460, -89.03234]
+|  |  |  |  |  |  |-- t__spread_change_past >  -1.00394
+|  |  |  |  |  |  |  |-- t__queue_imbalance <= 0.90137
+|  |  |  |  |  |  |  |  |-- value: [-28.12750, -0.90226]
+|  |  |  |  |  |  |  |-- t__queue_imbalance >  0.90137
+|  |  |  |  |  |  |  |  |-- value: [-20.19952, -7.48616]
+|  |  |  |  |  |-- t__spread_change_past >  0.80466
+|  |  |  |  |  |  |-- t__log1p_bid_sz_1 <= 2.24268
+|  |  |  |  |  |  |  |-- t__deep_imbalance <= 1.06055
+|  |  |  |  |  |  |  |  |-- value: [33.11066, -62.59783]
+|  |  |  |  |  |  |  |-- t__deep_imbalance >  1.06055
+|  |  |  |  |  |  |  |  |-- value: [2.17182, -32.16708]
+|  |  |  |  |  |  |-- t__log1p_bid_sz_1 >  2.24268
+|  |  |  |  |  |  |  |-- t__deep_imbalance <= 0.63550
+|  |  |  |  |  |  |  |  |-- value: [-33.17892, 4.38619]
+|  |  |  |  |  |  |  |-- t__deep_imbalance >  0.63550
+|  |  |  |  |  |  |  |  |-- value: [-76.10761, 50.64629]
+|  |  |  |  |-- t__clipped_inter_arrival_ms >  -0.16754
+|  |  |  |  |  |-- t__ask_sz_1 <= -0.12921
+|  |  |  |  |  |  |-- t__deep_imbalance <= -3.20020
+|  |  |  |  |  |  |  |-- value: [80.16238, -111.90108]
+|  |  |  |  |  |  |-- t__deep_imbalance >  -3.20020
+|  |  |  |  |  |  |  |-- t__imbalance_change_past <= -0.55688
+|  |  |  |  |  |  |  |  |-- value: [-11.32741, -18.96122]
+|  |  |  |  |  |  |  |-- t__imbalance_change_past >  -0.55688
+|  |  |  |  |  |  |  |  |-- value: [0.46509, -30.89916]
+|  |  |  |  |  |-- t__ask_sz_1 >  -0.12921
+|  |  |  |  |  |  |-- t__spread_ticks <= -1.14404
+|  |  |  |  |  |  |  |-- t__deep_imbalance <= -0.73169
+|  |  |  |  |  |  |  |  |-- value: [-122.23400, 86.00668]
+|  |  |  |  |  |  |  |-- t__deep_imbalance >  -0.73169
+|  |  |  |  |  |  |  |  |-- value: [-64.17803, 33.80551]
+|  |  |  |  |  |  |-- t__spread_ticks >  -1.14404
+|  |  |  |  |  |  |  |-- t__event_rate_past_50 <= 0.09761
+|  |  |  |  |  |  |  |  |-- value: [-32.12008, 3.77300]
+|  |  |  |  |  |  |  |-- t__event_rate_past_50 >  0.09761
+|  |  |  |  |  |  |  |  |-- value: [-6.75990, -22.97937]
+|  |  |  |-- t__queue_imbalance >  1.18311
+|  |  |  |  |-- t__ask_sz_1 <= -0.12921
+|  |  |  |  |  |-- t__clipped_inter_arrival_ms <= -0.17590
+|  |  |  |  |  |  |-- t__imbalance_change_past <= -0.27991
+|  |  |  |  |  |  |  |-- t__spread_ticks <= -1.14404
+|  |  |  |  |  |  |  |  |-- value: [-32.31595, 2.23285]
+|  |  |  |  |  |  |  |-- t__spread_ticks >  -1.14404
+|  |  |  |  |  |  |  |  |-- value: [-10.14761, -18.70680]
+|  |  |  |  |  |  |-- t__imbalance_change_past >  -0.27991
+|  |  |  |  |  |  |  |-- t__event_rate_past_50 <= 2.29590
+|  |  |  |  |  |  |  |  |-- value: [1.96411, -32.15822]
+|  |  |  |  |  |  |  |-- t__event_rate_past_50 >  2.29590
+|  |  |  |  |  |  |  |  |-- value: [47.87334, -75.02750]
+|  |  |  |  |  |-- t__clipped_inter_arrival_ms >  -0.17590
+|  |  |  |  |  |  |-- t__deep_imbalance <= -1.14600
+|  |  |  |  |  |  |  |-- t__imbalance_change_past <= -0.33984
+|  |  |  |  |  |  |  |  |-- value: [-4.34411, -29.19534]
+|  |  |  |  |  |  |  |-- t__imbalance_change_past >  -0.33984
+|  |  |  |  |  |  |  |  |-- value: [-83.81509, 54.39088]
+|  |  |  |  |  |  |-- t__deep_imbalance >  -1.14600
+|  |  |  |  |  |  |  |-- t__bid_sz_1 <= 0.47998
+|  |  |  |  |  |  |  |  |-- value: [21.87102, -52.96373]
+|  |  |  |  |  |  |  |-- t__bid_sz_1 >  0.47998
+|  |  |  |  |  |  |  |  |-- value: [7.36409, -36.12726]
+|  |  |  |  |-- t__ask_sz_1 >  -0.12921
+|  |  |  |  |  |-- t__spread_ticks <= 0.00366
+|  |  |  |  |  |  |-- t__zscore_volatility_past_50_by_train_stats <= 1.88330
+|  |  |  |  |  |  |  |-- t__imbalance_change_past <= -0.39917
+|  |  |  |  |  |  |  |  |-- value: [-41.39494, 16.94366]
+|  |  |  |  |  |  |  |-- t__imbalance_change_past >  -0.39917
+|  |  |  |  |  |  |  |  |-- value: [-67.80945, 39.86923]
+|  |  |  |  |  |  |-- t__zscore_volatility_past_50_by_train_stats >  1.88330
+|  |  |  |  |  |  |  |-- t__queue_imbalance <= 1.51904
+|  |  |  |  |  |  |  |  |-- value: [-20.97221, -3.56319]
+|  |  |  |  |  |  |  |-- t__queue_imbalance >  1.51904
+|  |  |  |  |  |  |  |  |-- value: [22.09830, -48.43108]
+|  |  |  |  |  |-- t__spread_ticks >  0.00366
+|  |  |  |  |  |  |-- t__top_depth <= 1.65625
+|  |  |  |  |  |  |  |-- t__zscore_volatility_past_50_by_train_stats <= 0.85059
+|  |  |  |  |  |  |  |  |-- value: [-4.78793, -21.88718]
+|  |  |  |  |  |  |  |-- t__zscore_volatility_past_50_by_train_stats >  0.85059
+|  |  |  |  |  |  |  |  |-- value: [-31.34104, 5.23776]
+|  |  |  |  |  |  |-- t__top_depth >  1.65625
+|  |  |  |  |  |  |  |-- t__event_rate_past_50 <= 0.50488
+|  |  |  |  |  |  |  |  |-- value: [-43.55756, 16.41187]
+|  |  |  |  |  |  |  |-- t__event_rate_past_50 >  0.50488
+|  |  |  |  |  |  |  |  |-- value: [-16.98424, -11.31965]
+|  |  |-- t__imbalance_change_past >  -0.14587
+|  |  |  |-- t__spread_change_past <= -1.00394
+|  |  |  |  |-- t__imbalance_change_past <= 0.89233
+|  |  |  |  |  |-- t__deep_imbalance <= 2.12012
+|  |  |  |  |  |  |-- t__clipped_inter_arrival_ms <= -0.13824
+|  |  |  |  |  |  |  |-- t__event_rate_past_50 <= -1.65332
+|  |  |  |  |  |  |  |  |-- value: [-63.59265, 27.52461]
+|  |  |  |  |  |  |  |-- t__event_rate_past_50 >  -1.65332
+|  |  |  |  |  |  |  |  |-- value: [18.30151, -50.24032]
+|  |  |  |  |  |  |-- t__clipped_inter_arrival_ms >  -0.13824
+|  |  |  |  |  |  |  |-- t__deep_imbalance <= -0.74023
+|  |  |  |  |  |  |  |  |-- value: [7.72553, -40.66517]
+|  |  |  |  |  |  |  |-- t__deep_imbalance >  -0.74023
+|  |  |  |  |  |  |  |  |-- value: [54.26985, -85.20770]
+|  |  |  |  |  |-- t__deep_imbalance >  2.12012
+|  |  |  |  |  |  |-- t__event_rate_past_50 <= 0.72485
+|  |  |  |  |  |  |  |-- t__event_rate_past_50 <= -0.26642
+|  |  |  |  |  |  |  |  |-- value: [-16.36403, -21.03391]
+|  |  |  |  |  |  |  |-- t__event_rate_past_50 >  -0.26642
+|  |  |  |  |  |  |  |  |-- value: [-72.24543, 35.23956]
+|  |  |  |  |  |  |-- t__event_rate_past_50 >  0.72485
+|  |  |  |  |  |  |  |-- t__spread_ticks <= 0.00366
+|  |  |  |  |  |  |  |  |-- value: [33.83153, -58.09260]
+|  |  |  |  |  |  |  |-- t__spread_ticks >  0.00366
+|  |  |  |  |  |  |  |  |-- value: [-5.00288, -26.68288]
+|  |  |  |  |-- t__imbalance_change_past >  0.89233
+|  |  |  |  |  |-- t__log1p_bid_sz_1 <= 0.53040
+|  |  |  |  |  |  |-- t__imbalance_change_past <= 2.68945
+|  |  |  |  |  |  |  |-- t__imbalance_change_past <= 1.30176
+|  |  |  |  |  |  |  |  |-- value: [-3.23141, -31.40919]
+|  |  |  |  |  |  |  |-- t__imbalance_change_past >  1.30176
+|  |  |  |  |  |  |  |  |-- value: [-22.33475, -11.80846]
+|  |  |  |  |  |  |-- t__imbalance_change_past >  2.68945
+|  |  |  |  |  |  |  |-- t__spread_ticks <= -1.14404
+|  |  |  |  |  |  |  |  |-- value: [-52.76309, 18.80395]
+|  |  |  |  |  |  |  |-- t__spread_ticks >  -1.14404
+|  |  |  |  |  |  |  |  |-- value: [-30.91323, -0.09499]
+|  |  |  |  |  |-- t__log1p_bid_sz_1 >  0.53040
+|  |  |  |  |  |  |-- t__clipped_inter_arrival_ms <= -0.16754
+|  |  |  |  |  |  |  |-- t__spread_ticks <= -1.14404
+|  |  |  |  |  |  |  |  |-- value: [-51.80299, 17.55939]
+|  |  |  |  |  |  |  |-- t__spread_ticks >  -1.14404
+|  |  |  |  |  |  |  |  |-- value: [-14.45830, -17.47329]
+|  |  |  |  |  |  |-- t__clipped_inter_arrival_ms >  -0.16754
+|  |  |  |  |  |  |  |-- t__inter_arrival_ms <= 0.01184
+|  |  |  |  |  |  |  |  |-- value: [-8.67172, -23.83422]
+|  |  |  |  |  |  |  |-- t__inter_arrival_ms >  0.01184
+|  |  |  |  |  |  |  |  |-- value: [4.63014, -39.44325]
+|  |  |  |-- t__spread_change_past >  -1.00394
+|  |  |  |  |-- t__log1p_ask_sz_1 <= -0.33524
+|  |  |  |  |  |-- t__queue_imbalance <= 1.11816
+|  |  |  |  |  |  |-- t__imbalance_change_past <= 0.19744
+|  |  |  |  |  |  |  |-- t__deep_imbalance <= 0.34961
+|  |  |  |  |  |  |  |  |-- value: [16.41005, -47.20853]
+|  |  |  |  |  |  |  |-- t__deep_imbalance >  0.34961
+|  |  |  |  |  |  |  |  |-- value: [29.50913, -60.20812]
+|  |  |  |  |  |  |-- t__imbalance_change_past >  0.19744
+|  |  |  |  |  |  |  |-- t__spread_change_past <= 0.80466
+|  |  |  |  |  |  |  |  |-- value: [44.99805, -74.72932]
+|  |  |  |  |  |  |  |-- t__spread_change_past >  0.80466
+|  |  |  |  |  |  |  |  |-- value: [10.43526, -45.11211]
+|  |  |  |  |  |-- t__queue_imbalance >  1.11816
+|  |  |  |  |  |  |-- t__imbalance_change_past <= 0.02837
+|  |  |  |  |  |  |  |-- t__spread_ticks <= -1.14404
+|  |  |  |  |  |  |  |  |-- value: [28.78392, -59.57958]
+|  |  |  |  |  |  |  |-- t__spread_ticks >  -1.14404
+|  |  |  |  |  |  |  |  |-- value: [48.31019, -78.76572]
+|  |  |  |  |  |  |-- t__imbalance_change_past >  0.02837
+|  |  |  |  |  |  |  |-- t__imbalance_change_past <= 1.12988
+|  |  |  |  |  |  |  |  |-- value: [67.03205, -97.41116]
+|  |  |  |  |  |  |  |-- t__imbalance_change_past >  1.12988
+|  |  |  |  |  |  |  |  |-- value: [36.03729, -68.44320]
+|  |  |  |  |-- t__log1p_ask_sz_1 >  -0.33524
+|  |  |  |  |  |-- t__log1p_top_depth <= 1.49658
+|  |  |  |  |  |  |-- t__imbalance_change_past <= 0.06069
+|  |  |  |  |  |  |  |-- t__spread_ticks <= -1.14404
+|  |  |  |  |  |  |  |  |-- value: [-13.81460, -19.08122]
+|  |  |  |  |  |  |  |-- t__spread_ticks >  -1.14404
+|  |  |  |  |  |  |  |  |-- value: [14.75586, -45.21454]
+|  |  |  |  |  |  |-- t__imbalance_change_past >  0.06069
+|  |  |  |  |  |  |  |-- t__spread_change_past <= 0.80466
+|  |  |  |  |  |  |  |  |-- value: [44.11578, -74.72702]
+|  |  |  |  |  |  |  |-- t__spread_change_past >  0.80466
+|  |  |  |  |  |  |  |  |-- value: [4.07793, -35.78554]
+|  |  |  |  |  |-- t__log1p_top_depth >  1.49658
+|  |  |  |  |  |  |-- t__imbalance_change_past <= 0.01358
+|  |  |  |  |  |  |  |-- t__log1p_top_depth <= 1.82812
+|  |  |  |  |  |  |  |  |-- value: [-1.95627, -27.69337]
+|  |  |  |  |  |  |  |-- t__log1p_top_depth >  1.82812
+|  |  |  |  |  |  |  |  |-- value: [-17.82935, -12.14369]
+|  |  |  |  |  |  |-- t__imbalance_change_past >  0.01358
+|  |  |  |  |  |  |  |-- t__spread_change_past <= 0.80466
+|  |  |  |  |  |  |  |  |-- value: [20.47958, -52.57369]
+|  |  |  |  |  |  |  |-- t__spread_change_past >  0.80466
+|  |  |  |  |  |  |  |  |-- value: [-0.78973, -30.77881]
+

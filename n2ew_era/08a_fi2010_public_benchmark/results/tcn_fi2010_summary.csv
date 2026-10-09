@@ -1,0 +1,2 @@
+model,phase,split,horizon,n_seeds_completed,test_macro_f1_mean,test_macro_f1_std,test_accuracy_mean,val_macro_f1_mean,trainable_parameters,verification_level
+TCNFI2010Classifier,08a_tcn_scratch,test,50,1,0.6519817651442171,0.0,0.6764166093140629,0.5812135936085338,8547,stage1_tcn_scratch_software_measured

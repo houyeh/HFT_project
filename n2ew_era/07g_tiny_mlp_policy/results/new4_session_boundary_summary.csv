@@ -1,0 +1,4 @@
+policy_id,full_split_total,full_split_forced_count,final_inventory,same_index_close_scheduled,sessions_starting_nonzero,sessions_ending_nonzero
+tiny_mlp_direct_action_h8_seed1,94770.0,2199,1,1,2,3
+queue_theta_val_tuned,115875.0,0,0,0,0,0
+phc_eventwise_reference,129160.0,2589,1,1,2,3

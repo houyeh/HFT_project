@@ -1,0 +1,7 @@
+target_part=xc7z020clg400-1
+target_clock_period_ns=10.000
+wns_ns=0.467
+achieved_period_ns=9.533
+derived_latency_cycles=13
+derived_latency_us=0.130
+verification_tier=core_level_routed

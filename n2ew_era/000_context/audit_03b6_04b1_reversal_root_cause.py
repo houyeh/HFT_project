@@ -1,3 +1,19 @@
+"""03B6/04B1 reversal root-cause audit.
+
+中文導讀：
+這支程式只做「診斷」，不重新訓練模型，也不重新選門檻。它的核心問題是：
+03B6 混合 universe 裡 ML 輸給 queue imbalance simple rule，但 04B1 改成 TXF-only
+後 ML 又打贏 simple rule，這個排名反轉到底是什麼機制造成的。
+
+整體流程如下：
+1. 建立所有專案路徑、模型欄位與固定 policy/action 編碼。
+2. 用 assert_no_new5_path 包住所有讀檔入口，避免誤碰 NEW5。
+3. 重新計算 development-only 的特徵分布、simple rule 表現、以及 frozen ML 在同一份
+   TXF validation 上的預測與交易結果。
+4. 讀取既有 frozen NEW3/NEW4 診斷 CSV，只做事後對照，不拿來選模型、調參或挑假說。
+5. 將所有實際重算出的數字寫成 CSV，再組成 AUDIT markdown 報告。
+"""
+
 from __future__ import annotations
 
 import json
@@ -21,22 +37,29 @@ CONTEXT_ROOT = PROJECT_ROOT / "n2ew_era" / "000_context"
 RESULTS = CONTEXT_ROOT / "results" / "03b6_04b1_reversal_root_cause"
 AUDIT_PATH = CONTEXT_ROOT / "AUDIT_03b6_04b1_reversal_root_cause.md"
 
+# 各階段資料夾：03B/03B6 是混合 universe 的基準與 frozen ML，
+# 04B/04B1 是 TXF-only 重建後的資料與 frozen ML。
 PHASE03B = PROJECT_ROOT / "n2ew_era" / "03b_simple_ml_action_value_baselines"
 PHASE03B6 = PROJECT_ROOT / "n2ew_era" / "03b6_hgb_convergence_closure"
 PHASE04B = PROJECT_ROOT / "n2ew_era" / "04b_txf_only_final_development_rerun"
 PHASE04B1 = PROJECT_ROOT / "n2ew_era" / "04b1_ml_completion_patch"
 PHASE_AUDIT_PATH = PHASE03B6 / "AUDIT_03b6_04b1_reversal_root_cause.md"
 
+# 03B 的共用函式不在目前資料夾底下，所以先把 phase03B 加進 import path。
 if str(PHASE03B) not in sys.path:
     sys.path.insert(0, str(PHASE03B))
 
 import common_phase03b as p03b  # noqa: E402
 
 
+# 固定診斷參數。這裡的 seed 只用於 permutation diagnostic 抽樣/打亂，不是模型訓練。
 SEED = 20260620
 PERMUTATION_SAMPLE_ROWS = 50_000
 TXF_RE = re.compile(r"^TXF[A-Z0-9]*$")
 HORIZON = 20
+
+# 04B action-row parquet 用 0/1/2 表示 bid/ask/no-quote 候選 action；
+# policy decision 另用 0/1/2 表示不下單/掛 bid/掛 ask。
 ACTION_BID = 0
 ACTION_ASK = 1
 ACTION_NO_QUOTE = 2
@@ -44,6 +67,8 @@ DECISION_NO_QUOTE = 0
 DECISION_BID = 1
 DECISION_ASK = 2
 TXF_ACTION_DATA = PHASE04B / "data" / "txf_only_action_universe.parquet"
+
+# 04B1 frozen HGB 期待的特徵欄位。action_is_* 與 side_* 是由 action_slot 和原始 imbalance 衍生。
 ML_FEATURES_04B = [
     "spread_ticks",
     "bid_sz_1",
@@ -75,6 +100,12 @@ FOCUS_FEATURES = [
 
 @dataclass
 class Metric:
+    """累積單一 policy/model 的交易統計。
+
+    state_count 是可決策狀態數，selected_count 是實際選擇 bid/ask 的次數。
+    pnl_sum、win/loss、drawdown 都以 excess_pnl_H20 為基礎逐批累加。
+    """
+
     state_count: int = 0
     selected_count: int = 0
     bid_count: int = 0
@@ -88,10 +119,18 @@ class Metric:
 
 
 def part_paths_04b(split: str) -> list[Path]:
+    """列出 04B TXF-only action universe 某個 split 底下的 parquet 分片。"""
+
     return sorted((TXF_ACTION_DATA / f"split={split}").glob("*.parquet"))
 
 
 def action_feature_frame_04b(raw: pd.DataFrame) -> pd.DataFrame:
+    """把 04B 原始 action rows 轉成 04B1 HGB 可直接吃的特徵表。
+
+    每個 market state 會有 bid/ask/no-quote 三列 action row；這裡依 action_slot 補出
+    action_is_bid/action_is_ask、side_sign，以及方向化的 imbalance 特徵。
+    """
+
     out = raw.copy()
     slot = out["action_slot"].astype(np.int8).to_numpy()
     out["action_is_bid"] = (slot == ACTION_BID).astype(np.float32)
@@ -111,6 +150,8 @@ def action_feature_frame_04b(raw: pd.DataFrame) -> pd.DataFrame:
 
 
 def action_matrix_from_part_04b(path: Path) -> pd.DataFrame:
+    """讀取單一 TXF parquet 分片，保留模型特徵與 target，再套用 04B 特徵轉換。"""
+
     cols = [
         "split",
         "session_id",
@@ -135,6 +176,13 @@ def action_matrix_from_part_04b(path: Path) -> pd.DataFrame:
 
 
 def read_event_frame_04b(path: Path) -> pd.DataFrame:
+    """把 action-row 格式還原成 state-row 格式，方便計算 policy PnL。
+
+    04B parquet 同一個 event 會有 bid/ask/no-quote 三列。simple rule 和 ML policy 最後
+    都是在「一個 state 做一次 bid/ask/no-quote 決策」，因此要檢查三列對齊後，把 bid/ask
+    的 target PnL 合併回同一列。
+    """
+
     cols = [
         "split",
         "session_id",
@@ -173,6 +221,12 @@ def read_event_frame_04b(path: Path) -> pd.DataFrame:
 
 
 def policy_decision_04b(policy_id: str, frame: pd.DataFrame) -> np.ndarray:
+    """04B 版本的 simple rule 決策器。
+
+    `side_by_queue_imbalance_abs_0p1` 的規則很直接：queue_imbalance > 0.1 掛 bid，
+    < -0.1 掛 ask，中間區間不報價。
+    """
+
     decision = np.zeros(len(frame), dtype=np.int8)
     if policy_id == "no_quote":
         return decision
@@ -186,6 +240,8 @@ def policy_decision_04b(policy_id: str, frame: pd.DataFrame) -> np.ndarray:
 
 
 def decision_pnl_04b(frame: pd.DataFrame, decision: np.ndarray) -> np.ndarray:
+    """依照每個 state 的 decision，把對應 bid/ask excess PnL 取出；no-quote 的 PnL 為 0。"""
+
     out = np.zeros(len(frame), dtype=float)
     bid = frame["bid_excess_pnl_H20"].to_numpy(dtype=float)
     ask = frame["ask_excess_pnl_H20"].to_numpy(dtype=float)
@@ -198,6 +254,8 @@ def decision_pnl_04b(frame: pd.DataFrame, decision: np.ndarray) -> np.ndarray:
 
 
 def update_metric_04b(metric: Metric, decision: np.ndarray, pnl: np.ndarray) -> None:
+    """把一批 state 的決策結果累加到 Metric，包含勝率、PnL 與最大回撤。"""
+
     selected = decision != DECISION_NO_QUOTE
     metric.state_count += int(len(decision))
     metric.selected_count += int(selected.sum())
@@ -218,6 +276,8 @@ def update_metric_04b(metric: Metric, decision: np.ndarray, pnl: np.ndarray) -> 
 
 
 def finalize_metric_04b(split: str, policy_id: str, metric: Metric) -> dict[str, Any]:
+    """把累積中的 Metric 轉成可寫入 CSV/markdown 的一列統計。"""
+
     selected = max(metric.selected_count, 1)
     return {
         "split": split,
@@ -237,6 +297,12 @@ def finalize_metric_04b(split: str, policy_id: str, metric: Metric) -> dict[str,
 
 
 def ml_policy_decision_from_scores_04b(scores: np.ndarray, threshold: float) -> np.ndarray:
+    """把 HGB 對 bid/ask/no-quote action rows 的分數轉成 state-level 交易決策。
+
+    score 的順序假設為每三列一組：bid、ask、no-quote。此診斷沿用 frozen threshold：
+    bid/ask 兩者中分數較高且高於門檻者才下單，否則 no-quote。
+    """
+
     bid = scores[0::3]
     ask = scores[1::3]
     decision = np.zeros(len(bid), dtype=np.int8)
@@ -248,6 +314,7 @@ def ml_policy_decision_from_scores_04b(scores: np.ndarray, threshold: float) -> 
 
 
 p04b = SimpleNamespace(
+    # 用 SimpleNamespace 模擬 04B 原腳本介面，讓下方診斷可以用 p04b.xxx 呼叫同一組 helper。
     ACTION_BID=ACTION_BID,
     ACTION_ASK=ACTION_ASK,
     ACTION_NO_QUOTE=ACTION_NO_QUOTE,
@@ -268,36 +335,53 @@ p04b = SimpleNamespace(
 
 
 def ensure_dirs() -> None:
+    """建立本次 audit 的輸出資料夾。"""
+
     RESULTS.mkdir(parents=True, exist_ok=True)
 
 
 def assert_no_new5_path(path: Path | str) -> None:
+    """所有讀檔入口共用的保護欄：只要路徑含 NEW5 就立刻中止。"""
+
     text = str(path).replace("\\", "/").upper()
     if "NEW5" in text:
         raise RuntimeError(f"NEW5 path access is forbidden for this audit: {path}")
 
 
 def read_csv(path: Path, **kwargs: Any) -> pd.DataFrame:
+    """安全版 CSV 讀取：先檢查不是 NEW5，再交給 pandas。"""
+
     assert_no_new5_path(path)
     return pd.read_csv(path, **kwargs)
 
 
 def read_json(path: Path) -> dict[str, Any]:
+    """安全版 JSON 讀取：用於 frozen policy/model metadata。"""
+
     assert_no_new5_path(path)
     return json.loads(path.read_text(encoding="utf-8"))
 
 
 def read_parquet(path: Path, **kwargs: Any) -> pd.DataFrame:
+    """安全版 parquet 讀取：所有 development feature/action matrix 都走這裡。"""
+
     assert_no_new5_path(path)
     return pd.read_parquet(path, **kwargs)
 
 
 def load_joblib(path: Path) -> Any:
+    """安全版 joblib 載入：只載入既有 frozen 模型，不做重新訓練。"""
+
     assert_no_new5_path(path)
     return joblib.load(path)
 
 
 def safe_spearman(a: np.ndarray, b: np.ndarray) -> float:
+    """計算 Spearman rank correlation，遇到樣本太少或常數序列時回傳 NaN。
+
+    這裡不用 scipy，直接用 pandas rank 再做 Pearson correlation，讓診斷環境依賴更少。
+    """
+
     a = np.asarray(a, dtype=float)
     b = np.asarray(b, dtype=float)
     mask = np.isfinite(a) & np.isfinite(b)
@@ -311,14 +395,24 @@ def safe_spearman(a: np.ndarray, b: np.ndarray) -> float:
 
 
 def rmse(y_true: np.ndarray, y_pred: np.ndarray) -> float:
+    """mean_squared_error 的平方根包裝，讓報表欄位直接命名為 RMSE。"""
+
     return float(math.sqrt(mean_squared_error(y_true, y_pred)))
 
 
 def txf_like(symbol: Any) -> bool:
+    """判斷 symbol 是否長得像 TXF 系列，用來拆 mixed universe 的 symbol family。"""
+
     return bool(TXF_RE.match(str(symbol).strip()))
 
 
 def add_03b_missing_features(matrix: pd.DataFrame) -> pd.DataFrame:
+    """把 04B TXF action matrix 補成 03B6 frozen model 期待的特徵欄位。
+
+    目的不是新增模型特徵，而是讓 03B6 frozen HGB 可以在同一份 TXF validation action rows
+    上推論，進而和 04B1 做同資料對照。
+    """
+
     out = matrix.copy()
     if "action_is_no_quote" not in out.columns:
         out["action_is_no_quote"] = (
@@ -332,16 +426,22 @@ def add_03b_missing_features(matrix: pd.DataFrame) -> pd.DataFrame:
 
 
 def txf_action_matrix_from_part(path: Path) -> pd.DataFrame:
+    """讀單一 04B TXF action parquet，保留 NEW5 防線。"""
+
     assert_no_new5_path(path)
     return p04b.action_matrix_from_part(path)
 
 
 def txf_event_frame_from_part(path: Path) -> pd.DataFrame:
+    """讀單一 04B TXF event-level 表，供 policy decision/PnL 計算使用。"""
+
     assert_no_new5_path(path)
     return p04b.read_event_frame(path)
 
 
 def load_txf_split(split: str) -> pd.DataFrame:
+    """載入並串接 TXF-only 某個 split 的全部 action-row 分片。"""
+
     frames = []
     for path in p04b.part_paths(split):
         assert_no_new5_path(path)
@@ -352,6 +452,8 @@ def load_txf_split(split: str) -> pd.DataFrame:
 
 
 def load_mixed_matrix(split: str) -> pd.DataFrame:
+    """載入 03B/03B6 mixed universe 的 train 或 validation feature matrix。"""
+
     if split == "train":
         return read_parquet(p03b.train_matrix_path())
     if split == "val":
@@ -360,6 +462,12 @@ def load_mixed_matrix(split: str) -> pd.DataFrame:
 
 
 def numeric_stats(frame: pd.DataFrame, features: list[str], universe: str, split_scope: str, source_detail: str) -> list[dict[str, Any]]:
+    """對指定特徵重算分布統計，所有列都標明資料範圍與來源。
+
+    輸出含 mean/std/分位數/abs_gt_0p1_rate；後者特別對 queue imbalance rule 的 0.1
+    門檻有解釋價值。
+    """
+
     rows: list[dict[str, Any]] = []
     for feature in features:
         if feature not in frame.columns:
@@ -406,6 +514,12 @@ def numeric_stats(frame: pd.DataFrame, features: list[str], universe: str, split
 
 
 def feature_distribution_tables() -> tuple[pd.DataFrame, pd.DataFrame, dict[str, pd.DataFrame]]:
+    """方向 A：比較 mixed vs TXF-only development 特徵分布。
+
+    這裡只讀 train/val development artifact，先做四個 focus features 的整體統計，
+    再檢查 mixed matrix 裡 symbol family 的實際組成，避免把「混合商品污染」當成未驗證假設。
+    """
+
     mixed_train = load_mixed_matrix("train")
     mixed_val = load_mixed_matrix("val")
     txf_train = load_txf_split("train")
@@ -475,6 +589,12 @@ def feature_distribution_tables() -> tuple[pd.DataFrame, pd.DataFrame, dict[str,
 
 
 def permutation_importance(model: Any, frame: pd.DataFrame, features: list[str], target_col: str, model_label: str, split_scope: str) -> pd.DataFrame:
+    """用單次 deterministic shuffle 估計 frozen model 對各特徵的依賴程度。
+
+    評分方式是 Spearman drop：原始分數對 target 的 rank correlation 減去打亂單一特徵後的
+    rank correlation。這只用於診斷決策邊界，不用於重新選特徵。
+    """
+
     if len(frame) > PERMUTATION_SAMPLE_ROWS:
         frame = frame.sample(n=PERMUTATION_SAMPLE_ROWS, random_state=SEED).reset_index(drop=True)
     else:
@@ -508,6 +628,8 @@ def permutation_importance(model: Any, frame: pd.DataFrame, features: list[str],
 
 
 def compute_importance(loaded: dict[str, pd.DataFrame]) -> pd.DataFrame:
+    """載入 03B6/04B1 frozen HGB，重算 validation development 的 permutation importance。"""
+
     selected03 = read_json(PHASE03B6 / "results" / "selected_hgb_convergence_policy.json")
     model03 = load_joblib(PHASE03B6 / "models" / f"{selected03['model_id']}.joblib")
     model04 = load_joblib(PHASE04B1 / "models" / "hgb_regressor_iter_120.joblib")
@@ -534,10 +656,14 @@ def compute_importance(loaded: dict[str, pd.DataFrame]) -> pd.DataFrame:
 
 
 def model_scores(model: Any, frame: pd.DataFrame, features: list[str]) -> np.ndarray:
+    """用 frozen HGB 對指定特徵矩陣輸出 action-value score。"""
+
     return model.predict(frame[features].to_numpy(dtype=np.float32)).astype(np.float32)
 
 
 def metric_row_from_p04b_metric(split_scope: str, policy_id: str, metric: p04b.Metric) -> dict[str, Any]:
+    """把 04B metric 包成報表列，並明確標記 development-only/no NEW5/no NEW3NEW4 selection。"""
+
     row = p04b.finalize_metric(split_scope, policy_id, metric)
     row["analysis_scope"] = "development-only"
     row["source_detail"] = "recomputed from TXF-only NEW1/NEW2 development action parquet"
@@ -547,6 +673,16 @@ def metric_row_from_p04b_metric(split_scope: str, policy_id: str, metric: p04b.M
 
 
 def compute_txf_val_prediction_and_policy() -> tuple[pd.DataFrame, pd.DataFrame, pd.DataFrame, pd.DataFrame]:
+    """方向 B 的核心診斷：兩個 frozen ML 都跑在同一份 TXF validation 上。
+
+    這個函式回答兩個問題：
+    1. 03B6 mixed HGB 和 04B1 TXF HGB 在同一批 TXF action rows 上的預測誤差是否不同。
+    2. 把 score 套回各自 frozen threshold 後，state-level policy PnL/選擇率/決策重疊是否不同。
+
+    注意：這裡沒有重新切資料、訓練模型或調整 threshold；threshold 直接來自既有 frozen metadata。
+    """
+
+    # 讀 frozen model 與 frozen validation-selected threshold。
     selected03 = read_json(PHASE03B6 / "results" / "selected_hgb_convergence_policy.json")
     threshold03 = float(selected03["threshold"])
     model03 = load_joblib(PHASE03B6 / "models" / f"{selected03['model_id']}.joblib")
@@ -579,6 +715,7 @@ def compute_txf_val_prediction_and_policy() -> tuple[pd.DataFrame, pd.DataFrame,
 
     for path in p04b.part_paths("val"):
         assert_no_new5_path(path)
+        # matrix04 是 action-row 表，event 是 state-row 表；前者供 ML predict，後者供 policy PnL。
         matrix04 = txf_action_matrix_from_part(path)
         event = txf_event_frame_from_part(path)
         matrix03 = add_03b_missing_features(matrix04)
@@ -590,6 +727,7 @@ def compute_txf_val_prediction_and_policy() -> tuple[pd.DataFrame, pd.DataFrame,
         score03_chunks.append(score03)
         score04_chunks.append(score04)
 
+        # 三個 policy 在完全相同的 state rows 上比較：simple rule、03B6 frozen ML、04B1 frozen ML。
         decision_queue = p04b.policy_decision("side_by_queue_imbalance_abs_0p1", event)
         decision03 = p04b.ml_policy_decision_from_scores(score03, threshold03)
         decision04 = p04b.ml_policy_decision_from_scores(score04, threshold04)
@@ -608,6 +746,7 @@ def compute_txf_val_prediction_and_policy() -> tuple[pd.DataFrame, pd.DataFrame,
         overlap_counts["same_side_selected"] += int(((decision03 == decision04) & selected03 & selected04).sum())
         overlap_counts["opposite_side_selected"] += int(((decision03 != decision04) & selected03 & selected04).sum())
 
+        # 保留 state-level score/decision/PnL，後面依 abs(queue_imbalance) 分箱看決策邊界差異。
         max03 = np.maximum(score03[0::3], score03[1::3])
         max04 = np.maximum(score04[0::3], score04[1::3])
         max03_chunks.append(max03)
@@ -635,6 +774,7 @@ def compute_txf_val_prediction_and_policy() -> tuple[pd.DataFrame, pd.DataFrame,
             )
         )
 
+    # action-row 層級的 prediction diagnostics：比較分數和 target_excess_pnl_H20 的誤差/排序能力。
     y = np.concatenate(y_chunks)
     score03_all = np.concatenate(score03_chunks)
     score04_all = np.concatenate(score04_chunks)
@@ -664,6 +804,7 @@ def compute_txf_val_prediction_and_policy() -> tuple[pd.DataFrame, pd.DataFrame,
     pred = pd.DataFrame(pred_rows)
     pred.to_csv(RESULTS / "txf_val_prediction_error_same_data.csv", index=False)
 
+    # state-row 層級的 trading diagnostics：把 score 經 threshold 轉成 bid/ask/no-quote 後算 PnL。
     policy_rows = [
         metric_row_from_p04b_metric("val_NEW1_development", "side_by_queue_imbalance_abs_0p1", metrics["queue_rule"]),
         metric_row_from_p04b_metric("val_NEW1_development", "03B6_mixed_hgb_iter_320_threshold_0p0_on_txf", metrics["03B6_mixed_hgb_on_txf_val"]),
@@ -692,6 +833,7 @@ def compute_txf_val_prediction_and_policy() -> tuple[pd.DataFrame, pd.DataFrame,
     )
     overlap.to_csv(RESULTS / "txf_val_decision_overlap.csv", index=False)
 
+    # 用 queue imbalance 絕對值分箱，觀察 ML 是否在 simple rule 門檻附近或強訊號區採取不同交易行為。
     states = pd.concat(score_state_frames, ignore_index=True)
     for model_label, score_col, pnl_col, decision_col in [
         ("03B6_mixed_hgb_iter_320_threshold_0p0_on_txf", "score03_max_bid_ask", "pnl03", "decision03"),
@@ -728,6 +870,12 @@ def compute_txf_val_prediction_and_policy() -> tuple[pd.DataFrame, pd.DataFrame,
 
 
 def recompute_queue_policy_for_frame(frame: pd.DataFrame, split_scope: str, universe: str, source_detail: str) -> dict[str, Any]:
+    """方向 C：在 03B mixed-style matrix 上重算 simple queue rule 的 policy PnL。
+
+    03B matrix 是 action-row 格式，所以先抽出 bid rows 當 state basis，再呼叫 03B 共用函式
+    從同一個 action-row frame 裡取 bid/ask PnL。
+    """
+
     states = frame[frame["action_slot"].astype(int) == p03b.ACTION_BID].sort_values(["session_id", "event_index"]).reset_index(drop=True)
     decision = p03b.queue_rule_decision_from_state(states)
     pnl = p03b.policy_pnl_from_decision(frame, decision)
@@ -755,6 +903,8 @@ def recompute_queue_policy_for_frame(frame: pd.DataFrame, split_scope: str, univ
 
 
 def recompute_txf_queue_policy(split: str) -> dict[str, Any]:
+    """方向 C：在 04B TXF-only train/val 上重算同一條 simple queue rule。"""
+
     metric = p04b.Metric()
     for path in p04b.part_paths(split):
         assert_no_new5_path(path)
@@ -772,6 +922,12 @@ def recompute_txf_queue_policy(split: str) -> dict[str, Any]:
 
 
 def queue_rule_development_contrast(loaded: dict[str, pd.DataFrame]) -> pd.DataFrame:
+    """把 mixed validation 和 TXF-only train/validation 的 simple rule 表現放在同一張表。
+
+    這是使用者追加要求的優先方向 C：先看 simple rule 本身是否在 universe 改變後崩壞。
+    若 simple rule 穩定而 ML 大幅改變，比較支持「ML 對資料/特徵/threshold contract 更敏感」。
+    """
+
     rows = [
         recompute_queue_policy_for_frame(
             loaded["mixed_val"],
@@ -788,6 +944,12 @@ def queue_rule_development_contrast(loaded: dict[str, pd.DataFrame]) -> pd.DataF
 
 
 def posthoc_new3_new4_diagnostics() -> pd.DataFrame:
+    """讀取既有 frozen NEW3/NEW4 診斷輸出，只做事後排名對照。
+
+    這裡不載入 NEW3/NEW4 原始資料，也不把 NEW3/NEW4 數字用於選模型或調門檻；
+    它只是把已存在 CSV 中的 ML-vs-queue 結果整理成同一張 summary。
+    """
+
     mixed_ml = read_csv(PHASE03B6 / "results" / "hgb_convergence_frozen_oos_eval.csv")
     txf_ml = read_csv(PHASE04B1 / "results" / "txf_ml_final_candidate_matched_random_summary.csv")
     txf_queue = read_csv(PHASE04B / "results" / "txf_non_ml_baseline_eval.csv")
@@ -866,6 +1028,8 @@ def posthoc_new3_new4_diagnostics() -> pd.DataFrame:
 
 
 def fmt_float(value: Any, digits: int = 4) -> str:
+    """報告用數字格式化：大數加千分位，小數保留指定位數，NaN 顯示空字串。"""
+
     try:
         value = float(value)
     except (TypeError, ValueError):
@@ -880,6 +1044,8 @@ def fmt_float(value: Any, digits: int = 4) -> str:
 
 
 def compact_feature_table(stats: pd.DataFrame) -> pd.DataFrame:
+    """從完整特徵分布表挑出 markdown 報告需要展示的欄位與 split。"""
+
     keep = stats[
         stats["split_scope"].isin(["train_sampled_plus_val", "train_plus_val", "val"])
         & stats["feature"].isin(FOCUS_FEATURES)
@@ -890,6 +1056,8 @@ def compact_feature_table(stats: pd.DataFrame) -> pd.DataFrame:
 
 
 def compact_importance_table(importance: pd.DataFrame) -> pd.DataFrame:
+    """整理 importance 報告表：保留每個模型 top features，也保留使用者指定的 focus features。"""
+
     top = importance.groupby("model_label", group_keys=False).head(8)
     focus = importance[importance["feature"].isin(FOCUS_FEATURES)]
     out = pd.concat([top, focus], ignore_index=True).drop_duplicates(["model_label", "feature"])
@@ -909,6 +1077,12 @@ def write_report(
     queue_contrast: pd.DataFrame,
     posthoc: pd.DataFrame,
 ) -> None:
+    """把所有診斷結果寫成 markdown audit 報告，並同步寫到 03B6 phase 與 000_context。
+
+    上游函式負責產生實際數字；這裡只做表格整理、挑選關鍵數字、撰寫邊界說明與誠實結論。
+    """
+
+    # 報告中的精簡表另存 CSV，方便之後 meeting 或簡報直接引用同一份數字。
     feature_compact = compact_feature_table(stats)
     feature_compact.to_csv(RESULTS / "feature_distribution_report_table.csv", index=False)
     importance_compact = compact_importance_table(importance)
@@ -1002,6 +1176,7 @@ def write_report(
     imp_top04 = importance[importance["model_label"].str.startswith("04B1")].iloc[0]
     overlap_row = overlap.iloc[0]
 
+    # status=mixed 是刻意保守：有診斷到決策邊界改變，但 frozen artifact 無法單獨證明非 TXF 污染。
     conclusion_status = "mixed"
     conclusion = (
         "diagnosed but inconclusive. The audit finds a concrete negative result: the available 03B/03B6 development "
@@ -1021,6 +1196,7 @@ def write_report(
         "total. Treat sklearn/joblib persistence as residual risk if the runtime changes."
     )
 
+    # 以下 lines 是完整 markdown 報告。每個區塊都清楚標明 development-only 或 NEW3/NEW4 posthoc。
     lines = [
         f"status: {conclusion_status}",
         "# Audit: 03B6 vs 04B1 Reversal Root Cause",
@@ -1135,6 +1311,12 @@ def write_report(
 
 
 def main() -> None:
+    """主流程：依序執行所有診斷，最後輸出 markdown 與 CSV。
+
+    執行順序刻意先 development-only，再 frozen OOS posthoc，避免讀者誤以為 NEW3/NEW4
+    有參與模型選擇或假說挑選。
+    """
+
     ensure_dirs()
     stats, symbol_counts, loaded = feature_distribution_tables()
     family_stats = read_csv(RESULTS / "mixed_symbol_family_feature_stats.csv")

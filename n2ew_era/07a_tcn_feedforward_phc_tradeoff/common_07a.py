@@ -3,6 +3,7 @@ from __future__ import annotations
 import json
 import math
 import sys
+from itertools import product
 from pathlib import Path
 from typing import Any
 
@@ -777,6 +778,105 @@ def load_existing_phc_v1_tables() -> tuple[pd.DataFrame, pd.DataFrame, pd.DataFr
     return action, causal, seed
 
 
+def load_existing_phc_random_table() -> pd.DataFrame:
+    path = PHASE05A / "results" / "phc_lite_matched_random_summary.csv"
+    return pd.read_csv(path) if path.exists() else pd.DataFrame()
+
+
+def selected_seed_from_action_row(row: pd.DataFrame) -> int | None:
+    if row.empty or "seed" not in row.columns:
+        return None
+    value = row["seed"].iloc[0]
+    if pd.isna(value):
+        return None
+    return int(float(value))
+
+
+def matched_random_fields(
+    random_rows: pd.DataFrame,
+    seed_rows: pd.DataFrame,
+    selected_seed: int | None,
+) -> dict[str, Any]:
+    if not random_rows.empty:
+        return {
+            "matched_random_pass": bool(random_rows["beats_random_95p"].iloc[0]),
+            "empirical_p_value_fraction_random_ge_model": float(random_rows["empirical_p_value_fraction_random_ge_model"].iloc[0]),
+            "empirical_p_value_wording": str(random_rows["empirical_p_value_wording"].iloc[0]) if "empirical_p_value_wording" in random_rows.columns else "",
+            "matched_random_source": "selected_policy_matched_random_summary",
+        }
+    if not seed_rows.empty:
+        rows = seed_rows
+        if selected_seed is not None and "seed" in rows.columns:
+            selected = rows[rows["seed"].astype(int).eq(selected_seed)]
+            if not selected.empty:
+                rows = selected
+        return {
+            "matched_random_pass": bool(rows["matched_random_pass"].astype(bool).all()),
+            "empirical_p_value_fraction_random_ge_model": float(rows["empirical_p_value_fraction_random_ge_model"].max()),
+            "empirical_p_value_wording": "< 0.001" if float(rows["empirical_p_value_fraction_random_ge_model"].max()) == 0.0 else f"{float(rows['empirical_p_value_fraction_random_ge_model'].max()):.6f}",
+            "matched_random_source": "seed_stability_selected_seed_fallback",
+        }
+    return {
+        "matched_random_pass": np.nan,
+        "empirical_p_value_fraction_random_ge_model": np.nan,
+        "empirical_p_value_wording": "",
+        "matched_random_source": "missing",
+    }
+
+
+def exact_sign_test_p(deltas: np.ndarray) -> tuple[int, int, float]:
+    values = np.asarray(deltas, dtype=float)
+    values = values[np.isfinite(values) & (values != 0.0)]
+    n = int(len(values))
+    if n == 0:
+        return 0, 0, np.nan
+    positives = int((values > 0.0).sum())
+    tail = min(positives, n - positives)
+    prob = sum(math.comb(n, k) for k in range(tail + 1)) / (2**n)
+    return positives, n, float(min(1.0, 2.0 * prob))
+
+
+def exact_bootstrap_mean_ci(deltas: np.ndarray, alpha: float = 0.05) -> tuple[float, float, float]:
+    values = np.asarray(deltas, dtype=float)
+    values = values[np.isfinite(values)]
+    n = int(len(values))
+    if n == 0:
+        return np.nan, np.nan, np.nan
+    means = np.array([values[list(indexes)].mean() for indexes in product(range(n), repeat=n)], dtype=float)
+    return float(values.mean()), float(np.quantile(means, alpha / 2.0)), float(np.quantile(means, 1.0 - alpha / 2.0))
+
+
+def tcn_vs_teacher_significance(summary: pd.DataFrame) -> pd.DataFrame:
+    rows: list[dict[str, Any]] = []
+    for model in POLICY_IDS.values():
+        sub = summary[summary["model"].eq(model)].sort_values("split")
+        for metric, col in [
+            ("action_pnl_delta_vs_phc", "action_delta_vs_phc"),
+            ("causal_fill_delta_vs_phc", "causal_delta_vs_phc"),
+        ]:
+            deltas = sub[col].to_numpy(dtype=float) if col in sub.columns else np.array([], dtype=float)
+            positives, n, sign_p = exact_sign_test_p(deltas)
+            mean_delta, ci_low, ci_high = exact_bootstrap_mean_ci(deltas)
+            rows.append(
+                {
+                    "model": model,
+                    "metric": metric,
+                    "split_count": int(n),
+                    "positive_delta_count": int(positives),
+                    "delta_sum": float(np.nansum(deltas)) if len(deltas) else np.nan,
+                    "delta_mean": mean_delta,
+                    "exact_sign_test_two_sided_p": sign_p,
+                    "exact_split_bootstrap_mean_ci95_low": ci_low,
+                    "exact_split_bootstrap_mean_ci95_high": ci_high,
+                    "formal_readout": "sign_test_rejects_equal_median_at_5pct" if np.isfinite(sign_p) and sign_p < 0.05 else "sign_test_does_not_reject_equal_median_at_5pct",
+                    "new5_used": False,
+                }
+            )
+    out = pd.DataFrame(rows)
+    out.to_csv(RESULTS / "tcn_vs_phc_pooled_significance.csv", index=False)
+    return out
+
+
 def final_report() -> pd.DataFrame:
     ensure_dirs()
     action_path = RESULTS / "tcn_prepad_oos_eval.csv"
@@ -790,12 +890,19 @@ def final_report() -> pd.DataFrame:
     seed = pd.read_csv(seed_path) if seed_path.exists() else pd.DataFrame()
     latency = pd.read_csv(latency_path) if latency_path.exists() else estimate_tcn_latency()
     phc_action, phc_causal, phc_seed = load_existing_phc_v1_tables()
+    phc_random = load_existing_phc_random_table()
 
     rows = []
     for split in SPLITS:
         phc_a = phc_action[(phc_action["split"].eq(split)) & (phc_action["policy_id"].eq("phc_lite"))]
         phc_c = phc_causal[(phc_causal["split"].eq(split)) & (phc_causal["policy_id"].eq("phc_lite"))]
+        phc_r = (
+            phc_random[(phc_random["split"].eq(split)) & (phc_random["policy_id"].eq("phc_lite"))]
+            if not phc_random.empty and {"split", "policy_id"}.issubset(phc_random.columns)
+            else pd.DataFrame()
+        )
         if not phc_a.empty:
+            phc_random_fields = matched_random_fields(phc_r, pd.DataFrame(), None)
             rows.append(
                 {
                     "model": "PHC-lite v1 teacher",
@@ -804,7 +911,7 @@ def final_report() -> pd.DataFrame:
                     "causal_fill_pnl": float(phc_c["sequential_excess_pnl"].iloc[0]) if not phc_c.empty else np.nan,
                     "selected_action_count": int(phc_a["selected_action_count"].iloc[0]),
                     "win_rate": float(phc_a["win_rate"].iloc[0]),
-                    "matched_random_pass": True,
+                    **phc_random_fields,
                     "estimated_latency_us": 83.16,
                     "latency_source": "06F routed PHC step baseline at 100MHz",
                 }
@@ -824,6 +931,13 @@ def final_report() -> pd.DataFrame:
                 if not random.empty and {"split", "policy_id"}.issubset(random.columns)
                 else pd.DataFrame()
             )
+            selected_seed = selected_seed_from_action_row(a)
+            seed_rows = (
+                seed[(seed["split"].eq(split)) & (seed["policy_id"].eq(pid))]
+                if not seed.empty and {"split", "policy_id"}.issubset(seed.columns)
+                else pd.DataFrame()
+            )
+            random_fields = matched_random_fields(r, seed_rows, selected_seed)
             if a.empty:
                 continue
             rows.append(
@@ -834,9 +948,9 @@ def final_report() -> pd.DataFrame:
                     "causal_fill_pnl": float(c["sequential_excess_pnl"].iloc[0]) if not c.empty else np.nan,
                     "selected_action_count": int(a["selected_action_count"].iloc[0]),
                     "win_rate": float(a["win_rate"].iloc[0]),
-                    "matched_random_pass": bool(r["beats_random_95p"].iloc[0]) if not r.empty else np.nan,
+                    **random_fields,
                     "estimated_latency_us": float(latency[latency["assumed_rate_name"].eq("fpga_effective_50gmac_per_s")]["estimated_latency_us"].iloc[0]) if not latency.empty else np.nan,
-                    "latency_source": "pre-synthesis MAC estimate only, not csynth/cosim",
+                    "latency_source": "pre-synthesis MAC estimate only, not HLS-verified",
                 }
             )
     summary = pd.DataFrame(rows)
@@ -866,9 +980,14 @@ def final_report() -> pd.DataFrame:
             action_pnl_std=("action_pnl", "std"),
             causal_fill_pnl_mean=("causal_fill_pnl", "mean"),
             causal_fill_pnl_std=("causal_fill_pnl", "std"),
+            matched_random_pass_all=("matched_random_pass", lambda s: bool(s.astype(bool).all())),
+            empirical_p_value_max=("empirical_p_value_fraction_random_ge_model", "max"),
             all_positive=("action_pnl", lambda s: bool((s > 0).all())),
+            seed_count=("seed", "nunique"),
         ).reset_index()
         seed_summary.to_csv(RESULTS / "tcn_prepad_seed_variance_summary.csv", index=False)
+
+    significance = tcn_vs_teacher_significance(summary) if not summary.empty else pd.DataFrame()
 
     status = "tcn_tradeoff_incomplete_missing_training_outputs"
     if not summary.empty and set(POLICY_IDS.values()).issubset(set(summary["model"])):
@@ -902,6 +1021,12 @@ def final_report() -> pd.DataFrame:
         "",
         md_table(summary) if not summary.empty else "Trade-off summary missing because model outputs have not been generated.",
         "",
+        "## Cross-Split Pooled Delta Test",
+        "",
+        "Exact sign tests and exact nonparametric bootstrap CIs use the three frozen diagnostic splits as the resampling units. With only three split-level observations, the sign test has low power; this table formalizes rather than visually infers the TCN-vs-teacher deltas.",
+        "",
+        md_table(significance) if not significance.empty else "Pooled significance table missing.",
+        "",
         "## Seed Stability",
         "",
         md_table(seed_summary) if not seed_summary.empty else "Seed stability summary missing because seed evaluation has not been generated.",
@@ -917,7 +1042,7 @@ def final_report() -> pd.DataFrame:
         "- No real-world profitability claim.",
         "- No true exchange replay claim.",
         "- No FPGA PnL improvement claim.",
-        "- TCN latency here is pre-synthesis estimate only unless a later HLS phase runs csim/csynth/cosim/P&R.",
+        "- TCN latency here is pre-synthesis MAC estimate only unless a later HLS phase runs csim/csynth/cosim. It is not HLS-verified in this report.",
     ]
     write_markdown(ROOT / "TCN_FEEDFORWARD_PHC_TRADEOFF_REPORT.md", lines)
     return summary

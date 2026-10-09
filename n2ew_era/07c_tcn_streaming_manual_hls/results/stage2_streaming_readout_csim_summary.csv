@@ -1,0 +1,3 @@
+variant,readout_csim_status,readout_csim_output,readout_rows,readout_max_abs_diff,readout_mean_abs_diff,readout_rmse,sign_agreement_readout_0,sign_agreement_readout_1,sign_agreement_joint,readout_gate_pass,component_csim_state
+scratch,present,C:\Users\holbo\00VS_projjects\00_HFT_project\n2ew_era\07c_tcn_streaming_manual_hls\results\stage2_streaming_scratch_readout_csim_out.csv,200,0.3426933781,0.0690596921621875,0.0854482445834955,1.0,1.0,1.0,True,CS_PASSED
+distilled,present,C:\Users\holbo\00VS_projjects\00_HFT_project\n2ew_era\07c_tcn_streaming_manual_hls\results\stage2_streaming_distilled_readout_csim_out.csv,200,0.5718994594,0.2771266610687,0.3050653727001364,1.0,1.0,1.0,True,CS_PASSED

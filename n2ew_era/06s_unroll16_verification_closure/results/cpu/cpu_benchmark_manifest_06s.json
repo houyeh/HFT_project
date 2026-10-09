@@ -1,0 +1,44 @@
+{
+  "phase": "06s",
+  "benchmark_exe": "n2ew_era/06f_phc_lite_manual_hls/results/libtorch_build/cpp_libtorch_concurrent_benchmark.exe",
+  "torchscript_model": "n2ew_era/06f_phc_lite_manual_hls/models/phc_stp_step_hls_seed2_torchscript.pt",
+  "concurrency_levels": [
+    1,
+    4,
+    16
+  ],
+  "rounds": 2,
+  "timing_iters_per_stream": 10000,
+  "warmup_iters": 100,
+  "torch_threads": 8,
+  "deadline_us": {
+    "83p16": 83.16,
+    "25p733": 25.733
+  },
+  "cpu_snapshot_before": "n2ew_era/06s_unroll16_verification_closure/results/cpu/cpu_snapshot_before.json",
+  "cpu_snapshot_after": "n2ew_era/06s_unroll16_verification_closure/results/cpu/cpu_snapshot_after.json",
+  "runs": [
+    {
+      "concurrency": 1,
+      "returncode": 0,
+      "out_json": "n2ew_era/06s_unroll16_verification_closure/results/cpu/cpu_concurrent_N1_06s.json",
+      "raw_csv": "n2ew_era/06s_unroll16_verification_closure/results/cpu/cpu_concurrent_N1_06s_raw.csv",
+      "log_path": "n2ew_era/06s_unroll16_verification_closure/results/cpu/cpu_concurrent_N1_06s.log"
+    },
+    {
+      "concurrency": 4,
+      "returncode": 0,
+      "out_json": "n2ew_era/06s_unroll16_verification_closure/results/cpu/cpu_concurrent_N4_06s.json",
+      "raw_csv": "n2ew_era/06s_unroll16_verification_closure/results/cpu/cpu_concurrent_N4_06s_raw.csv",
+      "log_path": "n2ew_era/06s_unroll16_verification_closure/results/cpu/cpu_concurrent_N4_06s.log"
+    },
+    {
+      "concurrency": 16,
+      "returncode": 0,
+      "out_json": "n2ew_era/06s_unroll16_verification_closure/results/cpu/cpu_concurrent_N16_06s.json",
+      "raw_csv": "n2ew_era/06s_unroll16_verification_closure/results/cpu/cpu_concurrent_N16_06s_raw.csv",
+      "log_path": "n2ew_era/06s_unroll16_verification_closure/results/cpu/cpu_concurrent_N16_06s.log"
+    }
+  ],
+  "new5_used": false
+}

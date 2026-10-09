@@ -1,0 +1,74 @@
+{
+  "cache_rows": [
+    {
+      "cache_name": "train_cf7",
+      "source_member": "BenchmarkDatasets/NoAuction/1.NoAuction_Zscore/NoAuction_Zscore_Training/Train_Dst_NoAuction_ZScore_CF_7.txt",
+      "source_path": "data\\extracted\\BenchmarkDatasets\\NoAuction\\1.NoAuction_Zscore\\NoAuction_Zscore_Training\\Train_Dst_NoAuction_ZScore_CF_7.txt",
+      "source_size_bytes": 607324298,
+      "source_sha256": "0d2839ff7575f0910a03fd782edc6b3a561d544b07cf2329ebe7f33c8affe6c6",
+      "cache_path": "data\\cache\\train_cf7.npz",
+      "features_shape": "254750x40",
+      "labels_shape": "254750x5",
+      "num_events": 254750,
+      "num_features_used": 40
+    },
+    {
+      "cache_name": "test_cf7",
+      "source_member": "BenchmarkDatasets/NoAuction/1.NoAuction_Zscore/NoAuction_Zscore_Testing/Test_Dst_NoAuction_ZScore_CF_7.txt",
+      "source_path": "data\\extracted\\BenchmarkDatasets\\NoAuction\\1.NoAuction_Zscore\\NoAuction_Zscore_Testing\\Test_Dst_NoAuction_ZScore_CF_7.txt",
+      "source_size_bytes": 132259850,
+      "source_sha256": "96ee1a73a581edfa46ffcbdbd41104746664cb4fc112ac841344f5c78ebab492",
+      "cache_path": "data\\cache\\test_cf7.npz",
+      "features_shape": "55478x40",
+      "labels_shape": "55478x5",
+      "num_events": 55478,
+      "num_features_used": 40
+    },
+    {
+      "cache_name": "test_cf8",
+      "source_member": "BenchmarkDatasets/NoAuction/1.NoAuction_Zscore/NoAuction_Zscore_Testing/Test_Dst_NoAuction_ZScore_CF_8.txt",
+      "source_path": "data\\extracted\\BenchmarkDatasets\\NoAuction\\1.NoAuction_Zscore\\NoAuction_Zscore_Testing\\Test_Dst_NoAuction_ZScore_CF_8.txt",
+      "source_size_bytes": 124378346,
+      "source_sha256": "7a4b787876a667aeaf50dae37f144eff3b42c9307f2f5af8d7cdbfd630c4c8a0",
+      "cache_path": "data\\cache\\test_cf8.npz",
+      "features_shape": "52172x40",
+      "labels_shape": "52172x5",
+      "num_events": 52172,
+      "num_features_used": 40
+    },
+    {
+      "cache_name": "test_cf9",
+      "source_member": "BenchmarkDatasets/NoAuction/1.NoAuction_Zscore/NoAuction_Zscore_Testing/Test_Dst_NoAuction_ZScore_CF_9.txt",
+      "source_path": "data\\extracted\\BenchmarkDatasets\\NoAuction\\1.NoAuction_Zscore\\NoAuction_Zscore_Testing\\Test_Dst_NoAuction_ZScore_CF_9.txt",
+      "source_size_bytes": 76138106,
+      "source_sha256": "b90a4aa63010662c89003134f0dbaa08c7ee14d36433073eb335d5478fb0a4e9",
+      "cache_path": "data\\cache\\test_cf9.npz",
+      "features_shape": "31937x40",
+      "labels_shape": "31937x5",
+      "num_events": 31937,
+      "num_features_used": 40
+    }
+  ],
+  "window_counts": [
+    {
+      "split": "train_cf7_all_snapshots",
+      "num_events": 254750,
+      "num_windows": 254651
+    },
+    {
+      "split": "train_fit_head_80pct",
+      "num_events": 203800,
+      "num_windows": 203701
+    },
+    {
+      "split": "validation_tail_20pct",
+      "num_events": 50950,
+      "num_windows": 50851
+    },
+    {
+      "split": "test_cf7_cf8_cf9_concat",
+      "num_events": 139587,
+      "num_windows": 139488
+    }
+  ]
+}

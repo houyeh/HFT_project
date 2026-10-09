@@ -1,0 +1,209 @@
+[
+  {
+    "phase": "06s",
+    "seed": 0,
+    "clock_period_ns": "11.111",
+    "clock_frequency_mhz": 90.00090000900009,
+    "source_unroll16_hls_src": "n2ew_era/06l_phc_lite_pipeline_budget_sweep/variants/factor_16/hls_src",
+    "source_weights": "n2ew_era/06f_phc_lite_manual_hls/cross_seed/seed0/hls_src/phc_weights.hpp",
+    "source_vectors": "n2ew_era/06f_phc_lite_manual_hls/cross_seed/seed0/results/phc_step_test_vectors_seed0.csv",
+    "hls_config": "n2ew_era/06s_unroll16_verification_closure/seed0/hls_component/hls_config.cfg",
+    "csynth_tcl": "n2ew_era/06s_unroll16_verification_closure/seed0/hls_component/run_csynth_only_90mhz.tcl",
+    "copied_files": [
+      {
+        "src": "n2ew_era/06l_phc_lite_pipeline_budget_sweep/variants/factor_16/hls_src/phc_step_hls.cpp",
+        "dst": "n2ew_era/06s_unroll16_verification_closure/seed0/hls_src/phc_step_hls.cpp",
+        "src_size_bytes": 9358,
+        "dst_size_bytes": 9358,
+        "src_sha256": "2bbb015ee3a92a3595ae84f990e21c2376687a01496e04d09b03a7ac8be9ff0a",
+        "dst_sha256": "2bbb015ee3a92a3595ae84f990e21c2376687a01496e04d09b03a7ac8be9ff0a",
+        "sha256_match": true
+      },
+      {
+        "src": "n2ew_era/06l_phc_lite_pipeline_budget_sweep/variants/factor_16/hls_src/phc_step_hls.hpp",
+        "dst": "n2ew_era/06s_unroll16_verification_closure/seed0/hls_src/phc_step_hls.hpp",
+        "src_size_bytes": 1091,
+        "dst_size_bytes": 1091,
+        "src_sha256": "55b74a88cfdb02df4f44e5d11ee508c864715007f9fe9b2c95b3171d5ca4033f",
+        "dst_sha256": "55b74a88cfdb02df4f44e5d11ee508c864715007f9fe9b2c95b3171d5ca4033f",
+        "sha256_match": true
+      },
+      {
+        "src": "n2ew_era/06l_phc_lite_pipeline_budget_sweep/variants/factor_16/hls_src/phc_step_testbench.cpp",
+        "dst": "n2ew_era/06s_unroll16_verification_closure/seed0/hls_src/phc_step_testbench.cpp",
+        "src_size_bytes": 5977,
+        "dst_size_bytes": 5977,
+        "src_sha256": "af87ebe446dfbc38785fbc1b05f88a0a2a00d0f94eb3fd41100bf590518d7da1",
+        "dst_sha256": "af87ebe446dfbc38785fbc1b05f88a0a2a00d0f94eb3fd41100bf590518d7da1",
+        "sha256_match": true
+      },
+      {
+        "src": "n2ew_era/06f_phc_lite_manual_hls/cross_seed/seed0/hls_src/phc_weights.hpp",
+        "dst": "n2ew_era/06s_unroll16_verification_closure/seed0/hls_src/phc_weights.hpp",
+        "src_size_bytes": 63046,
+        "dst_size_bytes": 63046,
+        "src_sha256": "3dd16c6d3d5e571e4ea750d57f67ce2619b4a976eda9e640d5a10414349601b7",
+        "dst_sha256": "3dd16c6d3d5e571e4ea750d57f67ce2619b4a976eda9e640d5a10414349601b7",
+        "sha256_match": true
+      },
+      {
+        "src": "n2ew_era/06f_phc_lite_manual_hls/cross_seed/seed0/results/phc_step_test_vectors_seed0.csv",
+        "dst": "n2ew_era/06s_unroll16_verification_closure/seed0/results/phc_step_test_vectors_seed0.csv",
+        "src_size_bytes": 15998550,
+        "dst_size_bytes": 15998550,
+        "src_sha256": "ad7c42fd205a511fec9f1e859f6a1652a97d7c244ded73a3676081033b661e81",
+        "dst_sha256": "ad7c42fd205a511fec9f1e859f6a1652a97d7c244ded73a3676081033b661e81",
+        "sha256_match": true
+      },
+      {
+        "src": "n2ew_era/06l_phc_lite_pipeline_budget_sweep/pnr_unroll16_90mhz/hls_component/hls_component/hls/impl/verilog/run_direct_phc_step_pnr_custom_clock.tcl",
+        "dst": "n2ew_era/06s_unroll16_verification_closure/seed0/hls_component/run_direct_phc_step_pnr_custom_clock.tcl",
+        "src_size_bytes": 3229,
+        "dst_size_bytes": 3229,
+        "src_sha256": "45bf5fde0fea0145ebe840d4239f9f896ed633046fbf2286366f43c6b9bdb622",
+        "dst_sha256": "45bf5fde0fea0145ebe840d4239f9f896ed633046fbf2286366f43c6b9bdb622",
+        "sha256_match": true
+      }
+    ],
+    "new5_used": false,
+    "source_modified": false
+  },
+  {
+    "phase": "06s",
+    "seed": 1,
+    "clock_period_ns": "11.111",
+    "clock_frequency_mhz": 90.00090000900009,
+    "source_unroll16_hls_src": "n2ew_era/06l_phc_lite_pipeline_budget_sweep/variants/factor_16/hls_src",
+    "source_weights": "n2ew_era/06f_phc_lite_manual_hls/cross_seed/seed1/hls_src/phc_weights.hpp",
+    "source_vectors": "n2ew_era/06f_phc_lite_manual_hls/cross_seed/seed1/results/phc_step_test_vectors_seed1.csv",
+    "hls_config": "n2ew_era/06s_unroll16_verification_closure/seed1/hls_component/hls_config.cfg",
+    "csynth_tcl": "n2ew_era/06s_unroll16_verification_closure/seed1/hls_component/run_csynth_only_90mhz.tcl",
+    "copied_files": [
+      {
+        "src": "n2ew_era/06l_phc_lite_pipeline_budget_sweep/variants/factor_16/hls_src/phc_step_hls.cpp",
+        "dst": "n2ew_era/06s_unroll16_verification_closure/seed1/hls_src/phc_step_hls.cpp",
+        "src_size_bytes": 9358,
+        "dst_size_bytes": 9358,
+        "src_sha256": "2bbb015ee3a92a3595ae84f990e21c2376687a01496e04d09b03a7ac8be9ff0a",
+        "dst_sha256": "2bbb015ee3a92a3595ae84f990e21c2376687a01496e04d09b03a7ac8be9ff0a",
+        "sha256_match": true
+      },
+      {
+        "src": "n2ew_era/06l_phc_lite_pipeline_budget_sweep/variants/factor_16/hls_src/phc_step_hls.hpp",
+        "dst": "n2ew_era/06s_unroll16_verification_closure/seed1/hls_src/phc_step_hls.hpp",
+        "src_size_bytes": 1091,
+        "dst_size_bytes": 1091,
+        "src_sha256": "55b74a88cfdb02df4f44e5d11ee508c864715007f9fe9b2c95b3171d5ca4033f",
+        "dst_sha256": "55b74a88cfdb02df4f44e5d11ee508c864715007f9fe9b2c95b3171d5ca4033f",
+        "sha256_match": true
+      },
+      {
+        "src": "n2ew_era/06l_phc_lite_pipeline_budget_sweep/variants/factor_16/hls_src/phc_step_testbench.cpp",
+        "dst": "n2ew_era/06s_unroll16_verification_closure/seed1/hls_src/phc_step_testbench.cpp",
+        "src_size_bytes": 5977,
+        "dst_size_bytes": 5977,
+        "src_sha256": "af87ebe446dfbc38785fbc1b05f88a0a2a00d0f94eb3fd41100bf590518d7da1",
+        "dst_sha256": "af87ebe446dfbc38785fbc1b05f88a0a2a00d0f94eb3fd41100bf590518d7da1",
+        "sha256_match": true
+      },
+      {
+        "src": "n2ew_era/06f_phc_lite_manual_hls/cross_seed/seed1/hls_src/phc_weights.hpp",
+        "dst": "n2ew_era/06s_unroll16_verification_closure/seed1/hls_src/phc_weights.hpp",
+        "src_size_bytes": 63079,
+        "dst_size_bytes": 63079,
+        "src_sha256": "2ef0362da129b7571d4d74604ad1a7eeb3e37c40bc55b150d5dfd35cad22c7c5",
+        "dst_sha256": "2ef0362da129b7571d4d74604ad1a7eeb3e37c40bc55b150d5dfd35cad22c7c5",
+        "sha256_match": true
+      },
+      {
+        "src": "n2ew_era/06f_phc_lite_manual_hls/cross_seed/seed1/results/phc_step_test_vectors_seed1.csv",
+        "dst": "n2ew_era/06s_unroll16_verification_closure/seed1/results/phc_step_test_vectors_seed1.csv",
+        "src_size_bytes": 16107651,
+        "dst_size_bytes": 16107651,
+        "src_sha256": "b526a57bf9dd1cf8d09e61466b32998c2494dbf251c691d04cc25ef3605be46b",
+        "dst_sha256": "b526a57bf9dd1cf8d09e61466b32998c2494dbf251c691d04cc25ef3605be46b",
+        "sha256_match": true
+      },
+      {
+        "src": "n2ew_era/06l_phc_lite_pipeline_budget_sweep/pnr_unroll16_90mhz/hls_component/hls_component/hls/impl/verilog/run_direct_phc_step_pnr_custom_clock.tcl",
+        "dst": "n2ew_era/06s_unroll16_verification_closure/seed1/hls_component/run_direct_phc_step_pnr_custom_clock.tcl",
+        "src_size_bytes": 3229,
+        "dst_size_bytes": 3229,
+        "src_sha256": "45bf5fde0fea0145ebe840d4239f9f896ed633046fbf2286366f43c6b9bdb622",
+        "dst_sha256": "45bf5fde0fea0145ebe840d4239f9f896ed633046fbf2286366f43c6b9bdb622",
+        "sha256_match": true
+      }
+    ],
+    "new5_used": false,
+    "source_modified": false
+  },
+  {
+    "phase": "06s",
+    "seed": 2,
+    "clock_period_ns": "11.111",
+    "clock_frequency_mhz": 90.00090000900009,
+    "source_unroll16_hls_src": "n2ew_era/06l_phc_lite_pipeline_budget_sweep/variants/factor_16/hls_src",
+    "source_weights": "n2ew_era/06l_phc_lite_pipeline_budget_sweep/variants/factor_16/hls_src/phc_weights.hpp",
+    "source_vectors": "n2ew_era/06f_phc_lite_manual_hls/results/phc_step_test_vectors.csv",
+    "hls_config": "n2ew_era/06s_unroll16_verification_closure/seed2/hls_component/hls_config.cfg",
+    "csynth_tcl": "n2ew_era/06s_unroll16_verification_closure/seed2/hls_component/run_csynth_only_90mhz.tcl",
+    "copied_files": [
+      {
+        "src": "n2ew_era/06l_phc_lite_pipeline_budget_sweep/variants/factor_16/hls_src/phc_step_hls.cpp",
+        "dst": "n2ew_era/06s_unroll16_verification_closure/seed2/hls_src/phc_step_hls.cpp",
+        "src_size_bytes": 9358,
+        "dst_size_bytes": 9358,
+        "src_sha256": "2bbb015ee3a92a3595ae84f990e21c2376687a01496e04d09b03a7ac8be9ff0a",
+        "dst_sha256": "2bbb015ee3a92a3595ae84f990e21c2376687a01496e04d09b03a7ac8be9ff0a",
+        "sha256_match": true
+      },
+      {
+        "src": "n2ew_era/06l_phc_lite_pipeline_budget_sweep/variants/factor_16/hls_src/phc_step_hls.hpp",
+        "dst": "n2ew_era/06s_unroll16_verification_closure/seed2/hls_src/phc_step_hls.hpp",
+        "src_size_bytes": 1091,
+        "dst_size_bytes": 1091,
+        "src_sha256": "55b74a88cfdb02df4f44e5d11ee508c864715007f9fe9b2c95b3171d5ca4033f",
+        "dst_sha256": "55b74a88cfdb02df4f44e5d11ee508c864715007f9fe9b2c95b3171d5ca4033f",
+        "sha256_match": true
+      },
+      {
+        "src": "n2ew_era/06l_phc_lite_pipeline_budget_sweep/variants/factor_16/hls_src/phc_step_testbench.cpp",
+        "dst": "n2ew_era/06s_unroll16_verification_closure/seed2/hls_src/phc_step_testbench.cpp",
+        "src_size_bytes": 5977,
+        "dst_size_bytes": 5977,
+        "src_sha256": "af87ebe446dfbc38785fbc1b05f88a0a2a00d0f94eb3fd41100bf590518d7da1",
+        "dst_sha256": "af87ebe446dfbc38785fbc1b05f88a0a2a00d0f94eb3fd41100bf590518d7da1",
+        "sha256_match": true
+      },
+      {
+        "src": "n2ew_era/06l_phc_lite_pipeline_budget_sweep/variants/factor_16/hls_src/phc_weights.hpp",
+        "dst": "n2ew_era/06s_unroll16_verification_closure/seed2/hls_src/phc_weights.hpp",
+        "src_size_bytes": 63357,
+        "dst_size_bytes": 63357,
+        "src_sha256": "84349520945674385502d967419559af7dded8507a050f329e41527cd736d4fc",
+        "dst_sha256": "84349520945674385502d967419559af7dded8507a050f329e41527cd736d4fc",
+        "sha256_match": true
+      },
+      {
+        "src": "n2ew_era/06f_phc_lite_manual_hls/results/phc_step_test_vectors.csv",
+        "dst": "n2ew_era/06s_unroll16_verification_closure/seed2/results/phc_step_test_vectors_seed2.csv",
+        "src_size_bytes": 16052080,
+        "dst_size_bytes": 16052080,
+        "src_sha256": "3087c2b1b47c1c7acc0b4436066045c9cef8505ce8b003c56bc8cf8c02c7ed8b",
+        "dst_sha256": "3087c2b1b47c1c7acc0b4436066045c9cef8505ce8b003c56bc8cf8c02c7ed8b",
+        "sha256_match": true
+      },
+      {
+        "src": "n2ew_era/06l_phc_lite_pipeline_budget_sweep/pnr_unroll16_90mhz/hls_component/hls_component/hls/impl/verilog/run_direct_phc_step_pnr_custom_clock.tcl",
+        "dst": "n2ew_era/06s_unroll16_verification_closure/seed2/hls_component/run_direct_phc_step_pnr_custom_clock.tcl",
+        "src_size_bytes": 3229,
+        "dst_size_bytes": 3229,
+        "src_sha256": "45bf5fde0fea0145ebe840d4239f9f896ed633046fbf2286366f43c6b9bdb622",
+        "dst_sha256": "45bf5fde0fea0145ebe840d4239f9f896ed633046fbf2286366f43c6b9bdb622",
+        "sha256_match": true
+      }
+    ],
+    "new5_used": false,
+    "source_modified": false
+  }
+]

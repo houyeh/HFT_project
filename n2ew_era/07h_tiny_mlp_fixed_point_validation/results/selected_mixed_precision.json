@@ -1,0 +1,14 @@
+{
+  "status": "gate_pass",
+  "config": "uniform28_14_accargmax",
+  "data_format": "ap_fixed<28,14>",
+  "weight_format": "ap_fixed<28,14>",
+  "bias_format": "ap_fixed<28,14>",
+  "accumulator_format": "ap_fixed<40,16>",
+  "output_compare": "accumulator",
+  "one_dsp_shape_candidate": false,
+  "selection_split": "val",
+  "new3_used_for_selection": false,
+  "new4_used_for_selection": false,
+  "new5_used": false
+}

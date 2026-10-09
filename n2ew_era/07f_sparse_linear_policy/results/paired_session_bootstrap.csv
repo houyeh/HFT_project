@@ -1,0 +1,7 @@
+split,student_policy_id,comparator,session_count,full_split_total_difference,session_reset_total_difference,mean_session_difference,bootstrap_ci_low,bootstrap_ci_high,bootstrap_probability_difference_le_zero,n_bootstrap
+val,sparse_base_boundary_weighted_k4,queue_theta_val_tuned,6,2600.0,2600.0,433.3333333333333,-65.0,1193.3333333333333,0.0789,10000
+val,sparse_base_boundary_weighted_k4,phc_eventwise_reference,6,-55385.0,-55385.0,-9230.833333333334,-11445.833333333334,-6810.0,1.0,10000
+new3,sparse_base_boundary_weighted_k4,queue_theta_val_tuned,6,-3335.0,-3840.0,-640.0,-1297.5,205.83333333333334,0.9345,10000
+new3,sparse_base_boundary_weighted_k4,phc_eventwise_reference,6,-318205.0,-263980.0,-43996.666666666664,-58332.5,-26160.833333333332,1.0,10000
+new4,sparse_base_boundary_weighted_k4,queue_theta_val_tuned,4,-37825.0,-1910.0,-477.5,-1127.5,172.5,0.9229,10000
+new4,sparse_base_boundary_weighted_k4,phc_eventwise_reference,4,-51110.0,-105460.0,-26365.0,-49367.5,-3362.5,1.0,10000

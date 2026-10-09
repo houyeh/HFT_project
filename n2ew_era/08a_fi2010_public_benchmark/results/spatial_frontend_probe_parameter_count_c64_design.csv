@@ -1,0 +1,3 @@
+phase,model_kind,front_channels,front_output_dim,trainable_parameters,baseline_trainable_parameters,parameter_delta,parameter_delta_pct
+08a_spatial_frontend_probe,phc,64,320,23252,2132,21120,9.906191369606004
+08a_spatial_frontend_probe,tcn,64,320,21224,2344,18880,8.054607508532424
